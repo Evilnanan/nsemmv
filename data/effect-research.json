@@ -1,13 +1,12 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "e739c269f39443a02ec0256b9f59e509f4a423f658e438dba60b2ae74607e8e4",
+  "nativeEvidenceSha256": "baf4690ad7f755bea48ca9836ab68fb082b16f410c81eb01a8986bfee6d878bb",
   "coverage": {
     "obtainable": 637,
     "withDetails": 447,
     "withNumericFields": 432,
-    "nativeStacking": 208,
-    "userReportedPair": 2
+    "nativeStacking": 231
   },
   "effects": {
     "10000": {
@@ -23,7 +22,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -47,6 +49,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -66,6 +69,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -86,11 +90,14 @@
         7033200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "skillUses"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "11002": {
@@ -106,6 +113,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -125,6 +133,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -144,6 +153,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -163,6 +173,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -182,6 +193,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -203,6 +215,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -224,6 +237,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -245,6 +259,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -266,6 +281,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -287,6 +303,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -308,6 +325,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -329,6 +347,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -350,6 +369,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -371,6 +391,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -392,6 +413,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -413,6 +435,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -434,6 +457,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -455,6 +479,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -476,6 +501,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -497,6 +523,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -518,6 +545,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -539,6 +567,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -560,6 +589,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -581,6 +611,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -601,11 +632,14 @@
         7003001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6003100": {
@@ -620,11 +654,14 @@
         7003101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6003200": {
@@ -639,11 +676,14 @@
         7003201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6003300": {
@@ -658,11 +698,14 @@
         7003301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6003400": {
@@ -677,11 +720,14 @@
         7003401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6003500": {
@@ -696,11 +742,14 @@
         7003501
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6003600": {
@@ -715,11 +764,14 @@
         7003601
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6005600": {
@@ -735,6 +787,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -755,6 +808,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -773,6 +827,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -792,6 +847,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -811,6 +867,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -830,6 +887,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -849,6 +907,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -868,6 +927,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -887,6 +947,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -908,6 +969,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -929,6 +991,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -950,6 +1013,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -971,6 +1035,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -992,6 +1057,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1014,6 +1080,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1032,6 +1099,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1050,6 +1118,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1068,6 +1137,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1086,6 +1156,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1102,16 +1173,22 @@
         199
       ],
       "detailSources": [
+        7090010,
         7090012,
         7090011
       ],
       "values": "decoded-fields",
-      "stacking": "user-reported-pair",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "killMatching",
+        "killDispatch",
+        "gaugeApply"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "敌人分类标记的具体对象、共享奖励及重载路径"
       ],
       "gameplayVerified": false
     },
@@ -1128,6 +1205,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1148,6 +1226,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1168,6 +1247,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1188,6 +1268,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1208,6 +1289,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1228,6 +1310,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1248,6 +1331,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1268,6 +1352,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1286,6 +1371,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1305,6 +1391,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1324,6 +1411,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1343,6 +1431,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1361,6 +1450,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1382,6 +1472,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1401,6 +1492,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1420,6 +1512,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1443,6 +1536,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1462,6 +1556,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1483,6 +1578,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1503,6 +1599,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1523,6 +1620,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1543,6 +1641,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -1563,6 +1662,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -1582,6 +1682,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -1601,6 +1702,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -1619,11 +1721,14 @@
         7610700
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "fpCost"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6610701": {
@@ -1638,11 +1743,14 @@
         7610701
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "fpCost"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6610702": {
@@ -1657,11 +1765,14 @@
         7610702
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "fpCost"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6610800": {
@@ -1677,6 +1788,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1698,6 +1810,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1719,6 +1832,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1740,6 +1854,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1761,6 +1876,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1782,6 +1898,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1803,6 +1920,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1824,6 +1942,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1845,6 +1964,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1866,6 +1986,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1887,6 +2008,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1908,6 +2030,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1929,6 +2052,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1950,6 +2074,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -1971,6 +2096,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -1992,6 +2118,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2014,6 +2141,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2036,6 +2164,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2058,6 +2187,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2080,6 +2210,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2102,6 +2233,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2124,6 +2256,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2146,6 +2279,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2168,6 +2302,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2190,6 +2325,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2212,6 +2348,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2234,6 +2371,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2256,6 +2394,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2278,6 +2417,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2300,6 +2440,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2322,6 +2463,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2344,6 +2486,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2366,6 +2509,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2388,6 +2532,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2410,6 +2555,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2432,6 +2578,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2454,6 +2601,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2476,6 +2624,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2498,6 +2647,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2520,6 +2670,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2542,6 +2693,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2564,6 +2716,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2586,6 +2739,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2608,6 +2762,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -2626,6 +2781,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2645,6 +2801,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2664,6 +2821,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2683,6 +2841,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2702,6 +2861,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2721,6 +2881,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2740,6 +2901,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2759,6 +2921,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2778,6 +2941,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2797,6 +2961,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2816,6 +2981,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2835,6 +3001,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2854,6 +3021,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2873,6 +3041,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2892,6 +3061,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2911,6 +3081,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2930,6 +3101,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2949,6 +3121,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2968,6 +3141,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -2987,6 +3161,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3006,6 +3181,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3025,6 +3201,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3044,6 +3221,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3063,6 +3241,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3082,6 +3261,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3101,6 +3281,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3120,6 +3301,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3139,6 +3321,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3158,6 +3341,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3177,6 +3361,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3196,6 +3381,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3215,6 +3401,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3234,6 +3421,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3253,6 +3441,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3272,6 +3461,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3291,6 +3481,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "discovery"
       ],
@@ -3312,6 +3503,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3333,6 +3525,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3354,6 +3547,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3375,6 +3569,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3396,6 +3591,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3417,6 +3613,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3438,6 +3635,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3459,6 +3657,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3480,6 +3679,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3501,6 +3701,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3522,6 +3723,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3543,6 +3745,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3564,6 +3767,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3585,6 +3789,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3606,6 +3811,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3627,6 +3833,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3648,6 +3855,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3669,6 +3877,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3690,6 +3899,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3711,6 +3921,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "hero"
       ],
@@ -3732,6 +3943,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3752,6 +3964,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3772,6 +3985,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3792,6 +4006,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3812,6 +4027,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3832,6 +4048,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3852,6 +4069,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3872,6 +4090,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -3893,6 +4112,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -3914,6 +4134,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -3935,6 +4156,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -3956,6 +4178,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -3977,6 +4200,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -3997,6 +4221,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4016,6 +4241,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4036,11 +4262,14 @@
         6850200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "6850500": {
@@ -4056,6 +4285,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4075,6 +4305,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4094,6 +4325,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4117,6 +4349,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -4138,6 +4371,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4157,6 +4391,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4178,6 +4413,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -4198,6 +4434,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4221,6 +4458,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -4242,6 +4480,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -4263,6 +4502,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4284,6 +4524,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -4304,6 +4545,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4325,6 +4567,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4346,6 +4589,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4367,6 +4611,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4386,6 +4631,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4407,6 +4653,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4428,6 +4675,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4449,6 +4697,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4468,6 +4717,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4489,6 +4739,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4510,6 +4761,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4531,6 +4783,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -4550,6 +4803,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4571,6 +4825,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4592,6 +4847,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4613,6 +4869,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4634,6 +4891,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4655,6 +4913,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4676,6 +4935,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4697,6 +4957,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4718,6 +4979,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4739,6 +5001,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4760,6 +5023,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4781,6 +5045,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4802,6 +5067,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4823,6 +5089,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4844,6 +5111,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4865,6 +5133,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4886,6 +5155,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4907,6 +5177,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4928,6 +5199,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4949,6 +5221,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4970,6 +5243,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -4991,6 +5265,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5012,6 +5287,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5033,6 +5309,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5054,6 +5331,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5075,6 +5353,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5094,6 +5373,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5113,6 +5393,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5132,6 +5413,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5151,6 +5433,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5170,6 +5453,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5189,6 +5473,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5210,6 +5495,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5231,6 +5517,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5252,6 +5539,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5273,6 +5561,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5294,6 +5583,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5315,6 +5605,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5336,6 +5627,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5357,6 +5649,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5378,6 +5671,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5399,6 +5693,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5420,6 +5715,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5441,6 +5737,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5462,6 +5759,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5483,6 +5781,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5504,6 +5803,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5525,6 +5825,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5546,6 +5847,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5567,6 +5869,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5588,6 +5891,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5608,11 +5912,14 @@
         7003000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7003100": {
@@ -5627,11 +5934,14 @@
         7003100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7003200": {
@@ -5646,11 +5956,14 @@
         7003200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7003300": {
@@ -5665,11 +5978,14 @@
         7003300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7003400": {
@@ -5684,11 +6000,14 @@
         7003400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7003500": {
@@ -5703,11 +6022,14 @@
         7003500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7003600": {
@@ -5722,11 +6044,14 @@
         7003600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "resistance"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7005600": {
@@ -5740,6 +6065,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -5761,6 +6087,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5780,6 +6107,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5799,6 +6127,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5818,6 +6147,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5837,6 +6167,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5856,6 +6187,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5875,6 +6207,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5894,6 +6227,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -5913,6 +6247,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5934,6 +6269,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -5955,6 +6291,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -5981,6 +6318,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6002,6 +6340,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -6021,6 +6360,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -6042,6 +6382,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -6059,6 +6400,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6078,6 +6420,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6097,6 +6440,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6116,6 +6460,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6135,6 +6480,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6153,6 +6499,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6172,6 +6519,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6191,6 +6539,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6210,6 +6559,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6229,6 +6579,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6248,6 +6599,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6267,6 +6619,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6286,6 +6639,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6305,6 +6659,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6324,6 +6679,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6343,6 +6699,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6365,6 +6722,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6386,6 +6744,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6407,6 +6766,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6426,6 +6786,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6445,6 +6806,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6464,6 +6826,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6483,6 +6846,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6502,6 +6866,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6521,6 +6886,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6540,6 +6906,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6559,6 +6926,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6578,6 +6946,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6597,6 +6966,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6616,6 +6986,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6635,6 +7006,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6654,6 +7026,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6673,6 +7046,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6691,6 +7065,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6712,6 +7087,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6733,6 +7109,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6754,6 +7131,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6773,6 +7151,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6792,6 +7171,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6811,6 +7191,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6830,6 +7211,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6849,6 +7231,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6868,6 +7251,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6887,6 +7271,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6905,6 +7290,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6923,6 +7309,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6942,6 +7329,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6962,11 +7350,14 @@
         7033200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "skillUses"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7033300": {
@@ -6980,6 +7371,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -6999,6 +7391,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7018,6 +7411,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7036,6 +7430,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7055,6 +7450,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7074,6 +7470,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7096,6 +7493,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7117,6 +7515,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7135,6 +7534,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7153,6 +7553,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7171,6 +7572,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7190,6 +7592,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7209,6 +7612,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7227,6 +7631,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7248,6 +7653,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7268,6 +7674,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7288,6 +7695,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -7307,6 +7715,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -7324,6 +7733,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7343,6 +7753,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7362,6 +7773,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7381,6 +7793,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7400,6 +7813,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7419,6 +7833,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7440,6 +7855,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -7459,6 +7875,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7480,7 +7897,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -7501,7 +7921,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -7520,6 +7943,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7539,6 +7963,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7558,6 +7983,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7577,6 +8003,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7596,6 +8023,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7615,6 +8043,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7633,6 +8062,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7651,6 +8081,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7670,6 +8101,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7689,6 +8121,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7708,6 +8141,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7729,6 +8163,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7748,6 +8183,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7769,6 +8205,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7789,6 +8226,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7807,6 +8245,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7826,6 +8265,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7845,6 +8285,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7866,6 +8307,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7887,6 +8329,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7912,6 +8355,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7933,6 +8377,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7952,6 +8397,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -7973,6 +8419,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -7994,6 +8441,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8015,6 +8463,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8036,6 +8485,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8057,6 +8507,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8077,6 +8528,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8097,6 +8549,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8118,6 +8571,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8139,6 +8593,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8160,6 +8615,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -8182,6 +8638,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8202,6 +8659,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8221,6 +8679,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8240,6 +8699,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8259,6 +8719,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8278,6 +8739,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8297,6 +8759,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8316,6 +8779,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8335,6 +8799,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8354,6 +8819,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8373,6 +8839,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8392,6 +8859,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8411,6 +8879,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8430,6 +8899,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8449,6 +8919,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限"
@@ -8466,6 +8937,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8489,6 +8961,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8508,6 +8981,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8526,6 +9000,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8544,6 +9019,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8562,6 +9038,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -8582,6 +9059,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8602,6 +9080,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8622,6 +9101,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8642,6 +9122,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8662,6 +9143,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8682,6 +9164,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8702,6 +9185,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8722,6 +9206,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8742,6 +9227,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8762,6 +9248,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8782,6 +9269,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8802,6 +9290,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8822,6 +9311,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8842,6 +9332,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8862,6 +9353,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8882,6 +9374,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8902,6 +9395,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8922,6 +9416,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8942,6 +9437,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8962,6 +9458,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -8982,6 +9479,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9002,6 +9500,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9022,6 +9521,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9042,6 +9542,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9062,6 +9563,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9082,6 +9584,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9102,6 +9605,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9122,6 +9626,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9142,6 +9647,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9162,6 +9668,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9182,6 +9689,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9202,6 +9710,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9222,6 +9731,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
         "instance-matching",
         "weapon-count"
@@ -9238,16 +9748,22 @@
         199
       ],
       "detailSources": [
+        7090000,
         7090002,
         7090001
       ],
       "values": "decoded-fields",
-      "stacking": "user-reported-pair",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "killMatching",
+        "killDispatch",
+        "gaugeApply"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "敌人分类标记的具体对象、共享奖励及重载路径"
       ],
       "gameplayVerified": false
     },
@@ -9262,6 +9778,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9281,6 +9798,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9302,7 +9820,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -9323,7 +9844,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -9344,6 +9868,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9362,6 +9887,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9381,6 +9907,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9400,6 +9927,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9419,6 +9947,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9438,6 +9967,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9457,6 +9987,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9476,6 +10007,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9497,6 +10029,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9515,6 +10048,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9534,6 +10068,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9557,6 +10092,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9579,6 +10115,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9601,6 +10138,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9623,6 +10161,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9645,6 +10184,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9667,6 +10207,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9689,6 +10230,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9711,6 +10253,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9733,6 +10276,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9755,6 +10299,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9775,6 +10320,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9797,6 +10343,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9819,6 +10366,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9841,6 +10389,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9863,6 +10412,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9885,6 +10435,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9903,6 +10454,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9922,6 +10474,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9941,6 +10494,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9960,6 +10514,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9979,6 +10534,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -9998,6 +10554,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10017,6 +10574,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10036,6 +10594,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10055,6 +10614,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10074,6 +10634,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10093,6 +10654,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10112,6 +10674,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10131,6 +10694,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10150,6 +10714,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10169,6 +10734,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10188,6 +10754,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10207,6 +10774,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10226,6 +10794,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10245,6 +10814,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10264,6 +10834,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10287,6 +10858,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10309,6 +10881,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10331,6 +10904,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10349,6 +10923,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10370,6 +10945,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10393,6 +10969,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10416,6 +10993,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10434,6 +11012,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10453,6 +11032,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10472,6 +11052,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10491,6 +11072,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10510,6 +11092,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10529,6 +11112,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10548,6 +11132,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10571,6 +11156,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10591,6 +11177,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10611,6 +11198,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10631,6 +11219,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10649,6 +11238,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10669,6 +11259,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10689,6 +11280,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10708,11 +11300,14 @@
         7270100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "evidence": [],
-      "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "skillUses"
       ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7280000": {
@@ -10726,6 +11321,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10745,6 +11341,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10764,6 +11361,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10783,6 +11381,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10802,6 +11401,7 @@
       "detailSources": [],
       "values": "unresolved",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -10822,6 +11422,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10843,6 +11444,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10864,6 +11466,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10885,6 +11488,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10906,6 +11510,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10927,6 +11532,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10948,6 +11554,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10969,6 +11576,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -10990,6 +11598,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11011,6 +11620,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11032,6 +11642,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11053,6 +11664,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11074,6 +11686,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11095,6 +11708,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11116,6 +11730,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11137,6 +11752,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11158,6 +11774,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11179,6 +11796,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11200,6 +11818,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11221,6 +11840,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11242,6 +11862,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11263,6 +11884,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11284,6 +11906,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11305,6 +11928,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11326,6 +11950,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11347,6 +11972,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11368,6 +11994,7 @@
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
         "equip-injection",
         "instance-matching",
@@ -11389,7 +12016,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11410,7 +12040,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11431,7 +12064,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11452,7 +12088,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11473,7 +12112,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11494,7 +12136,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11515,7 +12160,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11536,7 +12184,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11557,7 +12208,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11578,7 +12232,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11599,7 +12256,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11620,7 +12280,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11641,7 +12304,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11662,7 +12328,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11683,7 +12352,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11704,7 +12376,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11725,7 +12400,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11746,7 +12424,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11767,7 +12448,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11788,7 +12472,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11809,7 +12496,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11830,7 +12520,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11851,7 +12544,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11872,7 +12568,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11893,7 +12592,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11914,7 +12616,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11935,7 +12640,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11956,7 +12664,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11977,7 +12688,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -11998,7 +12712,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12019,7 +12736,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12040,7 +12760,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12061,7 +12784,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12082,7 +12808,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12103,7 +12832,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12124,7 +12856,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12145,7 +12880,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12166,7 +12904,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12187,7 +12928,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12208,7 +12952,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12229,7 +12976,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12250,7 +13000,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12271,7 +13024,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12292,7 +13048,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12313,7 +13072,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12334,7 +13096,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12355,7 +13120,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12376,7 +13144,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12397,7 +13168,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12418,7 +13192,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12439,7 +13216,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12460,7 +13240,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12481,7 +13264,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12502,7 +13288,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12523,7 +13312,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12544,7 +13336,10 @@
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
-      "evidence": [],
+      "stackingCategory": "待确认",
+      "evidence": [
+        "recovery-timing"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12565,6 +13360,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12585,6 +13381,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12605,6 +13402,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12625,6 +13423,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12645,6 +13444,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12665,6 +13465,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12685,6 +13486,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12705,6 +13507,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12725,6 +13528,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12745,6 +13549,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12765,6 +13570,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12785,6 +13591,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12805,6 +13612,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12825,6 +13633,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
@@ -12845,6 +13654,7 @@
       ],
       "values": "named-replacement",
       "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",

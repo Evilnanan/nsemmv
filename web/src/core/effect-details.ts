@@ -5,6 +5,7 @@ export interface EffectDetail {
   info: string | null;
   blocks: {
     source: number;
+    branches?: number[];
     phase: string;
     linked: boolean;
     values: [string, string][];
@@ -13,13 +14,14 @@ export interface EffectDetail {
     duration: number | null;
     interval: number | null;
   }[];
-  stacking: string;
+  stacking: "不可叠加" | "可叠加" | "不同等级可叠加" | "待确认";
+  stackingDetail: string;
   notes: string[];
 }
 const details = raw.effects as unknown as Record<number, EffectDetail>;
 // A mismatched dataset must never present values for the active profile.
 export function effectDetail(id: number): EffectDetail | undefined {
-  return raw.regulationSha256 === catalog.regulationSha256
+  return raw.schema === 2 && raw.regulationSha256 === catalog.regulationSha256
     ? details[id]
     : undefined;
 }

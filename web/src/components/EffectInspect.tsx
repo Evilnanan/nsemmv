@@ -264,11 +264,6 @@ export function EffectInspect({
                   </div>
                 ))}
               </dl>
-              {!!b.scope.length && (
-                <p className="effect-detail-muted">
-                  法术适用：{b.scope.join(" / ")}
-                </p>
-              )}
               {!!b.restrictions.length && (
                 <p className="effect-detail-muted">
                   {b.restrictions.join(" · ")}
@@ -292,9 +287,12 @@ export function EffectInspect({
           <dl className="effect-detail-rules">
             <div>
               <dt>叠加</dt>
-              <dd>{detail?.stacking ?? "尚未确认"}</dd>
+              <dd>{detail?.stacking ?? "待确认"}</dd>
             </div>
           </dl>
+          {detail?.stackingDetail && (
+            <p className="effect-detail-muted">{detail.stackingDetail}</p>
+          )}
           {detail?.notes.map((note) => (
             <p key={note} className="effect-detail-muted">
               {note}

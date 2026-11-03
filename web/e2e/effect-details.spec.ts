@@ -47,7 +47,8 @@ test("effect details support hover, touch and keyboard without selecting or edit
   else await first.hover();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   await expect(details).toContainText("+1");
-  await expect(details).toContainText("可叠加；能力值相加");
+  await expect(details).toContainText("可叠加");
+  await expect(details).toContainText("能力值相加");
   await details.getByRole("button", { name: "关闭词条详情" }).click();
   await expect(details).toHaveCount(0);
   await page.locator(".effect-cell").first().click();
@@ -58,13 +59,15 @@ test("effect details support hover, touch and keyboard without selecting or edit
   if (isMobile) await longPress(page, row.locator(".picker-row"));
   else await row.hover();
   await expect(details).toContainText("+14%");
-  await expect(details).toContainText("可叠加；攻击倍率相乘");
+  await expect(details).toContainText("可叠加");
+  await expect(details).toContainText("攻击倍率相乘");
   await expect(details).not.toContainText("抽取池");
   await expect(details).not.toContainText("同件遗物");
   await expect(details).not.toContainText("互斥");
   await expect(details).not.toContainText("DPS");
   await expect(details).not.toContainText("最终伤害");
-  await expect(details).toContainText("魔法 / 祷告");
+  await expect(details).not.toContainText("法术适用");
+  await expect(details).not.toContainText("反馈");
   await expect(page.getByLabel("搜索词条")).toBeVisible();
   // The card really sits above the native modal, within either viewport.
   expect(
@@ -103,6 +106,36 @@ test("effect details support hover, touch and keyboard without selecting or edit
   await page.screenshot({
     path: testInfo.outputPath("hero-growth-details.png"),
   });
+  await page.keyboard.press("Escape");
+  await page.getByLabel("搜索词条").fill("7090000");
+  const kill = page
+    .locator(".effect-choice-inspect")
+    .filter({ hasText: "7090000" });
+  if (isMobile) await longPress(page, kill.locator(".picker-row"));
+  else await kill.hover();
+  await expect(details).toContainText("不同等级可叠加");
+  await expect(details).toContainText("+1.65% 或 +5%");
+  await expect(details).not.toContainText("反馈");
+  await page.keyboard.press("Escape");
+  await page.getByLabel("搜索词条").fill("7036000");
+  const restore = page
+    .locator(".effect-choice-inspect")
+    .filter({ hasText: "7036000" });
+  if (isMobile) await longPress(page, restore.locator(".picker-row"));
+  else await restore.hover();
+  await expect(details).toContainText("最大值的 5%");
+  await expect(details).toContainText("重置连续攻击累计进度");
+  await expect(details).not.toContainText("此效果持续");
+  await expect(details).not.toContainText("触发周期");
+  await page.keyboard.press("Escape");
+  await page.getByLabel("搜索词条").fill("7350000");
+  const hit = page
+    .locator(".effect-choice-inspect")
+    .filter({ hasText: "7350000" });
+  if (isMobile) await longPress(page, hit.locator(".picker-row"));
+  else await hit.hover();
+  await expect(details).toContainText("约每 1.1 秒恢复一次");
+  await expect(details).not.toContainText("此效果持续");
   await page.keyboard.press("Escape");
   await page.getByLabel("搜索词条").fill("999999998");
   await page.locator(".effect-choice-inspect").focus();

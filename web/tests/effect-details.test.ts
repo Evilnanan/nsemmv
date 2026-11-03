@@ -14,8 +14,14 @@ describe("MMV effect details", () => {
     for (const id of Object.keys(catalog.effects).map(Number)) {
       const detail = effectDetail(id)!;
       expect(detail).toBeDefined();
+      expect(["不可叠加", "可叠加", "不同等级可叠加", "待确认"]).toContain(
+        detail.stacking,
+      );
+      expect(JSON.stringify(detail)).not.toContain("反馈");
       for (const block of detail.blocks) {
         expect(spells[String(block.source)]).toBeDefined();
+        for (const branch of block.branches ?? [])
+          expect(spells[String(branch)]).toBeDefined();
         expect(
           block.values.every(
             (v) => v.length === 2 && !/NaN|Infinity/.test(v[1]),
@@ -42,12 +48,11 @@ describe("MMV effect details", () => {
     expect(cocktail.blocks[0].values).toContainEqual(["攻击倍率", "+35%"]);
     expect(cocktail.blocks[1].values).toContainEqual(["魔法 FP 消耗", "+30%"]);
     const kill = effectDetail(7090000)!;
-    expect(kill.blocks.map((b) => b.phase)).toEqual([
-      "击杀触发分支",
-      "获得卢恩触发分支",
-    ]);
-    expect(kill.stacking).toContain("同版重复待确认");
-    expect(effectDetail(6611202)!.stacking).toBe("可叠加；攻击倍率相乘");
+    expect(kill.blocks.map((b) => b.phase)).toEqual(["打倒敌人时"]);
+    expect(kill.blocks[0].values).toEqual([["绝招量表", "+1.65% 或 +5%"]]);
+    expect(kill.stacking).toBe("不同等级可叠加");
+    expect(effectDetail(6611202)!.stacking).toBe("可叠加");
+    expect(effectDetail(6611202)!.stackingDetail).toBe("攻击倍率相乘");
     expect(effectDetail(999999998)).toBeUndefined();
   });
   it("keeps a versioned research record for every obtainable effect, without claiming gameplay verification", () => {
@@ -79,8 +84,8 @@ describe("MMV effect details", () => {
     }
   });
   it("uses executed native calculations for additive stats and multiplicative rates", () => {
-    expect(effectDetail(7000000)!.stacking).toBe("可叠加；能力值相加");
-    expect(effectDetail(7000800)!.stacking).toBe("可叠加；冷却时间倍率相乘");
+    expect(effectDetail(7000000)!.stackingDetail).toBe("能力值相加");
+    expect(effectDetail(7000800)!.stackingDetail).toBe("冷却时间倍率相乘");
     const tripleSpell = evidence.attack.filter(
       (r) =>
         r.ids.length === 3 &&
@@ -90,7 +95,8 @@ describe("MMV effect details", () => {
     expect(tripleSpell).toHaveLength(2);
     for (const r of tripleSpell)
       for (const rate of r.rates) expect(rate).toBeCloseTo(1.14 ** 3, 6);
-    expect(effectDetail(6632400)!.stacking).toContain("第一个武器倾向");
+    expect(effectDetail(6632400)!.stacking).toBe("不可叠加");
+    expect(effectDetail(6632400)!.stackingDetail).toContain("第一个");
     expect(
       evidence.discovery.find((r) => r.ids.join() === "7632400,7633000")!
         .weaponType,
@@ -98,6 +104,42 @@ describe("MMV effect details", () => {
       evidence.discovery.find((r) => r.ids.join() === "7633000,7632400")!
         .weaponType,
     );
+  });
+  it("bases tier-only stacking on native matching, dispatch and gauge settlement", () => {
+    for (const id of [7090000, 6090000]) {
+      expect(effectDetail(id)!.stacking).toBe("不同等级可叠加");
+      expect(effectDetail(id)!.stackingDetail).toContain("同等级重复无效");
+    }
+    expect(evidence.killMatching).toHaveLength(4);
+    for (const r of evidence.killMatching)
+      expect(r.reused).toBe(r.existing === r.incoming);
+    const both = evidence.killDispatch.filter(
+      (r) => r.ids.join() === "7090000,7090010" && r.flags === 0,
+    );
+    expect(both).toHaveLength(2);
+    expect(both.find((r) => r.special === 0)!.percent).toBeCloseTo(11.5);
+    expect(both.find((r) => r.special === 1)!.percent).toBeCloseTo(3.8);
+    expect(evidence.gaugeApply.find((r) => r.percent === 5)!.value).toBeCloseTo(
+      50,
+    );
+  });
+  it("confirms resistance, FP cost and skill-use rules with native outputs", () => {
+    expect(effectDetail(7003000)!.stacking).toBe("可叠加");
+    expect(effectDetail(6610702)!.stackingDetail).toBe("FP 消耗倍率相乘");
+    expect(effectDetail(7033200)!.stacking).toBe("不可叠加");
+    expect(
+      evidence.resistance.find(
+        (r) =>
+          r.ids.join() === "7003000,7003001" &&
+          r.field === "changePoisonResistPoint" &&
+          r.flags === 0,
+      )!.value,
+    ).toBe(185);
+    const costs = evidence.fpCost.filter(
+      (r) => r.ids.join() === "7610702,7610702,7610702" && r.flags === 0,
+    );
+    expect(costs).toHaveLength(4);
+    for (const r of costs) expect(r.multiplier).toBeCloseTo(0.84 ** 3, 6);
   });
   it("preserves resistance units, restoration units and attack categories", () => {
     expect(effectDetail(7003000)!.blocks[0].values).toEqual([["抗毒", "+75"]]);
@@ -153,5 +195,37 @@ describe("MMV effect details", () => {
       expect(new Set(b.values.map(([label]) => label)).size).toBe(
         b.values.length,
       );
+  });
+  it("omits one-shot lifetimes while retaining resets, refresh limits and real regeneration durations", () => {
+    const burst = effectDetail(7036000)!.blocks[0];
+    expect(burst.duration).toBeNull();
+    expect(burst.interval).toBeNull();
+    expect(burst.restrictions).toContain("恢复时重置连续攻击累计进度");
+    const once = evidence.timing.find(
+      (r) => r.id === 7036001 && r.refreshAt === null,
+    )!;
+    expect(once.ticks).toEqual([0]);
+    expect(once.accumulatorAfterFirstTick).toBe(0);
+    expect(once.accumulatorAfterNewAttacks).toBe(7);
+    const hit = effectDetail(7350000)!.blocks[0];
+    expect(hit.duration).toBeNull();
+    expect(hit.restrictions.join()).toContain("1 秒内再次触发只延长有效期");
+    expect(hit.restrictions.join()).toContain("约每 1.1 秒恢复一次");
+    const refreshed = evidence.timing.find(
+      (r) => r.id === 8600211 && r.refreshAt === 0.2,
+    )!;
+    expect(refreshed.ticks).toHaveLength(2);
+    expect(Math.abs(refreshed.ticks[1] - 1.1)).toBeLessThan(0.04);
+    const continuous = evidence.timing.find(
+      (r) => r.id === 8600211 && r.refreshEvery === 0.2,
+    )!;
+    expect(continuous.ticks.length).toBeGreaterThan(5);
+    for (let i = 1; i < continuous.ticks.length; i++)
+      expect(
+        Math.abs(continuous.ticks[i] - continuous.ticks[i - 1] - 1.1),
+      ).toBeLessThan(0.04);
+    expect(effectDetail(7260900)!.blocks[0].duration).toBe(15);
+    expect(effectDetail(7260900)!.blocks[0].interval).toBe(1.3);
+    expect(effectDetail(7034200)!.blocks[0].duration).toBe(3);
   });
 });

@@ -39,6 +39,16 @@
       "id": 7034201,
       "category": 20,
       "reusesSameId": true
+    },
+    {
+      "id": 7033200,
+      "category": 20,
+      "reusesSameId": true
+    },
+    {
+      "id": 7270100,
+      "category": 20,
+      "reusesSameId": true
     }
   ],
   "attributes": [
@@ -6641,10 +6651,2331 @@
       ]
     }
   ],
+  "resistance": [
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": 225.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003000,
+        7003000
+      ],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": 185.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        7003001
+      ],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": -5.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": -80.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": -80.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": -80.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": -80.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": -80.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": -80.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003000,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": -240.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        6850200,
+        6850200,
+        6850200
+      ],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changeDiseaseResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changeBloodResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changeCurseResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changeFreezeResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changeSleepResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 0,
+      "field": "changeMadnessResistPoint",
+      "value": 75.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changePoisonResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changeDiseaseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changeBloodResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changeCurseResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changeFreezeResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changeSleepResistPoint",
+      "value": 0.0
+    },
+    {
+      "ids": [
+        7003100,
+        7003200,
+        7003300,
+        7003400,
+        7003500,
+        7003600
+      ],
+      "flags": 2148270083,
+      "field": "changeMadnessResistPoint",
+      "value": 0.0
+    }
+  ],
+  "fpCost": [
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "magicConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "shamanConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "miracleConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 0,
+      "field": "artsConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "magicConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "shamanConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "miracleConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "field": "artsConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 0,
+      "field": "magicConsumptionRate",
+      "multiplier": 0.9200000166893005
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 0,
+      "field": "shamanConsumptionRate",
+      "multiplier": 0.9200000166893005
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 0,
+      "field": "miracleConsumptionRate",
+      "multiplier": 0.9200000166893005
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 0,
+      "field": "artsConsumptionRate",
+      "multiplier": 0.9200000166893005
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 2148270083,
+      "field": "magicConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 2148270083,
+      "field": "shamanConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 2148270083,
+      "field": "miracleConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700
+      ],
+      "flags": 2148270083,
+      "field": "artsConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 0,
+      "field": "magicConsumptionRate",
+      "multiplier": 0.5927039384841919
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 0,
+      "field": "shamanConsumptionRate",
+      "multiplier": 0.5927039384841919
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 0,
+      "field": "miracleConsumptionRate",
+      "multiplier": 0.5927039384841919
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 0,
+      "field": "artsConsumptionRate",
+      "multiplier": 0.5927039384841919
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "magicConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "shamanConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "miracleConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610702,
+        7610702,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "artsConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 0,
+      "field": "magicConsumptionRate",
+      "multiplier": 0.6723359823226929
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 0,
+      "field": "shamanConsumptionRate",
+      "multiplier": 0.6723359823226929
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 0,
+      "field": "miracleConsumptionRate",
+      "multiplier": 0.6723359823226929
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 0,
+      "field": "artsConsumptionRate",
+      "multiplier": 0.6723359823226929
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "magicConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "shamanConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "miracleConsumptionRate",
+      "multiplier": 1.0
+    },
+    {
+      "ids": [
+        7610700,
+        7610701,
+        7610702
+      ],
+      "flags": 2148270083,
+      "field": "artsConsumptionRate",
+      "multiplier": 1.0
+    }
+  ],
+  "skillUses": [
+    {
+      "ids": [],
+      "flags": 0,
+      "value": 0
+    },
+    {
+      "ids": [],
+      "flags": 2148270083,
+      "value": 0
+    },
+    {
+      "ids": [
+        7033200
+      ],
+      "flags": 0,
+      "value": 1
+    },
+    {
+      "ids": [
+        7033200
+      ],
+      "flags": 2148270083,
+      "value": 0
+    },
+    {
+      "ids": [
+        7270100
+      ],
+      "flags": 0,
+      "value": 1
+    },
+    {
+      "ids": [
+        7270100
+      ],
+      "flags": 2148270083,
+      "value": 0
+    }
+  ],
+  "killMatching": [
+    {
+      "existing": 7090000,
+      "incoming": 7090000,
+      "reused": true
+    },
+    {
+      "existing": 7090000,
+      "incoming": 7090010,
+      "reused": false
+    },
+    {
+      "existing": 7090010,
+      "incoming": 7090000,
+      "reused": false
+    },
+    {
+      "existing": 7090010,
+      "incoming": 7090010,
+      "reused": true
+    }
+  ],
+  "killDispatch": [
+    {
+      "ids": [],
+      "special": 0,
+      "flags": 0,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [],
+      "special": 0,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [],
+      "special": 1,
+      "flags": 0,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [],
+      "special": 1,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090000
+      ],
+      "special": 0,
+      "flags": 0,
+      "emitted": [
+        7090001
+      ],
+      "percent": 5.0
+    },
+    {
+      "ids": [
+        7090000
+      ],
+      "special": 0,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090000
+      ],
+      "special": 1,
+      "flags": 0,
+      "emitted": [
+        7090002
+      ],
+      "percent": 1.649999976158142
+    },
+    {
+      "ids": [
+        7090000
+      ],
+      "special": 1,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090010
+      ],
+      "special": 0,
+      "flags": 0,
+      "emitted": [
+        7090011
+      ],
+      "percent": 6.5
+    },
+    {
+      "ids": [
+        7090010
+      ],
+      "special": 0,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090010
+      ],
+      "special": 1,
+      "flags": 0,
+      "emitted": [
+        7090012
+      ],
+      "percent": 2.1500000953674316
+    },
+    {
+      "ids": [
+        7090010
+      ],
+      "special": 1,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090000,
+        7090010
+      ],
+      "special": 0,
+      "flags": 0,
+      "emitted": [
+        7090001,
+        7090011
+      ],
+      "percent": 11.5
+    },
+    {
+      "ids": [
+        7090000,
+        7090010
+      ],
+      "special": 0,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090000,
+        7090010
+      ],
+      "special": 1,
+      "flags": 0,
+      "emitted": [
+        7090002,
+        7090012
+      ],
+      "percent": 3.8000001907348633
+    },
+    {
+      "ids": [
+        7090000,
+        7090010
+      ],
+      "special": 1,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090010,
+        7090000
+      ],
+      "special": 0,
+      "flags": 0,
+      "emitted": [
+        7090011,
+        7090001
+      ],
+      "percent": 11.5
+    },
+    {
+      "ids": [
+        7090010,
+        7090000
+      ],
+      "special": 0,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7090010,
+        7090000
+      ],
+      "special": 1,
+      "flags": 0,
+      "emitted": [
+        7090012,
+        7090002
+      ],
+      "percent": 3.8000001907348633
+    },
+    {
+      "ids": [
+        7090010,
+        7090000
+      ],
+      "special": 1,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7000000,
+        7090000
+      ],
+      "special": 0,
+      "flags": 0,
+      "emitted": [
+        7090001
+      ],
+      "percent": 5.0
+    },
+    {
+      "ids": [
+        7000000,
+        7090000
+      ],
+      "special": 0,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    },
+    {
+      "ids": [
+        7000000,
+        7090000
+      ],
+      "special": 1,
+      "flags": 0,
+      "emitted": [
+        7090002
+      ],
+      "percent": 1.649999976158142
+    },
+    {
+      "ids": [
+        7000000,
+        7090000
+      ],
+      "special": 1,
+      "flags": 2148270083,
+      "emitted": [],
+      "percent": 0.0
+    }
+  ],
+  "gaugeApply": [
+    {
+      "percent": 5,
+      "initial": 0,
+      "maximum": 1000,
+      "value": 49.999996185302734
+    },
+    {
+      "percent": 1.65,
+      "initial": 0,
+      "maximum": 1000,
+      "value": 16.5
+    },
+    {
+      "percent": 11.5,
+      "initial": 0,
+      "maximum": 1000,
+      "value": 114.99999237060547
+    },
+    {
+      "percent": 3.8,
+      "initial": 0,
+      "maximum": 1000,
+      "value": 38.0
+    },
+    {
+      "percent": 11.5,
+      "initial": 950,
+      "maximum": 1000,
+      "value": 1000.0
+    }
+  ],
+  "timing": [
+    {
+      "id": 7036001,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": 0,
+      "accumulatorAfterNewAttacks": 7
+    },
+    {
+      "id": 7036011,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": 0,
+      "accumulatorAfterNewAttacks": 7
+    },
+    {
+      "id": 350401,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": 0,
+      "accumulatorAfterNewAttacks": 7
+    },
+    {
+      "id": 350401,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": 0,
+      "accumulatorAfterNewAttacks": 7
+    },
+    {
+      "id": 350502,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 350502,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 350602,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 350602,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 350602,
+      "refreshAt": 0.2,
+      "refreshEvery": 0.2,
+      "lifetime": 1,
+      "interval": 4,
+      "ticks": [
+        0,
+        4.033333
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7100101,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7100101,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0,
+        0.416667
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7100101,
+      "refreshAt": 0.2,
+      "refreshEvery": 0.2,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0,
+        0.416667,
+        0.816667,
+        1.216667,
+        1.616667,
+        2.016667,
+        2.416667,
+        2.816667,
+        3.216667,
+        3.616667,
+        4.016667,
+        4.416667,
+        4.816667,
+        5.216667,
+        5.616667
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600105,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600105,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0,
+        0.416667
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600111,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600111,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0,
+        1.133333
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600205,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600205,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 0.30000001192092896,
+      "interval": 0.4000000059604645,
+      "ticks": [
+        0,
+        0.416667
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600211,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600211,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0,
+        1.133333
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 8600211,
+      "refreshAt": 0.2,
+      "refreshEvery": 0.2,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0,
+        1.133333,
+        2.233333,
+        3.333333,
+        4.433333,
+        5.533333
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    }
+  ],
+  "recoveryTiming": {
+    "350401": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": true,
+      "exemplar": 350401
+    },
+    "350502": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 350502
+    },
+    "350602": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 350502
+    },
+    "7036001": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "independent",
+      "resetsAccumulator": true,
+      "exemplar": 7036001
+    },
+    "7036011": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "independent",
+      "resetsAccumulator": true,
+      "exemplar": 7036001
+    },
+    "7100101": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 7100101
+    },
+    "7100111": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 7100101
+    },
+    "8600105": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600105
+    },
+    "8600106": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600105
+    },
+    "8600107": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600105
+    },
+    "8600111": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600113": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600115": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600117": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600119": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600121": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600123": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600125": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600127": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600129": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600131": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600133": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600135": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600137": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600139": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600141": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600145": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600147": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600149": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600151": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600153": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600155": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600157": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600159": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600161": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600163": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600165": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600167": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600205": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600105
+    },
+    "8600206": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600105
+    },
+    "8600207": {
+      "lifetime": 0.3,
+      "interval": 0.4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600105
+    },
+    "8600211": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600213": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600215": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600217": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600219": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600221": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600223": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600225": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600227": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600229": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600231": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600233": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600235": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600237": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600239": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600241": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600245": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600247": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600249": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600251": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600253": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600255": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600257": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600259": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600261": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600263": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600265": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8600267": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 8600111
+    },
+    "8610001": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "independent",
+      "resetsAccumulator": true,
+      "exemplar": 7036001
+    },
+    "8610101": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "independent",
+      "resetsAccumulator": true,
+      "exemplar": 7036001
+    },
+    "8640002": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 350502
+    },
+    "8640102": {
+      "lifetime": 1,
+      "interval": 4,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 350502
+    }
+  },
   "stubs": [
+    "3C7FD0 effect application recorder; dispatch is native",
+    "42C120 / 3D4180 synthetic gauge owner without player HUD notification",
     "E6D630 absent weapon PARAM lookup",
     "E78720 HeroStatus PARAM wrapper cleanup",
-    "E78730 HeroStatus PARAM lookup using actual extracted rows"
+    "E78730 HeroStatus PARAM lookup using actual extracted rows",
+    "EA17E0 SpEffect PARAM lookup for lifetime refresh using actual row"
   ],
   "gameplayVerified": false
 }

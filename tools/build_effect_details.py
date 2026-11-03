@@ -39,7 +39,6 @@ POINTS = {
     'addFaithStatus': '信仰', 'addLuckStatus': '感应',
     'physicsAttackPower': '物理基础攻击力', 'magicAttackPower': '魔力基础攻击力',
     'fireAttackPower': '火基础攻击力', 'thunderAttackPower': '雷基础攻击力', 'darkAttackPower': '圣基础攻击力',
-    'ultimateArtGauge': '绝招量表（参数单位）',
     'changePoisonResistPoint': '抗毒', 'changeDiseaseResistPoint': '抗腐败',
     'changeBloodResistPoint': '抗出血', 'changeCurseResistPoint': '抗骤死',
     'changeFreezeResistPoint': '抗冻伤', 'changeSleepResistPoint': '抗催眠',
@@ -65,7 +64,7 @@ META = ['effectEndurance', 'motionInterval', 'spCategory', 'categoryPriority', '
         'wepTypeTrigger', 'wepTypeTriggerCount', 'conditionHp', 'conditionHpRate',
         'changeHpRate', 'changeMpRate', 'changeStaminaRate', 'startGoodsId', 'startingItemAmount',
         'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier',
-        'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId']
+        'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId', 'ultimateArtGauge']
 FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META)
 source_path = ROOT / 'data/effect-detail-source.json'
 if args.extract:
@@ -107,7 +106,9 @@ evidence = json.loads(evidence_path.read_text())
 assert evidence['schema'] == 1
 assert evidence['regulationSha256'] == source['hashes']['regulation.bin']
 assert evidence['exeSha256'] == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
-assert all(evidence[k] for k in ('predicates', 'attributes', 'attack', 'defense', 'cooldown', 'discovery', 'gauge', 'hero'))
+assert all(evidence[k] for k in ('predicates', 'attributes', 'attack', 'defense', 'cooldown', 'discovery', 'gauge', 'hero',
+                               'resistance', 'fpCost', 'skillUses', 'killMatching', 'killDispatch', 'gaugeApply',
+                               'timing', 'recoveryTiming'))
 
 
 def num(v):
@@ -136,6 +137,8 @@ def stats(row):
     for field, label in POINTS.items():
         if v := row.get(field, 0):
             values.append([label, signed(v)])
+    if v := row.get('ultimateArtGauge', 0):
+        values.append(['绝招量表', signed(v) + '%'])
     for field, label in RESTORE.items():
         if v := row.get(field, 0):
             # Fixed and proportional restoration may coexist on the same node.
@@ -218,11 +221,35 @@ def block(id, phase, linked):
     # Do not present that unused repeat interval as the trigger's cooldown.
     duration = r.get('effectEndurance', 0)
     interval = r.get('motionInterval', 0)
+    if timing := evidence['recoveryTiming'].get(str(id)):
+        assert timing['lifetime'] == duration and timing['interval'] == interval
+        if timing['resetsAccumulator']:
+            restrictions.append('恢复时重置连续攻击累计进度')
+        if timing['repeatedApplication'] == 'refresh':
+            restrictions.append(f'首次触发恢复一次；{num(duration)} 秒内再次触发只延长有效期，持续刷新时约每 {num(interval)} 秒恢复一次')
+        # The resource change is a tick, not a buff lasting this many seconds.
+        # Any consequential refresh window is described above instead.
+        duration, interval = 0, 0
     return dict(source=id, phase=phase, linked=linked, values=values, scope=scope, restrictions=restrictions,
                 duration=duration if duration > 0 else None,
                 interval=interval if interval > 0 and (duration < 0 or duration >= interval) else None)
 
-result = {}
+STACKING_RULES = {
+    'unknown': ('待确认', '', []),
+    'attributes': ('可叠加', '能力值相加', ['equip-injection', 'instance-matching', 'attributes']),
+    'attack': ('可叠加', '攻击倍率相乘', ['equip-injection', 'instance-matching', 'attack']),
+    'defense': ('可叠加', '承伤倍率相乘', ['equip-injection', 'instance-matching', 'defense']),
+    'cooldown': ('可叠加', '冷却时间倍率相乘', ['equip-injection', 'instance-matching', 'cooldown']),
+    'gauge': ('可叠加', '各自累积通道的倍率相乘', ['equip-injection', 'instance-matching', 'gauge']),
+    'resistance': ('可叠加', '抵抗力点数相加', ['equip-injection', 'instance-matching', 'resistance']),
+    'fp-cost': ('可叠加', 'FP 消耗倍率相乘', ['equip-injection', 'instance-matching', 'fpCost']),
+    'weapon-count': ('不可叠加', '同种武器条件重复无效；不同武器种类分别满足条件时，可同时生效', ['instance-matching', 'weapon-count']),
+    'discovery': ('不可叠加', '多个武器倾向同时存在时，采用生效列表中的第一个', ['discovery']),
+    'skill-uses': ('不可叠加', '同一技艺次数词条重复装备只生效一次', ['equip-injection', 'instance-matching', 'skillUses']),
+    'kill': ('不同等级可叠加', '普通版与＋１版各生效一次，恢复量相加；同等级重复无效',
+             ['equip-injection', 'instance-matching', 'killMatching', 'killDispatch', 'gaugeApply']),
+}
+result, rules = {}, {}
 for id, effect in source['effects'].items():
     blocks, seen = [], set()
     pending = [(v, ROOTS[k], False, 0) for k, v in effect['roots'].items()]
@@ -237,10 +264,7 @@ for id, effect in source['effects'].items():
             r = source['spells'].get(str(sp), {})
             pending.extend((int(r[k]), label, True, depth + 1) for k, label in LINKS.items() if r.get(k, -1) > 0)
     notes = []
-    stacking = '跨遗物叠加尚未确认'
-    # User-confirmed pairing; deliberately not generalized to duplicate copies or other tiers.
-    if id in ('7090000', '6090000'):
-        stacking = '普通版与＋１版可叠加（使用反馈）；同版重复待确认'
+    rule = 'unknown'
     roots = [source['spells'].get(str(v), {}) for v in effect['roots'].values()]
     simple = (len(roots) == 1 and roots[0].get('spCategory') == 10
               and roots[0].get('stateInfo') == 0 and effect.get('runtimeExclusive', -1) == -1
@@ -248,54 +272,66 @@ for id, effect in source['effects'].items():
               and not any(roots[0].get('invocationConditionsStateChange' + str(i), 0) for i in (1, 2, 3)))
     if simple:
         r = roots[0]
-        if any(r.get(k, 0) for k in POINTS if k.startswith('add')):
-            stacking = '可叠加；能力值相加'
+        if any(r.get(k, 0) for k in POINTS if k.startswith('add') and k.endswith('Status')):
+            rule = 'attributes'
+        elif any(r.get(k, 0) for k in POINTS if k.endswith('ResistPoint')):
+            rule = 'resistance'
+        elif any(r.get(k, 1) != 1 for k in ('magicConsumptionRate', 'miracleConsumptionRate', 'shamanConsumptionRate', 'artsConsumptionRate')):
+            rule = 'fp-cost'
         elif r.get('characterSkillCooldownReduction', 1) != 1:
-            stacking = '可叠加；冷却时间倍率相乘'
+            rule = 'cooldown'
         elif r.get('ultimateArtGaugeRate', 1) != 1 or r.get('ultimateArtGaugeChargeRate', 1) != 1:
-            stacking = '可叠加；各自累积通道的倍率相乘'
+            rule = 'gauge'
         elif any(r.get(k, 1) != 1 for k in RATES if k.endswith('AttackRate')):
-            stacking = '可叠加；攻击倍率相乘'
+            rule = 'attack'
         elif any(r.get(k, 1) != 1 for k in RATES if k.endswith('DamageCutRate') and k != 'toughnessDamageCutRate'):
-            stacking = '可叠加；承伤倍率相乘'
+            rule = 'defense'
     if len(roots) == 1 and roots[0].get('stateInfo') == 2100 and roots[0].get('spCategory') == 20:
-        stacking = '同种重复不叠加；不同种类满足条件时分别生效'
+        rule = 'weapon-count'
     if len(roots) == 1 and roots[0].get('stateInfo') == 2122:
-        stacking = '不叠加；采用生效列表中的第一个武器倾向'
+        rule = 'discovery'
         name = catalog['effects'][id]['name']['zh_CN']
         notes.append(name.replace('通过潜在能力，能比较容易找到', '潜在能力武器倾向：'))
+    if len(roots) == 1 and list(effect['roots'].values())[0] in (7033200, 7270100):
+        rule = 'skill-uses'
+    if id in ('7090000', '6090000'):
+        root = list(effect['roots'].values())[0]
+        assert roots[0]['spCategory'] == 20 and roots[0]['stateInfo'] == 199 and effect['runtimeExclusive'] == -1
+        branches = [int(roots[0][k]) for k in ('applyIdOnKillSp', 'applyIdOnGetSoul')]
+        values = sorted(source['spells'][str(sp)]['ultimateArtGauge'] for sp in branches)
+        blocks = [dict(source=root, branches=branches, phase='打倒敌人时', linked=False,
+                       values=[['绝招量表', ' 或 '.join(signed(v) + '%' for v in values)]],
+                       scope=[], restrictions=['恢复量随敌人类型变化'], duration=None, interval=None)]
+        rule = 'kill'
     if id in ('7034200', '7034201'):
 
         notes.append('混合魔法的其他强化效果尚未解明。')
-    result[id] = dict(info=effect.get('info'), blocks=blocks, stacking=stacking, notes=notes)
-output = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'], effects=result)
+    stacking, stacking_detail, _ = STACKING_RULES[rule]
+    rules[id] = rule
+    result[id] = dict(info=effect.get('info'), blocks=blocks, stacking=stacking, stackingDetail=stacking_detail, notes=notes)
+output = dict(schema=2, regulationSha256=source['hashes']['regulation.bin'], effects=result)
 out = ROOT / 'web/src/data/effect-details.json'
 out.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':')) + '\n')
 obtainable = {str(e) for r in catalog['relics'].values() if r['obtainable'] for p in r['pools'] for e in catalog['pools'].get(str(p), [])}
 ledger = {}
-native_stack_refs = {
-    '可叠加；能力值相加': ['equip-injection', 'instance-matching', 'attributes'],
-    '可叠加；攻击倍率相乘': ['equip-injection', 'instance-matching', 'attack'],
-    '可叠加；承伤倍率相乘': ['equip-injection', 'instance-matching', 'defense'],
-    '可叠加；冷却时间倍率相乘': ['equip-injection', 'instance-matching', 'cooldown'],
-    '可叠加；各自累积通道的倍率相乘': ['equip-injection', 'instance-matching', 'gauge'],
-    '同种重复不叠加；不同种类满足条件时分别生效': ['instance-matching', 'weapon-count'],
-    '不叠加；采用生效列表中的第一个武器倾向': ['discovery'],
-}
 for id in sorted(obtainable, key=int):
     effect, detail = source['effects'][id], result[id]
     states = sorted({int(source['spells'][str(sp)]['stateInfo']) for sp in effect['roots'].values()})
-    refs = native_stack_refs.get(detail['stacking'], []).copy()
+    refs = STACKING_RULES[rules[id]][2].copy()
     questions = []
     if not refs:
         questions.append('跨遗物同版／异版的覆盖、叠加与上限')
     if 2123 in states:
         refs.append('hero')
+    if any(str(b['source']) in evidence['recoveryTiming'] for b in detail['blocks']):
+        refs.append('recovery-timing')
     if 2102 in states:
         questions.append('出击物品发放次数、容量溢出和状态 2226 的额外发放条件')
     if 2105 in states or 2128 in states:
         questions.append('多个出击替换词条的优先顺序、角色限制')
-    if any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    if rules[id] == 'kill':
+        questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
+    elif any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
     if any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
@@ -305,15 +341,14 @@ for id in sorted(obtainable, key=int):
         questions.append('尚未解析到可展示数值／机制，继续查原生、事件或动作脚本')
     numeric = any(any(label != '出击时替换' for label, _ in b['values']) for b in detail['blocks'])
     ledger[id] = dict(name=catalog['effects'][id]['name']['zh_CN'], roots=effect['roots'], states=states,
-                      detailSources=[b['source'] for b in detail['blocks']],
+                      detailSources=[sp for b in detail['blocks'] for sp in [b['source'], *b.get('branches', [])]],
                       values='decoded-fields' if numeric else ('named-replacement' if detail['blocks'] else 'unresolved'),
-                      stacking='native-analysis' if detail['stacking'] in native_stack_refs else
-                               ('user-reported-pair' if id in ('7090000', '6090000') else 'unresolved'),
+                      stacking='native-analysis' if rules[id] != 'unknown' else 'unresolved',
+                      stackingCategory=detail['stacking'],
                       evidence=refs, openQuestions=questions, gameplayVerified=False)
 coverage = dict(obtainable=len(obtainable), withDetails=sum(bool(result[e]['blocks']) for e in obtainable),
                 withNumericFields=sum(r['values'] == 'decoded-fields' for r in ledger.values()),
-                nativeStacking=sum(r['stacking'] == 'native-analysis' for r in ledger.values()),
-                userReportedPair=sum(r['stacking'] == 'user-reported-pair' for r in ledger.values()))
+                nativeStacking=sum(r['stacking'] == 'native-analysis' for r in ledger.values()))
 research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
                 nativeEvidenceSha256=hashlib.sha256(evidence_path.read_bytes()).hexdigest(), coverage=coverage, effects=ledger)
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
