@@ -47,7 +47,7 @@ test("effect details support hover, touch and keyboard without selecting or edit
   else await first.hover();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   await expect(details).toContainText("+1");
-  await expect(details).toContainText("跨遗物叠加尚未确认");
+  await expect(details).toContainText("可叠加；能力值相加");
   await details.getByRole("button", { name: "关闭词条详情" }).click();
   await expect(details).toHaveCount(0);
   await page.locator(".effect-cell").first().click();
@@ -58,6 +58,7 @@ test("effect details support hover, touch and keyboard without selecting or edit
   if (isMobile) await longPress(page, row.locator(".picker-row"));
   else await row.hover();
   await expect(details).toContainText("+14%");
+  await expect(details).toContainText("可叠加；攻击倍率相乘");
   await expect(details).not.toContainText("抽取池");
   await expect(details).not.toContainText("同件遗物");
   await expect(details).not.toContainText("互斥");
@@ -86,6 +87,22 @@ test("effect details support hover, touch and keyboard without selecting or edit
   await row.focus();
   await page.keyboard.press("Enter");
   await expect(details).toBeVisible();
+  await page.keyboard.press("Escape");
+  await page.getByLabel("搜索词条").fill("6646100");
+  const growth = page
+    .locator(".effect-choice-inspect")
+    .filter({ hasText: "6646100" });
+  if (isMobile) await longPress(page, growth.locator(".picker-row"));
+  else await growth.hover();
+  await expect(details).toContainText("随等级调整能力值");
+  await expect(details).toContainText("集中力 -2 / 智力 +2 / 信仰 +2");
+  await expect(details).toContainText("集中力 -13 / 智力 +12 / 信仰 +12");
+  expect(await details.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(
+    true,
+  );
+  await page.screenshot({
+    path: testInfo.outputPath("hero-growth-details.png"),
+  });
   await page.keyboard.press("Escape");
   await page.getByLabel("搜索词条").fill("999999998");
   await page.locator(".effect-choice-inspect").focus();

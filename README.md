@@ -51,7 +51,7 @@ NR_SAVE=/absolute/path/NR0000.dbb npm test
 
 读取不修复或重排存档。未识别的原有词条可以原样保留，新增或变更必须通过校验。配装定位依赖完整结构验证，不依赖前一段的固定字节串。未识别布局不开放新增、删除、换色等依赖引用关系的操作。
 
-[格式证据与边界](docs/save-format.md) · [数据与验证](docs/validation.md)
+[格式证据与边界](docs/save-format.md) · [数据与验证](docs/validation.md) · [词条机制研究](docs/research/effect-mechanics.md)
 
 ## 许可
 

@@ -5,6 +5,7 @@ source snapshot. Without it, rebuild using the committed snapshot only.
 """
 import argparse
 import json
+import hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +26,12 @@ RATES = {
     'magicConsumptionRate': '魔法 FP 消耗', 'miracleConsumptionRate': '祷告 FP 消耗',
     'shamanConsumptionRate': '特殊法术 FP 消耗', 'artsConsumptionRate': '战技 FP 消耗',
     'staminaAttackRate': '精力伤害', 'soulRate': '获得卢恩',
+    'characterSkillCooldownReduction': '技艺冷却时间',
+    'ultimateArtGaugeRate': '绝招量表自然累积', 'ultimateArtGaugeChargeRate': '攻击／效果的绝招累积',
+    'changeHpEstusFlaskCorrectRate': '圣杯瓶 HP 恢复量',
+    'consumeStaminaRate': '精力消耗', 'toughnessDamageCutRate': '强韧度损耗',
+    'saAttackPowerRate': '削韧倍率', 'regainRate': '血量回收倍率',
+    'extendLifeRate': '魔法／祷告有效时间',
 }
 POINTS = {
     'addLifeForceStatus': '生命力', 'addWillpowerStatus': '集中力', 'addEndureStatus': '耐力',
@@ -33,12 +40,21 @@ POINTS = {
     'physicsAttackPower': '物理基础攻击力', 'magicAttackPower': '魔力基础攻击力',
     'fireAttackPower': '火基础攻击力', 'thunderAttackPower': '雷基础攻击力', 'darkAttackPower': '圣基础攻击力',
     'ultimateArtGauge': '绝招量表（参数单位）',
+    'changePoisonResistPoint': '抗毒', 'changeDiseaseResistPoint': '抗腐败',
+    'changeBloodResistPoint': '抗出血', 'changeCurseResistPoint': '抗骤死',
+    'changeFreezeResistPoint': '抗冻伤', 'changeSleepResistPoint': '抗催眠',
+    'changeMadnessResistPoint': '抗发狂', 'additionalCharacterSkillUse': '技艺使用次数',
 }
 RESTORE = {'changeHpPoint': 'HP', 'changeMpPoint': 'FP', 'changeStaminaPoint': '精力'}
 LINKS = {
     'applyIdOnKillSp': '击杀触发分支', 'applyIdOnGetSoul': '获得卢恩触发分支',
     'cycleOccurrenceSpEffectId': '周期触发分支', 'replaceSpEffectId': '替换效果分支',
     'atkOccurrenceSpEffectId': '攻击触发分支', 'accumuOverFireId': '累积触发分支',
+    'necromancyActivationSpEffectId': '能力触发效果',
+    'analyzeAcquire_effectId': '获得样本时',
+    'analyzeSelfLevel1_effectId': '技艺对自己使用 · 第 1 档',
+    'analyzeSelfLevel2_effectId': '技艺对自己使用 · 第 2 档',
+    'analyzeSelfLevel3_effectId': '技艺对自己使用 · 第 3 档',
 }
 ROOTS = {'passiveSpEffectId_1': '生效时', 'passiveSpEffectId_2': '生效时',
          'passiveSpEffectId_3': '生效时', 'onHitSpEffect': '命中效果'}
@@ -46,7 +62,10 @@ META = ['effectEndurance', 'motionInterval', 'spCategory', 'categoryPriority', '
         'magParamChange', 'miracleParamChange', 'shamanParamChange', 'wepParamChange',
         'magicSubCategoryChange1', 'magicSubCategoryChange2', 'magicSubCategoryChange3',
         'invocationConditionsStateChange1', 'invocationConditionsStateChange2', 'invocationConditionsStateChange3',
-        'wepTypeTrigger', 'wepTypeTriggerCount', 'conditionHp', 'conditionHpRate']
+        'wepTypeTrigger', 'wepTypeTriggerCount', 'conditionHp', 'conditionHpRate',
+        'changeHpRate', 'changeMpRate', 'changeStaminaRate', 'startGoodsId', 'startingItemAmount',
+        'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier',
+        'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId']
 FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META)
 source_path = ROOT / 'data/effect-detail-source.json'
 if args.extract:
@@ -63,7 +82,7 @@ if args.extract:
         needed.update(roots.values())
         text_id = str(int(a['attachTextId']))
         info = raw['texts']['zh_CN']['AttachEffectInfo'].get(text_id)
-        effects[id] = dict(roots=roots, **({'info': info} if info else {}))
+        effects[id] = dict(roots=roots, runtimeExclusive=int(a['exclusivityId']), **({'info': info} if info else {}))
     pending = list(needed)
     while pending:
         row = spells.get(str(pending.pop()), {})
@@ -73,6 +92,8 @@ if args.extract:
                 needed.add(id)
                 pending.append(id)
     source = dict(schema=1, regulationVersion=raw['regulationVersion'], hashes=raw['hashes'], effects=effects,
+                  labels={k: raw['texts']['zh_CN'][k] for k in ('GoodsName', 'MagicName', 'SwordArtsName')},
+                  heroStatus=raw['tables']['HeroStatusParam'],
                   spells={str(id): {k: round(v, 6) for k, v in spells[str(id)].items() if k in FIELDS}
                           for id in sorted(needed) if str(id) in spells})
     source_path.write_text(json.dumps(source, ensure_ascii=False, separators=(',', ':')) + '\n')
@@ -80,6 +101,13 @@ source = json.loads(source_path.read_text())
 assert source['schema'] == 1
 assert source['hashes']['regulation.bin'] == catalog['regulationSha256'] == profile['input_sha256']['regulation.bin']
 assert source['regulationVersion'] == catalog['regulationVersion']
+assert set(source['effects']) == set(catalog['effects'])
+evidence_path = ROOT / 'data/effect-native-evidence.json'
+evidence = json.loads(evidence_path.read_text())
+assert evidence['schema'] == 1
+assert evidence['regulationSha256'] == source['hashes']['regulation.bin']
+assert evidence['exeSha256'] == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
+assert all(evidence[k] for k in ('predicates', 'attributes', 'attack', 'defense', 'cooldown', 'discovery', 'gauge', 'hero'))
 
 
 def num(v):
@@ -110,13 +138,62 @@ def stats(row):
             values.append([label, signed(v)])
     for field, label in RESTORE.items():
         if v := row.get(field, 0):
-            values.append([label + ('恢复' if v < 0 else '消耗'), num(abs(v))])
+            # Fixed and proportional restoration may coexist on the same node.
+            values.append([label + '定值' + ('恢复' if v < 0 else '消耗'), num(abs(v))])
+    for field, label in [('changeHpRate', 'HP'), ('changeMpRate', 'FP'), ('changeStaminaRate', '精力')]:
+        if v := row.get(field, 0):
+            values.append([label + ('恢复' if v < 0 else '消耗'), '最大值的 ' + num(abs(v)) + '%'])
+    if row.get('stateInfo') == 2102 and row.get('startingItemAmount', 0) > 0:
+        item = source.get('labels', {}).get('GoodsName', {}).get(str(int(row['startGoodsId'])))
+        if item:
+            values.append([item, '×' + num(row['startingItemAmount'])])
     return values
+
+
+ATTRIBUTE_LABELS = ['生命力', '集中力', '耐力', '力气', '灵巧', '智力', '信仰', '感应']
+
+
+def hero_values(modifier):
+    cases = sorted((r for r in evidence['hero'] if r['modifier'] == modifier), key=lambda r: r['level'])
+    assert [r['level'] for r in cases] == list(range(1, 21))
+    last_row = modifier
+    while str(last_row + 1) in source['heroStatus']:
+        last_row += 1
+    assert source['heroStatus'][str(last_row)]['totalLevel'] <= 20
+    groups = []
+    for case in cases:
+        if groups and groups[-1][2] == case['values']:
+            groups[-1][1] = case['level']
+        else:
+            groups.append([case['level'], case['level'], case['values']])
+    return [[f'{start} 级起' if end == 20 else (f'{start} 级' if start == end else f'{start}～{end} 级'),
+             ' / '.join(label + ' ' + signed(v) for label, v in zip(ATTRIBUTE_LABELS, values) if v)]
+            for start, end, values in groups]
+
+
+ATTACK_FILTERS = {
+    2: '卡利亚剑魔法', 3: '辉剑魔法', 4: '挖石魔法', 5: '结晶人魔法',
+    9: '荆棘魔法', 11: '重力魔法', 12: '隐形魔法', 16: '混合魔法',
+    20: '狩猎神祇祷告', 21: '巨人火焰祷告', 22: '王城古龙信仰祷告',
+    23: '野兽祷告', 24: '黄金律法基本主义祷告', 25: '龙飨祷告', 26: '癫火祷告',
+    100: '武器蓄力攻击', 102: '跳跃攻击', 103: '防御反击', 104: '连击末段',
+    108: '投掷壶', 109: '调香术', 110: '法术蓄力', 111: '战技', 112: '战技',
+    119: '轻攻击首段', 120: '投掷小刀', 121: '辉石／重力石道具',
+    124: '双手共持', 125: '双手各持', 130: '近战攻击',
+}
 
 
 def block(id, phase, linked):
     r = source['spells'].get(str(id), {})
     values = stats(r)
+    if r.get('stateInfo') == 2123:
+        values.extend(hero_values(int(r['heroStatusModifier'])))
+        phase = '随等级调整能力值'
+    if r.get('stateInfo') in (2105, 2128):
+        table, key = ('SwordArtsName', 'startSwordArtsId') if r['stateInfo'] == 2105 else ('MagicName', 'startMagicId')
+        name = source.get('labels', {}).get(table, {}).get(str(int(r.get(key, -1))))
+        if name:
+            values.append(['出击时替换', name])
     if not values:
         return None
     scope = []
@@ -125,14 +202,25 @@ def block(id, phase, linked):
         scope = [name for key, name in [('magParamChange', '魔法'), ('miracleParamChange', '祷告'),
                                       ('shamanParamChange', '特殊法术')] if r.get(key) == 1]
     restrictions = []
-    if any(r.get('magicSubCategoryChange' + str(i), 0) for i in (1, 2, 3)):
-        restrictions.append('限指定法术类别')
+    tags = [int(r.get('magicSubCategoryChange' + str(i), 0)) for i in (1, 2, 3)]
+    if any(tags):
+        labels = list(dict.fromkeys(ATTACK_FILTERS.get(tag, '指定攻击类别') for tag in tags if tag))
+        restrictions.append('适用：' + ' / '.join(labels))
+    if r.get('stateInfo') == 2102:
+        phase = '出击时' if not r.get('invocationConditionsStateChange1', 0) else '额外发放条件待确认'
+    if r.get('stateInfo') == 2100:
+        restrictions.append('需装备对应类别武器 ≥ ' + num(r['wepTypeTriggerCount']) + ' 把')
+    if r.get('conditionHp', -1) > 0:
+        restrictions.append('血量阈值：' + num(r['conditionHp']) + '%')
     if any(r.get('invocationConditionsStateChange' + str(i), 0) for i in (1, 2, 3)):
         restrictions.append('需满足指定状态')
-    # Timer is attached to this node, never interpreted as a cooldown or total uptime.
+    # A short-lived restore node can carry a default interval longer than its life.
+    # Do not present that unused repeat interval as the trigger's cooldown.
+    duration = r.get('effectEndurance', 0)
+    interval = r.get('motionInterval', 0)
     return dict(source=id, phase=phase, linked=linked, values=values, scope=scope, restrictions=restrictions,
-                duration=r.get('effectEndurance', 0) if r.get('effectEndurance', 0) > 0 else None,
-                interval=r.get('motionInterval', 0) if r.get('motionInterval', 0) > 0 else None)
+                duration=duration if duration > 0 else None,
+                interval=interval if interval > 0 and (duration < 0 or duration >= interval) else None)
 
 result = {}
 for id, effect in source['effects'].items():
@@ -153,11 +241,80 @@ for id, effect in source['effects'].items():
     # User-confirmed pairing; deliberately not generalized to duplicate copies or other tiers.
     if id in ('7090000', '6090000'):
         stacking = '普通版与＋１版可叠加（使用反馈）；同版重复待确认'
+    roots = [source['spells'].get(str(v), {}) for v in effect['roots'].values()]
+    simple = (len(roots) == 1 and roots[0].get('spCategory') == 10
+              and roots[0].get('stateInfo') == 0 and effect.get('runtimeExclusive', -1) == -1
+              and not any(roots[0].get(k, -1) > 0 for k in LINKS)
+              and not any(roots[0].get('invocationConditionsStateChange' + str(i), 0) for i in (1, 2, 3)))
+    if simple:
+        r = roots[0]
+        if any(r.get(k, 0) for k in POINTS if k.startswith('add')):
+            stacking = '可叠加；能力值相加'
+        elif r.get('characterSkillCooldownReduction', 1) != 1:
+            stacking = '可叠加；冷却时间倍率相乘'
+        elif r.get('ultimateArtGaugeRate', 1) != 1 or r.get('ultimateArtGaugeChargeRate', 1) != 1:
+            stacking = '可叠加；各自累积通道的倍率相乘'
+        elif any(r.get(k, 1) != 1 for k in RATES if k.endswith('AttackRate')):
+            stacking = '可叠加；攻击倍率相乘'
+        elif any(r.get(k, 1) != 1 for k in RATES if k.endswith('DamageCutRate') and k != 'toughnessDamageCutRate'):
+            stacking = '可叠加；承伤倍率相乘'
+    if len(roots) == 1 and roots[0].get('stateInfo') == 2100 and roots[0].get('spCategory') == 20:
+        stacking = '同种重复不叠加；不同种类满足条件时分别生效'
+    if len(roots) == 1 and roots[0].get('stateInfo') == 2122:
+        stacking = '不叠加；采用生效列表中的第一个武器倾向'
+        name = catalog['effects'][id]['name']['zh_CN']
+        notes.append(name.replace('通过潜在能力，能比较容易找到', '潜在能力武器倾向：'))
     if id in ('7034200', '7034201'):
+
         notes.append('混合魔法的其他强化效果尚未解明。')
     result[id] = dict(info=effect.get('info'), blocks=blocks, stacking=stacking, notes=notes)
 output = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'], effects=result)
 out = ROOT / 'web/src/data/effect-details.json'
 out.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':')) + '\n')
 obtainable = {str(e) for r in catalog['relics'].values() if r['obtainable'] for p in r['pools'] for e in catalog['pools'].get(str(p), [])}
-print(f'{len(result)} details; {sum(bool(result[e]["blocks"]) for e in obtainable)}/{len(obtainable)} obtainable effects with decoded numeric fields; {out.stat().st_size} bytes')
+ledger = {}
+native_stack_refs = {
+    '可叠加；能力值相加': ['equip-injection', 'instance-matching', 'attributes'],
+    '可叠加；攻击倍率相乘': ['equip-injection', 'instance-matching', 'attack'],
+    '可叠加；承伤倍率相乘': ['equip-injection', 'instance-matching', 'defense'],
+    '可叠加；冷却时间倍率相乘': ['equip-injection', 'instance-matching', 'cooldown'],
+    '可叠加；各自累积通道的倍率相乘': ['equip-injection', 'instance-matching', 'gauge'],
+    '同种重复不叠加；不同种类满足条件时分别生效': ['instance-matching', 'weapon-count'],
+    '不叠加；采用生效列表中的第一个武器倾向': ['discovery'],
+}
+for id in sorted(obtainable, key=int):
+    effect, detail = source['effects'][id], result[id]
+    states = sorted({int(source['spells'][str(sp)]['stateInfo']) for sp in effect['roots'].values()})
+    refs = native_stack_refs.get(detail['stacking'], []).copy()
+    questions = []
+    if not refs:
+        questions.append('跨遗物同版／异版的覆盖、叠加与上限')
+    if 2123 in states:
+        refs.append('hero')
+    if 2102 in states:
+        questions.append('出击物品发放次数、容量溢出和状态 2226 的额外发放条件')
+    if 2105 in states or 2128 in states:
+        questions.append('多个出击替换词条的优先顺序、角色限制')
+    if any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+        questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
+    if any(b['linked'] for b in detail['blocks']):
+        questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
+    if any(source['spells'][str(sp)].get('conditionHp', -1) > 0 for sp in effect['roots'].values()):
+        questions.append('血量阈值的比较方向、边界与状态更新时机')
+    if not detail['blocks']:
+        questions.append('尚未解析到可展示数值／机制，继续查原生、事件或动作脚本')
+    numeric = any(any(label != '出击时替换' for label, _ in b['values']) for b in detail['blocks'])
+    ledger[id] = dict(name=catalog['effects'][id]['name']['zh_CN'], roots=effect['roots'], states=states,
+                      detailSources=[b['source'] for b in detail['blocks']],
+                      values='decoded-fields' if numeric else ('named-replacement' if detail['blocks'] else 'unresolved'),
+                      stacking='native-analysis' if detail['stacking'] in native_stack_refs else
+                               ('user-reported-pair' if id in ('7090000', '6090000') else 'unresolved'),
+                      evidence=refs, openQuestions=questions, gameplayVerified=False)
+coverage = dict(obtainable=len(obtainable), withDetails=sum(bool(result[e]['blocks']) for e in obtainable),
+                withNumericFields=sum(r['values'] == 'decoded-fields' for r in ledger.values()),
+                nativeStacking=sum(r['stacking'] == 'native-analysis' for r in ledger.values()),
+                userReportedPair=sum(r['stacking'] == 'user-reported-pair' for r in ledger.values()))
+research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
+                nativeEvidenceSha256=hashlib.sha256(evidence_path.read_bytes()).hexdigest(), coverage=coverage, effects=ledger)
+(ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
+print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

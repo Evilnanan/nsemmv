@@ -23,6 +23,10 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
+      - name: Verify reproducible effect details
+        run: |
+          python3 ../tools/build_effect_details.py
+          git diff --exit-code -- src/data/effect-details.json ../data/effect-research.json
       - run: npm test
       - run: npm run build
       - run: npx playwright install --with-deps chromium

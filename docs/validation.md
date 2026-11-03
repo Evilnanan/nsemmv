@@ -71,7 +71,7 @@ python tools/build_web_catalog.py <参数与文本资源目录>
 
 ## 词条详情
 
-`tools/ExtractEffectDetails` 从固定 MMV 文件只读提取 `AttachEffectParam`、`SpEffectParam` 和中英文效果 FMG。`tools/build_effect_details.py --extract <提取结果.json>` 检查 regulation 的版本与 SHA-256，保留必要引用、字段及说明到 `data/effect-detail-source.json`，生成浏览器用的 `web/src/data/effect-details.json`。原始全表提取结果不提交。之后运行 `python tools/build_effect_details.py` 即可从仓库内快照复现。
+`tools/ExtractEffectDetails` 从固定 MMV 文件只读提取 `AttachEffectParam`、`SpEffectParam`、`HeroStatusParam`、`EquipParamGoods` 和中英文 FMG。`tools/build_effect_details.py --extract <提取结果.json>` 检查 regulation 的版本与 SHA-256，保留必要引用、字段及说明到 `data/effect-detail-source.json`，生成浏览器用的 `web/src/data/effect-details.json`。原始全表提取结果不提交。之后运行 `python tools/build_effect_details.py` 即可从仓库内快照复现。
 
 ```sh
 dotnet build tools/ExtractEffectDetails/ExtractEffectDetails.csproj -p:SmithboxDir=<Smithbox目录>
@@ -79,10 +79,12 @@ dotnet tools/ExtractEffectDetails/bin/Debug/net10.0/ExtractEffectDetails.dll <Sm
 python tools/build_effect_details.py --extract <临时提取结果.json>
 ```
 
-当前全部 2241 个目录词条有详情记录，637 个可获取词条中 304 个具有已解读的数值字段，其余显示原生说明或“具体数值尚未解明”。提取字段包括能力值、HP/FP/精力上限、攻击倍率、承伤倍率、FP 消耗、定值恢复、绝招量表、持续及周期。百分比按字段实际单位换算，承伤与减伤不混用，绝招量表保留参数单位。每个数值块保留 SpEffect 来源 ID，便于追溯。
+当前全部 2241 个目录词条有详情记录。637 个可获取词条中，447 个有可展示字段，其中 432 个有已解读的数值、15 个有出击替换法术名称；其余显示原生说明或“具体数值尚未解明”。这些覆盖数不表示每个词条都已完全解明。提取字段包括能力值、HP/FP/精力上限、攻击倍率、承伤倍率、FP 消耗、定值恢复、绝招量表、持续及周期。百分比按字段实际单位换算，承伤与减伤不混用，绝招量表保留参数单位。每个数值块保留 SpEffect 来源 ID，便于追溯。
 
-沿六类显式效果引用最多追踪六层，去除循环；只展示有已解读数值的节点。不同触发分支各自显示，不相加，不把子效果持续时间称为冷却。法术适用标志仅说明该节点开放的法术通道，仍可能受类别、角色与原生状态条件限制。名称及 FMG 提供玩法条件，自动提取并不代表已解明全部触发路径。比如 `7034200` 的链包含 +35% 攻击倍率与 +30% 法术 FP 消耗的两个三秒节点，不能据此推导完整混合魔法 DPS。
+沿十一类显式效果引用最多追踪六层，去除循环；只展示有已解读数值的节点。不同触发分支各自显示，不相加，不把子效果持续时间称为冷却。法术适用标志仅说明该节点开放的法术通道，仍可能受类别、角色与原生状态条件限制。名称及 FMG 提供玩法条件，自动提取并不代表已解明全部触发路径。比如 `7034200` 的链包含 +35% 攻击倍率与 +30% 法术 FP 消耗的两个三秒节点，其它强化效果及刷新机制仍待追踪。
 
-详情卡只呈现游戏内生效规则，不显示抽取池、同件遗物互斥或合法性说明；已有选择列表中的可用性标记保留。不依据 `isNumericEffect`、`isStrongestEffect`、compatibility、exclusive 或同名程度自动判断跨遗物叠加。普通杀敌回绝招 `7090000` 与 +1 版 `6090000` 可叠加来自用户使用反馈，仅用于这对组合；同版重复仍待确认。其他尚无完整调用链或使用证据的组合标明未确认。未声称进行了游戏内数值、全部叠加或联机实测。
+详情卡只呈现游戏内生效规则，不显示抽取池、同件遗物互斥或合法性说明；已有选择列表中的可用性标记保留。不依据 `isNumericEffect`、`isStrongestEffect`、compatibility、菜单分组或同名程度自动判断跨遗物叠加；装备 exclusivity 仅作为进一步核对原生注入路径时的限制条件。普通杀敌回绝招 `7090000` 与 +1 版 `6090000` 可叠加来自用户使用反馈，仅用于这对组合；同版重复仍待确认。能力值、攻击、承伤、技艺冷却、绝招累积、三武器条件与武器发现倾向等已核对 208 个词条的原生叠加处理。20 类角色能力调整由原生等级插值计算，覆盖 1～20 级。其他尚无完整调用链或使用证据的组合标明未确认。未声称进行了游戏内数值、全部叠加或联机实测。
+
+逐条研究记录保存在 `data/effect-research.json`，包含全部 637 个可获取词条的来源、证据和未解问题。原生隔离执行结果保存在 `data/effect-native-evidence.json`；构建核对版本及证据哈希，CI 检查派生数据可复现。具体方法、样例和边界见 [词条生效机制研究](research/effect-mechanics.md)。
 
 详情卡在库存、预设共用的词条编辑器及选择器中提供；商店遗物只读时仍能查看。桌面延迟悬停、键盘聚焦或手机长按词条 480 毫秒可打开，无额外信息图标。长按后保持详情，阻止松手产生的选择点击；移动超过 10 像素、滚动取消、离开和多点触摸均取消尚未完成的长按。使用浏览器 popover 顶层跨越原生模态对话框与列表裁剪；支持移入卡片阅读、关闭按钮、Escape、点外部关闭及视口边界限制。查看与关闭不触发词条选择，不改动存档。
