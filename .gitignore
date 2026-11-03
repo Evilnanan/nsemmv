@@ -10,3 +10,5 @@ __pycache__/
 *.CL_SAVE
 *.exe
 *.dll
+tools/ExtractEffectFilters/bin/
+tools/ExtractEffectFilters/obj/

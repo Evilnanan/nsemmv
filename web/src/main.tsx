@@ -36,6 +36,11 @@ import {
 } from "./core/catalog";
 import { EMPTY } from "./core/binary";
 import {
+  effectGroup,
+  filterEffects,
+  UNCLASSIFIED,
+} from "./core/effect-filters";
+import {
   autoFix,
   checkRoll,
   effectChoices,
@@ -121,48 +126,124 @@ function EffectPicker({
   onClose: () => void;
 }) {
   const [q, setQ] = useState("");
+  const [group, setGroup] = useState<number | null>(null);
+  const [page, setPage] = useState(0);
   const choices = useMemo(() => effectChoices(itemId, curse), [itemId, curse]);
-  const found = choices.filter((id) =>
-    `${id} ${effectName(id)}`.toLowerCase().includes(q.trim().toLowerCase()),
+  const availableGroups = useMemo(
+    () => new Set(choices.map(effectGroup)),
+    [choices],
   );
-  const numeric = /^\d+$/.test(q) ? Number(q) : null;
+  const found = filterEffects(choices, q, group);
+  const numeric = /^\d+$/.test(q.trim()) ? Number(q.trim()) : null;
+  const manual =
+    group === null &&
+    numeric !== null &&
+    numeric > 0 &&
+    numeric < EMPTY &&
+    !choices.includes(numeric);
+  const pages = Math.max(1, Math.ceil(found.length / 100));
+  useEffect(() => setPage(0), [q, group, itemId, curse]);
   return (
     <Modal title={curse ? "Curse" : "Effect"} onClose={onClose}>
-      <div className="search">
-        <Search size={17} />
-        <input
-          autoFocus
-          aria-label="搜索词条"
-          placeholder="词条 / ID"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
+      <div className="effect-picker-controls">
+        <div className="search">
+          <Search size={17} />
+          <input
+            autoFocus
+            aria-label="搜索词条"
+            placeholder="词条 / ID"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+          />
+        </div>
+        <div className="effect-category">
+          <SlidersHorizontal size={16} />
+          <select
+            aria-label="词条分类"
+            value={group ?? ""}
+            onChange={(e) =>
+              setGroup(e.target.value === "" ? null : Number(e.target.value))
+            }
+          >
+            <option value="">全部词条</option>
+            {Object.values(catalog.effectCategories)
+              .sort(
+                (a, b) =>
+                  Number(b.id === 30) - Number(a.id === 30) || a.id - b.id,
+              )
+              .map((category) => {
+                const groups = Object.values(catalog.effectGroups).filter(
+                  (g) =>
+                    g.category === category.id && availableGroups.has(g.id),
+                );
+                return (
+                  groups.length > 0 && (
+                    <optgroup key={category.id} label={category.name.zh_CN}>
+                      {groups.map((g) => (
+                        <option value={g.id} key={g.id}>
+                          {g.name.zh_CN}
+                        </option>
+                      ))}
+                    </optgroup>
+                  )
+                );
+              })}
+            {availableGroups.has(UNCLASSIFIED) && (
+              <option value={UNCLASSIFIED}>未分类</option>
+            )}
+          </select>
+        </div>
       </div>
       <div className="picker-list">
-        <button onClick={() => onPick(EMPTY)} className="picker-row">
+        <button
+          onClick={() => onPick(EMPTY)}
+          className="picker-row"
+          aria-label="清空词条"
+        >
           <span>—</span>
           <span>空槽</span>
         </button>
-        {numeric !== null && !found.includes(numeric) && numeric < EMPTY && (
-          <button className="picker-row" onClick={() => onPick(numeric)}>
+        {manual && (
+          <button className="picker-row" onClick={() => onPick(numeric!)}>
             <code>{numeric}</code>
-            <span>{effectName(numeric)}</span>
+            <span>{effectName(numeric!)}</span>
           </button>
         )}
-        {found.slice(0, 200).map((id) => (
+        {found.slice(page * 100, (page + 1) * 100).map((id) => (
           <button className="picker-row" key={id} onClick={() => onPick(id)}>
             <code>{id}</code>
             <span>{effectName(id)}</span>
           </button>
         ))}
-        {!found.length && numeric === null && (
-          <div className="empty-small">无匹配</div>
-        )}
+        {!found.length && !manual && <div className="empty-small">无匹配</div>}
       </div>
-      <footer className="modal-footer">{found.length}</footer>
+      <footer className="modal-footer effect-pagination">
+        <span aria-label="匹配词条数">{found.length + (manual ? 1 : 0)}</span>
+        {pages > 1 && (
+          <>
+            <div className="spacer" />
+            <Tool
+              icon={ChevronLeft}
+              label="上一页词条"
+              disabled={page === 0}
+              onClick={() => setPage(page - 1)}
+            />
+            <span>
+              {page + 1} / {pages}
+            </span>
+            <Tool
+              icon={ChevronRight}
+              label="下一页词条"
+              disabled={page + 1 >= pages}
+              onClick={() => setPage(page + 1)}
+            />
+          </>
+        )}
+      </footer>
     </Modal>
   );
 }
+
 function ItemPicker({
   onPick,
   onClose,

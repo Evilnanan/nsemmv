@@ -7,6 +7,8 @@ export interface Effect {
   conflict: number;
   exclusive: number;
   sort: number;
+  filterId: number;
+  group: number | null;
 }
 export interface RelicDefinition {
   id: number;
@@ -32,6 +34,8 @@ export interface Catalog {
   regulationVersion: string;
   regulationSha256: string;
   effects: Record<number, Effect>;
+  effectCategories: Record<number, { id: number; name: Names }>;
+  effectGroups: Record<number, { id: number; category: number; name: Names }>;
   relics: Record<number, RelicDefinition>;
   vessels: Record<number, VesselDefinition>;
   pools: Record<number, number[]>;

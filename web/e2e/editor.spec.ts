@@ -161,13 +161,11 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(session.export()),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(session.export()),
+  });
   await page.getByRole("button", { name: "预设", exact: true }).click();
   await page.locator(".preset-card").filter({ hasText: "预设一" }).click();
   await page.getByLabel("预设名称").fill("保留中文草稿");
@@ -178,6 +176,7 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
     .getByRole("button", { name: "编辑预设遗物 1", exact: true })
     .click();
   await page.locator(".preset-relic-editor .effect-cell").first().click();
+  await page.getByLabel("词条分类").selectOption("30000");
   await page.getByLabel("搜索词条").fill("7000100");
   await page.locator(".picker-row").filter({ hasText: "7000100" }).click();
   await page.screenshot({
@@ -231,4 +230,66 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   ]);
   for (const p of view.loadouts!.presets) expect(p.handles).toEqual(handles);
   expect(errors).toEqual([]);
+});
+
+test("native effect categories combine with search, page navigation and curse validation", async ({
+  page,
+}, testInfo) => {
+  await page.goto("/");
+  await page
+    .getByLabel("打开存档文件")
+    .setInputFiles({
+      name: "NR0000.dbb",
+      mimeType: "application/octet-stream",
+      buffer: Buffer.from(fixture()),
+    });
+  await page.getByRole("button", { name: "新增遗物", exact: true }).click();
+  await page.getByRole("button", { name: "深层", exact: true }).click();
+  await page.getByLabel("搜索遗物类型").fill("2000100");
+  await page.locator(".picker-list .picker-row").click();
+  await page.locator(".effect-cell").first().click();
+  await page.getByRole("button", { name: "下一页词条", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "上一页词条", exact: true }),
+  ).toBeEnabled();
+  await page.getByLabel("词条分类").selectOption("30010");
+  await expect(
+    page.getByRole("button", { name: "下一页词条", exact: true }),
+  ).toHaveCount(0);
+  await page.getByLabel("搜索词条").fill("7090000");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "7090000" }),
+  ).toHaveCount(1);
+  await page.getByLabel("词条分类").selectOption("30020");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "7090000" }),
+  ).toHaveCount(0);
+  await expect(page.getByText("无匹配", { exact: true })).toBeVisible();
+  await page.getByLabel("搜索词条").fill("");
+  await page.screenshot({ path: testInfo.outputPath("effect-category.png") });
+  expect(
+    await page
+      .locator("dialog")
+      .evaluate((el) => el.scrollWidth <= el.clientWidth),
+  ).toBe(true);
+  const { catalog } = await import("../src/core/catalog");
+  const ids = await page
+    .locator(".picker-list .picker-row code")
+    .allTextContents();
+  expect(ids.length).toBeGreaterThan(0);
+  for (const id of ids) expect(catalog.effects[Number(id)].group).toBe(30020);
+  await page.getByLabel("搜索词条").fill("6611202");
+  await page.locator(".picker-row").filter({ hasText: "6611202" }).click();
+  await expect(page.locator(".validation")).toContainText("缺少 Curse");
+  await expect(
+    page.getByRole("button", { name: "应用修改", exact: true }),
+  ).toBeDisabled();
+  await page.locator(".effect-cell.curse").first().click();
+  await page.getByLabel("词条分类").selectOption("40010");
+  const curses = await page
+    .locator(".picker-list .picker-row code")
+    .allTextContents();
+  expect(curses.length).toBeGreaterThan(0);
+  for (const id of curses)
+    expect(catalog.effects[Number(id)].group).toBe(40010);
 });

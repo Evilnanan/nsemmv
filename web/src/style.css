@@ -1387,3 +1387,40 @@ dialog h2 {
   margin: 0;
   font-size: 16px;
 }
+
+.effect-picker-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.effect-picker-controls .search {
+  flex: 1 1 190px;
+  min-width: 0;
+}
+.effect-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 220px;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--muted);
+}
+.effect-category select {
+  width: 100%;
+  min-width: 0;
+  background: #1b2018;
+  color: #d9d9cf;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 10px 6px;
+}
+.effect-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.effect-pagination .tool {
+  width: 32px;
+  height: 32px;
+}

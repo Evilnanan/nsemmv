@@ -22,12 +22,23 @@ pools={}
 for r in table('AttachEffectTableParam'):
     weight=r['chanceWeight'] if r['chanceWeight_dlc']==-1 else r['chanceWeight_dlc']
     if weight>0 and r['attachEffectId']>=0:pools.setdefault(str(r['ID']),set()).add(r['attachEffectId'])
-effects={str(r['ID']):dict(id=r['ID'],name=label('AttachEffectName',r['attachTextId']),conflict=r['compatibilityId'],exclusive=r['exclusivityId'],sort=r['overrideEffectId']) for r in table('AttachEffectParam')}
+filters=json.loads((root/'data/effect-filter-source.json').read_text(encoding='utf-8'))
+assert filters['schema']==1 and filters['regulationVersion']==profile['regulation_version']
+assert filters['hashes']['regulation.bin']==profile['input_sha256']['regulation.bin']
+def filter_label(id):return {locale:labels[str(id)] for locale,labels in filters['texts'].items()}
+categories={str(r['ID']):dict(id=r['ID'],name=filter_label(r['textId'])) for r in filters['tables']['AttachEffectFilterCategoryParam'] if r['textId']>=0}
+groups={str(r['ID']):dict(id=r['ID'],category=r['filterCategory'],name=filter_label(r['textId'])) for r in filters['tables']['AttachEffectFilterSubCategoryParam'] if r['textId']>=0}
+assert all(str(g['category']) in categories for g in groups.values())
+filter_rows={r['ID']:r for r in filters['tables']['AttachEffectFilterParam']}
+def effect_group(row):
+    group=filter_rows.get(row['attachFilterParamId'],{}).get('attachEffectFilterCategory')
+    return group if str(group) in groups else None
+effects={str(r['ID']):dict(id=r['ID'],name=label('AttachEffectName',r['attachTextId']),conflict=r['compatibilityId'],exclusive=r['exclusivityId'],sort=r['overrideEffectId'],filterId=r['attachFilterParamId'],group=effect_group(r)) for r in table('AttachEffectParam')}
 relics={}
 for r in table('EquipParamAntique'):
     id=r['ID'];sources=profile['obtainable_relics'].get(str(id),[])
     relics[str(id)]=dict(id=id,name=label('AntiqueName',id),color=r['relicColor'],deep=bool(r['isDeepRelic']),obtainable=bool(sources),salable=bool(r['isSalable']),shop=not bool(r['isSalable']),pools=[r[f'attachEffectTableId_{i}'] for i in (1,2,3)]+[r[f'attachEffectTableId_curse{i}'] for i in (1,2,3)])
 vessels={str(r['ID']):dict(id=r['ID'],name=label('GoodsName',r['goodsId']),hero=r['heroType'],goods=r['goodsId'],unlockFlag=r['unlockFlag'],colors=[r[f'relicSlot{i}'] for i in (1,2,3)]+[r[f'deepRelicSlot{i}'] for i in (1,2,3)]) for r in table('AntiqueStandParam')}
-result=dict(schema=1,profile=profile['name'],regulationVersion=profile['regulation_version'],regulationSha256=profile['input_sha256']['regulation.bin'],effects=effects,relics=relics,vessels=vessels,pools={k:sorted(v) for k,v in sorted(pools.items(),key=lambda x:int(x[0]))})
+result=dict(schema=1,profile=profile['name'],regulationVersion=profile['regulation_version'],regulationSha256=profile['input_sha256']['regulation.bin'],effects=effects,effectCategories=categories,effectGroups=groups,relics=relics,vessels=vessels,pools={k:sorted(v) for k,v in sorted(pools.items(),key=lambda x:int(x[0]))})
 out=root/'web/src/data/catalog.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(result,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
 print(f'{out}: {out.stat().st_size} bytes; {len(relics)} relic definitions')
