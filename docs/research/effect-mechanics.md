@@ -4,12 +4,12 @@
 
 | 当前进度 | 数量 |
 | --- | ---: |
-| 已建研究记录 | 637 |
-| 有可展示的字段或替换法术 | 447 |
-| 其中有已解读的数值字段 | 432 |
-| 其中仅有替换法术名称 | 15 |
-| 已核对原生叠加处理 | 231 |
-| 尚未解析到可展示字段 | 190 |
+| 已建研究记录（完整目录／可获取范围） | 2241／637 |
+| 有可展示的字段或替换法术 | 515 |
+| 其中有已解读的数值字段 | 480 |
+| 其中仅有替换法术名称 | 35 |
+| 已核对原生叠加处理 | 269 |
+| 尚未解析到可展示字段 | 122 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -24,9 +24,20 @@
 ```sh
 dotnet build tools/ExtractEffectDetails/ExtractEffectDetails.csproj -p:SmithboxDir=<Smithbox目录>
 dotnet tools/ExtractEffectDetails/bin/Debug/net10.0/ExtractEffectDetails.dll <Smithbox目录> <游戏目录> <MMV的mod目录> <临时目录>/extracted.json --research
+dotnet tools/ExtractEffectDetails/bin/Debug/net10.0/ExtractEffectDetails.dll <Smithbox目录> <游戏目录> <MMV的mod目录> <临时目录>/systems.json --systems
 # Python 环境需要 pefile、unicorn。
-python tools/probe_effect_mechanics.py <游戏目录>/nightreign.exe <临时目录>/extracted.SpEffectParam.param <临时目录>/extracted.json data/effect-native-evidence.json --hero-params <临时目录>/extracted.HeroStatusParam.param
+python tools/probe_effect_mechanics.py <游戏目录>/nightreign.exe <临时目录>/extracted.SpEffectParam.param <临时目录>/extracted.json data/effect-native-evidence.json --hero-params <临时目录>/extracted.HeroStatusParam.param --systems <临时目录>/systems.json
 python tools/build_effect_details.py --extract <临时目录>/extracted.json
+```
+
+`--systems` 同时保存 GameSystemCommonParam 与 PlayerCommonParam 的原始 PARAM。原生检查从 JSON 同名旁文件读取行 0，逐项比对实际偏移，再将真实行字节交给查询替代；不只给计算函数填入猜测的常量。
+
+特殊地点事件可另行重建：
+
+```sh
+dotnet build tools/ExtractEffectEvents/ExtractEffectEvents.csproj -p:SmithboxDir=<Smithbox目录>
+dotnet tools/ExtractEffectEvents/bin/Debug/net10.0/ExtractEffectEvents.dll <Smithbox目录> <游戏目录> <MMV的mod目录> <临时目录>/events.json
+python tools/build_effect_growth.py <临时目录>/extracted.json <临时目录>/extracted.events.json <临时目录>/events.json
 ```
 
 仅复现浏览器数据和研究记录不需要游戏文件：`python tools/build_effect_details.py`。生成器同时核对 regulation、EXE 身份及原生验证记录；研究记录绑定验证文件 SHA-256。CI 检查生成结果与提交一致。
@@ -35,11 +46,29 @@ python tools/build_effect_details.py --extract <临时目录>/extracted.json
 
 [`probe_effect_mechanics.py`](../../tools/probe_effect_mechanics.py) 在 Unicorn 内执行原 EXE 的指令，使用实际 MMV 的 1024 字节 SpEffect 行、28 字节 HeroStatus 行，构造效果链表和有效/无效节点。字段偏移先与提取器解码结果逐行核对。遇到未准备的依赖或超过执行预算即失败。
 
-共 **748 组检查**：9 组匹配谓词、10 组能力值、36 组攻击倍率、3 组承伤倍率、8 组冷却、5 组发现倾向、24 组绝招累积、400 组角色等级调整、98 组抵抗力、32 组 FP 消耗、6 组技艺次数、4 组杀敌回绝招等级匹配、24 组杀敌分派、5 组绝招百分比结算、21 组恢复计时、63 组受损异常触发及积累量。结果保存为 [`effect-native-evidence.json`](../../data/effect-native-evidence.json)。
+目前共 **1639 组原生检查**，另有 **244 组实际 HKS 分支检查**。原生结果保存为 [`effect-native-evidence.json`](../../data/effect-native-evidence.json)，按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
 
 外部依赖替代包括：`E6D630` 无武器 PARAM 的查询，`E78730` 用实际 HeroStatus 字节实现的表查询，`E78720` 表包装对象清理；杀敌分派的 `3C7FD0` 记录下游效果 ID，随后单独执行真实数值聚合；绝招结算中的 `42C120/3D4180` 提供无玩家 HUD 通知的合成 owner；计时刷新中的 `EA17E0` 查询实际 SpEffect 行。完整清单保存在输出的 `stubs`。倍率、实例匹配、等级选择、插值、取整、计时、累计值重置均执行原生代码。没有启动游戏进程，没有模拟完整远征。
 
 ## 已确认的处理
+
+### 场地、地点成长与学者／防御反击（第四批）
+
+**魔法之境（7032800）。** 实际 HKS 的三种吸收结束回调均先调用 `ExecElementalAbsorption_TerraMagicus`。32 组运行覆盖四类属性痕的全部组合及阻断标记：已有 7032801 时不会重施，否则任一 706000～706003 发放 7032801。该节点需根状态 2205，寿命 30 秒；其子节点 7032802 另需吸收状态 2263。Behavior 869050000 → Bullet 12413000 → 12413001 → 12413002，场地存在 30 秒，每 0.5 秒投递 12413003；实际增益半径 4.2 米，包含自身和友方，接收 7032803（魔力攻击倍率 1.15）。不能把场地自身的碰撞半径 3 当作增益范围，也不能把接受者的 1.5 秒寿命当成魔法阵寿命。
+
+7032803 与法术版 1413000（倍率 1.20）同属类别 201、优先组 145。`50D060 → 511450 → 511700` 复用并更换同组节点。四组同／异 ID 运行后再执行攻击 getter，确认保留新命中的版本，**并非取较大倍率**。接受者寿命刷新为 1.5 秒，含持续时间伸缩标记；详情分别标明场地时长、基础残留和覆盖规则。空间投递、多人同帧先后及地形放置没有实机验证。
+
+**特殊地点攻击成长（7060000 及同根条目）。** 绑定当前 common 事件 0 的 393～397 初始化与 1400/1402/1407/1408/1409 的参数化指令，确认两组独立类别 204 梯级：7069001 起每档约 ×1.05，7069021 起每档约 ×1.015。PARAM 存在小数取舍，因此不声称各档精确等于幂公式。前组从监牢最多发放 3 档、入侵者 2 档、魔法师塔事件 1 档；后组据点事件最多 8 档，拟态敌人事件连续发 2 档，共用 10 档梯级。20 档各自及两组共存的攻击 getter 共 21 组确认倍率相乘。
+
+`ExtractEffectEvents` 读取 171 个实际 Mod EMEVD 文件及地图实体。`build_effect_growth.py` 将 common_func 的 90015051 / 90015304 / 90045002 / 90005390 与地图初始化实参绑定，并验证网络计数增量；据点存在一次增加 1 或 2 的分支。另绑定 30 组 90005391 变身事件及 MSB 的前后实体：8135 等待变身后目标死亡，不是击败原先伪装的粪金龟／行尸等就计数。保存源文件哈希、相关指令及初始化引用。此目录不包含所有未被 Mod 覆盖的原版地图，不将其称为完整地点名单。1407/1408 没有与另外三路相同的本地领取计数，重载恢复仍未解，因此没有发布推测的整局最高总倍率。
+
+**学者进行率下降（7036200）。** `505BF0` 读取有效状态 2126 的 `unk_05`，无词条返回 -1，有词条为 30，重复节点仍取一份。`3F0B70` 为本地学者更新覆盖值；`3EA8F0` 的回落分支以覆盖值或 PlayerCommonParam 行 0 的 +0x25A（实际 80）乘 dt 再减去进行率，最低钳到 0。18 组完整回落函数运行覆盖 0、1/60、0.5、1、2、4 秒与 0／1／3 份词条。于是下降速度为 30/80，降低 **62.5%**，而不是把 30 当百分比。未模拟完整的多人目标列表与锁定握手。
+
+**学者友方加攻（7036300、商店条目 19001）。** `3ED7F1～3ED850` 在持有状态 2124 且目标分支允许发放时，从 PlayerCommonParam +0x1A8 选择 7036301，再调用效果授予入口。六组实际分支运行覆盖缺少／重复根标记与分支资格，三组攻击 getter 覆盖武器、魔法、祷告；叶效果为攻击倍率 **+15%、30 秒、类别 20 同 ID 复用**。分支资格字节由夹具提供，网络通知和完整目标资格仍保留未解，不声称实测了多人同帧发放。
+
+**血量防御反击（7150000）。** `504940` 先检查原物理部分至少为 1，再经实际 `511010` 分类 103 过滤。读取当前 HP（+0x140），追加 `当前 HP × 5 / 100 / GameSystemCommonParam[0].unknown_30C` 到物理通道，其余四通道不变。当前系统系数为 0.6；随后 `43A4BA/43B4B5` 调用链把该系数传给 `6C5FC0`，还原为当前 HP 的 5% 物理伤害基值，再与其它结算因子共同计算。32 组检查覆盖血量、非防御反击、物理基值为 0／0.5／1／100，并执行实际末端结算函数核对单位。根类别 0 的同 ID 复用另行验证，详情归为不可叠加。
+
+同时修复逐条清单生成顺序：附魔和范围投递的未解问题此前在写入后被清空；现在按当前词条保留，不泄漏到相邻记录。第四批结束时 515 个可获取词条有详情，480 个有数值，269 个有叠加结论；这些都不是完全解明数量。
 
 ### equip-injection / instance-matching
 

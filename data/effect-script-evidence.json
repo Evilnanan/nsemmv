@@ -1760,6 +1760,295 @@
           "emitted": []
         }
       ]
+    },
+    "7032800": {
+      "seeds": [
+        7032801
+      ],
+      "functionSha256": "11ea1eccd214d05253205f74b5ffbddf5067af781ace6d97a20007cca7185b66",
+      "functionLine": 1778,
+      "callers": {
+        "ElementalAbsorptionFinish_Upper_onUpdate": "e9f4c7fdd44430a71aaab1a714e8a53fd5a87a2cbad4e3c11bf2536d9cd4f3ba",
+        "ElementalAbsorption2Finish_Upper_onUpdate": "37fa122219f0cf9dd30f3e1ce887be1c0e6dbe9a3a541b4d7eb85f9bd6b91656",
+        "ElementalAbsorption3Finish_Upper_onUpdate": "1ca6aa7d022e4c205ee05abc5ce527e060d1c4934416c2a4bb4de7b0451900f4"
+      },
+      "absorptionStates": [
+        706000,
+        706001,
+        706002,
+        706003
+      ],
+      "cases": [
+        {
+          "present": [],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706001
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706001
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706002
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706002
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706001,
+            706002
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            706002
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706001,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706002,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706002,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706001,
+            706002,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            706002,
+            706003
+          ],
+          "emitted": [
+            7032801
+          ]
+        },
+        {
+          "present": [
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706001,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706002,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706002,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706001,
+            706002,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            706002,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706001,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706002,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706002,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706001,
+            706002,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        },
+        {
+          "present": [
+            706000,
+            706001,
+            706002,
+            706003,
+            7032801
+          ],
+          "emitted": []
+        }
+      ]
     }
   },
   "stubs": [

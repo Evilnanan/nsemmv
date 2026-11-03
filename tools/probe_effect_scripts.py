@@ -37,6 +37,18 @@ lua.lua_tolstring.argtypes = [ctypes.c_void_p, ctypes.c_int, ctypes.POINTER(ctyp
 lua.lua_tolstring.restype = ctypes.c_char_p
 lua.lua_close.argtypes = [ctypes.c_void_p]
 
+def execute_lua(program):
+    state = lua.luaL_newstate()
+    try:
+        lua.luaL_openlibs(state)
+        assert lua.luaL_loadstring(state, program.encode()) == 0
+        status = lua.lua_pcallk(state, 0, 1, 0, 0, None)
+        result = lua.lua_tolstring(state, -1, None)
+        assert status == 0, result
+        return json.loads(result)
+    finally:
+        lua.lua_close(state)
+
 def execute(hand, roll, missing=None, blocking=None):
     present = {7035700, 7035701} - ({missing} if missing else set())
     if blocking:
@@ -53,16 +65,7 @@ math.random=function(lo, hi) assert(lo==1 and hi==100); return %d end
 RELIC_WEAPONCHANGE_ENCHANT=%d
 ''' % (','.join('[%d]=true' % id for id in sorted(present)), roll, hand)
     program += function + '\nWeaponChangeCommonFunction(0)\nreturn "["..table.concat(added,",").."]"'
-    state = lua.luaL_newstate()
-    try:
-        lua.luaL_openlibs(state)
-        assert lua.luaL_loadstring(state, program.encode()) == 0
-        status = lua.lua_pcallk(state, 0, 1, 0, 0, None)
-        result = lua.lua_tolstring(state, -1, None)
-        assert status == 0, result
-        return json.loads(result)
-    finally:
-        lua.lua_close(state)
+    return execute_lua(program)
 
 cases = []
 counts = {}
@@ -99,12 +102,44 @@ for cooldown, field, name in [(7035718, 'magicAttackPower', '魔力'), (7035719,
     branches.append(dict(cooldown=cooldown, chance=counts[cooldown] / 2, field=field, name=name, power=20,
                          duration=10, hands=hands))
 assert [b['chance'] for b in branches] == [26, 25, 25, 24]
+
+zone_start = source.index('function ExecElementalAbsorption_TerraMagicus(')
+zone_function = source[zone_start:source.index('\nfunction ', zone_start + 1)]
+zone_callers = {}
+for name in ('ElementalAbsorptionFinish_Upper_onUpdate', 'ElementalAbsorption2Finish_Upper_onUpdate',
+             'ElementalAbsorption3Finish_Upper_onUpdate'):
+    # Each actual finish-update path invokes the same gate before its other logic.
+    begin = source.index('function ' + name + '(')
+    body = source[begin:source.index('\nfunction ', begin + 1)]
+    assert body.split('\n')[1].strip() == 'ExecElementalAbsorption_TerraMagicus()'
+    zone_callers[name] = hashlib.sha256(body.encode()).hexdigest()
+zone_cases = []
+for blocked in (False, True):
+    for mask in range(16):
+        present = [706000 + i for i in range(4) if mask & (1 << i)] + ([7032801] if blocked else [])
+        program = '''
+TRUE=1; FALSE=0; GetSpEffectID=1; AddSpEffect=2
+local present={%s}; local added={}
+function env(_, id) return present[id] and TRUE or FALSE end
+function act(_, id) table.insert(added, id) end
+''' % ','.join('[%d]=true' % id for id in present)
+        program += zone_function + '\nExecElementalAbsorption_TerraMagicus()\nreturn "["..table.concat(added,",").."]"'
+        emitted = execute_lua(program)
+        assert emitted == ([7032801] if mask and not blocked else [])
+        zone_cases.append(dict(present=present, emitted=emitted))
+assert spells['7032801']['invocationConditionsStateChange1'] == spells['7032800']['stateInfo'] == 2205
+assert spells['7032801']['cycleOccurrenceSpEffectId'] == 7032802
+assert spells['7032802']['invocationConditionsStateChange1'] == 2263
+assert all(spells[str(id)]['stateInfo'] == 2263 for id in range(706000, 706004))
 a.output.write_text(json.dumps(dict(schema=1, regulationSha256=x['hashes']['regulation.bin'],
     script='action/script/c0000.hks', scriptSha256=hashlib.sha256(raw).hexdigest(),
     functionSha256=hashlib.sha256(function.encode()).hexdigest(), functionLine=source[:start].count('\n') + 1,
     handSelectionFunctionSha256=hashlib.sha256(hand_function.encode()).hexdigest(),
-    effects={'7035700':dict(branches=branches, cases=cases)},
+    effects={'7035700':dict(branches=branches, cases=cases),
+             '7032800':dict(seeds=[7032801], functionSha256=hashlib.sha256(zone_function.encode()).hexdigest(),
+                            functionLine=source[:zone_start].count('\n') + 1, callers=zone_callers,
+                            absorptionStates=list(range(706000, 706004)), cases=zone_cases)},
     stubs=['env: supplied held effects', 'act: records emitted effects', 'math.random: enumerates 1..100',
            'SetAIActionState: no-op', 'ExecPassiveAction: exits after the inspected branch'], gameplayVerified=False),
     ensure_ascii=False, indent=2) + '\n')
-print(f'PASS: {len(cases)} actual HKS branch cases; {len(branches)} PARAM chains')
+print(f'PASS: {len(cases) + len(zone_cases)} actual HKS branch cases; {len(branches)} enchant chains and absorption gate')

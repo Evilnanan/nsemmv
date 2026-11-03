@@ -6,8 +6,8 @@ using System.Text.Json;
 using System.Xml.Linq;
 using SoulsFormats;
 
-if (args.Length is not (4 or 5) || (args.Length == 5 && args[4] != "--research"))
-    throw new ArgumentException("Usage: ExtractEffectDetails <Smithbox> <Game> <MMV mod> <output.json> [--research]");
+if (args.Length is not (4 or 5) || (args.Length == 5 && args[4] is not ("--research" or "--systems")))
+    throw new ArgumentException("Usage: ExtractEffectDetails <Smithbox> <Game> <MMV mod> <output.json> [--research|--systems]");
 var smithbox = Path.GetFullPath(args[0]);
 var game = Path.GetFullPath(args[1]);
 var mod = Path.GetFullPath(args[2]);
@@ -30,8 +30,10 @@ var binder = SFUtil.DecryptNightreignRegulation(regulation);
 if (binder.Version != "10350000") throw new InvalidDataException("Unsupported regulation version");
 var tables = new SortedDictionary<string, SortedDictionary<int, SortedDictionary<string, double>>>();
 var tableNames = new[] { "AttachEffectParam", "SpEffectParam", "HeroStatusParam", "EquipParamGoods", "SwordArtsParam" };
-if (args.Length == 5)
-    tableNames = tableNames.Concat(new[] { "BehaviorParam_PC", "Bullet", "AtkParam_Pc", "Magic" }).ToArray();
+if (args.Length == 5 && args[4] == "--research")
+    tableNames = tableNames.Concat(new[] { "BehaviorParam_PC", "Bullet", "AtkParam_Pc", "Magic", "GameSystemCommonParam" }).ToArray();
+if (args.Length == 5 && args[4] == "--systems")
+    tableNames = new[] { "GameSystemCommonParam", "PlayerCommonParam" };
 foreach (var name in tableNames) {
     var defName = name == "BehaviorParam_PC" ? "BehaviorParam" : name == "AtkParam_Pc" ? "AtkParam" : name;
     var defPath = Path.Combine(smithbox, "Assets/PARAM/NR/Defs", defName + ".xml");

@@ -4,6 +4,24 @@
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
   "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
   "heroParamSha256": "b020e1af1b4cd567e1272b1210df004ee12c78f72f248d16dd6dfbec44f92d2d",
+  "systemDefinitionHashes": {
+    "defs/GameSystemCommonParam.xml": "7fa812374e020771e9074c08b3ef2256b8a9578c28dd02bd537048c7324e158c",
+    "defs/PlayerCommonParam.xml": "29d0cfd17d152cd8512aba859e5241ed6b883c1ae1159c1052fac16b5710428e"
+  },
+  "systemParamSha256": {
+    "GameSystemCommonParam": "9f801f3a9804d84ea387aa5557c6dbf39f7a912c8ff12bf79ba1231f0ebd6300",
+    "PlayerCommonParam": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c"
+  },
+  "systemValues": {
+    "GameSystemCommonParam/0/unknown_30C": 0.6000000238418579,
+    "PlayerCommonParam/0/fh_unknown_43b": 80,
+    "PlayerCommonParam/0/analyseTarget_AllyEffectId": 7036301
+  },
+  "effectLinks": {
+    "7036300": [
+      7036301
+    ]
+  },
   "predicates": [
     {
       "id": 7000000,
@@ -52,6 +70,16 @@
     },
     {
       "id": 7037400,
+      "category": 20,
+      "reusesSameId": true
+    },
+    {
+      "id": 7150000,
+      "category": 0,
+      "reusesSameId": true
+    },
+    {
+      "id": 7036200,
       "category": 20,
       "reusesSameId": true
     }
@@ -16088,6 +16116,1001 @@
       "value": 1.7089999914169312
     }
   ],
+  "zoneMatching": [
+    {
+      "existing": 1413000,
+      "incoming": 1413000,
+      "categoryMatch": true,
+      "activeId": 1413000,
+      "duration": 1.5,
+      "magicRate": 1.2000000476837158
+    },
+    {
+      "existing": 1413000,
+      "incoming": 7032803,
+      "categoryMatch": true,
+      "activeId": 7032803,
+      "duration": 1.5,
+      "magicRate": 1.149999976158142
+    },
+    {
+      "existing": 7032803,
+      "incoming": 1413000,
+      "categoryMatch": true,
+      "activeId": 1413000,
+      "duration": 1.5,
+      "magicRate": 1.2000000476837158
+    },
+    {
+      "existing": 7032803,
+      "incoming": 7032803,
+      "categoryMatch": true,
+      "activeId": 7032803,
+      "duration": 1.5,
+      "magicRate": 1.149999976158142
+    }
+  ],
+  "locationValues": [
+    {
+      "id": 7069001,
+      "rates": [
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842
+      ]
+    },
+    {
+      "id": 7069002,
+      "rates": [
+        1.1024999618530273,
+        1.1024999618530273,
+        1.1024999618530273,
+        1.1024999618530273,
+        1.1024999618530273
+      ]
+    },
+    {
+      "id": 7069003,
+      "rates": [
+        1.1576999425888062,
+        1.1576999425888062,
+        1.1576999425888062,
+        1.1576999425888062,
+        1.1576999425888062
+      ]
+    },
+    {
+      "id": 7069004,
+      "rates": [
+        1.215499997138977,
+        1.215499997138977,
+        1.215499997138977,
+        1.215499997138977,
+        1.215499997138977
+      ]
+    },
+    {
+      "id": 7069005,
+      "rates": [
+        1.2762999534606934,
+        1.2762999534606934,
+        1.2762999534606934,
+        1.2762999534606934,
+        1.2762999534606934
+      ]
+    },
+    {
+      "id": 7069006,
+      "rates": [
+        1.3401000499725342,
+        1.3401000499725342,
+        1.3401000499725342,
+        1.3401000499725342,
+        1.3401000499725342
+      ]
+    },
+    {
+      "id": 7069007,
+      "rates": [
+        1.4071999788284302,
+        1.4071999788284302,
+        1.4071999788284302,
+        1.4071999788284302,
+        1.4071999788284302
+      ]
+    },
+    {
+      "id": 7069008,
+      "rates": [
+        1.4774999618530273,
+        1.4774999618530273,
+        1.4774999618530273,
+        1.4774999618530273,
+        1.4774999618530273
+      ]
+    },
+    {
+      "id": 7069009,
+      "rates": [
+        1.5513999462127686,
+        1.5513999462127686,
+        1.5513999462127686,
+        1.5513999462127686,
+        1.5513999462127686
+      ]
+    },
+    {
+      "id": 7069010,
+      "rates": [
+        1.6289000511169434,
+        1.6289000511169434,
+        1.6289000511169434,
+        1.6289000511169434,
+        1.6289000511169434
+      ]
+    },
+    {
+      "id": 7069021,
+      "rates": [
+        1.0149999856948853,
+        1.0149999856948853,
+        1.0149999856948853,
+        1.0149999856948853,
+        1.0149999856948853
+      ]
+    },
+    {
+      "id": 7069022,
+      "rates": [
+        1.0302250385284424,
+        1.0302250385284424,
+        1.0302250385284424,
+        1.0302250385284424,
+        1.0302250385284424
+      ]
+    },
+    {
+      "id": 7069023,
+      "rates": [
+        1.0456783771514893,
+        1.0456783771514893,
+        1.0456783771514893,
+        1.0456783771514893,
+        1.0456783771514893
+      ]
+    },
+    {
+      "id": 7069024,
+      "rates": [
+        1.0613635778427124,
+        1.0613635778427124,
+        1.0613635778427124,
+        1.0613635778427124,
+        1.0613635778427124
+      ]
+    },
+    {
+      "id": 7069025,
+      "rates": [
+        1.0772839784622192,
+        1.0772839784622192,
+        1.0772839784622192,
+        1.0772839784622192,
+        1.0772839784622192
+      ]
+    },
+    {
+      "id": 7069026,
+      "rates": [
+        1.0934432744979858,
+        1.0934432744979858,
+        1.0934432744979858,
+        1.0934432744979858,
+        1.0934432744979858
+      ]
+    },
+    {
+      "id": 7069027,
+      "rates": [
+        1.1098449230194092,
+        1.1098449230194092,
+        1.1098449230194092,
+        1.1098449230194092,
+        1.1098449230194092
+      ]
+    },
+    {
+      "id": 7069028,
+      "rates": [
+        1.1264926195144653,
+        1.1264926195144653,
+        1.1264926195144653,
+        1.1264926195144653,
+        1.1264926195144653
+      ]
+    },
+    {
+      "id": 7069029,
+      "rates": [
+        1.1433900594711304,
+        1.1433900594711304,
+        1.1433900594711304,
+        1.1433900594711304,
+        1.1433900594711304
+      ]
+    },
+    {
+      "id": 7069030,
+      "rates": [
+        1.1605409383773804,
+        1.1605409383773804,
+        1.1605409383773804,
+        1.1605409383773804,
+        1.1605409383773804
+      ]
+    },
+    {
+      "ids": [
+        7069006,
+        7069030
+      ],
+      "rates": [
+        1.5552409887313843,
+        1.5552409887313843,
+        1.5552409887313843,
+        1.5552409887313843,
+        1.5552409887313843
+      ]
+    }
+  ],
+  "guardCounter": [
+    {
+      "tag": 0,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 0,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 0,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        1.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.6000000238418579
+    },
+    {
+      "tag": 0,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 60.000003814697266
+    },
+    {
+      "tag": 0,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 0,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 0,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        1.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.6000000238418579
+    },
+    {
+      "tag": 0,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 60.000003814697266
+    },
+    {
+      "tag": 0,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 0,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 0,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        1.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.6000000238418579
+    },
+    {
+      "tag": 0,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 60.000003814697266
+    },
+    {
+      "tag": 0,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 0,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 0,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        1.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.6000000238418579
+    },
+    {
+      "tag": 0,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 60.000003814697266
+    },
+    {
+      "tag": 103,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 103,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 103,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        1.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.6000000238418579
+    },
+    {
+      "tag": 103,
+      "hp": 0,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 60.000003814697266
+    },
+    {
+      "tag": 103,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 103,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 103,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        9.333333015441895,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 5.599999904632568
+    },
+    {
+      "tag": 103,
+      "hp": 100,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        108.33333587646484,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 65.00000762939453
+    },
+    {
+      "tag": 103,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 103,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 103,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        84.33332824707031,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 50.599998474121094
+    },
+    {
+      "tag": 103,
+      "hp": 1000,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        183.3333282470703,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 110.0
+    },
+    {
+      "tag": 103,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 0,
+      "values": [
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.0
+    },
+    {
+      "tag": 103,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 0.5,
+      "values": [
+        0.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 0.30000001192092896
+    },
+    {
+      "tag": 103,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 1,
+      "values": [
+        250.99998474121094,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 150.59999084472656
+    },
+    {
+      "tag": 103,
+      "hp": 3000,
+      "maxHp": 3000,
+      "basePhysical": 100,
+      "values": [
+        350.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "systemScale": 0.6000000238418579,
+      "scaledPhysical": 210.00001525878906
+    }
+  ],
+  "scholarDecay": [
+    {
+      "ids": [],
+      "override": -1.0,
+      "defaultRate": 80,
+      "dt": 0,
+      "start": 100,
+      "remaining": 100.0
+    },
+    {
+      "ids": [],
+      "override": -1.0,
+      "defaultRate": 80,
+      "dt": 0.016666666666666666,
+      "start": 100,
+      "remaining": 98.66666412353516
+    },
+    {
+      "ids": [],
+      "override": -1.0,
+      "defaultRate": 80,
+      "dt": 0.5,
+      "start": 100,
+      "remaining": 60.0
+    },
+    {
+      "ids": [],
+      "override": -1.0,
+      "defaultRate": 80,
+      "dt": 1,
+      "start": 100,
+      "remaining": 20.0
+    },
+    {
+      "ids": [],
+      "override": -1.0,
+      "defaultRate": 80,
+      "dt": 2,
+      "start": 100,
+      "remaining": 0.0
+    },
+    {
+      "ids": [],
+      "override": -1.0,
+      "defaultRate": 80,
+      "dt": 4,
+      "start": 100,
+      "remaining": 0.0
+    },
+    {
+      "ids": [
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 0,
+      "start": 100,
+      "remaining": 100.0
+    },
+    {
+      "ids": [
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 0.016666666666666666,
+      "start": 100,
+      "remaining": 99.5
+    },
+    {
+      "ids": [
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 0.5,
+      "start": 100,
+      "remaining": 85.0
+    },
+    {
+      "ids": [
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 1,
+      "start": 100,
+      "remaining": 70.0
+    },
+    {
+      "ids": [
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 2,
+      "start": 100,
+      "remaining": 40.0
+    },
+    {
+      "ids": [
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 4,
+      "start": 100,
+      "remaining": 0.0
+    },
+    {
+      "ids": [
+        7036200,
+        7036200,
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 0,
+      "start": 100,
+      "remaining": 100.0
+    },
+    {
+      "ids": [
+        7036200,
+        7036200,
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 0.016666666666666666,
+      "start": 100,
+      "remaining": 99.5
+    },
+    {
+      "ids": [
+        7036200,
+        7036200,
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 0.5,
+      "start": 100,
+      "remaining": 85.0
+    },
+    {
+      "ids": [
+        7036200,
+        7036200,
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 1,
+      "start": 100,
+      "remaining": 70.0
+    },
+    {
+      "ids": [
+        7036200,
+        7036200,
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 2,
+      "start": 100,
+      "remaining": 40.0
+    },
+    {
+      "ids": [
+        7036200,
+        7036200,
+        7036200
+      ],
+      "override": 30.0,
+      "defaultRate": 80,
+      "dt": 4,
+      "start": 100,
+      "remaining": 0.0
+    }
+  ],
+  "scholarAlly": [
+    {
+      "ids": [],
+      "eligibilityByte": 0,
+      "emitted": []
+    },
+    {
+      "ids": [],
+      "eligibilityByte": 1,
+      "emitted": []
+    },
+    {
+      "ids": [
+        7036300
+      ],
+      "eligibilityByte": 0,
+      "emitted": []
+    },
+    {
+      "ids": [
+        7036300
+      ],
+      "eligibilityByte": 1,
+      "emitted": [
+        7036301
+      ]
+    },
+    {
+      "ids": [
+        7036300,
+        7036300
+      ],
+      "eligibilityByte": 0,
+      "emitted": []
+    },
+    {
+      "ids": [
+        7036300,
+        7036300
+      ],
+      "eligibilityByte": 1,
+      "emitted": [
+        7036301
+      ]
+    },
+    {
+      "leaf": 7036301,
+      "kind": 0,
+      "rates": [
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142
+      ],
+      "reusesSameId": true
+    },
+    {
+      "leaf": 7036301,
+      "kind": 3,
+      "rates": [
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142
+      ],
+      "reusesSameId": true
+    },
+    {
+      "leaf": 7036301,
+      "kind": 4,
+      "rates": [
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142
+      ],
+      "reusesSameId": true
+    }
+  ],
   "recoveryTiming": {
     "350401": {
       "lifetime": 1,
@@ -16610,13 +17633,18 @@
     }
   },
   "stubs": [
+    "3C7FD0 Scholar ally application recorder; eligibility and effect selection are native",
     "3C7FD0 effect application recorder; dispatch is native",
     "42C120 / 3D4180 synthetic gauge owner without player HUD notification",
+    "42C120 synthetic Scholar owner for reviewed ally-grant branch",
     "E6D630 absent weapon PARAM lookup",
+    "E76D50 GameSystemCommon row 0 lookup, actual extracted unknown_30C at +0x30c",
     "E78720 HeroStatus PARAM wrapper cleanup",
     "E78730 HeroStatus PARAM lookup using actual extracted rows",
+    "E81650 PlayerCommon row 0 lookup, actual ally effect at +0x1a8",
+    "E81650 PlayerCommon row 0 lookup, actual extracted decay field at +0x25a",
     "EA17E0 SpEffect PARAM lookup for lifetime refresh using actual row",
-    "EA17E0 growth lookup using actual SpEffect PARAM rows, including missing next rows"
+    "EA17E0 growth/refresh lookup using actual SpEffect PARAM rows, including missing next rows"
   ],
   "gameplayVerified": false
 }

@@ -26,6 +26,8 @@ assert scripts['schema'] == 1 and scripts['regulationSha256'] == catalog['regula
 growth_path = ROOT / 'data/effect-growth-source.json'
 growth = json.loads(growth_path.read_text())
 assert growth['schema'] == 1 and growth['regulationSha256'] == catalog['regulationSha256']
+evidence_path = ROOT / 'data/effect-native-evidence.json'
+evidence = json.loads(evidence_path.read_text())
 
 # Only fields with understood units enter the human-readable summary.
 RATES = {
@@ -99,6 +101,8 @@ if args.extract:
         needed.update(roots.values())
         for root in roots.values():
             needed.update(triggers['roots'].get(str(root), {}).get('seeds', []))
+            needed.update(scripts['effects'].get(str(root), {}).get('seeds', []))
+            needed.update(evidence.get('effectLinks', {}).get(str(root), []))
             for branch in scripts['effects'].get(str(root), {}).get('branches', []):
                 needed.add(branch['cooldown'])
                 for hand in branch['hands']:
@@ -134,8 +138,6 @@ assert source['schema'] == 1
 assert source['hashes']['regulation.bin'] == catalog['regulationSha256'] == profile['input_sha256']['regulation.bin']
 assert source['regulationVersion'] == catalog['regulationVersion']
 assert set(source['effects']) == set(catalog['effects'])
-evidence_path = ROOT / 'data/effect-native-evidence.json'
-evidence = json.loads(evidence_path.read_text())
 assert evidence['schema'] == 1
 assert evidence['regulationSha256'] == source['hashes']['regulation.bin']
 assert evidence['exeSha256'] == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
@@ -312,6 +314,10 @@ STACKING_RULES = {
     'stamina-speed': ('可叠加', '精力恢复速度相加', ['instance-matching', 'extraGetters']),
     'shop-discount': ('不可叠加', '相同词条重复无效；两种折扣同时生效时价格为原价的 72%', ['extraGetters', 'shopMatching']),
     'growth': ('不可叠加', '同一词条重复装备不额外计数；成长效果按触发次数累计', ['growthAdvance', 'growth-events']),
+    'magic-zone': ('不可叠加', '与其他魔法之境共用增益；后命中的效果覆盖前者，不自动保留较强者', ['action-script', 'bullet-links', 'zoneMatching']),
+    'scholar-decay': ('不可叠加', '重复装备只生效一份', ['instance-matching', 'scholarDecay']),
+    'scholar-ally': ('不可叠加', '相同增益覆盖并刷新持续时间', ['scholarAlly']),
+    'guard-counter-hp': ('不可叠加', '重复装备只生效一份', ['instance-matching', 'guardCounter']),
 }
 result, rules = {}, {}
 for id, effect in source['effects'].items():
@@ -323,6 +329,11 @@ for id, effect in source['effects'].items():
         for seed in trigger['seeds']:
             assert source['spells'][str(seed)]['invocationConditionsStateChange1'] == trigger['state']
             pending.append((seed, trigger['phase'], True, 0))
+    for root in effect['roots'].values():
+        pending.extend((seed, '收集属性痕后', True, 0)
+                       for seed in scripts['effects'].get(str(root), {}).get('seeds', []))
+        pending.extend((leaf, '技艺作用于友方时', True, 0)
+                       for leaf in evidence.get('effectLinks', {}).get(str(root), []))
     while pending:
         sp, phase, linked, depth = pending.pop(0)
         if sp in seen:
@@ -404,8 +415,59 @@ for id, effect in source['effects'].items():
                        values=[['属性攻击力', '+20（随机一种）'],
                                ['概率', ' / '.join(b['name'] + ' ' + num(b['chance']) + '%' for b in branches)]],
                        scope=[], restrictions=['作用于切换的那只手'], duration=10, interval=None)]
+    if id == '7032800':
+        edge = links['emitters']['7032802']
+        assert len(evidence['zoneMatching']) == 4
+        assert source['spells']['7032801']['effectEndurance'] == edge['fieldDuration'] == 30
+        assert source['spells']['7032803']['effectEndurance'] == 1.5
+        b = next(b for b in blocks if b['source'] == 7032803)
+        b['values'].append(['魔法阵持续时间', num(edge['fieldDuration']) + ' 秒'])
+        b.update(phase='魔法阵内', duration=None, interval=None, scope=[],
+                 restrictions=['自身及周围友方 · 半径 ' + num(edge['radius']) + ' 米'])
+        blocks = [b]
+        notes.extend(['每 30 秒最多生成一次；持续收集属性痕不会刷新冷却。',
+                      '离开后基础残留时间不超过 1.5 秒，受效果持续时间修正。'])
+        rule = 'magic-zone'
+    if id == '7036200':
+        default = evidence['systemValues']['PlayerCommonParam/0/fh_unknown_43b']
+        rates = {r['override'] for r in evidence['scholarDecay'] if r['ids']}
+        assert rates == {30} and default == 80
+        blocks = [dict(source=7036200, phase='技艺进行率回落时', linked=False,
+                       values=[['进行率下降速度', signed((rates.pop() / default - 1) * 100) + '%']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        rule = 'scholar-decay'
+    if 7036300 in effect['roots'].values():
+        assert evidence['effectLinks']['7036300'] == [7036301]
+        assert any(r.get('emitted') == [7036301] for r in evidence['scholarAlly'])
+        for b in blocks:
+            if b['source'] == 7036301:
+                b['scope'] = []
+        rule = 'scholar-ally'
+    if id == '7150000':
+        assert len(evidence['guardCounter']) == 32
+        blocks = [dict(source=7150000, phase='防御反击命中时', linked=False,
+                       values=[['追加物理伤害基值', '当前 HP 的 5%']],
+                       restrictions=['需本次防御反击含物理伤害'], scope=[], duration=None, interval=None)]
+        rule = 'guard-counter-hp'
     grown = [growth['roots'][str(root)] for root in effect['roots'].values() if str(root) in growth['roots']]
-    if grown:
+    if grown and grown[0].get('family') == 'special-locations':
+        record = grown[0]
+        assert [ladder['stages'][0] for ladder in record['ladders']] == [7069001, 7069021]
+        blocks = []
+        for ladder, phase, restrictions in zip(record['ladders'],
+                ['封印监牢／入侵者／魔法师塔', '据点目标／拟态敌人'],
+                [['封印监牢最多 3 档；入侵者最多 2 档；解锁魔法师塔触发 1 档'],
+                 ['据点目标通常 1 档，部分目标 2 档，最多计 8 档；拟态敌人最多计 2 档（需击败变身后的目标）', '两类来源共用成长，最多 10 档']]):
+            first = ladder['stages'][0]
+            rate = source['spells'][str(first)]['physicsAttackRate']
+            assert all(abs(source['spells'][str(sp)]['physicsAttackRate'] - rate ** stage) < .001
+                       for stage,sp in enumerate(ladder['stages'], 1))
+            blocks.append(dict(source=first, branches=ladder['stages'][1:], phase=phase, linked=True,
+                               values=[['每档攻击倍率', '约 ' + signed((rate - 1) * 100) + '%']],
+                               restrictions=restrictions, scope=[], duration=None, interval=None))
+        notes.append('两组成长可同时生效，倍率相乘。')
+        rule = 'growth'
+    elif grown:
         assert len(grown) == 1
         record = grown[0]
         cap = min([len(ladder['stages']) for ladder in record['ladders']] + ([record['eventLimit']] if record['eventLimit'] else []))
@@ -471,17 +533,18 @@ for id in sorted(source['effects'], key=int):
     missing_roots = [sp for sp in effect['roots'].values() if str(sp) not in source['spells']]
     states = sorted({int(source['spells'][str(sp)]['stateInfo']) for sp in effect['roots'].values() if str(sp) in source['spells']})
     refs = STACKING_RULES[rules[id]][2].copy()
+    questions = []
     if any(r['root'] == int(id) for r in evidence['damageStatus']):
         refs.append('damage-status')
     if any(str(root) in triggers['roots'] for root in effect['roots'].values()):
         refs.append('action-triggers')
     if any(str(root) in scripts['effects'] for root in effect['roots'].values()):
         refs.append('action-script')
-        questions.append('与其他附魔的覆盖顺序、武器适用条件及完整动作时序')
+        if id == '7035700':
+            questions.append('与其他附魔的覆盖顺序、武器适用条件及完整动作时序')
     if any(b['source'] in edge['leaves'] for b in detail['blocks'] for edge in links['emitters'].values()):
         refs.append('bullet-links')
         questions.append('范围命中、多人来源叠加及再次发放时序')
-    questions = []
     if missing_roots:
         questions.append('目录引用的 SpEffect 行在当前参数中不存在：' + ', '.join(map(str, missing_roots)))
     if rules[id] == 'unknown':

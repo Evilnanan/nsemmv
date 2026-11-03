@@ -20,12 +20,27 @@ p.add_argument('params', type=Path)
 p.add_argument('extracted', type=Path)
 p.add_argument('output', type=Path)
 p.add_argument('--hero-params', type=Path, required=True)
+p.add_argument('--systems', type=Path, required=True, help='Private ExtractEffectDetails --systems JSON')
 a = p.parse_args()
 raw = a.exe.read_bytes()
 exe_hash = hashlib.sha256(raw).hexdigest()
 assert exe_hash == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
 x = json.loads(a.extracted.read_text())
 assert x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+systems = json.loads(a.systems.read_text())
+assert systems['hashes']['regulation.bin'] == x['hashes']['regulation.bin']
+system_rows, system_hashes = {}, {}
+for name in ('GameSystemCommonParam', 'PlayerCommonParam'):
+    data = a.systems.with_suffix('.' + name + '.param').read_bytes()
+    assert struct.unpack_from('<H', data, 10)[0] == 1
+    assert struct.unpack_from('<i', data, 0x40)[0] == 0
+    offset = struct.unpack_from('<Q', data, 0x48)[0]
+    system_rows[name] = data[offset:offset + 0x400]
+    system_hashes[name] = hashlib.sha256(data).hexdigest()
+for name, field, offset, fmt in [('GameSystemCommonParam','unknown_30C',0x30c,'<f'),
+                                ('PlayerCommonParam','fh_unknown_43b',0x25a,'<H'),
+                                ('PlayerCommonParam','analyseTarget_AllyEffectId',0x1a8,'<i')]:
+    assert struct.unpack_from(fmt, system_rows[name], offset)[0] == systems['tables'][name]['0'][field]
 param = a.params.read_bytes()
 count = struct.unpack_from('<H', param, 10)[0]
 positions = {struct.unpack_from('<i', param, 0x40 + i * 24)[0]: struct.unpack_from('<Q', param, 0x48 + i * 24)[0] for i in range(count)}
@@ -99,6 +114,25 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             id = uc.reg_read(UC_X86_REG_RDX) & 0xffffffff
             uc.mem_write(wrapper, struct.pack('<IIQ', id, 0, hero_addresses.get(id, 0)))
             finish(wrapper)
+        elif rva == 0x3ed7f1 and address - BASE in (0x3ed850, 0x3ed86a, 0x3ed914):
+            # Bound the reviewed ally branch before its networking/target-list continuation.
+            uc.reg_write(UC_X86_REG_RIP, STOP)
+            uc.emu_stop()
+        elif rva == 0x3ed7f1 and address - BASE == 0x42c120:
+            calls.add('42C120 synthetic Scholar owner for reviewed ally-grant branch')
+            finish(OBJ + 0x6000)
+        elif rva == 0x3ed7f1 and address - BASE == 0xe81650:
+            calls.add('E81650 PlayerCommon row 0 lookup, actual ally effect at +0x1a8')
+            wrapper = uc.reg_read(UC_X86_REG_RCX)
+            system_row = OBJ + 0x1d000
+            uc.mem_write(system_row, system_rows['PlayerCommonParam'])
+            uc.mem_write(wrapper, struct.pack('<QI', system_row, 0))
+            finish(wrapper)
+        elif rva == 0x3ed7f1 and address - BASE == 0x3c7fd0:
+            calls.add('3C7FD0 Scholar ally application recorder; eligibility and effect selection are native')
+            assert uc.reg_read(UC_X86_REG_RCX) == OBJ + 0x7000
+            emitted.append(uc.reg_read(UC_X86_REG_RDX) & 0xffffffff)
+            finish(0)
         elif rva == 0x6c8a60 and address - BASE == 0xe78720:
             calls.add('E78720 HeroStatus PARAM wrapper cleanup')
             finish(0)
@@ -117,8 +151,8 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             wrapper = uc.reg_read(UC_X86_REG_RCX)
             uc.mem_write(wrapper, struct.pack('<Qi', nodes[ids.index(id)] + 0x100, id))
             finish(wrapper)
-        elif rva == 0x5077a0 and address - BASE == 0xea17e0:
-            calls.add('EA17E0 growth lookup using actual SpEffect PARAM rows, including missing next rows')
+        elif rva in (0x5077a0, 0x511700) and address - BASE == 0xea17e0:
+            calls.add('EA17E0 growth/refresh lookup using actual SpEffect PARAM rows, including missing next rows')
             id = uc.reg_read(UC_X86_REG_RDX) & 0xffffffff
             wrapper = uc.reg_read(UC_X86_REG_RCX)
             if id in rows and id not in lookup_addresses:
@@ -126,6 +160,20 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
                 assert len(lookup_addresses) < 32
                 uc.mem_write(lookup_addresses[id], rows[id])
             uc.mem_write(wrapper, struct.pack('<QI', lookup_addresses.get(id, 0), id))
+            finish(wrapper)
+        elif rva == 0x504940 and address - BASE == 0xe76d50:
+            calls.add('E76D50 GameSystemCommon row 0 lookup, actual extracted unknown_30C at +0x30c')
+            wrapper = uc.reg_read(UC_X86_REG_RCX)
+            system_row = OBJ + 0x1d000
+            uc.mem_write(system_row, system_rows['GameSystemCommonParam'])
+            uc.mem_write(wrapper, struct.pack('<QI', system_row, 0))
+            finish(wrapper)
+        elif rva == 0x3ea8f0 and address - BASE == 0xe81650:
+            calls.add('E81650 PlayerCommon row 0 lookup, actual extracted decay field at +0x25a')
+            wrapper = uc.reg_read(UC_X86_REG_RCX)
+            system_row = OBJ + 0x1d000
+            uc.mem_write(system_row, system_rows['PlayerCommonParam'])
+            uc.mem_write(wrapper, struct.pack('<QI', system_row, 0))
             finish(wrapper)
         if address - BASE == 0xe6d630:
             calls.add('E6D630 absent weapon PARAM lookup')
@@ -142,7 +190,7 @@ def scalar(u):
     return struct.unpack('<f', u.reg_read(UC_X86_REG_XMM0).to_bytes(16, 'little')[:4])[0]
 
 predicate = []
-for id in [7000000, 7000800, 7611202, 7082400, 7090000, 7090010, 7034201, 7033200, 7270100, 7037400]:
+for id in [7000000, 7000800, 7611202, 7082400, 7090000, 7090010, 7034201, 7033200, 7270100, 7037400, 7150000, 7036200]:
     category = int(x['tables']['SpEffectParam'][str(id)]['spCategory'])
     u = run(0x510b20, [id], [OBJ + 0x1000, id])
     reused = bool(u.reg_read(UC_X86_REG_RAX) & 255)
@@ -518,6 +566,115 @@ for stage in range(1, 11):
     assert math.isclose(value, x['tables']['SpEffectParam'][str(id)]['soulRate'], abs_tol=1e-6)
     growth_values.append(dict(id=id, field='soulRate', value=value))
 
+location_values = []
+for first in (7069001, 7069021):
+    for stage in range(10):
+        id = first + stage
+        u = run(0x502830, [id], [OBJ, OBJ + 0x800, -1, -1], kind=3)
+        rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
+        expected = x['tables']['SpEffectParam'][str(id)]['physicsAttackRate']
+        assert all(math.isclose(v, expected, abs_tol=1e-6) for v in rates)
+        location_values.append(dict(id=id, rates=rates))
+u = run(0x502830, [7069006, 7069030], [OBJ, OBJ + 0x800, -1, -1], kind=3)
+rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
+expected = math.prod(x['tables']['SpEffectParam'][str(id)]['physicsAttackRate'] for id in (7069006,7069030))
+assert all(math.isclose(v, expected, abs_tol=1e-6) for v in rates)
+location_values.append(dict(ids=[7069006,7069030], rates=rates))
+
+guard_counter = []
+system_scale = systems['tables']['GameSystemCommonParam']['0']['unknown_30C']
+assert math.isclose(system_scale, .6, abs_tol=1e-6)
+for tag in (0, 103):
+    for hp in (0, 100, 1000, 3000):
+        for base_physical in (0, .5, 1, 100):
+            def setup_counter(u):
+                u.mem_write(OBJ + 0x10, struct.pack('<Q', OBJ + 0x7000))
+                u.mem_write(OBJ + 0x71b8, struct.pack('<Q', OBJ + 0x7400))
+                u.mem_write(OBJ + 0x7400, struct.pack('<Q', OBJ + 0x7800))
+                u.mem_write(OBJ + 0x7940, struct.pack('<ii', hp, 3000))
+                u.mem_write(OBJ + 0x800, bytes(64))
+                u.mem_write(OBJ + 0x804, (1 << tag).to_bytes(32, 'little'))
+                u.mem_write(OBJ + 0x600, struct.pack('<5f', base_physical, 100, 100, 100, 100))
+            u = run(0x504940, [7150000], [OBJ, OBJ + 0x600, OBJ + 0x800], setup=setup_counter)
+            values = list(struct.unpack('<5f', u.mem_read(OBJ + 0x600, 20)))
+            extra = hp * .05 / system_scale if tag == 103 and base_physical >= 1 else 0
+            assert math.isclose(values[0], base_physical + extra, abs_tol=5e-5)
+            assert values[1:] == [100]*4
+            def setup_final(u):
+                u.mem_write(OBJ + 0x600, struct.pack('<5f', *values))
+                u.mem_write(OBJ + 0x650, struct.pack('<5f', *([1]*5)))
+            one_bits = struct.unpack('<I', struct.pack('<f', 1))[0]
+            scale_bits = struct.unpack('<I', struct.pack('<f', system_scale))[0]
+            final = run(0x6c5fc0, [], [OBJ + 0x800, OBJ + 0x600] + [OBJ + 0x650]*6 + [one_bits]*6 + [scale_bits], setup=setup_final)
+            scaled_physical = struct.unpack('<f', final.mem_read(OBJ + 0x800, 4))[0]
+            assert math.isclose(scaled_physical, values[0] * system_scale, abs_tol=5e-5)
+            guard_counter.append(dict(tag=tag, hp=hp, maxHp=3000, basePhysical=base_physical,
+                                      values=values, systemScale=system_scale, scaledPhysical=scaled_physical))
+
+scholar_decay = []
+default_decay = systems['tables']['PlayerCommonParam']['0']['fh_unknown_43b']
+assert default_decay == 80 and x['tables']['SpEffectParam']['7036200']['unk_05'] == 30
+for ids in ([], [7036200], [7036200]*3):
+    def setup_decay_getter(u):
+        u.mem_write(OBJ + 0x28, struct.pack('<Q', 1 << 48))
+    value = scalar(run(0x505bf0, ids, [OBJ], setup=setup_decay_getter))
+    assert value == (30 if ids else -1)
+    for dt in (0, 1/60, .5, 1, 2, 4):
+        def setup_decay(u):
+            u.mem_write(OBJ + 0x18, struct.pack('<f', 100))
+            for rva, raw in [(0x3c0f0a8, struct.pack('<Q', OBJ + 0x3000)),
+                             (0x398a858, struct.pack('<f', value))]:
+                page = rva & ~4095
+                u.mem_map(BASE + page, 4096)
+                u.mem_write(BASE + page, pe.get_data(page, 4096))
+                u.mem_write(BASE + rva, raw)
+        u = run(0x3ea8f0, [], [OBJ], setup=setup_decay, xmm_args={UC_X86_REG_XMM1: dt})
+        remaining = struct.unpack('<f', u.mem_read(OBJ + 0x18, 4))[0]
+        assert math.isclose(remaining, max(0, 100 - dt * (value if value >= 0 else default_decay)), abs_tol=1e-5)
+        scholar_decay.append(dict(ids=ids, override=value, defaultRate=default_decay, dt=dt, start=100, remaining=remaining))
+
+scholar_ally = []
+for ids in ([], [7036300], [7036300]*2):
+    for eligible in (0, 1):
+        emitted = []
+        def setup_ally(u):
+            u.mem_write(OBJ + 0x6190, struct.pack('<Q', OBJ))
+            u.mem_write(OBJ + 0x28, b'\xff' * 32)
+            u.reg_write(UC_X86_REG_RBP, STACK + 0x4000)
+            u.reg_write(UC_X86_REG_R13, OBJ + 0x8000)
+            u.reg_write(UC_X86_REG_RSI, OBJ + 0x7000)
+            u.reg_write(UC_X86_REG_R15, 0)
+            u.mem_write(STACK + 0x4000 - 0x4d, bytes([eligible]))
+        run(0x3ed7f1, ids, [], setup=setup_ally, emitted=emitted)
+        assert emitted == ([7036301] if ids and eligible else [])
+        scholar_ally.append(dict(ids=ids, eligibilityByte=eligible, emitted=emitted))
+ally = systems['tables']['PlayerCommonParam']['0']['analyseTarget_AllyEffectId']
+assert ally == 7036301
+assert run(0x510b20, [ally], [OBJ + 0x1000, ally]).reg_read(UC_X86_REG_RAX) & 255
+for kind in (0, 3, 4):
+    u = run(0x502830, [ally], [OBJ, OBJ + 0x800, -1, -1], kind=kind)
+    rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
+    assert all(math.isclose(v, 1.15, abs_tol=1e-6) for v in rates)
+    scholar_ally.append(dict(leaf=ally, kind=kind, rates=rates, reusesSameId=True))
+
+zone_matching = []
+for existing in (1413000, 7032803):
+    for incoming in (1413000, 7032803):
+        node = OBJ + 0x1000
+        match = bool(run(0x511450, [existing], [node, 201, 145, incoming]).reg_read(UC_X86_REG_RAX) & 255)
+        assert match
+        u = run(0x511700, [existing], [node, incoming, 0, 0], xmm_args={UC_X86_REG_XMM2: 1})
+        pointer, actual_id = struct.unpack('<Qi', u.mem_read(node, 12))
+        duration = struct.unpack('<f', u.mem_read(node + 0x4c, 4))[0]
+        assert actual_id == incoming and duration == 1.5
+        assert bytes(u.mem_read(pointer, len(rows[incoming]))) == rows[incoming]
+        # Use the mutated live node in the actual attack getter.
+        invoke(u, 0x502830, [OBJ, OBJ + 0x800, -1, -1])
+        rate = struct.unpack('<f', u.mem_read(OBJ + 0x8a4, 4))[0]
+        assert math.isclose(rate, x['tables']['SpEffectParam'][str(incoming)]['magicAttackRate'], abs_tol=1e-6)
+        zone_matching.append(dict(existing=existing, incoming=incoming, categoryMatch=match,
+                                  activeId=actual_id, duration=duration, magicRate=rate))
+
 hero = []
 modifiers = sorted({int(row['heroStatusModifier']) for row in x['tables']['SpEffectParam'].values() if row['stateInfo'] == 2123 and row['heroStatusModifier'] >= 0})
 for modifier in modifiers:
@@ -545,7 +702,13 @@ groups = dict(predicates=predicate, attributes=attributes, attack=attack, defens
               skillUses=skill_uses, killMatching=kill_matching, killDispatch=kill_dispatch, gaugeApply=gauge_apply,
               timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
               extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions, growthAdvance=growth_advance,
-              growthValues=growth_values)
-a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(), **groups, recoveryTiming=recovery_timing, stubs=sorted(calls), gameplayVerified=False), indent=2) + '\n')
+              growthValues=growth_values, zoneMatching=zone_matching, locationValues=location_values,
+              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally)
+a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(),
+    systemDefinitionHashes={k:v for k,v in systems['hashes'].items() if k.startswith('defs/')},
+    systemParamSha256=system_hashes,
+    systemValues={'GameSystemCommonParam/0/unknown_30C':system_scale, 'PlayerCommonParam/0/fh_unknown_43b':default_decay,
+                  'PlayerCommonParam/0/analyseTarget_AllyEffectId':ally}, effectLinks={'7036300':[ally]},
+    **groups, recoveryTiming=recovery_timing, stubs=sorted(calls), gameplayVerified=False), indent=2) + '\n')
 print('PASS:', ', '.join(f'{k}={len(v)}' for k, v in groups.items()))
 print(f'Restore-only PARAM rows matched to tested timer families: {len(recovery_timing)}')

@@ -223,6 +223,135 @@
         }
       ]
     },
+    "7060001": {
+      "family": "special-locations",
+      "grants": [
+        7060000,
+        7060002
+      ],
+      "eventLimit": null,
+      "sources": [
+        {
+          "event": 1400,
+          "slot": 0,
+          "initializationIndex": 393,
+          "arguments": [
+            7060001,
+            7060000
+          ],
+          "counter": 8145,
+          "grant": 7060000,
+          "grantsPerEvent": 3,
+          "thresholds": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "event": 1402,
+          "slot": 0,
+          "initializationIndex": 394,
+          "arguments": [
+            7060001,
+            7060000
+          ],
+          "counter": 8155,
+          "grant": 7060000,
+          "grantsPerEvent": 2,
+          "thresholds": [
+            1,
+            2
+          ]
+        },
+        {
+          "event": 1407,
+          "slot": 0,
+          "initializationIndex": 395,
+          "arguments": [
+            7060001,
+            7060002
+          ],
+          "counter": 8135,
+          "grant": 7060002,
+          "grantsPerEvent": 2,
+          "thresholds": [
+            1
+          ]
+        },
+        {
+          "event": 1408,
+          "slot": 0,
+          "initializationIndex": 396,
+          "arguments": [
+            7060001,
+            7060000
+          ],
+          "counter": 8140,
+          "grant": 7060000,
+          "grantsPerEvent": 1,
+          "thresholds": [
+            1
+          ]
+        },
+        {
+          "event": 1409,
+          "slot": 0,
+          "initializationIndex": 397,
+          "arguments": [
+            7060001,
+            7060002
+          ],
+          "counter": 8180,
+          "grant": 7060002,
+          "grantsPerEvent": 8,
+          "thresholds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "ladders": [
+        {
+          "grant": 7060000,
+          "stages": [
+            7069001,
+            7069002,
+            7069003,
+            7069004,
+            7069005,
+            7069006,
+            7069007,
+            7069008,
+            7069009,
+            7069010
+          ],
+          "priority": 11
+        },
+        {
+          "grant": 7060002,
+          "stages": [
+            7069021,
+            7069022,
+            7069023,
+            7069024,
+            7069025,
+            7069026,
+            7069027,
+            7069028,
+            7069029,
+            7069030
+          ],
+          "priority": 17
+        }
+      ]
+    },
     "7037400": {
       "grants": [
         7037501
@@ -250,6 +379,266 @@
     }
   },
   "events": {
+    "1400": {
+      "ID": 1400,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 13,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 20,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "01000000A52300000404000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "01010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000D11F00000404000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A52300000400000003000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 1,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "02000000A52300000404000002000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "02010200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000D11F00000404000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A52300000400000003000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 2,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "03000000A52300000404000003000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "03010300"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000D11F00000404000003000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A52300000400000003000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 3,
+          "hex": ""
+        }
+      ]
+    },
+    "1402": {
+      "ID": 1402,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 13,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "01000000AF2300000304000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "01010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000DB1F00000304000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "AF2300000300000002000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 1,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "02000000AF2300000304000002000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "02010200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000DB1F00000304000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "AF2300000300000002000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 2,
+          "hex": ""
+        }
+      ]
+    },
     "1403": {
       "ID": 1403,
       "RestBehavior": 0,
@@ -1631,6 +2020,3905 @@
           "hex": ""
         }
       ]
+    },
+    "1407": {
+      "ID": 1407,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 3,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 5,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000C71F00000304000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        }
+      ]
+    },
+    "1408": {
+      "ID": 1408,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 3,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        }
+      ]
+    },
+    "1409": {
+      "ID": 1409,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 12,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 18,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 24,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 30,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 36,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 42,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 48,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "01000000DC2300000404000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "02000000DC2300000404000002000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "03000000DC2300000404000003000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010300"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000003000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "04000000DC2300000404000004000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010400"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000004000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "05000000DC2300000404000005000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010500"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000005000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "06000000DC2300000404000006000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010600"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000006000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "07000000DC2300000404000007000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010700"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000007000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "08000000DC2300000404000008000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010800"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000008000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC2300000400000008000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        }
+      ]
     }
-  }
+  },
+  "producerAssets": {
+    "event/common_func.emevd.dcx": "6417c15ce944837b96120012dcedfda6ea7a3def7d5ecdb9b534e3a8f0ba297d",
+    "event/m30_00_00_00.emevd.dcx": "38952ba3eaaac350b1eb006d1d909eba0969a5c2855db11c98c9ec7a3e56ef25",
+    "event/m30_30_00_00.emevd.dcx": "c8e277e8e877401913fdbbb938d7ee024e8be9a82b76445252b21eef69362570",
+    "event/m32_00_00_00.emevd.dcx": "261cff5c7ec754453b3133f8dd0091f1ea53472ef9d31676c5e2b075ca386df7",
+    "event/m32_10_00_00.emevd.dcx": "e1893813adc9b830c561b5f19d9f892030847fe7c1f9c6e9a5b2569370f208ca",
+    "event/m32_20_00_00.emevd.dcx": "d57f999ca08bf19db3a97b5c5ca4b23be1fb407e5d06ce03c6bf6aa65dd29538",
+    "event/m34_00_00_00.emevd.dcx": "ef5b91ba59cb954d50370aa1296ac88c12a5f96b6960f6606bf80648be9b87a8",
+    "event/m34_10_00_00.emevd.dcx": "9063fdf74d665c90fadc21ea0b42f26d4ad7950e140783d9d2493b0d58921e92",
+    "event/m34_20_00_00.emevd.dcx": "4dc65ea67cea1909c0d8cbf2ccef715e2c0080966110c37c153330f7b2c9728e",
+    "event/m34_30_00_00.emevd.dcx": "ccf6492e85fc81d647c7779fdc4ca0bb47ec75fbd8e28ce9c9ec148f3b5e3fbf",
+    "event/m38_00_00_00.emevd.dcx": "314be3f1457a268fb2de5afa4d4bfae338226b56c837130baa01f755f8666c4b",
+    "event/m38_10_00_00.emevd.dcx": "de0575851c57aabe33a106332f125f78033f9724c5fcaaebe45e56d620d941ca",
+    "event/m46_70_00_00.emevd.dcx": "0852a95d762bd4a932bd1563202525a898d4e5a65fc798fa2569ad5a3d5291e6",
+    "event/m50_00_00_00.emevd.dcx": "3871a8b4df3064a35e81eb09866af4ca340a1d1f9a7db7c84348ccfbecc0c4bb",
+    "event/m50_01_00_00.emevd.dcx": "f1fefc6d06e8005fa3d9b838c03e014aff3b7c09596f8521b425251f843fdc8e",
+    "event/m50_02_00_00.emevd.dcx": "5ceb62d39eeb9b0e062848d6b1950df2660e1192c5ce50c7ecc2548a58ad05fb",
+    "event/m50_03_00_00.emevd.dcx": "e8c7013b568d00551c77d48040318bd000465dd4759f0949d1d13d03299cbb1b",
+    "event/m50_04_00_00.emevd.dcx": "5d73d6bc24c5797ebdd5e7da9c2bee97c86cd22e87b8ca647839fe82ea8a34bc",
+    "event/m50_05_00_00.emevd.dcx": "25b2bc64b8841418041191d87060ccf458eed3be6eb69c9c8a850a6ffd5be4e8",
+    "event/m50_06_00_00.emevd.dcx": "b925447723a513fd43648db90a63f193fbe6abdd9253cc4bd3d82d863368cd65",
+    "event/m50_10_00_00.emevd.dcx": "d86c01b805739cdef351152a68ef4eddf005c99184b0876c68d523adedee162f",
+    "event/m50_11_00_00.emevd.dcx": "72f8621ec8a7b3d09476f976b739e27f0611fa6c2154734a4a0fa802db8e4338",
+    "event/m52_40_00_00.emevd.dcx": "b4eb0acf162954f36c458f768472721a69b2a252ff60ffcb68bed2eb2bae0af2",
+    "event/m52_42_00_00.emevd.dcx": "2e0eee364f7d6db37fb7a700cadd9c737d7a4ec0879506059086845d11c9f978",
+    "event/m52_45_00_00.emevd.dcx": "df0e40f3f0d19fa3ccc2a2b2fd94641805b845fcf7fb85c51bb57ff73aae12df",
+    "event/m52_46_00_00.emevd.dcx": "ecc01a6d26198b5287d335c681f8d1137513a82d57023a03bbe1b25eb7989bd8",
+    "event/m52_50_00_00.emevd.dcx": "ee0017cfe717c9e6cf2ad5838c98ff64d77d6e06700bef88766c517654ad4edf",
+    "event/m52_52_00_00.emevd.dcx": "e50305c7561fa7ca358626d500fea5df6e877502a59b3103a4bd61c6171a2b0a",
+    "event/m52_55_00_00.emevd.dcx": "b80a089ea6f2113321a7efb0acc92fb6c45313790c63195aef05ed86f4439554",
+    "event/m52_57_00_00.emevd.dcx": "3d04b1eecedbdc61555d784fcff50cc5c3e1cfe3e15905c863bd45c60347cf9d",
+    "event/m60_42_36_00.emevd.dcx": "95dd33bcf610141f2e0aeb49b74cd279b146f7ee0cf181cdc5d5ce1e97ff51c0",
+    "event/m60_42_36_10.emevd.dcx": "95dd33bcf610141f2e0aeb49b74cd279b146f7ee0cf181cdc5d5ce1e97ff51c0",
+    "event/m60_42_36_20.emevd.dcx": "95dd33bcf610141f2e0aeb49b74cd279b146f7ee0cf181cdc5d5ce1e97ff51c0",
+    "event/m60_42_36_50.emevd.dcx": "414d984b5ece0b7ff76cc368a0e68903ee97fd577b2be09bbf3c0e06a04f9e1b",
+    "event/m60_42_38_10.emevd.dcx": "ae0cb6107a36a81a70d28c4606610c1d58ffa0da76996b566b34ec38923ce4f2",
+    "event/m60_42_39_00.emevd.dcx": "02dab9cf9b7e6bafe551a2b870b2951e603a8fae82ce996233e8de8e8652a855",
+    "event/m60_42_39_20.emevd.dcx": "02dab9cf9b7e6bafe551a2b870b2951e603a8fae82ce996233e8de8e8652a855",
+    "event/m60_42_39_50.emevd.dcx": "02dab9cf9b7e6bafe551a2b870b2951e603a8fae82ce996233e8de8e8652a855",
+    "event/m60_43_36_40.emevd.dcx": "846d3e5f5ca73f815ed7971ee257c010ed7476f9b1dd86590d39a09f50c84f46",
+    "event/m60_43_37_40.emevd.dcx": "19044fb4a9ddc3a622204c44e6b90138365dc16a1eb9ba6d82b1e31a599e458d",
+    "event/m60_43_37_50.emevd.dcx": "5fe998efd34019afa1e3cd4e5358235e4e5e0ed27a7794a8c84dec5b214b5059",
+    "event/m60_43_39_40.emevd.dcx": "2887340afb6810043ee41c5fe24e5336813ef9032719911f697688606744d2e9",
+    "event/m60_44_37_00.emevd.dcx": "cbf273b6ebe5bb16b5f92beebaebd1b45fa641bdc8820231d8fd2a5876dcec5f",
+    "event/m60_44_37_20.emevd.dcx": "cbf273b6ebe5bb16b5f92beebaebd1b45fa641bdc8820231d8fd2a5876dcec5f",
+    "event/m60_44_37_50.emevd.dcx": "e712dbf580508e91624129179f975c52fe914af7c1ffef16c4d4648e34136a52",
+    "event/m60_44_38_40.emevd.dcx": "c3bbfcf4f63b131d9151f1f4a6525a524653cdb58041213d26b5eec75ae666ef",
+    "event/m60_44_39_00.emevd.dcx": "df50e818e6f4c4b6c53ed59d8688f3677c84a41702235a566ebbb90ed3373e01",
+    "event/m60_44_39_20.emevd.dcx": "90d5a6e6606f2e67766c9c4ebd36c7028b8b704a7b150a81daa7963771e276dd",
+    "event/m60_44_39_30.emevd.dcx": "df50e818e6f4c4b6c53ed59d8688f3677c84a41702235a566ebbb90ed3373e01",
+    "event/m60_44_39_50.emevd.dcx": "df50e818e6f4c4b6c53ed59d8688f3677c84a41702235a566ebbb90ed3373e01",
+    "event/m60_45_36_30.emevd.dcx": "1618bbbd7f09f11461292473cff9f18705823a71c6a4537918057fa6359c6c8c",
+    "event/m60_45_37_40.emevd.dcx": "0ce0050fa06bd7c4eed143e6495280dcbed976591c9768ccec16b74ea17eebf5",
+    "event/m60_45_38_00.emevd.dcx": "8183728e37e1c0503a1ef58bcc90b2962ea73259c49460394904f444e6bf6793",
+    "event/m60_45_38_20.emevd.dcx": "8183728e37e1c0503a1ef58bcc90b2962ea73259c49460394904f444e6bf6793",
+    "event/m60_45_38_30.emevd.dcx": "8183728e37e1c0503a1ef58bcc90b2962ea73259c49460394904f444e6bf6793",
+    "event/m60_45_38_50.emevd.dcx": "8183728e37e1c0503a1ef58bcc90b2962ea73259c49460394904f444e6bf6793",
+    "event/m60_45_39_40.emevd.dcx": "d03c0a7272ad49a07e9e16e31fa29af68c07b7bb997de751815a9c8a4cd97dd9"
+  },
+  "producerEvents": {
+    "90015051": {
+      "ID": 90015051,
+      "RestBehavior": 0,
+      "Parameters": [
+        {
+          "InstructionIndex": 0,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 0,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 4,
+          "TargetStartByte": 0,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 8,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 4,
+          "TargetStartByte": 8,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 3,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 1003,
+          "ID": 2,
+          "hex": "0001000000000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 0,
+          "hex": "0001000000000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 31,
+          "hex": "000000000400000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 10,
+          "hex": "010100000000000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 31,
+          "hex": "000000000400000000000000"
+        }
+      ]
+    },
+    "90015304": {
+      "ID": 90015304,
+      "RestBehavior": 0,
+      "Parameters": [
+        {
+          "InstructionIndex": 3,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 4,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 1003,
+          "ID": 217,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1003,
+          "ID": 2,
+          "hex": "0001000000000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 0,
+          "hex": "0001000000000000"
+        },
+        {
+          "Bank": 4,
+          "ID": 0,
+          "hex": "0000000000000000010000000000803F"
+        },
+        {
+          "Bank": 2003,
+          "ID": 69,
+          "hex": "000000000000000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 31,
+          "hex": "DB1F00000300000004000000"
+        }
+      ]
+    },
+    "90045002": {
+      "ID": 90045002,
+      "RestBehavior": 0,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 0,
+          "TargetStartByte": 2,
+          "SourceStartByte": 4,
+          "ByteCount": 1,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 4,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 9,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 5,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 0,
+          "SourceStartByte": 20,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 12,
+          "SourceStartByte": 24,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 28,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 1012,
+          "ID": 3,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1003,
+          "ID": 2,
+          "hex": "0001000000000000"
+        },
+        {
+          "Bank": 4,
+          "ID": 23,
+          "hex": "00000000000000000500000000000000000000000000803F"
+        },
+        {
+          "Bank": 1001,
+          "ID": 0,
+          "hex": "0000A040"
+        },
+        {
+          "Bank": 2010,
+          "ID": 2,
+          "hex": "0000000005000000803BFB34"
+        },
+        {
+          "Bank": 2007,
+          "ID": 19,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 100,
+          "hex": "00000000000000000100000000000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 101,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 69,
+          "hex": "000000000000000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 69,
+          "hex": "000000000000000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 114,
+          "hex": "02010000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 114,
+          "hex": "08000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 31,
+          "hex": "D11F00000400000007000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 4,
+          "hex": "00000000"
+        }
+      ]
+    },
+    "90005390": {
+      "ID": 90005390,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 15,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 7,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 10,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 0,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 3,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 13,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 1004,
+          "ID": 11,
+          "hex": "000000000000000000000000"
+        },
+        {
+          "Bank": 1003,
+          "ID": 2,
+          "hex": "0001000000000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 0,
+          "hex": "0101000000000000"
+        },
+        {
+          "Bank": 4,
+          "ID": 0,
+          "hex": "0100000000000000010000000000803F"
+        },
+        {
+          "Bank": 0,
+          "ID": 0,
+          "hex": "00010100"
+        },
+        {
+          "Bank": 1001,
+          "ID": 0,
+          "hex": "0000803F"
+        },
+        {
+          "Bank": 1000,
+          "ID": 108,
+          "hex": "020000000000000000000000"
+        },
+        {
+          "Bank": 2006,
+          "ID": 3,
+          "hex": "0200000000000000C0030000172C0900"
+        },
+        {
+          "Bank": 1000,
+          "ID": 103,
+          "hex": "03000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 2,
+          "hex": ""
+        },
+        {
+          "Bank": 2006,
+          "ID": 3,
+          "hex": "0200000000000000C0030000162C0900"
+        },
+        {
+          "Bank": 1014,
+          "ID": 3,
+          "hex": ""
+        },
+        {
+          "Bank": 1001,
+          "ID": 0,
+          "hex": "00004040"
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 1003,
+          "ID": 14,
+          "hex": "00010000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 69,
+          "hex": "000000000000000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 31,
+          "hex": "C71F00000300000001000000"
+        }
+      ]
+    },
+    "90005391": {
+      "ID": 90005391,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 4,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 38,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 3,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 9,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 10,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 18,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 19,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 23,
+          "TargetStartByte": 8,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 23,
+          "TargetStartByte": 16,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 26,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 29,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 35,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 36,
+          "TargetStartByte": 0,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 0,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 4,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 5,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 13,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 14,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 15,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 16,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 17,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 20,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 23,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 31,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 32,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 33,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 34,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 37,
+          "TargetStartByte": 0,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 22,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 25,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 1004,
+          "ID": 11,
+          "hex": "000000000000000000000000"
+        },
+        {
+          "Bank": 1003,
+          "ID": 101,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 39,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 39,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 4,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 0,
+          "hex": ""
+        },
+        {
+          "Bank": 1003,
+          "ID": 101,
+          "hex": "0100000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 39,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 4,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 1,
+          "hex": ""
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 39,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 10,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 1,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 73,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 4,
+          "ID": 0,
+          "hex": "0000000000000000010000000000803F"
+        },
+        {
+          "Bank": 2004,
+          "ID": 35,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 35,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 0,
+          "hex": "0000003F"
+        },
+        {
+          "Bank": 1000,
+          "ID": 10,
+          "hex": "010100000000000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 42,
+          "hex": "0000000002000000000000008403000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 0,
+          "hex": "0000003F"
+        },
+        {
+          "Bank": 1000,
+          "ID": 105,
+          "hex": "020000000000000000000000"
+        },
+        {
+          "Bank": 2006,
+          "ID": 3,
+          "hex": "0200000000000000840300000D2C0900"
+        },
+        {
+          "Bank": 1000,
+          "ID": 103,
+          "hex": "03000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 2,
+          "hex": ""
+        },
+        {
+          "Bank": 2006,
+          "ID": 3,
+          "hex": "0200000000000000840300000C2C0900"
+        },
+        {
+          "Bank": 1014,
+          "ID": 3,
+          "hex": ""
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 10,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 39,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 1,
+          "hex": "0000000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 5,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 35,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 35,
+          "hex": "0000000000000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 69,
+          "hex": "000000000000000001000000"
+        }
+      ]
+    }
+  },
+  "producers": [
+    {
+      "path": "event/m30_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        30000050,
+        30000200,
+        30000202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m30_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        30000051,
+        30000200,
+        30000203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m30_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 53,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        30000800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m30_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 72,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        30000810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m30_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        30300050,
+        30300200,
+        30300202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m30_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        30300051,
+        30300200,
+        30300203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m30_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        30300800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m30_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 54,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        30300810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        32000050,
+        32000200,
+        32000202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m32_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        32000051,
+        32000200,
+        32000203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m32_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32000800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 52,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32000810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        32100050,
+        32100200,
+        32100202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m32_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        32100051,
+        32100200,
+        32100203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m32_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 35,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32100800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 54,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32100810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 73,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32100820,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        32200050,
+        32200200,
+        32200202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m32_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        32200051,
+        32200200,
+        32200203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m32_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32200800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m32_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 45,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        32200810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34000050,
+        34000200,
+        34000202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34000051,
+        34000200,
+        34000203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34000800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 45,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34000810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 73,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34000820,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 92,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34000830,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34100050,
+        34100200,
+        34100202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34100051,
+        34100200,
+        34100203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34100800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 45,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34100810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 64,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34100820,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 83,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34100830,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 102,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34100840,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34200050,
+        34200200,
+        34200202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34200051,
+        34200200,
+        34200203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34200800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_20_00_00.emevd.dcx",
+      "event": 0,
+      "index": 45,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34200810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m34_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34300050,
+        34300200,
+        34300202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        34300051,
+        34300200,
+        34300203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m34_30_00_00.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        34300800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m38_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        38000050,
+        38000200,
+        38000202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m38_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        38000051,
+        38000200,
+        38000203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m38_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 41,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        38000810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m38_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 61,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        38000850,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m38_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        38100050,
+        38100200,
+        38100202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m38_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 7,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        38100051,
+        38100200,
+        38100203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m38_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 37,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        38100800,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m38_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 67,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        38100810,
+        8180,
+        8,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m46_70_00_00.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90045002,
+      "slot": 0,
+      "arguments": [
+        46700800,
+        0,
+        46700800,
+        46700800,
+        1020,
+        11241,
+        904650601,
+        46700800
+      ],
+      "counter": 8145,
+      "units": 1
+    },
+    {
+      "path": "event/m46_70_00_00.emevd.dcx",
+      "event": 0,
+      "index": 14,
+      "target": 90045002,
+      "slot": 0,
+      "arguments": [
+        46700800,
+        1,
+        46700810,
+        46700810,
+        1020,
+        11241,
+        903560000,
+        46700810
+      ],
+      "counter": 8145,
+      "units": 1
+    },
+    {
+      "path": "event/m46_70_00_00.emevd.dcx",
+      "event": 0,
+      "index": 23,
+      "target": 90045002,
+      "slot": 0,
+      "arguments": [
+        46700800,
+        2,
+        46700820,
+        46700820,
+        1020,
+        11241,
+        903570000,
+        46700820
+      ],
+      "counter": 8145,
+      "units": 1
+    },
+    {
+      "path": "event/m46_70_00_00.emevd.dcx",
+      "event": 0,
+      "index": 32,
+      "target": 90045002,
+      "slot": 0,
+      "arguments": [
+        46700800,
+        3,
+        46700830,
+        46700830,
+        1020,
+        11241,
+        902500301,
+        46700830
+      ],
+      "counter": 8145,
+      "units": 1
+    },
+    {
+      "path": "event/m46_70_00_00.emevd.dcx",
+      "event": 0,
+      "index": 41,
+      "target": 90045002,
+      "slot": 0,
+      "arguments": [
+        46700800,
+        4,
+        46700840,
+        46700840,
+        1020,
+        11241,
+        902500301,
+        46700840
+      ],
+      "counter": 8145,
+      "units": 1
+    },
+    {
+      "path": "event/m46_70_00_00.emevd.dcx",
+      "event": 0,
+      "index": 50,
+      "target": 90045002,
+      "slot": 0,
+      "arguments": [
+        46700800,
+        5,
+        46700850,
+        46700850,
+        1020,
+        11241,
+        902500301,
+        46700850
+      ],
+      "counter": 8145,
+      "units": 1
+    },
+    {
+      "path": "event/m50_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 52,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50000050,
+        50000200,
+        50000202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 54,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50000051,
+        50000200,
+        50000203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_01_00_00.emevd.dcx",
+      "event": 0,
+      "index": 37,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50010050,
+        50010200,
+        50010202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_01_00_00.emevd.dcx",
+      "event": 0,
+      "index": 39,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50010051,
+        50010200,
+        50010203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_02_00_00.emevd.dcx",
+      "event": 0,
+      "index": 36,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50020050,
+        50020200,
+        50020202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_02_00_00.emevd.dcx",
+      "event": 0,
+      "index": 38,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50020051,
+        50020200,
+        50020203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_03_00_00.emevd.dcx",
+      "event": 0,
+      "index": 56,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50030050,
+        50030200,
+        50030202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_03_00_00.emevd.dcx",
+      "event": 0,
+      "index": 58,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50030051,
+        50030200,
+        50030203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_04_00_00.emevd.dcx",
+      "event": 0,
+      "index": 36,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50040050,
+        50040200,
+        50040202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_04_00_00.emevd.dcx",
+      "event": 0,
+      "index": 38,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50040051,
+        50040200,
+        50040203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_05_00_00.emevd.dcx",
+      "event": 0,
+      "index": 40,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50050050,
+        50050200,
+        50050202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_05_00_00.emevd.dcx",
+      "event": 0,
+      "index": 42,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50050051,
+        50050200,
+        50050203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_06_00_00.emevd.dcx",
+      "event": 0,
+      "index": 46,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50060050,
+        50060200,
+        50060202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_06_00_00.emevd.dcx",
+      "event": 0,
+      "index": 48,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50060051,
+        50060200,
+        50060203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 102,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50100050,
+        50100200,
+        50100202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 104,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50100051,
+        50100200,
+        50100203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_11_00_00.emevd.dcx",
+      "event": 0,
+      "index": 130,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50110050,
+        50110200,
+        50110202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m50_11_00_00.emevd.dcx",
+      "event": 0,
+      "index": 132,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        50110051,
+        50110200,
+        50110203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_40_00_00.emevd.dcx",
+      "event": 0,
+      "index": 17,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52400800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_40_00_00.emevd.dcx",
+      "event": 0,
+      "index": 35,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52400810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_40_00_00.emevd.dcx",
+      "event": 0,
+      "index": 54,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52400050,
+        52400200,
+        52400202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_40_00_00.emevd.dcx",
+      "event": 0,
+      "index": 56,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52400051,
+        52400200,
+        52400203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_42_00_00.emevd.dcx",
+      "event": 0,
+      "index": 15,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52420800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_42_00_00.emevd.dcx",
+      "event": 0,
+      "index": 33,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52420810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_42_00_00.emevd.dcx",
+      "event": 0,
+      "index": 50,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52420050,
+        52420200,
+        52420202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_42_00_00.emevd.dcx",
+      "event": 0,
+      "index": 52,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52420051,
+        52420200,
+        52420203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_45_00_00.emevd.dcx",
+      "event": 0,
+      "index": 15,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52450810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_45_00_00.emevd.dcx",
+      "event": 0,
+      "index": 31,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52450800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_45_00_00.emevd.dcx",
+      "event": 0,
+      "index": 48,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52450050,
+        52450200,
+        52450202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_45_00_00.emevd.dcx",
+      "event": 0,
+      "index": 50,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52450051,
+        52450200,
+        52450203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_46_00_00.emevd.dcx",
+      "event": 0,
+      "index": 15,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52460810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_46_00_00.emevd.dcx",
+      "event": 0,
+      "index": 31,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52460800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_46_00_00.emevd.dcx",
+      "event": 0,
+      "index": 52,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52460050,
+        52460200,
+        52460202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_46_00_00.emevd.dcx",
+      "event": 0,
+      "index": 54,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52460051,
+        52460200,
+        52460203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_50_00_00.emevd.dcx",
+      "event": 0,
+      "index": 24,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52500800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_50_00_00.emevd.dcx",
+      "event": 0,
+      "index": 51,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52500810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_50_00_00.emevd.dcx",
+      "event": 0,
+      "index": 68,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52500050,
+        52500200,
+        52500202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_50_00_00.emevd.dcx",
+      "event": 0,
+      "index": 70,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52500051,
+        52500200,
+        52500203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_52_00_00.emevd.dcx",
+      "event": 0,
+      "index": 22,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52520800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_52_00_00.emevd.dcx",
+      "event": 0,
+      "index": 38,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52520810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_52_00_00.emevd.dcx",
+      "event": 0,
+      "index": 57,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52520050,
+        52520200,
+        52520202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_52_00_00.emevd.dcx",
+      "event": 0,
+      "index": 59,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52520051,
+        52520200,
+        52520203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_55_00_00.emevd.dcx",
+      "event": 0,
+      "index": 17,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52550800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_55_00_00.emevd.dcx",
+      "event": 0,
+      "index": 35,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52550810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_55_00_00.emevd.dcx",
+      "event": 0,
+      "index": 52,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52550050,
+        52550200,
+        52550202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_55_00_00.emevd.dcx",
+      "event": 0,
+      "index": 54,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52550051,
+        52550200,
+        52550203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_57_00_00.emevd.dcx",
+      "event": 0,
+      "index": 15,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52570800,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_57_00_00.emevd.dcx",
+      "event": 0,
+      "index": 31,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        52570810,
+        8180,
+        8,
+        1
+      ],
+      "counter": 8180,
+      "units": 2
+    },
+    {
+      "path": "event/m52_57_00_00.emevd.dcx",
+      "event": 0,
+      "index": 48,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52570050,
+        52570200,
+        52570202
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m52_57_00_00.emevd.dcx",
+      "event": 0,
+      "index": 50,
+      "target": 90015304,
+      "slot": 0,
+      "arguments": [
+        52570051,
+        52570200,
+        52570203
+      ],
+      "counter": 8155,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_00.emevd.dcx",
+      "event": 0,
+      "index": 83,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1042360300,
+        1042362300,
+        1042360300,
+        1042360310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_00.emevd.dcx",
+      "event": 0,
+      "index": 85,
+      "target": 90005390,
+      "slot": 1,
+      "arguments": [
+        1042360301,
+        1042362301,
+        1042360301,
+        1042360311,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_10.emevd.dcx",
+      "event": 0,
+      "index": 83,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1042360300,
+        1042362300,
+        1042360300,
+        1042360310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_10.emevd.dcx",
+      "event": 0,
+      "index": 85,
+      "target": 90005390,
+      "slot": 1,
+      "arguments": [
+        1042360301,
+        1042362301,
+        1042360301,
+        1042360311,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_20.emevd.dcx",
+      "event": 0,
+      "index": 83,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1042360300,
+        1042362300,
+        1042360300,
+        1042360310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_20.emevd.dcx",
+      "event": 0,
+      "index": 85,
+      "target": 90005390,
+      "slot": 1,
+      "arguments": [
+        1042360301,
+        1042362301,
+        1042360301,
+        1042360311,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_36_50.emevd.dcx",
+      "event": 0,
+      "index": 178,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1026500300,
+        1026502300,
+        1026500310,
+        1026500320,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_38_10.emevd.dcx",
+      "event": 0,
+      "index": 58,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1028100300,
+        1028102300,
+        1028100300,
+        1028100310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_39_00.emevd.dcx",
+      "event": 0,
+      "index": 20,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1042390300,
+        1042392300,
+        1042390300,
+        1042390310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_39_20.emevd.dcx",
+      "event": 0,
+      "index": 20,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1042390300,
+        1042392300,
+        1042390300,
+        1042390310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_42_39_50.emevd.dcx",
+      "event": 0,
+      "index": 20,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1042390300,
+        1042392300,
+        1042390300,
+        1042390310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_43_36_40.emevd.dcx",
+      "event": 0,
+      "index": 19,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1036400400,
+        1036400410,
+        1036400400,
+        1036400410,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_43_37_40.emevd.dcx",
+      "event": 0,
+      "index": 23,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1037400400,
+        1037400410,
+        1037400400,
+        1037400410,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_43_37_50.emevd.dcx",
+      "event": 0,
+      "index": 33,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1037500300,
+        1037502300,
+        1037500300,
+        1037500310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_43_39_40.emevd.dcx",
+      "event": 0,
+      "index": 20,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1039400400,
+        1039400410,
+        1039400400,
+        1039400410,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_37_00.emevd.dcx",
+      "event": 0,
+      "index": 51,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1044370300,
+        1044372300,
+        1044370300,
+        1044370310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_37_20.emevd.dcx",
+      "event": 0,
+      "index": 51,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1044370300,
+        1044372300,
+        1044370300,
+        1044370310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_37_50.emevd.dcx",
+      "event": 0,
+      "index": 8,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1044370300,
+        1044372300,
+        1044370300,
+        1044370310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_38_40.emevd.dcx",
+      "event": 0,
+      "index": 17,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1048400400,
+        1048400410,
+        1048400400,
+        1048400410,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_39_00.emevd.dcx",
+      "event": 0,
+      "index": 65,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1044390300,
+        1044392300,
+        1044390300,
+        1044390310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_39_20.emevd.dcx",
+      "event": 0,
+      "index": 0,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1049200300,
+        1049202300,
+        1049200300,
+        1049200310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_39_30.emevd.dcx",
+      "event": 0,
+      "index": 65,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1044390300,
+        1044392300,
+        1044390300,
+        1044390310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_44_39_50.emevd.dcx",
+      "event": 0,
+      "index": 65,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1044390300,
+        1044392300,
+        1044390300,
+        1044390310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_36_30.emevd.dcx",
+      "event": 0,
+      "index": 26,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1056300300,
+        1056302300,
+        1056300300,
+        1056300310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_37_40.emevd.dcx",
+      "event": 0,
+      "index": 22,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1057400400,
+        1057400410,
+        1057400400,
+        1057400410,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_38_00.emevd.dcx",
+      "event": 0,
+      "index": 12,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1045380300,
+        1045382300,
+        1045380300,
+        1045380310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_38_20.emevd.dcx",
+      "event": 0,
+      "index": 12,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1045380300,
+        1045382300,
+        1045380300,
+        1045380310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_38_30.emevd.dcx",
+      "event": 0,
+      "index": 12,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1045380300,
+        1045382300,
+        1045380300,
+        1045380310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_38_50.emevd.dcx",
+      "event": 0,
+      "index": 12,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1045380300,
+        1045382300,
+        1045380300,
+        1045380310,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    },
+    {
+      "path": "event/m60_45_39_40.emevd.dcx",
+      "event": 0,
+      "index": 5,
+      "target": 90005390,
+      "slot": 0,
+      "arguments": [
+        1059400400,
+        1059400410,
+        1059400400,
+        1059400410,
+        1
+      ],
+      "counter": 8135,
+      "units": 1
+    }
+  ],
+  "transformations": [
+    {
+      "path": "event/m60_42_36_00.emevd.dcx",
+      "eventIndex": 83,
+      "pairedIndex": 84,
+      "map": "map/mapstudio/m60_42_36_00.msb.dcx",
+      "mapSha256": "b100d77bba383612dd5de742131791d3edc68e607977bf1a5163c0f20d62f39e",
+      "original": {
+        "EntityID": 1042360300,
+        "Name": "c4191_9004",
+        "ModelName": "c4191"
+      },
+      "target": {
+        "EntityID": 1042360310,
+        "Name": "c4191_9005",
+        "ModelName": "c4420"
+      }
+    },
+    {
+      "path": "event/m60_42_36_00.emevd.dcx",
+      "eventIndex": 85,
+      "pairedIndex": 86,
+      "map": "map/mapstudio/m60_42_36_00.msb.dcx",
+      "mapSha256": "b100d77bba383612dd5de742131791d3edc68e607977bf1a5163c0f20d62f39e",
+      "original": {
+        "EntityID": 1042360301,
+        "Name": "c3661_9001",
+        "ModelName": "c3661"
+      },
+      "target": {
+        "EntityID": 1042360311,
+        "Name": "c3661_9003",
+        "ModelName": "c4580"
+      }
+    },
+    {
+      "path": "event/m60_42_36_10.emevd.dcx",
+      "eventIndex": 83,
+      "pairedIndex": 84,
+      "map": "map/mapstudio/m60_42_36_10.msb.dcx",
+      "mapSha256": "b100d77bba383612dd5de742131791d3edc68e607977bf1a5163c0f20d62f39e",
+      "original": {
+        "EntityID": 1042360300,
+        "Name": "c4191_9004",
+        "ModelName": "c4191"
+      },
+      "target": {
+        "EntityID": 1042360310,
+        "Name": "c4191_9005",
+        "ModelName": "c4420"
+      }
+    },
+    {
+      "path": "event/m60_42_36_10.emevd.dcx",
+      "eventIndex": 85,
+      "pairedIndex": 86,
+      "map": "map/mapstudio/m60_42_36_10.msb.dcx",
+      "mapSha256": "b100d77bba383612dd5de742131791d3edc68e607977bf1a5163c0f20d62f39e",
+      "original": {
+        "EntityID": 1042360301,
+        "Name": "c3661_9001",
+        "ModelName": "c3661"
+      },
+      "target": {
+        "EntityID": 1042360311,
+        "Name": "c3661_9003",
+        "ModelName": "c4580"
+      }
+    },
+    {
+      "path": "event/m60_42_36_20.emevd.dcx",
+      "eventIndex": 83,
+      "pairedIndex": 84,
+      "map": "map/mapstudio/m60_42_36_20.msb.dcx",
+      "mapSha256": "b72d53d7691b045d0f67746ad32a88439381043da2bd031b7240d3508cd7be6f",
+      "original": {
+        "EntityID": 1042360300,
+        "Name": "c4191_9004",
+        "ModelName": "c4191"
+      },
+      "target": {
+        "EntityID": 1042360310,
+        "Name": "c4191_9005",
+        "ModelName": "c4420"
+      }
+    },
+    {
+      "path": "event/m60_42_36_20.emevd.dcx",
+      "eventIndex": 85,
+      "pairedIndex": 86,
+      "map": "map/mapstudio/m60_42_36_20.msb.dcx",
+      "mapSha256": "b72d53d7691b045d0f67746ad32a88439381043da2bd031b7240d3508cd7be6f",
+      "original": {
+        "EntityID": 1042360301,
+        "Name": "c3661_9001",
+        "ModelName": "c3661"
+      },
+      "target": {
+        "EntityID": 1042360311,
+        "Name": "c3661_9003",
+        "ModelName": "c4580"
+      }
+    },
+    {
+      "path": "event/m60_42_36_50.emevd.dcx",
+      "eventIndex": 178,
+      "pairedIndex": 179,
+      "map": "map/mapstudio/m60_42_36_50.msb.dcx",
+      "mapSha256": "6be525a4d40dba7cd618582923e3a6727271ea1eb2ce8f2af1aa4b00afb3c51f",
+      "original": {
+        "EntityID": 1026500310,
+        "Name": "c4355_9004",
+        "ModelName": "c4355"
+      },
+      "target": {
+        "EntityID": 1026500320,
+        "Name": "c4355_9012",
+        "ModelName": "c2250"
+      }
+    },
+    {
+      "path": "event/m60_42_38_10.emevd.dcx",
+      "eventIndex": 58,
+      "pairedIndex": 59,
+      "map": "map/mapstudio/m60_42_38_10.msb.dcx",
+      "mapSha256": "1f764fdd8910ac982e039920d274fb8bdcd09f1bd5905e2b7569079c2aca8576",
+      "original": {
+        "EntityID": 1028100300,
+        "Name": "c4371_9002",
+        "ModelName": "c4371"
+      },
+      "target": {
+        "EntityID": 1028100310,
+        "Name": "c4371_9003",
+        "ModelName": "c2710"
+      }
+    },
+    {
+      "path": "event/m60_42_39_00.emevd.dcx",
+      "eventIndex": 20,
+      "pairedIndex": 21,
+      "map": "map/mapstudio/m60_42_39_00.msb.dcx",
+      "mapSha256": "b0586631aff93a910ffe94e1b05c2d4b87a51c3204697f4ad4fc6bc6ea09feae",
+      "original": {
+        "EntityID": 1042390300,
+        "Name": "c4380_9003",
+        "ModelName": "c4380"
+      },
+      "target": {
+        "EntityID": 1042390310,
+        "Name": "c4380_9005",
+        "ModelName": "c3600"
+      }
+    },
+    {
+      "path": "event/m60_42_39_20.emevd.dcx",
+      "eventIndex": 20,
+      "pairedIndex": 21,
+      "map": "map/mapstudio/m60_42_39_20.msb.dcx",
+      "mapSha256": "b0586631aff93a910ffe94e1b05c2d4b87a51c3204697f4ad4fc6bc6ea09feae",
+      "original": {
+        "EntityID": 1042390300,
+        "Name": "c4380_9003",
+        "ModelName": "c4380"
+      },
+      "target": {
+        "EntityID": 1042390310,
+        "Name": "c4380_9005",
+        "ModelName": "c3600"
+      }
+    },
+    {
+      "path": "event/m60_42_39_50.emevd.dcx",
+      "eventIndex": 20,
+      "pairedIndex": 21,
+      "map": "map/mapstudio/m60_42_39_50.msb.dcx",
+      "mapSha256": "b0586631aff93a910ffe94e1b05c2d4b87a51c3204697f4ad4fc6bc6ea09feae",
+      "original": {
+        "EntityID": 1042390300,
+        "Name": "c4380_9003",
+        "ModelName": "c4380"
+      },
+      "target": {
+        "EntityID": 1042390310,
+        "Name": "c4380_9005",
+        "ModelName": "c3600"
+      }
+    },
+    {
+      "path": "event/m60_43_36_40.emevd.dcx",
+      "eventIndex": 19,
+      "pairedIndex": 20,
+      "map": "map/mapstudio/m60_43_36_40.msb.dcx",
+      "mapSha256": "747d251e475ba26164a13e7bccfd71f4458671f2e7030f4a060564412d552bcf",
+      "original": {
+        "EntityID": 1036400400,
+        "Name": "c3661_9007",
+        "ModelName": "c3661"
+      },
+      "target": {
+        "EntityID": 1036400410,
+        "Name": "c3661_9010",
+        "ModelName": "c4241"
+      }
+    },
+    {
+      "path": "event/m60_43_37_40.emevd.dcx",
+      "eventIndex": 23,
+      "pairedIndex": 24,
+      "map": "map/mapstudio/m60_43_37_40.msb.dcx",
+      "mapSha256": "c09d63696cd2c8b1a762153d6c6702512da5cd520b78eccd4a6e432247f39437",
+      "original": {
+        "EntityID": 1037400400,
+        "Name": "c4372_9001",
+        "ModelName": "c4372"
+      },
+      "target": {
+        "EntityID": 1037400410,
+        "Name": "c4372_9003",
+        "ModelName": "c4980"
+      }
+    },
+    {
+      "path": "event/m60_43_37_50.emevd.dcx",
+      "eventIndex": 33,
+      "pairedIndex": 34,
+      "map": "map/mapstudio/m60_43_37_50.msb.dcx",
+      "mapSha256": "f727740e4e85535f9a07f87ce602ce5dcaa1cfc0e868afa61f1739e95aae48d6",
+      "original": {
+        "EntityID": 1037500300,
+        "Name": "c4371_9000",
+        "ModelName": "c4371"
+      },
+      "target": {
+        "EntityID": 1037500310,
+        "Name": "c4371_9004",
+        "ModelName": "c4470"
+      }
+    },
+    {
+      "path": "event/m60_43_39_40.emevd.dcx",
+      "eventIndex": 20,
+      "pairedIndex": 21,
+      "map": "map/mapstudio/m60_43_39_40.msb.dcx",
+      "mapSha256": "b5fa000c956dd2f19bcc70616dcb1f7cda9b81327af083d6867a730295ec025c",
+      "original": {
+        "EntityID": 1039400400,
+        "Name": "c2275_9002",
+        "ModelName": "c2275"
+      },
+      "target": {
+        "EntityID": 1039400410,
+        "Name": "c2275_9010",
+        "ModelName": "c4021"
+      }
+    },
+    {
+      "path": "event/m60_44_37_00.emevd.dcx",
+      "eventIndex": 51,
+      "pairedIndex": 52,
+      "map": "map/mapstudio/m60_44_37_00.msb.dcx",
+      "mapSha256": "97077645bb69a287a039bcb03a733c4cd3a78199d53beb20dbec4cc0bacf0f6c",
+      "original": {
+        "EntityID": 1044370300,
+        "Name": "c4300_9004",
+        "ModelName": "c4300"
+      },
+      "target": {
+        "EntityID": 1044370310,
+        "Name": "c4300_9005",
+        "ModelName": "c4630"
+      }
+    },
+    {
+      "path": "event/m60_44_37_20.emevd.dcx",
+      "eventIndex": 51,
+      "pairedIndex": 52,
+      "map": "map/mapstudio/m60_44_37_20.msb.dcx",
+      "mapSha256": "49c67410efcac3ceef9d7ea4aca2384f7d2588c6c53d1acd28a2003556c98a72",
+      "original": {
+        "EntityID": 1044370300,
+        "Name": "c4300_9004",
+        "ModelName": "c4300"
+      },
+      "target": {
+        "EntityID": 1044370310,
+        "Name": "c4300_9005",
+        "ModelName": "c4630"
+      }
+    },
+    {
+      "path": "event/m60_44_37_50.emevd.dcx",
+      "eventIndex": 8,
+      "pairedIndex": 9,
+      "map": "map/mapstudio/m60_44_37_50.msb.dcx",
+      "mapSha256": "11a0a70a1d1e2fb9c390ceda3ecd11b9a586212addea58251ddbd42ed8568389",
+      "original": {
+        "EntityID": 1044370300,
+        "Name": "c4300_9004",
+        "ModelName": "c4300"
+      },
+      "target": {
+        "EntityID": 1044370310,
+        "Name": "c4300_9007",
+        "ModelName": "c4630"
+      }
+    },
+    {
+      "path": "event/m60_44_38_40.emevd.dcx",
+      "eventIndex": 17,
+      "pairedIndex": 18,
+      "map": "map/mapstudio/m60_44_38_40.msb.dcx",
+      "mapSha256": "819554417b934e6bb3c0bb500bce49f2713880e175c8eb322094a4cd4ad114c0",
+      "original": {
+        "EntityID": 1048400400,
+        "Name": "c3750_9004",
+        "ModelName": "c3750"
+      },
+      "target": {
+        "EntityID": 1048400410,
+        "Name": "c3750_9005",
+        "ModelName": "c4270"
+      }
+    },
+    {
+      "path": "event/m60_44_39_00.emevd.dcx",
+      "eventIndex": 65,
+      "pairedIndex": 66,
+      "map": "map/mapstudio/m60_44_39_00.msb.dcx",
+      "mapSha256": "d1b40be5da64c7c886df19c2381d6008ebc414dc9db582bed85c68bb6cc024bd",
+      "original": {
+        "EntityID": 1044390300,
+        "Name": "c4311_9000",
+        "ModelName": "c4311"
+      },
+      "target": {
+        "EntityID": 1044390310,
+        "Name": "c4311_9001",
+        "ModelName": "c5580"
+      }
+    },
+    {
+      "path": "event/m60_44_39_20.emevd.dcx",
+      "eventIndex": 0,
+      "pairedIndex": 1,
+      "map": "map/mapstudio/m60_44_39_20.msb.dcx",
+      "mapSha256": "90b9c5e0bde7758c43db77e7c38fdf5d12a035343e05a03e17f08ddbc304690f",
+      "original": {
+        "EntityID": 1049200300,
+        "Name": "c4381_9026",
+        "ModelName": "c4381"
+      },
+      "target": {
+        "EntityID": 1049200310,
+        "Name": "c4381_9031",
+        "ModelName": "c9600"
+      }
+    },
+    {
+      "path": "event/m60_44_39_30.emevd.dcx",
+      "eventIndex": 65,
+      "pairedIndex": 66,
+      "map": "map/mapstudio/m60_44_39_30.msb.dcx",
+      "mapSha256": "d1b40be5da64c7c886df19c2381d6008ebc414dc9db582bed85c68bb6cc024bd",
+      "original": {
+        "EntityID": 1044390300,
+        "Name": "c4311_9000",
+        "ModelName": "c4311"
+      },
+      "target": {
+        "EntityID": 1044390310,
+        "Name": "c4311_9001",
+        "ModelName": "c5580"
+      }
+    },
+    {
+      "path": "event/m60_44_39_50.emevd.dcx",
+      "eventIndex": 65,
+      "pairedIndex": 66,
+      "map": "map/mapstudio/m60_44_39_50.msb.dcx",
+      "mapSha256": "d1b40be5da64c7c886df19c2381d6008ebc414dc9db582bed85c68bb6cc024bd",
+      "original": {
+        "EntityID": 1044390300,
+        "Name": "c4311_9000",
+        "ModelName": "c4311"
+      },
+      "target": {
+        "EntityID": 1044390310,
+        "Name": "c4311_9001",
+        "ModelName": "c5580"
+      }
+    },
+    {
+      "path": "event/m60_45_36_30.emevd.dcx",
+      "eventIndex": 26,
+      "pairedIndex": 27,
+      "map": "map/mapstudio/m60_45_36_30.msb.dcx",
+      "mapSha256": "db959699b98bb0c7bcfba1738ccce9d8f160ae02b8ea7de2386385033a32c1bb",
+      "original": {
+        "EntityID": 1056300300,
+        "Name": "c4311_9005",
+        "ModelName": "c4311"
+      },
+      "target": {
+        "EntityID": 1056300310,
+        "Name": "c4311_9017",
+        "ModelName": "c3120"
+      }
+    },
+    {
+      "path": "event/m60_45_37_40.emevd.dcx",
+      "eventIndex": 22,
+      "pairedIndex": 23,
+      "map": "map/mapstudio/m60_45_37_40.msb.dcx",
+      "mapSha256": "97c6b18efef7d1466042c46b266e029c30b5383cd2a5282c7bdcae37470526b6",
+      "original": {
+        "EntityID": 1057400400,
+        "Name": "c4383_9003",
+        "ModelName": "c4383"
+      },
+      "target": {
+        "EntityID": 1057400410,
+        "Name": "c4383_9010",
+        "ModelName": "c4690"
+      }
+    },
+    {
+      "path": "event/m60_45_38_00.emevd.dcx",
+      "eventIndex": 12,
+      "pairedIndex": 13,
+      "map": "map/mapstudio/m60_45_38_00.msb.dcx",
+      "mapSha256": "acfcb6e7c884117b5f2340e307265b33e9bd22c2bd0eb7a1a9dfa6882a172a27",
+      "original": {
+        "EntityID": 1045380300,
+        "Name": "c3450_9001",
+        "ModelName": "c3450"
+      },
+      "target": {
+        "EntityID": 1045380310,
+        "Name": "c3450_9003",
+        "ModelName": "c4600"
+      }
+    },
+    {
+      "path": "event/m60_45_38_20.emevd.dcx",
+      "eventIndex": 12,
+      "pairedIndex": 13,
+      "map": "map/mapstudio/m60_45_38_20.msb.dcx",
+      "mapSha256": "6f1115e415cb5dff614a939fd830cdbcc857a75ad144c9b31eb1bf39dd5fd37a",
+      "original": {
+        "EntityID": 1045380300,
+        "Name": "c3450_9001",
+        "ModelName": "c3450"
+      },
+      "target": {
+        "EntityID": 1045380310,
+        "Name": "c3450_9004",
+        "ModelName": "c4600"
+      }
+    },
+    {
+      "path": "event/m60_45_38_30.emevd.dcx",
+      "eventIndex": 12,
+      "pairedIndex": 13,
+      "map": "map/mapstudio/m60_45_38_30.msb.dcx",
+      "mapSha256": "f2c69354fb79d273e513ce2f0611817703daaf4d0da19f82a0bb2b1143262a92",
+      "original": {
+        "EntityID": 1045380300,
+        "Name": "c3450_9001",
+        "ModelName": "c3450"
+      },
+      "target": {
+        "EntityID": 1045380310,
+        "Name": "c3450_9003",
+        "ModelName": "c4600"
+      }
+    },
+    {
+      "path": "event/m60_45_38_50.emevd.dcx",
+      "eventIndex": 12,
+      "pairedIndex": 13,
+      "map": "map/mapstudio/m60_45_38_50.msb.dcx",
+      "mapSha256": "30505cb9264c2b735785aa59faea6b4003b591da317858bb0dedb6ceb638f63a",
+      "original": {
+        "EntityID": 1045380300,
+        "Name": "c3450_9001",
+        "ModelName": "c3450"
+      },
+      "target": {
+        "EntityID": 1045380310,
+        "Name": "c3450_9004",
+        "ModelName": "c4600"
+      }
+    },
+    {
+      "path": "event/m60_45_39_40.emevd.dcx",
+      "eventIndex": 5,
+      "pairedIndex": 6,
+      "map": "map/mapstudio/m60_45_39_40.msb.dcx",
+      "mapSha256": "bb90e203b4638476c3fdd4e467bcf3b7e73a093773259a7c51e8f5bc6f01d5d9",
+      "original": {
+        "EntityID": 1059400400,
+        "Name": "c2275_9001",
+        "ModelName": "c2275"
+      },
+      "target": {
+        "EntityID": 1059400410,
+        "Name": "c2275_9009",
+        "ModelName": "c3664"
+      }
+    }
+  ]
 }

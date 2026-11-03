@@ -167,6 +167,86 @@
         "selfTarget": 0,
         "disableHitSpEffect": 0
       }
+    },
+    "7032802": {
+      "behaviorId": 869050000,
+      "bulletId": 12413000,
+      "attackId": 12041300,
+      "leaves": [
+        7032803
+      ],
+      "radius": 4.199999809265137,
+      "includeSelf": true,
+      "fieldDuration": 30,
+      "pulseInterval": 0.5,
+      "behavior": {
+        "refType": 1,
+        "refId": 12413000
+      },
+      "bullets": {
+        "12413000": {
+          "HitBulletID": 12413001,
+          "intervalCreateBulletId": -1,
+          "intervalCreateTimeMin": 1,
+          "intervalCreateTimeMax": 1,
+          "life": 0.05000000074505806,
+          "hitRadius": 0.10000000149011612,
+          "hitRadiusMax": -1,
+          "atkId_Bullet": 1,
+          "spEffectId0": 0,
+          "numShoot": 1,
+          "initVellocity": 0,
+          "isEndlessHit": 0
+        },
+        "12413001": {
+          "HitBulletID": 12413002,
+          "intervalCreateBulletId": 12413003,
+          "intervalCreateTimeMin": 0.05000000074505806,
+          "intervalCreateTimeMax": 0.05000000074505806,
+          "life": 0.10000000149011612,
+          "hitRadius": 0.10000000149011612,
+          "hitRadiusMax": -1,
+          "atkId_Bullet": 1,
+          "spEffectId0": 0,
+          "numShoot": 1,
+          "initVellocity": 0,
+          "isEndlessHit": 0
+        },
+        "12413002": {
+          "HitBulletID": -1,
+          "intervalCreateBulletId": 12413003,
+          "intervalCreateTimeMin": 0.5,
+          "intervalCreateTimeMax": 0.5,
+          "life": 30,
+          "hitRadius": 3,
+          "hitRadiusMax": -1,
+          "atkId_Bullet": 1,
+          "spEffectId0": 0,
+          "numShoot": 1,
+          "initVellocity": 0,
+          "isEndlessHit": 0
+        },
+        "12413003": {
+          "HitBulletID": -1,
+          "intervalCreateBulletId": -1,
+          "intervalCreateTimeMin": 1,
+          "intervalCreateTimeMax": 1,
+          "life": 0.05999999865889549,
+          "hitRadius": 4.199999809265137,
+          "hitRadiusMax": -1,
+          "atkId_Bullet": 12041300,
+          "spEffectId0": 7032803,
+          "numShoot": 1,
+          "initVellocity": 0,
+          "isEndlessHit": 0
+        }
+      },
+      "attack": {
+        "friendlyTarget": 1,
+        "opposeTarget": 0,
+        "selfTarget": 1,
+        "disableHitSpEffect": 0
+      }
     }
   }
 }

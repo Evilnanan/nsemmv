@@ -12,6 +12,80 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("distinguishes the magic field from its recipient lease and follows native last-hit replacement", () => {
+    const detail = effectDetail(7032800)!;
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].values).toEqual([
+      ["魔力攻击倍率", "+15%"],
+      ["魔法阵持续时间", "30 秒"],
+    ]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].restrictions).toContain("自身及周围友方 · 半径 4.2 米");
+    expect(detail.notes.join()).toContain("1.5 秒");
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("不自动保留较强者");
+    expect(scripts.effects["7032800"].cases).toHaveLength(32);
+    expect(links.emitters["7032802"].pulseInterval).toBe(.5);
+    for (const r of evidence.zoneMatching) {
+      expect(r.activeId).toBe(r.incoming);
+      expect(r.duration).toBe(1.5);
+      expect(r.magicRate).toBeCloseTo(r.incoming === 7032803 ? 1.15 : 1.2);
+    }
+  });
+  it("binds special-location growth to two independent ladders and actual counter grants", () => {
+    const detail = effectDetail(7060000)!;
+    expect(detail.blocks.map((b) => b.source)).toEqual([7069001, 7069021]);
+    expect(detail.blocks.map((b) => b.values)).toEqual([
+      [["每档攻击倍率", "约 +5%"]],
+      [["每档攻击倍率", "约 +1.5%"]],
+    ]);
+    expect(detail.blocks[0].restrictions.join()).toContain("最多 3 档");
+    expect(detail.blocks[1].restrictions.join()).toContain("拟态敌人最多计 2 档（需击败变身后的目标）");
+    expect(detail.notes).toContain("两组成长可同时生效，倍率相乘。");
+    expect(growth.roots["7060001"].sources.map((r) => [r.counter, r.grantsPerEvent]))
+      .toEqual([[8145,3], [8155,2], [8135,2], [8140,1], [8180,8]]);
+    expect(new Set(growth.producers.filter((r) => r.counter === 8180).map((r) => r.units)))
+      .toEqual(new Set([1, 2]));
+    expect(growth.transformations).toHaveLength(30);
+    for (const r of growth.transformations) {
+      const producer = growth.producers.find((p) => p.path === r.path && p.index === r.eventIndex)!;
+      expect(r.target.EntityID).toBe(producer.arguments[3]);
+      expect(r.original.EntityID).toBe(producer.arguments[2]);
+      expect(r.target.EntityID).not.toBe(r.original.EntityID);
+    }
+    const both = evidence.locationValues.find((r) => "ids" in r)!;
+    const first = evidence.locationValues.find((r) => r.id === 7069006)!;
+    const second = evidence.locationValues.find((r) => r.id === 7069030)!;
+    expect(both.rates[0]).toBeCloseTo(first.rates[0] * second.rates[0]);
+  });
+  it("uses current HP only for the guard counter's physical bonus", () => {
+    expect(effectDetail(7150000)!.blocks[0].values).toEqual([["追加物理伤害基值", "当前 HP 的 5%"]]);
+    expect(effectDetail(7150000)!.stacking).toBe("不可叠加");
+    for (const r of evidence.guardCounter) {
+      const bonus = r.tag === 103 && r.basePhysical >= 1 ? r.hp * .05 : 0;
+      expect(r.scaledPhysical - r.basePhysical * r.systemScale).toBeCloseTo(bonus, 4);
+      expect(r.values.slice(1)).toEqual([100, 100, 100, 100]);
+    }
+  });
+  it("derives Scholar decay from the consumer and records ally grants separately from skill thresholds", () => {
+    expect(effectDetail(7036200)!.blocks[0].values).toEqual([["进行率下降速度", "-62.5%"]]);
+    expect(effectDetail(7036200)!.stacking).toBe("不可叠加");
+    for (const r of evidence.scholarDecay)
+      expect(r.remaining).toBeCloseTo(Math.max(0, 100 - r.dt * (r.ids.length ? 30 : 80)), 4);
+    for (const id of [19001, 7036300]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["攻击倍率", "+15%"]]);
+      expect(detail.blocks[0].duration).toBe(30);
+      expect(detail.stacking).toBe("不可叠加");
+    }
+    for (const r of evidence.scholarAlly.filter((r) => "emitted" in r))
+      expect(r.emitted).toEqual(r.ids!.length && r.eligibilityByte ? [7036301] : []);
+  });
+  it("retains effect-specific open questions instead of clearing them or leaking them into the next record", () => {
+    expect(research.effects["7035700"].openQuestions).toContain("与其他附魔的覆盖顺序、武器适用条件及完整动作时序");
+    expect(research.effects["7032800"].openQuestions).toContain("范围命中、多人来源叠加及再次发放时序");
+    expect(research.effects["7000000"].openQuestions).not.toContain("范围命中、多人来源叠加及再次发放时序");
+  });
   it("shows damage-triggered buildup without treating ailment onset damage as per-hit damage", () => {
     const cases = [
       [6820000, "中毒", 52],

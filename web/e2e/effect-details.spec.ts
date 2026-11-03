@@ -34,6 +34,34 @@ async function longPress(page: Page, target: Locator) {
   }
 }
 
+test("newly decoded mechanics remain readable on desktop and mobile", async ({ page, isMobile }, testInfo) => {
+  await load(page);
+  await page.locator(".effect-cell").first().click();
+  const details = page.getByRole("dialog", { name: "词条详情", exact: true });
+  for (const [id, expected] of [
+    [7032800, ["魔法阵持续时间", "30 秒", "半径 4.2 米", "1.5 秒", "不自动保留较强者"]],
+    [7060000, ["约 +5%", "约 +1.5%", "拟态敌人最多计 2 档（需击败变身后的目标）", "倍率相乘"]],
+    [7036200, ["-62.5%", "不可叠加"]],
+    [7036300, ["+15%", "30 秒", "不可叠加"]],
+    [7150000, ["当前 HP 的 5%", "物理伤害"]],
+  ] as const) {
+    await page.getByLabel("搜索词条").fill(String(id));
+    const row = page.locator(".effect-choice-inspect").filter({ hasText: String(id) });
+    if (isMobile) await longPress(page, row.locator(".picker-row"));
+    else await row.hover();
+    for (const text of expected) await expect(details).toContainText(text);
+    expect(await details.evaluate((el) => {
+      const rect = el.getBoundingClientRect();
+      return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
+    })).toBe(true);
+    if (id === 7032800 || id === 7060000)
+      await page.screenshot({ path: testInfo.outputPath(`mechanics-${id}.png`) });
+    await details.getByRole("button", { name: "关闭词条详情" }).click();
+    await expect(details).toHaveCount(0);
+  }
+  await expect(page.locator(".effect-cell").first()).toContainText("生命力");
+});
+
 test("effect details support hover, touch and keyboard without selecting or editing", async ({
   page,
   isMobile,

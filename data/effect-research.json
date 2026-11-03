@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "706c78ca43c0d6f7b52fe0adc74369e2b63d1ebc7bd54c221d32a2ab5dbfae5a",
+  "nativeEvidenceSha256": "c5ef1d9c514cb7ddc1d5e6901d80144ef73600e0da01b7c32ee80db2931acaf5",
   "triggerEvidenceSha256": "f4aa3c791b751265e2793cfcc487872a07096398aa9322a602c4cddfbedbabe3",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 508,
-    "withNumericFields": 473,
-    "nativeStacking": 262,
+    "withDetails": 515,
+    "withNumericFields": 480,
+    "nativeStacking": 269,
     "catalog": 2241,
-    "catalogWithDetails": 1945
+    "catalogWithDetails": 1953
   },
   "effects": {
     "0": {
@@ -378,8 +378,7 @@
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本",
-        "范围命中、多人来源叠加及再次发放时序"
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -403,6 +402,7 @@
         "hpConditions"
       ],
       "openQuestions": [
+        "范围命中、多人来源叠加及再次发放时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为",
@@ -473,8 +473,7 @@
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本",
-        "范围命中、多人来源叠加及再次发放时序"
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -498,6 +497,7 @@
         "bullet-links"
       ],
       "openQuestions": [
+        "范围命中、多人来源叠加及再次发放时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
@@ -556,14 +556,38 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7069001,
+        7069002,
+        7069003,
+        7069004,
+        7069005,
+        7069006,
+        7069007,
+        7069008,
+        7069009,
+        7069010,
+        7069021,
+        7069022,
+        7069023,
+        7069024,
+        7069025,
+        7069026,
+        7069027,
+        7069028,
+        7069029,
+        7069030
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "growthAdvance",
+        "growth-events"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "计数源的完整地点名单、跨日／重载恢复与同类来源相遇"
       ],
       "gameplayVerified": false
     },
@@ -693,15 +717,18 @@
       "states": [
         2124
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7036301
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "scholarAlly"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -9921,8 +9948,7 @@
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本",
-        "范围命中、多人来源叠加及再次发放时序"
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -9946,6 +9972,7 @@
         "hpConditions"
       ],
       "openQuestions": [
+        "范围命中、多人来源叠加及再次发放时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为",
@@ -10194,8 +10221,7 @@
       ],
       "openQuestions": [
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为",
-        "范围命中、多人来源叠加及再次发放时序"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -10219,6 +10245,7 @@
         "bullet-links"
       ],
       "openQuestions": [
+        "范围命中、多人来源叠加及再次发放时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
@@ -10558,15 +10585,23 @@
       "states": [
         2205
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7032803
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "action-script",
+        "bullet-links",
+        "zoneMatching",
+        "action-script",
+        "bullet-links"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
+        "范围命中、多人来源叠加及再次发放时序",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -11196,8 +11231,7 @@
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为",
-        "与其他附魔的覆盖顺序、武器适用条件及完整动作时序"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -11229,6 +11263,7 @@
         "action-script"
       ],
       "openQuestions": [
+        "与其他附魔的覆盖顺序、武器适用条件及完整动作时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
@@ -11370,15 +11405,18 @@
       "states": [
         2126
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7036200
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "instance-matching",
+        "scholarDecay"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
       ],
       "gameplayVerified": false
     },
@@ -11391,15 +11429,18 @@
       "states": [
         2124
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7036301
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "scholarAlly"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -12394,8 +12435,7 @@
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "范围命中、多人来源叠加及再次发放时序"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -12418,6 +12458,7 @@
         "bullet-links"
       ],
       "openQuestions": [
+        "范围命中、多人来源叠加及再次发放时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
@@ -12458,14 +12499,38 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7069001,
+        7069002,
+        7069003,
+        7069004,
+        7069005,
+        7069006,
+        7069007,
+        7069008,
+        7069009,
+        7069010,
+        7069021,
+        7069022,
+        7069023,
+        7069024,
+        7069025,
+        7069026,
+        7069027,
+        7069028,
+        7069029,
+        7069030
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "growthAdvance",
+        "growth-events"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "计数源的完整地点名单、跨日／重载恢复与同类来源相遇"
       ],
       "gameplayVerified": false
     },
@@ -12508,14 +12573,38 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7069001,
+        7069002,
+        7069003,
+        7069004,
+        7069005,
+        7069006,
+        7069007,
+        7069008,
+        7069009,
+        7069010,
+        7069021,
+        7069022,
+        7069023,
+        7069024,
+        7069025,
+        7069026,
+        7069027,
+        7069028,
+        7069029,
+        7069030
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "growthAdvance",
+        "growth-events"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "计数源的完整地点名单、跨日／重载恢复与同类来源相遇"
       ],
       "gameplayVerified": false
     },
@@ -13290,8 +13379,7 @@
         "gaugeApply"
       ],
       "openQuestions": [
-        "敌人分类标记的具体对象、共享奖励及重载路径",
-        "范围命中、多人来源叠加及再次发放时序"
+        "敌人分类标记的具体对象、共享奖励及重载路径"
       ],
       "gameplayVerified": false
     },
@@ -13314,6 +13402,7 @@
         "bullet-links"
       ],
       "openQuestions": [
+        "范围命中、多人来源叠加及再次发放时序",
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
@@ -14527,15 +14616,18 @@
       "states": [
         2111
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7150000
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "instance-matching",
+        "guardCounter"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
       ],
       "gameplayVerified": false
     },
@@ -48888,7 +48980,7 @@
       "gameplayVerified": false
     }
   },
-  "linkEvidenceSha256": "19e5e35694f7732527c630b628707dc1e2322d527ba51312d823131638b3c6cf",
-  "scriptEvidenceSha256": "db73e932817e1cad403757b6c8faad8fce7e07fd0d559f50f5802ddd0f526f8c",
-  "growthEvidenceSha256": "7096cd75a85d2e46e6ce57c42450f12883d6f2060fbb2c2292c42d6887117dd5"
+  "linkEvidenceSha256": "1e4f9c3b8a33d7a44e714ebc77f693c62a3ebb9fcf6d09a80cedb8fd5ed2e990",
+  "scriptEvidenceSha256": "8db8790c700b0b8b8de2a6802d32ec0e34716a3783bac1dcd9be992049ba1600",
+  "growthEvidenceSha256": "2bd1736037de07e96bf3220f051c49af225d6f2b4d629f118a6e141baeed2699"
 }
