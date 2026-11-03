@@ -308,7 +308,7 @@ for id, effect in source['effects'].items():
         notes.append('混合魔法的其他强化效果尚未解明。')
     if id == '6840200':
         assert roots[0]['ultimateArtGaugeChargeRate'] == 0.85
-        notes.append('也降低杀敌恢复的绝招量表：每条使恢复量 ×0.85，多条相乘；两条共降低 27.75%。')
+        notes.append('影响所有来源的绝招量表累积；训练场直接补满除外。')
     stacking, stacking_detail, _ = STACKING_RULES[rule]
     rules[id] = rule
     result[id] = dict(info=effect.get('info'), blocks=blocks, stacking=stacking, stackingDetail=stacking_detail, notes=notes)
