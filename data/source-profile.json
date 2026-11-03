@@ -1,0 +1,2972 @@
+{
+  "schema_version": 1,
+  "name": "Daybreak 2.1.9 Beta2-Release",
+  "save_filename": "NR0000.dbb",
+  "regulation_version": "10350000",
+  "input_sha256": {
+    "regulation.bin": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+    "defs/AttachEffectParam.xml": "e6b0e664bee58cb2c7a180fdd7f81320f48430bb93b886afe0a77324248882ce",
+    "defs/AttachEffectTableParam.xml": "a7b34a2506d02fc9e01aa5f594ece4b60a8b044721ea22231e032f8b3539aa09",
+    "defs/EquipParamAntique.xml": "268020945c1dcfd0c275b21f40bb655830d381831ae62394ea9364f58f1a78ff",
+    "defs/AntiqueStandParam.xml": "224824524c642ca82b4a8f4a915cbded687cb51573d4de0d9f65d46455025c9a",
+    "defs/ItemLotParam.xml": "ce28466cab2a2021e2422762c6bbb1174758b98d69e94430de6a6050e3fe4323",
+    "defs/ItemTableParam.xml": "43882e73e33ca6a7131113bf5fea9f4383d64e5cf75eac15a560ebf8f07eb742",
+    "defs/ShopLineupParam.xml": "e16dc3a7397c9d68dbdab889158e79c64bbc03a67feaa44dc2511db80333ad26",
+    "msg/engus/item_dlc01.msgbnd.dcx": "541712561a676b9e224a1b3b6228f144ded0eead2eea2eba27d1ea918d83fc98",
+    "msg/zhocn/item_dlc01.msgbnd.dcx": "378c6b8ca06c0d4472487c8bf4a4b25847186c32164e4156bc31e36e5e00be1a"
+  },
+  "obtainable_relics": {
+    "100": [
+      "ItemTableParam:49000"
+    ],
+    "101": [
+      "ItemTableParam:49000"
+    ],
+    "102": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "103": [
+      "ItemTableParam:49000"
+    ],
+    "104": [
+      "ItemTableParam:49000"
+    ],
+    "105": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "106": [
+      "ItemTableParam:49000"
+    ],
+    "107": [
+      "ItemTableParam:49000"
+    ],
+    "108": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "109": [
+      "ItemTableParam:49000"
+    ],
+    "110": [
+      "ItemTableParam:49000"
+    ],
+    "111": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "112": [
+      "ItemTableParam:49000"
+    ],
+    "113": [
+      "ItemTableParam:49000"
+    ],
+    "114": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "115": [
+      "ItemTableParam:49000"
+    ],
+    "116": [
+      "ItemTableParam:49000"
+    ],
+    "117": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "118": [
+      "ItemTableParam:49000"
+    ],
+    "119": [
+      "ItemTableParam:49000"
+    ],
+    "120": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "121": [
+      "ItemTableParam:49000"
+    ],
+    "122": [
+      "ItemTableParam:49000"
+    ],
+    "123": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "124": [
+      "ItemTableParam:49000"
+    ],
+    "125": [
+      "ItemTableParam:49000"
+    ],
+    "126": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "127": [
+      "ItemTableParam:49000"
+    ],
+    "128": [
+      "ItemTableParam:49000"
+    ],
+    "129": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "130": [
+      "ItemTableParam:49000"
+    ],
+    "131": [
+      "ItemTableParam:49000"
+    ],
+    "132": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "133": [
+      "ItemTableParam:49000"
+    ],
+    "134": [
+      "ItemTableParam:49000"
+    ],
+    "135": [
+      "ItemTableParam:49000",
+      "ItemTableParam:49010"
+    ],
+    "136": [
+      "ShopLineupParam:10042"
+    ],
+    "200": [
+      "ItemTableParam:49020"
+    ],
+    "201": [
+      "ItemTableParam:49020"
+    ],
+    "202": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "203": [
+      "ItemTableParam:49020"
+    ],
+    "204": [
+      "ItemTableParam:49020"
+    ],
+    "205": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "206": [
+      "ItemTableParam:49020"
+    ],
+    "207": [
+      "ItemTableParam:49020"
+    ],
+    "208": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "209": [
+      "ItemTableParam:49020"
+    ],
+    "210": [
+      "ItemTableParam:49020"
+    ],
+    "211": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "212": [
+      "ItemTableParam:49020"
+    ],
+    "213": [
+      "ItemTableParam:49020"
+    ],
+    "214": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "215": [
+      "ItemTableParam:49020"
+    ],
+    "216": [
+      "ItemTableParam:49020"
+    ],
+    "217": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "218": [
+      "ItemTableParam:49020"
+    ],
+    "219": [
+      "ItemTableParam:49020"
+    ],
+    "220": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "221": [
+      "ItemTableParam:49020"
+    ],
+    "222": [
+      "ItemTableParam:49020"
+    ],
+    "223": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "224": [
+      "ItemTableParam:49020"
+    ],
+    "225": [
+      "ItemTableParam:49020"
+    ],
+    "226": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "227": [
+      "ItemTableParam:49020"
+    ],
+    "228": [
+      "ItemTableParam:49020"
+    ],
+    "229": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "230": [
+      "ItemTableParam:49020"
+    ],
+    "231": [
+      "ItemTableParam:49020"
+    ],
+    "232": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "233": [
+      "ItemTableParam:49020"
+    ],
+    "234": [
+      "ItemTableParam:49020"
+    ],
+    "235": [
+      "ItemTableParam:49020",
+      "ItemTableParam:49030"
+    ],
+    "1000": [
+      "ShopLineupParam:10000"
+    ],
+    "1010": [
+      "ShopLineupParam:10001"
+    ],
+    "1020": [
+      "ShopLineupParam:10002"
+    ],
+    "1030": [
+      "ShopLineupParam:10003"
+    ],
+    "1040": [
+      "ShopLineupParam:10004"
+    ],
+    "1050": [
+      "ShopLineupParam:10005"
+    ],
+    "1060": [
+      "ShopLineupParam:10010"
+    ],
+    "1070": [
+      "ShopLineupParam:10011"
+    ],
+    "1080": [
+      "ShopLineupParam:10012"
+    ],
+    "1090": [
+      "ShopLineupParam:10013"
+    ],
+    "1100": [
+      "ShopLineupParam:10014"
+    ],
+    "1110": [
+      "ShopLineupParam:10015"
+    ],
+    "1120": [
+      "ShopLineupParam:10020"
+    ],
+    "1130": [
+      "ShopLineupParam:10021"
+    ],
+    "1140": [
+      "ShopLineupParam:10022"
+    ],
+    "1150": [
+      "ShopLineupParam:10023"
+    ],
+    "1160": [
+      "ShopLineupParam:10024"
+    ],
+    "1170": [
+      "ShopLineupParam:10025"
+    ],
+    "1180": [
+      "ShopLineupParam:10030"
+    ],
+    "1190": [
+      "ShopLineupParam:10031"
+    ],
+    "1200": [
+      "ShopLineupParam:10032"
+    ],
+    "1210": [
+      "ShopLineupParam:10033"
+    ],
+    "1220": [
+      "ShopLineupParam:10034"
+    ],
+    "1230": [
+      "ShopLineupParam:10035"
+    ],
+    "1240": [
+      "ShopLineupParam:10036"
+    ],
+    "1250": [
+      "ShopLineupParam:10037"
+    ],
+    "1260": [
+      "ShopLineupParam:10040"
+    ],
+    "1270": [
+      "ShopLineupParam:10041"
+    ],
+    "1300": [
+      "ShopLineupParam:10310"
+    ],
+    "1310": [
+      "ShopLineupParam:10311"
+    ],
+    "1400": [
+      "ShopLineupParam:13000"
+    ],
+    "1410": [
+      "ShopLineupParam:13001"
+    ],
+    "1420": [
+      "ShopLineupParam:13002"
+    ],
+    "1430": [
+      "ShopLineupParam:13003"
+    ],
+    "1440": [
+      "ShopLineupParam:13004"
+    ],
+    "1450": [
+      "ShopLineupParam:13005"
+    ],
+    "1460": [
+      "ShopLineupParam:13006"
+    ],
+    "1470": [
+      "ShopLineupParam:13007"
+    ],
+    "1480": [
+      "ShopLineupParam:13008"
+    ],
+    "1490": [
+      "ShopLineupParam:13009"
+    ],
+    "1500": [
+      "ShopLineupParam:13010"
+    ],
+    "1510": [
+      "ShopLineupParam:13011"
+    ],
+    "1520": [
+      "ShopLineupParam:13012"
+    ],
+    "1600": [
+      "ShopLineupParam:13020"
+    ],
+    "1610": [
+      "ShopLineupParam:13021"
+    ],
+    "1620": [
+      "ShopLineupParam:13035"
+    ],
+    "1630": [
+      "ShopLineupParam:13033"
+    ],
+    "1640": [
+      "ShopLineupParam:13039"
+    ],
+    "1650": [
+      "ShopLineupParam:13030"
+    ],
+    "1660": [
+      "ShopLineupParam:13032"
+    ],
+    "1670": [
+      "ShopLineupParam:13034"
+    ],
+    "1680": [
+      "ShopLineupParam:13031"
+    ],
+    "1690": [
+      "ShopLineupParam:13043"
+    ],
+    "1700": [
+      "ShopLineupParam:13037"
+    ],
+    "1710": [
+      "ShopLineupParam:13036"
+    ],
+    "1720": [
+      "ShopLineupParam:13025"
+    ],
+    "1730": [
+      "ShopLineupParam:13026"
+    ],
+    "1740": [
+      "ShopLineupParam:13027"
+    ],
+    "1750": [
+      "ShopLineupParam:13028"
+    ],
+    "1800": [
+      "ShopLineupParam:13041"
+    ],
+    "1820": [
+      "ShopLineupParam:13040"
+    ],
+    "1830": [
+      "ShopLineupParam:13042"
+    ],
+    "1850": [
+      "ShopLineupParam:13038"
+    ],
+    "1860": [
+      "ShopLineupParam:13044"
+    ],
+    "1870": [
+      "ShopLineupParam:13048"
+    ],
+    "1880": [
+      "ShopLineupParam:13049"
+    ],
+    "1890": [
+      "ShopLineupParam:13045"
+    ],
+    "1900": [
+      "ShopLineupParam:13046"
+    ],
+    "1920": [
+      "ShopLineupParam:13047"
+    ],
+    "2000": [
+      "ItemTableParam:46000"
+    ],
+    "2001": [
+      "ShopLineupParam:13050"
+    ],
+    "2010": [
+      "ItemTableParam:46000"
+    ],
+    "2011": [
+      "ShopLineupParam:13051"
+    ],
+    "2020": [
+      "ItemTableParam:46000"
+    ],
+    "2021": [
+      "ShopLineupParam:13052"
+    ],
+    "2030": [
+      "ItemTableParam:46000"
+    ],
+    "2031": [
+      "ShopLineupParam:13053"
+    ],
+    "2040": [
+      "ItemTableParam:46000"
+    ],
+    "2041": [
+      "ShopLineupParam:13054"
+    ],
+    "2050": [
+      "ItemTableParam:46000"
+    ],
+    "2051": [
+      "ShopLineupParam:13055"
+    ],
+    "2060": [
+      "ItemTableParam:46000"
+    ],
+    "2061": [
+      "ShopLineupParam:13056"
+    ],
+    "2070": [
+      "ItemTableParam:46000"
+    ],
+    "2071": [
+      "ShopLineupParam:13058"
+    ],
+    "2080": [
+      "ItemTableParam:46000"
+    ],
+    "2100": [
+      "ItemTableParam:46000"
+    ],
+    "10000": [
+      "ItemTableParam:50000",
+      "ItemTableParam:50010"
+    ],
+    "10001": [
+      "ShopLineupParam:10100"
+    ],
+    "10002": [
+      "ItemLotParam_map:100102:1"
+    ],
+    "11000": [
+      "ItemLotParam_map:101030:1"
+    ],
+    "11001": [
+      "ItemLotParam_map:101000:1"
+    ],
+    "11002": [
+      "ItemLotParam_map:101011:1"
+    ],
+    "11003": [
+      "ItemLotParam_map:101040:1"
+    ],
+    "11004": [
+      "ItemLotParam_map:101050:1"
+    ],
+    "11015": [
+      "ShopLineupParam:13400"
+    ],
+    "11016": [
+      "ShopLineupParam:13410"
+    ],
+    "12000": [
+      "ItemLotParam_map:107040:1"
+    ],
+    "12001": [
+      "ItemLotParam_map:107000:1"
+    ],
+    "12002": [
+      "ItemLotParam_map:107011:1"
+    ],
+    "12003": [
+      "ItemLotParam_map:107021:1"
+    ],
+    "12004": [
+      "ShopLineupParam:12000"
+    ],
+    "12005": [
+      "ShopLineupParam:12001"
+    ],
+    "12006": [
+      "ShopLineupParam:12002"
+    ],
+    "12007": [
+      "ShopLineupParam:12003"
+    ],
+    "12018": [
+      "ShopLineupParam:13401"
+    ],
+    "12019": [
+      "ShopLineupParam:13411"
+    ],
+    "13001": [
+      "ItemLotParam_map:106001:1"
+    ],
+    "13002": [
+      "ItemLotParam_map:106030:1"
+    ],
+    "13010": [
+      "ShopLineupParam:13402"
+    ],
+    "13013": [
+      "ShopLineupParam:13412"
+    ],
+    "14000": [
+      "ItemLotParam_map:102040:1"
+    ],
+    "14001": [
+      "ItemLotParam_map:102010:1"
+    ],
+    "14002": [
+      "ItemLotParam_map:102030:1"
+    ],
+    "14013": [
+      "ShopLineupParam:13403"
+    ],
+    "14014": [
+      "ShopLineupParam:13413"
+    ],
+    "15000": [
+      "ItemLotParam_map:103000:1"
+    ],
+    "15002": [
+      "ItemLotParam_map:103030:1"
+    ],
+    "15011": [
+      "ShopLineupParam:13404"
+    ],
+    "15013": [
+      "ShopLineupParam:13414"
+    ],
+    "16001": [
+      "ItemLotParam_map:108000:1"
+    ],
+    "16002": [
+      "ItemLotParam_map:108011:1"
+    ],
+    "16010": [
+      "ShopLineupParam:13405"
+    ],
+    "16013": [
+      "ShopLineupParam:13415"
+    ],
+    "17001": [
+      "ItemLotParam_map:105010:1"
+    ],
+    "17002": [
+      "ItemLotParam_map:105020:1"
+    ],
+    "17010": [
+      "ShopLineupParam:13406"
+    ],
+    "17013": [
+      "ShopLineupParam:13416"
+    ],
+    "18000": [
+      "ItemLotParam_map:104011:1"
+    ],
+    "18002": [
+      "ItemLotParam_map:104030:1"
+    ],
+    "18011": [
+      "ShopLineupParam:13407"
+    ],
+    "18013": [
+      "ShopLineupParam:13417"
+    ],
+    "19000": [
+      "ItemLotParam_map:111010:1"
+    ],
+    "19001": [
+      "ItemLotParam_map:111020:1"
+    ],
+    "19012": [
+      "ShopLineupParam:13408"
+    ],
+    "19013": [
+      "ShopLineupParam:13418"
+    ],
+    "19050": [
+      "ItemLotParam_map:112000:1"
+    ],
+    "19051": [
+      "ItemLotParam_map:112021:1"
+    ],
+    "19062": [
+      "ShopLineupParam:13409"
+    ],
+    "19063": [
+      "ShopLineupParam:13419"
+    ],
+    "1000000": [
+      "ItemTableParam:45001"
+    ],
+    "1000001": [
+      "ItemTableParam:45011"
+    ],
+    "1000002": [
+      "ItemTableParam:45021"
+    ],
+    "1000010": [
+      "ItemTableParam:45001"
+    ],
+    "1000011": [
+      "ItemTableParam:45011"
+    ],
+    "1000012": [
+      "ItemTableParam:45021"
+    ],
+    "1000020": [
+      "ItemTableParam:45001"
+    ],
+    "1000021": [
+      "ItemTableParam:45011"
+    ],
+    "1000022": [
+      "ItemTableParam:45021"
+    ],
+    "1000100": [
+      "ItemTableParam:45001"
+    ],
+    "1000101": [
+      "ItemTableParam:45011"
+    ],
+    "1000102": [
+      "ItemTableParam:45021"
+    ],
+    "1000110": [
+      "ItemTableParam:45001"
+    ],
+    "1000111": [
+      "ItemTableParam:45011"
+    ],
+    "1000112": [
+      "ItemTableParam:45021"
+    ],
+    "1000120": [
+      "ItemTableParam:45001"
+    ],
+    "1000121": [
+      "ItemTableParam:45011"
+    ],
+    "1000122": [
+      "ItemTableParam:45021"
+    ],
+    "1000200": [
+      "ItemTableParam:45001"
+    ],
+    "1000201": [
+      "ItemTableParam:45011"
+    ],
+    "1000202": [
+      "ItemTableParam:45021"
+    ],
+    "1000210": [
+      "ItemTableParam:45001"
+    ],
+    "1000211": [
+      "ItemTableParam:45011"
+    ],
+    "1000212": [
+      "ItemTableParam:45021"
+    ],
+    "1000220": [
+      "ItemTableParam:45001"
+    ],
+    "1000221": [
+      "ItemTableParam:45011"
+    ],
+    "1000222": [
+      "ItemTableParam:45021"
+    ],
+    "1000300": [
+      "ItemTableParam:45001"
+    ],
+    "1000301": [
+      "ItemTableParam:45011"
+    ],
+    "1000302": [
+      "ItemTableParam:45021"
+    ],
+    "1000310": [
+      "ItemTableParam:45001"
+    ],
+    "1000311": [
+      "ItemTableParam:45011"
+    ],
+    "1000312": [
+      "ItemTableParam:45021"
+    ],
+    "1000320": [
+      "ItemTableParam:45001"
+    ],
+    "1000321": [
+      "ItemTableParam:45011"
+    ],
+    "1000322": [
+      "ItemTableParam:45021"
+    ],
+    "1001000": [
+      "ItemTableParam:45002"
+    ],
+    "1001001": [
+      "ItemTableParam:45012"
+    ],
+    "1001002": [
+      "ItemTableParam:45022"
+    ],
+    "1001010": [
+      "ItemTableParam:45002"
+    ],
+    "1001011": [
+      "ItemTableParam:45012"
+    ],
+    "1001012": [
+      "ItemTableParam:45022"
+    ],
+    "1001020": [
+      "ItemTableParam:45002"
+    ],
+    "1001021": [
+      "ItemTableParam:45012"
+    ],
+    "1001022": [
+      "ItemTableParam:45022"
+    ],
+    "1001100": [
+      "ItemTableParam:45002"
+    ],
+    "1001101": [
+      "ItemTableParam:45012"
+    ],
+    "1001102": [
+      "ItemTableParam:45022"
+    ],
+    "1001110": [
+      "ItemTableParam:45002"
+    ],
+    "1001111": [
+      "ItemTableParam:45012"
+    ],
+    "1001112": [
+      "ItemTableParam:45022"
+    ],
+    "1001120": [
+      "ItemTableParam:45002"
+    ],
+    "1001121": [
+      "ItemTableParam:45012"
+    ],
+    "1001122": [
+      "ItemTableParam:45022"
+    ],
+    "1001200": [
+      "ItemTableParam:45002"
+    ],
+    "1001201": [
+      "ItemTableParam:45012"
+    ],
+    "1001202": [
+      "ItemTableParam:45022"
+    ],
+    "1001210": [
+      "ItemTableParam:45002"
+    ],
+    "1001211": [
+      "ItemTableParam:45012"
+    ],
+    "1001212": [
+      "ItemTableParam:45022"
+    ],
+    "1001220": [
+      "ItemTableParam:45002"
+    ],
+    "1001221": [
+      "ItemTableParam:45012"
+    ],
+    "1001222": [
+      "ItemTableParam:45022"
+    ],
+    "1001300": [
+      "ItemTableParam:45002"
+    ],
+    "1001301": [
+      "ItemTableParam:45012"
+    ],
+    "1001302": [
+      "ItemTableParam:45022"
+    ],
+    "1001310": [
+      "ItemTableParam:45002"
+    ],
+    "1001311": [
+      "ItemTableParam:45012"
+    ],
+    "1001312": [
+      "ItemTableParam:45022"
+    ],
+    "1001320": [
+      "ItemTableParam:45002"
+    ],
+    "1001321": [
+      "ItemTableParam:45012"
+    ],
+    "1001322": [
+      "ItemTableParam:45022"
+    ],
+    "1002000": [
+      "ItemTableParam:45003"
+    ],
+    "1002001": [
+      "ItemTableParam:45013"
+    ],
+    "1002002": [
+      "ItemTableParam:45023"
+    ],
+    "1002010": [
+      "ItemTableParam:45003"
+    ],
+    "1002011": [
+      "ItemTableParam:45013"
+    ],
+    "1002012": [
+      "ItemTableParam:45023"
+    ],
+    "1002020": [
+      "ItemTableParam:45003"
+    ],
+    "1002021": [
+      "ItemTableParam:45013"
+    ],
+    "1002022": [
+      "ItemTableParam:45023"
+    ],
+    "1002100": [
+      "ItemTableParam:45003"
+    ],
+    "1002101": [
+      "ItemTableParam:45013"
+    ],
+    "1002102": [
+      "ItemTableParam:45023"
+    ],
+    "1002110": [
+      "ItemTableParam:45003"
+    ],
+    "1002111": [
+      "ItemTableParam:45013"
+    ],
+    "1002112": [
+      "ItemTableParam:45023"
+    ],
+    "1002120": [
+      "ItemTableParam:45003"
+    ],
+    "1002121": [
+      "ItemTableParam:45013"
+    ],
+    "1002122": [
+      "ItemTableParam:45023"
+    ],
+    "1002200": [
+      "ItemTableParam:45003"
+    ],
+    "1002201": [
+      "ItemTableParam:45013"
+    ],
+    "1002202": [
+      "ItemTableParam:45023"
+    ],
+    "1002210": [
+      "ItemTableParam:45003"
+    ],
+    "1002211": [
+      "ItemTableParam:45013"
+    ],
+    "1002212": [
+      "ItemTableParam:45023"
+    ],
+    "1002220": [
+      "ItemTableParam:45003"
+    ],
+    "1002221": [
+      "ItemTableParam:45013"
+    ],
+    "1002222": [
+      "ItemTableParam:45023"
+    ],
+    "1002300": [
+      "ItemTableParam:45003"
+    ],
+    "1002301": [
+      "ItemTableParam:45013"
+    ],
+    "1002302": [
+      "ItemTableParam:45023"
+    ],
+    "1002310": [
+      "ItemTableParam:45003"
+    ],
+    "1002311": [
+      "ItemTableParam:45013"
+    ],
+    "1002312": [
+      "ItemTableParam:45023"
+    ],
+    "1002320": [
+      "ItemTableParam:45003"
+    ],
+    "1002321": [
+      "ItemTableParam:45013"
+    ],
+    "1002322": [
+      "ItemTableParam:45023"
+    ],
+    "1003000": [
+      "ItemTableParam:45004"
+    ],
+    "1003001": [
+      "ItemTableParam:45014"
+    ],
+    "1003002": [
+      "ItemTableParam:45024"
+    ],
+    "1003010": [
+      "ItemTableParam:45004"
+    ],
+    "1003011": [
+      "ItemTableParam:45014"
+    ],
+    "1003012": [
+      "ItemTableParam:45024"
+    ],
+    "1003020": [
+      "ItemTableParam:45004"
+    ],
+    "1003021": [
+      "ItemTableParam:45014"
+    ],
+    "1003022": [
+      "ItemTableParam:45024"
+    ],
+    "1003100": [
+      "ItemTableParam:45004"
+    ],
+    "1003101": [
+      "ItemTableParam:45014"
+    ],
+    "1003102": [
+      "ItemTableParam:45024"
+    ],
+    "1003110": [
+      "ItemTableParam:45004"
+    ],
+    "1003111": [
+      "ItemTableParam:45014"
+    ],
+    "1003112": [
+      "ItemTableParam:45024"
+    ],
+    "1003120": [
+      "ItemTableParam:45004"
+    ],
+    "1003121": [
+      "ItemTableParam:45014"
+    ],
+    "1003122": [
+      "ItemTableParam:45024"
+    ],
+    "1003200": [
+      "ItemTableParam:45004"
+    ],
+    "1003201": [
+      "ItemTableParam:45014"
+    ],
+    "1003202": [
+      "ItemTableParam:45024"
+    ],
+    "1003210": [
+      "ItemTableParam:45004"
+    ],
+    "1003211": [
+      "ItemTableParam:45014"
+    ],
+    "1003212": [
+      "ItemTableParam:45024"
+    ],
+    "1003220": [
+      "ItemTableParam:45004"
+    ],
+    "1003221": [
+      "ItemTableParam:45014"
+    ],
+    "1003222": [
+      "ItemTableParam:45024"
+    ],
+    "1003300": [
+      "ItemTableParam:45004"
+    ],
+    "1003301": [
+      "ItemTableParam:45014"
+    ],
+    "1003302": [
+      "ItemTableParam:45024"
+    ],
+    "1003310": [
+      "ItemTableParam:45004"
+    ],
+    "1003311": [
+      "ItemTableParam:45014"
+    ],
+    "1003312": [
+      "ItemTableParam:45024"
+    ],
+    "1003320": [
+      "ItemTableParam:45004"
+    ],
+    "1003321": [
+      "ItemTableParam:45014"
+    ],
+    "1003322": [
+      "ItemTableParam:45024"
+    ],
+    "1004000": [
+      "ItemTableParam:45005"
+    ],
+    "1004001": [
+      "ItemTableParam:45015"
+    ],
+    "1004002": [
+      "ItemTableParam:45025"
+    ],
+    "1004010": [
+      "ItemTableParam:45005"
+    ],
+    "1004011": [
+      "ItemTableParam:45015"
+    ],
+    "1004012": [
+      "ItemTableParam:45025"
+    ],
+    "1004020": [
+      "ItemTableParam:45005"
+    ],
+    "1004021": [
+      "ItemTableParam:45015"
+    ],
+    "1004022": [
+      "ItemTableParam:45025"
+    ],
+    "1004100": [
+      "ItemTableParam:45005"
+    ],
+    "1004101": [
+      "ItemTableParam:45015"
+    ],
+    "1004102": [
+      "ItemTableParam:45025"
+    ],
+    "1004110": [
+      "ItemTableParam:45005"
+    ],
+    "1004111": [
+      "ItemTableParam:45015"
+    ],
+    "1004112": [
+      "ItemTableParam:45025"
+    ],
+    "1004120": [
+      "ItemTableParam:45005"
+    ],
+    "1004121": [
+      "ItemTableParam:45015"
+    ],
+    "1004122": [
+      "ItemTableParam:45025"
+    ],
+    "1004200": [
+      "ItemTableParam:45005"
+    ],
+    "1004201": [
+      "ItemTableParam:45015"
+    ],
+    "1004202": [
+      "ItemTableParam:45025"
+    ],
+    "1004210": [
+      "ItemTableParam:45005"
+    ],
+    "1004211": [
+      "ItemTableParam:45015"
+    ],
+    "1004212": [
+      "ItemTableParam:45025"
+    ],
+    "1004220": [
+      "ItemTableParam:45005"
+    ],
+    "1004221": [
+      "ItemTableParam:45015"
+    ],
+    "1004222": [
+      "ItemTableParam:45025"
+    ],
+    "1004300": [
+      "ItemTableParam:45005"
+    ],
+    "1004301": [
+      "ItemTableParam:45015"
+    ],
+    "1004302": [
+      "ItemTableParam:45025"
+    ],
+    "1004310": [
+      "ItemTableParam:45005"
+    ],
+    "1004311": [
+      "ItemTableParam:45015"
+    ],
+    "1004312": [
+      "ItemTableParam:45025"
+    ],
+    "1004320": [
+      "ItemTableParam:45005"
+    ],
+    "1004321": [
+      "ItemTableParam:45015"
+    ],
+    "1004322": [
+      "ItemTableParam:45025"
+    ],
+    "1005000": [
+      "ItemTableParam:45006"
+    ],
+    "1005001": [
+      "ItemTableParam:45016"
+    ],
+    "1005002": [
+      "ItemTableParam:45026"
+    ],
+    "1005010": [
+      "ItemTableParam:45006"
+    ],
+    "1005011": [
+      "ItemTableParam:45016"
+    ],
+    "1005012": [
+      "ItemTableParam:45026"
+    ],
+    "1005020": [
+      "ItemTableParam:45006"
+    ],
+    "1005021": [
+      "ItemTableParam:45016"
+    ],
+    "1005022": [
+      "ItemTableParam:45026"
+    ],
+    "1005100": [
+      "ItemTableParam:45006"
+    ],
+    "1005101": [
+      "ItemTableParam:45016"
+    ],
+    "1005102": [
+      "ItemTableParam:45026"
+    ],
+    "1005110": [
+      "ItemTableParam:45006"
+    ],
+    "1005111": [
+      "ItemTableParam:45016"
+    ],
+    "1005112": [
+      "ItemTableParam:45026"
+    ],
+    "1005120": [
+      "ItemTableParam:45006"
+    ],
+    "1005121": [
+      "ItemTableParam:45016"
+    ],
+    "1005122": [
+      "ItemTableParam:45026"
+    ],
+    "1005200": [
+      "ItemTableParam:45006"
+    ],
+    "1005201": [
+      "ItemTableParam:45016"
+    ],
+    "1005202": [
+      "ItemTableParam:45026"
+    ],
+    "1005210": [
+      "ItemTableParam:45006"
+    ],
+    "1005211": [
+      "ItemTableParam:45016"
+    ],
+    "1005212": [
+      "ItemTableParam:45026"
+    ],
+    "1005220": [
+      "ItemTableParam:45006"
+    ],
+    "1005221": [
+      "ItemTableParam:45016"
+    ],
+    "1005222": [
+      "ItemTableParam:45026"
+    ],
+    "1005300": [
+      "ItemTableParam:45006"
+    ],
+    "1005301": [
+      "ItemTableParam:45016"
+    ],
+    "1005302": [
+      "ItemTableParam:45026"
+    ],
+    "1005310": [
+      "ItemTableParam:45006"
+    ],
+    "1005311": [
+      "ItemTableParam:45016"
+    ],
+    "1005312": [
+      "ItemTableParam:45026"
+    ],
+    "1005320": [
+      "ItemTableParam:45006"
+    ],
+    "1005321": [
+      "ItemTableParam:45016"
+    ],
+    "1005322": [
+      "ItemTableParam:45026"
+    ],
+    "1006000": [
+      "ItemTableParam:45007"
+    ],
+    "1006001": [
+      "ItemTableParam:45017"
+    ],
+    "1006002": [
+      "ItemTableParam:45027"
+    ],
+    "1006010": [
+      "ItemTableParam:45007"
+    ],
+    "1006011": [
+      "ItemTableParam:45017"
+    ],
+    "1006012": [
+      "ItemTableParam:45027"
+    ],
+    "1006020": [
+      "ItemTableParam:45007"
+    ],
+    "1006021": [
+      "ItemTableParam:45017"
+    ],
+    "1006022": [
+      "ItemTableParam:45027"
+    ],
+    "1006100": [
+      "ItemTableParam:45007"
+    ],
+    "1006101": [
+      "ItemTableParam:45017"
+    ],
+    "1006102": [
+      "ItemTableParam:45027"
+    ],
+    "1006110": [
+      "ItemTableParam:45007"
+    ],
+    "1006111": [
+      "ItemTableParam:45017"
+    ],
+    "1006112": [
+      "ItemTableParam:45027"
+    ],
+    "1006120": [
+      "ItemTableParam:45007"
+    ],
+    "1006121": [
+      "ItemTableParam:45017"
+    ],
+    "1006122": [
+      "ItemTableParam:45027"
+    ],
+    "1006200": [
+      "ItemTableParam:45007"
+    ],
+    "1006201": [
+      "ItemTableParam:45017"
+    ],
+    "1006202": [
+      "ItemTableParam:45027"
+    ],
+    "1006210": [
+      "ItemTableParam:45007"
+    ],
+    "1006211": [
+      "ItemTableParam:45017"
+    ],
+    "1006212": [
+      "ItemTableParam:45027"
+    ],
+    "1006220": [
+      "ItemTableParam:45007"
+    ],
+    "1006221": [
+      "ItemTableParam:45017"
+    ],
+    "1006222": [
+      "ItemTableParam:45027"
+    ],
+    "1006300": [
+      "ItemTableParam:45007"
+    ],
+    "1006301": [
+      "ItemTableParam:45017"
+    ],
+    "1006302": [
+      "ItemTableParam:45027"
+    ],
+    "1006310": [
+      "ItemTableParam:45007"
+    ],
+    "1006311": [
+      "ItemTableParam:45017"
+    ],
+    "1006312": [
+      "ItemTableParam:45027"
+    ],
+    "1006320": [
+      "ItemTableParam:45007"
+    ],
+    "1006321": [
+      "ItemTableParam:45017"
+    ],
+    "1006322": [
+      "ItemTableParam:45027"
+    ],
+    "1007000": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007001": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007002": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007010": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007011": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007012": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007020": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007021": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007022": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007100": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007101": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007102": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007110": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007111": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007112": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007120": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007121": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007122": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007200": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007201": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007202": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007210": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007211": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007212": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007220": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007221": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007222": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007300": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007301": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007302": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007310": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007311": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007312": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1007320": [
+      "ItemTableParam:45008",
+      "ItemTableParam:47100"
+    ],
+    "1007321": [
+      "ItemTableParam:45018",
+      "ItemTableParam:47101"
+    ],
+    "1007322": [
+      "ItemTableParam:45028",
+      "ItemTableParam:47102"
+    ],
+    "1008000": [
+      "ItemTableParam:45101"
+    ],
+    "1008001": [
+      "ItemTableParam:45111"
+    ],
+    "1008002": [
+      "ItemTableParam:45121"
+    ],
+    "1008010": [
+      "ItemTableParam:45101"
+    ],
+    "1008011": [
+      "ItemTableParam:45111"
+    ],
+    "1008012": [
+      "ItemTableParam:45121"
+    ],
+    "1008020": [
+      "ItemTableParam:45101"
+    ],
+    "1008021": [
+      "ItemTableParam:45111"
+    ],
+    "1008022": [
+      "ItemTableParam:45121"
+    ],
+    "1008100": [
+      "ItemTableParam:45101"
+    ],
+    "1008101": [
+      "ItemTableParam:45111"
+    ],
+    "1008102": [
+      "ItemTableParam:45121"
+    ],
+    "1008110": [
+      "ItemTableParam:45101"
+    ],
+    "1008111": [
+      "ItemTableParam:45111"
+    ],
+    "1008112": [
+      "ItemTableParam:45121"
+    ],
+    "1008120": [
+      "ItemTableParam:45101"
+    ],
+    "1008121": [
+      "ItemTableParam:45111"
+    ],
+    "1008122": [
+      "ItemTableParam:45121"
+    ],
+    "1008200": [
+      "ItemTableParam:45101"
+    ],
+    "1008201": [
+      "ItemTableParam:45111"
+    ],
+    "1008202": [
+      "ItemTableParam:45121"
+    ],
+    "1008210": [
+      "ItemTableParam:45101"
+    ],
+    "1008211": [
+      "ItemTableParam:45111"
+    ],
+    "1008212": [
+      "ItemTableParam:45121"
+    ],
+    "1008220": [
+      "ItemTableParam:45101"
+    ],
+    "1008221": [
+      "ItemTableParam:45111"
+    ],
+    "1008222": [
+      "ItemTableParam:45121"
+    ],
+    "1008300": [
+      "ItemTableParam:45101"
+    ],
+    "1008301": [
+      "ItemTableParam:45111"
+    ],
+    "1008302": [
+      "ItemTableParam:45121"
+    ],
+    "1008310": [
+      "ItemTableParam:45101"
+    ],
+    "1008311": [
+      "ItemTableParam:45111"
+    ],
+    "1008312": [
+      "ItemTableParam:45121"
+    ],
+    "1008320": [
+      "ItemTableParam:45101"
+    ],
+    "1008321": [
+      "ItemTableParam:45111"
+    ],
+    "1008322": [
+      "ItemTableParam:45121"
+    ],
+    "1009000": [
+      "ItemTableParam:45102"
+    ],
+    "1009001": [
+      "ItemTableParam:45112"
+    ],
+    "1009002": [
+      "ItemTableParam:45122"
+    ],
+    "1009010": [
+      "ItemTableParam:45102"
+    ],
+    "1009011": [
+      "ItemTableParam:45112"
+    ],
+    "1009012": [
+      "ItemTableParam:45122"
+    ],
+    "1009020": [
+      "ItemTableParam:45102"
+    ],
+    "1009021": [
+      "ItemTableParam:45112"
+    ],
+    "1009022": [
+      "ItemTableParam:45122"
+    ],
+    "1009100": [
+      "ItemTableParam:45102"
+    ],
+    "1009101": [
+      "ItemTableParam:45112"
+    ],
+    "1009102": [
+      "ItemTableParam:45122"
+    ],
+    "1009110": [
+      "ItemTableParam:45102"
+    ],
+    "1009111": [
+      "ItemTableParam:45112"
+    ],
+    "1009112": [
+      "ItemTableParam:45122"
+    ],
+    "1009120": [
+      "ItemTableParam:45102"
+    ],
+    "1009121": [
+      "ItemTableParam:45112"
+    ],
+    "1009122": [
+      "ItemTableParam:45122"
+    ],
+    "1009200": [
+      "ItemTableParam:45102"
+    ],
+    "1009201": [
+      "ItemTableParam:45112"
+    ],
+    "1009202": [
+      "ItemTableParam:45122"
+    ],
+    "1009210": [
+      "ItemTableParam:45102"
+    ],
+    "1009211": [
+      "ItemTableParam:45112"
+    ],
+    "1009212": [
+      "ItemTableParam:45122"
+    ],
+    "1009220": [
+      "ItemTableParam:45102"
+    ],
+    "1009221": [
+      "ItemTableParam:45112"
+    ],
+    "1009222": [
+      "ItemTableParam:45122"
+    ],
+    "1009300": [
+      "ItemTableParam:45102"
+    ],
+    "1009301": [
+      "ItemTableParam:45112"
+    ],
+    "1009302": [
+      "ItemTableParam:45122"
+    ],
+    "1009310": [
+      "ItemTableParam:45102"
+    ],
+    "1009311": [
+      "ItemTableParam:45112"
+    ],
+    "1009312": [
+      "ItemTableParam:45122"
+    ],
+    "1009320": [
+      "ItemTableParam:45102"
+    ],
+    "1009321": [
+      "ItemTableParam:45112"
+    ],
+    "1009322": [
+      "ItemTableParam:45122"
+    ],
+    "2000000": [
+      "ItemTableParam:49121"
+    ],
+    "2000001": [
+      "ItemTableParam:49131"
+    ],
+    "2000002": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000010": [
+      "ItemTableParam:49121"
+    ],
+    "2000011": [
+      "ItemTableParam:49131"
+    ],
+    "2000012": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000020": [
+      "ItemTableParam:49121"
+    ],
+    "2000021": [
+      "ItemTableParam:49131"
+    ],
+    "2000022": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000100": [
+      "ItemTableParam:49121"
+    ],
+    "2000101": [
+      "ItemTableParam:49131"
+    ],
+    "2000102": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000110": [
+      "ItemTableParam:49121"
+    ],
+    "2000111": [
+      "ItemTableParam:49131"
+    ],
+    "2000112": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000120": [
+      "ItemTableParam:49121"
+    ],
+    "2000121": [
+      "ItemTableParam:49131"
+    ],
+    "2000122": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000200": [
+      "ItemTableParam:49121"
+    ],
+    "2000201": [
+      "ItemTableParam:49131"
+    ],
+    "2000202": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000210": [
+      "ItemTableParam:49121"
+    ],
+    "2000211": [
+      "ItemTableParam:49131"
+    ],
+    "2000212": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000220": [
+      "ItemTableParam:49121"
+    ],
+    "2000221": [
+      "ItemTableParam:49131"
+    ],
+    "2000222": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000300": [
+      "ItemTableParam:49121"
+    ],
+    "2000301": [
+      "ItemTableParam:49131"
+    ],
+    "2000302": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000310": [
+      "ItemTableParam:49121"
+    ],
+    "2000311": [
+      "ItemTableParam:49131"
+    ],
+    "2000312": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2000320": [
+      "ItemTableParam:49121"
+    ],
+    "2000321": [
+      "ItemTableParam:49131"
+    ],
+    "2000322": [
+      "ItemTableParam:49141",
+      "ItemTableParam:49241"
+    ],
+    "2001001": [
+      "ItemTableParam:49132"
+    ],
+    "2001002": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001011": [
+      "ItemTableParam:49132"
+    ],
+    "2001012": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001021": [
+      "ItemTableParam:49132"
+    ],
+    "2001022": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001101": [
+      "ItemTableParam:49132"
+    ],
+    "2001102": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001111": [
+      "ItemTableParam:49132"
+    ],
+    "2001112": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001121": [
+      "ItemTableParam:49132"
+    ],
+    "2001122": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001201": [
+      "ItemTableParam:49132"
+    ],
+    "2001202": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001211": [
+      "ItemTableParam:49132"
+    ],
+    "2001212": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001221": [
+      "ItemTableParam:49132"
+    ],
+    "2001222": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001301": [
+      "ItemTableParam:49132"
+    ],
+    "2001302": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001311": [
+      "ItemTableParam:49132"
+    ],
+    "2001312": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2001321": [
+      "ItemTableParam:49132"
+    ],
+    "2001322": [
+      "ItemTableParam:49142",
+      "ItemTableParam:49242"
+    ],
+    "2002002": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002012": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002022": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002102": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002112": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002122": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002202": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002212": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002222": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002302": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002312": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2002322": [
+      "ItemTableParam:49143",
+      "ItemTableParam:49243"
+    ],
+    "2003000": [
+      "ItemTableParam:49120"
+    ],
+    "2003001": [
+      "ItemTableParam:49130"
+    ],
+    "2003002": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003010": [
+      "ItemTableParam:49120"
+    ],
+    "2003011": [
+      "ItemTableParam:49130"
+    ],
+    "2003012": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003020": [
+      "ItemTableParam:49120"
+    ],
+    "2003021": [
+      "ItemTableParam:49130"
+    ],
+    "2003022": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003100": [
+      "ItemTableParam:49120"
+    ],
+    "2003101": [
+      "ItemTableParam:49130"
+    ],
+    "2003102": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003110": [
+      "ItemTableParam:49120"
+    ],
+    "2003111": [
+      "ItemTableParam:49130"
+    ],
+    "2003112": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003120": [
+      "ItemTableParam:49120"
+    ],
+    "2003121": [
+      "ItemTableParam:49130"
+    ],
+    "2003122": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003200": [
+      "ItemTableParam:49120"
+    ],
+    "2003201": [
+      "ItemTableParam:49130"
+    ],
+    "2003202": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003210": [
+      "ItemTableParam:49120"
+    ],
+    "2003211": [
+      "ItemTableParam:49130"
+    ],
+    "2003212": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003220": [
+      "ItemTableParam:49120"
+    ],
+    "2003221": [
+      "ItemTableParam:49130"
+    ],
+    "2003222": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003300": [
+      "ItemTableParam:49120"
+    ],
+    "2003301": [
+      "ItemTableParam:49130"
+    ],
+    "2003302": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003310": [
+      "ItemTableParam:49120"
+    ],
+    "2003311": [
+      "ItemTableParam:49130"
+    ],
+    "2003312": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2003320": [
+      "ItemTableParam:49120"
+    ],
+    "2003321": [
+      "ItemTableParam:49130"
+    ],
+    "2003322": [
+      "ItemTableParam:49140",
+      "ItemTableParam:49240"
+    ],
+    "2004000": [
+      "ItemTableParam:49151"
+    ],
+    "2004001": [
+      "ItemTableParam:49151"
+    ],
+    "2004002": [
+      "ItemTableParam:49151"
+    ],
+    "2004010": [
+      "ItemTableParam:49151"
+    ],
+    "2004011": [
+      "ItemTableParam:49151"
+    ],
+    "2004012": [
+      "ItemTableParam:49151"
+    ],
+    "2004020": [
+      "ItemTableParam:49151"
+    ],
+    "2004021": [
+      "ItemTableParam:49151"
+    ],
+    "2004022": [
+      "ItemTableParam:49151"
+    ],
+    "2004030": [
+      "ItemTableParam:49151"
+    ],
+    "2004031": [
+      "ItemTableParam:49151"
+    ],
+    "2004032": [
+      "ItemTableParam:49151"
+    ],
+    "2004100": [
+      "ItemTableParam:49152"
+    ],
+    "2004101": [
+      "ItemTableParam:49152"
+    ],
+    "2004102": [
+      "ItemTableParam:49152"
+    ],
+    "2004110": [
+      "ItemTableParam:49152"
+    ],
+    "2004111": [
+      "ItemTableParam:49152"
+    ],
+    "2004112": [
+      "ItemTableParam:49152"
+    ],
+    "2004120": [
+      "ItemTableParam:49152"
+    ],
+    "2004121": [
+      "ItemTableParam:49152"
+    ],
+    "2004122": [
+      "ItemTableParam:49152"
+    ],
+    "2004130": [
+      "ItemTableParam:49152"
+    ],
+    "2004131": [
+      "ItemTableParam:49152"
+    ],
+    "2004132": [
+      "ItemTableParam:49152"
+    ],
+    "2004200": [
+      "ItemTableParam:49153"
+    ],
+    "2004201": [
+      "ItemTableParam:49153"
+    ],
+    "2004202": [
+      "ItemTableParam:49153"
+    ],
+    "2004210": [
+      "ItemTableParam:49153"
+    ],
+    "2004211": [
+      "ItemTableParam:49153"
+    ],
+    "2004212": [
+      "ItemTableParam:49153"
+    ],
+    "2004220": [
+      "ItemTableParam:49153"
+    ],
+    "2004221": [
+      "ItemTableParam:49153"
+    ],
+    "2004222": [
+      "ItemTableParam:49153"
+    ],
+    "2004230": [
+      "ItemTableParam:49153"
+    ],
+    "2004231": [
+      "ItemTableParam:49153"
+    ],
+    "2004232": [
+      "ItemTableParam:49153"
+    ],
+    "2004300": [
+      "ItemTableParam:49150"
+    ],
+    "2004301": [
+      "ItemTableParam:49150"
+    ],
+    "2004302": [
+      "ItemTableParam:49150"
+    ],
+    "2004310": [
+      "ItemTableParam:49150"
+    ],
+    "2004311": [
+      "ItemTableParam:49150"
+    ],
+    "2004312": [
+      "ItemTableParam:49150"
+    ],
+    "2004320": [
+      "ItemTableParam:49150"
+    ],
+    "2004321": [
+      "ItemTableParam:49150"
+    ],
+    "2004322": [
+      "ItemTableParam:49150"
+    ],
+    "2004330": [
+      "ItemTableParam:49150"
+    ],
+    "2004331": [
+      "ItemTableParam:49150"
+    ],
+    "2004332": [
+      "ItemTableParam:49150"
+    ],
+    "2005000": [
+      "ItemTableParam:49161"
+    ],
+    "2005001": [
+      "ItemTableParam:49161"
+    ],
+    "2005002": [
+      "ItemTableParam:49161"
+    ],
+    "2005010": [
+      "ItemTableParam:49161"
+    ],
+    "2005011": [
+      "ItemTableParam:49161"
+    ],
+    "2005012": [
+      "ItemTableParam:49161"
+    ],
+    "2005020": [
+      "ItemTableParam:49161"
+    ],
+    "2005021": [
+      "ItemTableParam:49161"
+    ],
+    "2005022": [
+      "ItemTableParam:49161"
+    ],
+    "2005030": [
+      "ItemTableParam:49161"
+    ],
+    "2005031": [
+      "ItemTableParam:49161"
+    ],
+    "2005032": [
+      "ItemTableParam:49161"
+    ],
+    "2005100": [
+      "ItemTableParam:49162"
+    ],
+    "2005101": [
+      "ItemTableParam:49162"
+    ],
+    "2005102": [
+      "ItemTableParam:49162"
+    ],
+    "2005110": [
+      "ItemTableParam:49162"
+    ],
+    "2005111": [
+      "ItemTableParam:49162"
+    ],
+    "2005112": [
+      "ItemTableParam:49162"
+    ],
+    "2005120": [
+      "ItemTableParam:49162"
+    ],
+    "2005121": [
+      "ItemTableParam:49162"
+    ],
+    "2005122": [
+      "ItemTableParam:49162"
+    ],
+    "2005130": [
+      "ItemTableParam:49162"
+    ],
+    "2005131": [
+      "ItemTableParam:49162"
+    ],
+    "2005132": [
+      "ItemTableParam:49162"
+    ],
+    "2005200": [
+      "ItemTableParam:49163"
+    ],
+    "2005201": [
+      "ItemTableParam:49163"
+    ],
+    "2005202": [
+      "ItemTableParam:49163"
+    ],
+    "2005210": [
+      "ItemTableParam:49163"
+    ],
+    "2005211": [
+      "ItemTableParam:49163"
+    ],
+    "2005212": [
+      "ItemTableParam:49163"
+    ],
+    "2005220": [
+      "ItemTableParam:49163"
+    ],
+    "2005221": [
+      "ItemTableParam:49163"
+    ],
+    "2005222": [
+      "ItemTableParam:49163"
+    ],
+    "2005230": [
+      "ItemTableParam:49163"
+    ],
+    "2005231": [
+      "ItemTableParam:49163"
+    ],
+    "2005232": [
+      "ItemTableParam:49163"
+    ],
+    "2005300": [
+      "ItemTableParam:49160"
+    ],
+    "2005301": [
+      "ItemTableParam:49160"
+    ],
+    "2005302": [
+      "ItemTableParam:49160"
+    ],
+    "2005310": [
+      "ItemTableParam:49160"
+    ],
+    "2005311": [
+      "ItemTableParam:49160"
+    ],
+    "2005312": [
+      "ItemTableParam:49160"
+    ],
+    "2005320": [
+      "ItemTableParam:49160"
+    ],
+    "2005321": [
+      "ItemTableParam:49160"
+    ],
+    "2005322": [
+      "ItemTableParam:49160"
+    ],
+    "2005330": [
+      "ItemTableParam:49160"
+    ],
+    "2005331": [
+      "ItemTableParam:49160"
+    ],
+    "2005332": [
+      "ItemTableParam:49160"
+    ],
+    "2010000": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010001": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010002": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010010": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010011": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010012": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010020": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010021": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010022": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010100": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010101": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010102": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010110": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010111": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010112": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010120": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010121": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010122": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010200": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010201": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010202": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010210": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010211": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010212": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010220": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010221": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010222": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010300": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010301": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010302": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010310": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010311": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010312": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2010320": [
+      "ItemTableParam:47201",
+      "ItemTableParam:49321"
+    ],
+    "2010321": [
+      "ItemTableParam:47301",
+      "ItemTableParam:49331"
+    ],
+    "2010322": [
+      "ItemTableParam:47401",
+      "ItemTableParam:49341",
+      "ItemTableParam:49441"
+    ],
+    "2011001": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011002": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011011": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011012": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011021": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011022": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011101": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011102": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011111": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011112": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011121": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011122": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011201": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011202": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011211": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011212": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011221": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011222": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011301": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011302": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011311": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011312": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2011321": [
+      "ItemTableParam:47302",
+      "ItemTableParam:49332"
+    ],
+    "2011322": [
+      "ItemTableParam:47402",
+      "ItemTableParam:49342",
+      "ItemTableParam:49442"
+    ],
+    "2012002": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012012": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012022": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012102": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012112": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012122": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012202": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012212": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012222": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012302": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012312": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2012322": [
+      "ItemTableParam:47403",
+      "ItemTableParam:49343",
+      "ItemTableParam:49443"
+    ],
+    "2013000": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013001": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013002": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013010": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013011": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013012": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013020": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013021": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013022": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013100": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013101": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013102": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013110": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013111": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013112": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013120": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013121": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013122": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013200": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013201": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013202": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013210": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013211": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013212": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013220": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013221": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013222": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013300": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013301": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013302": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013310": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013311": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013312": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ],
+    "2013320": [
+      "ItemTableParam:47200",
+      "ItemTableParam:49320"
+    ],
+    "2013321": [
+      "ItemTableParam:47300",
+      "ItemTableParam:49330"
+    ],
+    "2013322": [
+      "ItemTableParam:47400",
+      "ItemTableParam:49340",
+      "ItemTableParam:49440"
+    ]
+  },
+  "row_counts": {
+    "AttachEffectParam": 2241,
+    "AttachEffectTableParam": 24423,
+    "EquipParamAntique": 1515,
+    "AntiqueStandParam": 74,
+    "ItemLotParam_map": 4333,
+    "ItemLotParam_enemy": 2840,
+    "ItemTableParam": 35755,
+    "ShopLineupParam": 12864
+  },
+  "resource_sha256": {
+    "Param/AntiqueStandParam.csv": "a803060830a09243cba6c653272845425daf1286437d0b02396c3c4342e4aacb",
+    "Param/AttachEffectParam.csv": "d4f74dfc9b07bf1ff2b12047d8c92f4abf546ea7321fcb390f2274e9c75f5ca1",
+    "Param/AttachEffectTableParam.csv": "4522dc4b7331a2cc41125a69f4a04401da2da373af87084490065fa264116d78",
+    "Param/EquipParamAntique.csv": "6de93b3f320780d9905cb66f0a543ff874ed2af0866303cf5cd9f6ba965c1711",
+    "Text/en_US/AntiqueName.fmg.xml": "803ef2d9037c325f215ee39d439103b4e32ddd09481c2f6980bcec43d0c9591b",
+    "Text/en_US/AntiqueName_dlc01.fmg.xml": "71a010f147c75998e66bd103de8836aa1603fabfc70977c082fac21631a30be8",
+    "Text/en_US/AttachEffectName.fmg.xml": "50b0e7e368de26f4244dc88f2ea4402246a435a5359f226883ebf7d7eb9e5962",
+    "Text/en_US/AttachEffectName_dlc01.fmg.xml": "945c45097f372375d576a530c6cdf0db071f404dd6bd18443303e2f16e14af9d",
+    "Text/en_US/GoodsName.fmg.xml": "5fd69c792d501f86984377f4c541febb40b619d352621354fb1fa8e08630cb09",
+    "Text/en_US/GoodsName_dlc01.fmg.xml": "defa39b86382828b5e8326ec4c6fe06964cbbae5a2a2767834a8a8a119d07900",
+    "Text/en_US/NpcName.fmg.xml": "eaa67da0ec3c7bc8da1fca19de9b3909a6ce2bdcc675879901779688ec691ae1",
+    "Text/en_US/NpcName_dlc01.fmg.xml": "583ba47f8196b48fcd58104629af60d2514f6befb73224e846b3cfaaaec5e625",
+    "Text/zh_CN/AntiqueName.fmg.xml": "6fb358db4d43464d0467df3f154d95cf8891a084799f043234929a4767632630",
+    "Text/zh_CN/AntiqueName_dlc01.fmg.xml": "3d12f630873a0230faf647bac715992be2748317f15a2e9c81af9ad515939770",
+    "Text/zh_CN/AttachEffectName.fmg.xml": "6917ec0db6d419407f25dc276109b1b482bcc2d6acf97207dba049e23151c40a",
+    "Text/zh_CN/AttachEffectName_dlc01.fmg.xml": "e41805da9211b78a6642d16c7cad4fde70ea3ce40eb93f507c0cd6fba481822a",
+    "Text/zh_CN/GoodsName.fmg.xml": "71f3a36fd620b6c59c5339eb013932cbfdb65733232456c6f873460c5bd00483",
+    "Text/zh_CN/GoodsName_dlc01.fmg.xml": "beb65ad9947f55534b2288ee827ba67122f75afe6c9ed022953b47c13bdf0b8c",
+    "Text/zh_CN/NpcName.fmg.xml": "db4bf9f1cc632a173cec9e8785ac90787ee63b3082bb19424cf54cf7828ae491",
+    "Text/zh_CN/NpcName_dlc01.fmg.xml": "6efaf68831db65826954ace0c1b759e0d10f2f9ae8f2f3ef7036be463e3b35c4"
+  }
+}

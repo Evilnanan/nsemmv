@@ -1,0 +1,12 @@
+web/node_modules/
+web/dist/
+web/test-results/
+web/playwright-report/
+.work/
+__pycache__/
+*.dbb
+*.co2
+*.sl2
+*.CL_SAVE
+*.exe
+*.dll
