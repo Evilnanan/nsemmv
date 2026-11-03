@@ -94,7 +94,7 @@ def stats(row):
     values = []
     rate_fields = set(RATES)
     for fields, label in [
-        (['physicsAttackRate', 'magicAttackRate', 'fireAttackRate', 'thunderAttackRate', 'darkAttackRate'], '全属性攻击倍率'),
+        (['physicsAttackRate', 'magicAttackRate', 'fireAttackRate', 'thunderAttackRate', 'darkAttackRate'], '攻击倍率'),
         (['slashDamageCutRate', 'blowDamageCutRate', 'thrustDamageCutRate', 'neutralDamageCutRate'], '物理承伤'),
     ]:
         numbers = [row.get(k, 1) for k in fields]

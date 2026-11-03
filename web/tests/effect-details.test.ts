@@ -22,10 +22,10 @@ describe("MMV effect details", () => {
   });
   it("uses MMV spell and weapon-condition values without confusing damage channels", () => {
     const spell = effectDetail(6611202)!;
-    expect(spell.blocks[0].values).toEqual([["全属性攻击倍率", "+14%"]]);
+    expect(spell.blocks[0].values).toEqual([["攻击倍率", "+14%"]]);
     expect(spell.blocks[0].scope).toEqual(["魔法", "祷告"]);
     expect(effectDetail(7082400)!.blocks[0].values).toEqual([
-      ["全属性攻击倍率", "+20%"],
+      ["攻击倍率", "+20%"],
     ]);
     expect(effectDetail(7000000)!.blocks[0].values).toEqual([["生命力", "+1"]]);
   });
@@ -36,7 +36,7 @@ describe("MMV effect details", () => {
       [true, 3],
     ]);
     expect(cocktail.blocks[0].values).toContainEqual([
-      "全属性攻击倍率",
+      "攻击倍率",
       "+35%",
     ]);
     expect(cocktail.blocks[1].values).toContainEqual(["魔法 FP 消耗", "+30%"]);
