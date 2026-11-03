@@ -1478,26 +1478,6 @@ dialog h2 {
 .effect-cell-inspect .effect-cell {
   width: 100%;
   height: 100%;
-  padding-right: 40px;
-}
-.effect-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9ca78f;
-  width: 40px;
-  height: 44px;
-  border-radius: 5px;
-}
-.effect-info:hover,
-.effect-info[aria-expanded="true"] {
-  color: var(--gold);
-  background: #c2ac7810;
-}
-.effect-cell-inspect > .effect-info {
-  position: absolute;
-  right: 1px;
-  bottom: 1px;
 }
 .effect-choice-inspect {
   display: flex;
@@ -1510,10 +1490,6 @@ dialog h2 {
 .effect-choice-inspect .picker-row {
   width: 100%;
   height: 100%;
-}
-.effect-choice-inspect > .effect-info {
-  flex-shrink: 0;
-  align-self: center;
 }
 .effect-popover {
   position: fixed;
@@ -1599,4 +1575,18 @@ dialog h2 {
   margin-top: 12px;
   color: #818a76;
   font-size: 10px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .effect-inspect-target {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+.effect-inspect:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
 }

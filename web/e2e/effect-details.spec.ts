@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page, type Locator } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import { fixture } from "../tests/fixtures";
 import { Session } from "../src/core/session";
@@ -13,6 +13,27 @@ async function load(page: import("@playwright/test").Page, bytes = fixture()) {
   });
 }
 
+async function longPress(page: Page, target: Locator) {
+  await target.scrollIntoViewIfNeeded();
+  const box = (await target.boundingBox())!;
+  const client = await page.context().newCDPSession(page);
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [{ x: box.x + box.width / 2, y: box.y + box.height / 2 }],
+  });
+  try {
+    await expect(
+      page.getByRole("dialog", { name: "词条详情", exact: true }),
+    ).toBeVisible();
+  } finally {
+    await client.send("Input.dispatchTouchEvent", {
+      type: "touchEnd",
+      touchPoints: [],
+    });
+    await client.detach();
+  }
+}
+
 test("effect details support hover, touch and keyboard without selecting or editing", async ({
   page,
   isMobile,
@@ -22,7 +43,7 @@ test("effect details support hover, touch and keyboard without selecting or edit
   const original = fixture();
   await load(page, original);
   const first = page.locator(".effect-cell-inspect").first();
-  if (isMobile) await first.getByRole("button", { name: /^词条详情/ }).click();
+  if (isMobile) await longPress(page, first.locator(".effect-cell"));
   else await first.hover();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   await expect(details).toContainText("+1");
@@ -34,7 +55,7 @@ test("effect details support hover, touch and keyboard without selecting or edit
   const row = page
     .locator(".effect-choice-inspect")
     .filter({ hasText: "6611202" });
-  if (isMobile) await row.getByRole("button", { name: /^词条详情/ }).click();
+  if (isMobile) await longPress(page, row.locator(".picker-row"));
   else await row.hover();
   await expect(details).toContainText("+14%");
   await expect(details).not.toContainText("抽取池");
@@ -61,16 +82,13 @@ test("effect details support hover, touch and keyboard without selecting or edit
   await page.keyboard.press("Escape");
   await expect(details).toHaveCount(0);
   await expect(page.getByLabel("搜索词条")).toBeVisible();
-  // A separate keyboard target is available; Escape dismisses only the detail card.
-  await row.getByRole("button", { name: /^词条详情/ }).focus();
+  // Keyboard focus and Enter open details; Escape dismisses only the detail card.
+  await row.focus();
   await page.keyboard.press("Enter");
   await expect(details).toBeVisible();
   await page.keyboard.press("Escape");
   await page.getByLabel("搜索词条").fill("999999998");
-  await page
-    .locator(".effect-choice-inspect")
-    .getByRole("button", { name: /^词条详情/ })
-    .click();
+  await page.locator(".effect-choice-inspect").focus();
   await expect(details).toContainText("具体数值尚未解明");
   await page.getByLabel("搜索词条").click();
   await expect(details).toHaveCount(0);
@@ -84,6 +102,7 @@ test("effect details support hover, touch and keyboard without selecting or edit
 
 test("read-only shop effects expose details without unlocking edits", async ({
   page,
+  isMobile,
 }) => {
   const session = Session.open(fixture(), "test");
   const shop = 11015;
@@ -91,13 +110,54 @@ test("read-only shop effects expose details without unlocking edits", async ({
   await load(page, session.export());
   await page.locator(".relic-card").filter({ hasText: "11015" }).click();
   await expect(page.locator(".effect-cell").first()).toBeDisabled();
-  await page
-    .locator(".effect-cell-inspect")
-    .first()
-    .getByRole("button", { name: /^词条详情/ })
-    .click();
+  if (isMobile) await longPress(page, page.locator(".effect-cell").first());
+  else {
+    await page.locator(".effect-cell-inspect").first().focus();
+    await page.keyboard.press("Enter");
+  }
   await expect(
     page.getByRole("dialog", { name: "词条详情", exact: true }),
   ).toBeVisible();
   await expect(page.locator(".effect-cell").first()).toBeDisabled();
+});
+
+test("mobile long press cancels on movement and never consumes the next short tap", async ({
+  page,
+  isMobile,
+}) => {
+  test.skip(!isMobile, "Touch gesture coverage");
+  await load(page);
+  await expect(page.locator(".effect-info")).toHaveCount(0);
+  await page.locator(".effect-cell").first().tap();
+  await page.getByLabel("搜索词条").fill("7000100");
+  const row = page.locator(".picker-row").filter({ hasText: "7000100" });
+  const details = page.getByRole("dialog", { name: "词条详情", exact: true });
+  const box = (await row.boundingBox())!;
+  const client = await page.context().newCDPSession(page);
+  const point = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [point],
+  });
+  await page.waitForTimeout(100);
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [{ ...point, y: point.y - 35 }],
+  });
+  await page.waitForTimeout(550);
+  await expect(details).toHaveCount(0);
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchEnd",
+    touchPoints: [],
+  });
+  await client.detach();
+  await expect(page.getByLabel("搜索词条")).toBeVisible();
+  await longPress(page, row);
+  await expect(details).toBeVisible();
+  await expect(page.getByLabel("搜索词条")).toBeVisible();
+  await expect(page.locator(".effect-cell").first()).toContainText("生命力");
+  await details.getByRole("button", { name: "关闭词条详情" }).tap();
+  await row.tap();
+  await expect(page.getByLabel("搜索词条")).toHaveCount(0);
+  await expect(page.locator(".effect-cell").first()).toContainText("集中力");
 });

@@ -6,7 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { Info, X } from "lucide-react";
+import { X } from "lucide-react";
 import { effectName } from "../core/catalog";
 import { effectDetail } from "../core/effect-details";
 
@@ -25,16 +25,28 @@ export function EffectInspect({
   const uid = useId();
   const host = useRef<HTMLDivElement>(null);
   const card = useRef<HTMLDivElement>(null);
-  const info = useRef<HTMLButtonElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const pinned = useRef(false);
+  const pressTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
+    undefined,
+  );
+  const touch = useRef<{ pointerId: number; x: number; y: number } | null>(
+    null,
+  );
+  const lastPointerType = useRef("");
+  const suppressClick = useRef(false);
   const [open, setOpen] = useState(false);
   const hasEffect = id !== 0 && id !== 0xffffffff;
   const detail = effectDetail(id);
   const clearTimer = () => {
     clearTimeout(timer.current);
   };
+  const cancelPress = () => {
+    clearTimeout(pressTimer.current);
+    touch.current = null;
+  };
   const close = () => {
+    cancelPress();
     clearTimer();
     pinned.current = false;
     setOpen(false);
@@ -50,10 +62,18 @@ export function EffectInspect({
     if (!pinned.current) timer.current = setTimeout(close, 180);
   };
   useEffect(() => {
+    const cancelMultiTouch = (e: PointerEvent) => {
+      if (e.pointerType === "touch" && !e.isPrimary) cancelPress();
+    };
     document.addEventListener(dismissEvent, close);
+    document.addEventListener("pointerdown", cancelMultiTouch, true);
+    document.addEventListener("scroll", cancelPress, true);
     return () => {
+      cancelPress();
       clearTimer();
       document.removeEventListener(dismissEvent, close);
+      document.removeEventListener("pointerdown", cancelMultiTouch, true);
+      document.removeEventListener("scroll", cancelPress, true);
     };
   }, []);
   useEffect(() => {
@@ -97,7 +117,7 @@ export function EffectInspect({
       if (e.key !== "Escape") return;
       e.preventDefault();
       e.stopImmediatePropagation();
-      if (popup.contains(document.activeElement)) info.current?.focus();
+      if (popup.contains(document.activeElement)) host.current?.focus();
       close();
     };
     const scroll = (e: Event) => {
@@ -121,13 +141,80 @@ export function EffectInspect({
     <div
       ref={host}
       className={`effect-inspect ${className}`}
+      tabIndex={hasEffect ? 0 : undefined}
+      role="group"
+      aria-label={hasEffect ? `词条详情：${effectName(id)}` : undefined}
+      aria-describedby={open ? uid : undefined}
+      onFocusCapture={(e) => {
+        if (
+          hasEffect &&
+          !card.current?.contains(e.target) &&
+          e.target.matches(":focus-visible")
+        )
+          show();
+      }}
+      onKeyDown={(e) => {
+        if (
+          e.target === e.currentTarget &&
+          (e.key === "Enter" || e.key === " ")
+        ) {
+          e.preventDefault();
+          show();
+          pinned.current = true;
+        }
+      }}
       onPointerEnter={(e) => {
         if (e.pointerType === "mouse" && !open) {
           clearTimer();
           timer.current = setTimeout(show, 320);
         } else clearTimer();
       }}
-      onPointerLeave={scheduleClose}
+      onPointerDownCapture={(e) => {
+        suppressClick.current = false;
+        lastPointerType.current = e.pointerType;
+        cancelPress();
+        if (
+          e.pointerType !== "touch" ||
+          !e.isPrimary ||
+          !hasEffect ||
+          !(e.target as Element).closest(".effect-inspect-target")
+        )
+          return;
+        touch.current = { pointerId: e.pointerId, x: e.clientX, y: e.clientY };
+        pressTimer.current = setTimeout(() => {
+          show();
+          pinned.current = true;
+          suppressClick.current = true;
+        }, 480);
+      }}
+      onPointerMoveCapture={(e) => {
+        const start = touch.current;
+        if (
+          start?.pointerId === e.pointerId &&
+          Math.hypot(e.clientX - start.x, e.clientY - start.y) > 10
+        )
+          cancelPress();
+      }}
+      onPointerUpCapture={cancelPress}
+      onPointerCancelCapture={cancelPress}
+      onClickCapture={(e) => {
+        if (!suppressClick.current) return;
+        suppressClick.current = false;
+        e.preventDefault();
+        e.stopPropagation();
+      }}
+      onContextMenu={(e) => {
+        if (
+          lastPointerType.current === "touch" &&
+          hasEffect &&
+          (e.target as Element).closest(".effect-inspect-target")
+        )
+          e.preventDefault();
+      }}
+      onPointerLeave={() => {
+        cancelPress();
+        scheduleClose();
+      }}
       onBlur={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget)) scheduleClose();
       }}
@@ -135,28 +222,6 @@ export function EffectInspect({
       <div className="effect-inspect-target" onClick={close}>
         {children}
       </div>
-      {hasEffect && (
-        <button
-          type="button"
-          ref={info}
-          className="effect-info"
-          aria-label={`词条详情：${effectName(id)}`}
-          aria-expanded={open}
-          aria-controls={open ? uid : undefined}
-          onFocus={(e) => {
-            if (e.currentTarget.matches(":focus-visible")) show();
-          }}
-          onClick={() => {
-            if (open && pinned.current) close();
-            else {
-              show();
-              pinned.current = true;
-            }
-          }}
-        >
-          <Info size={16} aria-hidden="true" />
-        </button>
-      )}
       {open && (
         <div
           ref={card}
@@ -175,7 +240,7 @@ export function EffectInspect({
               className="tool"
               aria-label="关闭词条详情"
               onClick={() => {
-                info.current?.focus();
+                host.current?.focus();
                 close();
               }}
             >
