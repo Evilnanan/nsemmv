@@ -40,12 +40,39 @@ export function sortRoll(roll: Roll): Roll {
           (empty(b.effect) ? EMPTY : b.effect),
     );
 }
+function effectsConflict(a: number, b: number) {
+  if (empty(a) || empty(b)) return false;
+  const first = catalog.effects[a],
+    second = catalog.effects[b];
+  return (
+    !!first &&
+    !!second &&
+    (a === b ||
+      (first.conflict !== -1 && first.conflict === second.conflict) ||
+      (first.exclusive !== -1 && first.exclusive === second.exclusive))
+  );
+}
+export function candidateConflicts(
+  roll: Roll,
+  slot: number,
+  curse: boolean,
+  id: number,
+) {
+  invariant(
+    roll.length === 3 && Number.isInteger(slot) && slot >= 0 && slot < 3,
+    "无效词条槽",
+  );
+  const replaced = slot + (curse ? 3 : 0);
+  return values(roll).flatMap((other, index) =>
+    index !== replaced && effectsConflict(id, other)
+      ? [{ id: other, slot: index }]
+      : [],
+  );
+}
 function idsIssues(roll: Roll): Issue[] {
   if (roll.length !== 3)
     return [{ code: "length", message: "需要三个词条配对" }];
-  const seen = new Set<number>(),
-    conflict = new Set<number>(),
-    exclusive = new Set<number>();
+  const seen: number[] = [];
   const out: Issue[] = [];
   values(roll).forEach((id, slot) => {
     if (!Number.isInteger(id) || id < 0 || id > EMPTY) {
@@ -58,15 +85,9 @@ function idsIssues(roll: Roll): Issue[] {
       out.push({ code: "unknown", message: `未知词条 ${id}`, slot });
       return;
     }
-    if (
-      seen.has(id) ||
-      (e.conflict !== -1 && conflict.has(e.conflict)) ||
-      (e.exclusive !== -1 && exclusive.has(e.exclusive))
-    )
+    if (seen.some((other) => effectsConflict(id, other)))
       out.push({ code: "conflict", message: "词条重复或互斥", slot });
-    seen.add(id);
-    if (e.conflict !== -1) conflict.add(e.conflict);
-    if (e.exclusive !== -1) exclusive.add(e.exclusive);
+    seen.push(id);
   });
   return out;
 }
@@ -127,6 +148,102 @@ export function candidates(id: number) {
       r.id === id ||
       (!r.shop && r.color === current.color && r.deep === current.deep),
   );
+}
+export interface CandidateAvailability {
+  state: "available" | "incomplete" | "unavailable";
+  issues: Issue[];
+  itemId?: number;
+}
+// Compile the possible pool assignments once per open picker, then evaluate each ID.
+// Empty fields can still be filled; an already selected field must fit its paired pool.
+export function effectAvailability(
+  itemId: number,
+  roll: Roll,
+  slot: number,
+  curse: boolean,
+) {
+  invariant(
+    roll.length === 3 && Number.isInteger(slot) && slot >= 0 && slot < 3,
+    "无效词条槽",
+  );
+  const target = slot + (curse ? 3 : 0),
+    base = roll.map((p) => ({ ...p }));
+  base[slot][curse ? "curse" : "effect"] = EMPTY;
+  const items = candidates(itemId);
+  const possible = new Set(
+    items.flatMap((r) =>
+      r.pools
+        .slice(curse ? 3 : 0, curse ? 6 : 3)
+        .flatMap((p) => [...(poolSets.get(p) ?? [])]),
+    ),
+  );
+  const adjustable = new Set([
+    "missing-effect",
+    "missing-curse",
+    "extra-curse",
+  ]);
+  const plans = items
+    .flatMap((r) =>
+      permutations.flatMap((seq) => {
+        const pool = poolSets.get(r.pools[seq.indexOf(slot) + (curse ? 3 : 0)]);
+        if (!pool?.size) return [];
+        const issues = poolIssues(r.id, base, seq).filter(
+          (i) => i.slot !== target,
+        );
+        if (issues.some((i) => !adjustable.has(i.code))) return [];
+        return [{ id: r.id, pool, issues }];
+      }),
+    )
+    .sort(
+      (a, b) =>
+        score(a.issues) - score(b.issues) ||
+        Number(a.id !== itemId) - Number(b.id !== itemId) ||
+        a.id - b.id,
+    );
+  return (id: number): CandidateAvailability => {
+    const selected = base.map((p) => ({ ...p }));
+    selected[slot][curse ? "curse" : "effect"] = id;
+    const issues = idsIssues(selected);
+    if (issues.length) return { state: "unavailable", issues };
+    if (!items.length)
+      return {
+        state: "unavailable",
+        issues: [{ code: "item", message: "Item ID 没有有效获取来源" }],
+      };
+    if (empty(id))
+      return {
+        state: "incomplete",
+        issues: [{ code: "missing-effect", message: "待补齐词条" }],
+      };
+    if (!possible.has(id))
+      return {
+        state: "unavailable",
+        issues: [
+          {
+            code: curse ? "curse-pool" : "effect-pool",
+            message: curse
+              ? "不在此类遗物的 Curse 抽取池内"
+              : "不在此类遗物的正面抽取池内",
+          },
+        ],
+      };
+    const match = plans.find((p) => p.pool.has(id));
+    if (!match)
+      return {
+        state: "unavailable",
+        issues: [
+          {
+            code: "combination",
+            message: "当前正负词条组合无法匹配同色同类型遗物的抽取池",
+          },
+        ],
+      };
+    return {
+      state: match.issues.length ? "incomplete" : "available",
+      issues: match.issues,
+      itemId: match.id,
+    };
+  };
 }
 export function autoFix(
   id: number,

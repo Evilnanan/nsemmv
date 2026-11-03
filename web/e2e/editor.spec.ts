@@ -236,13 +236,11 @@ test("native effect categories combine with search, page navigation and curse va
   page,
 }, testInfo) => {
   await page.goto("/");
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(fixture()),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(fixture()),
+  });
   await page.getByRole("button", { name: "新增遗物", exact: true }).click();
   await page.getByRole("button", { name: "深层", exact: true }).click();
   await page.getByLabel("搜索遗物类型").fill("2000100");
@@ -292,4 +290,152 @@ test("native effect categories combine with search, page navigation and curse va
   expect(curses.length).toBeGreaterThan(0);
   for (const id of curses)
     expect(catalog.effects[Number(id)].group).toBe(40010);
+});
+
+test("previews and excludes conflicting effects in inventory and preset pickers", async ({
+  page,
+}, testInfo) => {
+  const session = Session.open(fixture(), "test");
+  session.apply(0, {
+    type: "preset",
+    hero: 7,
+    vessel: 19000,
+    handles: [0xc0800054, 0, 0, 0, 0, 0],
+    name: "冲突预览",
+  });
+  await page.goto("/");
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(session.export()),
+  });
+  await page.locator(".effect-cell").nth(2).click();
+  await page.getByLabel("词条分类").selectOption("30000");
+  await page.getByLabel("搜索词条").fill("700000");
+  const conflict = page
+    .locator(".picker-row")
+    .filter({ has: page.locator("code", { hasText: "7000001" }) });
+  await expect(conflict).toContainText("冲突");
+  await expect(conflict).toHaveAttribute("title", /生命力＋１/);
+  await page.screenshot({ path: testInfo.outputPath("conflict-preview.png") });
+  expect(
+    await page
+      .locator("dialog")
+      .evaluate((el) => el.scrollWidth <= el.clientWidth),
+  ).toBe(true);
+  await page.getByRole("checkbox", { name: "排除不可用", exact: true }).check();
+  await expect(conflict).toHaveCount(0);
+  await expect(page.getByText("无匹配", { exact: true })).toBeVisible();
+  await expect(page.getByLabel("匹配词条数")).toHaveText("0");
+  await page.getByLabel("搜索词条").fill("7000100");
+  await expect(page.locator(".availability-badge")).toHaveCount(0);
+  await page.locator(".picker-row").filter({ hasText: "7000100" }).click();
+  await page.getByRole("button", { name: "应用修改", exact: true }).click();
+  // Replacing the first field may retain or upgrade its existing effect.
+  await page.locator(".effect-cell").first().click();
+  await expect(
+    page.getByRole("checkbox", { name: "排除不可用", exact: true }),
+  ).toBeChecked();
+  await page.getByLabel("搜索词条").fill("7000001");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "7000001" }),
+  ).toHaveCount(1);
+  await expect(page.locator(".availability-badge")).toHaveCount(0);
+  await page.getByRole("button", { name: "关闭", exact: true }).click();
+  await page.getByRole("button", { name: "预设", exact: true }).click();
+  await page.locator(".preset-card").click();
+  await page
+    .getByRole("button", { name: "编辑预设遗物 1", exact: true })
+    .click();
+  await page.locator(".effect-cell").nth(4).click();
+  await expect(
+    page.getByRole("checkbox", { name: "排除不可用", exact: true }),
+  ).toBeChecked();
+  await page.getByLabel("搜索词条").fill("7000000");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "7000000" }),
+  ).toHaveCount(0);
+  await page
+    .getByRole("checkbox", { name: "排除不可用", exact: true })
+    .uncheck();
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "7000000" }),
+  ).toContainText("冲突");
+  // Merely previewing and toggling a filter never changes the stored relic.
+  await page
+    .getByRole("dialog")
+    .last()
+    .getByRole("button", { name: "关闭", exact: true })
+    .click();
+  await page.getByRole("button", { name: "关闭", exact: true }).click();
+  await page.getByRole("button", { name: "关闭", exact: true }).click();
+  const download = page.waitForEvent("download");
+  await page.getByRole("button", { name: "导出存档", exact: true }).click();
+  const result = Session.open(
+    new Uint8Array(await readFile((await (await download).path())!)),
+    "result",
+  );
+  expect(result.view(0).relics[0].roll.map((p) => p.effect)).toEqual([
+    7000000, 7000100, 0xffffffff,
+  ]);
+});
+
+test("distinguishes unavailable candidates from effects that need a curse", async ({
+  page,
+}, testInfo) => {
+  await page.goto("/");
+  await page
+    .getByLabel("打开存档文件")
+    .setInputFiles({
+      name: "NR0000.dbb",
+      mimeType: "application/octet-stream",
+      buffer: Buffer.from(fixture()),
+    });
+  await page.getByRole("button", { name: "新增遗物", exact: true }).click();
+  await page.getByRole("button", { name: "深层", exact: true }).click();
+  await page.getByLabel("搜索遗物类型").fill("2000100");
+  await page.locator(".picker-list .picker-row").click();
+  await page.locator(".effect-cell").first().click();
+  await page.getByLabel("搜索词条").fill("999999998");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "999999998" }),
+  ).toContainText("未知词条");
+  await page.getByRole("checkbox", { name: "排除不可用", exact: true }).check();
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "999999998" }),
+  ).toHaveCount(0);
+  await page.getByLabel("搜索词条").fill("6611202");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "6611202" }),
+  ).toContainText("需 Curse");
+  await page.screenshot({
+    path: testInfo.outputPath("availability-preview.png"),
+  });
+  expect(
+    await page
+      .locator("dialog")
+      .evaluate((el) => el.scrollWidth <= el.clientWidth),
+  ).toBe(true);
+  await page.getByLabel("搜索词条").fill("7090000");
+  await expect(page.locator(".availability-badge")).toHaveCount(0);
+  await page.locator(".picker-row").filter({ hasText: "7090000" }).click();
+  await expect(page.getByLabel("Item ID")).toHaveValue("2003100");
+  await page.locator(".effect-cell.curse").first().click();
+  await page
+    .getByRole("checkbox", { name: "排除不可用", exact: true })
+    .uncheck();
+  await page.getByLabel("搜索词条").fill("7090000");
+  // This candidate also duplicates the existing effect, so use a different positive ID to isolate the pool reason.
+  await page.getByLabel("搜索词条").fill("6611202");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "6611202" }),
+  ).toContainText("池不匹配");
+  await page.getByLabel("搜索词条").fill("6851700");
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "6851700" }),
+  ).toContainText("组合不兼容");
+  await page.getByRole("checkbox", { name: "排除不可用", exact: true }).check();
+  await expect(
+    page.locator(".picker-row").filter({ hasText: "6851700" }),
+  ).toHaveCount(0);
 });

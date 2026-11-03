@@ -42,6 +42,8 @@ import {
 } from "./core/effect-filters";
 import {
   autoFix,
+  candidateConflicts,
+  effectAvailability,
   checkRoll,
   effectChoices,
   fixedRoll,
@@ -116,11 +118,19 @@ const blank = () => toRoll([EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]);
 type Draft = { handle?: number; id: number; roll: Roll };
 function EffectPicker({
   itemId,
+  roll,
+  slot,
+  hideUnavailable,
+  onHideUnavailable,
   curse,
   onPick,
   onClose,
 }: {
   itemId: number;
+  roll: Roll;
+  slot: number;
+  hideUnavailable: boolean;
+  onHideUnavailable: (value: boolean) => void;
   curse: boolean;
   onPick: (id: number) => void;
   onClose: () => void;
@@ -133,16 +143,86 @@ function EffectPicker({
     () => new Set(choices.map(effectGroup)),
     [choices],
   );
-  const found = filterEffects(choices, q, group);
+
   const numeric = /^\d+$/.test(q.trim()) ? Number(q.trim()) : null;
+  const assess = useMemo(
+    () => effectAvailability(itemId, roll, slot, curse),
+    [itemId, roll, slot, curse],
+  );
+  const availability = useMemo(
+    () =>
+      new Map(
+        [...choices, ...(numeric === null ? [] : [numeric])].map((id) => [
+          id,
+          assess(id),
+        ]),
+      ),
+    [choices, numeric, assess],
+  );
+  const found = filterEffects(choices, q, group).filter(
+    (id) => !hideUnavailable || availability.get(id)?.state !== "unavailable",
+  );
   const manual =
     group === null &&
     numeric !== null &&
     numeric > 0 &&
     numeric < EMPTY &&
-    !choices.includes(numeric);
+    !choices.includes(numeric) &&
+    (!hideUnavailable || availability.get(numeric)?.state !== "unavailable");
   const pages = Math.max(1, Math.ceil(found.length / 100));
-  useEffect(() => setPage(0), [q, group, itemId, curse]);
+  useEffect(() => setPage(0), [q, group, itemId, curse, hideUnavailable]);
+  function choice(id: number) {
+    const status = availability.get(id)!;
+    const clashes = candidateConflicts(roll, slot, curse, id);
+    const codes = new Set(status.issues.map((i) => i.code));
+    const label =
+      status.state === "incomplete"
+        ? codes.has("missing-curse")
+          ? "需 Curse"
+          : codes.has("extra-curse")
+            ? "多余 Curse"
+            : "待补词条"
+        : codes.has("conflict")
+          ? "冲突"
+          : codes.has("unknown")
+            ? "未知词条"
+            : codes.has("item")
+              ? "无效遗物"
+              : codes.has("id")
+                ? "无效 ID"
+                : codes.has("combination")
+                  ? "组合不兼容"
+                  : "池不匹配";
+    const description = [
+      ...new Set(status.issues.map((i) => i.message)),
+      ...(clashes.length
+        ? [
+            `与${[...new Set(clashes.map((c) => effectName(c.id)))].join("、")}冲突`,
+          ]
+        : []),
+    ].join("；");
+    return (
+      <button
+        className={`picker-row ${status.state}`}
+        key={id}
+        onClick={() => onPick(id)}
+        title={description || undefined}
+      >
+        <code>{id}</code>
+        <span className="effect-choice-name">{effectName(id)}</span>
+        {status.state !== "available" && (
+          <span
+            className={`availability-badge ${status.state}`}
+            aria-label={description}
+          >
+            <CircleAlert size={15} aria-hidden="true" />
+            {label}
+          </span>
+        )}
+      </button>
+    );
+  }
+
   return (
     <Modal title={curse ? "Curse" : "Effect"} onClose={onClose}>
       <div className="effect-picker-controls">
@@ -193,6 +273,14 @@ function EffectPicker({
             )}
           </select>
         </div>
+        <label className="availability-filter">
+          <input
+            type="checkbox"
+            checked={hideUnavailable}
+            onChange={(e) => onHideUnavailable(e.target.checked)}
+          />
+          <span>排除不可用</span>
+        </label>
       </div>
       <div className="picker-list">
         <button
@@ -203,18 +291,8 @@ function EffectPicker({
           <span>—</span>
           <span>空槽</span>
         </button>
-        {manual && (
-          <button className="picker-row" onClick={() => onPick(numeric!)}>
-            <code>{numeric}</code>
-            <span>{effectName(numeric!)}</span>
-          </button>
-        )}
-        {found.slice(page * 100, (page + 1) * 100).map((id) => (
-          <button className="picker-row" key={id} onClick={() => onPick(id)}>
-            <code>{id}</code>
-            <span>{effectName(id)}</span>
-          </button>
-        ))}
+        {manual && choice(numeric!)}
+        {found.slice(page * 100, (page + 1) * 100).map(choice)}
         {!found.length && !manual && <div className="empty-small">无匹配</div>}
       </div>
       <footer className="modal-footer effect-pagination">
@@ -310,6 +388,7 @@ function ItemPicker({
   );
 }
 function App() {
+  const [hideUnavailable, setHideUnavailable] = useState(false);
   const [view, setView] = useState<SessionView | null>(null),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
@@ -881,6 +960,8 @@ function App() {
                 busy={busy}
                 apply={apply}
                 onDirty={setChildDirty}
+                hideUnavailable={hideUnavailable}
+                onHideUnavailable={setHideUnavailable}
                 error={error}
               />
             )}
@@ -910,6 +991,10 @@ function App() {
       {picker && draft && (
         <EffectPicker
           itemId={draft.id}
+          roll={draft.roll}
+          slot={picker.slot}
+          hideUnavailable={hideUnavailable}
+          onHideUnavailable={setHideUnavailable}
           curse={picker.curse}
           onPick={chooseEffect}
           onClose={() => setPicker(null)}
@@ -1072,12 +1157,16 @@ function RelicFields({
 }
 
 function Presets({
+  hideUnavailable,
+  onHideUnavailable,
   error,
   view,
   busy,
   apply,
   onDirty,
 }: {
+  hideUnavailable: boolean;
+  onHideUnavailable: (value: boolean) => void;
   view: SessionView;
   busy: boolean;
   apply: (op: Edit) => Promise<unknown>;
@@ -1456,6 +1545,10 @@ function Presets({
       {relicEdit && relicPicker && (
         <EffectPicker
           itemId={relicEdit.draft.id}
+          roll={relicEdit.draft.roll}
+          slot={relicPicker.slot}
+          hideUnavailable={hideUnavailable}
+          onHideUnavailable={onHideUnavailable}
           curse={relicPicker.curse}
           onClose={() => setRelicPicker(null)}
           onPick={(id) => {

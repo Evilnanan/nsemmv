@@ -1424,3 +1424,45 @@ dialog h2 {
   width: 32px;
   height: 32px;
 }
+
+.availability-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #b7bda9;
+  white-space: nowrap;
+}
+.availability-filter input {
+  accent-color: var(--gold);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+.effect-choice-name {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.picker-row.unavailable {
+  background: #a0483010;
+}
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #d5917b;
+  font-size: 11px;
+}
+@media (max-width: 520px) {
+  .effect-category {
+    flex: 1 1 170px;
+  }
+}
+
+.availability-badge.incomplete {
+  color: var(--gold);
+}
