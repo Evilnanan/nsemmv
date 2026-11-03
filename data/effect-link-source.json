@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "hashes": {
+    "defs/AtkParam.xml": "22078bf2f916c60e49cafec29f002a00e14abb618de541fbef6ad102ec21cf96",
+    "defs/AttachEffectParam.xml": "e6b0e664bee58cb2c7a180fdd7f81320f48430bb93b886afe0a77324248882ce",
+    "defs/BehaviorParam.xml": "682eb53e76fe824bbf4283cb1c6161c16eb8ec4457d9b8485ed821a7ab11a2f8",
+    "defs/Bullet.xml": "2243e5f8530666de8630d29bc118e87a1627ae0f589aa06d514bbf7bf6d2a638",
+    "defs/EquipParamGoods.xml": "c4bd63486daac1211a1763b787579ed5649981bf40cc9fa2f3bb66254e2d1c53",
+    "defs/HeroStatusParam.xml": "de776f0355fb0afb877018bfcad51ce68235cc8d2d59e2a2c457f31fe5611dac",
+    "defs/Magic.xml": "bccd416a8b6aeab2576db366872a4713e8698eac397ee8fbf7fe8c526501c354",
+    "defs/SpEffectParam.xml": "a9985be2b9b464867aecab63c04f85114eea3032d38f5f0d2cb66f33926d0c15",
+    "defs/SwordArtsParam.xml": "d8a5acb45a36215ff0fc1eb6dfd597bac7dc7335192881a1c086fb8b7ed760eb"
+  },
+  "emitters": {
+    "7050000": {
+      "behaviorId": 990500000,
+      "bulletId": 900500000,
+      "attackId": 800000100,
+      "leaves": [
+        7050001
+      ],
+      "radius": 10,
+      "includeSelf": false,
+      "behavior": {
+        "refType": 1,
+        "refId": 900500000
+      },
+      "bullet": {
+        "hitRadius": 10,
+        "hitRadiusMax": -1,
+        "life": 0.10000000149011612,
+        "atkId_Bullet": 800000100,
+        "spEffectId0": 7050001,
+        "HitBulletID": -1,
+        "intervalCreateBulletId": -1,
+        "numShoot": 1,
+        "initVellocity": 0
+      },
+      "attack": {
+        "friendlyTarget": 1,
+        "opposeTarget": 0,
+        "selfTarget": 0,
+        "disableHitSpEffect": 0
+      }
+    },
+    "7090101": {
+      "behaviorId": 990901000,
+      "bulletId": 900901000,
+      "attackId": 900901000,
+      "leaves": [
+        7090102
+      ],
+      "radius": 15,
+      "includeSelf": false,
+      "behavior": {
+        "refType": 1,
+        "refId": 900901000
+      },
+      "bullet": {
+        "hitRadius": 15,
+        "hitRadiusMax": -1,
+        "life": 0.10000000149011612,
+        "atkId_Bullet": 900901000,
+        "spEffectId0": 7090102,
+        "HitBulletID": -1,
+        "intervalCreateBulletId": -1,
+        "numShoot": 1,
+        "initVellocity": 0
+      },
+      "attack": {
+        "friendlyTarget": 1,
+        "opposeTarget": 0,
+        "selfTarget": 0,
+        "disableHitSpEffect": 0
+      }
+    },
+    "7090103": {
+      "behaviorId": 990901000,
+      "bulletId": 900901000,
+      "attackId": 900901000,
+      "leaves": [
+        7090102
+      ],
+      "radius": 15,
+      "includeSelf": false,
+      "behavior": {
+        "refType": 1,
+        "refId": 900901000
+      },
+      "bullet": {
+        "hitRadius": 15,
+        "hitRadiusMax": -1,
+        "life": 0.10000000149011612,
+        "atkId_Bullet": 900901000,
+        "spEffectId0": 7090102,
+        "HitBulletID": -1,
+        "intervalCreateBulletId": -1,
+        "numShoot": 1,
+        "initVellocity": 0
+      },
+      "attack": {
+        "friendlyTarget": 1,
+        "opposeTarget": 0,
+        "selfTarget": 0,
+        "disableHitSpEffect": 0
+      }
+    },
+    "7012202": {
+      "behaviorId": 990902000,
+      "bulletId": 900902000,
+      "attackId": 900902000,
+      "leaves": [
+        7012201
+      ],
+      "radius": 15,
+      "includeSelf": true,
+      "behavior": {
+        "refType": 1,
+        "refId": 900902000
+      },
+      "bullet": {
+        "hitRadius": 15,
+        "hitRadiusMax": -1,
+        "life": 0.10000000149011612,
+        "atkId_Bullet": 900902000,
+        "spEffectId0": 7012201,
+        "HitBulletID": -1,
+        "intervalCreateBulletId": -1,
+        "numShoot": 1,
+        "initVellocity": 0
+      },
+      "attack": {
+        "friendlyTarget": 1,
+        "opposeTarget": 0,
+        "selfTarget": 1,
+        "disableHitSpEffect": 0
+      }
+    },
+    "7031201": {
+      "behaviorId": 600000280,
+      "bulletId": 30905100,
+      "attackId": 790000006,
+      "leaves": [
+        7031202
+      ],
+      "radius": 30,
+      "includeSelf": false,
+      "behavior": {
+        "refType": 1,
+        "refId": 30905100
+      },
+      "bullet": {
+        "hitRadius": 30,
+        "hitRadiusMax": 30,
+        "life": 0.20000000298023224,
+        "atkId_Bullet": 790000006,
+        "spEffectId0": 7031202,
+        "HitBulletID": -1,
+        "intervalCreateBulletId": -1,
+        "numShoot": 1,
+        "initVellocity": 0
+      },
+      "attack": {
+        "friendlyTarget": 1,
+        "opposeTarget": 0,
+        "selfTarget": 0,
+        "disableHitSpEffect": 0
+      }
+    }
+  }
+}

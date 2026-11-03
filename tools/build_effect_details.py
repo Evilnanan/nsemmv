@@ -17,6 +17,12 @@ catalog = json.loads((ROOT / 'web/src/data/catalog.json').read_text())
 trigger_path = ROOT / 'data/effect-trigger-source.json'
 triggers = json.loads(trigger_path.read_text())
 assert triggers['schema'] == 1 and triggers['regulationSha256'] == catalog['regulationSha256']
+link_path = ROOT / 'data/effect-link-source.json'
+links = json.loads(link_path.read_text())
+assert links['schema'] == 1 and links['regulationSha256'] == catalog['regulationSha256']
+script_path = ROOT / 'data/effect-script-evidence.json'
+scripts = json.loads(script_path.read_text())
+assert scripts['schema'] == 1 and scripts['regulationSha256'] == catalog['regulationSha256']
 
 # Only fields with understood units enter the human-readable summary.
 RATES = {
@@ -47,6 +53,7 @@ POINTS = {
     'changeFreezeResistPoint': '抗冻伤', 'changeSleepResistPoint': '抗催眠',
     'changeMadnessResistPoint': '抗发狂', 'additionalCharacterSkillUse': '技艺使用次数',
     'staminaRecoverChangeSpeed': '精力恢复速度',
+    'soul': '获得卢恩',
 }
 RESTORE = {'changeHpPoint': 'HP', 'changeMpPoint': 'FP', 'changeStaminaPoint': '精力'}
 STATUS_BUILDUP = {'poizonAttackPower': '中毒', 'diseaseAttackPower': '猩红腐败',
@@ -89,12 +96,21 @@ if args.extract:
         needed.update(roots.values())
         for root in roots.values():
             needed.update(triggers['roots'].get(str(root), {}).get('seeds', []))
+            for branch in scripts['effects'].get(str(root), {}).get('branches', []):
+                needed.add(branch['cooldown'])
+                for hand in branch['hands']:
+                    needed.update((hand['seed'], hand['leaf']))
         text_id = str(int(a['attachTextId']))
         info = raw['texts']['zh_CN']['AttachEffectInfo'].get(text_id)
         effects[id] = dict(roots=roots, runtimeExclusive=int(a['exclusivityId']), **({'info': info} if info else {}))
     pending = list(needed)
     while pending:
-        row = spells.get(str(pending.pop()), {})
+        current = pending.pop()
+        row = spells.get(str(current), {})
+        for leaf in links['emitters'].get(str(current), {}).get('leaves', []):
+            if leaf not in needed:
+                needed.add(leaf)
+                pending.append(leaf)
         for field in LINKS:
             id = int(row.get(field, -1))
             if id > 0 and str(id) in spells and id not in needed:
@@ -102,6 +118,7 @@ if args.extract:
                 pending.append(id)
     source = dict(schema=1, regulationVersion=raw['regulationVersion'], hashes=raw['hashes'], effects=effects,
                   labels={k: raw['texts']['zh_CN'][k] for k in ('GoodsName', 'MagicName', 'SwordArtsName')},
+                  artsTextIds={id: int(r['textId']) for id, r in raw['tables']['SwordArtsParam'].items()},
                   heroStatus=raw['tables']['HeroStatusParam'],
                   spells={str(id): {k: round(v, 6) for k, v in spells[str(id)].items() if k in FIELDS}
                           for id in sorted(needed) if str(id) in spells})
@@ -206,7 +223,10 @@ def block(id, phase, linked, known_states=frozenset()):
         phase = '随等级调整能力值'
     if r.get('stateInfo') in (2105, 2128):
         table, key = ('SwordArtsName', 'startSwordArtsId') if r['stateInfo'] == 2105 else ('MagicName', 'startMagicId')
-        name = source.get('labels', {}).get(table, {}).get(str(int(r.get(key, -1))))
+        text_id = str(int(r.get(key, -1)))
+        if table == 'SwordArtsName':
+            text_id = str(source['artsTextIds'].get(text_id, -1))
+        name = source.get('labels', {}).get(table, {}).get(text_id)
         if name:
             values.append(['出击时替换', name])
     if not values:
@@ -228,7 +248,13 @@ def block(id, phase, linked, known_states=frozenset()):
     if r.get('stateInfo') == 2100:
         restrictions.append('需装备对应类别武器 ≥ ' + num(r['wepTypeTriggerCount']) + ' 把')
     if r.get('conditionHp', -1) > 0:
-        restrictions.append('血量阈值：' + num(r['conditionHp']) + '%')
+        cases = [v for v in evidence['hpConditions'] if v['id'] == id]
+        assert cases
+        at_nominal = next(v for v in cases if v['ratio'] == v['nominal'])
+        restrictions.append('血量 ' + ('≤ ' if at_nominal['enabled'] else '< ') + num(r['conditionHp']) + '%')
+    if r.get('conditionHpRate', -1) > 0:
+        assert any(v['id'] == id for v in evidence['hpConditions'])
+        restrictions.append('满血时' if r['conditionHpRate'] == 100 else '血量 ≥ ' + num(r['conditionHpRate']) + '%')
     conditions = {int(r.get('invocationConditionsStateChange' + str(i), 0)) for i in (1, 2, 3)} - {0}
     if conditions - known_states:
         restrictions.append('需满足指定状态')
@@ -248,6 +274,10 @@ def block(id, phase, linked, known_states=frozenset()):
         # The resource change is a tick, not a buff lasting this many seconds.
         # Any consequential refresh window is described above instead.
         duration, interval = 0, 0
+    if id == 7031901:
+        assert any(r['id'] == id and r['refreshAt'] is None for r in evidence['timing'])
+        duration = interval = 0
+        restrictions.append('1 秒内再次触发只刷新有效期；连续触发时约每 1.1 秒获得一次')
     return dict(source=id, phase=phase, linked=linked, values=values, scope=scope, restrictions=restrictions,
                 duration=duration if duration > 0 else None,
                 interval=interval if interval > 0 and (duration < 0 or duration >= interval) else None)
@@ -295,6 +325,8 @@ for id, effect in source['effects'].items():
             r = source['spells'].get(str(sp), {})
             pending.extend((int(r[k]), phase if external else label, True, depth + 1)
                            for k, label in LINKS.items() if r.get(k, -1) > 0)
+            for leaf in links['emitters'].get(str(sp), {}).get('leaves', []):
+                pending.append((leaf, phase, True, depth + 1))
     notes = []
     rule = 'unknown'
     roots = [source['spells'].get(str(v), {}) for v in effect['roots'].values()]
@@ -332,12 +364,37 @@ for id, effect in source['effects'].items():
         rule = 'shop-discount'
     if len(external) == 1 and effect['runtimeExclusive'] == -1:
         family = external[0]['family']
-        if family != 'madness-fp':
+        if family not in ('madness-fp', 'revenant-allies', 'random-weapon'):
             matches = [r for r in evidence['triggerMatching'] if r['family'] == family]
             assert matches and all(r['reused'] == (r['existing'] == r['incoming']) for r in matches)
             rule = {'bolus': 'trigger-tiers', 'grease': 'trigger-attack',
                     'guard-gauge': 'trigger-gauge', 'critical-gauge': 'trigger-gauge',
                     'critical-stamina': 'trigger-stamina'}.get(family, 'trigger-single')
+    if id in ('7050000', '7090100', '7012200', '7031200'):
+        emitter, leaf, phase = {
+            '7050000': (7050000, 7050001, '周围队友'),
+            '7090100': (7090101, 7090102, '打倒敌人时'),
+            '7012200': (7012202, 7012201, '血量 < 40% 时触发'),
+            '7031200': (7031201, 7031202, '绝招发动时'),
+        }[id]
+        edge = links['emitters'][str(emitter)]
+        b = next(b for b in blocks if b['source'] == leaf)
+        b['phase'] = phase
+        b['restrictions'].append(('自身及周围友方' if edge['includeSelf'] else '周围友方') + ' · 半径 ' + num(edge['radius']) + ' 米')
+        if id == '7050000':
+            # A one-second aura lease is renewed by the emitter, not a one-second ability.
+            b['duration'] = b['interval'] = None
+        if id == '7012200':
+            notes.append('触发后的恢复持续 50 秒，不要求一直维持低血量。')
+    if id == '7035700':
+        branches = scripts['effects'][id]['branches']
+        assert sum(b['chance'] for b in branches) == 100
+        assert {b['power'] for b in branches} == {20} and {b['duration'] for b in branches} == {10}
+        blocks = [dict(source=7035700, branches=[hand['leaf'] for b in branches for hand in b['hands']],
+                       phase='切换武器后', linked=True,
+                       values=[['属性攻击力', '+20（随机一种）'],
+                               ['概率', ' / '.join(b['name'] + ' ' + num(b['chance']) + '%' for b in branches)]],
+                       scope=[], restrictions=['作用于切换的那只手'], duration=10, interval=None)]
     if id in ('7090000', '6090000'):
         root = list(effect['roots'].values())[0]
         assert roots[0]['spCategory'] == 20 and roots[0]['stateInfo'] == 199 and effect['runtimeExclusive'] == -1
@@ -383,6 +440,12 @@ for id in sorted(source['effects'], key=int):
         refs.append('damage-status')
     if any(str(root) in triggers['roots'] for root in effect['roots'].values()):
         refs.append('action-triggers')
+    if any(str(root) in scripts['effects'] for root in effect['roots'].values()):
+        refs.append('action-script')
+        questions.append('与其他附魔的覆盖顺序、武器适用条件及完整动作时序')
+    if any(b['source'] in edge['leaves'] for b in detail['blocks'] for edge in links['emitters'].values()):
+        refs.append('bullet-links')
+        questions.append('范围命中、多人来源叠加及再次发放时序')
     questions = []
     if missing_roots:
         questions.append('目录引用的 SpEffect 行在当前参数中不存在：' + ', '.join(map(str, missing_roots)))
@@ -402,8 +465,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
     if any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
-    if any(source['spells'].get(str(sp), {}).get('conditionHp', -1) > 0 for sp in effect['roots'].values()):
-        questions.append('血量阈值的比较方向、边界与状态更新时机')
+    if any(source['spells'].get(str(sp), {}).get(k, -1) > 0 for sp in effect['roots'].values() for k in ('conditionHp', 'conditionHpRate')):
+        refs.append('hpConditions')
+        questions.append('低血量状态切换与其他触发链的时序交互')
     if not detail['blocks']:
         questions.append('尚未解析到可展示数值／机制，继续查原生、事件或动作脚本')
     numeric = any(any(label != '出击时替换' for label, _ in b['values']) for b in detail['blocks'])
@@ -420,5 +484,7 @@ coverage = dict(obtainable=len(obtainable), withDetails=sum(bool(result[e]['bloc
 research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
                 nativeEvidenceSha256=hashlib.sha256(evidence_path.read_bytes()).hexdigest(),
                 triggerEvidenceSha256=hashlib.sha256(trigger_path.read_bytes()).hexdigest(), coverage=coverage, effects=ledger)
+research['linkEvidenceSha256'] = hashlib.sha256(link_path.read_bytes()).hexdigest()
+research['scriptEvidenceSha256'] = hashlib.sha256(script_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

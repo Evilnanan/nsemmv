@@ -33,6 +33,9 @@ families = {
     'madness-fp': ([7035500, 7035510], '发狂后'),
     'weapon-change': ([7035900], '切换武器后'),
     'guard-hp': ([7036100], '防御成功时'),
+    'revenant-allies': ([7031200], '绝招发动时'),
+    'critical-runes': ([7031900], '致命一击时'),
+    'random-weapon': ([7035700], '切换武器后'),
 }
 events = {}
 for bundle in t['bundles']:

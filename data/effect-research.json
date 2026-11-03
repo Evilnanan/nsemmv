@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "1c8645907c2c8fb7cfbaff3fa607eb7af4925b564117861745f1dd5c36f72dec",
-  "triggerEvidenceSha256": "d859bf543526f5a63712e6d181af44dccb17b6c82e15a04fc5eb661a3f89e9bc",
+  "nativeEvidenceSha256": "366c498ba4f5e6f92b7a811fd7d108202548ffbe473a825822163acb16f2cfc2",
+  "triggerEvidenceSha256": "af78fb0e606b652b76ab3ce8d290fdf711d2eeebdd89e0b25eda2a04643a46d8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 472,
-    "withNumericFields": 457,
-    "nativeStacking": 254,
+    "withDetails": 499,
+    "withNumericFields": 464,
+    "nativeStacking": 255,
     "catalog": 2241,
-    "catalogWithDetails": 1899
+    "catalogWithDetails": 1932
   },
   "effects": {
     "0": {
@@ -302,15 +302,20 @@
       "states": [
         2039
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7031901
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "action-triggers",
+        "triggerMatching",
+        "action-triggers"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -373,7 +378,8 @@
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本",
+        "范围命中、多人来源叠加及再次发放时序"
       ],
       "gameplayVerified": false
     },
@@ -386,16 +392,21 @@
       "states": [
         2307
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7012201
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "bullet-links",
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -462,7 +473,8 @@
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本",
+        "范围命中、多人来源叠加及再次发放时序"
       ],
       "gameplayVerified": false
     },
@@ -475,15 +487,20 @@
       "states": [
         2020
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7031202
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "action-triggers",
+        "bullet-links"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -1319,11 +1336,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -1342,9 +1361,12 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -2343,11 +2365,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -2366,9 +2390,12 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -7353,9 +7380,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "defense"
+        "defense",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "6851001": {
@@ -7376,9 +7406,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "defense"
+        "defense",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "6851002": {
@@ -7399,9 +7432,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "defense"
+        "defense",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "6851100": {
@@ -7444,10 +7480,11 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
       "openQuestions": [
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -7466,11 +7503,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -7489,11 +7528,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -7515,9 +7556,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "6851501": {
@@ -7538,9 +7582,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "6851502": {
@@ -7561,9 +7608,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "6851700": {
@@ -9841,7 +9891,8 @@
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本",
+        "范围命中、多人来源叠加及再次发放时序"
       ],
       "gameplayVerified": false
     },
@@ -9854,16 +9905,21 @@
       "states": [
         2307
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7012201
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "bullet-links",
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -9882,11 +9938,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -9905,11 +9963,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -9928,11 +9988,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -10102,7 +10164,8 @@
       ],
       "openQuestions": [
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "范围命中、多人来源叠加及再次发放时序"
       ],
       "gameplayVerified": false
     },
@@ -10115,15 +10178,20 @@
       "states": [
         2020
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7031202
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "action-triggers",
+        "bullet-links"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -10266,15 +10334,20 @@
       "states": [
         2039
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7031901
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "action-triggers",
+        "triggerMatching",
+        "action-triggers"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -11093,7 +11166,8 @@
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "与其他附魔的覆盖顺序、武器适用条件及完整动作时序"
       ],
       "gameplayVerified": false
     },
@@ -11106,15 +11180,28 @@
       "states": [
         2272
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7035700,
+        7035703,
+        7035705,
+        7035707,
+        7035709,
+        7035711,
+        7035713,
+        7035715,
+        7035717
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "action-triggers",
+        "action-script"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -11316,15 +11403,17 @@
       "states": [
         2125
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7036501
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -12261,7 +12350,8 @@
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "范围命中、多人来源叠加及再次发放时序"
       ],
       "gameplayVerified": false
     },
@@ -12274,15 +12364,19 @@
       "states": [
         275
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7050001
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "bullet-links"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -13142,7 +13236,8 @@
         "gaugeApply"
       ],
       "openQuestions": [
-        "敌人分类标记的具体对象、共享奖励及重载路径"
+        "敌人分类标记的具体对象、共享奖励及重载路径",
+        "范围命中、多人来源叠加及再次发放时序"
       ],
       "gameplayVerified": false
     },
@@ -13155,15 +13250,19 @@
       "states": [
         199
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7090102
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "bullet-links"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为"
       ],
       "gameplayVerified": false
     },
@@ -13862,15 +13961,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7122700
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -13883,15 +13983,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7122800
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -13904,15 +14005,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7122900
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -13925,15 +14027,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123000
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -13946,15 +14049,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123100
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -13967,15 +14071,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123200
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -13988,15 +14093,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123300
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14009,15 +14115,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123400
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14030,15 +14137,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123500
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14051,15 +14159,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123600
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14072,15 +14181,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123700
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14093,15 +14203,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123800
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14114,15 +14225,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7123900
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14135,15 +14247,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124000
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14156,15 +14269,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124100
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14177,15 +14291,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124300
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14198,15 +14313,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124400
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14219,15 +14335,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124500
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14240,15 +14357,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124600
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -14261,15 +14379,16 @@
       "states": [
         2105
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7124700
+      ],
+      "values": "named-replacement",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "多个出击替换词条的优先顺序、角色限制"
       ],
       "gameplayVerified": false
     },
@@ -22107,14 +22226,15 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        8500100
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -22127,14 +22247,15 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        8500101
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -22147,14 +22268,15 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        8500102
+      ],
+      "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -23441,11 +23563,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -23464,11 +23588,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -23487,11 +23613,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -23510,11 +23638,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -23533,11 +23663,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -23556,11 +23688,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -23603,11 +23737,13 @@
       "values": "unresolved",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机",
+        "低血量状态切换与其他触发链的时序交互",
         "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
@@ -23630,9 +23766,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "8670001": {
@@ -23653,9 +23792,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "8670002": {
@@ -23676,9 +23818,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "8670100": {
@@ -23699,9 +23844,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "defense"
+        "defense",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "8670101": {
@@ -23722,9 +23870,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "defense"
+        "defense",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "8670102": {
@@ -23745,9 +23896,12 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "defense"
+        "defense",
+        "hpConditions"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
       "gameplayVerified": false
     },
     "8690000": {
@@ -24484,10 +24638,11 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
       "openQuestions": [
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24509,10 +24664,11 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "attack"
+        "attack",
+        "hpConditions"
       ],
       "openQuestions": [
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24534,10 +24690,11 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "gauge"
+        "gauge",
+        "hpConditions"
       ],
       "openQuestions": [
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24559,10 +24716,11 @@
       "evidence": [
         "equip-injection",
         "instance-matching",
-        "gauge"
+        "gauge",
+        "hpConditions"
       ],
       "openQuestions": [
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24581,11 +24739,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24604,11 +24764,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24627,11 +24789,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -24650,11 +24814,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -26115,12 +26281,14 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -26249,11 +26417,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -26399,11 +26569,13 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "hpConditions"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "血量阈值的比较方向、边界与状态更新时机"
+        "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
     },
@@ -48654,5 +48826,7 @@
       ],
       "gameplayVerified": false
     }
-  }
+  },
+  "linkEvidenceSha256": "19e5e35694f7732527c630b628707dc1e2322d527ba51312d823131638b3c6cf",
+  "scriptEvidenceSha256": "db73e932817e1cad403757b6c8faad8fce7e07fd0d559f50f5802ddd0f526f8c"
 }

@@ -9245,6 +9245,1572 @@
           }
         ]
       }
+    },
+    "7031200": {
+      "state": 2020,
+      "family": "revenant-allies",
+      "phase": "绝招发动时",
+      "seeds": [
+        7031201
+      ],
+      "events": {
+        "7031201": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2905,
+            "animation": 650000,
+            "index": 23,
+            "type": 67,
+            "start": 1.4,
+            "end": 1.5,
+            "parameters": "A1496B00000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "7031900": {
+      "state": 2039,
+      "family": "critical-runes",
+      "phase": "致命一击时",
+      "seeds": [
+        7031901
+      ],
+      "events": {
+        "7031901": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 40168,
+            "index": 60,
+            "type": 67,
+            "start": 0,
+            "end": 0.099999905,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 40176,
+            "index": 60,
+            "type": 67,
+            "start": 0,
+            "end": 0.0999999,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2023,
+            "animation": 31700,
+            "index": 42,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2023,
+            "animation": 31710,
+            "index": 27,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2023,
+            "animation": 31720,
+            "index": 45,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2023,
+            "animation": 31750,
+            "index": 53,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2023,
+            "animation": 31760,
+            "index": 73,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2025,
+            "animation": 31700,
+            "index": 54,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2025,
+            "animation": 31710,
+            "index": 47,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2025,
+            "animation": 31720,
+            "index": 19,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2025,
+            "animation": 31750,
+            "index": 64,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2030,
+            "animation": 31700,
+            "index": 61,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2030,
+            "animation": 31710,
+            "index": 40,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2030,
+            "animation": 31720,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2030,
+            "animation": 31750,
+            "index": 61,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2031,
+            "animation": 31740,
+            "index": 23,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2032,
+            "animation": 31700,
+            "index": 78,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2032,
+            "animation": 31710,
+            "index": 73,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2032,
+            "animation": 31720,
+            "index": 46,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2032,
+            "animation": 31750,
+            "index": 63,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2036,
+            "animation": 31700,
+            "index": 19,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2036,
+            "animation": 31710,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2036,
+            "animation": 31720,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2036,
+            "animation": 31750,
+            "index": 67,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2042,
+            "animation": 31700,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2042,
+            "animation": 31710,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2042,
+            "animation": 31720,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2042,
+            "animation": 31740,
+            "index": 49,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2042,
+            "animation": 31750,
+            "index": 64,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2042,
+            "animation": 31760,
+            "index": 76,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2043,
+            "animation": 31700,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2043,
+            "animation": 31710,
+            "index": 67,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2043,
+            "animation": 31720,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2043,
+            "animation": 31750,
+            "index": 64,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2044,
+            "animation": 31700,
+            "index": 50,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2044,
+            "animation": 31710,
+            "index": 57,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2044,
+            "animation": 31720,
+            "index": 62,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2044,
+            "animation": 31750,
+            "index": 56,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2044,
+            "animation": 31760,
+            "index": 80,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2047,
+            "animation": 31700,
+            "index": 60,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2047,
+            "animation": 31710,
+            "index": 65,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2047,
+            "animation": 31720,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2047,
+            "animation": 31750,
+            "index": 72,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2048,
+            "animation": 31700,
+            "index": 60,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2048,
+            "animation": 31710,
+            "index": 64,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2048,
+            "animation": 31720,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2048,
+            "animation": 31750,
+            "index": 71,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2049,
+            "animation": 31700,
+            "index": 60,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2049,
+            "animation": 31710,
+            "index": 64,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2049,
+            "animation": 31720,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2049,
+            "animation": 31750,
+            "index": 71,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2050,
+            "animation": 31700,
+            "index": 18,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2050,
+            "animation": 31710,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2050,
+            "animation": 31720,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2050,
+            "animation": 31750,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2070,
+            "animation": 31700,
+            "index": 42,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2070,
+            "animation": 31710,
+            "index": 26,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2070,
+            "animation": 31720,
+            "index": 46,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2070,
+            "animation": 31750,
+            "index": 53,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2070,
+            "animation": 31760,
+            "index": 73,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2071,
+            "animation": 31700,
+            "index": 42,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2071,
+            "animation": 31710,
+            "index": 26,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2071,
+            "animation": 31720,
+            "index": 45,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2071,
+            "animation": 31750,
+            "index": 53,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2071,
+            "animation": 31760,
+            "index": 73,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2080,
+            "animation": 31700,
+            "index": 19,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2080,
+            "animation": 31710,
+            "index": 19,
+            "type": 67,
+            "start": 0,
+            "end": 0.099999994,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2080,
+            "animation": 31720,
+            "index": 21,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2080,
+            "animation": 31730,
+            "index": 21,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2080,
+            "animation": 31750,
+            "index": 19,
+            "type": 67,
+            "start": 0,
+            "end": 0.099999964,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2270,
+            "animation": 31700,
+            "index": 58,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2270,
+            "animation": 31710,
+            "index": 48,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2270,
+            "animation": 31720,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2270,
+            "animation": 31750,
+            "index": 51,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2271,
+            "animation": 31700,
+            "index": 57,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2271,
+            "animation": 31710,
+            "index": 59,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2271,
+            "animation": 31720,
+            "index": 65,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2271,
+            "animation": 31750,
+            "index": 66,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2272,
+            "animation": 31700,
+            "index": 21,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2272,
+            "animation": 31710,
+            "index": 60,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2272,
+            "animation": 31720,
+            "index": 70,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2272,
+            "animation": 31750,
+            "index": 67,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2272,
+            "animation": 31760,
+            "index": 91,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2273,
+            "animation": 31700,
+            "index": 65,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2273,
+            "animation": 31710,
+            "index": 53,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2273,
+            "animation": 31720,
+            "index": 71,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2273,
+            "animation": 31750,
+            "index": 62,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31700,
+            "index": 1,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31700,
+            "index": 73,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31710,
+            "index": 2,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31710,
+            "index": 79,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31720,
+            "index": 1,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31720,
+            "index": 87,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31750,
+            "index": 1,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2274,
+            "animation": 31750,
+            "index": 87,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2275,
+            "animation": 31700,
+            "index": 55,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2275,
+            "animation": 31710,
+            "index": 54,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2275,
+            "animation": 31720,
+            "index": 63,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2275,
+            "animation": 31750,
+            "index": 62,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2277,
+            "animation": 31700,
+            "index": 59,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2277,
+            "animation": 31710,
+            "index": 54,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2277,
+            "animation": 31720,
+            "index": 71,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2277,
+            "animation": 31750,
+            "index": 54,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2278,
+            "animation": 31700,
+            "index": 25,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2278,
+            "animation": 31710,
+            "index": 29,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2278,
+            "animation": 31720,
+            "index": 24,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2278,
+            "animation": 31730,
+            "index": 20,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2278,
+            "animation": 31750,
+            "index": 28,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2279,
+            "animation": 31700,
+            "index": 57,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2279,
+            "animation": 31710,
+            "index": 61,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2279,
+            "animation": 31720,
+            "index": 66,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2279,
+            "animation": 31750,
+            "index": 74,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2280,
+            "animation": 31700,
+            "index": 72,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2280,
+            "animation": 31710,
+            "index": 53,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2280,
+            "animation": 31720,
+            "index": 67,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2280,
+            "animation": 31750,
+            "index": 75,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31700,
+            "index": 1,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31700,
+            "index": 73,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31710,
+            "index": 2,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31710,
+            "index": 79,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31720,
+            "index": 1,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31720,
+            "index": 87,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31750,
+            "index": 1,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2282,
+            "animation": 31750,
+            "index": 87,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2283,
+            "animation": 31700,
+            "index": 58,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2283,
+            "animation": 31710,
+            "index": 48,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2283,
+            "animation": 31720,
+            "index": 69,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2283,
+            "animation": 31750,
+            "index": 51,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "5D4C6B00000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "7035700": {
+      "state": 2272,
+      "family": "random-weapon",
+      "phase": "切换武器后",
+      "seeds": [
+        7035701
+      ],
+      "events": {
+        "7035701": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29020,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29021,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29022,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29023,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29050,
+            "index": 26,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29051,
+            "index": 26,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29052,
+            "index": 26,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2000,
+            "animation": 29053,
+            "index": 26,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29020,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29021,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29022,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29023,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29050,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29051,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29052,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2002,
+            "animation": 29053,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29020,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29021,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29022,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29023,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29050,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29051,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29052,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2003,
+            "animation": 29053,
+            "index": 17,
+            "type": 66,
+            "start": 0,
+            "end": 0.06666667,
+            "parameters": "355B6B00000000000000000000000000"
+          }
+        ]
+      }
     }
   }
 }

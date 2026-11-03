@@ -5,6 +5,8 @@ import source from "../../data/effect-detail-source.json";
 import evidence from "../../data/effect-native-evidence.json";
 import research from "../../data/effect-research.json";
 import triggers from "../../data/effect-trigger-source.json";
+import links from "../../data/effect-link-source.json";
+import scripts from "../../data/effect-script-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
@@ -196,6 +198,74 @@ describe("MMV effect details", () => {
       )!.value,
     ).toBeCloseTo(0.72);
   });
+  it("uses native HP boundaries including float rounding and full-HP lower limits", () => {
+    expect(effectDetail(6851200)!.blocks[0].restrictions).toContain(
+      "血量 < 84.99%",
+    );
+    expect(effectDetail(7012300)!.blocks[0].restrictions).toContain(
+      "血量 < 40%",
+    );
+    expect(effectDetail(6851000)!.blocks[0].restrictions).toContain("满血时");
+    for (const id of [6851200, 7012300, 6851000]) {
+      const cases = evidence.hpConditions.filter((r) => r.id === id);
+      expect(cases.every((r) => r.fullUpdate)).toBe(true);
+      expect(cases.find((r) => r.ratio === r.boundary)!.enabled).toBe(true);
+      expect(cases.some((r) => !r.enabled)).toBe(true);
+    }
+  });
+  it("follows aura recipients and avoids presenting a refresh lease as the ability duration", () => {
+    expect(links.regulationSha256).toBe(catalog.regulationSha256);
+    const aura = effectDetail(7050000)!.blocks[0];
+    expect(aura.values).toEqual([["精力恢复速度", "+4"]]);
+    expect(aura.duration).toBeNull();
+    expect(links.emitters["7050000"].includeSelf).toBe(false);
+    const lowHp = effectDetail(7012200)!;
+    expect(lowHp.blocks[0].values).toEqual([
+      ["HP定值恢复", "1"],
+      ["HP恢复", "最大值的 0.5%"],
+    ]);
+    expect(lowHp.blocks[0].duration).toBe(50);
+    expect(lowHp.blocks[0].interval).toBe(1);
+    expect(links.emitters["7012202"].includeSelf).toBe(true);
+    expect(lowHp.notes.join()).toContain("不要求一直维持低血量");
+    expect(effectDetail(7090100)!.blocks).toHaveLength(1);
+    expect(effectDetail(7090100)!.blocks[0].values).toEqual([
+      ["HP定值恢复", "20"],
+    ]);
+    expect(effectDetail(7031200)!.blocks[0].values).toEqual([
+      ["攻击倍率", "+25%"],
+    ]);
+  });
+  it("shows executed HKS probabilities as alternatives, not simultaneous enchantments", () => {
+    const effect = scripts.effects["7035700"];
+    expect(scripts.gameplayVerified).toBe(false);
+    expect(effect.cases).toHaveLength(212);
+    expect(effect.branches.map((b) => b.chance)).toEqual([26, 25, 25, 24]);
+    const detail = effectDetail(7035700)!;
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].values).toContainEqual([
+      "属性攻击力",
+      "+20（随机一种）",
+    ]);
+    expect(detail.blocks[0].duration).toBe(10);
+    expect(detail.stacking).toBe("待确认");
+    expect(effectDetail(7031900)!.blocks[0].values).toEqual([
+      ["获得卢恩", "+600"],
+    ]);
+    expect(effectDetail(7031900)!.blocks[0].duration).toBeNull();
+    expect(effectDetail(7036500)!.blocks[0].values).toEqual([
+      ["获得卢恩", "+1300"],
+    ]);
+    for (const [path, hash] of [
+      ["effect-link-source.json", research.linkEvidenceSha256],
+      ["effect-script-evidence.json", research.scriptEvidenceSha256],
+    ])
+      expect(
+        createHash("sha256")
+          .update(readFileSync(new URL("../../data/" + path, import.meta.url)))
+          .digest("hex"),
+      ).toBe(hash);
+  });
   it("uses executed native calculations for additive stats and multiplicative rates", () => {
     expect(effectDetail(7000000)!.stackingDetail).toBe("能力值相加");
     expect(effectDetail(7000800)!.stackingDetail).toBe("冷却时间倍率相乘");
@@ -288,6 +358,11 @@ describe("MMV effect details", () => {
       "额外发放条件待确认",
     ]);
     expect(blocks[1].restrictions).toContain("需满足指定状态");
+    expect(effectDetail(7122700)!.blocks[0].values).toEqual([
+      ["出击时替换", "辉剑圆阵"],
+    ]);
+    expect(source.artsTextIds["200"]).toBe(200);
+    expect(source.labels.SwordArtsName["200"]).toBe("辉剑圆阵");
   });
   it("shows level-dependent hero adjustments, including signed native truncation", () => {
     const detail = effectDetail(6646100)!;

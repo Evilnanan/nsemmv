@@ -8479,6 +8479,31 @@
       ],
       "accumulatorAfterFirstTick": null,
       "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7031901,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7031901,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0,
+        1.133333
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
     }
   ],
   "damageStatus": [
@@ -9064,6 +9089,12 @@
       "reused": true
     },
     {
+      "family": "critical-runes",
+      "existing": 7031901,
+      "incoming": 7031901,
+      "reused": true
+    },
+    {
       "family": "raider-hit",
       "existing": 7031302,
       "incoming": 7031302,
@@ -9156,6 +9187,30 @@
         7030922
       ],
       "value": 1.5443999767303467
+    },
+    {
+      "family": "critical-runes",
+      "ids": [
+        7031901
+      ],
+      "flags": 0,
+      "value": 0
+    },
+    {
+      "family": "critical-runes",
+      "ids": [
+        7031901
+      ],
+      "flags": 4,
+      "value": 600
+    },
+    {
+      "family": "critical-runes",
+      "ids": [
+        7031901
+      ],
+      "flags": 2148270083,
+      "value": 0
     }
   ],
   "extraGetters": [
@@ -9348,6 +9403,2008 @@
       "category": 0,
       "reused": true,
       "categoryMatch": false
+    }
+  ],
+  "hpConditions": [
+    {
+      "id": 320400,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 320400,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 320400,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 320400,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 320400,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 320400,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 320500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 320500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 320500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 320500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 340800,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 340800,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 340800,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 340800,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 340800,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 340800,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 340900,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 340900,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 340900,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 340900,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": true
+    },
+    {
+      "id": 6851300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851500,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851501,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851501,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851501,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851501,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851502,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851502,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851502,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851502,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012200,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012200,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012200,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012200,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012200,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012200,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": true
+    },
+    {
+      "id": 7012300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": true
+    },
+    {
+      "id": 7012300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": true
+    },
+    {
+      "id": 7012300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": true
+    },
+    {
+      "id": 7012300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": true
+    },
+    {
+      "id": 7012300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": true
+    },
+    {
+      "id": 7012301,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012301,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012301,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012301,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012301,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012301,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012302,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012302,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012302,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012302,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012302,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 7012302,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660000,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660000,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660000,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660000,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660000,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660000,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660001,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660001,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660001,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660001,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660001,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660001,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660002,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660002,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660002,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660002,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660002,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660002,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660100,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660100,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660100,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660100,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660100,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660100,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660101,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660101,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660101,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660101,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660101,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660101,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660102,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660102,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660102,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660102,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660102,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660102,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999899625778198,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.3999999761581421,
+      "enabled": true,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.4000000059604645,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 0.40000998973846436,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8660300,
+      "upper": 40,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.3999999761581421,
+      "nominal": 0.4000000059604645,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670000,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670001,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670002,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670100,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670100,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670100,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670100,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670101,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670101,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670101,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670101,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670102,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670102,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670102,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8670102,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810000,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810000,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810000,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810000,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810000,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810000,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810050,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810050,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810050,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810050,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810050,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810050,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810200,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810250,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810250,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810250,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810250,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810250,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810250,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810300,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810350,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810350,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810350,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810350,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810350,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810350,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810400,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810450,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810450,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810450,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810450,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810450,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810450,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
     }
   ],
   "recoveryTiming": {

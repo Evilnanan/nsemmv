@@ -29,9 +29,13 @@ if (hashes["regulation.bin"] != "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f
 var binder = SFUtil.DecryptNightreignRegulation(regulation);
 if (binder.Version != "10350000") throw new InvalidDataException("Unsupported regulation version");
 var tables = new SortedDictionary<string, SortedDictionary<int, SortedDictionary<string, double>>>();
-foreach (var name in new[] { "AttachEffectParam", "SpEffectParam", "HeroStatusParam", "EquipParamGoods" }) {
-    var defPath = Path.Combine(smithbox, "Assets/PARAM/NR/Defs", name + ".xml");
-    hashes["defs/" + name + ".xml"] = Hash(defPath);
+var tableNames = new[] { "AttachEffectParam", "SpEffectParam", "HeroStatusParam", "EquipParamGoods", "SwordArtsParam" };
+if (args.Length == 5)
+    tableNames = tableNames.Concat(new[] { "BehaviorParam_PC", "Bullet", "AtkParam_Pc", "Magic" }).ToArray();
+foreach (var name in tableNames) {
+    var defName = name == "BehaviorParam_PC" ? "BehaviorParam" : name == "AtkParam_Pc" ? "AtkParam" : name;
+    var defPath = Path.Combine(smithbox, "Assets/PARAM/NR/Defs", defName + ".xml");
+    hashes["defs/" + defName + ".xml"] = Hash(defPath);
     var definition = XDocument.Load(defPath);
     foreach (var field in definition.Root!.Element("Fields")!.Elements("Field").ToArray()) {
         if (10350000UL < ((ulong?)field.Attribute("FirstVersion") ?? 0) ||
@@ -70,8 +74,9 @@ foreach (var (folder, locale) in new[] { ("engus", "en_US"), ("zhocn", "zh_CN") 
         var messages = BND4.Read(path);
         foreach (var name in kind == "item" ? new[] { "AttachEffectInfo", "AttachEffectName", "GoodsName", "MagicName", "SwordArtsName" } : new[] { "SpEffectInfo", "SpEffectName", "SpEffectCaption" }) {
             var entries = new SortedDictionary<int, string>();
+            var fmgName = name == "SwordArtsName" ? "ArtsName" : name;
             foreach (var suffix in new[] { "", "_dlc01" }) {
-                var file = messages.Files.SingleOrDefault(f => Path.GetFileName(f.Name.Replace('\\', '/')) == $"{name}{suffix}.fmg");
+                var file = messages.Files.SingleOrDefault(f => Path.GetFileName(f.Name.Replace('\\', '/')) == $"{fmgName}{suffix}.fmg");
                 if (file == null) continue;
                 foreach (var entry in FMG.Read(file.Bytes).Entries)
                     if (!string.IsNullOrWhiteSpace(entry.Text)) entries[entry.ID] = entry.Text.Trim();

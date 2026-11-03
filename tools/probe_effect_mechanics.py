@@ -301,7 +301,7 @@ def invoke(u, rva, args, xmm_args=None):
 # Actual timer/refresh/accumulator routines, keeping one live synthetic node.
 # Periodic restore getters consume flag 4; no lifetime or cooldown calculation is stubbed.
 timing = []
-for id in [7036001, 7036011, 350401, 350502, 350602, 7100101, 8600105, 8600111, 8600205, 8600211, 7036102]:
+for id in [7036001, 7036011, 350401, 350502, 350602, 7100101, 8600105, 8600111, 8600205, 8600211, 7036102, 7031901]:
     row = x['tables']['SpEffectParam'][str(id)]
     for mode in ['none', 'once', 'continuous']:
         if mode == 'continuous' and id not in (7100101, 8600211, 350602):
@@ -397,6 +397,7 @@ trigger_families = {
     'bolus': [7030202, 7030212], 'guard-gauge': [7030602, 7030612],
     'critical-gauge': [7030802, 7030812], 'grease': [7030902, 7030912, 7030922],
     'critical-stamina': [7035102, 7035112, 7035122],
+    'critical-runes': [7031901],
     'raider-hit': [7031302], 'sixth-sense-gauge': [7032402],
     'sixth-sense-attack': [7032501], 'ironeye-counter': [7034702],
     'madness-fp': [7035502, 7035512], 'weapon-change': [7035902], 'guard-hp': [7036102],
@@ -421,6 +422,10 @@ u = run(0x502830, ids, [OBJ, OBJ + 0x800, -1, -1], kind=0)
 value = struct.unpack('<f', u.mem_read(OBJ + 0x890, 4))[0]
 assert math.isclose(value, 1.1 * 1.17 * 1.2, rel_tol=1e-6)
 trigger_values.append(dict(family='grease', ids=ids, value=value))
+for flags in (0, 4, 0x800c0003):
+    value = run(0x505af0, [7031901], [OBJ], flags=flags).reg_read(UC_X86_REG_RAX)
+    assert value == (600 if flags == 4 else 0)
+    trigger_values.append(dict(family='critical-runes', ids=[7031901], flags=flags, value=value))
 
 extra_getters = []
 for rva, field, cases in [
@@ -448,6 +453,28 @@ for existing in (7230000, 7230001):
 def f32(v):
     return struct.unpack('<f', struct.pack('<f', v))[0]
 
+hp_conditions = []
+detail_source = json.loads((Path(__file__).resolve().parents[1] / 'data/effect-detail-source.json').read_text())
+for id in map(int, detail_source['spells']):
+    row = x['tables']['SpEffectParam'][str(id)]
+    upper, lower = row['conditionHp'], row['conditionHpRate']
+    if upper <= 0 and lower <= 0:
+        continue
+    bound = f32(f32(upper if upper > 0 else lower) * f32(0.01))
+    nominal = f32(round(upper if upper > 0 else lower, 3) / 100)
+    for ratio in sorted({0., f32(bound - 0.00001), bound, nominal, f32(bound + 0.00001), 1.}):
+        expected = (upper < 0 or ratio <= f32(upper * f32(.01))) and (lower < 0 or ratio >= f32(lower * f32(.01)))
+        u = run(0x50fc30, [id], [OBJ + 0x1000], flags=1, xmm_args={UC_X86_REG_XMM1:ratio})
+        enabled = u.mem_read(OBJ + 0x1068, 1)[0] == 4
+        assert enabled == expected, (id, ratio, enabled, expected)
+        if id in (6851200, 7012300, 6851000):
+            u = run(0x50f740, [id], [OBJ + 0x1000, 0, OBJ, 0], flags=4,
+                    setup=lambda u:u.mem_write(OBJ + 0x104c, struct.pack('<f', -1)),
+                    xmm_args={UC_X86_REG_XMM1:ratio})
+            assert (u.mem_read(OBJ + 0x1068, 1)[0] == 4) == expected
+        hp_conditions.append(dict(id=id, upper=upper, lower=lower, ratio=ratio, enabled=enabled,
+                                  boundary=bound, nominal=nominal, fullUpdate=id in (6851200, 7012300, 6851000)))
+
 hero = []
 modifiers = sorted({int(row['heroStatusModifier']) for row in x['tables']['SpEffectParam'].values() if row['stateInfo'] == 2123 and row['heroStatusModifier'] >= 0})
 for modifier in modifiers:
@@ -474,7 +501,7 @@ groups = dict(predicates=predicate, attributes=attributes, attack=attack, defens
               discovery=discovery, gauge=gauge, hero=hero, resistance=resistance, fpCost=fp_cost,
               skillUses=skill_uses, killMatching=kill_matching, killDispatch=kill_dispatch, gaugeApply=gauge_apply,
               timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
-              extraGetters=extra_getters, shopMatching=shop_matching)
+              extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(), **groups, recoveryTiming=recovery_timing, stubs=sorted(calls), gameplayVerified=False), indent=2) + '\n')
 print('PASS:', ', '.join(f'{k}={len(v)}' for k, v in groups.items()))
 print(f'Restore-only PARAM rows matched to tested timer families: {len(recovery_timing)}')
