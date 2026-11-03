@@ -17,13 +17,11 @@ test("local save: open, modify, undo, export, reopen and retain another slot", a
   await expect(page.getByRole("heading", { name: "遗物工坊" })).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath("landing.png") });
   const bytes = fixture({ 0: character(), 1: character() });
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(bytes),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(bytes),
+  });
   await expect(page.getByLabel("角色槽")).toBeVisible();
   await expect(page.getByLabel("Item ID")).toHaveValue("100");
   await page.getByLabel("角色槽").selectOption("1");
@@ -98,13 +96,11 @@ test("MMV search includes cross-item candidates and requires curse before applyi
   page,
 }) => {
   await page.goto("/");
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(fixture()),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(fixture()),
+  });
   await page.getByRole("button", { name: "新增遗物", exact: true }).click();
   await page.getByRole("button", { name: "深层", exact: true }).click();
   await page.getByLabel("搜索遗物类型").fill("2000100");
@@ -128,13 +124,11 @@ test("shop relics have no editable fields or deletion action", async ({
   const { fixedRoll } = await import("../src/core/rules");
   session.apply(0, { type: "add", id: 11015, roll: fixedRoll(11015)! });
   await page.goto("/");
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(session.export()),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(session.export()),
+  });
   await page.locator(".relic-card").filter({ hasText: "11015" }).click();
   await expect(page.getByLabel("Item ID")).toBeDisabled();
   await expect(
@@ -149,4 +143,92 @@ test("shop relics have no editable fields or deletion action", async ({
   await expect(page.locator(".type-chip")).toContainText("商店遗物");
   for (const cell of await page.locator(".effect-cell").all())
     await expect(cell).toBeDisabled();
+});
+
+test("edits a preset relic in place, retains the preset draft and protects shop relics", async ({
+  page,
+}, testInfo) => {
+  const session = Session.open(fixture(), "test");
+  const { fixedRoll } = await import("../src/core/rules");
+  const shop = session.apply(0, {
+    type: "add",
+    id: 11015,
+    roll: fixedRoll(11015)!,
+  })!;
+  const handles = [0xc0800054, 0, 0, shop, 0, 0];
+  for (const name of ["预设一", "预设二"])
+    session.apply(0, { type: "preset", hero: 7, vessel: 19000, handles, name });
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/");
+  await page
+    .getByLabel("打开存档文件")
+    .setInputFiles({
+      name: "NR0000.dbb",
+      mimeType: "application/octet-stream",
+      buffer: Buffer.from(session.export()),
+    });
+  await page.getByRole("button", { name: "预设", exact: true }).click();
+  await page.locator(".preset-card").filter({ hasText: "预设一" }).click();
+  await page.getByLabel("预设名称").fill("保留中文草稿");
+  await expect(
+    page.getByRole("button", { name: "编辑预设遗物 2", exact: true }),
+  ).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "编辑预设遗物 1", exact: true })
+    .click();
+  await page.locator(".preset-relic-editor .effect-cell").first().click();
+  await page.getByLabel("搜索词条").fill("7000100");
+  await page.locator(".picker-row").filter({ hasText: "7000100" }).click();
+  await page.screenshot({
+    path: testInfo.outputPath("preset-relic-editor.png"),
+  });
+  expect(
+    await page
+      .locator("dialog")
+      .evaluate((el) => el.scrollWidth <= el.clientWidth),
+  ).toBe(true);
+  await page.getByRole("button", { name: "应用修改", exact: true }).click();
+  await expect(page.getByLabel("预设名称")).toHaveValue("保留中文草稿");
+  await page
+    .getByRole("button", { name: "编辑预设遗物 1", exact: true })
+    .click();
+  await expect(page.locator(".effect-cell").first()).toContainText("7000100");
+  await page.locator(".effect-cell").first().click();
+  await page.getByLabel("搜索词条").fill("7000000");
+  await page.locator(".picker-row").filter({ hasText: "7000000" }).click();
+  page.once("dialog", (d) => d.accept());
+  await page.getByRole("button", { name: "关闭", exact: true }).click();
+  await expect(page.getByLabel("预设名称")).toHaveValue("保留中文草稿");
+  await page
+    .getByRole("button", { name: "查看预设遗物 4", exact: true })
+    .click();
+  await expect(page.getByLabel("Item ID")).toBeDisabled();
+  await expect(
+    page.getByRole("button", { name: "应用修改", exact: true }),
+  ).toBeDisabled();
+  for (const cell of await page.locator(".effect-cell").all())
+    await expect(cell).toBeDisabled();
+  await page.getByRole("button", { name: "关闭", exact: true }).click();
+  await page.getByRole("button", { name: "保存预设", exact: true }).click();
+  const download = page.waitForEvent("download");
+  await page.getByRole("button", { name: "导出存档", exact: true }).click();
+  const result = Session.open(
+    new Uint8Array(await readFile((await (await download).path())!)),
+    "result",
+  );
+  const view = result.view(0);
+  expect(view.relics).toHaveLength(2);
+  expect(view.relics.find((r) => r.handle === 0xc0800054)?.roll[0].effect).toBe(
+    7000100,
+  );
+  expect(view.relics.find((r) => r.handle === shop)?.roll).toEqual(
+    fixedRoll(11015),
+  );
+  expect(view.loadouts?.presets.map((p) => p.name)).toEqual([
+    "保留中文草稿",
+    "预设二",
+  ]);
+  for (const p of view.loadouts!.presets) expect(p.handles).toEqual(handles);
+  expect(errors).toEqual([]);
 });

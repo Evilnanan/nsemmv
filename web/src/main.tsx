@@ -23,6 +23,8 @@ import {
   LoaderCircle,
   Copy,
   Sword,
+  Pencil,
+  Eye,
   Github,
 } from "lucide-react";
 import {
@@ -775,126 +777,14 @@ function App() {
                           )}
                         </div>
                       </header>
-                      <div className="item-line">
-                        <label>
-                          Item ID
-                          <input
-                            aria-label="Item ID"
-                            disabled={
-                              !!meta?.shop ||
-                              !!catalog.relics[current?.id ?? 0]?.shop
-                            }
-                            type="number"
-                            min="1"
-                            value={draft.id}
-                            onChange={(e) =>
-                              setDraft({ ...draft, id: Number(e.target.value) })
-                            }
-                          />
-                        </label>
-                        <span className={`type-chip color-${meta?.color ?? 4}`}>
-                          {meta?.shop
-                            ? "商店遗物"
-                            : meta?.deep
-                              ? "深层"
-                              : "普通"}{" "}
-                          · {colorNames[meta?.color ?? 4]}
-                        </span>
-                        <div className="spacer" />
-                        <Tool
-                          icon={WandSparkles}
-                          label="Auto Fix"
-                          disabled={busy || !!meta?.shop}
-                          onClick={() => {
-                            const fixed = autoFix(draft.id, draft.roll);
-                            setDraft({
-                              ...draft,
-                              id: fixed.id,
-                              roll: fixed.roll,
-                            });
-                          }}
-                        />
-                      </div>
-                      <div className="effect-grid">
-                        <div className="effect-table-head">
-                          <span />
-                          <span>Effect</span>
-                          <span>Curse</span>
-                        </div>
-                        {draft.roll.map((pair, i) => (
-                          <div className="effect-pair" key={i}>
-                            <span className="pair-number">0{i + 1}</span>
-                            {([false, true] as const).map((curse) => {
-                              const id = curse ? pair.curse : pair.effect;
-                              return (
-                                <button
-                                  key={String(curse)}
-                                  className={`effect-cell ${curse ? "curse" : ""} ${issues.some((x) => x.slot === i + (curse ? 3 : 0)) ? "invalid" : ""}`}
-                                  onClick={() => setPicker({ slot: i, curse })}
-                                  disabled={busy || !!meta?.shop}
-                                >
-                                  <span>{effectName(id)}</span>
-                                  <code>
-                                    {id === EMPTY || id === 0 ? (
-                                      <Plus size={14} />
-                                    ) : (
-                                      id
-                                    )}
-                                  </code>
-                                </button>
-                              );
-                            })}
-                          </div>
-                        ))}
-                      </div>
-                      <footer className="detail-footer">
-                        <div
-                          className={`validation ${issues.length ? "bad" : "good"}`}
-                          aria-live="polite"
-                        >
-                          {issues.length ? (
-                            <CircleAlert size={16} />
-                          ) : (
-                            <ShieldCheck size={16} />
-                          )}
-                          <span>
-                            {issues.length
-                              ? [...new Set(issues.map((i) => i.message))].join(
-                                  " · ",
-                                )
-                              : "合法"}
-                          </span>
-                        </div>
-                        <button
-                          className="apply"
-                          title="应用修改"
-                          aria-label="应用修改"
-                          disabled={
-                            busy ||
-                            !draftDirty ||
-                            !!issues.length ||
-                            !!(draft.handle !== undefined && meta?.shop)
-                          }
-                          onClick={() =>
-                            void apply(
-                              draft.handle === undefined
-                                ? {
-                                    type: "add",
-                                    id: draft.id,
-                                    roll: draft.roll,
-                                  }
-                                : {
-                                    type: "edit",
-                                    handle: draft.handle,
-                                    id: draft.id,
-                                    roll: draft.roll,
-                                  },
-                            )
-                          }
-                        >
-                          <Check size={19} />
-                        </button>
-                      </footer>
+                      <RelicFields
+                        draft={draft}
+                        setDraft={setDraft}
+                        current={current}
+                        busy={busy}
+                        apply={apply}
+                        setPicker={setPicker}
+                      />
                     </>
                   ) : (
                     <div className="detail-empty">
@@ -957,6 +847,149 @@ function App() {
     </div>
   );
 }
+function RelicFields({
+  draft,
+  setDraft,
+  current,
+  busy,
+  apply,
+  setPicker,
+  slotRule,
+}: {
+  draft: Draft;
+  setDraft: (draft: Draft) => void;
+  current?: SessionView["relics"][number];
+  busy: boolean;
+  apply: (op: Edit) => Promise<unknown>;
+  setPicker: (picker: { slot: number; curse: boolean }) => void;
+  slotRule?: { color: number; deep: boolean };
+}) {
+  const meta = catalog.relics[draft.id];
+  const readOnly = !!catalog.relics[current?.id ?? 0]?.shop;
+  const draftDirty =
+    draft.handle === undefined ||
+    draft.id !== current?.id ||
+    JSON.stringify(draft.roll) !== JSON.stringify(current?.roll);
+  const issues = checkRoll(draft.id, draft.roll);
+  if (
+    slotRule &&
+    meta &&
+    (meta.deep !== slotRule.deep ||
+      (slotRule.color !== 4 && meta.color !== slotRule.color))
+  )
+    issues.push({ code: "preset-slot", message: "遗物类型或颜色不匹配" });
+  return (
+    <>
+      <div className="item-line">
+        <label>
+          Item ID
+          <input
+            aria-label="Item ID"
+            disabled={!!meta?.shop || readOnly}
+            type="number"
+            min="1"
+            value={draft.id}
+            onChange={(e) => setDraft({ ...draft, id: Number(e.target.value) })}
+          />
+        </label>
+        <span className={`type-chip color-${meta?.color ?? 4}`}>
+          {meta?.shop ? "商店遗物" : meta?.deep ? "深层" : "普通"} ·{" "}
+          {colorNames[meta?.color ?? 4]}
+        </span>
+        <div className="spacer" />
+        <Tool
+          icon={WandSparkles}
+          label="Auto Fix"
+          disabled={busy || readOnly || !!meta?.shop}
+          onClick={() => {
+            const fixed = autoFix(draft.id, draft.roll);
+            setDraft({
+              ...draft,
+              id: fixed.id,
+              roll: fixed.roll,
+            });
+          }}
+        />
+      </div>
+      <div className="effect-grid">
+        <div className="effect-table-head">
+          <span />
+          <span>Effect</span>
+          <span>Curse</span>
+        </div>
+        {draft.roll.map((pair, i) => (
+          <div className="effect-pair" key={i}>
+            <span className="pair-number">0{i + 1}</span>
+            {([false, true] as const).map((curse) => {
+              const id = curse ? pair.curse : pair.effect;
+              return (
+                <button
+                  key={String(curse)}
+                  className={`effect-cell ${curse ? "curse" : ""} ${issues.some((x) => x.slot === i + (curse ? 3 : 0)) ? "invalid" : ""}`}
+                  onClick={() => setPicker({ slot: i, curse })}
+                  disabled={busy || readOnly || !!meta?.shop}
+                >
+                  <span>{effectName(id)}</span>
+                  <code>
+                    {id === EMPTY || id === 0 ? <Plus size={14} /> : id}
+                  </code>
+                </button>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+      <footer className="detail-footer">
+        <div
+          className={`validation ${issues.length ? "bad" : "good"}`}
+          aria-live="polite"
+        >
+          {issues.length ? (
+            <CircleAlert size={16} />
+          ) : (
+            <ShieldCheck size={16} />
+          )}
+          <span>
+            {issues.length
+              ? [...new Set(issues.map((i) => i.message))].join(" · ")
+              : "合法"}
+          </span>
+        </div>
+        <button
+          className="apply"
+          title="应用修改"
+          aria-label="应用修改"
+          disabled={
+            busy ||
+            !draftDirty ||
+            !!issues.length ||
+            readOnly ||
+            !!(draft.handle !== undefined && meta?.shop)
+          }
+          onClick={() =>
+            void apply(
+              draft.handle === undefined
+                ? {
+                    type: "add",
+                    id: draft.id,
+                    roll: draft.roll,
+                  }
+                : {
+                    type: "edit",
+                    handle: draft.handle,
+                    id: draft.id,
+                    roll: draft.roll,
+                  },
+            )
+          }
+        >
+          <Check size={19} />
+        </button>
+      </footer>
+    </>
+  );
+}
+
 function Presets({
   error,
   view,
@@ -979,6 +1012,29 @@ function Presets({
     } | null>(null),
     [slot, setSlot] = useState<number | null>(null),
     [search, setSearch] = useState("");
+  const [relicEdit, setRelicEdit] = useState<{
+    draft: Draft;
+    slot: number;
+  } | null>(null);
+  const [relicPicker, setRelicPicker] = useState<{
+    slot: number;
+    curse: boolean;
+  } | null>(null);
+  const relicCurrent = view.relics.find(
+    (r) => r.handle === relicEdit?.draft.handle,
+  );
+  const relicDirty =
+    !!relicEdit &&
+    (relicEdit.draft.id !== relicCurrent?.id ||
+      JSON.stringify(relicEdit.draft.roll) !==
+        JSON.stringify(relicCurrent?.roll));
+  function closeRelic() {
+    if (busy) return;
+    if (!relicDirty || window.confirm("放弃未应用的修改？")) {
+      setRelicEdit(null);
+      setRelicPicker(null);
+    }
+  }
   const stored = view.loadouts?.presets.find((p) => p.index === edit?.index);
   const changed =
     !!edit &&
@@ -988,9 +1044,9 @@ function Presets({
       edit.vessel !== stored.vessel ||
       edit.handles.join() !== stored.handles.join());
   useEffect(() => {
-    onDirty(changed);
+    onDirty(changed || relicDirty);
     return () => onDirty(false);
-  }, [changed, onDirty]);
+  }, [changed, relicDirty, onDirty]);
   const l = view.loadouts;
   const available = (hero: number) =>
     l?.vessels.filter(
@@ -1054,7 +1110,7 @@ function Presets({
           </button>
         ))}
       </div>
-      {edit && (
+      {edit && !relicEdit && (
         <Modal
           title="预设"
           onClose={() => {
@@ -1123,22 +1179,40 @@ function Presets({
                 const r = view.relics.find((r) => r.handle === h),
                   m = r && catalog.relics[r.id];
                 return (
-                  <button
-                    key={i}
-                    aria-label={`预设遗物 ${i + 1}`}
-                    className={`preset-slot ${slot === i ? "on" : ""}`}
-                    onClick={() => {
-                      setSlot(i);
-                      setSearch("");
-                    }}
-                  >
-                    <Gem
-                      size={22}
-                      className={`color-${catalog.vessels[edit.vessel].colors[i]}`}
-                    />
-                    <span>{m?.name.zh_CN ?? "—"}</span>
-                    <small>{i < 3 ? "普通" : "深层"}</small>
-                  </button>
+                  <div className="preset-slot-cell" key={i}>
+                    <button
+                      aria-label={`预设遗物 ${i + 1}`}
+                      className={`preset-slot ${slot === i ? "on" : ""}`}
+                      onClick={() => {
+                        setSlot(i);
+                        setSearch("");
+                      }}
+                    >
+                      <Gem
+                        size={22}
+                        className={`color-${catalog.vessels[edit.vessel].colors[i]}`}
+                      />
+                      <span>{m?.name.zh_CN ?? "—"}</span>
+                      <small>{i < 3 ? "普通" : "深层"}</small>
+                    </button>
+                    {r && (
+                      <Tool
+                        icon={m?.shop ? Eye : Pencil}
+                        label={`${m?.shop ? "查看" : "编辑"}预设遗物 ${i + 1}`}
+                        disabled={busy}
+                        onClick={() =>
+                          setRelicEdit({
+                            slot: i,
+                            draft: {
+                              handle: r.handle,
+                              id: r.id,
+                              roll: r.roll.map((p) => ({ ...p })),
+                            },
+                          })
+                        }
+                      />
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -1263,6 +1337,57 @@ function Presets({
             </div>
           </div>
         </Modal>
+      )}
+      {edit && relicEdit && (
+        <Modal title="遗物" onClose={closeRelic}>
+          <div className="preset-relic-editor">
+            <h3>
+              {catalog.relics[relicEdit.draft.id]?.name.zh_CN ?? "未知遗物"}
+            </h3>
+            <RelicFields
+              draft={relicEdit.draft}
+              setDraft={(draft) => setRelicEdit({ ...relicEdit, draft })}
+              current={relicCurrent}
+              busy={busy}
+              setPicker={setRelicPicker}
+              slotRule={{
+                color: catalog.vessels[edit.vessel].colors[relicEdit.slot],
+                deep: relicEdit.slot >= 3,
+              }}
+              apply={async (op) => {
+                const result = await apply(op);
+                if (result) {
+                  setRelicEdit(null);
+                  setRelicPicker(null);
+                }
+                return result;
+              }}
+            />
+            {error && (
+              <div className="validation bad" role="alert">
+                <CircleAlert size={16} />
+                {error}
+              </div>
+            )}
+          </div>
+        </Modal>
+      )}
+      {relicEdit && relicPicker && (
+        <EffectPicker
+          itemId={relicEdit.draft.id}
+          curse={relicPicker.curse}
+          onClose={() => setRelicPicker(null)}
+          onPick={(id) => {
+            const roll = relicEdit.draft.roll.map((p) => ({ ...p }));
+            roll[relicPicker.slot][relicPicker.curse ? "curse" : "effect"] = id;
+            const fixed = autoFix(relicEdit.draft.id, roll);
+            setRelicEdit({
+              ...relicEdit,
+              draft: { ...relicEdit.draft, id: fixed.id, roll: fixed.roll },
+            });
+            setRelicPicker(null);
+          }}
+        />
       )}
     </main>
   );
