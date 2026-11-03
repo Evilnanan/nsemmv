@@ -8454,6 +8454,31 @@
       ],
       "accumulatorAfterFirstTick": null,
       "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7036102,
+      "refreshAt": null,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
+    },
+    {
+      "id": 7036102,
+      "refreshAt": 0.2,
+      "refreshEvery": null,
+      "lifetime": 1,
+      "interval": 1.100000023841858,
+      "ticks": [
+        0,
+        1.133333
+      ],
+      "accumulatorAfterFirstTick": null,
+      "accumulatorAfterNewAttacks": null
     }
   ],
   "damageStatus": [
@@ -8857,6 +8882,474 @@
       "remaining": 968
     }
   ],
+  "triggerMatching": [
+    {
+      "family": "bolus",
+      "existing": 7030202,
+      "incoming": 7030202,
+      "reused": true
+    },
+    {
+      "family": "bolus",
+      "existing": 7030202,
+      "incoming": 7030212,
+      "reused": false
+    },
+    {
+      "family": "bolus",
+      "existing": 7030212,
+      "incoming": 7030202,
+      "reused": false
+    },
+    {
+      "family": "bolus",
+      "existing": 7030212,
+      "incoming": 7030212,
+      "reused": true
+    },
+    {
+      "family": "guard-gauge",
+      "existing": 7030602,
+      "incoming": 7030602,
+      "reused": true
+    },
+    {
+      "family": "guard-gauge",
+      "existing": 7030602,
+      "incoming": 7030612,
+      "reused": false
+    },
+    {
+      "family": "guard-gauge",
+      "existing": 7030612,
+      "incoming": 7030602,
+      "reused": false
+    },
+    {
+      "family": "guard-gauge",
+      "existing": 7030612,
+      "incoming": 7030612,
+      "reused": true
+    },
+    {
+      "family": "critical-gauge",
+      "existing": 7030802,
+      "incoming": 7030802,
+      "reused": true
+    },
+    {
+      "family": "critical-gauge",
+      "existing": 7030802,
+      "incoming": 7030812,
+      "reused": false
+    },
+    {
+      "family": "critical-gauge",
+      "existing": 7030812,
+      "incoming": 7030802,
+      "reused": false
+    },
+    {
+      "family": "critical-gauge",
+      "existing": 7030812,
+      "incoming": 7030812,
+      "reused": true
+    },
+    {
+      "family": "grease",
+      "existing": 7030902,
+      "incoming": 7030902,
+      "reused": true
+    },
+    {
+      "family": "grease",
+      "existing": 7030902,
+      "incoming": 7030912,
+      "reused": false
+    },
+    {
+      "family": "grease",
+      "existing": 7030902,
+      "incoming": 7030922,
+      "reused": false
+    },
+    {
+      "family": "grease",
+      "existing": 7030912,
+      "incoming": 7030902,
+      "reused": false
+    },
+    {
+      "family": "grease",
+      "existing": 7030912,
+      "incoming": 7030912,
+      "reused": true
+    },
+    {
+      "family": "grease",
+      "existing": 7030912,
+      "incoming": 7030922,
+      "reused": false
+    },
+    {
+      "family": "grease",
+      "existing": 7030922,
+      "incoming": 7030902,
+      "reused": false
+    },
+    {
+      "family": "grease",
+      "existing": 7030922,
+      "incoming": 7030912,
+      "reused": false
+    },
+    {
+      "family": "grease",
+      "existing": 7030922,
+      "incoming": 7030922,
+      "reused": true
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035102,
+      "incoming": 7035102,
+      "reused": true
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035102,
+      "incoming": 7035112,
+      "reused": false
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035102,
+      "incoming": 7035122,
+      "reused": false
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035112,
+      "incoming": 7035102,
+      "reused": false
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035112,
+      "incoming": 7035112,
+      "reused": true
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035112,
+      "incoming": 7035122,
+      "reused": false
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035122,
+      "incoming": 7035102,
+      "reused": false
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035122,
+      "incoming": 7035112,
+      "reused": false
+    },
+    {
+      "family": "critical-stamina",
+      "existing": 7035122,
+      "incoming": 7035122,
+      "reused": true
+    },
+    {
+      "family": "raider-hit",
+      "existing": 7031302,
+      "incoming": 7031302,
+      "reused": true
+    },
+    {
+      "family": "sixth-sense-gauge",
+      "existing": 7032402,
+      "incoming": 7032402,
+      "reused": true
+    },
+    {
+      "family": "sixth-sense-attack",
+      "existing": 7032501,
+      "incoming": 7032501,
+      "reused": true
+    },
+    {
+      "family": "ironeye-counter",
+      "existing": 7034702,
+      "incoming": 7034702,
+      "reused": true
+    },
+    {
+      "family": "madness-fp",
+      "existing": 7035502,
+      "incoming": 7035502,
+      "reused": true
+    },
+    {
+      "family": "madness-fp",
+      "existing": 7035502,
+      "incoming": 7035512,
+      "reused": false
+    },
+    {
+      "family": "madness-fp",
+      "existing": 7035512,
+      "incoming": 7035502,
+      "reused": false
+    },
+    {
+      "family": "madness-fp",
+      "existing": 7035512,
+      "incoming": 7035512,
+      "reused": true
+    },
+    {
+      "family": "weapon-change",
+      "existing": 7035902,
+      "incoming": 7035902,
+      "reused": true
+    },
+    {
+      "family": "guard-hp",
+      "existing": 7036102,
+      "incoming": 7036102,
+      "reused": true
+    }
+  ],
+  "triggerValues": [
+    {
+      "family": "guard-gauge",
+      "ids": [
+        7030602,
+        7030612
+      ],
+      "value": 2.5
+    },
+    {
+      "family": "critical-gauge",
+      "ids": [
+        7030802,
+        7030812
+      ],
+      "value": 11.5
+    },
+    {
+      "family": "sixth-sense-gauge",
+      "ids": [
+        7032402
+      ],
+      "value": 18.0
+    },
+    {
+      "family": "grease",
+      "ids": [
+        7030902,
+        7030912,
+        7030922
+      ],
+      "value": 1.5443999767303467
+    }
+  ],
+  "extraGetters": [
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [],
+      "flags": 0,
+      "value": 0.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [],
+      "flags": 2148270083,
+      "value": 0.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035102
+      ],
+      "flags": 0,
+      "value": 10.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035102
+      ],
+      "flags": 2148270083,
+      "value": 0.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035112
+      ],
+      "flags": 0,
+      "value": 17.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035112
+      ],
+      "flags": 2148270083,
+      "value": 0.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035122
+      ],
+      "flags": 0,
+      "value": 20.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035122
+      ],
+      "flags": 2148270083,
+      "value": 0.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035102,
+        7035112,
+        7035122
+      ],
+      "flags": 0,
+      "value": 47.0
+    },
+    {
+      "rva": "0x505aa0",
+      "field": "staminaRecoverChangeSpeed",
+      "ids": [
+        7035102,
+        7035112,
+        7035122
+      ],
+      "flags": 2148270083,
+      "value": 0.0
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [],
+      "flags": 0,
+      "value": 1.0
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [],
+      "flags": 2148270083,
+      "value": 1.0
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [
+        7230000
+      ],
+      "flags": 0,
+      "value": 0.8999999761581421
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [
+        7230000
+      ],
+      "flags": 2148270083,
+      "value": 1.0
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [
+        7230001
+      ],
+      "flags": 0,
+      "value": 0.800000011920929
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [
+        7230001
+      ],
+      "flags": 2148270083,
+      "value": 1.0
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [
+        7230000,
+        7230001
+      ],
+      "flags": 0,
+      "value": 0.7199999690055847
+    },
+    {
+      "rva": "0x508280",
+      "field": "runeDiscountValue",
+      "ids": [
+        7230000,
+        7230001
+      ],
+      "flags": 2148270083,
+      "value": 1.0
+    }
+  ],
+  "shopMatching": [
+    {
+      "existing": 7230000,
+      "incoming": 7230000,
+      "category": 0,
+      "reused": true,
+      "categoryMatch": false
+    },
+    {
+      "existing": 7230000,
+      "incoming": 7230001,
+      "category": 0,
+      "reused": false,
+      "categoryMatch": false
+    },
+    {
+      "existing": 7230001,
+      "incoming": 7230000,
+      "category": 0,
+      "reused": false,
+      "categoryMatch": false
+    },
+    {
+      "existing": 7230001,
+      "incoming": 7230001,
+      "category": 0,
+      "reused": true,
+      "categoryMatch": false
+    }
+  ],
   "recoveryTiming": {
     "350401": {
       "lifetime": 1,
@@ -8892,6 +9385,14 @@
       "repeatedApplication": "independent",
       "resetsAccumulator": true,
       "exemplar": 7036001
+    },
+    "7036102": {
+      "lifetime": 1,
+      "interval": 1.1,
+      "repeatedApplication": "refresh",
+      "resetsAccumulator": false,
+      "exemplar": 7036102,
+      "requiresState": 2308
     },
     "7100101": {
       "lifetime": 0.3,

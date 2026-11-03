@@ -301,7 +301,7 @@ def invoke(u, rva, args, xmm_args=None):
 # Actual timer/refresh/accumulator routines, keeping one live synthetic node.
 # Periodic restore getters consume flag 4; no lifetime or cooldown calculation is stubbed.
 timing = []
-for id in [7036001, 7036011, 350401, 350502, 350602, 7100101, 8600105, 8600111, 8600205, 8600211]:
+for id in [7036001, 7036011, 350401, 350502, 350602, 7100101, 8600105, 8600111, 8600205, 8600211, 7036102]:
     row = x['tables']['SpEffectParam'][str(id)]
     for mode in ['none', 'once', 'continuous']:
         if mode == 'continuous' and id not in (7100101, 8600211, 350602):
@@ -373,7 +373,11 @@ for id in snapshot['spells']:
         continue
     if not any(row[f] < 0 for f in restore_fields) or any(row[f] > 0 for f in restore_fields):
         continue
-    if {k for k, v in row.items() if v != baseline[k]} - allowed_differences:
+    conditional = id == '7036102'
+    if conditional:
+        assert row['invocationConditionsStateChange1'] == 2308
+    extra = {'invocationConditionsStateChange1'} if conditional else set()
+    if {k for k, v in row.items() if v != baseline[k]} - allowed_differences - extra:
         continue
     examples = [r for r in timing if r['refreshAt'] is None
                 and math.isclose(row['effectEndurance'], r['lifetime'], abs_tol=1e-6)
@@ -385,6 +389,61 @@ for id in snapshot['spells']:
     recovery_timing[id] = dict(lifetime=round(row['effectEndurance'], 6), interval=round(row['motionInterval'], 6),
         repeatedApplication='independent' if row['spCategory'] == 10 else 'refresh',
         resetsAccumulator=row['stateInfo'] == 304, exemplar=examples[0]['id'])
+    if conditional:
+        recovery_timing[id]['requiresState'] = 2308
+
+trigger_matching = []
+trigger_families = {
+    'bolus': [7030202, 7030212], 'guard-gauge': [7030602, 7030612],
+    'critical-gauge': [7030802, 7030812], 'grease': [7030902, 7030912, 7030922],
+    'critical-stamina': [7035102, 7035112, 7035122],
+    'raider-hit': [7031302], 'sixth-sense-gauge': [7032402],
+    'sixth-sense-attack': [7032501], 'ironeye-counter': [7034702],
+    'madness-fp': [7035502, 7035512], 'weapon-change': [7035902], 'guard-hp': [7036102],
+}
+for family, ids in trigger_families.items():
+    for existing in ids:
+        assert x['tables']['SpEffectParam'][str(existing)]['spCategory'] == 20
+        for incoming in ids:
+            same = bool(run(0x510b20, [existing], [OBJ + 0x1000, incoming]).reg_read(UC_X86_REG_RAX) & 255)
+            match = bool(run(0x511450, [existing], [OBJ + 0x1000, 20, 0, incoming]).reg_read(UC_X86_REG_RAX) & 255)
+            assert same == match == (existing == incoming)
+            trigger_matching.append(dict(family=family, existing=existing, incoming=incoming, reused=same))
+trigger_values = []
+for family in ('guard-gauge', 'critical-gauge', 'sixth-sense-gauge'):
+    ids = trigger_families[family]
+    u = run(0x508c70, ids, [OBJ, OBJ + 0x800], flags=4)
+    value = struct.unpack('<f', u.mem_read(OBJ + 0x800, 4))[0]
+    assert math.isclose(value, sum(x['tables']['SpEffectParam'][str(id)]['ultimateArtGauge'] for id in ids), abs_tol=1e-6)
+    trigger_values.append(dict(family=family, ids=ids, value=value))
+ids = trigger_families['grease']
+u = run(0x502830, ids, [OBJ, OBJ + 0x800, -1, -1], kind=0)
+value = struct.unpack('<f', u.mem_read(OBJ + 0x890, 4))[0]
+assert math.isclose(value, 1.1 * 1.17 * 1.2, rel_tol=1e-6)
+trigger_values.append(dict(family='grease', ids=ids, value=value))
+
+extra_getters = []
+for rva, field, cases in [
+    (0x505aa0, 'staminaRecoverChangeSpeed', [[], [7035102], [7035112], [7035122], [7035102, 7035112, 7035122]]),
+    (0x508280, 'runeDiscountValue', [[], [7230000], [7230001], [7230000, 7230001]]),
+]:
+    for ids in cases:
+        for flags in (0, 0x800c0003):
+            value = scalar(run(rva, ids, [OBJ], flags=flags))
+            active = [] if flags else ids
+            expected = (sum(x['tables']['SpEffectParam'][str(i)][field] for i in active)
+                        if field == 'staminaRecoverChangeSpeed' else
+                        math.prod(1 - x['tables']['SpEffectParam'][str(i)][field] / 100 for i in active))
+            assert math.isclose(value, expected, abs_tol=1e-6), (field, ids, value)
+            extra_getters.append(dict(rva=hex(rva), field=field, ids=ids, flags=flags, value=value))
+shop_matching = []
+for existing in (7230000, 7230001):
+    for incoming in (7230000, 7230001):
+        category = int(x['tables']['SpEffectParam'][str(existing)]['spCategory'])
+        same = bool(run(0x510b20, [existing], [OBJ + 0x1000, incoming]).reg_read(UC_X86_REG_RAX) & 255)
+        match = bool(run(0x511450, [existing], [OBJ + 0x1000, category, 0, incoming]).reg_read(UC_X86_REG_RAX) & 255)
+        assert same == (existing == incoming) and not match
+        shop_matching.append(dict(existing=existing, incoming=incoming, category=category, reused=same, categoryMatch=match))
 
 def f32(v):
     return struct.unpack('<f', struct.pack('<f', v))[0]
@@ -414,7 +473,8 @@ a.output.parent.mkdir(parents=True, exist_ok=True)
 groups = dict(predicates=predicate, attributes=attributes, attack=attack, defense=defense, cooldown=cooldown,
               discovery=discovery, gauge=gauge, hero=hero, resistance=resistance, fpCost=fp_cost,
               skillUses=skill_uses, killMatching=kill_matching, killDispatch=kill_dispatch, gaugeApply=gauge_apply,
-              timing=timing, damageStatus=damage_status)
+              timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
+              extraGetters=extra_getters, shopMatching=shop_matching)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(), **groups, recoveryTiming=recovery_timing, stubs=sorted(calls), gameplayVerified=False), indent=2) + '\n')
 print('PASS:', ', '.join(f'{k}={len(v)}' for k, v in groups.items()))
 print(f'Restore-only PARAM rows matched to tested timer families: {len(recovery_timing)}')

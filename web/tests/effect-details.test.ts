@@ -4,6 +4,7 @@ import { effectDetail } from "../src/core/effect-details";
 import source from "../../data/effect-detail-source.json";
 import evidence from "../../data/effect-native-evidence.json";
 import research from "../../data/effect-research.json";
+import triggers from "../../data/effect-trigger-source.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
@@ -87,15 +88,22 @@ describe("MMV effect details", () => {
     expect(effectDetail(6611202)!.stackingDetail).toBe("攻击倍率相乘");
     expect(effectDetail(999999998)).toBeUndefined();
   });
-  it("keeps a versioned research record for every obtainable effect, without claiming gameplay verification", () => {
+  it("records the whole catalog separately from obtainable relics, without claiming gameplay verification", () => {
     const ids = new Set(
       Object.values(catalog.relics)
         .filter((r) => r.obtainable)
         .flatMap((r) => r.pools.flatMap((p) => catalog.pools[p] ?? [])),
     );
-    expect(Object.keys(research.effects).map(Number).sort()).toEqual(
-      [...ids].sort(),
+    expect(
+      Object.entries(research.effects)
+        .filter(([, r]) => r.obtainable)
+        .map(([id]) => Number(id))
+        .sort(),
+    ).toEqual([...ids].sort());
+    expect(Object.keys(research.effects).sort()).toEqual(
+      Object.keys(catalog.effects).sort(),
     );
+    expect(research.coverage.catalog).toBe(2241);
     expect(research.regulationSha256).toBe(catalog.regulationSha256);
     expect(evidence.regulationSha256).toBe(catalog.regulationSha256);
     expect(research.nativeEvidenceSha256).toBe(
@@ -108,12 +116,85 @@ describe("MMV effect details", () => {
         .digest("hex"),
     );
     expect(research.coverage.obtainable).toBe(637);
+    expect(triggers.regulationSha256).toBe(catalog.regulationSha256);
+    expect(research.triggerEvidenceSha256).toBe(
+      createHash("sha256")
+        .update(
+          readFileSync(
+            new URL("../../data/effect-trigger-source.json", import.meta.url),
+          ),
+        )
+        .digest("hex"),
+    );
     expect(evidence.gameplayVerified).toBe(false);
     for (const r of Object.values(research.effects)) {
       expect(r.gameplayVerified).toBe(false);
       if (r.values === "unresolved" || r.stacking === "unresolved")
         expect(r.openQuestions.length).toBeGreaterThan(0);
     }
+  });
+  it("connects action effects to pinned animations and preserves actual tier behavior", () => {
+    expect(effectDetail(7030900)!.blocks[0].values).toContainEqual([
+      "物理攻击倍率",
+      "+10%",
+    ]);
+    expect(effectDetail(7030900)!.blocks[0].duration).toBe(30);
+    expect(effectDetail(7030900)!.stacking).toBe("不同等级可叠加");
+    expect(effectDetail(6035100)!.blocks[0].values).toContainEqual([
+      "精力恢复速度",
+      "+17",
+    ]);
+    expect(effectDetail(6035100)!.blocks[0].duration).toBe(15);
+    expect(effectDetail(7034700)!.blocks[0].restrictions).toContain(
+      "适用：突刺反击",
+    );
+    const hp = effectDetail(7036100)!.blocks[0];
+    expect(hp.values).toEqual([["HP定值恢复", "15"]]);
+    expect(hp.duration).toBeNull();
+    expect(hp.restrictions.join()).toContain("约每 1.1 秒恢复一次");
+    for (const root of Object.values(triggers.roots)) {
+      for (const seed of root.seeds) {
+        const events = (
+          root.events as Record<string, { type: number; parameters: string }[]>
+        )[seed];
+        expect(events.length).toBeGreaterThan(0);
+        for (const event of events) {
+          expect([66, 67, 401]).toContain(event.type);
+          expect(Buffer.from(event.parameters, "hex").readInt32LE()).toBe(seed);
+        }
+      }
+    }
+    for (const r of evidence.triggerMatching)
+      expect(r.reused).toBe(r.existing === r.incoming);
+    expect(
+      evidence.triggerValues.find((r) => r.family === "grease")!.value,
+    ).toBeCloseTo(1.1 * 1.17 * 1.2, 6);
+    expect(
+      evidence.extraGetters.find(
+        (r) =>
+          r.field === "staminaRecoverChangeSpeed" &&
+          r.ids.length === 3 &&
+          r.flags === 0,
+      )!.value,
+    ).toBe(47);
+  });
+  it("shows shop price reductions without inventing a periodic purchase cooldown", () => {
+    expect(effectDetail(7230000)!.blocks[0].values).toEqual([
+      ["商店卢恩价格", "-10%"],
+    ]);
+    expect(effectDetail(7230001)!.blocks[0].values).toEqual([
+      ["商店卢恩价格", "-20%"],
+    ]);
+    expect(effectDetail(7230000)!.blocks[0].interval).toBeNull();
+    expect(effectDetail(7230001)!.stackingDetail).toContain("72%");
+    expect(
+      evidence.extraGetters.find(
+        (r) =>
+          r.field === "runeDiscountValue" &&
+          r.ids.length === 2 &&
+          r.flags === 0,
+      )!.value,
+    ).toBeCloseTo(0.72);
   });
   it("uses executed native calculations for additive stats and multiplicative rates", () => {
     expect(effectDetail(7000000)!.stackingDetail).toBe("能力值相加");
