@@ -8,6 +8,38 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows damage-triggered buildup without treating ailment onset damage as per-hit damage", () => {
+    const cases = [
+      [6820000, "中毒", 52],
+      [6820100, "猩红腐败", 44],
+      [6820200, "冻伤", 44],
+      [6820300, "出血", 44],
+      [6820400, "发狂", 40],
+      [6820500, "催眠", 40],
+      [6820600, "死亡", 32],
+    ] as const;
+    for (const [id, label, amount] of cases) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0].values).toEqual([
+        [label + "累积", `+${amount} 点／次`],
+      ]);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.blocks[0].branches).toEqual([id + 1, id + 2]);
+      const measured = evidence.damageStatus.find(
+        (r) => r.root === id && "amount" in r,
+      )!;
+      expect(measured.amount).toBe(amount);
+      expect(measured.remaining).toBe(1000 - amount);
+      const triggers = evidence.damageStatus.filter(
+        (r) => r.root === id && "damage" in r,
+      );
+      expect(triggers).toHaveLength(8);
+      for (const r of triggers)
+        expect(r.replaced).toBe(r.damage! > 0 && !r.excluded);
+    }
+  });
   it("covers the active catalog with pinned, finite, traceable parameters", () => {
     expect(source.hashes["regulation.bin"]).toBe(catalog.regulationSha256);
     const spells = source.spells as Record<string, Record<string, number>>;

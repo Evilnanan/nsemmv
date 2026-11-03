@@ -251,6 +251,41 @@ for percent, initial, maximum in [(5, 0, 1000), (1.65, 0, 1000), (11.5, 0, 1000)
     assert math.isclose(value, min(maximum, initial + maximum * percent / 100), abs_tol=1e-4)
     gauge_apply.append(dict(percent=percent, initial=initial, maximum=maximum, value=value))
 
+# Damage amount only gates the replacement; buildup uses a fixed PARAM value.
+damage_status = []
+status_channels = [(6820000, 'poizonAttackPower', 0), (6820100, 'diseaseAttackPower', 1),
+                   (6820200, 'freezeAttackPower', 4), (6820300, 'bloodAttackPower', 2),
+                   (6820400, 'madnessAttackPower', 6), (6820500, 'sleepAttackPower', 5),
+                   (6820600, 'curseAttackPower', 3)]
+for root, field, channel in status_channels:
+    trigger = x['tables']['SpEffectParam'][str(root)]
+    bridge = int(trigger['replaceSpEffectId'])
+    child = int(x['tables']['SpEffectParam'][str(bridge)]['cycleOccurrenceSpEffectId'])
+    assert trigger['deleteCriteriaDamage'] == 12
+    assert int(x['tables']['SpEffectParam'][str(bridge)]['replaceSpEffectId']) == root
+    for damage in (0, 1, 100, 10000):
+        for excluded in (0, 1):
+            def setup(u):
+                u.mem_write(OBJ + 0x104c, struct.pack('<f', -1))
+            u = run(0x504d30, [root], [OBJ, 0, 0, 0, excluded], flags=4,
+                    setup=setup, xmm_args={UC_X86_REG_XMM1: damage})
+            replaced = struct.unpack('<f', u.mem_read(OBJ + 0x104c, 4))[0] == 0
+            assert replaced == (damage > 0 and not excluded)
+            damage_status.append(dict(root=root, damage=damage, excluded=bool(excluded), replaced=replaced))
+    amount = scalar(run(0xea0d20, [child], [OBJ + 0x1000, channel]))
+    assert amount == x['tables']['SpEffectParam'][str(child)][field]
+    # Neutral recovery context: no incoming buildup modifiers or immunity.
+    settled = scalar(run(0x42e0e0, [], [OBJ], xmm_args={UC_X86_REG_XMM1: amount,
+                     UC_X86_REG_XMM2: 0, UC_X86_REG_XMM3: 1}))
+    def setup_gauge(u):
+        u.mem_write(OBJ + 0x800 + 0x10 + channel * 4, struct.pack('<i', 1000))
+        u.mem_write(OBJ + 0x800 + 0x2c + channel * 4, struct.pack('<i', 1000))
+    u = run(0x42cd70, [], [OBJ + 0x800, channel, int(settled)], setup=setup_gauge)
+    remaining = struct.unpack('<i', u.mem_read(OBJ + 0x810 + channel * 4, 4))[0]
+    assert remaining == 1000 - amount
+    damage_status.append(dict(root=root, bridge=bridge, child=child, field=field, channel=channel,
+                              amount=amount, remaining=remaining))
+
 def invoke(u, rva, args, xmm_args=None):
     sp = STACK + 0x8008
     u.mem_write(sp, struct.pack('<Q', STOP))
@@ -378,7 +413,8 @@ for modifier in modifiers:
 a.output.parent.mkdir(parents=True, exist_ok=True)
 groups = dict(predicates=predicate, attributes=attributes, attack=attack, defense=defense, cooldown=cooldown,
               discovery=discovery, gauge=gauge, hero=hero, resistance=resistance, fpCost=fp_cost,
-              skillUses=skill_uses, killMatching=kill_matching, killDispatch=kill_dispatch, gaugeApply=gauge_apply, timing=timing)
+              skillUses=skill_uses, killMatching=kill_matching, killDispatch=kill_dispatch, gaugeApply=gauge_apply,
+              timing=timing, damageStatus=damage_status)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(), **groups, recoveryTiming=recovery_timing, stubs=sorted(calls), gameplayVerified=False), indent=2) + '\n')
 print('PASS:', ', '.join(f'{k}={len(v)}' for k, v in groups.items()))
 print(f'Restore-only PARAM rows matched to tested timer families: {len(recovery_timing)}')

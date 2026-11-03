@@ -45,6 +45,9 @@ POINTS = {
     'changeMadnessResistPoint': '抗发狂', 'additionalCharacterSkillUse': '技艺使用次数',
 }
 RESTORE = {'changeHpPoint': 'HP', 'changeMpPoint': 'FP', 'changeStaminaPoint': '精力'}
+STATUS_BUILDUP = {'poizonAttackPower': '中毒', 'diseaseAttackPower': '猩红腐败',
+                  'freezeAttackPower': '冻伤', 'bloodAttackPower': '出血',
+                  'madnessAttackPower': '发狂', 'sleepAttackPower': '催眠', 'curseAttackPower': '死亡'}
 LINKS = {
     'applyIdOnKillSp': '击杀触发分支', 'applyIdOnGetSoul': '获得卢恩触发分支',
     'cycleOccurrenceSpEffectId': '周期触发分支', 'replaceSpEffectId': '替换效果分支',
@@ -64,8 +67,8 @@ META = ['effectEndurance', 'motionInterval', 'spCategory', 'categoryPriority', '
         'wepTypeTrigger', 'wepTypeTriggerCount', 'conditionHp', 'conditionHpRate',
         'changeHpRate', 'changeMpRate', 'changeStaminaRate', 'startGoodsId', 'startingItemAmount',
         'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier',
-        'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId', 'ultimateArtGauge']
-FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META)
+        'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId', 'ultimateArtGauge', 'deleteCriteriaDamage']
+FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META) | set(STATUS_BUILDUP)
 source_path = ROOT / 'data/effect-detail-source.json'
 if args.extract:
     raw = json.loads(args.extract.read_text())
@@ -108,7 +111,7 @@ assert evidence['regulationSha256'] == source['hashes']['regulation.bin']
 assert evidence['exeSha256'] == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
 assert all(evidence[k] for k in ('predicates', 'attributes', 'attack', 'defense', 'cooldown', 'discovery', 'gauge', 'hero',
                                'resistance', 'fpCost', 'skillUses', 'killMatching', 'killDispatch', 'gaugeApply',
-                               'timing', 'recoveryTiming'))
+                               'timing', 'recoveryTiming', 'damageStatus'))
 
 
 def num(v):
@@ -309,6 +312,19 @@ for id, effect in source['effects'].items():
     if id == '6840200':
         assert roots[0]['ultimateArtGaugeChargeRate'] == 0.85
         notes.append('影响所有来源的绝招量表累积。')
+    if id in {str(i) for i in range(6820000, 6820700, 100)}:
+        measured = next(r for r in evidence['damageStatus'] if r['root'] == int(id) and 'amount' in r)
+        root, bridge, child = (measured[k] for k in ('root', 'bridge', 'child'))
+        assert effect['roots'] == {'passiveSpEffectId_1': root}
+        assert source['spells'][str(root)]['deleteCriteriaDamage'] == 12
+        assert source['spells'][str(root)]['replaceSpEffectId'] == bridge
+        assert source['spells'][str(bridge)]['replaceSpEffectId'] == root
+        assert source['spells'][str(bridge)]['cycleOccurrenceSpEffectId'] == child
+        assert source['spells'][str(child)][measured['field']] == measured['amount']
+        blocks = [dict(source=root, branches=[bridge, child], phase='受到损伤时', linked=False,
+                       values=[[STATUS_BUILDUP[measured['field']] + '累积', '+' + num(measured['amount']) + ' 点／次']],
+                       scope=[], restrictions=[], duration=None, interval=None)]
+        notes.append('积累量不随损伤数值变化。')
     stacking, stacking_detail, _ = STACKING_RULES[rule]
     rules[id] = rule
     result[id] = dict(info=effect.get('info'), blocks=blocks, stacking=stacking, stackingDetail=stacking_detail, notes=notes)
@@ -321,8 +337,10 @@ for id in sorted(obtainable, key=int):
     effect, detail = source['effects'][id], result[id]
     states = sorted({int(source['spells'][str(sp)]['stateInfo']) for sp in effect['roots'].values()})
     refs = STACKING_RULES[rules[id]][2].copy()
+    if any(r['root'] == int(id) for r in evidence['damageStatus']):
+        refs.append('damage-status')
     questions = []
-    if not refs:
+    if rules[id] == 'unknown':
         questions.append('跨遗物同版／异版的覆盖、叠加与上限')
     if 2123 in states:
         refs.append('hero')

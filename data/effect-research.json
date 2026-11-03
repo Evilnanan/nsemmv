@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "baf4690ad7f755bea48ca9836ab68fb082b16f410c81eb01a8986bfee6d878bb",
+  "nativeEvidenceSha256": "cb2af1cc8b1a1480592a3d2a698cfe99ba136f70dfc4537e3d9769c86a119854",
   "coverage": {
     "obtainable": 637,
     "withDetails": 447,
@@ -3939,15 +3939,18 @@
         0
       ],
       "detailSources": [
+        6820000,
+        6820001,
         6820002
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -3960,15 +3963,18 @@
         0
       ],
       "detailSources": [
+        6820100,
+        6820101,
         6820102
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -3981,15 +3987,18 @@
         0
       ],
       "detailSources": [
+        6820200,
+        6820201,
         6820202
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -4002,15 +4011,18 @@
         0
       ],
       "detailSources": [
+        6820300,
+        6820301,
         6820302
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -4023,15 +4035,18 @@
         0
       ],
       "detailSources": [
+        6820400,
+        6820401,
         6820402
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -4044,15 +4059,18 @@
         0
       ],
       "detailSources": [
+        6820500,
+        6820501,
         6820502
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -4065,15 +4083,18 @@
         0
       ],
       "detailSources": [
-        70
+        6820600,
+        6820601,
+        6820602
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "damage-status"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },

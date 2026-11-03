@@ -137,6 +137,18 @@ test("effect details support hover, touch and keyboard without selecting or edit
   await expect(details).toContainText("约每 1.1 秒恢复一次");
   await expect(details).not.toContainText("此效果持续");
   await page.keyboard.press("Escape");
+  await page.getByLabel("搜索词条").fill("6820000");
+  const poison = page
+    .locator(".effect-choice-inspect")
+    .filter({ hasText: "6820000" });
+  if (isMobile) await longPress(page, poison.locator(".picker-row"));
+  else await poison.hover();
+  await expect(details).toContainText("中毒累积");
+  await expect(details).toContainText("+52 点／次");
+  await expect(details).not.toContainText("HP 损失");
+  await expect(details).not.toContainText("此效果持续");
+  await expect(details).not.toContainText("触发周期");
+  await page.keyboard.press("Escape");
   await page.getByLabel("搜索词条").fill("999999998");
   await page.locator(".effect-choice-inspect").focus();
   await expect(details).toContainText("具体数值尚未解明");
