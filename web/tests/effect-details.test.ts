@@ -7,6 +7,7 @@ import research from "../../data/effect-research.json";
 import triggers from "../../data/effect-trigger-source.json";
 import links from "../../data/effect-link-source.json";
 import scripts from "../../data/effect-script-evidence.json";
+import growth from "../../data/effect-growth-source.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
@@ -265,6 +266,61 @@ describe("MMV effect details", () => {
           .update(readFileSync(new URL("../../data/" + path, import.meta.url)))
           .digest("hex"),
       ).toBe(hash);
+  });
+  it("uses actual growth transitions and compiled event bindings instead of adding tier percentages", () => {
+    expect(growth.regulationSha256).toBe(catalog.regulationSha256);
+    expect(research.growthEvidenceSha256).toBe(
+      createHash("sha256")
+        .update(
+          readFileSync(
+            new URL("../../data/effect-growth-source.json", import.meta.url),
+          ),
+        )
+        .digest("hex"),
+    );
+    const undertaker = effectDetail(7037400)!;
+    expect(undertaker.blocks.map((b) => b.values)).toEqual([
+      [["精力上限", "+4%"]],
+      [["精力上限", "+48.024%"]],
+    ]);
+    expect(undertaker.stacking).toBe("不可叠加");
+    const first = evidence.growthAdvance.find(
+      (r) => r.incoming === 7037501 && r.existing.length === 0,
+    )!;
+    expect(first.target).toBe(7037501);
+    expect(first.changed).toBe(false);
+    expect(
+      evidence.growthAdvance.find((r) => r.existing.join() === "7037501")!
+        .target,
+    ).toBe(7037502);
+    expect(
+      evidence.growthAdvance.find((r) => r.existing.join() === "7037510")!
+        .target,
+    ).toBe(-1);
+    expect(effectDetail(6060500)!.blocks[1].values).toContainEqual([
+      "各类异常抵抗力",
+      "+300",
+    ]);
+    expect(effectDetail(6060400)!.blocks[0].values).toContainEqual([
+      "观察力",
+      "+16",
+    ]);
+    expect(effectDetail(6060400)!.blocks[1].values).toContainEqual([
+      "观察力",
+      "+112",
+    ]);
+    expect(growth.roots["7060101"].eventLimit).toBe(7);
+    expect(growth.roots["7060300"].eventLimit).toBe(10);
+    expect(
+      evidence.growthValues.find((r) => r.id === 7069410)!.neutralDisplay,
+    ).toBe(260);
+    for (const r of Object.values(growth.roots))
+      for (const ladder of r.ladders)
+        expect(
+          evidence.growthAdvance.some(
+            (v) => v.existing[0] === ladder.stages.at(-1) && v.target === -1,
+          ),
+        ).toBe(true);
   });
   it("uses executed native calculations for additive stats and multiplicative rates", () => {
     expect(effectDetail(7000000)!.stackingDetail).toBe("能力值相加");

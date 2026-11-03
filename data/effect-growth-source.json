@@ -1,0 +1,1636 @@
+{
+  "schema": 1,
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "eventSha256": "91680d83cd2b7509c303c3c3bdfda98b03c3a5c42e1d985f2901a29547ee6ba6",
+  "roots": {
+    "7060101": {
+      "event": 1403,
+      "slot": 0,
+      "initializationIndex": 398,
+      "arguments": [
+        7060101,
+        7060100,
+        7060401,
+        7060402
+      ],
+      "grants": [
+        7060100,
+        7060401,
+        7060402
+      ],
+      "eventLimit": 7,
+      "ladders": [
+        {
+          "grant": 7060100,
+          "stages": [
+            7069101,
+            7069102,
+            7069103,
+            7069104,
+            7069105,
+            7069106,
+            7069107,
+            7069108,
+            7069109,
+            7069110
+          ],
+          "priority": 12
+        },
+        {
+          "grant": 7060401,
+          "stages": [
+            7069301,
+            7069302,
+            7069303,
+            7069304,
+            7069305,
+            7069306,
+            7069307,
+            7069308,
+            7069309,
+            7069310
+          ],
+          "priority": 14
+        },
+        {
+          "grant": 7060402,
+          "stages": [
+            7069401,
+            7069402,
+            7069403,
+            7069404,
+            7069405,
+            7069406,
+            7069407,
+            7069408,
+            7069409,
+            7069410
+          ],
+          "priority": 15
+        }
+      ]
+    },
+    "7060400": {
+      "event": 1406,
+      "slot": 0,
+      "initializationIndex": 399,
+      "arguments": [
+        7060400,
+        7060401,
+        7060402,
+        8160,
+        9350
+      ],
+      "grants": [
+        7060401,
+        7060402
+      ],
+      "eventLimit": 10,
+      "ladders": [
+        {
+          "grant": 7060401,
+          "stages": [
+            7069301,
+            7069302,
+            7069303,
+            7069304,
+            7069305,
+            7069306,
+            7069307,
+            7069308,
+            7069309,
+            7069310
+          ],
+          "priority": 14
+        },
+        {
+          "grant": 7060402,
+          "stages": [
+            7069401,
+            7069402,
+            7069403,
+            7069404,
+            7069405,
+            7069406,
+            7069407,
+            7069408,
+            7069409,
+            7069410
+          ],
+          "priority": 15
+        }
+      ]
+    },
+    "7060600": {
+      "event": 1406,
+      "slot": 1,
+      "initializationIndex": 400,
+      "arguments": [
+        7060600,
+        7060601,
+        0,
+        8165,
+        9355
+      ],
+      "grants": [
+        7060601
+      ],
+      "eventLimit": 10,
+      "ladders": [
+        {
+          "grant": 7060601,
+          "stages": [
+            7060601,
+            7060602,
+            7060603,
+            7060604,
+            7060605,
+            7060606,
+            7060607,
+            7060608,
+            7060609,
+            7060610
+          ],
+          "priority": 10
+        }
+      ]
+    },
+    "7060500": {
+      "event": 1406,
+      "slot": 2,
+      "initializationIndex": 401,
+      "arguments": [
+        7060500,
+        7060501,
+        0,
+        8170,
+        9360
+      ],
+      "grants": [
+        7060501
+      ],
+      "eventLimit": 10,
+      "ladders": [
+        {
+          "grant": 7060501,
+          "stages": [
+            7060501,
+            7060502,
+            7060503,
+            7060504,
+            7060505,
+            7060506,
+            7060507,
+            7060508,
+            7060509,
+            7060510
+          ],
+          "priority": 9
+        }
+      ]
+    },
+    "7060300": {
+      "event": 1406,
+      "slot": 3,
+      "initializationIndex": 402,
+      "arguments": [
+        7060300,
+        7060301,
+        0,
+        8175,
+        9365
+      ],
+      "grants": [
+        7060301
+      ],
+      "eventLimit": 10,
+      "ladders": [
+        {
+          "grant": 7060301,
+          "stages": [
+            7060301,
+            7060302,
+            7060303,
+            7060304,
+            7060305,
+            7060306,
+            7060307,
+            7060308,
+            7060309,
+            7060310
+          ],
+          "priority": 8
+        }
+      ]
+    },
+    "7037400": {
+      "grants": [
+        7037501
+      ],
+      "eventLimit": null,
+      "animationSeed": 7037401,
+      "ladders": [
+        {
+          "grant": 7037501,
+          "stages": [
+            7037501,
+            7037502,
+            7037503,
+            7037504,
+            7037505,
+            7037506,
+            7037507,
+            7037508,
+            7037509,
+            7037510
+          ],
+          "priority": 16
+        }
+      ]
+    }
+  },
+  "events": {
+    "1403": {
+      "ID": 1403,
+      "RestBehavior": 0,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 15,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 24,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 33,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 42,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 51,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 60,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 7,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 16,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 25,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 34,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 43,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 52,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 61,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 17,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 26,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 35,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 44,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 53,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 62,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "01000000A02300000404000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "01010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 1,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "02000000A02300000404000002000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "02010200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 2,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "03000000A02300000404000003000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "03010300"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000003000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 3,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "04000000A02300000404000004000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "04010400"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000004000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 4,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "05000000A02300000404000005000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "05010500"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000005000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 5,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "06000000A02300000404000006000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "06010600"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000006000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 6,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "07000000A02300000404000007000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "07010700"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000007000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "A02300000400000007000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 7,
+          "hex": ""
+        }
+      ]
+    },
+    "1406": {
+      "ID": 1406,
+      "RestBehavior": 0,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 15,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 24,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 33,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 42,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 51,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 60,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 69,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 78,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 87,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 7,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 16,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 17,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 25,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 26,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 34,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 35,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 43,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 44,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 52,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 53,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 61,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 62,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 70,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 71,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 79,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 80,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 88,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 89,
+          "TargetStartByte": 4,
+          "SourceStartByte": 8,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 4,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 13,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 22,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 31,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 40,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 49,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 58,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 67,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 76,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 85,
+          "TargetStartByte": 4,
+          "SourceStartByte": 12,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 2,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 5,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 11,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 14,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 20,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 23,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 29,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 32,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 38,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 41,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 47,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 50,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 56,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 59,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 65,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 68,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 74,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 77,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 83,
+          "TargetStartByte": 4,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 86,
+          "TargetStartByte": 0,
+          "SourceStartByte": 16,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 4,
+          "ID": 5,
+          "hex": "00000000204E0000FFFFFFFF010000000000803F"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "01000000000000000404000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "01010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 1,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "02000000000000000404000002000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "02010200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 2,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "03000000000000000404000003000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "03010300"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000003000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 3,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "04000000000000000404000004000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "04010400"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000004000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 4,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "05000000000000000404000005000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "05010500"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000005000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 5,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "06000000000000000404000006000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "06010600"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000006000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 6,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "07000000000000000404000007000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "07010700"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000007000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 7,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "08000000000000000404000008000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "08010800"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000008000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 8,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "09000000000000000404000009000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "09010900"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000000000000404000009000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 9,
+          "hex": ""
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "0A00000000000000040400000A000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 101,
+          "hex": "0A010A00"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "0000000000000000040400000A000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "00000000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 5,
+          "hex": "010000000000000000000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 1014,
+          "ID": 10,
+          "hex": ""
+        }
+      ]
+    }
+  }
+}

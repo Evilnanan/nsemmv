@@ -61,6 +61,7 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
         u.mem_write(node + 0x68, struct.pack('<I', flags))
         if i + 1 < len(nodes): u.mem_write(node + 0x38, struct.pack('<Q', nodes[i + 1]))
     context = OBJ + 0x800
+    lookup_addresses = {}
     u.mem_write(context + 8, struct.pack('<iiB', 40000, 1, kind))
     if rva == 0x50a150:
         count = sum(x['tables']['SpEffectParam'][str(id)]['stateInfo'] == 199 for id in ids)
@@ -116,6 +117,16 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             wrapper = uc.reg_read(UC_X86_REG_RCX)
             uc.mem_write(wrapper, struct.pack('<Qi', nodes[ids.index(id)] + 0x100, id))
             finish(wrapper)
+        elif rva == 0x5077a0 and address - BASE == 0xea17e0:
+            calls.add('EA17E0 growth lookup using actual SpEffect PARAM rows, including missing next rows')
+            id = uc.reg_read(UC_X86_REG_RDX) & 0xffffffff
+            wrapper = uc.reg_read(UC_X86_REG_RCX)
+            if id in rows and id not in lookup_addresses:
+                lookup_addresses[id] = OBJ + 0x10000 + len(lookup_addresses) * 0x400
+                assert len(lookup_addresses) < 32
+                uc.mem_write(lookup_addresses[id], rows[id])
+            uc.mem_write(wrapper, struct.pack('<QI', lookup_addresses.get(id, 0), id))
+            finish(wrapper)
         if address - BASE == 0xe6d630:
             calls.add('E6D630 absent weapon PARAM lookup')
             uc.reg_write(UC_X86_REG_RAX, uc.reg_read(UC_X86_REG_RCX))
@@ -131,7 +142,7 @@ def scalar(u):
     return struct.unpack('<f', u.reg_read(UC_X86_REG_XMM0).to_bytes(16, 'little')[:4])[0]
 
 predicate = []
-for id in [7000000, 7000800, 7611202, 7082400, 7090000, 7090010, 7034201, 7033200, 7270100]:
+for id in [7000000, 7000800, 7611202, 7082400, 7090000, 7090010, 7034201, 7033200, 7270100, 7037400]:
     category = int(x['tables']['SpEffectParam'][str(id)]['spCategory'])
     u = run(0x510b20, [id], [OBJ + 0x1000, id])
     reused = bool(u.reg_read(UC_X86_REG_RAX) & 255)
@@ -453,6 +464,22 @@ for existing in (7230000, 7230001):
 def f32(v):
     return struct.unpack('<f', struct.pack('<f', v))[0]
 
+growth_advance = []
+growth_rows = {id for id in rows if x['tables']['SpEffectParam'][str(id)]['spCategory'] == 204
+               and x['tables']['SpEffectParam'][str(id)]['categoryPriority'] > 0}
+for existing in sorted(growth_rows):
+    priority = x['tables']['SpEffectParam'][str(existing)]['categoryPriority']
+    first = existing
+    while first - 1 in growth_rows and x['tables']['SpEffectParam'][str(first - 1)]['categoryPriority'] == priority:
+        first -= 1
+    for ids in ([existing], []) if existing == first else ([existing],):
+        u = run(0x5077a0, ids, [OBJ, first, OBJ + 0x800])
+        changed = bool(u.reg_read(UC_X86_REG_RAX) & 255)
+        target = struct.unpack('<i', u.mem_read(OBJ + 0x800, 4))[0]
+        expected = (existing + 1 if existing + 1 in rows else -1) if ids else first
+        assert changed == bool(ids) and target == expected, (existing, first, target, expected)
+        growth_advance.append(dict(existing=ids, incoming=first, target=target, changed=changed, priority=int(priority)))
+
 hp_conditions = []
 detail_source = json.loads((Path(__file__).resolve().parents[1] / 'data/effect-detail-source.json').read_text())
 for id in map(int, detail_source['spells']):
@@ -474,6 +501,22 @@ for id in map(int, detail_source['spells']):
             assert (u.mem_read(OBJ + 0x1068, 1)[0] == 4) == expected
         hp_conditions.append(dict(id=id, upper=upper, lower=lower, ratio=ratio, enabled=enabled,
                                   boundary=bound, nominal=nominal, fullUpdate=id in (6851200, 7012300, 6851000)))
+
+growth_values = []
+for stage in range(1, 11):
+    id = 7069400 + stage
+    raw_value = scalar(run(0x5071b0, [id], [OBJ]))
+    def setup_discovery(u):
+        u.mem_write(OBJ + 0x28, struct.pack('<Q', 1 << 28))  # live state 66 bucket
+    ratio = scalar(run(0x6c7f30, [id], [0, OBJ], setup=setup_discovery))
+    display = run(0x6c7e40, [id], [0, OBJ], setup=setup_discovery).reg_read(UC_X86_REG_RAX)
+    assert math.isclose(raw_value, .16 * stage, abs_tol=1e-6)
+    assert math.isclose(ratio, 1 + .16 * stage, abs_tol=1e-6) and display == 100 + 16 * stage
+    growth_values.append(dict(id=id, field='itemDropRate', raw=raw_value, neutralRatio=ratio, neutralDisplay=display))
+    id = 7069300 + stage
+    value = scalar(run(0x508510, [id], [OBJ]))
+    assert math.isclose(value, x['tables']['SpEffectParam'][str(id)]['soulRate'], abs_tol=1e-6)
+    growth_values.append(dict(id=id, field='soulRate', value=value))
 
 hero = []
 modifiers = sorted({int(row['heroStatusModifier']) for row in x['tables']['SpEffectParam'].values() if row['stateInfo'] == 2123 and row['heroStatusModifier'] >= 0})
@@ -501,7 +544,8 @@ groups = dict(predicates=predicate, attributes=attributes, attack=attack, defens
               discovery=discovery, gauge=gauge, hero=hero, resistance=resistance, fpCost=fp_cost,
               skillUses=skill_uses, killMatching=kill_matching, killDispatch=kill_dispatch, gaugeApply=gauge_apply,
               timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
-              extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions)
+              extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions, growthAdvance=growth_advance,
+              growthValues=growth_values)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(), **groups, recoveryTiming=recovery_timing, stubs=sorted(calls), gameplayVerified=False), indent=2) + '\n')
 print('PASS:', ', '.join(f'{k}={len(v)}' for k, v in groups.items()))
 print(f'Restore-only PARAM rows matched to tested timer families: {len(recovery_timing)}')

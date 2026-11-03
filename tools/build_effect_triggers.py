@@ -36,6 +36,7 @@ families = {
     'revenant-allies': ([7031200], '绝招发动时'),
     'critical-runes': ([7031900], '致命一击时'),
     'random-weapon': ([7035700], '切换武器后'),
+    'undertaker-growth': ([7037400], '发动强化技艺后'),
 }
 events = {}
 for bundle in t['bundles']:

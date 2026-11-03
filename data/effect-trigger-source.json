@@ -10811,6 +10811,28 @@
           }
         ]
       }
+    },
+    "7037400": {
+      "state": 2003,
+      "family": "undertaker-growth",
+      "phase": "发动强化技艺后",
+      "seeds": [
+        7037401
+      ],
+      "events": {
+        "7037401": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2909,
+            "animation": 599010,
+            "index": 18,
+            "type": 67,
+            "start": 0,
+            "end": 0.1,
+            "parameters": "D9616B00000000000000000000000000"
+          }
+        ]
+      }
     }
   }
 }

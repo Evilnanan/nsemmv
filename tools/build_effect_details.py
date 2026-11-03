@@ -23,6 +23,9 @@ assert links['schema'] == 1 and links['regulationSha256'] == catalog['regulation
 script_path = ROOT / 'data/effect-script-evidence.json'
 scripts = json.loads(script_path.read_text())
 assert scripts['schema'] == 1 and scripts['regulationSha256'] == catalog['regulationSha256']
+growth_path = ROOT / 'data/effect-growth-source.json'
+growth = json.loads(growth_path.read_text())
+assert growth['schema'] == 1 and growth['regulationSha256'] == catalog['regulationSha256']
 
 # Only fields with understood units enter the human-readable summary.
 RATES = {
@@ -79,7 +82,7 @@ META = ['effectEndurance', 'motionInterval', 'spCategory', 'categoryPriority', '
         'changeHpRate', 'changeMpRate', 'changeStaminaRate', 'startGoodsId', 'startingItemAmount',
         'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier',
         'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId', 'ultimateArtGauge', 'deleteCriteriaDamage',
-        'runeDiscountValue']
+        'runeDiscountValue', 'itemDropRate']
 FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META) | set(STATUS_BUILDUP)
 source_path = ROOT / 'data/effect-detail-source.json'
 if args.extract:
@@ -100,6 +103,9 @@ if args.extract:
                 needed.add(branch['cooldown'])
                 for hand in branch['hands']:
                     needed.update((hand['seed'], hand['leaf']))
+            for ladder in growth['roots'].get(str(root), {}).get('ladders', []):
+                needed.update(ladder['stages'])
+                needed.add(ladder['grant'])
         text_id = str(int(a['attachTextId']))
         info = raw['texts']['zh_CN']['AttachEffectInfo'].get(text_id)
         effects[id] = dict(roots=roots, runtimeExclusive=int(a['exclusivityId']), **({'info': info} if info else {}))
@@ -168,6 +174,8 @@ def stats(row):
         values.append(['绝招量表', signed(v) + '%'])
     if row.get('stateInfo') == 2116 and (v := row.get('runeDiscountValue', 0)):
         values.append(['商店卢恩价格', signed(-v) + '%'])
+    if row.get('stateInfo') == 66 and (v := row.get('itemDropRate', 0)):
+        values.append(['观察力', signed(v * 100)])
     for field, label in RESTORE.items():
         if v := row.get(field, 0):
             # Fixed and proportional restoration may coexist on the same node.
@@ -303,6 +311,7 @@ STACKING_RULES = {
     'trigger-stamina': ('不同等级可叠加', '不同等级的恢复速度相加；同等级重复无效', ['action-triggers', 'triggerMatching', 'extraGetters']),
     'stamina-speed': ('可叠加', '精力恢复速度相加', ['instance-matching', 'extraGetters']),
     'shop-discount': ('不可叠加', '相同词条重复无效；两种折扣同时生效时价格为原价的 72%', ['extraGetters', 'shopMatching']),
+    'growth': ('不可叠加', '同一词条重复装备不额外计数；成长效果按触发次数累计', ['growthAdvance', 'growth-events']),
 }
 result, rules = {}, {}
 for id, effect in source['effects'].items():
@@ -364,7 +373,7 @@ for id, effect in source['effects'].items():
         rule = 'shop-discount'
     if len(external) == 1 and effect['runtimeExclusive'] == -1:
         family = external[0]['family']
-        if family not in ('madness-fp', 'revenant-allies', 'random-weapon'):
+        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth'):
             matches = [r for r in evidence['triggerMatching'] if r['family'] == family]
             assert matches and all(r['reused'] == (r['existing'] == r['incoming']) for r in matches)
             rule = {'bolus': 'trigger-tiers', 'grease': 'trigger-attack',
@@ -395,6 +404,32 @@ for id, effect in source['effects'].items():
                        values=[['属性攻击力', '+20（随机一种）'],
                                ['概率', ' / '.join(b['name'] + ' ' + num(b['chance']) + '%' for b in branches)]],
                        scope=[], restrictions=['作用于切换的那只手'], duration=10, interval=None)]
+    grown = [growth['roots'][str(root)] for root in effect['roots'].values() if str(root) in growth['roots']]
+    if grown:
+        assert len(grown) == 1
+        record = grown[0]
+        cap = min([len(ladder['stages']) for ladder in record['ladders']] + ([record['eventLimit']] if record['eventLimit'] else []))
+        blocks = []
+        for stage in (1, cap):
+            stage_ids = [ladder['stages'][stage - 1] for ladder in record['ladders']]
+            values = [value for sp in stage_ids for value in stats(source['spells'][str(sp)])]
+            # Keep equal defense/resistance channels concise in a multi-stat growth card.
+            for labels, label in [
+                (['物理承伤', '魔力承伤', '火承伤', '雷承伤', '圣承伤'], '承伤倍率'),
+                (['抗毒', '抗腐败', '抗出血', '抗骤死', '抗冻伤', '抗催眠', '抗发狂'], '各类异常抵抗力'),
+            ]:
+                matched = [v for v in values if v[0] in labels]
+                if len(matched) == len(labels) and len({v[1] for v in matched}) == 1:
+                    values = [v for v in values if v[0] not in labels] + [[label, matched[0][1]]]
+            assert values
+            blocks.append(dict(source=stage_ids[0], branches=stage_ids[1:], phase=f'累计 {stage} 次', linked=True,
+                               values=values, scope=[], restrictions=[], duration=None, interval=None))
+        ladder_cap = min(len(ladder['stages']) for ladder in record['ladders'])
+        notes.append(f'成长上限 {ladder_cap} 档。' + ('与其他来源的同类成长共用档位。' if len(record['ladders']) > 1 else ''))
+        for ladder in record['ladders']:
+            final = ladder['stages'][-1]
+            assert any(r['existing'] == [final] and r['target'] == -1 for r in evidence['growthAdvance'])
+        rule = 'growth'
     if id in ('7090000', '6090000'):
         root = list(effect['roots'].values())[0]
         assert roots[0]['spCategory'] == 20 and roots[0]['stateInfo'] == 199 and effect['runtimeExclusive'] == -1
@@ -465,6 +500,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
     if any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
+    if rules[id] == 'growth':
+        questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
     if any(source['spells'].get(str(sp), {}).get(k, -1) > 0 for sp in effect['roots'].values() for k in ('conditionHp', 'conditionHpRate')):
         refs.append('hpConditions')
         questions.append('低血量状态切换与其他触发链的时序交互')
@@ -486,5 +523,6 @@ research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
                 triggerEvidenceSha256=hashlib.sha256(trigger_path.read_bytes()).hexdigest(), coverage=coverage, effects=ledger)
 research['linkEvidenceSha256'] = hashlib.sha256(link_path.read_bytes()).hexdigest()
 research['scriptEvidenceSha256'] = hashlib.sha256(script_path.read_bytes()).hexdigest()
+research['growthEvidenceSha256'] = hashlib.sha256(growth_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')
