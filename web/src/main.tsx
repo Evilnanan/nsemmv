@@ -52,6 +52,7 @@ import {
 } from "./core/rules";
 import { type SessionView, type Edit } from "./core/session";
 import { request, download } from "./client";
+import { EffectInspect } from "./components/EffectInspect";
 import "./style.css";
 type Icon = typeof Gem;
 function Tool({
@@ -202,24 +203,25 @@ function EffectPicker({
         : []),
     ].join("；");
     return (
-      <button
-        className={`picker-row ${status.state}`}
-        key={id}
-        onClick={() => onPick(id)}
-        title={description || undefined}
-      >
-        <code>{id}</code>
-        <span className="effect-choice-name">{effectName(id)}</span>
-        {status.state !== "available" && (
-          <span
-            className={`availability-badge ${status.state}`}
-            aria-label={description}
-          >
-            <CircleAlert size={15} aria-hidden="true" />
-            {label}
-          </span>
-        )}
-      </button>
+      <EffectInspect key={id} id={id} className="effect-choice-inspect">
+        <button
+          className={`picker-row ${status.state}`}
+          onClick={() => onPick(id)}
+        >
+          <code>{id}</code>
+          <span className="effect-choice-name">{effectName(id)}</span>
+          {status.state !== "available" && (
+            <span
+              className={`availability-badge ${status.state}`}
+              aria-label={description}
+              title={description || undefined}
+            >
+              <CircleAlert size={15} aria-hidden="true" />
+              {label}
+            </span>
+          )}
+        </button>
+      </EffectInspect>
     );
   }
 
@@ -1089,17 +1091,22 @@ function RelicFields({
             {([false, true] as const).map((curse) => {
               const id = curse ? pair.curse : pair.effect;
               return (
-                <button
+                <EffectInspect
                   key={String(curse)}
-                  className={`effect-cell ${curse ? "curse" : ""} ${issues.some((x) => x.slot === i + (curse ? 3 : 0)) ? "invalid" : ""}`}
-                  onClick={() => setPicker({ slot: i, curse })}
-                  disabled={busy || readOnly || !!meta?.shop}
+                  id={id}
+                  className="effect-cell-inspect"
                 >
-                  <span>{effectName(id)}</span>
-                  <code>
-                    {id === EMPTY || id === 0 ? <Plus size={14} /> : id}
-                  </code>
-                </button>
+                  <button
+                    className={`effect-cell ${curse ? "curse" : ""} ${issues.some((x) => x.slot === i + (curse ? 3 : 0)) ? "invalid" : ""}`}
+                    onClick={() => setPicker({ slot: i, curse })}
+                    disabled={busy || readOnly || !!meta?.shop}
+                  >
+                    <span>{effectName(id)}</span>
+                    <code>
+                      {id === EMPTY || id === 0 ? <Plus size={14} /> : id}
+                    </code>
+                  </button>
+                </EffectInspect>
               );
             })}
           </div>

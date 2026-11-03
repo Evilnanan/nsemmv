@@ -316,7 +316,10 @@ test("previews and excludes conflicting effects in inventory and preset pickers"
     .locator(".picker-row")
     .filter({ has: page.locator("code", { hasText: "7000001" }) });
   await expect(conflict).toContainText("冲突");
-  await expect(conflict).toHaveAttribute("title", /生命力＋１/);
+  await expect(conflict.locator(".availability-badge")).toHaveAttribute(
+    "title",
+    /生命力＋１/,
+  );
   await page.screenshot({ path: testInfo.outputPath("conflict-preview.png") });
   expect(
     await page
@@ -384,13 +387,11 @@ test("distinguishes unavailable candidates from effects that need a curse", asyn
   page,
 }, testInfo) => {
   await page.goto("/");
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(fixture()),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(fixture()),
+  });
   await page.getByRole("button", { name: "新增遗物", exact: true }).click();
   await page.getByRole("button", { name: "深层", exact: true }).click();
   await page.getByLabel("搜索遗物类型").fill("2000100");

@@ -12,3 +12,5 @@ __pycache__/
 *.dll
 tools/ExtractEffectFilters/bin/
 tools/ExtractEffectFilters/obj/
+tools/ExtractEffectDetails/bin/
+tools/ExtractEffectDetails/obj/

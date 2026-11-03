@@ -68,3 +68,21 @@ python tools/build_web_catalog.py <参数与文本资源目录>
 - 可选 `NR_SAVE` 本地真实存档：逐字节无修改导出、已有角色读取、创建后加密并回读；个人文件不进入仓库。
 
 这些检查不能替代在对应 MMV 版本中加载导出文件后的实际验收。未声称已完整反编译存档结构或验证全部游戏事件。
+
+## 词条详情
+
+`tools/ExtractEffectDetails` 从固定 MMV 文件只读提取 `AttachEffectParam`、`SpEffectParam` 和中英文效果 FMG。`tools/build_effect_details.py --extract <提取结果.json>` 检查 regulation 的版本与 SHA-256，保留必要引用、字段及说明到 `data/effect-detail-source.json`，生成浏览器用的 `web/src/data/effect-details.json`。原始全表提取结果不提交。之后运行 `python tools/build_effect_details.py` 即可从仓库内快照复现。
+
+```sh
+dotnet build tools/ExtractEffectDetails/ExtractEffectDetails.csproj -p:SmithboxDir=<Smithbox目录>
+dotnet tools/ExtractEffectDetails/bin/Debug/net10.0/ExtractEffectDetails.dll <Smithbox目录> <游戏目录> <MMV的mod目录> <临时提取结果.json>
+python tools/build_effect_details.py --extract <临时提取结果.json>
+```
+
+当前全部 2241 个目录词条有详情记录，637 个可获取词条中 304 个具有已解读的数值字段，其余显示原生说明或“具体数值尚未解明”。提取字段包括能力值、HP/FP/精力上限、攻击倍率、承伤倍率、FP 消耗、定值恢复、绝招量表、持续及周期。百分比按字段实际单位换算，承伤与减伤不混用，绝招量表保留参数单位。每个数值块保留 SpEffect 来源 ID，便于追溯。
+
+沿六类显式效果引用最多追踪六层，去除循环；只展示有已解读数值的节点。不同触发分支各自显示，不相加，不把子效果持续时间称为冷却。法术适用标志仅说明该节点开放的法术通道，仍可能受类别、角色与原生状态条件限制。名称及 FMG 提供玩法条件，自动提取并不代表已解明全部触发路径。比如 `7034200` 的链包含 +35% 攻击倍率与 +30% 法术 FP 消耗的两个三秒节点，不能据此推导完整混合魔法 DPS。
+
+详情卡只呈现游戏内生效规则，不显示抽取池、同件遗物互斥或合法性说明；已有选择列表中的可用性标记保留。不依据 `isNumericEffect`、`isStrongestEffect`、compatibility、exclusive 或同名程度自动判断跨遗物叠加。普通杀敌回绝招 `7090000` 与 +1 版 `6090000` 可叠加来自用户使用反馈，仅用于这对组合；同版重复仍待确认。其他尚无完整调用链或使用证据的组合标明未确认。未声称进行了游戏内数值、全部叠加或联机实测。
+
+详情卡在库存、预设共用的词条编辑器及选择器中提供；商店遗物只读时仍能查看。桌面延迟悬停，键盘聚焦信息按钮或手机点击可打开。使用浏览器 popover 顶层跨越原生模态对话框与列表裁剪；支持移入卡片阅读、关闭按钮、Escape、点外部关闭及视口边界限制。查看与关闭不触发词条选择，不改动存档。
