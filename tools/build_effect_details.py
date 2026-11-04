@@ -156,6 +156,14 @@ assert recluse_mark['exeSha256'] == evidence['exeSha256'] and not recluse_mark['
 assert recluse_mark['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in recluse_mark['checks'].items()} == dict(dispatch=24, lifetime=12, recovery=588, overlap=2)
 
+ironeye_mark_path = ROOT / 'data/effect-ironeye-mark-evidence.json'
+ironeye_mark = json.loads(ironeye_mark_path.read_text())
+assert ironeye_mark['schema'] == 1 and ironeye_mark['regulationSha256'] == catalog['regulationSha256']
+assert ironeye_mark['exeSha256'] == evidence['exeSha256'] and not ironeye_mark['gameplayVerified']
+assert ironeye_mark['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in ironeye_mark['checks'].items()} == dict(selection=48, lifetime=9, refresh=16, breakage=8, rows=353)
+assert (ironeye_mark['baseDuration'], ironeye_mark['extendedDuration']) == (17, 22)
+
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -214,7 +222,7 @@ META = ['effectEndurance', 'motionInterval', 'spCategory', 'categoryPriority', '
         'invocationConditionsStateChange1', 'invocationConditionsStateChange2', 'invocationConditionsStateChange3',
         'wepTypeTrigger', 'wepTypeTriggerCount', 'conditionHp', 'conditionHpRate',
         'changeHpRate', 'changeMpRate', 'changeStaminaRate', 'startGoodsId', 'startingItemAmount',
-        'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier',
+        'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier', 'weakPointValue',
         'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId', 'ultimateArtGauge', 'deleteCriteriaDamage',
         'runeDiscountValue', 'itemDropRate']
 FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META) | set(STATUS_BUILDUP)
@@ -463,6 +471,7 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'ironeye-mark': ('不可叠加', '重复装备不延长弱点持续时间', ['ironeye-mark']),
     'recluse-mark': ('不可叠加', '重复装备不延长烙印持续时间', ['recluse-mark']),
     'starting-pouch': ('可叠加', '每条 +1 格，与小型随身包合计最多 +4 格', ['starting-goods']),
     'starting-goods': ('可叠加', '数量相加，按单格上限分装', ['starting-goods']),
@@ -780,6 +789,13 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if ironeye_mark['root'] in effect['roots'].values():
+        assert source['spells']['7280000']['weakPointValue'] == ironeye_mark['extendedDuration']
+        blocks = [dict(source=7280000, phase='弱点显露时', linked=False,
+                       values=[['弱点最长持续时间', '17 → 22 秒']],
+                       scope=[], restrictions=[], duration=None, interval=None)]
+        notes.append('弱点被击破会提前消失；再次施加取原剩余时间与新时长中较长者，不累加，也不补回弱点耐久。')
+        rule = 'ironeye-mark'
     if recluse_mark['root'] in effect['roots'].values():
         assert source['spells']['706100']['effectEndurance'] == 12.5
         assert source['spells']['706101']['effectEndurance'] == 20
@@ -1016,9 +1032,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1036,6 +1052,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if rules[id] == 'executor-tenacity':
         questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
+    if rules[id] == 'ironeye-mark':
+        questions.append('完整命中／伤害输入、骨骼部位映射、弱点击破伤害与多人投递／死亡／重载交互')
     if rules[id] == 'recluse-mark':
         questions.append('完整施法准入／中断、命中上下文与损伤输入构造、最终恢复修正／上限、多人投递与重载交互')
     if rules[id] == 'starting-weapon':
@@ -1102,6 +1120,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['ironeyeMarkEvidenceSha256'] = hashlib.sha256(ironeye_mark_path.read_bytes()).hexdigest()
 research['recluseMarkEvidenceSha256'] = hashlib.sha256(recluse_mark_path.read_bytes()).hexdigest()
 research['startingGoodsEvidenceSha256'] = hashlib.sha256(starting_goods_path.read_bytes()).hexdigest()
 research['startingWeaponEvidenceSha256'] = hashlib.sha256(starting_weapon_path.read_bytes()).hexdigest()

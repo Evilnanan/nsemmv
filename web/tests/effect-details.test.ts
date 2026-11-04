@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import ironeyeMark from "../../data/effect-ironeye-mark-evidence.json";
 import recluseMark from "../../data/effect-recluse-mark-evidence.json";
 import startingGoods from "../../data/effect-starting-goods-evidence.json";
 import startingWeapon from "../../data/effect-starting-weapon-evidence.json";
@@ -31,6 +32,26 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("uses the weakpoint lifetime and preserves longer remaining time without restoring durability", () => {
+    const detail = effectDetail(7280000)!;
+    expect(detail.blocks[0].values).toEqual([["弱点最长持续时间", "17 → 22 秒"]]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不延长弱点持续时间");
+    expect(detail.notes).toEqual(["弱点被击破会提前消失；再次施加取原剩余时间与新时长中较长者，不累加，也不补回弱点耐久。"]);
+    expect(detail.blocks[0].duration).toBeNull();
+    for (const row of ironeyeMark.checks.refresh) {
+      expect(row.remaining).toBe(Math.max(row.initial - row.elapsed, row.new));
+      expect(row.durability).toBe(123);
+    }
+    for (const row of ironeyeMark.checks.lifetime)
+      expect(Math.abs(row.expiresFrame / row.fps - (row.copies ? 22 : 17))).toBeLessThanOrEqual(1.01 / row.fps);
+    expect(ironeyeMark.checks.selection.filter((r) => r.kind !== 1 || r.flags || r.attack !== 600000110).every((r) => !r.queued.length)).toBe(true);
+    expect(ironeyeMark.checks.breakage.filter((r) => r.damage >= 3000).every((r) => !r.queued.length && r.removedAfterZeroDurability)).toBe(true);
+    expect(ironeyeMark.gameplayVerified).toBe(false);
+    expect(research.ironeyeMarkEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-ironeye-mark-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows the victim mark duration and keeps overlapping marks from multiplying recovery", () => {
     for (const id of [7034300, 7034301]) {
       const detail = effectDetail(id)!;
@@ -635,7 +656,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(520);
+    expect(research.coverage.withNumericFields).toBe(521);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
