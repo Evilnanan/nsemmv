@@ -236,6 +236,12 @@ assert periodic_hp['schema'] == 1 and periodic_hp['regulationSha256'] == catalog
 assert periodic_hp['exeSha256'] == evidence['exeSha256'] and not periodic_hp['gameplayVerified']
 assert periodic_hp['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in periodic_hp['checks'].items()} == dict(snapshot=64, timing=18, mixed=48, staggered=12, arrivalBaseline=6)
+perfume_path = ROOT / 'data/effect-perfume-evidence.json'
+perfume = json.loads(perfume_path.read_text())
+assert perfume['schema'] == 1 and perfume['regulationSha256'] == catalog['regulationSha256']
+assert perfume['exeSha256'] == evidence['exeSha256'] and not perfume['gameplayVerified']
+assert perfume['paramSha256'] == evidence['paramSha256'] and len(perfume['families']) == 2
+assert {k: len(v) for k, v in perfume['checks'].items()} == dict(filters=3616, kinds=156, disabled=48, lifecycle=48)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -604,6 +610,7 @@ STACKING_RULES = {
     'flask-recovery': ('可叠加', '恢复量倍率相乘；提升与降低也相乘', ['passive-resource']),
     'damage-ailment': ('可叠加', '同种异常的累积量相加', ['damage-ailment']),
     'spell-family': ('可叠加', '攻击倍率相乘', ['spell-family']),
+    'perfume': ('可叠加', '攻击倍率相乘', ['perfume']),
     'periodic-hp-recovery': ('可叠加', '恢复量相加，各自计时', ['periodic-hp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -939,6 +946,19 @@ for id, effect in source['effects'].items():
         assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == -1
         assert source['spells'][id]['magicSubCategoryChange1'] == family['category']
         rule = 'spell-family'
+    if any(f['effect'] == int(id) for f in perfume['families']):
+        family = next(f for f in perfume['families'] if f['effect'] == int(id))
+        assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == -1
+        assert source['spells'][str(family['root'])]['cycleOccurrenceSpEffectId'] == family['leaf']
+        blocks = []
+        for key, category, label in [('root', 109, '调香类道具'), ('leaf', 251, '调香瓶攻击')]:
+            sp = family[key]
+            assert source['spells'][str(sp)]['magicSubCategoryChange1'] == category
+            b = block(sp, '生效时', False)
+            b['restrictions'] = ['适用：' + label]
+            b['duration'] = b['interval'] = None
+            blocks.append(b)
+        rule = 'perfume'
     if id in periodic_hp['rows']:
         row = periodic_hp['rows'][id]
         assert list(effect['roots'].values()) == [int(id)] and effect['runtimeExclusive'] == -1
@@ -1338,6 +1358,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互')
     if rules[id] in ('periodic-hp-recovery', 'periodic-hp-loss'):
         questions.append('最终当前 HP 写入与治疗修正、满血／濒死时恢复和消耗的顺序、受损触发及死亡／重载／多人交互')
+    if rules[id] == 'perfume':
+        questions.append('完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用')
     if rules[id] == 'spell-family':
         questions.append('完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取')
     if rules[id] == 'undertaker-contact':
@@ -1435,6 +1457,7 @@ research['passiveResourceEvidenceSha256'] = hashlib.sha256(passive_resource_path
 research['damageAilmentEvidenceSha256'] = hashlib.sha256(damage_ailment_path.read_bytes()).hexdigest()
 research['spellFamilyEvidenceSha256'] = hashlib.sha256(spell_family_path.read_bytes()).hexdigest()
 research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_bytes()).hexdigest()
+research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()

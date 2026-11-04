@@ -8,7 +8,7 @@
     "withDetails": 608,
     "withNumericFields": 535,
     "withMechanicsOnly": 38,
-    "nativeStacking": 458,
+    "nativeStacking": 460,
     "catalog": 2241,
     "catalogWithDetails": 2051
   },
@@ -3851,12 +3851,13 @@
         8400006
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "perfume"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用"
       ],
       "gameplayVerified": false
     },
@@ -12577,12 +12578,13 @@
         8400005
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "perfume"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用"
       ],
       "gameplayVerified": false
     },
@@ -49562,6 +49564,7 @@
   "damageAilmentEvidenceSha256": "9cb0ebcb3b686378fffa197ee58bd2ad7829ad689af9102b6568e28f4bc66350",
   "spellFamilyEvidenceSha256": "ef330b83e6b4410895f895e8fc3736101cf592dff2641b4589c1e74d1fd59150",
   "periodicHpEvidenceSha256": "c9000112c6fe37ff03966d4e94bc0a86a2e937d10cc7ee99736d570967a7c0bc",
+  "perfumeEvidenceSha256": "1375afcdbfddf026c3d2d1182a4841f069cfcb9d8395d515899e61a546dafd0b",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

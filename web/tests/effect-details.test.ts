@@ -31,6 +31,7 @@ import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
+import perfume from "../../data/effect-perfume-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -48,6 +49,28 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("distinguishes perfume items and weapons without presenting renewal as accumulating buffs", () => {
+    for (const [id, rates] of [[7043100, ["+15%", "+5%"]], [6043100, ["+30%", "+10%"]]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.blocks.map(b => b.values)).toEqual(rates.map(rate => [["攻击倍率", rate]]));
+      expect(detail.blocks.map(b => b.restrictions)).toEqual([["适用：调香类道具"], ["适用：调香瓶攻击"]]);
+      expect(detail.blocks.every(b => !b.duration && !b.interval && b.phase === "生效时")).toBe(true);
+    }
+    for (const row of perfume.checks.lifecycle) {
+      expect(row.afterStop).toEqual([]);
+      const first = row.frames[0].values[6150000][0];
+      expect(first).toBe(1);
+      expect(row.frames[1].values).toEqual(row.frames[2].values);
+    }
+    expect(perfume.weaponBindings.map(w => w.name)).toContain("火焰调香瓶");
+    expect(perfume.sparkAromatic.name).toBe("火花香");
+    expect(perfume.gameplayVerified).toBe(false);
+    expect(research.perfumeEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-perfume-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("adds periodic HP copies while retaining independent timers and gain/loss channels", () => {
     expect(effectDetail(7001100)?.stacking).toBe("可叠加");
     expect(effectDetail(7001100)?.stackingDetail).toBe("恢复量相加，各自计时");
