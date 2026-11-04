@@ -149,6 +149,13 @@ assert starting_goods['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in starting_goods['checks'].items()} == dict(
     selection=930, repeat=288, capacity=252, reinitialize=49, allocationFailure=1)
 
+recluse_mark_path = ROOT / 'data/effect-recluse-mark-evidence.json'
+recluse_mark = json.loads(recluse_mark_path.read_text())
+assert recluse_mark['schema'] == 1 and recluse_mark['regulationSha256'] == catalog['regulationSha256']
+assert recluse_mark['exeSha256'] == evidence['exeSha256'] and not recluse_mark['gameplayVerified']
+assert recluse_mark['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in recluse_mark['checks'].items()} == dict(dispatch=24, lifetime=12, recovery=588, overlap=2)
+
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -241,6 +248,8 @@ if args.extract:
                 needed.add(protection['leaf'])
             if root in tenacity['roots']:
                 needed.update(map(int, tenacity['rows']))
+            if root == recluse_mark['root']:
+                needed.update(map(int, recluse_mark['rows']))
             if root in starting_weapon['roots']:
                 needed.update(root + n for n in range(1, 5))
             if root == evasion['root']:
@@ -454,6 +463,7 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'recluse-mark': ('不可叠加', '重复装备不延长烙印持续时间', ['recluse-mark']),
     'starting-pouch': ('可叠加', '每条 +1 格，与小型随身包合计最多 +4 格', ['starting-goods']),
     'starting-goods': ('可叠加', '数量相加，按单格上限分装', ['starting-goods']),
     'starting-weapon': ('不可叠加', '出击武器的属性／异常附加只生效一种', ['starting-weapon']),
@@ -770,6 +780,14 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if recluse_mark['root'] in effect['roots'].values():
+        assert source['spells']['706100']['effectEndurance'] == 12.5
+        assert source['spells']['706101']['effectEndurance'] == 20
+        blocks = [dict(source=706101, branches=[706100], phase='发动绝招后', linked=True,
+                       values=[['鲜血烙印持续时间', '12.5 → 20 秒']],
+                       scope=[], restrictions=[], duration=None, interval=None)]
+        notes.append('再次施加同版烙印会刷新时间；普通版与延长版不会叠加恢复量。')
+        rule = 'recluse-mark'
     if roots and all(r.get('stateInfo') == 2102 for r in roots):
         family = list(effect['roots'].values())
         assert family in starting_goods['families']
@@ -998,9 +1016,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1018,6 +1036,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if rules[id] == 'executor-tenacity':
         questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
+    if rules[id] == 'recluse-mark':
+        questions.append('完整施法准入／中断、命中上下文与损伤输入构造、最终恢复修正／上限、多人投递与重载交互')
     if rules[id] == 'starting-weapon':
         questions.append('完整出征／重载发放队列、武器强化菜单与特殊武器别名、命中修正及异常发作／伤害结算、多人交互')
     if rules[id] == 'guardian-duration':
@@ -1082,6 +1102,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['recluseMarkEvidenceSha256'] = hashlib.sha256(recluse_mark_path.read_bytes()).hexdigest()
 research['startingGoodsEvidenceSha256'] = hashlib.sha256(starting_goods_path.read_bytes()).hexdigest()
 research['startingWeaponEvidenceSha256'] = hashlib.sha256(starting_weapon_path.read_bytes()).hexdigest()
 research['guardianDurationEvidenceSha256'] = hashlib.sha256(duration_path.read_bytes()).hexdigest()

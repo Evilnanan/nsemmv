@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import recluseMark from "../../data/effect-recluse-mark-evidence.json";
 import startingGoods from "../../data/effect-starting-goods-evidence.json";
 import startingWeapon from "../../data/effect-starting-weapon-evidence.json";
 import duration from "../../data/effect-guardian-duration-evidence.json";
@@ -30,6 +31,29 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows the victim mark duration and keeps overlapping marks from multiplying recovery", () => {
+    for (const id of [7034300, 7034301]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["鲜血烙印持续时间", "12.5 → 20 秒"]]);
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("重复装备不延长烙印持续时间");
+      expect(detail.notes).toEqual(["再次施加同版烙印会刷新时间；普通版与延长版不会叠加恢复量。"]);
+      expect(detail.blocks[0].duration).toBeNull();
+    }
+    for (const row of recluseMark.checks.lifetime) {
+      const duration = row.id === 706100 ? 12.5 : 20;
+      expect(Math.abs(row.expiresFrame / row.fps - duration - (row.refresh ?? 0))).toBeLessThanOrEqual(3.01 / row.fps);
+      if (row.refresh) expect(row.refreshedLifetime).toBe(duration);
+    }
+    for (const row of recluseMark.checks.recovery.filter((r) => r.input === 100 && r.local && r.channel >= 0))
+      expect(row.requests).toEqual(row.ids.length ? [["0x426130", 40], ["0x4261c0", 8]] : []);
+    expect(recluseMark.checks.recovery.filter((r) => !r.local || r.channel < 0).every((r) => !r.requests.length)).toBe(true);
+    expect(recluseMark.state.animation).toBe("a906_660000");
+    expect(recluseMark.gameplayVerified).toBe(false);
+    expect(research.recluseMarkEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-recluse-mark-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shares pouch expansion with picked pouches while keeping Dragon Heart slots independent", () => {
     for (const id of [7121000, 7121001]) {
       const detail = effectDetail(id)!;
@@ -611,7 +635,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(518);
+    expect(research.coverage.withNumericFields).toBe(520);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
