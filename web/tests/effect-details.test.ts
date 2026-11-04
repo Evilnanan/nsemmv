@@ -41,6 +41,7 @@ import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
+import duchessStealth from "../../data/effect-duchess-stealth-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -58,6 +59,42 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows the lasting backstab concealment without exposing its maintenance timers", () => {
+    const detail = effectDetail(7031800)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增强或延长隐匿");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].source).toBe(7031803);
+    expect(detail.blocks[0].values).toEqual([["隐匿时间", "10 秒"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes).toEqual(["再次背刺刷新持续时间。"]);
+    for (const row of duchessStealth.checks.dispatch) {
+      expect(row.states.at(-1)?.concealed).toBe(!!row.copies);
+      expect(row.states.at(-1)?.transition).toBe(false);
+      expect(row.nodes.filter(n => n.id === 7031803)).toHaveLength(row.copies ? 1 : 0);
+    }
+    for (const row of duchessStealth.checks.lifetime) {
+      if (row.copies) {
+        expect(row.first).not.toBeNull();
+        expect(Math.abs((row.last! - row.first! + 1) / row.fps - 10)).toBeLessThanOrEqual(3.01 / row.fps);
+      } else expect(row.first).toBeNull();
+      expect(row.remaining.some(n => n.id === 7031803)).toBe(false);
+    }
+    for (const row of duchessStealth.checks.repeat) {
+      expect(row.lifeAfter.every(n => n.lifetime > 9.3)).toBe(true);
+      expect(Math.abs(row.transitions.at(-1)!.frame / 60 - row.starts.at(-1)! - 10)).toBeLessThan(.5);
+    }
+    for (const row of duchessStealth.checks.damage) {
+      expect(row.after).toBeCloseTo(row.before - 1 / 60, 4);
+      expect(row.rates[0]).toBeCloseTo(.01);
+      expect(row.rates[1]).toBe(0);
+    }
+    expect(duchessStealth.gameplayVerified).toBe(false);
+    expect(research.duchessStealthEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-duchess-stealth-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows the feint parry window separately from the longer cancel window", () => {
     const detail = effectDetail(7036710)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1332,7 +1369,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(542);
+    expect(research.coverage.withNumericFields).toBe(543);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

@@ -1,0 +1,5604 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "animationBundleSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "taeSha256": {
+    "2020": "4f584a496d5752fa7526bef585fe0e8f5aa239e5abcbba26a24a43291596c2a4",
+    "2274": "21edb324e4afc045c845126f53f57a374736b54a405457a6d2aac9cd0538c0bb",
+    "2279": "d79dcec6f62cb41315c43b0a8549bbfa3e17772db793ed179d6fd7b3b02d3cf3"
+  },
+  "throwParamSha256": "abc59fba4d76a089b98b1116005d7d87df9dacfc2422d918c6ec7ce7a0a1145a",
+  "effect": 7031800,
+  "root": 9200002,
+  "marker": 7031801,
+  "leaf": 7031803,
+  "events": [
+    {
+      "tae": 2020,
+      "animation": 31710,
+      "index": 1,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2023,
+      "animation": 31710,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2025,
+      "animation": 31710,
+      "index": 46,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2030,
+      "animation": 31710,
+      "index": 39,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2032,
+      "animation": 31710,
+      "index": 72,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2036,
+      "animation": 31710,
+      "index": 19,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2042,
+      "animation": 31710,
+      "index": 19,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2043,
+      "animation": 31710,
+      "index": 66,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2044,
+      "animation": 31710,
+      "index": 56,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2047,
+      "animation": 31710,
+      "index": 63,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2048,
+      "animation": 31710,
+      "index": 63,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2049,
+      "animation": 31710,
+      "index": 63,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2050,
+      "animation": 31710,
+      "index": 19,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2070,
+      "animation": 31710,
+      "index": 25,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2071,
+      "animation": 31710,
+      "index": 25,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2270,
+      "animation": 31710,
+      "index": 44,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2271,
+      "animation": 31710,
+      "index": 58,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2272,
+      "animation": 31710,
+      "index": 59,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2273,
+      "animation": 31710,
+      "index": 52,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2274,
+      "animation": 31710,
+      "index": 1,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2274,
+      "animation": 31710,
+      "index": 78,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2275,
+      "animation": 31710,
+      "index": 53,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2277,
+      "animation": 31710,
+      "index": 53,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2278,
+      "animation": 31710,
+      "index": 28,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2279,
+      "animation": 31710,
+      "index": 60,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2280,
+      "animation": 31710,
+      "index": 52,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2281,
+      "animation": 31710,
+      "index": 47,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2282,
+      "animation": 31710,
+      "index": 1,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2282,
+      "animation": 31710,
+      "index": 78,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    },
+    {
+      "tae": 2283,
+      "animation": 31710,
+      "index": 44,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "F94B6B00000000000000000000000000"
+    }
+  ],
+  "throwBinding": {
+    "id": 10000000,
+    "row": {
+      "adsrobModelPosInterpolationTime": 0,
+      "atkAnimId": 31710,
+      "AtkChrId": 0,
+      "AtkEnableState": 0,
+      "atkSorbDmyId": 230,
+      "defAnimId": 70000,
+      "DefChrId": 0,
+      "defSorbDmyId": 0,
+      "DiffAngMax": 120,
+      "DiffAngMax_start": 35,
+      "DiffAngMin": -120,
+      "DiffAngMin_start": -35,
+      "diffAngMyToDef": 120,
+      "diffAngMyToDef_start": 70,
+      "Dist": 1.7999999523162842,
+      "Dist_start": 1.5,
+      "dmyHasChrDirType": 0,
+      "escHp": 0,
+      "isEnableCorrectPos_forThrowAdjust": 1,
+      "isEnableThrowFollowingFallAssist": 0,
+      "isEnableThrowFollowingFeedback": 1,
+      "isSkipSphereCast": 0,
+      "isSkipWepCate": 0,
+      "isTurnAtker": 0,
+      "judgeRangeBasePosDmyId1": -1,
+      "judgeRangeBasePosDmyId2": -1,
+      "lowerYRange": 0.6499999761581421,
+      "lowerYRange_start": 0.550000011920929,
+      "pad0": 0,
+      "PadType": 1,
+      "selfEscCycleCnt": 0,
+      "selfEscCycleTime": 0,
+      "sphereCastRadiusRateLow": 70,
+      "sphereCastRadiusRateTop": 70,
+      "throwFollowingEndEasingTime": 0.5,
+      "throwFollowingType": 1,
+      "throwType": 1,
+      "throwTypeId": 0,
+      "upperYRange": 0.5,
+      "upperYRange_start": 0.4000000059604645
+    }
+  },
+  "rows": {
+    "9200002": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 1,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": 7031800,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": -1,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": 20222,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 1,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0.20000000298023224,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": 10,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": 9100033,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 0,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7031800": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 1,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": 7031802,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": 3,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 2038,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0.10000000149011612,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 0,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7031801": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": 0,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 1,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 1,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 1,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 10,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 2038,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7031802": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": 0.10000000149011612,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 1,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 1,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": 7031803,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 0,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 600,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7031803": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": 10,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 1,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 1,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 0,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": 20422,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 1,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 11,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": 20422,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 0.009999999776482582,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": 121119,
+      "spEffectTextId_2": 121136,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 8,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": 8526,
+      "vfxId1": 8525,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    }
+  },
+  "checks": {
+    "rawEvents": [
+      {
+        "tae": 2020,
+        "events": [
+          {
+            "payload": "f94b6b00000000000000000000000000",
+            "start": 0.0,
+            "end": 0.10000000149011612
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031801,
+            "lifetime": 0.0,
+            "flags": 2
+          }
+        ]
+      },
+      {
+        "tae": 2274,
+        "events": [
+          {
+            "payload": "f94b6b00000000000000000000000000",
+            "start": 0.0,
+            "end": 0.10000000149011612
+          },
+          {
+            "payload": "f94b6b00000000000000000000000000",
+            "start": 0.0,
+            "end": 0.10000000149011612
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031801,
+            "lifetime": 0.0,
+            "flags": 2
+          }
+        ]
+      },
+      {
+        "tae": 2279,
+        "events": [
+          {
+            "payload": "f94b6b00000000000000000000000000",
+            "start": 0.0,
+            "end": 0.10000000149011612
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031801,
+            "lifetime": 0.0,
+            "flags": 2
+          }
+        ]
+      }
+    ],
+    "dispatch": [
+      {
+        "copies": 0,
+        "active": 0,
+        "duplicates": 1,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          }
+        ],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "active": 0,
+        "duplicates": 2,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          }
+        ],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "active": 1,
+        "duplicates": 1,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          }
+        ],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "active": 1,
+        "duplicates": 2,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": false
+          }
+        ],
+        "nodes": []
+      },
+      {
+        "copies": 1,
+        "active": 0,
+        "duplicates": 1,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "active": 0,
+        "duplicates": 2,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "active": 1,
+        "duplicates": 1,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "active": 1,
+        "duplicates": 2,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "active": 0,
+        "duplicates": 1,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "active": 0,
+        "duplicates": 2,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "active": 1,
+        "duplicates": 1,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "active": 1,
+        "duplicates": 2,
+        "states": [
+          {
+            "frame": 0,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 1,
+            "marker": true,
+            "transition": false,
+            "concealed": false
+          },
+          {
+            "frame": 2,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 3,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 4,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 5,
+            "marker": true,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 6,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 7,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 8,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 9,
+            "marker": false,
+            "transition": true,
+            "concealed": false
+          },
+          {
+            "frame": 10,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 11,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 12,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 13,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 14,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 15,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 16,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 17,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 18,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 19,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 20,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 21,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 22,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 23,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 24,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 25,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 26,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 27,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 28,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          },
+          {
+            "frame": 29,
+            "marker": false,
+            "transition": false,
+            "concealed": true
+          }
+        ],
+        "nodes": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          },
+          {
+            "id": 7031803,
+            "lifetime": 9.666672,
+            "flags": 8
+          }
+        ]
+      }
+    ],
+    "lifetime": [
+      {
+        "fps": 30,
+        "copies": 0,
+        "first": null,
+        "last": null,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "fps": 30,
+        "copies": 1,
+        "first": 6,
+        "last": 306,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          },
+          {
+            "frame": 2,
+            "concealed": false,
+            "fullHide": true
+          },
+          {
+            "frame": 6,
+            "concealed": true,
+            "fullHide": false
+          },
+          {
+            "frame": 307,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "copies": 3,
+        "first": 6,
+        "last": 306,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          },
+          {
+            "frame": 2,
+            "concealed": false,
+            "fullHide": true
+          },
+          {
+            "frame": 6,
+            "concealed": true,
+            "fullHide": false
+          },
+          {
+            "frame": 307,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "copies": 0,
+        "first": null,
+        "last": null,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "fps": 60,
+        "copies": 1,
+        "first": 10,
+        "last": 610,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          },
+          {
+            "frame": 2,
+            "concealed": false,
+            "fullHide": true
+          },
+          {
+            "frame": 10,
+            "concealed": true,
+            "fullHide": false
+          },
+          {
+            "frame": 611,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "copies": 3,
+        "first": 10,
+        "last": 610,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          },
+          {
+            "frame": 2,
+            "concealed": false,
+            "fullHide": true
+          },
+          {
+            "frame": 10,
+            "concealed": true,
+            "fullHide": false
+          },
+          {
+            "frame": 611,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "copies": 0,
+        "first": null,
+        "last": null,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "fps": 120,
+        "copies": 1,
+        "first": 16,
+        "last": 1217,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          },
+          {
+            "frame": 2,
+            "concealed": false,
+            "fullHide": true
+          },
+          {
+            "frame": 16,
+            "concealed": true,
+            "fullHide": false
+          },
+          {
+            "frame": 1218,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "copies": 3,
+        "first": 16,
+        "last": 1217,
+        "transitions": [
+          {
+            "frame": 0,
+            "concealed": false,
+            "fullHide": false
+          },
+          {
+            "frame": 2,
+            "concealed": false,
+            "fullHide": true
+          },
+          {
+            "frame": 16,
+            "concealed": true,
+            "fullHide": false
+          },
+          {
+            "frame": 1218,
+            "concealed": false,
+            "fullHide": false
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9200002,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7031800,
+            "lifetime": 3.0,
+            "flags": 1
+          }
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "copies": 1,
+        "starts": [
+          0
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 611,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "starts": [
+          0,
+          1
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 673,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 90,
+            "lifetime": 9.683338
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "starts": [
+          0,
+          3
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 793,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 210,
+            "lifetime": 9.683338
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "starts": [
+          0,
+          9
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 1153,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 570,
+            "lifetime": 9.683338
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "starts": [
+          0,
+          11
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 611,
+            "concealed": false
+          },
+          {
+            "frame": 671,
+            "concealed": true
+          },
+          {
+            "frame": 1272,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 690,
+            "lifetime": 9.666672
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "starts": [
+          0
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 611,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "starts": [
+          0,
+          1
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 673,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 90,
+            "lifetime": 9.683338
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "starts": [
+          0,
+          3
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 793,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 210,
+            "lifetime": 9.683338
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "starts": [
+          0,
+          9
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 1153,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 570,
+            "lifetime": 9.683338
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "starts": [
+          0,
+          11
+        ],
+        "transitions": [
+          {
+            "frame": 10,
+            "concealed": true
+          },
+          {
+            "frame": 611,
+            "concealed": false
+          },
+          {
+            "frame": 671,
+            "concealed": true
+          },
+          {
+            "frame": 1272,
+            "concealed": false
+          }
+        ],
+        "lifeAfter": [
+          {
+            "frame": 30,
+            "lifetime": 9.650005
+          },
+          {
+            "frame": 690,
+            "lifetime": 9.666672
+          }
+        ]
+      }
+    ],
+    "damage": [
+      {
+        "amount": 0,
+        "elapsed": 1,
+        "before": 9.166679,
+        "after": 9.150013,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 0,
+        "elapsed": 5,
+        "before": 5.166659,
+        "after": 5.149992,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 0,
+        "elapsed": 9,
+        "before": 1.166647,
+        "after": 1.14998,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 1,
+        "elapsed": 1,
+        "before": 9.166679,
+        "after": 9.150013,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 1,
+        "elapsed": 5,
+        "before": 5.166659,
+        "after": 5.149992,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 1,
+        "elapsed": 9,
+        "before": 1.166647,
+        "after": 1.14998,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 1000,
+        "elapsed": 1,
+        "before": 9.166679,
+        "after": 9.150013,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 1000,
+        "elapsed": 5,
+        "before": 5.166659,
+        "after": 5.149992,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      },
+      {
+        "amount": 1000,
+        "elapsed": 9,
+        "before": 1.166647,
+        "after": 1.14998,
+        "rates": [
+          0.009999999776482582,
+          0.0
+        ]
+      }
+    ]
+  },
+  "native": {
+    "relocate": "27D0F10",
+    "iterate": "27D0400",
+    "event": "410CA0 → 40FF20",
+    "grant": "3C8BE0 → 3C80A0 / 3C7FD0",
+    "insert": "50D060",
+    "qualify": "5057D0",
+    "update": "50ACD0",
+    "state": "508E20 (AL)",
+    "damage": "504D30",
+    "sight": "508A30",
+    "hearing": "508890"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3CED90/4D1B20 explicit animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "actor damage notification only; full hit processing, attack actions, stealth rendering and actual AI perception not simulated",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit critical-animation event arrivals during its first 0.1 seconds; full throw selection and collision not simulated",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false
+}

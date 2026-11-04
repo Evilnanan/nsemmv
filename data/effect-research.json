@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 615,
-    "withNumericFields": 542,
+    "withDetails": 616,
+    "withNumericFields": 543,
     "withMechanicsOnly": 38,
-    "nativeStacking": 491,
+    "nativeStacking": 492,
     "catalog": 2241,
-    "catalogWithDetails": 2058
+    "catalogWithDetails": 2059
   },
   "effects": {
     "0": {
@@ -10725,14 +10725,17 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7031803
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "duchess-stealth"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整致命一击选择与敌人变体、攻击动作及完整受击路径是否额外移除、隐匿外观和视觉／听觉修正在最终 AI 判定中的单位及适用范围、待机／死亡／重载和多人同步"
       ],
       "gameplayVerified": false
     },
@@ -49631,6 +49634,7 @@
   "ironeyeUltimateEvidenceSha256": "d6f431d0505ee7d18f41cec8542dc78ecf27ca2422890aaa62cd3ac840e8e174",
   "revenantGhostflameEvidenceSha256": "5f813f0c5dceb9c0140327e4d9735cab48f047e4426a26e38db1f6680b735598",
   "scholarFeintEvidenceSha256": "436056dbce2311bd1a06f2abf03242016139fa316e0bde73f4d8274330658d39",
+  "duchessStealthEvidenceSha256": "997082f1f08e6a82cae63ea108bc9db3700eadfdac60285992e33fbbf162745e",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
