@@ -11,10 +11,43 @@ import growth from "../../data/effect-growth-source.json";
 import totem from "../../data/effect-totem-evidence.json";
 import discovery from "../../data/effect-discovery-evidence.json";
 import lifecycle from "../../data/effect-lifecycle-evidence.json";
+import recovery from "../../data/effect-recovery-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("distinguishes Guardian healing cadence from bullet emissions and the recipient lease", () => {
+    for (const id of [12002, 12003, 7012000]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["HP 恢复", "最大值的 10% + 12"]]);
+      expect(detail.blocks[0].restrictions).toContain("自身及周围友方 · 半径 15 米");
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.notes.join()).toContain("约每秒恢复一次");
+      expect(detail.notes.join()).toContain("尚未到期的效果仍可能再恢复一次");
+      expect(detail.stacking).toBe("不可叠加");
+    }
+    for (const r of recovery.checks.trigger) {
+      expect(r.requests).toHaveLength(r.equipmentCopies ? 1 : 0);
+      if (r.equipmentCopies) expect(r.requests[0].active).toBe(Boolean(r.active));
+    }
+    for (const r of recovery.checks.emissionAndRecovery) {
+      expect(r.emissions).toHaveLength(10);
+      expect(r.heals).toHaveLength(4);
+      expect(r.maximumRecipientNodes).toBe(1);
+      expect(r.finalNodes).toEqual([]);
+      expect(r.heals.at(-1)!.frame / r.fps).toBeGreaterThan(r.sourceStopsAt);
+      for (const h of r.heals) expect(h.hp).toEqual([-10, -12]);
+      const single = recovery.checks.emissionAndRecovery.find((c) => c.fps === r.fps && c.simultaneousSources === 1)!;
+      expect(r.heals).toEqual(single.heals);
+    }
+    expect(recovery.checks.arrival.map((r) => r.heals.map((h) => h.frame)))
+      .toEqual([[0], [0], [0, 60], [0, 61]]);
+    expect(research.recoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(recovery.gameplayVerified).toBe(false);
+  });
   it("separates Revenant's fixed rearm schedule, one-shot FP and independent attack buffs", () => {
     const detail = effectDetail(7220200)!;
     expect(detail).toEqual(effectDetail(7220201));
@@ -154,7 +187,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(492);
+    expect(research.coverage.withNumericFields).toBe(494);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

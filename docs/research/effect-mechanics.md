@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 563 |
-| 其中有已解读的数值字段 | 492 |
+| 有可展示的数值、机制或替换法术 | 565 |
+| 其中有已解读的数值字段 | 494 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 281 |
-| 尚未解析到可展示详情 | 74 |
+| 已核对原生叠加处理 | 283 |
+| 尚未解析到可展示详情 | 72 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -29,6 +29,7 @@ dotnet tools/ExtractEffectDetails/bin/Debug/net10.0/ExtractEffectDetails.dll <Sm
 # Python 环境需要 pefile、unicorn。
 python tools/probe_effect_mechanics.py <游戏目录>/nightreign.exe <临时目录>/extracted.SpEffectParam.param <临时目录>/extracted.json data/effect-native-evidence.json --hero-params <临时目录>/extracted.HeroStatusParam.param --systems <临时目录>/systems.json
 python tools/probe_effect_lifecycle.py <游戏目录>/nightreign.exe <临时目录>/extracted.json data/effect-lifecycle-evidence.json
+python tools/probe_recovery_mechanics.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json <临时目录>/animations.json data/effect-recovery-evidence.json
 python tools/build_effect_details.py --extract <临时目录>/extracted.json
 ```
 
@@ -48,7 +49,7 @@ python tools/build_effect_growth.py <临时目录>/extracted.json <临时目录>
 
 [`probe_effect_mechanics.py`](../../tools/probe_effect_mechanics.py) 在 Unicorn 内执行原 EXE 的指令，使用实际 MMV 的 1024 字节 SpEffect 行、28 字节 HeroStatus 行，构造效果链表和有效/无效节点。字段偏移先与提取器解码结果逐行核对。遇到未准备的依赖或超过执行预算即失败。
 
-目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**，另有 **244 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
+目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**，另有 **244 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
 
 外部依赖替代包括：`E6D630` 无攻击（AtkParam）行的查询，`E78730` 用实际 HeroStatus 字节实现的表查询，`E78720` 表包装对象清理；杀敌分派的 `3C7FD0` 记录下游效果 ID，随后单独执行真实数值聚合；绝招结算中的 `42C120/3D4180` 提供无玩家 HUD 通知的合成 owner；计时刷新中的 `EA17E0` 查询实际 SpEffect 行。完整清单保存在输出的 `stubs`。倍率、实例匹配、等级选择、插值、取整、计时、累计值重置均执行原生代码。没有启动游戏进程，没有模拟完整远征。
 
@@ -310,3 +311,15 @@ FP 使用实际 `507460`，直接读取 `changeMpRate/+0xA4` 与定值 `+0xA8`�
 12 组情景分别核对两个击杀分支的无装备、单次、连续两次、重复装备、窗口结束后与独立到期。两次击杀新增两个类别 10 实例，分别得到 ×1.3225 或 ×1.1025；根标记重复装备仍只有一个。另有 18 组实际攻击 getter 检查覆盖上述三个攻击叶与来源类别 0～5，0～4 返回各自倍率，5 保持中性。
 
 此批新增 3 个可获取词条详情。仍待查极端实例容量、重叠绝招窗口、共享击杀来源、完整角色队列与网络／倒地／重载；所有 `gameplayVerified` 保持 false。
+
+## 第十一批：守护者绝招回血的发射与接收周期
+
+根 7012000（目录 12002／12003／7012000）提供状态 2046。TAE 2901／610010、610011 的 Type 2 事件使用 judge 7808、条件 2046、Enable=1。第二套事件派发 `414820 → 40CD80` 读取实际状态，`668B30` 根据角色武器 1000 得到 Behavior 700000808，再指向 Bullet 30901188。未装备时没有请求；事件结束产生停止请求，不能把它算作一次额外发射。
+
+Bullet 每 0.3 秒发射，半径 15 米，Atk 700000809 允许自身和友方、不允许敌方，命中施加 7012002。叶节点恢复最大 HP 的 10% + 12，类别 20 同 ID 复用，寿命 0.7 秒、恢复周期 1 秒。这三个时间不能混用：首次生效恢复一次，之后的投递只刷新寿命，持续获得效果时约每秒恢复一次。停止施加后，未过期的节点仍可能到达下一个恢复 tick；页面不将 0.7 秒写成恢复持续时间。
+
+[`probe_recovery_mechanics.py`](../../tools/probe_recovery_mechanics.py) 执行实际条件判定／Behavior 解析、`343280` 发射计时、`50D060` 插入、`5057D0` 资格、`50ACD0` 生命周期及 `50B860` HP getter。Type 2 的 Enable=1 经请求链形成非瞬发标记，发射器 +0x494 为 0；构造时 +0x560 计时器为 0。实际发射调用 `347700` 由记录器代替，成功命中投递在下一模拟帧插入；没有运行碰撞检测。
+
+22 组检查包含两个动画 × 三种装备数量 × 开始／结束标记的 12 组请求，以及 30／60／120 Hz、1／3 个同步来源的 6 组发射／恢复和 4 组分离到达情景。模拟来源持续 3 秒时发射 10 次、恢复 4 次，最后一次恢复在来源停止后；三个同步来源始终只保留一个接收节点，恢复与单来源一致。第 0、12 帧再次投递仅恢复一次；相隔 60 帧且旧节点已过期时，两次均立即恢复。这里的来源停止是夹具条件，完整施法结束队列、范围再次进入和网络投递仍待核对。
+
+新增共享运行器 [`native_effect_runtime.py`](../../tools/native_effect_runtime.py)，统一真实 PARAM 输入、节点分配和原生效果容器。原有复仇者／女爵 56 组在提取公共代码后重新执行，与此前证据文件逐字节一致。此批增加 2 个可获取词条详情，证据文件为 [`effect-recovery-evidence.json`](../../data/effect-recovery-evidence.json)。

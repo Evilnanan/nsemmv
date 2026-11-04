@@ -1,0 +1,595 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "companionSha256": {
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "EquipParamWeapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1"
+  },
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "root": 7012000,
+  "leaf": 7012002,
+  "events": [
+    {
+      "tae": 2901,
+      "animation": 610010,
+      "index": 8,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "8403000000000000801E00000001FE070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 610011,
+      "index": 3,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "8403000000000000801E00000001FE070000FF03000000000000000000000000"
+    }
+  ],
+  "behaviorId": 700000808,
+  "behavior": {
+    "refType": 1,
+    "refId": 30901188
+  },
+  "bulletId": 30901188,
+  "bullet": {
+    "atkId_Bullet": 700000809,
+    "spEffectId0": 7012002,
+    "hitRadius": 15,
+    "hitRadiusMax": 15,
+    "life": 0.30000001192092896,
+    "shootInterval": 0.30000001192092896,
+    "numShoot": 1,
+    "isEndlessHit": 0,
+    "HitBulletID": -1,
+    "intervalCreateBulletId": -1
+  },
+  "attack": {
+    "friendlyTarget": 1,
+    "selfTarget": 1,
+    "opposeTarget": 0,
+    "disableHitSpEffect": 0
+  },
+  "checks": {
+    "trigger": [
+      {
+        "animation": 610010,
+        "equipmentCopies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 610010,
+        "equipmentCopies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 610010,
+        "equipmentCopies": 1,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": false,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000000"
+          }
+        ]
+      },
+      {
+        "animation": 610010,
+        "equipmentCopies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": true,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000100"
+          }
+        ]
+      },
+      {
+        "animation": 610010,
+        "equipmentCopies": 3,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": false,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000000"
+          }
+        ]
+      },
+      {
+        "animation": 610010,
+        "equipmentCopies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": true,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000100"
+          }
+        ]
+      },
+      {
+        "animation": 610011,
+        "equipmentCopies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 610011,
+        "equipmentCopies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 610011,
+        "equipmentCopies": 1,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": false,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000000"
+          }
+        ]
+      },
+      {
+        "animation": 610011,
+        "equipmentCopies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": true,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000100"
+          }
+        ]
+      },
+      {
+        "animation": 610011,
+        "equipmentCopies": 3,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": false,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000000"
+          }
+        ]
+      },
+      {
+        "animation": 610011,
+        "equipmentCopies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 700000808,
+            "active": true,
+            "instant": false,
+            "payload": "8403000000ff000000000000000000000100"
+          }
+        ]
+      }
+    ],
+    "emissionAndRecovery": [
+      {
+        "fps": 30,
+        "simultaneousSources": 1,
+        "sourceStopsAt": 3,
+        "emissions": [
+          0,
+          10,
+          19,
+          28,
+          37,
+          46,
+          55,
+          64,
+          73,
+          82
+        ],
+        "heals": [
+          {
+            "frame": 1,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 31,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 61,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 91,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "maximumRecipientNodes": 1,
+        "finalNodes": []
+      },
+      {
+        "fps": 30,
+        "simultaneousSources": 3,
+        "sourceStopsAt": 3,
+        "emissions": [
+          0,
+          10,
+          19,
+          28,
+          37,
+          46,
+          55,
+          64,
+          73,
+          82
+        ],
+        "heals": [
+          {
+            "frame": 1,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 31,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 61,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 91,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "maximumRecipientNodes": 1,
+        "finalNodes": []
+      },
+      {
+        "fps": 60,
+        "simultaneousSources": 1,
+        "sourceStopsAt": 3,
+        "emissions": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          126,
+          144,
+          162
+        ],
+        "heals": [
+          {
+            "frame": 1,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 62,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 122,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 182,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "maximumRecipientNodes": 1,
+        "finalNodes": []
+      },
+      {
+        "fps": 60,
+        "simultaneousSources": 3,
+        "sourceStopsAt": 3,
+        "emissions": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          126,
+          144,
+          162
+        ],
+        "heals": [
+          {
+            "frame": 1,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 62,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 122,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 182,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "maximumRecipientNodes": 1,
+        "finalNodes": []
+      },
+      {
+        "fps": 120,
+        "simultaneousSources": 1,
+        "sourceStopsAt": 3,
+        "emissions": [
+          0,
+          36,
+          72,
+          108,
+          144,
+          180,
+          216,
+          252,
+          288,
+          324
+        ],
+        "heals": [
+          {
+            "frame": 1,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 122,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 242,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 362,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "maximumRecipientNodes": 1,
+        "finalNodes": []
+      },
+      {
+        "fps": 120,
+        "simultaneousSources": 3,
+        "sourceStopsAt": 3,
+        "emissions": [
+          0,
+          36,
+          72,
+          108,
+          144,
+          180,
+          216,
+          252,
+          288,
+          324
+        ],
+        "heals": [
+          {
+            "frame": 1,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 122,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 242,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 362,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "maximumRecipientNodes": 1,
+        "finalNodes": []
+      }
+    ],
+    "arrival": [
+      {
+        "fps": 60,
+        "arrivals": [
+          0
+        ],
+        "heals": [
+          {
+            "frame": 0,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "finalNodes": []
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          12
+        ],
+        "heals": [
+          {
+            "frame": 0,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "finalNodes": []
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          60
+        ],
+        "heals": [
+          {
+            "frame": 0,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 60,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "finalNodes": []
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "heals": [
+          {
+            "frame": 0,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          },
+          {
+            "frame": 61,
+            "hp": [
+              -10.0,
+              -12.0
+            ]
+          }
+        ],
+        "finalNodes": []
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "347700 successful projectile-emission recorder; collision delivery is a next-frame fixture",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3CED90 isolated actor context",
+    "E6FCB0 actual Behavior row lookup",
+    "E87800 actual Bullet row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}
