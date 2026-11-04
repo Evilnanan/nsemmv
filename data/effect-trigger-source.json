@@ -10847,6 +10847,28 @@
         ]
       }
     },
+    "7032900": {
+      "state": 2206,
+      "family": "recluse-bleed",
+      "phase": "绝招发动时",
+      "seeds": [
+        7032901
+      ],
+      "events": {
+        "7032901": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2906,
+            "animation": 660000,
+            "index": 3,
+            "type": 67,
+            "start": 2.6666667,
+            "end": 2.7666667,
+            "parameters": "45506B00000000000000000000000000"
+          }
+        ]
+      }
+    },
     "7220300": {
       "state": 2044,
       "family": "revenant-damage",

@@ -37,6 +37,7 @@ families = {
     'critical-runes': ([7031900], '致命一击时'),
     'random-weapon': ([7035700], '切换武器后'),
     'recluse-max-hp': ([7034100], '绝招发动后'),
+    'recluse-bleed': ([7032900], '绝招发动时'),
     'revenant-damage': ([7220300], '绝招发动后'),
     'duchess-kill': ([7032700], '绝招期间打倒敌人后'),
     'wylder-ultimate': ([7020100], '绝招发动后'),

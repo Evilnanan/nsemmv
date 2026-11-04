@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 566 |
-| 其中有已解读的数值字段 | 495 |
+| 有可展示的数值、机制或替换法术 | 568 |
+| 其中有已解读的数值字段 | 497 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 332 |
-| 尚未解析到可展示详情 | 71 |
+| 已核对原生叠加处理 | 334 |
+| 尚未解析到可展示详情 | 69 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -32,6 +32,7 @@ python tools/probe_effect_lifecycle.py <游戏目录>/nightreign.exe <临时目�
 python tools/probe_recovery_mechanics.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json <临时目录>/animations.json data/effect-recovery-evidence.json
 python tools/probe_executor_recovery.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/animations.json <MMV的mod目录>/action/script/c0000.hks data/effect-executor-recovery-evidence.json
 python tools/probe_weapon_recovery.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json data/effect-weapon-recovery-evidence.json
+python tools/probe_recluse_bleed.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/animations.json data/effect-recluse-bleed-evidence.json
 python tools/build_effect_details.py --extract <临时目录>/extracted.json
 ```
 
@@ -51,7 +52,7 @@ python tools/build_effect_growth.py <临时目录>/extracted.json <临时目录>
 
 [`probe_effect_mechanics.py`](../../tools/probe_effect_mechanics.py) 在 Unicorn 内执行原 EXE 的指令，使用实际 MMV 的 1024 字节 SpEffect 行、28 字节 HeroStatus 行，构造效果链表和有效/无效节点。字段偏移先与提取器解码结果逐行核对。遇到未准备的依赖或超过执行预算即失败。
 
-目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**、执行者回血 **24 组**、武器命中恢复 **200 组**，另有 **244 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
+目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**、执行者回血 **24 组**、武器命中恢复 **200 组**、隐士自出血 **22 组**，另有 **244 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
 
 外部依赖替代包括：`E6D630` 无攻击（AtkParam）行的查询，`E78730` 用实际 HeroStatus 字节实现的表查询，`E78720` 表包装对象清理；杀敌分派的 `3C7FD0` 记录下游效果 ID，随后单独执行真实数值聚合；绝招结算中的 `42C120/3D4180` 提供无玩家 HUD 通知的合成 owner；计时刷新中的 `EA17E0` 查询实际 SpEffect 行。完整清单保存在输出的 `stubs`。倍率、实例匹配、等级选择、插值、取整、计时、累计值重置均执行原生代码。没有启动游戏进程，没有模拟完整远征。
 
@@ -355,3 +356,15 @@ Bullet 每 0.3 秒发射，半径 15 米，Atk 700000809 允许自身和友方�
 轻大剑、大太刀、反手剑、调香瓶的类型为 95／96／94／91；当前 PC 原生 `EA1D40` 的枚举上界为 87。对应 8 条 HP／FP 恢复在未加载 DLL 的探针中均无法通过，即使使用类型相同的实际武器行。不能据此直接断言完整 MMV 游戏内无效：还需核对 Mod 运行时扩展或替代动作／事件路径。页面保留恢复参数、标出实际触发待确认，叠加仍为待确认；不将它们算入本批新增的 48 条原生叠加结论。
 
 200 组记录见 [`effect-weapon-recovery-evidence.json`](../../data/effect-weapon-recovery-evidence.json)。命中对象、伤害入口、攻击／弹体的真实上下文、网络和完整游戏运行仍未验收；`gameplayVerified` 与 `mmvDllsExecuted` 均为 false。
+
+## 第十四批：隐士自出血的发作条件、自伤与重复增攻
+
+7032900 与商店词条 17002 共用根状态 2206。TAE 2906／660000 在 2.6667 秒发 7032901，资格检查通过后发自身出血节点 7032902；它的出血累积值为 9999，发作后的基础 HP 损失为最大值的 20%，随后替换为 7032903：攻击倍率 +16%，持续 30 秒。
+
+出血并不是无条件发作。`3DB410` 先插入节点，再调用 `42D110` 处理异常；`509790 → 510FD0 → EA19C0` 查询出血免疫，`42CD70` 处理剩余抗性与累积。免疫或累积不足时，上层调用 `505280 → 50B5B0` 立即删除刚插入的节点，不经过到期替换，因此也不会获得增攻。实际免疫参数 9642 与剩余抗性 500／9998／9999／10000 的八组检查确认：最后一种非免疫情景仅把剩余值减到 1，不自伤也不增攻；随后再次发动才能发作。抗性成长曲线所需的完整角色资产未载入，测试使用明确给定的抗性。
+
+`506EC0` 调用 `50B860`，用调用者提供的最大 HP 换算百分比、取反并向零取整。最大 HP 99／100／137／1000 时，基础扣血分别为 19／20／27／200；其输出包包含多份伤害／恢复条元数据，不能相加当成多次伤害。实际 HP 调用点 `431DDF` 将包的首项交给 `426130 → 427BC0 → 426B00`，普通状态下当前 HP 可归零，没有专用的剩余 1 HP 下限。100 最大 HP、当前 21／20／1 分别得到 1／0／0。这里只说明自伤可以归零，不把隔离资源结算等同于已验证整段倒地流程；其它出血伤害修正和保护状态仍可能改变结果，界面保留“基础”限定。下一帧没有第二次扣血，内部 0.1 秒寿命不显示为持续自伤。
+
+7032903 为类别 10，每次成功发作新增独立实例，倍率相乘、分别到期；相隔 5 秒的两次施放得到 ×1.3456，随后依次回落至 ×1.16、×1。重复装备根标记不会增加单次收益，与连续发动是两种不同情况。
+
+[`probe_recluse_bleed.py`](../../tools/probe_recluse_bleed.py) 的 22 组检查包括八组异常发作、七组 HP 结算和七组完整效果生命周期；覆盖无装备、单次、连续两次、重复装备、免疫、未发作及第二次才发作。原生状态判定、链表移除、HP 换算／限幅、增益计时与攻击聚合均实际执行；角色身份、网络传输、空抗性成长参数及普通保护状态为隔离夹具。完整角色投递、保护状态组合、倒地、网络与重载仍待核对，`gameplayVerified` 保持 false。证据见 [`effect-recluse-bleed-evidence.json`](../../data/effect-recluse-bleed-evidence.json)。

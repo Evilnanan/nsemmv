@@ -64,6 +64,12 @@ assert weapon_recovery['exeSha256'] == evidence['exeSha256'] and not weapon_reco
 assert weapon_recovery['paramSha256'] == evidence['paramSha256']
 assert len(weapon_recovery['families']) == 56 and len(weapon_recovery['checks']['reapplication']) == 62
 weapon_recovery_families = {str(f['effect']): f for f in weapon_recovery['families']}
+recluse_bleed_path = ROOT / 'data/effect-recluse-bleed-evidence.json'
+recluse_bleed = json.loads(recluse_bleed_path.read_text())
+assert recluse_bleed['schema'] == 1 and recluse_bleed['regulationSha256'] == catalog['regulationSha256']
+assert recluse_bleed['exeSha256'] == evidence['exeSha256'] and not recluse_bleed['gameplayVerified']
+assert recluse_bleed['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in recluse_bleed['checks'].items()} == dict(onset=8, hp=7, lifecycle=7)
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -346,6 +352,7 @@ STACKING_RULES = {
     'guardian-recovery': ('不可叠加', '同类恢复只刷新有效期', ['recovery-emitter', 'recovery-arrival']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'weapon-recovery': ('不可叠加', '同种词条重复无效；回血与回蓝可同时生效', ['weapon-recovery']),
+    'recluse-bleed': ('不可叠加', '重复装备不增加单次触发收益', ['recluse-bleed']),
     'role-repeat': ('不可叠加', '重复装备不增加单次触发收益', ['effect-lifecycle']),
     'wylder-skill': ('不可叠加', '重复装备不增加单次触发收益', ['action-triggers', 'action-start', 'skill-stack']),
     'role-max-hp': ('不可叠加', '同类增益互相覆盖', ['action-triggers', 'role-lifecycle']),
@@ -456,7 +463,7 @@ for id, effect in source['effects'].items():
             notes.append('实际触发待确认。')
     if len(external) == 1 and effect['runtimeExclusive'] == -1:
         family = external[0]['family']
-        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill', 'recluse-max-hp', 'revenant-damage', 'duchess-kill'):
+        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill', 'recluse-max-hp', 'recluse-bleed', 'revenant-damage', 'duchess-kill'):
             matches = [r for r in evidence['triggerMatching'] if r['family'] == family]
             assert matches and all(r['reused'] == (r['existing'] == r['incoming']) for r in matches)
             rule = {'bolus': 'trigger-tiers', 'grease': 'trigger-attack',
@@ -529,6 +536,18 @@ for id, effect in source['effects'].items():
                        values=[['血量上限', '+50%']], restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('前约 30 秒不因受损结束；之后持续至下次受到损伤。')
         rule = 'role-max-hp'
+    if recluse_bleed['root'] in effect['roots'].values():
+        assert source['spells']['7032902']['changeHpRate'] == 20
+        assert source['spells']['7032903']['physicsAttackRate'] == 1.16
+        blocks = [dict(source=7032902, branches=[7032901], phase='自身出血时', linked=True,
+                       values=[['基础 HP 损失', '最大值的 20%']],
+                       restrictions=['自伤可使 HP 归零'], scope=[], duration=None, interval=None),
+                  dict(source=7032903, phase='自身出血后', linked=True,
+                       values=[['攻击倍率', '+16%']],
+                       restrictions=[], scope=[], duration=30, interval=None)]
+        notes.extend(['需实际触发自身出血；免疫时也不会获得增攻。',
+                      '多次发动的增益倍率相乘、分别计时；两次合计 +34.56%。'])
+        rule = 'recluse-bleed'
     if executor['root'] in effect['roots'].values():
         leaf = executor['leaf']
         assert source['spells'][str(leaf)]['changeHpRate'] == -5
@@ -718,9 +737,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery', 'recluse-bleed') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery', 'recluse-bleed') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -736,6 +755,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('实际碰撞命中、范围重新进入、完整角色队列／施法结束时序与多人网络投递')
     if rules[id] == 'executor-recovery':
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
+    if rules[id] == 'recluse-bleed':
+        questions.append('出血伤害修正与保护状态组合、完整角色投递／倒地／网络／重载交互')
     if id in weapon_recovery_families:
         if rules[id] != 'weapon-recovery':
             refs.append('weapon-recovery')
@@ -775,6 +796,7 @@ research['lifecycleEvidenceSha256'] = hashlib.sha256(lifecycle_path.read_bytes()
 research['recoveryEvidenceSha256'] = hashlib.sha256(recovery_path.read_bytes()).hexdigest()
 research['executorRecoveryEvidenceSha256'] = hashlib.sha256(executor_path.read_bytes()).hexdigest()
 research['weaponRecoveryEvidenceSha256'] = hashlib.sha256(weapon_recovery_path.read_bytes()).hexdigest()
+research['recluseBleedEvidenceSha256'] = hashlib.sha256(recluse_bleed_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

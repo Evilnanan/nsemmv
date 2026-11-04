@@ -1,0 +1,479 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "root": 7032900,
+  "seeds": [
+    7032901
+  ],
+  "leaves": [
+    7032902,
+    7032903
+  ],
+  "events": [
+    {
+      "tae": 2906,
+      "animation": 660000,
+      "index": 3,
+      "Type": 67,
+      "StartTime": 2.6666667,
+      "EndTime": 2.7666667,
+      "hex": "45506B00000000000000000000000000"
+    }
+  ],
+  "checks": {
+    "onset": [
+      {
+        "immune": false,
+        "startingResistance": 500,
+        "rejected": false,
+        "remaining": 500,
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              500
+            ]
+          },
+          {
+            "frame": 8,
+            "ids": [
+              7032903
+            ]
+          }
+        ],
+        "attack": 1.159999966621399
+      },
+      {
+        "immune": false,
+        "startingResistance": 9998,
+        "rejected": false,
+        "remaining": 9998,
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              500
+            ]
+          },
+          {
+            "frame": 8,
+            "ids": [
+              7032903
+            ]
+          }
+        ],
+        "attack": 1.159999966621399
+      },
+      {
+        "immune": false,
+        "startingResistance": 9999,
+        "rejected": false,
+        "remaining": 9999,
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              500
+            ]
+          },
+          {
+            "frame": 8,
+            "ids": [
+              7032903
+            ]
+          }
+        ],
+        "attack": 1.159999966621399
+      },
+      {
+        "immune": false,
+        "startingResistance": 10000,
+        "rejected": true,
+        "remaining": 1,
+        "grants": [],
+        "attack": 1.0
+      },
+      {
+        "immune": true,
+        "startingResistance": 500,
+        "rejected": true,
+        "remaining": 500,
+        "grants": [],
+        "attack": 1.0
+      },
+      {
+        "immune": true,
+        "startingResistance": 9998,
+        "rejected": true,
+        "remaining": 9998,
+        "grants": [],
+        "attack": 1.0
+      },
+      {
+        "immune": true,
+        "startingResistance": 9999,
+        "rejected": true,
+        "remaining": 9999,
+        "grants": [],
+        "attack": 1.0
+      },
+      {
+        "immune": true,
+        "startingResistance": 10000,
+        "rejected": true,
+        "remaining": 10000,
+        "grants": [],
+        "attack": 1.0
+      }
+    ],
+    "hp": [
+      {
+        "maximum": 99,
+        "current": 99,
+        "packet": [
+          -19,
+          0,
+          -19,
+          0,
+          -19,
+          4,
+          0
+        ],
+        "after": 80
+      },
+      {
+        "maximum": 100,
+        "current": 100,
+        "packet": [
+          -20,
+          0,
+          -20,
+          0,
+          -20,
+          4,
+          0
+        ],
+        "after": 80
+      },
+      {
+        "maximum": 137,
+        "current": 137,
+        "packet": [
+          -27,
+          0,
+          -27,
+          0,
+          -27,
+          4,
+          0
+        ],
+        "after": 110
+      },
+      {
+        "maximum": 1000,
+        "current": 1000,
+        "packet": [
+          -200,
+          0,
+          -200,
+          0,
+          -200,
+          4,
+          0
+        ],
+        "after": 800
+      },
+      {
+        "maximum": 100,
+        "current": 21,
+        "packet": [
+          -20,
+          0,
+          -20,
+          0,
+          -20,
+          4,
+          0
+        ],
+        "after": 1
+      },
+      {
+        "maximum": 100,
+        "current": 20,
+        "packet": [
+          -20,
+          0,
+          -20,
+          0,
+          -20,
+          4,
+          0
+        ],
+        "after": 0
+      },
+      {
+        "maximum": 100,
+        "current": 1,
+        "packet": [
+          -20,
+          0,
+          -20,
+          0,
+          -20,
+          4,
+          0
+        ],
+        "after": 0
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "no-equipment",
+        "equipmentCopies": 0,
+        "immune": false,
+        "startingResistance": 500,
+        "casts": [
+          0
+        ],
+        "fps": 60,
+        "attempts": [],
+        "damage": [],
+        "attackChanges": []
+      },
+      {
+        "name": "single",
+        "equipmentCopies": 1,
+        "immune": false,
+        "startingResistance": 500,
+        "casts": [
+          0
+        ],
+        "fps": 60,
+        "attempts": [
+          {
+            "frame": 1,
+            "rejected": false
+          }
+        ],
+        "damage": [
+          {
+            "frame": 1,
+            "delta": -200
+          }
+        ],
+        "attackChanges": [
+          {
+            "frame": 10,
+            "rate": 1.159999966621399,
+            "count": 1
+          },
+          {
+            "frame": 1812,
+            "rate": 1.0,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "repeat",
+        "equipmentCopies": 1,
+        "immune": false,
+        "startingResistance": 500,
+        "casts": [
+          0,
+          300
+        ],
+        "fps": 60,
+        "attempts": [
+          {
+            "frame": 1,
+            "rejected": false
+          },
+          {
+            "frame": 301,
+            "rejected": false
+          }
+        ],
+        "damage": [
+          {
+            "frame": 1,
+            "delta": -200
+          },
+          {
+            "frame": 301,
+            "delta": -200
+          }
+        ],
+        "attackChanges": [
+          {
+            "frame": 10,
+            "rate": 1.159999966621399,
+            "count": 1
+          },
+          {
+            "frame": 310,
+            "rate": 1.345599889755249,
+            "count": 2
+          },
+          {
+            "frame": 1812,
+            "rate": 1.159999966621399,
+            "count": 1
+          },
+          {
+            "frame": 2112,
+            "rate": 1.0,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "duplicate-equipment",
+        "equipmentCopies": 3,
+        "immune": false,
+        "startingResistance": 500,
+        "casts": [
+          0,
+          300
+        ],
+        "fps": 60,
+        "attempts": [
+          {
+            "frame": 1,
+            "rejected": false
+          },
+          {
+            "frame": 301,
+            "rejected": false
+          }
+        ],
+        "damage": [
+          {
+            "frame": 1,
+            "delta": -200
+          },
+          {
+            "frame": 301,
+            "delta": -200
+          }
+        ],
+        "attackChanges": [
+          {
+            "frame": 10,
+            "rate": 1.159999966621399,
+            "count": 1
+          },
+          {
+            "frame": 310,
+            "rate": 1.345599889755249,
+            "count": 2
+          },
+          {
+            "frame": 1812,
+            "rate": 1.159999966621399,
+            "count": 1
+          },
+          {
+            "frame": 2112,
+            "rate": 1.0,
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "immune",
+        "equipmentCopies": 1,
+        "immune": true,
+        "startingResistance": 500,
+        "casts": [
+          0
+        ],
+        "fps": 60,
+        "attempts": [
+          {
+            "frame": 1,
+            "rejected": true
+          }
+        ],
+        "damage": [],
+        "attackChanges": []
+      },
+      {
+        "name": "below-onset",
+        "equipmentCopies": 1,
+        "immune": false,
+        "startingResistance": 10000,
+        "casts": [
+          0
+        ],
+        "fps": 60,
+        "attempts": [
+          {
+            "frame": 1,
+            "rejected": true
+          }
+        ],
+        "damage": [],
+        "attackChanges": []
+      },
+      {
+        "name": "later-onset",
+        "equipmentCopies": 1,
+        "immune": false,
+        "startingResistance": 10000,
+        "casts": [
+          0,
+          300
+        ],
+        "fps": 60,
+        "attempts": [
+          {
+            "frame": 1,
+            "rejected": true
+          },
+          {
+            "frame": 301,
+            "rejected": false
+          }
+        ],
+        "damage": [
+          {
+            "frame": 301,
+            "delta": -200
+          }
+        ],
+        "attackChanges": [
+          {
+            "frame": 310,
+            "rate": 1.159999966621399,
+            "count": 1
+          },
+          {
+            "frame": 2112,
+            "rate": 1.0,
+            "count": 0
+          }
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "3C7FD0 grant recorder; queue delivered on next simulation frame",
+    "3D4180 player identity",
+    "6ADA30 ordinary resource-setter context",
+    "E6D630 absent attack PARAM lookup for untagged attack getter",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false
+}

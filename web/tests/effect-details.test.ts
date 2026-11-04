@@ -14,10 +14,52 @@ import lifecycle from "../../data/effect-lifecycle-evidence.json";
 import recovery from "../../data/effect-recovery-evidence.json";
 import executorRecovery from "../../data/effect-executor-recovery-evidence.json";
 import weaponRecovery from "../../data/effect-weapon-recovery-evidence.json";
+import recluseBleed from "../../data/effect-recluse-bleed-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("requires actual self-bleed onset and separates HP loss from independently expiring attack buffs", () => {
+    const detail = effectDetail(7032900)!;
+    expect(detail).toEqual(effectDetail(17002));
+    expect(detail.blocks.map((b) => b.values)).toEqual([
+      [["基础 HP 损失", "最大值的 20%"]], [["攻击倍率", "+16%"]],
+    ]);
+    expect(detail.blocks.map((b) => b.duration)).toEqual([null, 30]);
+    expect(detail.blocks[0].restrictions).toContain("自伤可使 HP 归零");
+    expect(detail.notes.join()).toContain("免疫时也不会获得增攻");
+    expect(detail.notes.join()).toContain("两次合计 +34.56%");
+    expect(detail.stacking).toBe("不可叠加");
+    for (const c of recluseBleed.checks.onset) {
+      expect(c.rejected).toBe(c.immune || c.startingResistance > 9999);
+      expect(c.attack).toBeCloseTo(c.rejected ? 1 : 1.16);
+      if (c.rejected) expect(c.grants).toEqual([]);
+    }
+    for (const c of recluseBleed.checks.hp) {
+      expect(c.packet[0]).toBe(-Math.trunc(c.maximum * .2));
+      expect(c.after).toBe(Math.max(0, c.current + c.packet[0]));
+    }
+    const cases = recluseBleed.checks.lifecycle;
+    for (const name of ["no-equipment", "immune", "below-onset"]) {
+      const c = cases.find((c) => c.name === name)!;
+      expect(c.damage).toEqual([]);
+      expect(c.attackChanges).toEqual([]);
+    }
+    const repeat = cases.find((c) => c.name === "repeat")!;
+    const duplicate = cases.find((c) => c.name === "duplicate-equipment")!;
+    expect(duplicate.damage).toEqual(repeat.damage);
+    expect(duplicate.attackChanges).toEqual(repeat.attackChanges);
+    expect(repeat.attackChanges.map((r) => r.count)).toEqual([1, 2, 1, 0]);
+    for (const r of repeat.attackChanges) expect(r.rate).toBeCloseTo(1.16 ** r.count);
+    const later = cases.find((c) => c.name === "later-onset")!;
+    expect(later.attempts.map((r) => r.rejected)).toEqual([true, false]);
+    expect(later.damage).toHaveLength(1);
+    expect(later.attackChanges.map((r) => r.count)).toEqual([1, 0]);
+    expect(research.recluseBleedEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-recluse-bleed-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(recluseBleed.gameplayVerified).toBe(false);
+  });
   it("filters weapon recovery with actual source weapons and rejects duplicate restores before expiry", () => {
     for (const f of weaponRecovery.families) {
       const detail = effectDetail(f.effect)!;
@@ -253,7 +295,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(495);
+    expect(research.coverage.withNumericFields).toBe(497);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
