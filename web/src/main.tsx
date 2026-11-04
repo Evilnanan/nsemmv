@@ -87,10 +87,12 @@ function Modal({
   title,
   onClose,
   children,
+  className,
 }: {
   title: string;
   onClose: () => void;
   children: React.ReactNode;
+  className?: string;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -99,6 +101,7 @@ function Modal({
   return (
     <dialog
       ref={ref}
+      className={className}
       onCancel={(e) => {
         e.preventDefault();
         onClose();
@@ -1177,6 +1180,43 @@ function RelicFields({
   );
 }
 
+function PresetEffects({ relic }: { relic: SessionView["relics"][number] }) {
+  const issues = checkRoll(relic.id, relic.roll);
+  return (
+    <div className="preset-effects" aria-label="遗物词条">
+      {relic.roll.map((pair, index) => (
+        <div className="preset-effect-pair" key={index}>
+          {([false, true] as const).map((curse) => {
+            const id = curse ? pair.curse : pair.effect;
+            if (id === EMPTY || id === 0) return null;
+            const invalid =
+              issues.some((issue) => issue.slot === index + (curse ? 3 : 0)) ||
+              candidateConflicts(relic.roll, index, curse, id).length > 0;
+            return (
+              <EffectInspect key={String(curse)} id={id}>
+                <div
+                  className={`preset-effect ${curse ? "curse" : ""}`}
+                  aria-invalid={invalid || undefined}
+                >
+                  {curse && <small>Curse</small>}
+                  <span>{effectName(id)}</span>
+                  {invalid && (
+                    <CircleAlert
+                      className="preset-effect-warning"
+                      size={16}
+                      aria-label="词条不可用"
+                    />
+                  )}
+                </div>
+              </EffectInspect>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Presets({
   hideUnavailable,
   onHideUnavailable,
@@ -1304,6 +1344,7 @@ function Presets({
       {edit && !relicEdit && (
         <Modal
           title="预设"
+          className="preset-dialog"
           onClose={() => {
             if (!changed || window.confirm("放弃未保存的预设？")) {
               setEdit(null);
@@ -1371,38 +1412,41 @@ function Presets({
                   m = r && catalog.relics[r.id];
                 return (
                   <div className="preset-slot-cell" key={i}>
-                    <button
-                      aria-label={`预设遗物 ${i + 1}`}
-                      className={`preset-slot ${slot === i ? "on" : ""}`}
-                      onClick={() => {
-                        setSlot(i);
-                        setSearch("");
-                      }}
-                    >
-                      <Gem
-                        size={22}
-                        className={`color-${catalog.vessels[edit.vessel].colors[i]}`}
-                      />
-                      <span>{m?.name.zh_CN ?? "—"}</span>
-                      <small>{i < 3 ? "普通" : "深层"}</small>
-                    </button>
-                    {r && (
-                      <Tool
-                        icon={m?.shop ? Eye : Pencil}
-                        label={`${m?.shop ? "查看" : "编辑"}预设遗物 ${i + 1}`}
-                        disabled={busy}
-                        onClick={() =>
-                          setRelicEdit({
-                            slot: i,
-                            draft: {
-                              handle: r.handle,
-                              id: r.id,
-                              roll: r.roll.map((p) => ({ ...p })),
-                            },
-                          })
-                        }
-                      />
-                    )}
+                    <div className="preset-slot-heading">
+                      <button
+                        aria-label={`预设遗物 ${i + 1}`}
+                        className={`preset-slot ${slot === i ? "on" : ""}`}
+                        onClick={() => {
+                          setSlot(i);
+                          setSearch("");
+                        }}
+                      >
+                        <Gem
+                          size={22}
+                          className={`color-${catalog.vessels[edit.vessel].colors[i]}`}
+                        />
+                        <span>{m?.name.zh_CN ?? "—"}</span>
+                        <small>{i < 3 ? "普通" : "深层"}</small>
+                      </button>
+                      {r && (
+                        <Tool
+                          icon={m?.shop ? Eye : Pencil}
+                          label={`${m?.shop ? "查看" : "编辑"}预设遗物 ${i + 1}`}
+                          disabled={busy}
+                          onClick={() =>
+                            setRelicEdit({
+                              slot: i,
+                              draft: {
+                                handle: r.handle,
+                                id: r.id,
+                                roll: r.roll.map((p) => ({ ...p })),
+                              },
+                            })
+                          }
+                        />
+                      )}
+                    </div>
+                    {r && <PresetEffects relic={r} />}
                   </div>
                 );
               })}

@@ -189,6 +189,7 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   ).toBe(true);
   await page.getByRole("button", { name: "应用修改", exact: true }).click();
   await expect(page.getByLabel("预设名称")).toHaveValue("保留中文草稿");
+  await expect(page.locator(".preset-slot-cell").first().locator(".preset-effect")).toContainText("集中力");
   await page
     .getByRole("button", { name: "编辑预设遗物 1", exact: true })
     .click();
@@ -199,6 +200,7 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   page.once("dialog", (d) => d.accept());
   await page.getByRole("button", { name: "关闭", exact: true }).click();
   await expect(page.getByLabel("预设名称")).toHaveValue("保留中文草稿");
+  await expect(page.locator(".preset-slot-cell").first().locator(".preset-effect")).toContainText("集中力");
   await page
     .getByRole("button", { name: "查看预设遗物 4", exact: true })
     .click();
