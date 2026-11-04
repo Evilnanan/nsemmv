@@ -14,6 +14,22 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("preserves Recluse's two-stage HP buff instead of showing a fixed 30-second expiry", () => {
+    const detail = effectDetail(7034100)!;
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].values).toEqual([["血量上限", "+50%"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.notes.join()).toBe("前约 30 秒不因受损结束；之后持续至下次受到损伤。");
+    expect(detail.stacking).toBe("不可叠加");
+    const damage = evidence.roleLifecycle.filter((r) => "damage" in r);
+    expect(damage.filter((r) => r.id === 7034102 || r.id === 7034103).every((r) => !r.expired)).toBe(true);
+    expect(damage.filter((r) => r.id === 7034104).every((r) => r.expired === (r.damage! > 0))).toBe(true);
+    const transition = evidence.roleLifecycle.find((r) => "lifetime" in r && r.id === 7034103)!;
+    expect(transition.expiredAt).toBeCloseTo(29.95, 2);
+    const after = evidence.roleLifecycle.find((r) => "lifetime" in r && r.id === 7034104)!;
+    expect(after.expiredAt).toBeNull();
+    expect(triggers.roots["7034100"].seeds).toEqual([7034101, 7034103]);
+  });
   it("uses start-only animation grants without truncating role buffs to the event window", () => {
     for (const id of [7033300, 7033301]) {
       const d = effectDetail(id)!;
@@ -86,7 +102,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(488);
+    expect(research.coverage.withNumericFields).toBe(489);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

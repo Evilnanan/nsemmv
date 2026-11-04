@@ -310,6 +310,7 @@ def block(id, phase, linked, known_states=frozenset()):
 
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
+    'role-max-hp': ('不可叠加', '同类增益互相覆盖', ['action-triggers', 'role-lifecycle']),
     'totem': ('不可叠加', '同类图腾增益覆盖并刷新持续时间', ['totem-animation', 'totem-native']),
     'attributes': ('可叠加', '能力值相加', ['equip-injection', 'instance-matching', 'attributes']),
     'attack': ('可叠加', '攻击倍率相乘', ['equip-injection', 'instance-matching', 'attack']),
@@ -408,7 +409,7 @@ for id, effect in source['effects'].items():
         rule = 'shop-discount'
     if len(external) == 1 and effect['runtimeExclusive'] == -1:
         family = external[0]['family']
-        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill'):
+        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill', 'recluse-max-hp'):
             matches = [r for r in evidence['triggerMatching'] if r['family'] == family]
             assert matches and all(r['reused'] == (r['existing'] == r['incoming']) for r in matches)
             rule = {'bolus': 'trigger-tiers', 'grease': 'trigger-attack',
@@ -468,6 +469,15 @@ for id, effect in source['effects'].items():
                             'slashDamageCutRate', 'blowDamageCutRate', 'thrustDamageCutRate',
                             'magicDamageCutRate', 'fireDamageCutRate', 'thunderDamageCutRate', 'darkDamageCutRate'))
                 b['values'] = [['攻击倍率', '+20%'], ['精力上限', '+20%'], ['承伤倍率', '+20%']]
+    if 7034100 in effect['roots'].values():
+        assert all(source['spells'][str(sp)]['maxHpRate'] == 1.5 for sp in (7034102, 7034104))
+        assert source['spells']['7034104']['deleteCriteriaDamage'] == 1
+        assert source['spells']['7034103']['effectEndurance'] == 29.9
+        assert all(r['active'] == r['incoming'] for r in evidence['roleLifecycle'] if 'incoming' in r)
+        blocks = [dict(source=7034102, branches=[7034101, 7034103, 7034104], phase='绝招发动后', linked=True,
+                       values=[['血量上限', '+50%']], restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('前约 30 秒不因受损结束；之后持续至下次受到损伤。')
+        rule = 'role-max-hp'
     if id == '7032800':
         edge = links['emitters']['7032802']
         assert len(evidence['zoneMatching']) == 4
@@ -620,6 +630,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
     if set(effect['roots'].values()) & {7020100, 7020200, 7036800}:
         refs.extend(['action-start', 'action-values'])
+    if rules[id] == 'role-max-hp':
+        questions.append('增益施加、阶段切换和移除时的当前／最大 HP 同步')
     if 7020200 in effect['roots'].values():
         questions.append('类别 10 的连续技艺施加、独立实例寿命与实际叠加上限')
     if rules[id] == 'totem':

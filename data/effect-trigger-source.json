@@ -10812,6 +10812,41 @@
         ]
       }
     },
+    "7034100": {
+      "state": 2268,
+      "family": "recluse-max-hp",
+      "phase": "绝招发动后",
+      "seeds": [
+        7034101,
+        7034103
+      ],
+      "events": {
+        "7034101": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2906,
+            "animation": 660000,
+            "index": 4,
+            "type": 67,
+            "start": 2.6666667,
+            "end": 2.7666667,
+            "parameters": "F5546B00000000000000000000000000"
+          }
+        ],
+        "7034103": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2906,
+            "animation": 660000,
+            "index": 5,
+            "type": 401,
+            "start": 2.6666667,
+            "end": 2.7,
+            "parameters": "F7546B00000000000000000000000000"
+          }
+        ]
+      }
+    },
     "7020100": {
       "state": 2078,
       "family": "wylder-ultimate",

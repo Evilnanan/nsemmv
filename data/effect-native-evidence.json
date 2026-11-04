@@ -17427,6 +17427,315 @@
       ]
     }
   ],
+  "roleLifecycle": [
+    {
+      "id": 7034102,
+      "damage": 0,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 0,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 1,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 1,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 100,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 100,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 10000,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034102,
+      "damage": 10000,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 0,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 0,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 1,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 1,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 100,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 100,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 10000,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034103,
+      "damage": 10000,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034104,
+      "damage": 0,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7034104,
+      "damage": 0,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7034104,
+      "damage": 1,
+      "excluded": 0,
+      "expired": true
+    },
+    {
+      "id": 7034104,
+      "damage": 1,
+      "excluded": 1,
+      "expired": true
+    },
+    {
+      "id": 7034104,
+      "damage": 100,
+      "excluded": 0,
+      "expired": true
+    },
+    {
+      "id": 7034104,
+      "damage": 100,
+      "excluded": 1,
+      "expired": true
+    },
+    {
+      "id": 7034104,
+      "damage": 10000,
+      "excluded": 0,
+      "expired": true
+    },
+    {
+      "id": 7034104,
+      "damage": 10000,
+      "excluded": 1,
+      "expired": true
+    },
+    {
+      "id": 7220303,
+      "damage": 0,
+      "excluded": 0,
+      "expired": false
+    },
+    {
+      "id": 7220303,
+      "damage": 0,
+      "excluded": 1,
+      "expired": false
+    },
+    {
+      "id": 7220303,
+      "damage": 1,
+      "excluded": 0,
+      "expired": true
+    },
+    {
+      "id": 7220303,
+      "damage": 1,
+      "excluded": 1,
+      "expired": true
+    },
+    {
+      "id": 7220303,
+      "damage": 100,
+      "excluded": 0,
+      "expired": true
+    },
+    {
+      "id": 7220303,
+      "damage": 100,
+      "excluded": 1,
+      "expired": true
+    },
+    {
+      "id": 7220303,
+      "damage": 10000,
+      "excluded": 0,
+      "expired": true
+    },
+    {
+      "id": 7220303,
+      "damage": 10000,
+      "excluded": 1,
+      "expired": true
+    },
+    {
+      "existing": 7034102,
+      "incoming": 7034102,
+      "active": 7034102,
+      "duration": 30.0
+    },
+    {
+      "existing": 7034102,
+      "incoming": 7034104,
+      "active": 7034104,
+      "duration": -1.0
+    },
+    {
+      "existing": 7034104,
+      "incoming": 7034102,
+      "active": 7034102,
+      "duration": 30.0
+    },
+    {
+      "existing": 7034104,
+      "incoming": 7034104,
+      "active": 7034104,
+      "duration": -1.0
+    },
+    {
+      "id": 7034101,
+      "lifetime": 0.10000000149011612,
+      "interval": 0,
+      "expiredAt": 0.15,
+      "ticks": [],
+      "zeroInterval": true
+    },
+    {
+      "id": 7034102,
+      "lifetime": 30,
+      "interval": 31,
+      "expiredAt": 30.05,
+      "ticks": [
+        0
+      ],
+      "zeroInterval": false
+    },
+    {
+      "id": 7034103,
+      "lifetime": 29.899999618530273,
+      "interval": 31,
+      "expiredAt": 29.95,
+      "ticks": [
+        0
+      ],
+      "zeroInterval": false
+    },
+    {
+      "id": 7034104,
+      "lifetime": -1,
+      "interval": 0,
+      "expiredAt": null,
+      "ticks": [],
+      "zeroInterval": true
+    },
+    {
+      "id": 7220301,
+      "lifetime": 0.10000000149011612,
+      "interval": 0.15000000596046448,
+      "expiredAt": 0.15,
+      "ticks": [
+        0
+      ],
+      "zeroInterval": false
+    },
+    {
+      "id": 7220302,
+      "lifetime": 15,
+      "interval": 2,
+      "expiredAt": 15.05,
+      "ticks": [
+        0,
+        2.033333,
+        4.033333,
+        6.033333,
+        8.033333,
+        10.033333,
+        12.033333,
+        14.033333
+      ],
+      "zeroInterval": false
+    },
+    {
+      "id": 7220303,
+      "lifetime": -1,
+      "interval": 0,
+      "expiredAt": null,
+      "ticks": [],
+      "zeroInterval": true
+    },
+    {
+      "id": 7220304,
+      "lifetime": 0.10000000149011612,
+      "interval": 0.15000000596046448,
+      "expiredAt": 0.15,
+      "ticks": [
+        0
+      ],
+      "zeroInterval": false
+    },
+    {
+      "id": 7220306,
+      "lifetime": 1,
+      "interval": 2,
+      "expiredAt": 1.05,
+      "ticks": [
+        0
+      ],
+      "zeroInterval": false
+    }
+  ],
   "recoveryTiming": {
     "350401": {
       "lifetime": 1,

@@ -36,6 +36,7 @@ families = {
     'revenant-allies': ([7031200], '绝招发动时'),
     'critical-runes': ([7031900], '致命一击时'),
     'random-weapon': ([7035700], '切换武器后'),
+    'recluse-max-hp': ([7034100], '绝招发动后'),
     'wylder-ultimate': ([7020100], '绝招发动后'),
     'wylder-skill': ([7020200], '技艺发动后'),
     'undertaker-ultimate': ([7036800], '绝招发动后'),
@@ -64,7 +65,7 @@ for family, (ids, phase) in families.items():
         assert state > 0
         seeds = [id for id in events if any(spells[str(id)]['invocationConditionsStateChange' + str(i)] == state
                                           for i in (1, 2, 3))]
-        assert seeds == [root + 1], (root, seeds)
+        assert seeds == ([root + 1, root + 3] if root == 7034100 else [root + 1]), (root, seeds)
         roots[str(root)] = dict(state=state, family=family, phase=phase, seeds=seeds,
                                events={str(id): events[id] for id in seeds})
 output = dict(schema=1, regulationSha256=x['hashes']['regulation.bin'],

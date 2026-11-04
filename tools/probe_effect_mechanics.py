@@ -681,6 +681,53 @@ for existing in (1413000, 7032803):
         zone_matching.append(dict(existing=existing, incoming=incoming, categoryMatch=match,
                                   activeId=actual_id, duration=duration, magicRate=rate))
 
+role_lifecycle = []
+for id in (7034102, 7034103, 7034104, 7220303):
+    for damage in (0, 1, 100, 10000):
+        for excluded in (0, 1):
+            u = run(0x504d30, [id], [OBJ, 0, 0, 0, excluded], flags=4,
+                    setup=lambda u: u.mem_write(OBJ + 0x104c, struct.pack('<f', -1)),
+                    xmm_args={UC_X86_REG_XMM1: damage})
+            expired = struct.unpack('<f', u.mem_read(OBJ + 0x104c, 4))[0] == 0
+            assert expired == (id in (7034104, 7220303) and damage > 0)
+            role_lifecycle.append(dict(id=id, damage=damage, excluded=excluded, expired=expired))
+for existing in (7034102, 7034104):
+    for incoming in (7034102, 7034104):
+        node = OBJ + 0x1000
+        assert run(0x511450, [existing], [node, 202, 90, incoming]).reg_read(UC_X86_REG_RAX) & 255
+        u = run(0x511700, [existing], [node, incoming, 0, 0], xmm_args={UC_X86_REG_XMM2: 1})
+        pointer, active = struct.unpack('<Qi', u.mem_read(node, 12))
+        duration = struct.unpack('<f', u.mem_read(node + 0x4c, 4))[0]
+        assert active == incoming and duration == x['tables']['SpEffectParam'][str(incoming)]['effectEndurance']
+        assert bytes(u.mem_read(pointer, len(rows[incoming]))) == rows[incoming]
+        role_lifecycle.append(dict(existing=existing, incoming=incoming, active=active, duration=duration))
+for id in (7034101, 7034102, 7034103, 7034104, 7220301, 7220302, 7220303, 7220304, 7220306):
+    row = x['tables']['SpEffectParam'][str(id)]
+    node = OBJ + 0x1000
+    def setup(u):
+        u.mem_write(node + 0x48, struct.pack('<3f', *([row['effectEndurance']] * 3)))
+        u.mem_write(node + 0x68, struct.pack('<I', 2))
+    u = run(0x511b80, [id], [node], setup=setup,
+            xmm_args={UC_X86_REG_XMM1: 0, UC_X86_REG_XMM2: 1, UC_X86_REG_XMM3: 1})
+    ticks = [0] if u.reg_read(UC_X86_REG_RAX) & 255 else []
+    expired_at = None
+    for frame in range(1, 2401):
+        if invoke(u, 0x5113f0, [node]) & 255:
+            expired_at = frame / 60
+            break
+        if invoke(u, 0x511b80, [node], {UC_X86_REG_XMM1: 1/60, UC_X86_REG_XMM2: 1, UC_X86_REG_XMM3: 1}) & 255:
+            ticks.append(round(frame / 60, 6))
+    if row['effectEndurance'] < 0:
+        assert expired_at is None
+    else:
+        assert row['effectEndurance'] <= expired_at < row['effectEndurance'] + .06
+    if id == 7220302:
+        assert len(ticks) == 8 and all(abs(v - i * 2) < .04 for i, v in enumerate(ticks))
+    elif row['motionInterval'] > row['effectEndurance'] > 0:
+        assert ticks == [0]
+    role_lifecycle.append(dict(id=id, lifetime=row['effectEndurance'], interval=row['motionInterval'],
+                               expiredAt=expired_at, ticks=ticks if row['motionInterval'] else [], zeroInterval=not row['motionInterval']))
+
 action_start = []
 for leaf in (7020101, 7020201, 7036801):
     for active in (0, 1):
@@ -744,7 +791,7 @@ groups = dict(predicates=predicate, attributes=attributes, attack=attack, defens
               timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
               extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions, growthAdvance=growth_advance,
               growthValues=growth_values, zoneMatching=zone_matching, locationValues=location_values,
-              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally, actionStart=action_start, actionValues=action_values)
+              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally, actionStart=action_start, actionValues=action_values, roleLifecycle=role_lifecycle)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(),
     systemDefinitionHashes={k:v for k,v in systems['hashes'].items() if k.startswith('defs/')},
     systemParamSha256=system_hashes,

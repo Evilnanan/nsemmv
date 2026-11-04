@@ -1,16 +1,16 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "facc926ee97ddce3d0c4e18cd387def6540d1d5990667fa178898cca7eb34162",
-  "triggerEvidenceSha256": "6c1e7a3e517e4f39cc46197ff652cf3fa9b33856a95445c178c200ec1f22ddec",
+  "nativeEvidenceSha256": "7414977f571341157b06e62956383f36b1bf4d72e3ed107eab9730ecbec3b592",
+  "triggerEvidenceSha256": "c8d8c396ce234a4c8db999e3fdd58cf057fb75124237a46b7ef8013639fda631",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 559,
-    "withNumericFields": 488,
+    "withDetails": 560,
+    "withNumericFields": 489,
     "withMechanicsOnly": 36,
-    "nativeStacking": 275,
+    "nativeStacking": 276,
     "catalog": 2241,
-    "catalogWithDetails": 2000
+    "catalogWithDetails": 2001
   },
   "effects": {
     "0": {
@@ -11047,15 +11047,24 @@
       "states": [
         2268
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7034102,
+        7034101,
+        7034103,
+        7034104
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "action-triggers",
+        "role-lifecycle",
+        "action-triggers"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "增益施加、阶段切换和移除时的当前／最大 HP 同步"
       ],
       "gameplayVerified": false
     },
