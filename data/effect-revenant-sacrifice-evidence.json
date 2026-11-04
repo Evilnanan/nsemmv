@@ -1,0 +1,1051 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "root": 7010900,
+  "rows": {
+    "7010900": {
+      "stateInfo": 2023,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "effectTargetSelfTarget": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0
+    },
+    "7010901": {
+      "stateInfo": 324,
+      "spCategory": 10,
+      "categoryPriority": 0,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 1,
+      "changeHpRate": 50,
+      "changeHpPoint": 0,
+      "effectTargetSelfTarget": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0
+    },
+    "7010902": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "categoryPriority": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "changeHpRate": -100,
+      "changeHpPoint": 0,
+      "effectTargetSelfTarget": 0,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0
+    },
+    "7010905": {
+      "stateInfo": 0,
+      "spCategory": 201,
+      "categoryPriority": 54,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "effectTargetSelfTarget": 1,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetOpposeTarget": 1,
+      "effectTargetPcDeceased": 1
+    },
+    "7010906": {
+      "stateInfo": 0,
+      "spCategory": 201,
+      "categoryPriority": 54,
+      "effectEndurance": 0.5,
+      "motionInterval": 0,
+      "changeHpRate": -100,
+      "changeHpPoint": 0,
+      "effectTargetSelfTarget": 1,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetOpposeTarget": 1,
+      "effectTargetPcDeceased": 1
+    },
+    "7010909": {
+      "stateInfo": 0,
+      "spCategory": 201,
+      "categoryPriority": 54,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "effectTargetSelfTarget": 1,
+      "effectTargetFriendlyTarget": 1,
+      "effectTargetOpposeTarget": 1,
+      "effectTargetPcDeceased": 0
+    }
+  },
+  "events": [
+    {
+      "tae": 2905,
+      "animation": 650000,
+      "index": 21,
+      "Type": 2,
+      "StartTime": 1.4,
+      "EndTime": 1.5,
+      "hex": "0300000000000000701C00000000E7070000FF00000000000000000000000000"
+    }
+  ],
+  "functions": {
+    "NearDeathStart_onActivate": {
+      "sha256": "9d19336f6632098185af938d4b94ce76e40b42d1b02bf83108e20469e6796461",
+      "line": 11458
+    },
+    "NearDeathRevival_onActivate": {
+      "sha256": "ae21dbfefdfe2d04e85d842fddf6997f2559cd43033c928ca97dbfaf9d6ca99c",
+      "line": 11515
+    }
+  },
+  "bullet": {
+    "hitRadius": 30,
+    "atkId_Bullet": 790000003,
+    "spEffectId0": 7010902,
+    "spEffectId1": 7010905,
+    "spEffectIDForShooter": 7010901,
+    "shootInterval": 0,
+    "numShoot": 1
+  },
+  "behavior": {
+    "behaviorJudgeId": 280,
+    "category": 0,
+    "consumeDurability": 0,
+    "consumeSA": 0,
+    "ezStateBehaviorType_old": 1,
+    "heroPoint": 0,
+    "refId": 30905110,
+    "refType": 1,
+    "stamina": 0,
+    "variationId": 0
+  },
+  "targetFlags": {
+    "selfTarget": 0,
+    "friendlyTarget": 1,
+    "opposeTarget": 1
+  },
+  "checks": {
+    "trigger": [
+      {
+        "equipmentCopies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "equipmentCopies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "equipmentCopies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "equipmentCopies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 700000280,
+            "active": true,
+            "instant": true,
+            "payload": "0300000000ff000000000000000000000101"
+          }
+        ]
+      },
+      {
+        "equipmentCopies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "equipmentCopies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 700000280,
+            "active": true,
+            "instant": true,
+            "payload": "0300000000ff000000000000000000000101"
+          }
+        ]
+      }
+    ],
+    "emission": [
+      {
+        "fps": 30,
+        "success": false,
+        "attempts": [
+          0
+        ],
+        "shooterEffects": []
+      },
+      {
+        "fps": 30,
+        "success": true,
+        "attempts": [
+          0
+        ],
+        "shooterEffects": [
+          7010901
+        ]
+      },
+      {
+        "fps": 60,
+        "success": false,
+        "attempts": [
+          0
+        ],
+        "shooterEffects": []
+      },
+      {
+        "fps": 60,
+        "success": true,
+        "attempts": [
+          0
+        ],
+        "shooterEffects": [
+          7010901
+        ]
+      },
+      {
+        "fps": 120,
+        "success": false,
+        "attempts": [
+          0
+        ],
+        "shooterEffects": []
+      },
+      {
+        "fps": 120,
+        "success": true,
+        "attempts": [
+          0
+        ],
+        "shooterEffects": [
+          7010901
+        ]
+      }
+    ],
+    "hp": [
+      {
+        "leaf": 7010901,
+        "maximum": 1,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010901,
+        "maximum": 99,
+        "packet": [
+          -49,
+          0,
+          -49,
+          0,
+          -49,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010901,
+        "maximum": 137,
+        "packet": [
+          -68,
+          0,
+          -68,
+          0,
+          -68,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010901,
+        "maximum": 1000,
+        "packet": [
+          -500,
+          0,
+          -500,
+          0,
+          -500,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010902,
+        "maximum": 1,
+        "packet": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010902,
+        "maximum": 99,
+        "packet": [
+          99,
+          0,
+          99,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010902,
+        "maximum": 137,
+        "packet": [
+          137,
+          0,
+          137,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010902,
+        "maximum": 1000,
+        "packet": [
+          1000,
+          0,
+          1000,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010906,
+        "maximum": 1,
+        "packet": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010906,
+        "maximum": 99,
+        "packet": [
+          99,
+          0,
+          99,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010906,
+        "maximum": 137,
+        "packet": [
+          137,
+          0,
+          137,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010906,
+        "maximum": 1000,
+        "packet": [
+          1000,
+          0,
+          1000,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "sacrifice",
+        "fps": 30,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": -500
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "ally",
+        "fps": 30,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": 1000
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "revival",
+        "fps": 30,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": 1000
+          },
+          {
+            "frame": 1,
+            "delta": 1000
+          },
+          {
+            "frame": 2,
+            "delta": 1000
+          },
+          {
+            "frame": 3,
+            "delta": 1000
+          },
+          {
+            "frame": 4,
+            "delta": 1000
+          },
+          {
+            "frame": 5,
+            "delta": 1000
+          },
+          {
+            "frame": 6,
+            "delta": 1000
+          },
+          {
+            "frame": 7,
+            "delta": 1000
+          },
+          {
+            "frame": 8,
+            "delta": 1000
+          },
+          {
+            "frame": 9,
+            "delta": 1000
+          },
+          {
+            "frame": 10,
+            "delta": 1000
+          },
+          {
+            "frame": 11,
+            "delta": 1000
+          },
+          {
+            "frame": 12,
+            "delta": 1000
+          },
+          {
+            "frame": 13,
+            "delta": 1000
+          },
+          {
+            "frame": 14,
+            "delta": 1000
+          },
+          {
+            "frame": 15,
+            "delta": 1000
+          },
+          {
+            "frame": 16,
+            "delta": 1000
+          },
+          {
+            "frame": 17,
+            "delta": 1000
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "clear-on-down",
+        "fps": 30,
+        "restores": [],
+        "remaining": []
+      },
+      {
+        "name": "duplicate-marker",
+        "fps": 30,
+        "restores": [],
+        "remaining": [
+          {
+            "id": 7010905,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "sacrifice",
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": -500
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "ally",
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": 1000
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "revival",
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": 1000
+          },
+          {
+            "frame": 1,
+            "delta": 1000
+          },
+          {
+            "frame": 2,
+            "delta": 1000
+          },
+          {
+            "frame": 3,
+            "delta": 1000
+          },
+          {
+            "frame": 4,
+            "delta": 1000
+          },
+          {
+            "frame": 5,
+            "delta": 1000
+          },
+          {
+            "frame": 6,
+            "delta": 1000
+          },
+          {
+            "frame": 7,
+            "delta": 1000
+          },
+          {
+            "frame": 8,
+            "delta": 1000
+          },
+          {
+            "frame": 9,
+            "delta": 1000
+          },
+          {
+            "frame": 10,
+            "delta": 1000
+          },
+          {
+            "frame": 11,
+            "delta": 1000
+          },
+          {
+            "frame": 12,
+            "delta": 1000
+          },
+          {
+            "frame": 13,
+            "delta": 1000
+          },
+          {
+            "frame": 14,
+            "delta": 1000
+          },
+          {
+            "frame": 15,
+            "delta": 1000
+          },
+          {
+            "frame": 16,
+            "delta": 1000
+          },
+          {
+            "frame": 17,
+            "delta": 1000
+          },
+          {
+            "frame": 18,
+            "delta": 1000
+          },
+          {
+            "frame": 19,
+            "delta": 1000
+          },
+          {
+            "frame": 20,
+            "delta": 1000
+          },
+          {
+            "frame": 21,
+            "delta": 1000
+          },
+          {
+            "frame": 22,
+            "delta": 1000
+          },
+          {
+            "frame": 23,
+            "delta": 1000
+          },
+          {
+            "frame": 24,
+            "delta": 1000
+          },
+          {
+            "frame": 25,
+            "delta": 1000
+          },
+          {
+            "frame": 26,
+            "delta": 1000
+          },
+          {
+            "frame": 27,
+            "delta": 1000
+          },
+          {
+            "frame": 28,
+            "delta": 1000
+          },
+          {
+            "frame": 29,
+            "delta": 1000
+          },
+          {
+            "frame": 30,
+            "delta": 1000
+          },
+          {
+            "frame": 31,
+            "delta": 1000
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "clear-on-down",
+        "fps": 60,
+        "restores": [],
+        "remaining": []
+      },
+      {
+        "name": "duplicate-marker",
+        "fps": 60,
+        "restores": [],
+        "remaining": [
+          {
+            "id": 7010905,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "sacrifice",
+        "fps": 120,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": -500
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "ally",
+        "fps": 120,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": 1000
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "revival",
+        "fps": 120,
+        "restores": [
+          {
+            "frame": 0,
+            "delta": 1000
+          },
+          {
+            "frame": 1,
+            "delta": 1000
+          },
+          {
+            "frame": 2,
+            "delta": 1000
+          },
+          {
+            "frame": 3,
+            "delta": 1000
+          },
+          {
+            "frame": 4,
+            "delta": 1000
+          },
+          {
+            "frame": 5,
+            "delta": 1000
+          },
+          {
+            "frame": 6,
+            "delta": 1000
+          },
+          {
+            "frame": 7,
+            "delta": 1000
+          },
+          {
+            "frame": 8,
+            "delta": 1000
+          },
+          {
+            "frame": 9,
+            "delta": 1000
+          },
+          {
+            "frame": 10,
+            "delta": 1000
+          },
+          {
+            "frame": 11,
+            "delta": 1000
+          },
+          {
+            "frame": 12,
+            "delta": 1000
+          },
+          {
+            "frame": 13,
+            "delta": 1000
+          },
+          {
+            "frame": 14,
+            "delta": 1000
+          },
+          {
+            "frame": 15,
+            "delta": 1000
+          },
+          {
+            "frame": 16,
+            "delta": 1000
+          },
+          {
+            "frame": 17,
+            "delta": 1000
+          },
+          {
+            "frame": 18,
+            "delta": 1000
+          },
+          {
+            "frame": 19,
+            "delta": 1000
+          },
+          {
+            "frame": 20,
+            "delta": 1000
+          },
+          {
+            "frame": 21,
+            "delta": 1000
+          },
+          {
+            "frame": 22,
+            "delta": 1000
+          },
+          {
+            "frame": 23,
+            "delta": 1000
+          },
+          {
+            "frame": 24,
+            "delta": 1000
+          },
+          {
+            "frame": 25,
+            "delta": 1000
+          },
+          {
+            "frame": 26,
+            "delta": 1000
+          },
+          {
+            "frame": 27,
+            "delta": 1000
+          },
+          {
+            "frame": 28,
+            "delta": 1000
+          },
+          {
+            "frame": 29,
+            "delta": 1000
+          },
+          {
+            "frame": 30,
+            "delta": 1000
+          },
+          {
+            "frame": 31,
+            "delta": 1000
+          },
+          {
+            "frame": 32,
+            "delta": 1000
+          },
+          {
+            "frame": 33,
+            "delta": 1000
+          },
+          {
+            "frame": 34,
+            "delta": 1000
+          },
+          {
+            "frame": 35,
+            "delta": 1000
+          },
+          {
+            "frame": 36,
+            "delta": 1000
+          },
+          {
+            "frame": 37,
+            "delta": 1000
+          },
+          {
+            "frame": 38,
+            "delta": 1000
+          },
+          {
+            "frame": 39,
+            "delta": 1000
+          },
+          {
+            "frame": 40,
+            "delta": 1000
+          },
+          {
+            "frame": 41,
+            "delta": 1000
+          },
+          {
+            "frame": 42,
+            "delta": 1000
+          },
+          {
+            "frame": 43,
+            "delta": 1000
+          },
+          {
+            "frame": 44,
+            "delta": 1000
+          },
+          {
+            "frame": 45,
+            "delta": 1000
+          },
+          {
+            "frame": 46,
+            "delta": 1000
+          },
+          {
+            "frame": 47,
+            "delta": 1000
+          },
+          {
+            "frame": 48,
+            "delta": 1000
+          },
+          {
+            "frame": 49,
+            "delta": 1000
+          },
+          {
+            "frame": 50,
+            "delta": 1000
+          },
+          {
+            "frame": 51,
+            "delta": 1000
+          },
+          {
+            "frame": 52,
+            "delta": 1000
+          },
+          {
+            "frame": 53,
+            "delta": 1000
+          },
+          {
+            "frame": 54,
+            "delta": 1000
+          },
+          {
+            "frame": 55,
+            "delta": 1000
+          },
+          {
+            "frame": 56,
+            "delta": 1000
+          },
+          {
+            "frame": 57,
+            "delta": 1000
+          },
+          {
+            "frame": 58,
+            "delta": 1000
+          },
+          {
+            "frame": 59,
+            "delta": 1000
+          },
+          {
+            "frame": 60,
+            "delta": 1000
+          },
+          {
+            "frame": 61,
+            "delta": 1000
+          },
+          {
+            "frame": 62,
+            "delta": 1000
+          }
+        ],
+        "remaining": []
+      },
+      {
+        "name": "clear-on-down",
+        "fps": 120,
+        "restores": [],
+        "remaining": []
+      },
+      {
+        "name": "duplicate-marker",
+        "fps": 120,
+        "restores": [],
+        "remaining": [
+          {
+            "id": 7010905,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "function": "NearDeathStart_onActivate",
+        "markerPresent": false,
+        "emitted": [
+          705021,
+          7010909,
+          42206,
+          30101
+        ]
+      },
+      {
+        "function": "NearDeathStart_onActivate",
+        "markerPresent": true,
+        "emitted": [
+          705021,
+          7010909,
+          42206,
+          30101
+        ]
+      },
+      {
+        "function": "NearDeathRevival_onActivate",
+        "markerPresent": false,
+        "emitted": []
+      },
+      {
+        "function": "NearDeathRevival_onActivate",
+        "markerPresent": true,
+        "emitted": [
+          7010906
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "347700 controlled emission result; no projectile collision execution",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3C7F40 shooter effect request recorder; next-frame delivery fixture",
+    "3CED90 isolated actor context",
+    "518F30 source-owner lookup fixture",
+    "E6FCB0 actual Behavior row lookup",
+    "E87800 actual Bullet row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "Lua: supplied 7010905 presence; act records effects; animation resets and variables are no-ops",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}

@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 568 |
-| 其中有已解读的数值字段 | 497 |
+| 有可展示的数值、机制或替换法术 | 570 |
+| 其中有已解读的数值字段 | 499 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 334 |
-| 尚未解析到可展示详情 | 69 |
+| 已核对原生叠加处理 | 336 |
+| 尚未解析到可展示详情 | 67 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -33,6 +33,7 @@ python tools/probe_recovery_mechanics.py <游戏目录>/nightreign.exe <临时�
 python tools/probe_executor_recovery.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/animations.json <MMV的mod目录>/action/script/c0000.hks data/effect-executor-recovery-evidence.json
 python tools/probe_weapon_recovery.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json data/effect-weapon-recovery-evidence.json
 python tools/probe_recluse_bleed.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/animations.json data/effect-recluse-bleed-evidence.json
+python tools/probe_revenant_sacrifice.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json <临时目录>/animations.json <MMV的mod目录>/action/script/c0000.hks data/effect-revenant-sacrifice-evidence.json
 python tools/build_effect_details.py --extract <临时目录>/extracted.json
 ```
 
@@ -52,7 +53,7 @@ python tools/build_effect_growth.py <临时目录>/extracted.json <临时目录>
 
 [`probe_effect_mechanics.py`](../../tools/probe_effect_mechanics.py) 在 Unicorn 内执行原 EXE 的指令，使用实际 MMV 的 1024 字节 SpEffect 行、28 字节 HeroStatus 行，构造效果链表和有效/无效节点。字段偏移先与提取器解码结果逐行核对。遇到未准备的依赖或超过执行预算即失败。
 
-目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**、执行者回血 **24 组**、武器命中恢复 **200 组**、隐士自出血 **22 组**，另有 **244 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
+目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**、执行者回血 **24 组**、武器命中恢复 **200 组**、隐士自出血 **22 组**、复仇者献血 **39 组**，另有 **248 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
 
 外部依赖替代包括：`E6D630` 无攻击（AtkParam）行的查询，`E78730` 用实际 HeroStatus 字节实现的表查询，`E78720` 表包装对象清理；杀敌分派的 `3C7FD0` 记录下游效果 ID，随后单独执行真实数值聚合；绝招结算中的 `42C120/3D4180` 提供无玩家 HUD 通知的合成 owner；计时刷新中的 `EA17E0` 查询实际 SpEffect 行。完整清单保存在输出的 `stubs`。倍率、实例匹配、等级选择、插值、取整、计时、累计值重置均执行原生代码。没有启动游戏进程，没有模拟完整远征。
 
@@ -368,3 +369,15 @@ Bullet 每 0.3 秒发射，半径 15 米，Atk 700000809 允许自身和友方�
 7032903 为类别 10，每次成功发作新增独立实例，倍率相乘、分别到期；相隔 5 秒的两次施放得到 ×1.3456，随后依次回落至 ×1.16、×1。重复装备根标记不会增加单次收益，与连续发动是两种不同情况。
 
 [`probe_recluse_bleed.py`](../../tools/probe_recluse_bleed.py) 的 22 组检查包括八组异常发作、七组 HP 结算和七组完整效果生命周期；覆盖无装备、单次、连续两次、重复装备、免疫、未发作及第二次才发作。原生状态判定、链表移除、HP 换算／限幅、增益计时与攻击聚合均实际执行；角色身份、网络传输、空抗性成长参数及普通保护状态为隔离夹具。完整角色投递、保护状态组合、倒地、网络与重载仍待核对，`gameplayVerified` 保持 false。证据见 [`effect-recluse-bleed-evidence.json`](../../data/effect-recluse-bleed-evidence.json)。
+
+## 第十五批：复仇者献血与获救后的持续恢复
+
+7010900 与商店词条 16002 共用状态 2023。TAE 2905／650000 的事件 21 在 1.4 秒开始，Type 2 使用 judge 7280、状态条件 2023、Enable=0。`40CD80 → 668B30` 得到实际 Behavior 700000280，再指向 Bullet 30905110。这里是瞬发请求：只在事件开始时发一次，结束不再发；一份和三份遗物的请求相同。与守护者持续发射的 Enable=1 路径不能混用。
+
+`343280` 调用发射函数后，仅在成功返回时读取 Bullet +0x60 的 `spEffectIDForShooter`，沿 `518F30` 找到来源角色，再调用 `3C7F40` 发 7010901。该自伤与是否有友方命中是独立路径。实际节点 `changeHpRate=50`；`506EC0 → 50B860` 以最大 HP 换算，最大 HP 1／99／137／1000 时扣除 0／49／68／500。0.1 秒寿命只结算初始一次，不能写成持续扣血。低血量结算与本次绝招保护状态的交互尚未连接，因此页面不推断其是否能让施放者倒地。
+
+Bullet 半径 30 米，命中附加 7010902 和 7010905。Atk 790000003 不允许命中自身；7010902 还要求友方目标，不接受敌方。7010902 恢复目标最大 HP 的 100%，0 秒寿命／0 周期在原生更新中仅有初始一次有效结算。没有把施放者加进周围回血，也没有把范围节点寿命当成治疗时长。目标分类与半径来自实际参数；未执行空间碰撞、网络投递或完整救援队列。
+
+**获救后另有真实的持续恢复。** 7010905 可作用于倒地角色，作为无限寿命标记；实际 HKS `NearDeathRevival_onActivate` 只在持有此标记时发 7010906。后者替换标记，每次恢复最大 HP 的 100%，0.5 秒寿命、0 周期，每次原生更新都结算。30／60／120 Hz 隔离运行均得到约 0.5 秒的连续恢复，最后结算点受资格／过期移除顺序影响，至多跨两个更新边界。这段寿命确有生效意义，详情保留“持续恢复”和约 0.5 秒。`NearDeathStart_onActivate` 发 7010909 清除同类别标记，未倒地时获得标记不保证下次倒地后仍可使用。
+
+[`probe_revenant_sacrifice.py`](../../tools/probe_revenant_sacrifice.py) 共 43 组：六组开始／结束与装备数量、六组不同更新频率下的发射成功／失败、十二组 HP 换算、十五组叶节点与标记生命周期、四组实际 HKS 函数分支。类别 201／优先级 54 的标记、恢复与清除实际执行覆盖处理；重复标记只保留一份。证据见 [`effect-revenant-sacrifice-evidence.json`](../../data/effect-revenant-sacrifice-evidence.json)。发射结果、owner 身份、Lua 环境与投递为明确夹具，`gameplayVerified` 保持 false。

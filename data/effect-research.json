@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 568,
-    "withNumericFields": 497,
+    "withDetails": 570,
+    "withNumericFields": 499,
     "withMechanicsOnly": 36,
-    "nativeStacking": 334,
+    "nativeStacking": 336,
     "catalog": 2241,
-    "catalogWithDetails": 2010
+    "catalogWithDetails": 2012
   },
   "effects": {
     "0": {
@@ -562,15 +562,21 @@
       "states": [
         2023
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7010901,
+        7010902,
+        7010906,
+        7010905,
+        7010909
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "revenant-sacrifice"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整命中／救援队列、低血量与绝招保护状态的结算顺序、多人来源及重载交互"
       ],
       "gameplayVerified": false
     },
@@ -9890,15 +9896,21 @@
       "states": [
         2023
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7010901,
+        7010902,
+        7010906,
+        7010905,
+        7010909
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "revenant-sacrifice"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整命中／救援队列、低血量与绝招保护状态的结算顺序、多人来源及重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49262,5 +49274,6 @@
   "executorRecoveryEvidenceSha256": "2ae2134fa269d85bdb9f5cd82237650cfa98ecac8d0923ae7732bc97b0051e27",
   "weaponRecoveryEvidenceSha256": "b28dab55cf1296a4bf632752bd32b8e9ebb50e9f29811500fb18ac6b98dae256",
   "recluseBleedEvidenceSha256": "990392dc9b9d07f184b8b7069b3162586015baeddfca9f9319164fdc3c9896c9",
+  "revenantSacrificeEvidenceSha256": "2511d192cfaa95b3eee0c379072550c509623bc2cd1162e0a5a72cc921ca5e57",
   "discoveryEvidenceSha256": "be359953e1c4735d2f0b63cfddcfe7469c89f6fc062909aef9565f191e8e8c53"
 }

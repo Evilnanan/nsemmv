@@ -15,10 +15,50 @@ import recovery from "../../data/effect-recovery-evidence.json";
 import executorRecovery from "../../data/effect-executor-recovery-evidence.json";
 import weaponRecovery from "../../data/effect-weapon-recovery-evidence.json";
 import recluseBleed from "../../data/effect-recluse-bleed-evidence.json";
+import sacrifice from "../../data/effect-revenant-sacrifice-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Revenant's one-shot sacrifice and ally heal from continuous revival recovery", () => {
+    const detail = effectDetail(7010900)!;
+    expect(detail).toEqual(effectDetail(16002));
+    expect(detail.blocks.map((b) => b.values)).toEqual([
+      [["HP 损失", "最大值的 50%"]], [["HP 恢复", "最大值的 100%"]],
+      [["每次 HP 恢复", "最大值的 100%"]],
+    ]);
+    expect(detail.blocks.map((b) => b.duration)).toEqual([null, null, .5]);
+    expect(detail.blocks[1].restrictions).toContain("半径 30 米 · 不含自身");
+    expect(detail.blocks[2].restrictions).toContain("持续恢复");
+    expect(detail.stacking).toBe("不可叠加");
+    for (const c of sacrifice.checks.trigger)
+      expect(c.requests).toHaveLength(c.equipmentCopies && c.active ? 1 : 0);
+    for (const c of sacrifice.checks.emission) {
+      expect(c.attempts).toEqual([0]);
+      expect(c.shooterEffects).toEqual(c.success ? [7010901] : []);
+    }
+    for (const c of sacrifice.checks.hp)
+      expect(c.packet[0]).toBe(c.leaf === 7010901 ? (-Math.trunc(c.maximum * .5) || 0) : c.maximum);
+    for (const c of sacrifice.checks.lifecycle) {
+      if (c.name === "revival") {
+        expect(c.restores.length).toBeGreaterThanOrEqual(c.fps / 2);
+        expect(c.restores.every((r) => r.delta === 1000)).toBe(true);
+        expect(c.restores.at(-1)!.frame / c.fps).toBeLessThanOrEqual(.5 + 2 / c.fps + 1e-6);
+      } else {
+        expect(c.restores).toHaveLength(["sacrifice", "ally"].includes(c.name) ? 1 : 0);
+      }
+      expect(c.remaining.map((n) => n.id)).toEqual(c.name === "duplicate-marker" ? [7010905] : []);
+    }
+    for (const c of sacrifice.checks.script) {
+      if (c.function === "NearDeathRevival_onActivate")
+        expect(c.emitted).toEqual(c.markerPresent ? [7010906] : []);
+      else expect(c.emitted).toContain(7010909);
+    }
+    expect(research.revenantSacrificeEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-sacrifice-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(sacrifice.gameplayVerified).toBe(false);
+  });
   it("requires actual self-bleed onset and separates HP loss from independently expiring attack buffs", () => {
     const detail = effectDetail(7032900)!;
     expect(detail).toEqual(effectDetail(17002));
@@ -295,7 +335,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(497);
+    expect(research.coverage.withNumericFields).toBe(499);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

@@ -39,6 +39,8 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7010900, ["最大值的 50%", "最大值的 100%", "半径 30 米", "不含自身", "获救时", "0.5 秒", "持续恢复"]],
+    [16002, ["最大值的 50%", "不可叠加"]],
     [7032900, ["最大值的 20%", "HP 归零", "+16%", "30 秒", "+34.56%", "免疫时也不会获得增攻"]],
     [17002, ["最大值的 20%", "+16%", "不可叠加"]],
     [7340000, ["15", "约 1 秒内只触发一次", "连续命中不会延长间隔", "回血与回蓝可同时生效"]],
