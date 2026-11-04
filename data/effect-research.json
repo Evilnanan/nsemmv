@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 597,
-    "withNumericFields": 526,
+    "withDetails": 599,
+    "withNumericFields": 528,
     "withMechanicsOnly": 36,
-    "nativeStacking": 414,
+    "nativeStacking": 416,
     "catalog": 2241,
-    "catalogWithDetails": 2040
+    "catalogWithDetails": 2042
   },
   "effects": {
     "0": {
@@ -10952,15 +10952,17 @@
       "states": [
         2091
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7033101
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "duchess-poise"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整发射位置／碰撞到达与动作中断、敌人基础强韧及恢复资产、实际失衡反应与多人／死亡／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -10973,15 +10975,17 @@
       "states": [
         2091
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7033101
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "duchess-poise"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整发射位置／碰撞到达与动作中断、敌人基础强韧及恢复资产、实际失衡反应与多人／死亡／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49452,6 +49456,7 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "duchessPoiseEvidenceSha256": "7583ef9521d733d09e15bf3d39eef1076010a4b3189b9b0ec5d622f0c7c5c242",
   "wylderBleedEvidenceSha256": "4dc87d62c3b6f2cbdd4a0807a6859cfeea7986475caa80d921c2f2741368b4cd",
   "ironeyePoisonEvidenceSha256": "d75e5ca2709a98406ed61156066a54a0e817df364dea592c9313788b3d0ea218",
   "raiderDebuffEvidenceSha256": "71d3b7d886dff4d745705310f20ee5fd4f7853c214bef80b329f0f243cca460c",

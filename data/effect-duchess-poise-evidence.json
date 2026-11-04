@@ -1,0 +1,819 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "behaviorParamSha256": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+  "bulletParamSha256": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "animationBundleSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "behaviorSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+  "paths": [
+    {
+      "selector": 17189,
+      "clips": [
+        "a903_539000",
+        "a903_539005"
+      ]
+    },
+    {
+      "selector": 17190,
+      "clips": [
+        "a903_539100",
+        "a903_539105"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "tae": 2903,
+      "animation": 539000,
+      "index": 7,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "82000000010000000518000000002B080000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2903,
+      "animation": 539005,
+      "index": 7,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "82000000010000000518000000002B080000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2903,
+      "animation": 539100,
+      "index": 7,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "82000000010000000518000000002B080000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2903,
+      "animation": 539105,
+      "index": 7,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "82000000010000000518000000002B080000FF03000000000000000000000000"
+    }
+  ],
+  "root": 7033100,
+  "leaf": 7033101,
+  "bullet": {
+    "hitRadius": 15,
+    "hitRadiusMax": 15,
+    "life": 0.20000000298023224,
+    "numShoot": 1,
+    "shootInterval": 0,
+    "spEffectId0": 7033101,
+    "atkId_Bullet": 600000150
+  },
+  "checks": {
+    "dispatch": [
+      {
+        "animation": 539000,
+        "copies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539000,
+        "copies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 539000,
+        "copies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539000,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539000,
+        "copies": 2,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539000,
+        "copies": 2,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539000,
+        "copies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539000,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539005,
+        "copies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539005,
+        "copies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 539005,
+        "copies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539005,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539005,
+        "copies": 2,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539005,
+        "copies": 2,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539005,
+        "copies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539005,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539100,
+        "copies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539100,
+        "copies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 539100,
+        "copies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539100,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539100,
+        "copies": 2,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539100,
+        "copies": 2,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539100,
+        "copies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539100,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539105,
+        "copies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539105,
+        "copies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 539105,
+        "copies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539105,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539105,
+        "copies": 2,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539105,
+        "copies": 2,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      },
+      {
+        "animation": 539105,
+        "copies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539105,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000149,
+            "active": true,
+            "instant": true
+          }
+        ]
+      }
+    ],
+    "emission": [
+      {
+        "fps": 30,
+        "emissions": [
+          0
+        ]
+      },
+      {
+        "fps": 60,
+        "emissions": [
+          0
+        ]
+      },
+      {
+        "fps": 120,
+        "emissions": [
+          0
+        ]
+      }
+    ],
+    "consumer": [
+      {
+        "copies": 0,
+        "input": 0,
+        "rate": 1.0,
+        "result": {
+          "remaining": 100.0,
+          "broken": false,
+          "changed": []
+        }
+      },
+      {
+        "copies": 0,
+        "input": 1,
+        "rate": 1.0,
+        "result": {
+          "remaining": 99.0,
+          "broken": false,
+          "changed": [
+            1.0
+          ]
+        }
+      },
+      {
+        "copies": 0,
+        "input": 10,
+        "rate": 1.0,
+        "result": {
+          "remaining": 90.0,
+          "broken": false,
+          "changed": [
+            10.0
+          ]
+        }
+      },
+      {
+        "copies": 0,
+        "input": 50,
+        "rate": 1.0,
+        "result": {
+          "remaining": 50.0,
+          "broken": false,
+          "changed": [
+            50.0
+          ]
+        }
+      },
+      {
+        "copies": 0,
+        "input": 76,
+        "rate": 1.0,
+        "result": {
+          "remaining": 24.0,
+          "broken": false,
+          "changed": [
+            76.0
+          ]
+        }
+      },
+      {
+        "copies": 0,
+        "input": 77,
+        "rate": 1.0,
+        "result": {
+          "remaining": 23.0,
+          "broken": false,
+          "changed": [
+            77.0
+          ]
+        }
+      },
+      {
+        "copies": 0,
+        "input": 100,
+        "rate": 1.0,
+        "result": {
+          "remaining": 0.0,
+          "broken": true,
+          "changed": [
+            100.0
+          ]
+        }
+      },
+      {
+        "copies": 1,
+        "input": 0,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 100.0,
+          "broken": false,
+          "changed": []
+        }
+      },
+      {
+        "copies": 1,
+        "input": 1,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 98.69999694824219,
+          "broken": false,
+          "changed": [
+            1.2999999523162842
+          ]
+        }
+      },
+      {
+        "copies": 1,
+        "input": 10,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 87.0,
+          "broken": false,
+          "changed": [
+            13.0
+          ]
+        }
+      },
+      {
+        "copies": 1,
+        "input": 50,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 35.0,
+          "broken": false,
+          "changed": [
+            65.0
+          ]
+        }
+      },
+      {
+        "copies": 1,
+        "input": 76,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 1.2000045776367188,
+          "broken": false,
+          "changed": [
+            98.79999542236328
+          ]
+        }
+      },
+      {
+        "copies": 1,
+        "input": 77,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": -0.09999847412109375,
+          "broken": true,
+          "changed": [
+            100.0999984741211
+          ]
+        }
+      },
+      {
+        "copies": 1,
+        "input": 100,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": -30.0,
+          "broken": true,
+          "changed": [
+            130.0
+          ]
+        }
+      },
+      {
+        "copies": 2,
+        "input": 0,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 100.0,
+          "broken": false,
+          "changed": []
+        }
+      },
+      {
+        "copies": 2,
+        "input": 1,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 98.69999694824219,
+          "broken": false,
+          "changed": [
+            1.2999999523162842
+          ]
+        }
+      },
+      {
+        "copies": 2,
+        "input": 10,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 87.0,
+          "broken": false,
+          "changed": [
+            13.0
+          ]
+        }
+      },
+      {
+        "copies": 2,
+        "input": 50,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 35.0,
+          "broken": false,
+          "changed": [
+            65.0
+          ]
+        }
+      },
+      {
+        "copies": 2,
+        "input": 76,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 1.2000045776367188,
+          "broken": false,
+          "changed": [
+            98.79999542236328
+          ]
+        }
+      },
+      {
+        "copies": 2,
+        "input": 77,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": -0.09999847412109375,
+          "broken": true,
+          "changed": [
+            100.0999984741211
+          ]
+        }
+      },
+      {
+        "copies": 2,
+        "input": 100,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": -30.0,
+          "broken": true,
+          "changed": [
+            130.0
+          ]
+        }
+      },
+      {
+        "copies": 3,
+        "input": 0,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 100.0,
+          "broken": false,
+          "changed": []
+        }
+      },
+      {
+        "copies": 3,
+        "input": 1,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 98.69999694824219,
+          "broken": false,
+          "changed": [
+            1.2999999523162842
+          ]
+        }
+      },
+      {
+        "copies": 3,
+        "input": 10,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 87.0,
+          "broken": false,
+          "changed": [
+            13.0
+          ]
+        }
+      },
+      {
+        "copies": 3,
+        "input": 50,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 35.0,
+          "broken": false,
+          "changed": [
+            65.0
+          ]
+        }
+      },
+      {
+        "copies": 3,
+        "input": 76,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": 1.2000045776367188,
+          "broken": false,
+          "changed": [
+            98.79999542236328
+          ]
+        }
+      },
+      {
+        "copies": 3,
+        "input": 77,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": -0.09999847412109375,
+          "broken": true,
+          "changed": [
+            100.0999984741211
+          ]
+        }
+      },
+      {
+        "copies": 3,
+        "input": 100,
+        "rate": 1.2999999523162842,
+        "result": {
+          "remaining": -30.0,
+          "broken": true,
+          "changed": [
+            130.0
+          ]
+        }
+      }
+    ],
+    "refresh": [
+      {
+        "elapsed": 0,
+        "count": 1,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 0,
+        "count": 2,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 0,
+        "count": 3,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 1,
+        "count": 1,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 1,
+        "count": 2,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 1,
+        "count": 3,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 3,
+        "count": 1,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 3,
+        "count": 2,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 3,
+        "count": 3,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 5,
+        "count": 1,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 5,
+        "count": 2,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      },
+      {
+        "elapsed": 5,
+        "count": 3,
+        "remaining": 6.0,
+        "rate": 1.2999999523162842
+      }
+    ],
+    "lifetime": [
+      {
+        "fps": 30,
+        "expiryFrame": 183
+      },
+      {
+        "fps": 60,
+        "expiryFrame": 362
+      },
+      {
+        "fps": 120,
+        "expiryFrame": 723
+      }
+    ]
+  },
+  "native": {
+    "dispatch": "414820/40CD80",
+    "state": "508E20",
+    "behavior": "668B30",
+    "emitter": "343280",
+    "rate": "508170/510880",
+    "filter": "511350",
+    "consumer": "48DE50",
+    "insert": "50D060",
+    "qualify": "5057D0",
+    "update": "50ACD0"
+  },
+  "stubs": [
+    "0x3d4180 isolated actor context / hand identity",
+    "0x3d4c10 isolated actor context / hand identity",
+    "0x4d1b20 isolated actor context / hand identity",
+    "0x53b360 stagger reaction notification constructor/sink",
+    "0x53b520 stagger reaction notification constructor/sink",
+    "0x66b2d0 isolated actor context / hand identity",
+    "0xea76f0 isolated actor context / hand identity",
+    "0xea9a60 isolated actor context / hand identity",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "27D0640 empty animation-reference list",
+    "347700 successful projectile-emission recorder; collision arrivals are separate fixtures",
+    "3975D0 Behavior request recorder; native conditional event dispatch",
+    "3CED90 isolated animation-owner context",
+    "48D4F0 poise-change notification sink after native subtraction",
+    "E6FCB0 actual Behavior row lookup",
+    "E87800 actual Bullet row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "poise virtual +10 base 100; +18 recovery delay 5, explicit recipient fixtures",
+    "synthetic animation-owner virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}

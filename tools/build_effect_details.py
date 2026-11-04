@@ -200,6 +200,13 @@ assert wylder_bleed['exeSha256'] == evidence['exeSha256'] and not wylder_bleed['
 assert wylder_bleed['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in wylder_bleed['checks'].items()} == dict(dispatch=32, onset=48, damage=7, repeat=3, lifetime=3)
 
+duchess_poise_path = ROOT / 'data/effect-duchess-poise-evidence.json'
+duchess_poise = json.loads(duchess_poise_path.read_text())
+assert duchess_poise['schema'] == 1 and duchess_poise['regulationSha256'] == catalog['regulationSha256']
+assert duchess_poise['exeSha256'] == evidence['exeSha256'] and not duchess_poise['gameplayVerified']
+assert duchess_poise['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in duchess_poise['checks'].items()} == dict(dispatch=32, emission=3, consumer=28, refresh=12, lifetime=3)
+
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -258,7 +265,7 @@ META = ['effectEndurance', 'motionInterval', 'spCategory', 'categoryPriority', '
         'invocationConditionsStateChange1', 'invocationConditionsStateChange2', 'invocationConditionsStateChange3',
         'wepTypeTrigger', 'wepTypeTriggerCount', 'conditionHp', 'conditionHpRate',
         'changeHpRate', 'changeMpRate', 'changeStaminaRate', 'startGoodsId', 'startingItemAmount',
-        'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier', 'weakPointValue', 'restageAttackRate',
+        'startMagicId', 'startSwordArtsId', 'weaponTypeDiscovery', 'heroStatusModifier', 'weakPointValue', 'restageAttackRate', 'saReceiveDamageRate',
         'accumuOverVal', 'accumuVal', 'dedupeAccumuTrigger', 'behaviorId', 'ultimateArtGauge', 'deleteCriteriaDamage',
         'runeDiscountValue', 'itemDropRate']
 FIELDS = set(RATES) | set(POINTS) | set(RESTORE) | set(LINKS) | set(META) | set(STATUS_BUILDUP)
@@ -292,6 +299,8 @@ if args.extract:
                 needed.add(protection['leaf'])
             if root in tenacity['roots']:
                 needed.update(map(int, tenacity['rows']))
+            if root == duchess_poise['root']:
+                needed.add(duchess_poise['leaf'])
             if root == wylder_bleed['root']:
                 needed.add(wylder_bleed['leaf'])
             if root == ironeye_poison['root']:
@@ -517,6 +526,7 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'duchess-poise': ('不可叠加', '再次施加刷新时长', ['duchess-poise']),
     'wylder-bleed': ('不可叠加', '重复装备不增加累积或伤害', ['wylder-bleed']),
     'ironeye-poison': ('不可叠加', '重复装备不增加累积或伤害', ['ironeye-poison']),
     'raider-debuff': ('不可叠加', '再次命中刷新时长', ['raider-debuff']),
@@ -840,6 +850,14 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if duchess_poise['root'] in effect['roots'].values():
+        poise_row = source['spells']['7033101']
+        assert poise_row['saReceiveDamageRate'] == 1.3 and poise_row['effectEndurance'] == 6
+        assert duchess_poise['bullet']['hitRadius'] == duchess_poise['bullet']['hitRadiusMax'] == 15
+        blocks = [dict(source=7033101, phase='发动技艺时', linked=True,
+                       values=[['目标承受的削韧', '+30%'], ['范围半径', '15 米']],
+                       scope=[], restrictions=[], duration=6, interval=None)]
+        rule = 'duchess-poise'
     if wylder_bleed['root'] in effect['roots'].values():
         bleed_row = source['spells']['7500002']
         assert bleed_row['bloodAttackPower'] == 55 and bleed_row['effectEndurance'] == 1
@@ -1130,9 +1148,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1150,6 +1168,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if rules[id] == 'executor-tenacity':
         questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
+    if rules[id] == 'duchess-poise':
+        questions.append('完整发射位置／碰撞到达与动作中断、敌人基础强韧及恢复资产、实际失衡反应与多人／死亡／重载交互')
     if rules[id] == 'wylder-bleed':
         questions.append('发射阶段引用缺失的 Behavior 600000030，60 点叶效果 7500001 暂无实际引用；需核对额外运行时路径')
         questions.append('完整攻击／异常修正输入、碰撞与目标限制、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互')
@@ -1229,6 +1249,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['duchessPoiseEvidenceSha256'] = hashlib.sha256(duchess_poise_path.read_bytes()).hexdigest()
 research['wylderBleedEvidenceSha256'] = hashlib.sha256(wylder_bleed_path.read_bytes()).hexdigest()
 research['ironeyePoisonEvidenceSha256'] = hashlib.sha256(ironeye_poison_path.read_bytes()).hexdigest()
 research['raiderDebuffEvidenceSha256'] = hashlib.sha256(raider_debuff_path.read_bytes()).hexdigest()

@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
 import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
 import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
@@ -37,6 +38,28 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("makes nearby enemies receive more poise damage for six seconds without duplicate amplification", () => {
+    for (const id of [7033100, 7033101]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["目标承受的削韧", "+30%"], ["范围半径", "15 米"]]);
+      expect(detail.blocks[0].duration).toBe(6);
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("再次施加刷新时长");
+    }
+    for (const row of duchessPoise.checks.consumer) {
+      expect(row.rate).toBeCloseTo(row.copies ? 1.3 : 1);
+      expect(row.result.remaining).toBeCloseTo(100 - row.input * (row.copies ? 1.3 : 1), 3);
+    }
+    expect(duchessPoise.checks.consumer.find(r => r.copies === 0 && r.input === 77)!.result.broken).toBe(false);
+    expect(duchessPoise.checks.consumer.find(r => r.copies === 1 && r.input === 77)!.result.broken).toBe(true);
+    expect(duchessPoise.checks.emission.every(r => r.emissions.length === 1)).toBe(true);
+    expect(duchessPoise.checks.refresh.every(r => r.remaining === 6)).toBe(true);
+    expect(duchessPoise.gameplayVerified).toBe(false);
+    expect(research.duchessPoiseEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-duchess-poise-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows the referenced pull-attack bleed and treats its one-second lifetime as a lockout", () => {
     const detail = effectDetail(6500000)!;
     expect(detail.blocks.map(b => b.values)).toEqual([[["出血基础累积", "55"]], [["出血伤害", "最大血量的 12.5% + 100"]]]);
@@ -774,7 +797,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(526);
+    expect(research.coverage.withNumericFields).toBe(528);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
