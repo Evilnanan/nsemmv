@@ -43,6 +43,7 @@ import wylderFlame from "../../data/effect-wylder-flame-evidence.json";
 import revenantEnchant from "../../data/effect-revenant-enchant-evidence.json";
 import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
+import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -69,6 +70,29 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("follows greatsword input selection and hand-specific fire enchantment refresh", () => {
+    const detail = effectDetail(7020000)!;
+    expect(detail.blocks[0].values).toEqual([["火焰基础攻击力", "+20"]]);
+    expect(detail.blocks[0].duration).toBe(20);
+    expect(detail.blocks[0].restrictions).toEqual(["对应手持武器"]);
+    expect(detail.stacking).toBe("不可叠加");
+    for (const row of wylderFollowup.checks.script)
+      expect(row.requests[0] === "W_FookShotAdditionalAttack").toBe(Boolean(row.copies && row.window && row.greatsword));
+    for (const row of wylderFollowup.checks.enchantDispatch) {
+      expect(row.leaves).toHaveLength(Number(Boolean(row.style)));
+      if (row.style) expect(row.leaves[0].id).toBe(row.style === 100620 ? 7020002 : 7020004);
+    }
+    for (const row of wylderFollowup.checks.timer) {
+      expect(Math.abs(row.expiryFrame / row.fps - (row.reapply ? 25 : 20))).toBeLessThanOrEqual(4 / row.fps);
+      if (row.reapply) expect(row.remainingAfterReapply).toBe(20);
+    }
+    for (const row of wylderFollowup.checks.overwrite)
+      expect(row.nodes.map(n => n.id)).toEqual([row.order.at(-1)]);
+    expect(wylderFollowup.gameplayVerified).toBe(false);
+    expect(research.wylderFollowupEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-wylder-followup-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("uses the halberd shockwave radius rather than approach radius or attack lifetime", () => {
     const detail = effectDetail(7011600)!;
     expect(detail.blocks[0].values).toEqual([["旋风半径", "3 米"]]);
@@ -1661,7 +1685,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(39);
-    expect(research.coverage.withNumericFields).toBe(554);
+    expect(research.coverage.withNumericFields).toBe(555);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

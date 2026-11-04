@@ -1,0 +1,3267 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "tae": "c405af9819d080cc6eb5199aaf855765b0ae4bd526110cabc32a45e57c3dcaa9",
+    "hks": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+    "behaviorGraph": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4"
+  },
+  "effects": [
+    7020000
+  ],
+  "root": 7020000,
+  "leaves": [
+    7020002,
+    7020004
+  ],
+  "graph": {
+    "state": 32481,
+    "selector": 41896,
+    "binding": {
+      "selector": 41896,
+      "bindingSet": 45842,
+      "binding": 52740,
+      "member": "selectedGeneratorIndex",
+      "variable": 374,
+      "name": "FookShotAdditionalAttack",
+      "stringSet": 14,
+      "names": 20
+    },
+    "clips": [
+      "a900_500020",
+      "a900_500021"
+    ]
+  },
+  "attackEvents": [
+    {
+      "animation": 500020,
+      "index": 5,
+      "Type": 1,
+      "StartTime": 0.8666667,
+      "EndTime": 1.0666667,
+      "hex": "000000000000000080170000FF00000000000000000000000000000000000000"
+    },
+    {
+      "animation": 500020,
+      "index": 7,
+      "Type": 1,
+      "StartTime": 0,
+      "EndTime": 0.33333334,
+      "hex": "00000000000000007A170000FF00000000000000000000000000000000000000"
+    },
+    {
+      "animation": 500021,
+      "index": 9,
+      "Type": 1,
+      "StartTime": 0.73333335,
+      "EndTime": 0.8333333,
+      "hex": "000000000000000080170000FF00000000000000000000000000000000000000"
+    }
+  ],
+  "enchantEvents": [
+    {
+      "animation": 500020,
+      "index": 104,
+      "Type": 67,
+      "StartTime": 0.8,
+      "EndTime": 0.8666667,
+      "hex": "E11D6B00000000000000000000000000"
+    },
+    {
+      "animation": 500020,
+      "index": 105,
+      "Type": 67,
+      "StartTime": 0.8,
+      "EndTime": 0.8666667,
+      "hex": "E31D6B00000000000000000000000000"
+    },
+    {
+      "animation": 500021,
+      "index": 80,
+      "Type": 67,
+      "StartTime": 0.6666667,
+      "EndTime": 0.73333335,
+      "hex": "E11D6B00000000000000000000000000"
+    },
+    {
+      "animation": 500021,
+      "index": 81,
+      "Type": 67,
+      "StartTime": 0.6666667,
+      "EndTime": 0.73333335,
+      "hex": "E31D6B00000000000000000000000000"
+    }
+  ],
+  "rows": {
+    "7020000": {
+      "stateInfo": 2027,
+      "spCategory": 20,
+      "wepParamChange": 0,
+      "effectEndurance": -1,
+      "fireAttackPower": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "invocationConditionsStateChange1": 0,
+      "cycleOccurrenceSpEffectId": -1
+    },
+    "100620": {
+      "stateInfo": 323,
+      "spCategory": 158,
+      "wepParamChange": 0,
+      "effectEndurance": -1,
+      "fireAttackPower": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "invocationConditionsStateChange1": 0,
+      "cycleOccurrenceSpEffectId": -1
+    },
+    "100621": {
+      "stateInfo": 322,
+      "spCategory": 158,
+      "wepParamChange": 0,
+      "effectEndurance": -1,
+      "fireAttackPower": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "invocationConditionsStateChange1": 0,
+      "cycleOccurrenceSpEffectId": -1
+    },
+    "7020001": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "wepParamChange": 0,
+      "effectEndurance": 0,
+      "fireAttackPower": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "invocationConditionsStateChange1": 323,
+      "cycleOccurrenceSpEffectId": 7020002
+    },
+    "7020002": {
+      "stateInfo": 62,
+      "spCategory": 162,
+      "wepParamChange": 1,
+      "effectEndurance": 20,
+      "fireAttackPower": 20,
+      "isUseAtkParamAtkPowerCorrect": 1,
+      "invocationConditionsStateChange1": 0,
+      "cycleOccurrenceSpEffectId": -1
+    },
+    "7020003": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "wepParamChange": 0,
+      "effectEndurance": 0,
+      "fireAttackPower": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "invocationConditionsStateChange1": 322,
+      "cycleOccurrenceSpEffectId": 7020004
+    },
+    "7020004": {
+      "stateInfo": 62,
+      "spCategory": 163,
+      "wepParamChange": 2,
+      "effectEndurance": 20,
+      "fireAttackPower": 20,
+      "isUseAtkParamAtkPowerCorrect": 1,
+      "invocationConditionsStateChange1": 0,
+      "cycleOccurrenceSpEffectId": -1
+    }
+  },
+  "checks": {
+    "script": [
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotMoveBreak_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy1Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "FookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotMove_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "0",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 0,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 1,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 0,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLight2",
+          "W_AttackRightHeavy2Start",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothLight2",
+          "W_AttackBothHeavy1Start"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 0,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 0,
+        "leftBoth": 1,
+        "selector": "nil",
+        "requests": [
+          "W_AttackRightLightDash",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_AttackBothDash",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 0,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      },
+      {
+        "function": "AirFookShotPull_onUpdate",
+        "copies": 3,
+        "window": 1,
+        "greatsword": 1,
+        "leftBoth": 1,
+        "selector": "1",
+        "requests": [
+          "W_FookShotAdditionalAttack",
+          "W_AttackRightHeavyDash",
+          "W_AttackLeftLight1",
+          "W_AttackLeftHeavy1",
+          "W_FookShotAdditionalAttack",
+          "W_AttackBothHeavyDash"
+        ]
+      }
+    ],
+    "styleScript": [
+      {
+        "style": 0,
+        "alreadyPresent": 0,
+        "grant": "100620"
+      },
+      {
+        "style": 0,
+        "alreadyPresent": 1,
+        "grant": ""
+      },
+      {
+        "style": 2,
+        "alreadyPresent": 0,
+        "grant": "100621"
+      },
+      {
+        "style": 2,
+        "alreadyPresent": 1,
+        "grant": ""
+      },
+      {
+        "style": 3,
+        "alreadyPresent": 0,
+        "grant": "100620"
+      },
+      {
+        "style": 3,
+        "alreadyPresent": 1,
+        "grant": ""
+      }
+    ],
+    "attackDispatch": [
+      {
+        "animation": 500020,
+        "event": 5,
+        "enabled": 0,
+        "requests": [
+          {
+            "behavior": 600000016,
+            "kind": 0,
+            "slot": 0,
+            "hand": 0,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 500020,
+        "event": 5,
+        "enabled": 1,
+        "requests": [
+          {
+            "behavior": 600000016,
+            "kind": 0,
+            "slot": 0,
+            "hand": 0,
+            "elapsed": 0.20000004768371582
+          }
+        ]
+      },
+      {
+        "animation": 500020,
+        "event": 7,
+        "enabled": 0,
+        "requests": [
+          {
+            "behavior": 600000010,
+            "kind": 0,
+            "slot": 0,
+            "hand": 0,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 500020,
+        "event": 7,
+        "enabled": 1,
+        "requests": [
+          {
+            "behavior": 600000010,
+            "kind": 0,
+            "slot": 0,
+            "hand": 0,
+            "elapsed": 0.3333333432674408
+          }
+        ]
+      },
+      {
+        "animation": 500021,
+        "event": 9,
+        "enabled": 0,
+        "requests": [
+          {
+            "behavior": 600000016,
+            "kind": 0,
+            "slot": 0,
+            "hand": 0,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 500021,
+        "event": 9,
+        "enabled": 1,
+        "requests": [
+          {
+            "behavior": 600000016,
+            "kind": 0,
+            "slot": 0,
+            "hand": 0,
+            "elapsed": 0.09999996423721313
+          }
+        ]
+      }
+    ],
+    "enchantDispatch": [
+      {
+        "animation": 500020,
+        "style": 0,
+        "activityByte": 0,
+        "leaves": []
+      },
+      {
+        "animation": 500020,
+        "style": 0,
+        "activityByte": 1,
+        "leaves": []
+      },
+      {
+        "animation": 500020,
+        "style": 100620,
+        "activityByte": 0,
+        "leaves": [
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500020,
+        "style": 100620,
+        "activityByte": 1,
+        "leaves": [
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500020,
+        "style": 100621,
+        "activityByte": 0,
+        "leaves": [
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500020,
+        "style": 100621,
+        "activityByte": 1,
+        "leaves": [
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500021,
+        "style": 0,
+        "activityByte": 0,
+        "leaves": []
+      },
+      {
+        "animation": 500021,
+        "style": 0,
+        "activityByte": 1,
+        "leaves": []
+      },
+      {
+        "animation": 500021,
+        "style": 100620,
+        "activityByte": 0,
+        "leaves": [
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500021,
+        "style": 100620,
+        "activityByte": 1,
+        "leaves": [
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500021,
+        "style": 100621,
+        "activityByte": 0,
+        "leaves": [
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 500021,
+        "style": 100621,
+        "activityByte": 1,
+        "leaves": [
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "values": [
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 11,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 1,
+        "kind": 12,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 11,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100620,
+        "copies": 3,
+        "kind": 12,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 11,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 1,
+        "kind": 12,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 11,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "style": 100621,
+        "copies": 3,
+        "kind": 12,
+        "points": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "timer": [
+      {
+        "style": 100620,
+        "fps": 30,
+        "reapply": false,
+        "remainingAfterReapply": null,
+        "expiryFrame": 602
+      },
+      {
+        "style": 100620,
+        "fps": 30,
+        "reapply": true,
+        "remainingAfterReapply": 20.0,
+        "expiryFrame": 752
+      },
+      {
+        "style": 100620,
+        "fps": 60,
+        "reapply": false,
+        "remainingAfterReapply": null,
+        "expiryFrame": 1203
+      },
+      {
+        "style": 100620,
+        "fps": 60,
+        "reapply": true,
+        "remainingAfterReapply": 20.0,
+        "expiryFrame": 1503
+      },
+      {
+        "style": 100620,
+        "fps": 120,
+        "reapply": false,
+        "remainingAfterReapply": null,
+        "expiryFrame": 2403
+      },
+      {
+        "style": 100620,
+        "fps": 120,
+        "reapply": true,
+        "remainingAfterReapply": 20.0,
+        "expiryFrame": 3003
+      },
+      {
+        "style": 100621,
+        "fps": 30,
+        "reapply": false,
+        "remainingAfterReapply": null,
+        "expiryFrame": 602
+      },
+      {
+        "style": 100621,
+        "fps": 30,
+        "reapply": true,
+        "remainingAfterReapply": 20.0,
+        "expiryFrame": 752
+      },
+      {
+        "style": 100621,
+        "fps": 60,
+        "reapply": false,
+        "remainingAfterReapply": null,
+        "expiryFrame": 1203
+      },
+      {
+        "style": 100621,
+        "fps": 60,
+        "reapply": true,
+        "remainingAfterReapply": 20.0,
+        "expiryFrame": 1503
+      },
+      {
+        "style": 100621,
+        "fps": 120,
+        "reapply": false,
+        "remainingAfterReapply": null,
+        "expiryFrame": 2403
+      },
+      {
+        "style": 100621,
+        "fps": 120,
+        "reapply": true,
+        "remainingAfterReapply": 20.0,
+        "expiryFrame": 3003
+      }
+    ],
+    "overwrite": [
+      {
+        "order": [
+          7020002,
+          881
+        ],
+        "nodes": [
+          {
+            "id": 881,
+            "lifetime": 40.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          881,
+          7020002
+        ],
+        "nodes": [
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          7020002,
+          1627
+        ],
+        "nodes": [
+          {
+            "id": 1627,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          1627,
+          7020002
+        ],
+        "nodes": [
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          7020004,
+          883
+        ],
+        "nodes": [
+          {
+            "id": 883,
+            "lifetime": 40.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          883,
+          7020004
+        ],
+        "nodes": [
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          7020004,
+          1629
+        ],
+        "nodes": [
+          {
+            "id": 1629,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "order": [
+          1629,
+          7020004
+        ],
+        "nodes": [
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "switchHand": [
+      {
+        "styleOrder": [
+          100620,
+          100621
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          },
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "styleOrder": [
+          100621,
+          100620
+        ],
+        "nodes": [
+          {
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7020004,
+            "lifetime": 20.0,
+            "flags": 4
+          },
+          {
+            "id": 7020002,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x3d4c10 isolated actor context / hand identity",
+    "0x4d1b20 isolated actor context / hand identity",
+    "0xea76f0 isolated actor context / hand identity",
+    "0xea9a60 isolated actor context / hand identity",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3CED90 isolated animation-owner context",
+    "3CED90/4D1B20 explicit animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "415EA0 attack animation-reference sink after request",
+    "4341D0 attack-instance request recorder; collision and attack construction are not simulated",
+    "E6D630 actual attack row lookup for supplied context",
+    "E6FCB0 actual Behavior row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "Lua engine responses for window, equipment category, root presence and active hand; original functions execute",
+    "Type 1 attack and Type 67 grant handlers use supplied selected events; HKS performs eligibility, not these unconditional events",
+    "Type 67 always calls 40FF20 with apply=true; activity byte is not a grant-once gate, full scheduler not simulated",
+    "actor virtual +278 explicit style 0/2 for context-12 hand check",
+    "animation time inputs and attack context 10000 supplied; no complete behavior VM, physical collision, weapon switch or final attack damage",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic animation-owner virtuals and equipped weapon 1000"
+  ],
+  "native": {
+    "type1": "414820 → 40CA20 → 668B30",
+    "type67": "27D0F10 / 27D0400 → 410CA0",
+    "grant": "3C7FD0 / 3C8BE0",
+    "qualifier": "5057D0",
+    "update": "50ACD0",
+    "attack": "502830 → 511010"
+  },
+  "gameplayVerified": false
+}
