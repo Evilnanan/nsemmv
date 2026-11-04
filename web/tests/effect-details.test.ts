@@ -17,10 +17,36 @@ import weaponRecovery from "../../data/effect-weapon-recovery-evidence.json";
 import recluseBleed from "../../data/effect-recluse-bleed-evidence.json";
 import sacrifice from "../../data/effect-revenant-sacrifice-evidence.json";
 import gesture from "../../data/effect-gesture-madness-evidence.json";
+import guardianSkill from "../../data/effect-guardian-skill-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("resolves both Guardian skill aliases and preserves overlapping heal arrival behavior", () => {
+    const detail = effectDetail(7011100)!;
+    expect(detail).toEqual(effectDetail(7011101));
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].values).toEqual([["HP 恢复", "最大值的 15%"]]);
+    expect(detail.blocks[0].restrictions).toContain("自身及周围友方 · 半径 8 米");
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.notes.join()).toContain("可能合并或延后恢复");
+    for (const c of guardianSkill.checks.trigger)
+      expect(c.requests).toHaveLength(c.equipmentCopies && c.active ? 1 : 0);
+    for (const c of guardianSkill.checks.emissionAndRecovery) {
+      expect(c.emissions).toEqual([0]);
+      expect(c.heals).toEqual([{ frame: 1, hp: [-15, 0] }]);
+    }
+    for (const c of guardianSkill.checks.hp)
+      expect(c.packet[0]).toBe(Math.trunc(c.maximum * .15));
+    expect(guardianSkill.checks.arrival.map((c) => c.heals.map((h) => h.frame)))
+      .toEqual([[0], [0], [0], [0, 13], [0, 12], [0, 13, 25, 37]]);
+    expect(research.guardianSkillEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guardian-skill-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(guardianSkill.gameplayVerified).toBe(false);
+  });
   it("keeps held gesture buildup separate from madness onset and distinguishes the two versions", () => {
     for (const id of [7035400, 7035410]) {
       const detail = effectDetail(id)!;
@@ -371,7 +397,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(501);
+    expect(research.coverage.withNumericFields).toBe(503);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
