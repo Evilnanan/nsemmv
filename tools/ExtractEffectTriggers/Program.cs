@@ -16,7 +16,7 @@ foreach(var path in new[]{"chr/c0000.anibnd.dcx","chr/c0000_a6x.anibnd.dcx"}) {
  var full=Path.Combine(mod,path);var b=BND4.Read(full);var records=new List<object>();
  foreach(var f in b.Files.Where(f=>f.Name.EndsWith(".tae"))) {
   var t=TAE.Read(f.Bytes);
-  records.Add(new {f.Name,t.ID,animations=t.Animations.Select(a=>new{a.ID,a.AnimFileName,headerType=a.MiniHeader.Type.ToString(),header=JsonSerializer.Serialize(a.MiniHeader,a.MiniHeader.GetType()),events=a.Events.Select((e,index)=>(e,index)).Where(x=>new[]{0,1,2,5,64,66,67,302,331,401}.Contains(x.e.Type)).Select(x=>new{x.index,x.e.Type,x.e.StartTime,x.e.EndTime,hex=Convert.ToHexString(x.e.GetParameterBytes(false))})})});
+  records.Add(new {f.Name,t.ID,animations=t.Animations.Select(a=>new{a.ID,a.AnimFileName,headerType=a.MiniHeader.Type.ToString(),header=JsonSerializer.Serialize(a.MiniHeader,a.MiniHeader.GetType()),events=a.Events.Select((e,index)=>(e,index)).Where(x=>new[]{0,1,2,5,64,66,67,302,331,401,1008,1009}.Contains(x.e.Type)).Select(x=>new{x.index,x.e.Type,x.e.StartTime,x.e.EndTime,hex=Convert.ToHexString(x.e.GetParameterBytes(false))})})});
  }
  bundles.Add(new{path,sha256=Hash(full),taes=records});Console.WriteLine(path+" "+records.Count+" TAE files");
 }

@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import absorption from "../../data/effect-recluse-absorption-evidence.json";
 import restage from "../../data/effect-duchess-restage-evidence.json";
 import ironeyeMark from "../../data/effect-ironeye-mark-evidence.json";
 import recluseMark from "../../data/effect-recluse-mark-evidence.json";
@@ -33,6 +34,27 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("protects the collected element with independent timers and same-element refresh", () => {
+    const detail = effectDetail(6500600)!;
+    expect(detail.blocks[0].values).toEqual([["对应属性减伤", "20%"]]);
+    expect(detail.blocks[0].duration).toBe(30);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("同属性再次收集刷新时长；不同属性可同时生效");
+    for (const row of absorption.checks.protection) {
+      expect(row.damageTaken).toEqual([1, ...[1, 2, 3, 4].map(e => row.copies && e === row.element ? 0.8 : 1)]);
+    }
+    for (const row of absorption.checks.refresh) {
+      expect(row.damageTaken).toEqual([1, ...[1, 2, 3, 4].map(e => row.elements.includes(e) ? 0.8 : 1)]);
+      expect(row.nodes.filter(n => absorption.leaves.includes(n.id))).toHaveLength(row.elements.length);
+    }
+    for (const row of absorption.checks.lifetime)
+      expect(Math.abs(row.expiryFrame / row.fps - 30)).toBeLessThanOrEqual(3.01 / row.fps);
+    expect(absorption.checks.dispatch.filter(r => !r.active || !r.present || !r.element || r.occupied === 3).every(r => !r.emitted.length)).toBe(true);
+    expect(absorption.gameplayVerified).toBe(false);
+    expect(research.recluseAbsorptionEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-recluse-absorption-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("raises Restage's damage share without increasing poise or multiplying duplicate relics", () => {
     const detail = effectDetail(7290000)!;
     expect(detail.blocks[0].values).toEqual([["重演伤害比例", "50% → 60%"]]);
@@ -677,7 +699,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(522);
+    expect(research.coverage.withNumericFields).toBe(523);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
