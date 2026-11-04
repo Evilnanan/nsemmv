@@ -10,10 +10,54 @@ import scripts from "../../data/effect-script-evidence.json";
 import growth from "../../data/effect-growth-source.json";
 import totem from "../../data/effect-totem-evidence.json";
 import discovery from "../../data/effect-discovery-evidence.json";
+import lifecycle from "../../data/effect-lifecycle-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Revenant's fixed rearm schedule, one-shot FP and independent attack buffs", () => {
+    const detail = effectDetail(7220200)!;
+    expect(detail).toEqual(effectDetail(7220201));
+    expect(detail.blocks.map((b) => b.values)).toEqual([
+      [["攻击倍率", "+15%"]], [["FP 恢复", "最大值的 10%"]],
+    ]);
+    expect(detail.blocks.map((b) => b.duration)).toEqual([20, null]);
+    expect(detail.blocks.every((b) => b.interval === null)).toBe(true);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.notes.join()).toContain("未消耗的机会在窗口结束时结算");
+    expect(detail.notes.join()).toContain("+32.25%");
+    const cases = lifecycle.checks.revenant;
+    expect(cases.find((c) => c.name === "no-equipment")!.restores).toEqual([]);
+    const edge = cases.find((c) => c.name === "rearm-boundary")!;
+    expect(edge.restores).toHaveLength(2);
+    expect(edge.restores[1].frame - edge.restores[0].frame).toBeLessThan(edge.fps / 2);
+    expect(cases.find((c) => c.name === "duplicate-equipment")!.restores).toEqual(edge.restores);
+    expect(cases.find((c) => c.name === "no-damage")!.restores).toHaveLength(1);
+    expect(cases.find((c) => c.name === "zero-damage")!.restores).toEqual(cases.find((c) => c.name === "no-damage")!.restores);
+    expect(cases.find((c) => c.name === "independent-expiry")!.attackChanges.map((c) => c.count)).toEqual([1, 2, 3, 2]);
+    expect(lifecycle.checks.fp.find((c) => c.copies === 1 && c.maximum === 137)!.first).toEqual([13, 0]);
+    expect(lifecycle.checks.fp.every((c) => c.nextFrame.every((v) => v === 0))).toBe(true);
+    expect(research.lifecycleEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-lifecycle-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(lifecycle.gameplayVerified).toBe(false);
+  });
+  it("keeps Duchess's kill branches separate and preserves independent expiry", () => {
+    const detail = effectDetail(7032700)!;
+    expect(detail.blocks[0].values).toEqual([["攻击倍率", "+5% 或 +15%"]]);
+    expect(detail.blocks[0].duration).toBe(30);
+    expect(detail.notes.join()).toContain("12.5 秒");
+    expect(detail.stacking).toBe("不可叠加");
+    for (const special of [0, 1]) {
+      const cases = lifecycle.checks.duchess.filter((c) => c.special === special);
+      expect(cases.find((c) => c.name === "no-equipment")!.attackChanges).toEqual([]);
+      expect(cases.find((c) => c.name === "after-window")!.attackChanges).toEqual([]);
+      const repeat = cases.find((c) => c.name === "repeat-kill")!;
+      expect(repeat.attackChanges.at(-1)!.rate).toBeCloseTo((special ? 1.05 : 1.15) ** 2);
+      expect(cases.find((c) => c.name === "duplicate-equipment")!.attackChanges).toEqual(repeat.attackChanges);
+      expect(cases.find((c) => c.name === "independent-expiry")!.attackChanges.map((c) => c.count)).toEqual([1, 2, 1]);
+    }
+  });
   it("preserves Recluse's two-stage HP buff instead of showing a fixed 30-second expiry", () => {
     const detail = effectDetail(7034100)!;
     expect(detail.blocks).toHaveLength(1);
@@ -110,7 +154,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(489);
+    expect(research.coverage.withNumericFields).toBe(492);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

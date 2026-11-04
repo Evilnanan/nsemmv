@@ -39,6 +39,13 @@ totem = json.loads(totem_path.read_text())
 assert totem['schema'] == 1 and totem['regulationSha256'] == catalog['regulationSha256']
 assert totem['exeSha256'] == evidence['exeSha256'] and not totem['gameplayVerified']
 assert sum(map(len, totem['checks'].values())) == 86
+lifecycle_path = ROOT / 'data/effect-lifecycle-evidence.json'
+lifecycle = json.loads(lifecycle_path.read_text())
+assert lifecycle['schema'] == 1 and lifecycle['regulationSha256'] == catalog['regulationSha256']
+assert lifecycle['exeSha256'] == evidence['exeSha256'] and not lifecycle['gameplayVerified']
+assert lifecycle['paramSha256'] == evidence['paramSha256']
+assert len(lifecycle['checks']['revenant']) == 8 and len(lifecycle['checks']['fp']) == 18
+assert len(lifecycle['checks']['duchess']) == 12 and len(lifecycle['checks']['attack']) == 18
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -310,6 +317,7 @@ def block(id, phase, linked, known_states=frozenset()):
 
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
+    'role-repeat': ('不可叠加', '重复装备不增加单次触发收益', ['effect-lifecycle']),
     'wylder-skill': ('不可叠加', '重复装备不增加单次触发收益', ['action-triggers', 'action-start', 'skill-stack']),
     'role-max-hp': ('不可叠加', '同类增益互相覆盖', ['action-triggers', 'role-lifecycle']),
     'totem': ('不可叠加', '同类图腾增益覆盖并刷新持续时间', ['totem-animation', 'totem-native']),
@@ -410,7 +418,7 @@ for id, effect in source['effects'].items():
         rule = 'shop-discount'
     if len(external) == 1 and effect['runtimeExclusive'] == -1:
         family = external[0]['family']
-        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill', 'recluse-max-hp'):
+        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill', 'recluse-max-hp', 'revenant-damage', 'duchess-kill'):
             matches = [r for r in evidence['triggerMatching'] if r['family'] == family]
             assert matches and all(r['reused'] == (r['existing'] == r['incoming']) for r in matches)
             rule = {'bolus': 'trigger-tiers', 'grease': 'trigger-attack',
@@ -483,6 +491,29 @@ for id, effect in source['effects'].items():
                        values=[['血量上限', '+50%']], restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('前约 30 秒不因受损结束；之后持续至下次受到损伤。')
         rule = 'role-max-hp'
+    if 7220300 in effect['roots'].values():
+        assert source['spells']['7220305']['physicsAttackRate'] == 1.15
+        assert source['spells']['7220305']['effectEndurance'] == 20
+        assert source['spells']['7220306']['changeMpRate'] == -10
+        assert source['spells']['7220302']['effectEndurance'] == 15
+        assert source['spells']['7220302']['motionInterval'] == 2
+        blocks = [dict(source=7220305, branches=[7220301, 7220302, 7220303, 7220304],
+                       phase='触发后', linked=True, values=[['攻击倍率', '+15%']],
+                       restrictions=[], scope=[], duration=20, interval=None),
+                  dict(source=7220306, phase='触发时', linked=True, values=[['FP 恢复', '最大值的 10%']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.extend(['绝招的触发窗口持续 15 秒，每 2 秒重新准备一次受损触发；未消耗的机会在窗口结束时结算。',
+                      '多次触发的攻击倍率相乘、分别计时；两次合计 +32.25%。'])
+        rule = 'role-repeat'
+    if 7032700 in effect['roots'].values():
+        assert [source['spells'][str(i)]['physicsAttackRate'] for i in (7032704, 7032706)] == [1.15, 1.05]
+        assert source['spells']['7032702']['effectEndurance'] == 12.5
+        assert all(source['spells'][str(i)]['effectEndurance'] == 30 for i in (7032704, 7032706))
+        blocks = [dict(source=7032704, branches=[7032701, 7032702, 7032703, 7032705, 7032706],
+                       phase='绝招期间打倒敌人后', linked=True, values=[['攻击倍率', '+5% 或 +15%']],
+                       restrictions=['增幅随敌人类型变化'], scope=[], duration=30, interval=None)]
+        notes.extend(['击杀触发窗口持续 12.5 秒。', '每次击杀获得独立增益，倍率相乘、分别计时。'])
+        rule = 'role-repeat'
     if id == '7032800':
         edge = links['emitters']['7032802']
         assert len(evidence['zoneMatching']) == 4
@@ -627,9 +658,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] != 'role-repeat' and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if any(b['linked'] for b in detail['blocks']):
+    if rules[id] != 'role-repeat' and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -637,6 +668,10 @@ for id in sorted(source['effects'], key=int):
         refs.extend(['action-start', 'action-values'])
     if rules[id] == 'role-max-hp':
         questions.append('增益施加、阶段切换和移除时的当前／最大 HP 同步')
+    if rules[id] == 'role-repeat':
+        questions.append('完整角色／网络发放队列时序、极端实例容量与倒地／重载状态')
+        if 7032700 in effect['roots'].values():
+            questions.append('击杀分支的具体敌人名单与共享奖励来源；重叠绝招窗口')
     if 7020200 in effect['roots'].values():
         questions.append('大量连续施加时的实例容量上限、移除调度和跨网络同步')
     if rules[id] == 'totem':
@@ -667,6 +702,7 @@ research['linkEvidenceSha256'] = hashlib.sha256(link_path.read_bytes()).hexdiges
 research['scriptEvidenceSha256'] = hashlib.sha256(script_path.read_bytes()).hexdigest()
 research['growthEvidenceSha256'] = hashlib.sha256(growth_path.read_bytes()).hexdigest()
 research['totemEvidenceSha256'] = hashlib.sha256(totem_path.read_bytes()).hexdigest()
+research['lifecycleEvidenceSha256'] = hashlib.sha256(lifecycle_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

@@ -10847,6 +10847,60 @@
         ]
       }
     },
+    "7220300": {
+      "state": 2044,
+      "family": "revenant-damage",
+      "phase": "绝招发动后",
+      "seeds": [
+        7220301
+      ],
+      "events": {
+        "7220301": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2905,
+            "animation": 650000,
+            "index": 95,
+            "type": 67,
+            "start": 1.4,
+            "end": 1.5,
+            "parameters": "4D2C6E00000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "7032700": {
+      "state": 2204,
+      "family": "duchess-kill",
+      "phase": "绝招期间打倒敌人后",
+      "seeds": [
+        7032701
+      ],
+      "events": {
+        "7032701": [
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2903,
+            "animation": 630000,
+            "index": 11,
+            "type": 67,
+            "start": 1.6333333,
+            "end": 1.7333333,
+            "parameters": "7D4F6B00000000000000000000000000"
+          },
+          {
+            "bundle": "chr/c0000.anibnd.dcx",
+            "tae": 2903,
+            "animation": 635000,
+            "index": 9,
+            "type": 67,
+            "start": 1.6333333,
+            "end": 1.7333333,
+            "parameters": "7D4F6B00000000000000000000000000"
+          }
+        ]
+      }
+    },
     "7020100": {
       "state": 2078,
       "family": "wylder-ultimate",

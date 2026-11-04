@@ -39,6 +39,8 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7220200, ["+15%", "20 秒", "最大值的 10%", "15 秒", "每 2 秒", "+32.25%", "未消耗的机会在窗口结束时结算"]],
+    [7032700, ["+5% 或 +15%", "30 秒", "12.5 秒", "倍率相乘", "不可叠加"]],
     [7034100, ["血量上限", "+50%", "前约 30 秒不因受损结束", "之后持续至下次受到损伤"]],
     [7033300, ["攻击倍率", "精力上限", "承伤倍率", "+20%", "40 秒", "不可叠加"]],
     [7033500, ["+10%", "10 秒", "重复装备不增加单次触发收益", "+21%"]],
