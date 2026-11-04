@@ -23,6 +23,7 @@ import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
 import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
+import raiderSkill from "../../data/effect-raider-skill-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
 import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
 import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
@@ -38,6 +39,31 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Raider's ordinary and empowered skill rates without displaying a maintenance lifetime", () => {
+    for (const id of [7031500, 7031501]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks.map(b => b.values)).toEqual([
+        [["物理攻击倍率", "+50%"], ["承伤倍率", "+30%"]],
+        [["物理攻击倍率", "+100%"], ["承伤倍率", "+30%"]],
+      ]);
+      expect(detail.blocks.map(b => b.duration)).toEqual([null, null]);
+      expect(detail.blocks.map(b => b.interval)).toEqual([null, null]);
+      expect(detail.stacking).toBe("不可叠加");
+    }
+    for (const row of raiderSkill.checks.numeric) {
+      expect(row.rates).toEqual([row.copies && row.kind !== 5 ? (row.leaf === 7031601 ? 1.5 : 2) : 1, 1, 1, 1, 1]);
+    }
+    for (const row of raiderSkill.checks.maintenance) {
+      expect(row.samples.at(-1)!.rate).toBe(1);
+      expect(row.samples.filter(s => s.frame < row.fps * 2).every(s => s.rate > 1)).toBe(true);
+    }
+    expect(raiderSkill.checks.script.find(r => r.ended === 1 && r.boost === 1)!.result.event).toBe("W_SmashAttack2");
+    expect(raiderSkill.checks.overlap.every(r => r.rates[0] === 3)).toBe(true);
+    expect(raiderSkill.gameplayVerified).toBe(false);
+    expect(research.raiderSkillEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-raider-skill-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("makes nearby enemies receive more poise damage for six seconds without duplicate amplification", () => {
     for (const id of [7033100, 7033101]) {
       const detail = effectDetail(id)!;
@@ -797,7 +823,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(528);
+    expect(research.coverage.withNumericFields).toBe(530);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
