@@ -41,6 +41,7 @@ import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
+import attackNullify from "../../data/effect-attack-nullify-evidence.json";
 import ailmentGrowth from "../../data/effect-ailment-growth-evidence.json";
 import frostStealth from "../../data/effect-frost-stealth-evidence.json";
 import duchessStealth from "../../data/effect-duchess-stealth-evidence.json";
@@ -61,6 +62,38 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("distinguishes attack nullification from immunity to attached ailments", () => {
+    const detail = effectDetail(7037800)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不提高概率");
+    expect(detail.blocks[0].values).toEqual([["攻击失效概率", "20%"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes).toEqual(["其他减伤抵消负面效果后仍可触发。", "成功触发仍可能累积异常。"]);
+    for (const copies of [1, 3]) {
+      const cases = attackNullify.checks.rolls.filter(r => r.copies === copies);
+      expect(cases).toHaveLength(100);
+      expect(cases.filter(r => r.success)).toHaveLength(20);
+      for (const row of cases) {
+        expect(row.draws).toBe(1);
+        expect(row.hpWrites).toEqual(row.success ? [] : [-100]);
+      }
+    }
+    for (const row of attackNullify.checks.predicate) {
+      expect(row.eligible).toBe(!!row.copies && [7036602, 1501000].includes(row.debuff ?? 0));
+      if (row.eligible && row.protect) expect(row.rates.every(v => v < 1)).toBe(true);
+    }
+    for (const row of attackNullify.checks.ailments) {
+      expect(row.remaining).toBe(500 - row.amount);
+      expect(row.success).toBe(row.rawSample % 100 < 20);
+      expect(row.hpWrites).toEqual(row.success ? [] : [-100]);
+    }
+    expect(attackNullify.checks.controls.every(r => r.draws === 0)).toBe(true);
+    expect(attackNullify.gameplayVerified).toBe(false);
+    expect(research.attackNullifyEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-attack-nullify-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows ailment growth tiers and delayed clearing without a misleading buff duration", () => {
     const detail = effectDetail(7037700)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1441,7 +1474,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(545);
+    expect(research.coverage.withNumericFields).toBe(546);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

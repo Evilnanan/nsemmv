@@ -1,0 +1,3978 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "playerParamSha256": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
+  "effect": 7037800,
+  "chance": 20,
+  "vfx": 7037805,
+  "icon": 7037806,
+  "checks": {
+    "predicate": [
+      {
+        "copies": 0,
+        "debuff": null,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": null,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": 7036602,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": 7036602,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": 1501000,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": 1501000,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": 99008,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "copies": 0,
+        "debuff": 99008,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": null,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": null,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": 7036602,
+        "protect": null,
+        "eligible": true,
+        "rates": [
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": 7036602,
+        "protect": 7011401,
+        "eligible": true,
+        "rates": [
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": 1501000,
+        "protect": null,
+        "eligible": true,
+        "rates": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": 1501000,
+        "protect": 7011401,
+        "eligible": true,
+        "rates": [
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": 99008,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "copies": 1,
+        "debuff": 99008,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": null,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": null,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": 7036602,
+        "protect": null,
+        "eligible": true,
+        "rates": [
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": 7036602,
+        "protect": 7011401,
+        "eligible": true,
+        "rates": [
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448,
+          0.15000000596046448
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": 1501000,
+        "protect": null,
+        "eligible": true,
+        "rates": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": 1501000,
+        "protect": 7011401,
+        "eligible": true,
+        "rates": [
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257,
+          0.11500000208616257
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": 99008,
+        "protect": null,
+        "eligible": false,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "copies": 3,
+        "debuff": 99008,
+        "protect": 7011401,
+        "eligible": false,
+        "rates": [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      }
+    ],
+    "rolls": [
+      {
+        "copies": 1,
+        "rawSample": 0,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 1,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 2,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 3,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 4,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 5,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 6,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 7,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 8,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 9,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 10,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 11,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 12,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 13,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 14,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 15,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 16,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 17,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 18,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 19,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 20,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 21,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 22,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 23,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 24,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 25,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 26,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 27,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 28,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 29,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 30,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 31,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 32,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 33,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 34,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 35,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 36,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 37,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 38,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 39,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 40,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 41,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 42,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 43,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 44,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 45,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 46,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 47,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 48,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 49,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 50,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 51,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 52,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 53,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 54,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 55,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 56,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 57,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 58,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 59,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 60,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 61,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 62,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 63,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 64,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 65,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 66,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 67,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 68,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 69,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 70,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 71,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 72,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 73,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 74,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 75,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 76,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 77,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 78,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 79,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 80,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 81,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 82,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 83,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 84,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 85,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 86,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 87,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 88,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 89,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 90,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 91,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 92,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 93,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 94,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 95,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 96,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 97,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 98,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 1,
+        "rawSample": 99,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 0,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 1,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 2,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 3,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 4,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 5,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 6,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 7,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 8,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 9,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 10,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 11,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 12,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 13,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 14,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 15,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 16,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 17,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 18,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 19,
+        "success": true,
+        "draws": 1,
+        "hpWrites": [],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 20,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 21,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 22,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 23,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 24,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 25,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 26,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 27,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 28,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 29,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 30,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 31,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 32,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 33,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 34,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 35,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 36,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 37,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 38,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 39,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 40,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 41,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 42,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 43,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 44,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 45,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 46,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 47,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 48,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 49,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 50,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 51,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 52,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 53,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 54,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 55,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 56,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 57,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 58,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 59,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 60,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 61,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 62,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 63,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 64,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 65,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 66,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 67,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 68,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 69,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 70,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 71,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 72,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 73,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 74,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 75,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 76,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 77,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 78,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 79,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 80,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 81,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 82,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 83,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 84,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 85,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 86,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 87,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 88,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 89,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 90,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 91,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 92,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 93,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 94,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 95,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 96,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 97,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 98,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      },
+      {
+        "copies": 3,
+        "rawSample": 99,
+        "success": false,
+        "draws": 1,
+        "hpWrites": [
+          -100
+        ],
+        "poisonRemaining": 200
+      }
+    ],
+    "controls": [
+      {
+        "name": "no-equipment",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7036602,
+            "lifetime": 6.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "no-debuff",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "state-110",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 99008,
+            "lifetime": 0.1,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "nonpositive-damage",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7036602,
+            "lifetime": 6.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "negative-damage",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7036602,
+            "lifetime": 6.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "dead",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7036602,
+            "lifetime": 6.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "excluded-input",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7036602,
+            "lifetime": 6.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "name": "hit-flag-20",
+        "draws": 0,
+        "nodes": [
+          {
+            "id": 7037800,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7036602,
+            "lifetime": 6.0,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "ailments": [
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 0,
+        "success": true,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": []
+      },
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 19,
+        "success": true,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": []
+      },
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 20,
+        "success": false,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 99,
+        "success": false,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 100,
+        "success": true,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": []
+      },
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 119,
+        "success": true,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": []
+      },
+      {
+        "effect": 7034602,
+        "channel": 0,
+        "rawSample": 120,
+        "success": false,
+        "amount": 300,
+        "remaining": 200,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 0,
+        "success": true,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": []
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 19,
+        "success": true,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": []
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 20,
+        "success": false,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 99,
+        "success": false,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 100,
+        "success": true,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": []
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 119,
+        "success": true,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": []
+      },
+      {
+        "effect": 1501000,
+        "channel": 4,
+        "rawSample": 120,
+        "success": false,
+        "amount": 50,
+        "remaining": 450,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 0,
+        "success": true,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": []
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 19,
+        "success": true,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": []
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 20,
+        "success": false,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 99,
+        "success": false,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": [
+          -100
+        ]
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 100,
+        "success": true,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": []
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 119,
+        "success": true,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": []
+      },
+      {
+        "effect": 7500002,
+        "channel": 2,
+        "rawSample": 120,
+        "success": false,
+        "amount": 55,
+        "remaining": 445,
+        "hpWrites": [
+          -100
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "copies": 1,
+        "hits": [
+          {
+            "index": 0,
+            "success": true,
+            "draws": 1,
+            "hpWrites": []
+          },
+          {
+            "index": 1,
+            "success": true,
+            "draws": 2,
+            "hpWrites": []
+          },
+          {
+            "index": 2,
+            "success": false,
+            "draws": 3,
+            "hpWrites": [
+              -100
+            ]
+          },
+          {
+            "index": 3,
+            "success": true,
+            "draws": 4,
+            "hpWrites": []
+          },
+          {
+            "index": 4,
+            "success": false,
+            "draws": 5,
+            "hpWrites": [
+              -100
+            ]
+          },
+          {
+            "index": 5,
+            "success": true,
+            "draws": 6,
+            "hpWrites": []
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "hits": [
+          {
+            "index": 0,
+            "success": true,
+            "draws": 1,
+            "hpWrites": []
+          },
+          {
+            "index": 1,
+            "success": true,
+            "draws": 2,
+            "hpWrites": []
+          },
+          {
+            "index": 2,
+            "success": false,
+            "draws": 3,
+            "hpWrites": [
+              -100
+            ]
+          },
+          {
+            "index": 3,
+            "success": true,
+            "draws": 4,
+            "hpWrites": []
+          },
+          {
+            "index": 4,
+            "success": false,
+            "draws": 5,
+            "hpWrites": [
+              -100
+            ]
+          },
+          {
+            "index": 5,
+            "success": true,
+            "draws": 6,
+            "hpWrites": []
+          }
+        ]
+      }
+    ]
+  },
+  "rows": {
+    "7037800": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 1,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": -1,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 0,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 2130,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7037805": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 1,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": 0,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0.10000000149011612,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 10,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 0,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": 8037800,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7037806": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 1,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": 0.10000000149011612,
+      "effectTargetAI": 1,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 1,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 1,
+      "effectTargetLive": 1,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 1,
+      "effectTargetSelf": 1,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": 20408,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 1,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": 121228,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 0,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    }
+  },
+  "native": {
+    "eligible": "504520 → EA0980",
+    "branch": "43D541..43D6AE within 43D260",
+    "boundedRandom": "F563C0",
+    "hit": "43BE60",
+    "hpRequest": "426130",
+    "status": "3C80A0 → 42D110",
+    "grant": "3C7FD0",
+    "defense": "503800"
+  },
+  "stubs": [
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "426130 HP write request recorder; no final HP mutation",
+    "6AF4F0 explicit RNG identity",
+    "E6D630 actual AtkParam_Pc row lookup",
+    "E81650 actual PlayerCommon PARAM lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "RNG virtual +8 supplies raw sample; native F563C0 interval mapping remains live",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit local hit-score context in mode 0",
+    "explicit normal pre-hit branch context, raw RNG samples, neutral attack/status metadata and supplied HP; full collision and outer 43D260 entry not simulated",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "final HP writes recorded only; feedback, full hit reaction, geometry, death/reload and network synchronization unverified",
+    "hit module virtual +50 notification sink",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "recipient virtual +200 false ordinary hit predicate",
+    "zero-life VFX and 0.1-second icon are not invulnerability windows or cooldowns"
+  ],
+  "gameplayVerified": false
+}
