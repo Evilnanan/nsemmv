@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 578,
-    "withNumericFields": 507,
+    "withDetails": 579,
+    "withNumericFields": 508,
     "withMechanicsOnly": 36,
-    "nativeStacking": 346,
+    "nativeStacking": 347,
     "catalog": 2241,
-    "catalogWithDetails": 2020
+    "catalogWithDetails": 2021
   },
   "effects": {
     "0": {
@@ -4288,14 +4288,17 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7500301
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "duchess-evasion"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整行为图的动画调度／中断时序、特殊攻击与异常伤害入口、网络投递与重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49315,5 +49318,6 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "duchessEvasionEvidenceSha256": "350dd6bc86ff3b71ed9013e17363c698d3c4da57b8800ed51fe396cda74c8425",
   "discoveryEvidenceSha256": "be359953e1c4735d2f0b63cfddcfe7469c89f6fc062909aef9565f191e8e8c53"
 }

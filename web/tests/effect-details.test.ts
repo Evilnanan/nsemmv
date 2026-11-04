@@ -22,10 +22,31 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import evasion from "../../data/effect-duchess-evasion-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("ties Duchess invulnerability to the actual skill script and conditional animation flag", () => {
+    const detail = effectDetail(6500300)!;
+    expect(detail.blocks[0].values).toEqual([["无敌时间", "0.4 秒"]]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("再次触发刷新时长");
+    expect(evasion.checks.script).toHaveLength(33);
+    expect(evasion.checks.dispatch).toHaveLength(25);
+    for (const row of evasion.checks.dispatch) {
+      expect(row.flags).toBe(row.leaves && !row.elapsed ? 2 : 0);
+    }
+    for (const row of evasion.checks.lifecycle.filter((r) => r.copies === 1)) {
+      const duplicate = evasion.checks.lifecycle.find((r) => r.copies === 3 && r.fps === row.fps && r.reapplyAt === row.reapplyAt)!;
+      expect(duplicate.activeFrames).toEqual(row.activeFrames);
+      expect(Math.abs(row.activeFrames.length / row.fps - row.expectedDuration)).toBeLessThanOrEqual(3.01 / row.fps);
+    }
+    expect(evasion.gameplayVerified).toBe(false);
+    expect(research.duchessEvasionEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-duchess-evasion-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("distinguishes repeated equipment from independent Executor ability activations", () => {
     const heal = effectDetail(6500700)!;
     expect(heal.blocks[0].values).toEqual([["HP 恢复", "最大值的 0.27% + 3"]]);
@@ -513,7 +534,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(507);
+    expect(research.coverage.withNumericFields).toBe(508);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
