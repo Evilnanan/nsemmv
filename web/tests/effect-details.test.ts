@@ -39,6 +39,7 @@ import successiveRecovery from "../../data/effect-successive-recovery-evidence.j
 import successiveAttack from "../../data/effect-successive-attack-evidence.json";
 import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import scholarAilment from "../../data/effect-scholar-ailment-evidence.json";
+import wylderFlame from "../../data/effect-wylder-flame-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -65,6 +66,21 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows flame lifetime without treating standalone emitter counts as scene hits", () => {
+    const detail = effectDetail(7010500)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.blocks[0].values).toEqual([["火焰持续时间", "10 秒"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    for (const row of wylderFlame.checks.dispatch)
+      expect(row.requests).toHaveLength(row.copies && row.enabled ? 1 : 0);
+    for (const row of wylderFlame.checks.lifetime)
+      expect(Math.abs(row.expiryFrame / row.fps - 10)).toBeLessThanOrEqual(2 / row.fps);
+    expect(JSON.stringify(detail)).not.toMatch(/12|26%|每秒|每 1 秒/);
+    expect(wylderFlame.gameplayVerified).toBe(false);
+    expect(research.wylderFlameEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-wylder-flame-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates Scholar ailment HP damage from buildup, FP loss and link lifetime", () => {
     for (const id of [7036700, 7036701]) {
       const detail = effectDetail(id)!;
@@ -1583,7 +1599,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(550);
+    expect(research.coverage.withNumericFields).toBe(551);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
