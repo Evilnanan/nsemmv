@@ -1,0 +1,3245 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "effects": {
+    "6610400": 7610400,
+    "6610500": 7610500,
+    "6610600": 7610600,
+    "6611400": 7611400,
+    "6840100": 6840100,
+    "7001000": 7001000,
+    "7001001": 7001001,
+    "7001002": 7001002,
+    "7001003": 7001003,
+    "7001004": 7001004
+  },
+  "rows": {
+    "7610400": {
+      "maxHpRate": 1.100000023841858,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7610500": {
+      "maxHpRate": 1,
+      "maxMpRate": 1.149999976158142,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7610600": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1.1200000047683716,
+      "toughnessDamageCutRate": 1,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7611400": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpEstusFlaskCorrectRate": 1.100000023841858
+    },
+    "6840100": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpEstusFlaskCorrectRate": 0.8500000238418579
+    },
+    "7001000": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 0.949999988079071,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7001001": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 0.8999999761581421,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7001002": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 0.8500000238418579,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7001003": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 0.75,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
+    "7001004": {
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 0.699999988079071,
+      "changeHpEstusFlaskCorrectRate": 1
+    }
+  },
+  "leaves": {
+    "501000": {
+      "changeHpEstusFlaskRate": -60,
+      "changeHpEstusFlaskPoint": 0
+    },
+    "501075": {
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskPoint": -250
+    },
+    "501087": {
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskPoint": -810
+    }
+  },
+  "checks": {
+    "resources": [
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610400
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 111.10000610351562,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610400
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610400
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610400
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 122.21000671386719,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 134.43101501464844,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610500
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 116.14999389648438,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610500
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610500
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610500
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 133.57249450683594,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 153.60836791992188,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610600
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 113.12000274658203
+        }
+      },
+      {
+        "ids": [
+          7610600
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610600
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "ids": [
+          7610600
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 126.69440460205078
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 141.89772033691406
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "ids": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      }
+    ],
+    "poise": [
+      {
+        "ids": [],
+        "disabled": false,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.949999988079071
+      },
+      {
+        "ids": [
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.9024999737739563
+      },
+      {
+        "ids": [
+          7001000,
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001000,
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.8573749661445618
+      },
+      {
+        "ids": [
+          7001000,
+          7001000,
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.8999999761581421
+      },
+      {
+        "ids": [
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001,
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.809999942779541
+      },
+      {
+        "ids": [
+          7001001,
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001,
+          7001001,
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.7289999127388
+      },
+      {
+        "ids": [
+          7001001,
+          7001001,
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.8500000238418579
+      },
+      {
+        "ids": [
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002,
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.7225000262260437
+      },
+      {
+        "ids": [
+          7001002,
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002,
+          7001002,
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.6141250133514404
+      },
+      {
+        "ids": [
+          7001002,
+          7001002,
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.75
+      },
+      {
+        "ids": [
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003,
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.5625
+      },
+      {
+        "ids": [
+          7001003,
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003,
+          7001003,
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.421875
+      },
+      {
+        "ids": [
+          7001003,
+          7001003,
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.699999988079071
+      },
+      {
+        "ids": [
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.4899999797344208
+      },
+      {
+        "ids": [
+          7001004,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004,
+          7001004,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.34299999475479126
+      },
+      {
+        "ids": [
+          7001004,
+          7001004,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.8549999594688416
+      },
+      {
+        "ids": [
+          7001000,
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.8075000047683716
+      },
+      {
+        "ids": [
+          7001000,
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.7124999761581421
+      },
+      {
+        "ids": [
+          7001000,
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.6649999618530273
+      },
+      {
+        "ids": [
+          7001000,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001,
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.8549999594688416
+      },
+      {
+        "ids": [
+          7001001,
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001,
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.7649999856948853
+      },
+      {
+        "ids": [
+          7001001,
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001,
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.6749999523162842
+      },
+      {
+        "ids": [
+          7001001,
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001001,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.6299999952316284
+      },
+      {
+        "ids": [
+          7001001,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002,
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.8075000047683716
+      },
+      {
+        "ids": [
+          7001002,
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002,
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.7649999856948853
+      },
+      {
+        "ids": [
+          7001002,
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002,
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.6375000476837158
+      },
+      {
+        "ids": [
+          7001002,
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001002,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.5950000286102295
+      },
+      {
+        "ids": [
+          7001002,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003,
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.7124999761581421
+      },
+      {
+        "ids": [
+          7001003,
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003,
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.6749999523162842
+      },
+      {
+        "ids": [
+          7001003,
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003,
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.6375000476837158
+      },
+      {
+        "ids": [
+          7001003,
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001003,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.5249999761581421
+      },
+      {
+        "ids": [
+          7001003,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004,
+          7001000
+        ],
+        "disabled": false,
+        "multiplier": 0.6649999618530273
+      },
+      {
+        "ids": [
+          7001004,
+          7001000
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004,
+          7001001
+        ],
+        "disabled": false,
+        "multiplier": 0.6299999952316284
+      },
+      {
+        "ids": [
+          7001004,
+          7001001
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004,
+          7001002
+        ],
+        "disabled": false,
+        "multiplier": 0.5950000286102295
+      },
+      {
+        "ids": [
+          7001004,
+          7001002
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001004,
+          7001003
+        ],
+        "disabled": false,
+        "multiplier": 0.5249999761581421
+      },
+      {
+        "ids": [
+          7001004,
+          7001003
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      },
+      {
+        "ids": [
+          7001000,
+          7001001,
+          7001002,
+          7001003,
+          7001004
+        ],
+        "disabled": false,
+        "multiplier": 0.38154372572898865
+      },
+      {
+        "ids": [
+          7001000,
+          7001001,
+          7001002,
+          7001003,
+          7001004
+        ],
+        "disabled": true,
+        "multiplier": 1.0
+      }
+    ],
+    "flask": [
+      {
+        "positive": 0,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.0,
+        "packet": [
+          0,
+          60,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.0,
+        "packet": [
+          0,
+          600,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.0,
+        "packet": [
+          0,
+          250,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.0,
+        "packet": [
+          0,
+          250,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.0,
+        "packet": [
+          0,
+          810,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.0,
+        "packet": [
+          0,
+          810,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.8500000238418579,
+        "packet": [
+          0,
+          51,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.8500000238418579,
+        "packet": [
+          0,
+          510,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.8500000238418579,
+        "packet": [
+          0,
+          212,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.8500000238418579,
+        "packet": [
+          0,
+          212,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.8500000238418579,
+        "packet": [
+          0,
+          688,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.8500000238418579,
+        "packet": [
+          0,
+          688,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.7225000262260437,
+        "packet": [
+          0,
+          43,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.7225000262260437,
+        "packet": [
+          0,
+          433,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.7225000262260437,
+        "packet": [
+          0,
+          180,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.7225000262260437,
+        "packet": [
+          0,
+          180,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.7225000262260437,
+        "packet": [
+          0,
+          585,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.7225000262260437,
+        "packet": [
+          0,
+          585,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.6141250133514404,
+        "packet": [
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.6141250133514404,
+        "packet": [
+          0,
+          368,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.6141250133514404,
+        "packet": [
+          0,
+          153,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.6141250133514404,
+        "packet": [
+          0,
+          153,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.6141250133514404,
+        "packet": [
+          0,
+          497,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.6141250133514404,
+        "packet": [
+          0,
+          497,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.100000023841858,
+        "packet": [
+          0,
+          66,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.100000023841858,
+        "packet": [
+          0,
+          660,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.100000023841858,
+        "packet": [
+          0,
+          275,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.100000023841858,
+        "packet": [
+          0,
+          275,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.100000023841858,
+        "packet": [
+          0,
+          891,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.100000023841858,
+        "packet": [
+          0,
+          891,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.9350000619888306,
+        "packet": [
+          0,
+          56,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.9350000619888306,
+        "packet": [
+          0,
+          561,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.9350000619888306,
+        "packet": [
+          0,
+          233,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.9350000619888306,
+        "packet": [
+          0,
+          233,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.9350000619888306,
+        "packet": [
+          0,
+          757,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.9350000619888306,
+        "packet": [
+          0,
+          757,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.7947500944137573,
+        "packet": [
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.7947500944137573,
+        "packet": [
+          0,
+          476,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.7947500944137573,
+        "packet": [
+          0,
+          198,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.7947500944137573,
+        "packet": [
+          0,
+          198,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.7947500944137573,
+        "packet": [
+          0,
+          643,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.7947500944137573,
+        "packet": [
+          0,
+          643,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.6755375862121582,
+        "packet": [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.6755375862121582,
+        "packet": [
+          0,
+          405,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.6755375862121582,
+        "packet": [
+          0,
+          168,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.6755375862121582,
+        "packet": [
+          0,
+          168,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.6755375862121582,
+        "packet": [
+          0,
+          547,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.6755375862121582,
+        "packet": [
+          0,
+          547,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.2100000381469727,
+        "packet": [
+          0,
+          73,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.2100000381469727,
+        "packet": [
+          0,
+          726,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.2100000381469727,
+        "packet": [
+          0,
+          302,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.2100000381469727,
+        "packet": [
+          0,
+          302,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.2100000381469727,
+        "packet": [
+          0,
+          980,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.2100000381469727,
+        "packet": [
+          0,
+          980,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.0285000801086426,
+        "packet": [
+          0,
+          62,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.0285000801086426,
+        "packet": [
+          0,
+          617,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.0285000801086426,
+        "packet": [
+          0,
+          257,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.0285000801086426,
+        "packet": [
+          0,
+          257,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.0285000801086426,
+        "packet": [
+          0,
+          833,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.0285000801086426,
+        "packet": [
+          0,
+          833,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.8742250800132751,
+        "packet": [
+          0,
+          52,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.8742250800132751,
+        "packet": [
+          0,
+          524,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.8742250800132751,
+        "packet": [
+          0,
+          218,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.8742250800132751,
+        "packet": [
+          0,
+          218,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.8742250800132751,
+        "packet": [
+          0,
+          708,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.8742250800132751,
+        "packet": [
+          0,
+          708,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.743091344833374,
+        "packet": [
+          0,
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.743091344833374,
+        "packet": [
+          0,
+          445,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.743091344833374,
+        "packet": [
+          0,
+          185,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.743091344833374,
+        "packet": [
+          0,
+          185,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.743091344833374,
+        "packet": [
+          0,
+          601,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.743091344833374,
+        "packet": [
+          0,
+          601,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.3310000896453857,
+        "packet": [
+          0,
+          80,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.3310000896453857,
+        "packet": [
+          0,
+          798,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.3310000896453857,
+        "packet": [
+          0,
+          332,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.3310000896453857,
+        "packet": [
+          0,
+          332,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.3310000896453857,
+        "packet": [
+          0,
+          1078,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.3310000896453857,
+        "packet": [
+          0,
+          1078,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.1313501596450806,
+        "packet": [
+          0,
+          68,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.1313501596450806,
+        "packet": [
+          0,
+          678,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.1313501596450806,
+        "packet": [
+          0,
+          282,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.1313501596450806,
+        "packet": [
+          0,
+          282,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.1313501596450806,
+        "packet": [
+          0,
+          916,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.1313501596450806,
+        "packet": [
+          0,
+          916,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.9616476893424988,
+        "packet": [
+          0,
+          58,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.9616476893424988,
+        "packet": [
+          0,
+          576,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.9616476893424988,
+        "packet": [
+          0,
+          240,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.9616476893424988,
+        "packet": [
+          0,
+          240,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.9616476893424988,
+        "packet": [
+          0,
+          778,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.9616476893424988,
+        "packet": [
+          0,
+          778,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 0.8174005746841431,
+        "packet": [
+          0,
+          49,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 0.8174005746841431,
+        "packet": [
+          0,
+          490,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 0.8174005746841431,
+        "packet": [
+          0,
+          204,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 0.8174005746841431,
+        "packet": [
+          0,
+          204,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 0.8174005746841431,
+        "packet": [
+          0,
+          662,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 0.8174005746841431,
+        "packet": [
+          0,
+          662,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "flaskCap": [
+      {
+        "positive": 6,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 1.7715611457824707,
+        "packet": [
+          0,
+          101,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 6,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 1.7715611457824707,
+        "packet": [
+          0,
+          1000,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 6,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 1.7715611457824707,
+        "packet": [
+          0,
+          442,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 6,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 1.7715611457824707,
+        "packet": [
+          0,
+          442,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 6,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 1.7715611457824707,
+        "packet": [
+          0,
+          1434,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 6,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 1.7715611457824707,
+        "packet": [
+          0,
+          1434,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 10,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 101,
+        "multiplier": 2.593742847442627,
+        "packet": [
+          0,
+          101,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 10,
+        "negative": 0,
+        "leaf": 501000,
+        "maximum": 1000,
+        "multiplier": 2.593742847442627,
+        "packet": [
+          0,
+          1000,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 10,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 101,
+        "multiplier": 2.593742847442627,
+        "packet": [
+          0,
+          648,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 10,
+        "negative": 0,
+        "leaf": 501075,
+        "maximum": 1000,
+        "multiplier": 2.593742847442627,
+        "packet": [
+          0,
+          648,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 10,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 101,
+        "multiplier": 2.593742847442627,
+        "packet": [
+          0,
+          2100,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 10,
+        "negative": 0,
+        "leaf": 501087,
+        "maximum": 1000,
+        "multiplier": 2.593742847442627,
+        "packet": [
+          0,
+          2100,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "ordinaryRecovery": [
+      {
+        "positive": 0,
+        "negative": 0,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 1,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 2,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 0,
+        "negative": 3,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 0,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 1,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 2,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 1,
+        "negative": 3,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 0,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 1,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 2,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 2,
+        "negative": 3,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 0,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 1,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 2,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "positive": 3,
+        "negative": 3,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "native": {
+    "maxHp": "6C9150 → 50C1B0 → 510310",
+    "maxMp": "6C91F0 → 50C230 → 5103D0",
+    "maxStamina": "6C9300 → 50C2A0 → 510480",
+    "poise": "502270 → 511350",
+    "flask": "506EC0 → 50B860 → 510170 / 5101B0"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "base resources and recovery arrival are explicit; optional physical owner omitted for HP packet collection"
+  ],
+  "gameplayVerified": false
+}

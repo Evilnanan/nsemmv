@@ -8,7 +8,7 @@
     "withDetails": 608,
     "withNumericFields": 535,
     "withMechanicsOnly": 38,
-    "nativeStacking": 425,
+    "nativeStacking": 435,
     "catalog": 2241,
     "catalogWithDetails": 2051
   },
@@ -4558,11 +4558,13 @@
         7610400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终角色资源上限／取整、装备或移除时的当前资源同步、倒地／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -4579,11 +4581,13 @@
         7610500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终角色资源上限／取整、装备或移除时的当前资源同步、倒地／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -4600,11 +4604,13 @@
         7610600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终角色资源上限／取整、装备或移除时的当前资源同步、倒地／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -5012,11 +5018,13 @@
         7611400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整喝瓶动作、最终当前 HP 上限与治疗修正、共享治疗及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7455,11 +7463,13 @@
         6840100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整喝瓶动作、最终当前 HP 上限与治疗修正、共享治疗及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -8796,11 +8806,13 @@
         7001000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互"
       ],
       "gameplayVerified": false
     },
@@ -8817,11 +8829,13 @@
         7001001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互"
       ],
       "gameplayVerified": false
     },
@@ -8838,11 +8852,13 @@
         7001002
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互"
       ],
       "gameplayVerified": false
     },
@@ -8859,11 +8875,13 @@
         7001003
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互"
       ],
       "gameplayVerified": false
     },
@@ -8880,11 +8898,13 @@
         7001004
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49499,6 +49519,7 @@
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
   "undertakerResetEvidenceSha256": "ac6f90a3d941d03662e8dbfe508586e9bdb94bd70028dc9c88c6250b476bb981",
   "treasureMapEvidenceSha256": "806b839dc0763f410b62df700c9c4b287f69dae14e6ba5dd253d31a03608a556",
+  "passiveResourceEvidenceSha256": "4ef2d2dff072c025b9ab706a66f1d1a411081f0c918d91b5e5d3a9887c48d826",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

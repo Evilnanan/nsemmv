@@ -212,6 +212,12 @@ assert treasure_map['schema'] == 1 and treasure_map['regulationSha256'] == catal
 assert treasure_map['exeSha256'] == evidence['exeSha256'] and not treasure_map['gameplayVerified']
 assert treasure_map['paramSha256'] == evidence['paramSha256'] and not treasure_map['eventVmExecuted']
 assert {k: len(v) for k, v in treasure_map['checks'].items()} == dict(visibility=192, override=8, copies=4, unbound=12)
+passive_resource_path = ROOT / 'data/effect-passive-resource-evidence.json'
+passive_resource = json.loads(passive_resource_path.read_text())
+assert passive_resource['schema'] == 1 and passive_resource['regulationSha256'] == catalog['regulationSha256']
+assert passive_resource['exeSha256'] == evidence['exeSha256'] and not passive_resource['gameplayVerified']
+assert passive_resource['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in passive_resource['checks'].items()} == dict(resources=48, poise=74, flask=96, flaskCap=12, ordinaryRecovery=16)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -575,6 +581,9 @@ STACKING_RULES = {
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
     'undertaker-reset': ('不可叠加', '重复装备不增加恢复次数', ['undertaker-reset']),
     'treasure-map': ('不可叠加', '重复装备不增加标记', ['treasure-map']),
+    'resource-capacity': ('可叠加', '上限倍率相乘', ['passive-resource']),
+    'passive-poise': ('可叠加', '受到的强韧度损耗倍率相乘', ['passive-resource']),
+    'flask-recovery': ('可叠加', '恢复量倍率相乘；提升与降低也相乘', ['passive-resource']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
     'guardian-ultimate': ('不可叠加', '再次施加刷新时长', ['guardian-ultimate']),
     'raider-growth': ('不可叠加', '重复装备不加快成长，也不提高上限', ['raider-growth']),
@@ -903,6 +912,12 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if id in passive_resource['effects']:
+        root = passive_resource['effects'][id]
+        assert list(effect['roots'].values()) == [root] and effect['runtimeExclusive'] == -1
+        row = passive_resource['rows'][str(root)]
+        rule = ('resource-capacity' if any(row[k] != 1 for k in ('maxHpRate', 'maxMpRate', 'maxStaminaRate'))
+                else 'passive-poise' if row['toughnessDamageCutRate'] != 1 else 'flask-recovery')
     if treasure_map['root'] in effect['roots'].values():
         blocks = [dict(source=treasure_map['root'], phase='隐藏宝藏标记', linked=False,
                        values=[['显示范围', '自己的地图']],
@@ -1276,6 +1291,12 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整行为图的收尾进入／中断条件、强化状态与联机同步；最大次数变化及倒地／重载交互')
     if rules[id] == 'treasure-map':
         questions.append('另一组 8720～8731 显示标志的赋值路径、地图模式与显示覆盖；缺失的原版合并地图资产、完整事件调度、标志清除与多人／重载交互')
+    if rules[id] == 'resource-capacity':
+        questions.append('最终角色资源上限／取整、装备或移除时的当前资源同步、倒地／重载交互')
+    if rules[id] == 'passive-poise':
+        questions.append('完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互')
+    if rules[id] == 'flask-recovery':
+        questions.append('完整喝瓶动作、最终当前 HP 上限与治疗修正、共享治疗及多人交互')
     if rules[id] == 'undertaker-contact':
         questions.append('完整绝招碰撞与同一目标命中去重、状态 624 在玩家与召唤物中的赋予范围、最终治疗修正／溢出及多人交互')
     if rules[id] == 'guardian-ultimate':
@@ -1367,6 +1388,7 @@ research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.re
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
 research['undertakerResetEvidenceSha256'] = hashlib.sha256(undertaker_reset_path.read_bytes()).hexdigest()
 research['treasureMapEvidenceSha256'] = hashlib.sha256(treasure_map_path.read_bytes()).hexdigest()
+research['passiveResourceEvidenceSha256'] = hashlib.sha256(passive_resource_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()

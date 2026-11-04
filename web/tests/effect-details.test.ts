@@ -27,6 +27,7 @@ import raiderSkill from "../../data/effect-raider-skill-evidence.json";
 import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
 import undertakerReset from "../../data/effect-undertaker-reset-evidence.json";
 import treasureMap from "../../data/effect-treasure-map-evidence.json";
+import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -44,6 +45,22 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("applies multiplicative passive resource, poise and flask stacking without conflating recovery channels", () => {
+    for (const id of [6610400, 6610500, 6610600, 6611400, 6840100, 7001000, 7001001, 7001002, 7001003, 7001004])
+      expect(effectDetail(id)!.stacking).toBe("可叠加");
+    expect(effectDetail(6610400)!.stackingDetail).toBe("上限倍率相乘");
+    expect(effectDetail(7001000)!.stackingDetail).toBe("受到的强韧度损耗倍率相乘");
+    expect(effectDetail(6840100)!.stackingDetail).toContain("提升与降低也相乘");
+    expect(passiveResource.checks.resources.find(r => r.ids.length === 2 && r.ids[0] === 7610400 && r.base === 1000 && !r.disabled)!.values.maxHpRate).toBe(1210);
+    expect(passiveResource.checks.poise.find(r => r.ids.length === 2 && r.ids.every(id => id === 7001000) && !r.disabled)!.multiplier).toBeCloseTo(0.9025);
+    expect(passiveResource.checks.flask.find(r => r.positive === 1 && r.negative === 1 && r.leaf === 501000 && r.maximum === 1000)!.packet).toEqual([0, 561, 0, 0, 0, 0, 0]);
+    expect(passiveResource.checks.flaskCap.filter(r => r.leaf === 501000).every(r => r.packet[1] === r.maximum)).toBe(true);
+    expect(passiveResource.checks.ordinaryRecovery.every(r => r.packet.join() === "2,0,2,0,0,0,0")).toBe(true);
+    expect(passiveResource.gameplayVerified).toBe(false);
+    expect(research.passiveResourceEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-passive-resource-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("keeps treasure markers local and does not infer fixed counts or complete map coverage", () => {
     const detail = effectDetail(7070000)!;
     expect(detail.blocks[0].values).toEqual([["显示范围", "自己的地图"]]);
