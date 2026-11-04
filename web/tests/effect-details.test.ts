@@ -33,6 +33,7 @@ import spellFamily from "../../data/effect-spell-family-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
 import duchessUltimate from "../../data/effect-duchess-ultimate-evidence.json";
+import guardianShockwave from "../../data/effect-guardian-shockwave-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -50,6 +51,29 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows the Guardian shockwave HP component without turning emitter timers into cooldowns", () => {
+    const detail = effectDetail(7033400)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加冲击波数量");
+    expect(detail.blocks[0].values).toEqual([["冲击波半径", "2.5 → 3.5 米"], ["额外 HP 伤害", "目标最大值的 0.12%"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes).toEqual(["连续防御可再次触发。"]);
+    for (const row of guardianShockwave.checks.trigger)
+      expect(row.shots).toHaveLength(row.copies ? 1 : 0);
+    for (const row of guardianShockwave.checks.repeat)
+      expect(row.shots).toHaveLength(row.arrivalFrames.length);
+    for (const row of guardianShockwave.checks.target)
+      expect(row.allowed).toBe(row.relation === "opposing");
+    const singleHit = guardianShockwave.checks.damage.find(r => r.copies === 1 && r.maximum === 10000)!;
+    expect(singleHit.packet).toEqual([-12, 0, -12, 0, -12, 0, 0]);
+    expect(singleHit.afterExpiration).toEqual([0, 0, 0, 0, 0, 0, 0]);
+    expect(guardianShockwave.gameplayVerified).toBe(false);
+    expect(research.guardianShockwaveEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guardian-shockwave-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("separates Duchess ultimate duration from cumulative attack tiers and their decay", () => {
     for (const id of [7033000, 7033001]) {
       const detail = effectDetail(id)!;
@@ -1072,7 +1096,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(537);
+    expect(research.coverage.withNumericFields).toBe(538);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

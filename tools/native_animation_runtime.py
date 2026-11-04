@@ -13,7 +13,10 @@ class NativeTae:
         assert struct.unpack_from('<I',raw,8)[0]==0x1000d
         self.runtime=runtime;self.base=base
         u=runtime.u;u.mem_map(base,(len(raw)+4095)&~4095);u.mem_write(base,raw)
-        runtime.invoke(0x27d0f10,[OBJ+0x4000,base,0,0])
+        # Shared a000 contains far more events than individual hero TAE files.
+        # Bound relocation work by input size; keep ordinary call limits intact.
+        runtime.invoke(0x27d0f10,[OBJ+0x4000,base,0,0],
+                       instruction_limit=max(200000,len(raw)*4))
         # Current selected assets have one TAE group. Read the native-relocated
         # group/list pointers, not guessed animation body offsets.
         assert struct.unpack('<I',u.mem_read(base+0x18,4))[0]==1

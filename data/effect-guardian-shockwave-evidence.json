@@ -1,0 +1,1455 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "behaviorSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+  "bulletParamSha256": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+  "taeSha256": {
+    "2000": "0d5e549747bd2280aafa2260b00eb83e4769eb8da666b7575e66f8aace3ee54a",
+    "2015": "19e3a25ffb7c6c72da2d2805ac8518d32a88e2568363a3833ca96490d4c172e2"
+  },
+  "paths": [
+    {
+      "selector": 18834,
+      "name": "GuardDamageSmall Selector",
+      "binding": {
+        "selector": 18834,
+        "bindingSet": 19533,
+        "binding": 20594,
+        "member": "selectedGeneratorIndex",
+        "variable": 46,
+        "name": "IndexGuard",
+        "stringSet": 14,
+        "names": 20
+      },
+      "index": 3,
+      "child": 20598,
+      "clips": [
+        22802,
+        22803
+      ],
+      "animations": [
+        "a000_019450",
+        "a015_019450"
+      ]
+    },
+    {
+      "selector": 18836,
+      "name": "GuardDamageMiddle Selector",
+      "binding": {
+        "selector": 18836,
+        "bindingSet": 19536,
+        "binding": 20600,
+        "member": "selectedGeneratorIndex",
+        "variable": 46,
+        "name": "IndexGuard",
+        "stringSet": 14,
+        "names": 20
+      },
+      "index": 3,
+      "child": 20604,
+      "clips": [
+        22818,
+        22819
+      ],
+      "animations": [
+        "a000_019460",
+        "a015_019460"
+      ]
+    },
+    {
+      "selector": 18838,
+      "name": "GuardDamageLarge Selector",
+      "binding": {
+        "selector": 18838,
+        "bindingSet": 19539,
+        "binding": 20606,
+        "member": "selectedGeneratorIndex",
+        "variable": 46,
+        "name": "IndexGuard",
+        "stringSet": 14,
+        "names": 20
+      },
+      "index": 3,
+      "child": 20610,
+      "clips": [
+        22834,
+        22835
+      ],
+      "animations": [
+        "a000_019470",
+        "a015_019470"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "tae": 2000,
+      "animation": 19450,
+      "index": 37,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "3B526B00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19460,
+      "index": 37,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "3B526B00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19470,
+      "index": 36,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "3B526B00000000000000000000000000"
+    },
+    {
+      "tae": 2015,
+      "animation": 19450,
+      "index": 37,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "3B526B00000000000000000000000000"
+    },
+    {
+      "tae": 2015,
+      "animation": 19460,
+      "index": 37,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "3B526B00000000000000000000000000"
+    },
+    {
+      "tae": 2015,
+      "animation": 19470,
+      "index": 36,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "3B526B00000000000000000000000000"
+    }
+  ],
+  "effect": 7033400,
+  "root": 9200000,
+  "seed": 7033403,
+  "emitter": 7033404,
+  "leaf": 7033405,
+  "behavior": {
+    "id": 990503070,
+    "refType": 1,
+    "refId": 900503070
+  },
+  "bullet": {
+    "hitRadius": 2.5,
+    "hitRadiusMax": 3.5,
+    "spreadTime": 0.10000000149011612,
+    "life": 0.30000001192092896,
+    "atkId_Bullet": 900334000,
+    "spEffectId0": 7033405,
+    "numShoot": 1,
+    "shootInterval": 0,
+    "isEndlessHit": 0
+  },
+  "attack": {
+    "atkPhys": 100,
+    "atkPhysCorrection": 100,
+    "atkSuperArmor": 5,
+    "atkSuperArmorCorrection": 0,
+    "selfTarget": 0,
+    "friendlyTarget": 0,
+    "opposeTarget": 1
+  },
+  "rows": {
+    "9200000": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": -1,
+      "motionInterval": 0.20000000298023224,
+      "cycleOccurrenceSpEffectId": 9200001,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "9200001": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10999999940395355,
+      "motionInterval": 0.10000000149011612,
+      "cycleOccurrenceSpEffectId": 7033402,
+      "replaceSpEffectId": 7033400,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "7033400": {
+      "stateInfo": 2114,
+      "spCategory": 20,
+      "effectEndurance": 3,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 2260,
+      "behaviorId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "7033401": {
+      "stateInfo": 2260,
+      "spCategory": 20,
+      "effectEndurance": 0,
+      "motionInterval": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "7033402": {
+      "stateInfo": 2264,
+      "spCategory": 20,
+      "effectEndurance": 3,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "7033403": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "replaceSpEffectId": 7033404,
+      "invocationConditionsStateChange1": 2264,
+      "behaviorId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "7033404": {
+      "stateInfo": 275,
+      "spCategory": 10,
+      "effectEndurance": 3,
+      "motionInterval": 4,
+      "cycleOccurrenceSpEffectId": -1,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 2264,
+      "behaviorId": 990503070,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    },
+    "7033405": {
+      "stateInfo": 0,
+      "spCategory": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "changeHpRate": 0.11999999731779099,
+      "changeHpPoint": 0,
+      "syncTotalHp": 1
+    }
+  },
+  "checks": {
+    "trigger": [
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 0,
+        "fps": 30,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 0,
+        "fps": 60,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 0,
+        "fps": 120,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 1,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 1,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 1,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 3,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 3,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19450,
+        "copies": 3,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 0,
+        "fps": 30,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 0,
+        "fps": 60,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 0,
+        "fps": 120,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 1,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 1,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 1,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 3,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 3,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19460,
+        "copies": 3,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 0,
+        "fps": 30,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 0,
+        "fps": 60,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 0,
+        "fps": 120,
+        "shots": []
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 1,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 1,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 1,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 3,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 3,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2000,
+        "animation": 19470,
+        "copies": 3,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 0,
+        "fps": 30,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 0,
+        "fps": 60,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 0,
+        "fps": 120,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 1,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 1,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 1,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 3,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 3,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19450,
+        "copies": 3,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 0,
+        "fps": 30,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 0,
+        "fps": 60,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 0,
+        "fps": 120,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 1,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 1,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 1,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 3,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 3,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19460,
+        "copies": 3,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 0,
+        "fps": 30,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 0,
+        "fps": 60,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 0,
+        "fps": 120,
+        "shots": []
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 1,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 1,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 1,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 3,
+        "fps": 30,
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 3,
+        "fps": 60,
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "tae": 2015,
+        "animation": 19470,
+        "copies": 3,
+        "fps": 120,
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "copies": 1,
+        "fps": 30,
+        "arrivalFrames": [
+          0,
+          15,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 20,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 35,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "arrivalFrames": [
+          0,
+          30,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 39,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 69,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "arrivalFrames": [
+          0,
+          60,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 75,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 135,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "arrivalFrames": [
+          0,
+          15,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 5,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 20,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 35,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "arrivalFrames": [
+          0,
+          30,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 9,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 39,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 69,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "arrivalFrames": [
+          0,
+          60,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 15,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 75,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 135,
+            "behavior": 990503070,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      }
+    ],
+    "projectile": [
+      {
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "fps": 60,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      }
+    ],
+    "target": [
+      {
+        "relation": "self",
+        "allowed": false
+      },
+      {
+        "relation": "friendly",
+        "allowed": false
+      },
+      {
+        "relation": "opposing",
+        "allowed": true
+      },
+      {
+        "relation": "neutral",
+        "allowed": false
+      }
+    ],
+    "damage": [
+      {
+        "copies": 0,
+        "maximum": 100,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "maximum": 1000,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "maximum": 10000,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "maximum": 100000,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "maximum": 100,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "maximum": 1000,
+        "packet": [
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "maximum": 10000,
+        "packet": [
+          -12,
+          0,
+          -12,
+          0,
+          -12,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "maximum": 100000,
+        "packet": [
+          -120,
+          0,
+          -120,
+          0,
+          -120,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 2,
+        "maximum": 100,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 2,
+        "maximum": 1000,
+        "packet": [
+          -2,
+          0,
+          -2,
+          0,
+          -2,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 2,
+        "maximum": 10000,
+        "packet": [
+          -24,
+          0,
+          -24,
+          0,
+          -24,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 2,
+        "maximum": 100000,
+        "packet": [
+          -240,
+          0,
+          -240,
+          0,
+          -240,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "maximum": 100,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "maximum": 1000,
+        "packet": [
+          -3,
+          0,
+          -3,
+          0,
+          -3,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "maximum": 10000,
+        "packet": [
+          -35,
+          0,
+          -35,
+          0,
+          -35,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "maximum": 100000,
+        "packet": [
+          -360,
+          0,
+          -360,
+          0,
+          -360,
+          0,
+          0
+        ],
+        "afterExpiration": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "native": {
+    "animation": "27D0F10 / 27D0400 → 410CA0 → 40FF20",
+    "grant": "3C8BE0 / 3C7FD0 → 3C80A0 → 3DB410 → 50D060",
+    "emitter": "50AA20 → 397570 → 3975D0",
+    "projectile": "343280",
+    "relation": "52CC60 → 3D1B30",
+    "hp": "506EC0"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie",
+    "347700 successful projectile recorder, without scene collision",
+    "3975D0 records native emission request; full collision is not simulated",
+    "3CED90 synthetic animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "4D1B20 ordinary locally active actor",
+    "E87800 actual shockwave Bullet lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "HP getter has no physical-owner invulnerability context; collision arrival supplied; physical attack damage not executed",
+    "active TAE windows and guard-reaction scheduling are inputs; full animation/behavior VM not executed",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false
+}

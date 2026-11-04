@@ -103,7 +103,7 @@ class Chain:
             self.stubs.add('E6D630 absent attack PARAM lookup for untagged attack getter')
             finish(u.reg_read(UC_X86_REG_RCX))
 
-    def invoke(self, rva, args, xmm=None):
+    def invoke(self, rva, args, xmm=None, *, instruction_limit=200000):
         sp = STACK + 0x8008
         self.q(sp, STOP)
         self.u.reg_write(UC_X86_REG_RSP, sp)
@@ -113,7 +113,7 @@ class Chain:
             self.u.reg_write(reg, value & 0xffffffffffffffff)
         for reg, value in (xmm or {}).items():
             self.u.reg_write(reg, int.from_bytes(struct.pack('<f', value), 'little'))
-        self.u.emu_start(BASE + rva, STOP, count=200000)
+        self.u.emu_start(BASE + rva, STOP, count=instruction_limit)
         assert self.u.reg_read(UC_X86_REG_RIP) == STOP, hex(rva)
         return self.u.reg_read(UC_X86_REG_RAX)
 
