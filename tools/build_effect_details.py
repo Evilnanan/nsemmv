@@ -111,6 +111,13 @@ assert protection['exeSha256'] == evidence['exeSha256'] and not protection['game
 assert protection['paramSha256'] == evidence['paramSha256']
 assert protection['animationSha256'] == recovery['animationSha256']
 assert {k: len(v) for k, v in protection['checks'].items()} == dict(trigger=12, emission=3, lifecycle=6)
+tenacity_path = ROOT / 'data/effect-executor-tenacity-evidence.json'
+tenacity = json.loads(tenacity_path.read_text())
+assert tenacity['schema'] == 1 and tenacity['regulationSha256'] == catalog['regulationSha256']
+assert tenacity['exeSha256'] == evidence['exeSha256'] and not tenacity['gameplayVerified']
+assert tenacity['paramSha256'] == evidence['paramSha256']
+assert tenacity['playerCommonSha256'] == evidence['systemParamSha256']['PlayerCommonParam']
+assert {k: len(v) for k, v in tenacity['checks'].items()} == dict(trigger=99, lifecycle=13, hp=5, resistance=3)
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -201,6 +208,8 @@ if args.extract:
                 needed.add(prayer['leaf'])
             if root == protection['root']:
                 needed.add(protection['leaf'])
+            if root in tenacity['roots']:
+                needed.update(map(int, tenacity['rows']))
             if root == executor['root']:
                 needed.update(map(int, executor['rows']))
             if root == sacrifice['root']:
@@ -409,6 +418,7 @@ STACKING_RULES = {
     'undertaker-prayer': ('不可叠加', '再次触发刷新时长', ['undertaker-prayer']),
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
+    'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
     'weapon-recovery': ('不可叠加', '同种词条重复无效；回血与回蓝可同时生效', ['weapon-recovery']),
     'recluse-bleed': ('不可叠加', '重复装备不增加单次触发收益', ['recluse-bleed']),
     'revenant-sacrifice': ('不可叠加', '重复装备不增加单次触发收益', ['revenant-sacrifice']),
@@ -697,6 +707,29 @@ for id, effect in source['effects'].items():
                        values=[['承伤倍率', '-18%']],
                        restrictions=['自身及周围友方 · 半径 8 米'], scope=[], duration=30, interval=None)]
         rule = 'guardian-protection'
+    if 7500700 in effect['roots'].values():
+        assert all(source['spells'][str(sp)]['changeHpRate'] == -.27 for sp in (7500701, 7500702))
+        assert all(source['spells'][str(sp)]['changeHpPoint'] == -3 for sp in (7500701, 7500702))
+        assert source['spells']['7500701']['effectEndurance'] + source['spells']['7500702']['effectEndurance'] == 60
+        blocks = [dict(source=7500701, branches=[7500702], phase='能力发动后', linked=True,
+                       values=[['HP 恢复', '最大值的 0.27% + 3']],
+                       restrictions=[], scope=[], duration=60, interval=1)]
+        notes.extend(['开始恢复时立即恢复一次，约 1.5 秒后的衔接也会恢复一次。',
+                      '能力再次发动会追加持续恢复，恢复量相加、分别计时。'])
+        rule = 'executor-tenacity'
+    if 7501100 in effect['roots'].values():
+        assert all(source['spells'][str(sp)]['physicsAttackRate'] == 1.05 for sp in (7501101, 7501102))
+        assert all(source['spells'][str(sp)]['physicsAttackRate'] == 1.2 for sp in (707070, 707071))
+        assert source['spells']['7501101']['effectEndurance'] + source['spells']['7501102']['effectEndurance'] == 20
+        assert all(v['values'] == [-80] * 7 for v in tenacity['checks']['resistance'] if v['copies'])
+        blocks = [dict(source=7501100, phase='装备时', linked=False,
+                       values=[['异常状态抵抗力', '-80']],
+                       restrictions=[], scope=[], duration=None, interval=None),
+                  dict(source=7501101, branches=[7501102, 707070, 707071], phase='能力发动后', linked=True,
+                       values=[['能力的攻击倍率', '+20% → +26%']],
+                       restrictions=[], scope=[], duration=20, interval=None)]
+        notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
+        rule = 'executor-tenacity'
     if 7220300 in effect['roots'].values():
         assert source['spells']['7220305']['physicsAttackRate'] == 1.15
         assert source['spells']['7220305']['effectEndurance'] == 20
@@ -863,9 +896,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -881,6 +914,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('实际碰撞命中、范围重新进入、完整角色队列／施法结束时序与多人网络投递')
     if rules[id] == 'executor-recovery':
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
+    if rules[id] == 'executor-tenacity':
+        questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
     if rules[id] == 'executor-blade':
         questions.append('各动作判定与伤害通知的完整入口、投射物命中时状态、绝招转换／网络／重载交互')
     if rules[id] == 'undertaker-prayer':
@@ -938,6 +973,7 @@ research['guardianSkillEvidenceSha256'] = hashlib.sha256(guardian_skill_path.rea
 research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()).hexdigest()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
+research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

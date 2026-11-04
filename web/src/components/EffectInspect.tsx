@@ -281,9 +281,6 @@ export function EffectInspect({
               )}
             </section>
           ))}
-          {!!detail?.blocks.some((b) => b.linked) && (
-            <p className="effect-detail-muted">部分触发条件尚未确认</p>
-          )}
           <dl className="effect-detail-rules">
             <div>
               <dt>叠加</dt>

@@ -21,10 +21,49 @@ import guardianSkill from "../../data/effect-guardian-skill-evidence.json";
 import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
+import tenacity from "../../data/effect-executor-tenacity-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("distinguishes repeated equipment from independent Executor ability activations", () => {
+    const heal = effectDetail(6500700)!;
+    expect(heal.blocks[0].values).toEqual([["HP 恢复", "最大值的 0.27% + 3"]]);
+    expect(heal.blocks[0].duration).toBe(60);
+    expect(heal.blocks[0].interval).toBe(1);
+    expect(heal.stacking).toBe("不可叠加");
+    expect(heal.notes.join()).toContain("恢复量相加、分别计时");
+    const single = tenacity.checks.lifecycle.find((r) => r.recoveryCopies === 1 && r.boostCopies === 1 && r.arrivals.join() === "0" && r.fps === 10)!;
+    const duplicate = tenacity.checks.lifecycle.find((r) => r.recoveryCopies === 3 && r.arrivals.join() === "0")!;
+    expect(single.heals).toEqual(duplicate.heals);
+    expect(single.attackChanges).toEqual(duplicate.attackChanges);
+    for (const row of tenacity.checks.lifecycle.filter((r) => r.arrivals.join() === "0,50")) {
+      expect(row.heals.some((h) => h.hp.join() === "-0.54,-6")).toBe(true);
+      expect(row.attackChanges.some((a) => Math.abs(a.rates[0] - 1.5876) < 0.00001)).toBe(true);
+    }
+    for (const row of tenacity.checks.hp)
+      expect(row.packet[0]).toBe(Math.trunc(row.maximum * 0.0027 + 3));
+  });
+  it("gates Executor ability dispatch by native hero identity and keeps the resistance penalty passive", () => {
+    expect(tenacity.checks.trigger).toHaveLength(99);
+    for (const row of tenacity.checks.trigger)
+      expect(row.emitted).toEqual(row.hero === 8 && row.expiredIds.join() !== "100" ? [707070, 7501000] : []);
+    for (const row of tenacity.checks.resistance)
+      expect(row.values).toEqual(Array(7).fill(row.copies ? -80 : 0));
+    for (const id of [7034800, 7034801]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["异常状态抵抗力", "-80"]]);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[1].values).toEqual([["能力的攻击倍率", "+20% → +26%"]]);
+      expect(detail.blocks[1].duration).toBe(20);
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.notes.join()).toContain("倍率相乘、分别计时");
+    }
+    expect(research.executorTenacityEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-executor-tenacity-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(tenacity.gameplayVerified).toBe(false);
+  });
   it("separates Guardian protection lifetime from the emitter and refreshes without multiplying", () => {
     const detail = effectDetail(6500100)!;
     expect(detail.blocks[0].values).toEqual([["承伤倍率", "-18%"]]);
@@ -474,7 +513,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(506);
+    expect(research.coverage.withNumericFields).toBe(507);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

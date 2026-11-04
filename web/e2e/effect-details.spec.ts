@@ -39,6 +39,9 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [6500700, ["最大值的 0.27% + 3", "60 秒", "触发周期 1 秒", "恢复量相加、分别计时", "不可叠加"]],
+    [7034800, ["异常状态抵抗力", "-80", "+20% → +26%", "20 秒", "倍率相乘、分别计时"]],
+    [7034801, ["+20% → +26%", "不可叠加"]],
     [6840200, ["绝招量表累积（所有来源）", "-15%", "可叠加"]],
     [6500100, ["承伤倍率", "-18%", "30 秒", "自身及周围友方", "半径 8 米", "同类效果再次施加刷新时长"]],
     [7037000, ["物理攻击倍率", "+19%", "60 秒", "再次触发刷新时长", "恢复类祷告和武器附魔也可触发", "远方之恢复的触发待确认"]],
@@ -78,6 +81,7 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
     if (isMobile) await longPress(page, row.locator(".picker-row"));
     else await row.hover();
     for (const text of expected) await expect(details).toContainText(text);
+    await expect(details).not.toContainText("部分触发条件尚未确认");
     expect(await details.evaluate((el) => {
       const rect = el.getBoundingClientRect();
       return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
