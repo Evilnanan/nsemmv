@@ -39,6 +39,8 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7340000, ["15", "约 1 秒内只触发一次", "连续命中不会延长间隔", "回血与回蓝可同时生效"]],
+    [7352800, ["恢复参数", "实际触发待确认", "待确认"]],
     [7034500, ["最大值的 5% + 100", "维持解放状态不会反复恢复", "不可叠加"]],
     [12002, ["最大值的 10% + 12", "半径 15 米", "约每秒恢复一次", "只刷新有效期", "尚未到期的效果仍可能再恢复一次"]],
     [7012000, ["最大值的 10% + 12", "半径 15 米", "不可叠加"]],
@@ -176,7 +178,9 @@ test("effect details support hover, touch and keyboard without selecting or edit
     .filter({ hasText: "7350000" });
   if (isMobile) await longPress(page, hit.locator(".picker-row"));
   else await hit.hover();
-  await expect(details).toContainText("约每 1.1 秒恢复一次");
+  await expect(details).toContainText("约 1 秒内只触发一次");
+  await expect(details).toContainText("连续命中不会延长间隔");
+  await expect(details).not.toContainText("1.1 秒");
   await expect(details).not.toContainText("此效果持续");
   await page.keyboard.press("Escape");
   await page.getByLabel("搜索词条").fill("6820000");

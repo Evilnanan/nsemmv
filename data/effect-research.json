@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "2ee619d4052310a3f1cd22ec275199439840271caa3ea806c96eefd8b8722c0d",
+  "nativeEvidenceSha256": "eb626036aac147d9aa06cdf9a865ad7f3dddd8efcf95ef1cb5b93014a6cb319a",
   "triggerEvidenceSha256": "2bdbb469dfcc240a03f25fe3da87422fffd2f97bf87aa0ed974cbfa00003a61e",
   "coverage": {
     "obtainable": 637,
     "withDetails": 566,
     "withNumericFields": 495,
     "withMechanicsOnly": 36,
-    "nativeStacking": 284,
+    "nativeStacking": 332,
     "catalog": 2241,
     "catalogWithDetails": 2008
   },
@@ -16062,15 +16062,14 @@
         8600111
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16087,15 +16086,14 @@
         8600113
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16112,15 +16110,14 @@
         8600115
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16137,15 +16134,14 @@
         8600117
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16162,15 +16158,14 @@
         8600119
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16187,15 +16182,14 @@
         8600121
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16212,15 +16206,14 @@
         8600123
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16237,15 +16230,14 @@
         8600125
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16262,15 +16254,14 @@
         8600127
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16287,15 +16278,14 @@
         8600129
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16312,15 +16302,14 @@
         8600131
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16337,15 +16326,14 @@
         8600133
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16362,15 +16350,14 @@
         8600135
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16387,15 +16374,14 @@
         8600137
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16412,15 +16398,14 @@
         8600139
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16437,15 +16422,14 @@
         8600141
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16462,15 +16446,14 @@
         8600145
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16487,15 +16470,14 @@
         8600147
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16512,15 +16494,14 @@
         8600149
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16537,15 +16518,14 @@
         8600151
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16562,15 +16542,14 @@
         8600153
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16587,15 +16566,14 @@
         8600155
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16612,15 +16590,14 @@
         8600157
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16637,15 +16614,14 @@
         8600159
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16665,12 +16641,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16690,12 +16669,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16715,12 +16697,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16740,12 +16725,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16762,15 +16750,14 @@
         8600211
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16787,15 +16774,14 @@
         8600213
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16812,15 +16798,14 @@
         8600215
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16837,15 +16822,14 @@
         8600217
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16862,15 +16846,14 @@
         8600219
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16887,15 +16870,14 @@
         8600221
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16912,15 +16894,14 @@
         8600223
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16937,15 +16918,14 @@
         8600225
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16962,15 +16942,14 @@
         8600227
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -16987,15 +16966,14 @@
         8600229
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17012,15 +16990,14 @@
         8600231
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17037,15 +17014,14 @@
         8600233
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17062,15 +17038,14 @@
         8600235
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17087,15 +17062,14 @@
         8600237
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17112,15 +17086,14 @@
         8600239
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17137,15 +17110,14 @@
         8600241
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17162,15 +17134,14 @@
         8600245
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17187,15 +17158,14 @@
         8600247
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17212,15 +17182,14 @@
         8600249
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17237,15 +17206,14 @@
         8600251
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17262,15 +17230,14 @@
         8600253
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17287,15 +17254,14 @@
         8600255
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17312,15 +17278,14 @@
         8600257
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17337,15 +17302,14 @@
         8600259
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "weapon-recovery",
         "recovery-timing"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17365,12 +17329,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17390,12 +17357,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17415,12 +17385,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -17440,12 +17413,15 @@
       "stacking": "unresolved",
       "stackingCategory": "待确认",
       "evidence": [
-        "recovery-timing"
+        "recovery-timing",
+        "weapon-recovery"
       ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "未加载 DLL 的原生 EA1D40 不接受该武器类型编号；须核对 Mod 的运行时扩展或替代触发路径",
+        "实际攻击／弹体的命中上下文、完整伤害入口、多人命中与投递时序"
       ],
       "gameplayVerified": false
     },
@@ -49274,5 +49250,6 @@
   "lifecycleEvidenceSha256": "579d1badfc5d8d9b6efb5c6ae93561b2d558ef69bf6039866b5b11ec09bdadba",
   "recoveryEvidenceSha256": "e1acc14fb3f7184061397e55aa84ad491f88995ffe1c12a3a0704db93a4625fb",
   "executorRecoveryEvidenceSha256": "2ae2134fa269d85bdb9f5cd82237650cfa98ecac8d0923ae7732bc97b0051e27",
+  "weaponRecoveryEvidenceSha256": "b28dab55cf1296a4bf632752bd32b8e9ebb50e9f29811500fb18ac6b98dae256",
   "discoveryEvidenceSha256": "be359953e1c4735d2f0b63cfddcfe7469c89f6fc062909aef9565f191e8e8c53"
 }

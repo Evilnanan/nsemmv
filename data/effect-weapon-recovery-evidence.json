@@ -1,0 +1,6003 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "attackParamSha256": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+  "families": [
+    {
+      "effect": 7340000,
+      "root": 8600110,
+      "leaf": 8600111,
+      "weaponType": 1,
+      "weapon": 1000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340100,
+      "root": 8600112,
+      "leaf": 8600113,
+      "weaponType": 3,
+      "weapon": 13000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340200,
+      "root": 8600114,
+      "leaf": 8600115,
+      "weaponType": 5,
+      "weapon": 50000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340300,
+      "root": 8600116,
+      "leaf": 8600117,
+      "weaponType": 7,
+      "weapon": 4000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340400,
+      "root": 8600118,
+      "leaf": 8600119,
+      "weaponType": 9,
+      "weapon": 2080000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340500,
+      "root": 8600120,
+      "leaf": 8600121,
+      "weaponType": 11,
+      "weapon": 6150000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340600,
+      "root": 8600122,
+      "leaf": 8600123,
+      "weaponType": 13,
+      "weapon": 2590000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340700,
+      "root": 8600124,
+      "leaf": 8600125,
+      "weaponType": 14,
+      "weapon": 10000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340800,
+      "root": 8600126,
+      "leaf": 8600127,
+      "weaponType": 15,
+      "weapon": 2530000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7340900,
+      "root": 8600128,
+      "leaf": 8600129,
+      "weaponType": 16,
+      "weapon": 3500000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341000,
+      "root": 8600130,
+      "leaf": 8600131,
+      "weaponType": 17,
+      "weapon": 14000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341100,
+      "root": 8600132,
+      "leaf": 8600133,
+      "weaponType": 19,
+      "weapon": 8500000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341200,
+      "root": 8600134,
+      "leaf": 8600135,
+      "weaponType": 21,
+      "weapon": 7300000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341300,
+      "root": 8600136,
+      "leaf": 8600137,
+      "weaponType": 23,
+      "weapon": 12000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341400,
+      "root": 8600138,
+      "leaf": 8600139,
+      "weaponType": 24,
+      "weapon": 13000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341500,
+      "root": 8600140,
+      "leaf": 8600141,
+      "weaponType": 25,
+      "weapon": 12000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341700,
+      "root": 8600144,
+      "leaf": 8600145,
+      "weaponType": 28,
+      "weapon": 16550000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341800,
+      "root": 8600146,
+      "leaf": 8600147,
+      "weaponType": 29,
+      "weapon": 11000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7341900,
+      "root": 8600148,
+      "leaf": 8600149,
+      "weaponType": 31,
+      "weapon": 10180000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7342000,
+      "root": 8600150,
+      "leaf": 8600151,
+      "weaponType": 35,
+      "weapon": 6850000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7342100,
+      "root": 8600152,
+      "leaf": 8600153,
+      "weaponType": 37,
+      "weapon": 22000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7342200,
+      "root": 8600154,
+      "leaf": 8600155,
+      "weaponType": 39,
+      "weapon": 20000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7342300,
+      "root": 8600156,
+      "leaf": 8600157,
+      "weaponType": 41,
+      "weapon": 7250000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7342400,
+      "root": 8600158,
+      "leaf": 8600159,
+      "weaponType": 51,
+      "weapon": 7230000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7342500,
+      "root": 8600160,
+      "leaf": 8600161,
+      "weaponType": 95,
+      "weapon": 6750000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7342600,
+      "root": 8600162,
+      "leaf": 8600163,
+      "weaponType": 96,
+      "weapon": 6650000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7342700,
+      "root": 8600164,
+      "leaf": 8600165,
+      "weaponType": 94,
+      "weapon": 6450000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7342800,
+      "root": 8600166,
+      "leaf": 8600167,
+      "weaponType": 91,
+      "weapon": 61500000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7350000,
+      "root": 8600210,
+      "leaf": 8600211,
+      "weaponType": 1,
+      "weapon": 1000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350100,
+      "root": 8600212,
+      "leaf": 8600213,
+      "weaponType": 3,
+      "weapon": 13000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350200,
+      "root": 8600214,
+      "leaf": 8600215,
+      "weaponType": 5,
+      "weapon": 50000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350300,
+      "root": 8600216,
+      "leaf": 8600217,
+      "weaponType": 7,
+      "weapon": 4000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350400,
+      "root": 8600218,
+      "leaf": 8600219,
+      "weaponType": 9,
+      "weapon": 2080000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350500,
+      "root": 8600220,
+      "leaf": 8600221,
+      "weaponType": 11,
+      "weapon": 6150000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350600,
+      "root": 8600222,
+      "leaf": 8600223,
+      "weaponType": 13,
+      "weapon": 2590000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350700,
+      "root": 8600224,
+      "leaf": 8600225,
+      "weaponType": 14,
+      "weapon": 10000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350800,
+      "root": 8600226,
+      "leaf": 8600227,
+      "weaponType": 15,
+      "weapon": 2530000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7350900,
+      "root": 8600228,
+      "leaf": 8600229,
+      "weaponType": 16,
+      "weapon": 3500000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351000,
+      "root": 8600230,
+      "leaf": 8600231,
+      "weaponType": 17,
+      "weapon": 14000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351100,
+      "root": 8600232,
+      "leaf": 8600233,
+      "weaponType": 19,
+      "weapon": 8500000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351200,
+      "root": 8600234,
+      "leaf": 8600235,
+      "weaponType": 21,
+      "weapon": 7300000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351300,
+      "root": 8600236,
+      "leaf": 8600237,
+      "weaponType": 23,
+      "weapon": 12000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351400,
+      "root": 8600238,
+      "leaf": 8600239,
+      "weaponType": 24,
+      "weapon": 13000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351500,
+      "root": 8600240,
+      "leaf": 8600241,
+      "weaponType": 25,
+      "weapon": 12000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351700,
+      "root": 8600244,
+      "leaf": 8600245,
+      "weaponType": 28,
+      "weapon": 16550000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351800,
+      "root": 8600246,
+      "leaf": 8600247,
+      "weaponType": 29,
+      "weapon": 11000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7351900,
+      "root": 8600248,
+      "leaf": 8600249,
+      "weaponType": 31,
+      "weapon": 10180000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7352000,
+      "root": 8600250,
+      "leaf": 8600251,
+      "weaponType": 35,
+      "weapon": 6850000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7352100,
+      "root": 8600252,
+      "leaf": 8600253,
+      "weaponType": 37,
+      "weapon": 22000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7352200,
+      "root": 8600254,
+      "leaf": 8600255,
+      "weaponType": 39,
+      "weapon": 20000000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7352300,
+      "root": 8600256,
+      "leaf": 8600257,
+      "weaponType": 41,
+      "weapon": 7250000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7352400,
+      "root": 8600258,
+      "leaf": 8600259,
+      "weaponType": 51,
+      "weapon": 7230000,
+      "nativeTypeAccepted": true
+    },
+    {
+      "effect": 7352500,
+      "root": 8600260,
+      "leaf": 8600261,
+      "weaponType": 95,
+      "weapon": 6750000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7352600,
+      "root": 8600262,
+      "leaf": 8600263,
+      "weaponType": 96,
+      "weapon": 6650000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7352700,
+      "root": 8600264,
+      "leaf": 8600265,
+      "weaponType": 94,
+      "weapon": 6450000,
+      "nativeTypeAccepted": false
+    },
+    {
+      "effect": 7352800,
+      "root": 8600266,
+      "leaf": 8600267,
+      "weaponType": 91,
+      "weapon": 61500000,
+      "nativeTypeAccepted": false
+    }
+  ],
+  "checks": {
+    "filter": [
+      {
+        "effect": 7340000,
+        "copies": 1,
+        "matched": [
+          8600111
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600111
+          ],
+          "2": [
+            8600111
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600111
+          ],
+          "12": [
+            8600111
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340000,
+        "copies": 3,
+        "matched": [
+          8600111
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600111
+          ],
+          "2": [
+            8600111
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600111
+          ],
+          "12": [
+            8600111
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340100,
+        "copies": 1,
+        "matched": [
+          8600113
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600113
+          ],
+          "2": [
+            8600113
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600113
+          ],
+          "12": [
+            8600113
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340100,
+        "copies": 3,
+        "matched": [
+          8600113
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600113
+          ],
+          "2": [
+            8600113
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600113
+          ],
+          "12": [
+            8600113
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340200,
+        "copies": 1,
+        "matched": [
+          8600115
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600115
+          ],
+          "2": [
+            8600115
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600115
+          ],
+          "12": [
+            8600115
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340200,
+        "copies": 3,
+        "matched": [
+          8600115
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600115
+          ],
+          "2": [
+            8600115
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600115
+          ],
+          "12": [
+            8600115
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340300,
+        "copies": 1,
+        "matched": [
+          8600117
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600117
+          ],
+          "2": [
+            8600117
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600117
+          ],
+          "12": [
+            8600117
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340300,
+        "copies": 3,
+        "matched": [
+          8600117
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600117
+          ],
+          "2": [
+            8600117
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600117
+          ],
+          "12": [
+            8600117
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340400,
+        "copies": 1,
+        "matched": [
+          8600119
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600119
+          ],
+          "2": [
+            8600119
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600119
+          ],
+          "12": [
+            8600119
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340400,
+        "copies": 3,
+        "matched": [
+          8600119
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600119
+          ],
+          "2": [
+            8600119
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600119
+          ],
+          "12": [
+            8600119
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340500,
+        "copies": 1,
+        "matched": [
+          8600121
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600121
+          ],
+          "2": [
+            8600121
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600121
+          ],
+          "12": [
+            8600121
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340500,
+        "copies": 3,
+        "matched": [
+          8600121
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600121
+          ],
+          "2": [
+            8600121
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600121
+          ],
+          "12": [
+            8600121
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340600,
+        "copies": 1,
+        "matched": [
+          8600123
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600123
+          ],
+          "2": [
+            8600123
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600123
+          ],
+          "12": [
+            8600123
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340600,
+        "copies": 3,
+        "matched": [
+          8600123
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600123
+          ],
+          "2": [
+            8600123
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600123
+          ],
+          "12": [
+            8600123
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340700,
+        "copies": 1,
+        "matched": [
+          8600125
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600125
+          ],
+          "2": [
+            8600125
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600125
+          ],
+          "12": [
+            8600125
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340700,
+        "copies": 3,
+        "matched": [
+          8600125
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600125
+          ],
+          "2": [
+            8600125
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600125
+          ],
+          "12": [
+            8600125
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340800,
+        "copies": 1,
+        "matched": [
+          8600127
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600127
+          ],
+          "2": [
+            8600127
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600127
+          ],
+          "12": [
+            8600127
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340800,
+        "copies": 3,
+        "matched": [
+          8600127
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600127
+          ],
+          "2": [
+            8600127
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600127
+          ],
+          "12": [
+            8600127
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340900,
+        "copies": 1,
+        "matched": [
+          8600129
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600129
+          ],
+          "2": [
+            8600129
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600129
+          ],
+          "12": [
+            8600129
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7340900,
+        "copies": 3,
+        "matched": [
+          8600129
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600129
+          ],
+          "2": [
+            8600129
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600129
+          ],
+          "12": [
+            8600129
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341000,
+        "copies": 1,
+        "matched": [
+          8600131
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600131
+          ],
+          "2": [
+            8600131
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600131
+          ],
+          "12": [
+            8600131
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341000,
+        "copies": 3,
+        "matched": [
+          8600131
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600131
+          ],
+          "2": [
+            8600131
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600131
+          ],
+          "12": [
+            8600131
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341100,
+        "copies": 1,
+        "matched": [
+          8600133
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600133
+          ],
+          "2": [
+            8600133
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600133
+          ],
+          "12": [
+            8600133
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341100,
+        "copies": 3,
+        "matched": [
+          8600133
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600133
+          ],
+          "2": [
+            8600133
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600133
+          ],
+          "12": [
+            8600133
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341200,
+        "copies": 1,
+        "matched": [
+          8600135
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600135
+          ],
+          "2": [
+            8600135
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600135
+          ],
+          "12": [
+            8600135
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341200,
+        "copies": 3,
+        "matched": [
+          8600135
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600135
+          ],
+          "2": [
+            8600135
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600135
+          ],
+          "12": [
+            8600135
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341300,
+        "copies": 1,
+        "matched": [
+          8600137
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600137
+          ],
+          "2": [
+            8600137
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600137
+          ],
+          "12": [
+            8600137
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341300,
+        "copies": 3,
+        "matched": [
+          8600137
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600137
+          ],
+          "2": [
+            8600137
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600137
+          ],
+          "12": [
+            8600137
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341400,
+        "copies": 1,
+        "matched": [
+          8600139
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600139
+          ],
+          "2": [
+            8600139
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600139
+          ],
+          "12": [
+            8600139
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341400,
+        "copies": 3,
+        "matched": [
+          8600139
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600139
+          ],
+          "2": [
+            8600139
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600139
+          ],
+          "12": [
+            8600139
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341500,
+        "copies": 1,
+        "matched": [
+          8600141
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600141
+          ],
+          "2": [
+            8600141
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600141
+          ],
+          "12": [
+            8600141
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341500,
+        "copies": 3,
+        "matched": [
+          8600141
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600141
+          ],
+          "2": [
+            8600141
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600141
+          ],
+          "12": [
+            8600141
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341700,
+        "copies": 1,
+        "matched": [
+          8600145
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600145
+          ],
+          "2": [
+            8600145
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600145
+          ],
+          "12": [
+            8600145
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341700,
+        "copies": 3,
+        "matched": [
+          8600145
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600145
+          ],
+          "2": [
+            8600145
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600145
+          ],
+          "12": [
+            8600145
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341800,
+        "copies": 1,
+        "matched": [
+          8600147
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600147
+          ],
+          "2": [
+            8600147
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600147
+          ],
+          "12": [
+            8600147
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341800,
+        "copies": 3,
+        "matched": [
+          8600147
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600147
+          ],
+          "2": [
+            8600147
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600147
+          ],
+          "12": [
+            8600147
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341900,
+        "copies": 1,
+        "matched": [
+          8600149
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600149
+          ],
+          "2": [
+            8600149
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600149
+          ],
+          "12": [
+            8600149
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7341900,
+        "copies": 3,
+        "matched": [
+          8600149
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600149
+          ],
+          "2": [
+            8600149
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600149
+          ],
+          "12": [
+            8600149
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342000,
+        "copies": 1,
+        "matched": [
+          8600151
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600151
+          ],
+          "2": [
+            8600151
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600151
+          ],
+          "12": [
+            8600151
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342000,
+        "copies": 3,
+        "matched": [
+          8600151
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600151
+          ],
+          "2": [
+            8600151
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600151
+          ],
+          "12": [
+            8600151
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342100,
+        "copies": 1,
+        "matched": [
+          8600153
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600153
+          ],
+          "2": [
+            8600153
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600153
+          ],
+          "12": [
+            8600153
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342100,
+        "copies": 3,
+        "matched": [
+          8600153
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600153
+          ],
+          "2": [
+            8600153
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600153
+          ],
+          "12": [
+            8600153
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342200,
+        "copies": 1,
+        "matched": [
+          8600155
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600155
+          ],
+          "2": [
+            8600155
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600155
+          ],
+          "12": [
+            8600155
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342200,
+        "copies": 3,
+        "matched": [
+          8600155
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600155
+          ],
+          "2": [
+            8600155
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600155
+          ],
+          "12": [
+            8600155
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342300,
+        "copies": 1,
+        "matched": [
+          8600157
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600157
+          ],
+          "2": [
+            8600157
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600157
+          ],
+          "12": [
+            8600157
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342300,
+        "copies": 3,
+        "matched": [
+          8600157
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600157
+          ],
+          "2": [
+            8600157
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600157
+          ],
+          "12": [
+            8600157
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342400,
+        "copies": 1,
+        "matched": [
+          8600159
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600159
+          ],
+          "2": [
+            8600159
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600159
+          ],
+          "12": [
+            8600159
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342400,
+        "copies": 3,
+        "matched": [
+          8600159
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600159
+          ],
+          "2": [
+            8600159
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600159
+          ],
+          "12": [
+            8600159
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342500,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342500,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342600,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342600,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342700,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342700,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342800,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7342800,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350000,
+        "copies": 1,
+        "matched": [
+          8600211
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600211
+          ],
+          "2": [
+            8600211
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600211
+          ],
+          "12": [
+            8600211
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350000,
+        "copies": 3,
+        "matched": [
+          8600211
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600211
+          ],
+          "2": [
+            8600211
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600211
+          ],
+          "12": [
+            8600211
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350100,
+        "copies": 1,
+        "matched": [
+          8600213
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600213
+          ],
+          "2": [
+            8600213
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600213
+          ],
+          "12": [
+            8600213
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350100,
+        "copies": 3,
+        "matched": [
+          8600213
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600213
+          ],
+          "2": [
+            8600213
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600213
+          ],
+          "12": [
+            8600213
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350200,
+        "copies": 1,
+        "matched": [
+          8600215
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600215
+          ],
+          "2": [
+            8600215
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600215
+          ],
+          "12": [
+            8600215
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350200,
+        "copies": 3,
+        "matched": [
+          8600215
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600215
+          ],
+          "2": [
+            8600215
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600215
+          ],
+          "12": [
+            8600215
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350300,
+        "copies": 1,
+        "matched": [
+          8600217
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600217
+          ],
+          "2": [
+            8600217
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600217
+          ],
+          "12": [
+            8600217
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350300,
+        "copies": 3,
+        "matched": [
+          8600217
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600217
+          ],
+          "2": [
+            8600217
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600217
+          ],
+          "12": [
+            8600217
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350400,
+        "copies": 1,
+        "matched": [
+          8600219
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600219
+          ],
+          "2": [
+            8600219
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600219
+          ],
+          "12": [
+            8600219
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350400,
+        "copies": 3,
+        "matched": [
+          8600219
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600219
+          ],
+          "2": [
+            8600219
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600219
+          ],
+          "12": [
+            8600219
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350500,
+        "copies": 1,
+        "matched": [
+          8600221
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600221
+          ],
+          "2": [
+            8600221
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600221
+          ],
+          "12": [
+            8600221
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350500,
+        "copies": 3,
+        "matched": [
+          8600221
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600221
+          ],
+          "2": [
+            8600221
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600221
+          ],
+          "12": [
+            8600221
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350600,
+        "copies": 1,
+        "matched": [
+          8600223
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600223
+          ],
+          "2": [
+            8600223
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600223
+          ],
+          "12": [
+            8600223
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350600,
+        "copies": 3,
+        "matched": [
+          8600223
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600223
+          ],
+          "2": [
+            8600223
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600223
+          ],
+          "12": [
+            8600223
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350700,
+        "copies": 1,
+        "matched": [
+          8600225
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600225
+          ],
+          "2": [
+            8600225
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600225
+          ],
+          "12": [
+            8600225
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350700,
+        "copies": 3,
+        "matched": [
+          8600225
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600225
+          ],
+          "2": [
+            8600225
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600225
+          ],
+          "12": [
+            8600225
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350800,
+        "copies": 1,
+        "matched": [
+          8600227
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600227
+          ],
+          "2": [
+            8600227
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600227
+          ],
+          "12": [
+            8600227
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350800,
+        "copies": 3,
+        "matched": [
+          8600227
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600227
+          ],
+          "2": [
+            8600227
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600227
+          ],
+          "12": [
+            8600227
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350900,
+        "copies": 1,
+        "matched": [
+          8600229
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600229
+          ],
+          "2": [
+            8600229
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600229
+          ],
+          "12": [
+            8600229
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7350900,
+        "copies": 3,
+        "matched": [
+          8600229
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600229
+          ],
+          "2": [
+            8600229
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600229
+          ],
+          "12": [
+            8600229
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351000,
+        "copies": 1,
+        "matched": [
+          8600231
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600231
+          ],
+          "2": [
+            8600231
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600231
+          ],
+          "12": [
+            8600231
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351000,
+        "copies": 3,
+        "matched": [
+          8600231
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600231
+          ],
+          "2": [
+            8600231
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600231
+          ],
+          "12": [
+            8600231
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351100,
+        "copies": 1,
+        "matched": [
+          8600233
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600233
+          ],
+          "2": [
+            8600233
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600233
+          ],
+          "12": [
+            8600233
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351100,
+        "copies": 3,
+        "matched": [
+          8600233
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600233
+          ],
+          "2": [
+            8600233
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600233
+          ],
+          "12": [
+            8600233
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351200,
+        "copies": 1,
+        "matched": [
+          8600235
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600235
+          ],
+          "2": [
+            8600235
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600235
+          ],
+          "12": [
+            8600235
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351200,
+        "copies": 3,
+        "matched": [
+          8600235
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600235
+          ],
+          "2": [
+            8600235
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600235
+          ],
+          "12": [
+            8600235
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351300,
+        "copies": 1,
+        "matched": [
+          8600237
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600237
+          ],
+          "2": [
+            8600237
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600237
+          ],
+          "12": [
+            8600237
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351300,
+        "copies": 3,
+        "matched": [
+          8600237
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600237
+          ],
+          "2": [
+            8600237
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600237
+          ],
+          "12": [
+            8600237
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351400,
+        "copies": 1,
+        "matched": [
+          8600239
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600239
+          ],
+          "2": [
+            8600239
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600239
+          ],
+          "12": [
+            8600239
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351400,
+        "copies": 3,
+        "matched": [
+          8600239
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600239
+          ],
+          "2": [
+            8600239
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600239
+          ],
+          "12": [
+            8600239
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351500,
+        "copies": 1,
+        "matched": [
+          8600241
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600241
+          ],
+          "2": [
+            8600241
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600241
+          ],
+          "12": [
+            8600241
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351500,
+        "copies": 3,
+        "matched": [
+          8600241
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600241
+          ],
+          "2": [
+            8600241
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600241
+          ],
+          "12": [
+            8600241
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351700,
+        "copies": 1,
+        "matched": [
+          8600245
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600245
+          ],
+          "2": [
+            8600245
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600245
+          ],
+          "12": [
+            8600245
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351700,
+        "copies": 3,
+        "matched": [
+          8600245
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600245
+          ],
+          "2": [
+            8600245
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600245
+          ],
+          "12": [
+            8600245
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351800,
+        "copies": 1,
+        "matched": [
+          8600247
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600247
+          ],
+          "2": [
+            8600247
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600247
+          ],
+          "12": [
+            8600247
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351800,
+        "copies": 3,
+        "matched": [
+          8600247
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600247
+          ],
+          "2": [
+            8600247
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600247
+          ],
+          "12": [
+            8600247
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351900,
+        "copies": 1,
+        "matched": [
+          8600249
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600249
+          ],
+          "2": [
+            8600249
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600249
+          ],
+          "12": [
+            8600249
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7351900,
+        "copies": 3,
+        "matched": [
+          8600249
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600249
+          ],
+          "2": [
+            8600249
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600249
+          ],
+          "12": [
+            8600249
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352000,
+        "copies": 1,
+        "matched": [
+          8600251
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600251
+          ],
+          "2": [
+            8600251
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600251
+          ],
+          "12": [
+            8600251
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352000,
+        "copies": 3,
+        "matched": [
+          8600251
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600251
+          ],
+          "2": [
+            8600251
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600251
+          ],
+          "12": [
+            8600251
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352100,
+        "copies": 1,
+        "matched": [
+          8600253
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600253
+          ],
+          "2": [
+            8600253
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600253
+          ],
+          "12": [
+            8600253
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352100,
+        "copies": 3,
+        "matched": [
+          8600253
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600253
+          ],
+          "2": [
+            8600253
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600253
+          ],
+          "12": [
+            8600253
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352200,
+        "copies": 1,
+        "matched": [
+          8600255
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600255
+          ],
+          "2": [
+            8600255
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600255
+          ],
+          "12": [
+            8600255
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352200,
+        "copies": 3,
+        "matched": [
+          8600255
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600255
+          ],
+          "2": [
+            8600255
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600255
+          ],
+          "12": [
+            8600255
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352300,
+        "copies": 1,
+        "matched": [
+          8600257
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600257
+          ],
+          "2": [
+            8600257
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600257
+          ],
+          "12": [
+            8600257
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352300,
+        "copies": 3,
+        "matched": [
+          8600257
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600257
+          ],
+          "2": [
+            8600257
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600257
+          ],
+          "12": [
+            8600257
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352400,
+        "copies": 1,
+        "matched": [
+          8600259
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600259
+          ],
+          "2": [
+            8600259
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600259
+          ],
+          "12": [
+            8600259
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352400,
+        "copies": 3,
+        "matched": [
+          8600259
+        ],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [
+            8600259
+          ],
+          "2": [
+            8600259
+          ],
+          "3": [],
+          "4": [],
+          "11": [
+            8600259
+          ],
+          "12": [
+            8600259
+          ]
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352500,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352500,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352600,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352600,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352700,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352700,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352800,
+        "copies": 1,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      },
+      {
+        "effect": 7352800,
+        "copies": 3,
+        "matched": [],
+        "mismatched": [],
+        "kinds": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "11": [],
+          "12": []
+        },
+        "excludedFlag": [],
+        "excludedCategory": []
+      }
+    ],
+    "timing": [
+      {
+        "effect": 7340000,
+        "copies": 1,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7340000,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7340000,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7340000,
+        "copies": 3,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7340000,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7340000,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7342400,
+        "copies": 1,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7342400,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7342400,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7342400,
+        "copies": 3,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7342400,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7342400,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              -15.0
+            ],
+            "fp": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7350000,
+        "copies": 1,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7350000,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7350000,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7350000,
+        "copies": 3,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7350000,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7350000,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7352400,
+        "copies": 1,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7352400,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7352400,
+        "copies": 1,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7352400,
+        "copies": 3,
+        "continuous": false,
+        "hitEvery": null,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7352400,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 12,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 73,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 145,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 217,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 7352400,
+        "copies": 3,
+        "continuous": true,
+        "hitEvery": 1,
+        "fps": 60,
+        "restores": [
+          {
+            "frame": 1,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 63,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 125,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          },
+          {
+            "frame": 187,
+            "hp": [
+              0.0,
+              0.0
+            ],
+            "fp": [
+              2,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "mixed": [
+      {
+        "copies": 1,
+        "leaves": [
+          8600111,
+          8600211
+        ],
+        "hp": [
+          0.0,
+          -15.0
+        ],
+        "fp": [
+          2,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "leaves": [
+          8600111,
+          8600211
+        ],
+        "hp": [
+          0.0,
+          -15.0
+        ],
+        "fp": [
+          2,
+          0
+        ]
+      }
+    ],
+    "reapplication": [
+      {
+        "leaf": 8600105,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600105,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600105,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -4.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600106,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600106,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600106,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -6.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600107,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600107,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600107,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -8.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600111,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600111,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600111,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600113,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600113,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600113,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600115,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600115,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600115,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600117,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600117,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600117,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600119,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600119,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600119,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600121,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600121,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600121,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600123,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600123,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600123,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600125,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600125,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600125,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600127,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600127,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600127,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600129,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600129,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600129,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600131,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600131,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600131,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600133,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600133,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600133,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600135,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600135,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600135,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600137,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600137,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600137,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600139,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600139,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600139,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600141,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600141,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600141,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600145,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600145,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600145,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600147,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600147,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600147,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600149,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600149,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600149,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600151,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600151,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600151,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600153,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600153,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600153,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600155,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600155,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600155,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600157,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600157,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600157,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600159,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600159,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600159,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600161,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600161,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600161,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600163,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600163,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600163,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600165,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600165,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600165,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600167,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600167,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600167,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          -15.0
+        ],
+        "afterExpiryFp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 8600205,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600205,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600205,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          1,
+          0
+        ]
+      },
+      {
+        "leaf": 8600206,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600206,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600206,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600207,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600207,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600207,
+            "lifetime": 0.1,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          3,
+          0
+        ]
+      },
+      {
+        "leaf": 8600211,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600211,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600211,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600213,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600213,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600213,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600215,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600215,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600215,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600217,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600217,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600217,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600219,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600219,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600219,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600221,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600221,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600221,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600223,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600223,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600223,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600225,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600225,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600225,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600227,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600227,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600227,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600229,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600229,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600229,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600231,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600231,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600231,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600233,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600233,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600233,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600235,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600235,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600235,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600237,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600237,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600237,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600239,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600239,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600239,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600241,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600241,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600241,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600245,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600245,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600245,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600247,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600247,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600247,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600249,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600249,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600249,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600251,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600251,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600251,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600253,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600253,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600253,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600255,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600255,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600255,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600257,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600257,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600257,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600259,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600259,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600259,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600261,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600261,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600261,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600263,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600263,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600263,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600265,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600265,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600265,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      },
+      {
+        "leaf": 8600267,
+        "rejectedResult": 4294967294,
+        "before": [
+          {
+            "id": 8600267,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "after": [
+          {
+            "id": 8600267,
+            "lifetime": 0.8,
+            "flags": 8
+          }
+        ],
+        "afterExpiryHp": [
+          0.0,
+          0.0
+        ],
+        "afterExpiryFp": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "E6D630 unique actual AtkParam_Pc/10000 row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual EquipParamWeapon row lookup",
+    "EA9A60 empty auxiliary animation-reference lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "nativeOnlyTypeFailures": [
+    7342500,
+    7342600,
+    7342700,
+    7342800,
+    7352500,
+    7352600,
+    7352700,
+    7352800
+  ],
+  "gameplayVerified": false,
+  "mmvDllsExecuted": false
+}

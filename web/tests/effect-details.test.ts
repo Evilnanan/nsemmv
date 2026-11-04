@@ -13,10 +13,51 @@ import discovery from "../../data/effect-discovery-evidence.json";
 import lifecycle from "../../data/effect-lifecycle-evidence.json";
 import recovery from "../../data/effect-recovery-evidence.json";
 import executorRecovery from "../../data/effect-executor-recovery-evidence.json";
+import weaponRecovery from "../../data/effect-weapon-recovery-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("filters weapon recovery with actual source weapons and rejects duplicate restores before expiry", () => {
+    for (const f of weaponRecovery.families) {
+      const detail = effectDetail(f.effect)!;
+      expect(detail.stacking).toBe(f.nativeTypeAccepted ? "不可叠加" : "待确认");
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.blocks[0].restrictions.join()).toContain("连续命中不会延长间隔");
+      expect(detail.blocks[0].restrictions.join()).not.toContain("1.1");
+      if (!f.nativeTypeAccepted) expect(detail.notes).toContain("实际触发待确认。");
+      for (const r of weaponRecovery.checks.filter.filter((r) => r.effect === f.effect)) {
+        expect(r.matched).toEqual(f.nativeTypeAccepted ? [f.leaf] : []);
+        expect(r.mismatched).toEqual([]);
+        expect(r.excludedFlag).toEqual([]);
+        expect(r.excludedCategory).toEqual([]);
+      }
+    }
+    expect(weaponRecovery.nativeOnlyTypeFailures).toEqual([
+      7342500, 7342600, 7342700, 7342800, 7352500, 7352600, 7352700, 7352800,
+    ]);
+    expect(weaponRecovery.checks.reapplication).toHaveLength(62);
+    for (const r of weaponRecovery.checks.reapplication) {
+      expect(r.rejectedResult).toBe(0xfffffffe);
+      expect(r.after).toEqual(r.before);
+      expect(evidence.recoveryTiming[String(r.leaf) as keyof typeof evidence.recoveryTiming].repeatedApplication).toBe("ignored");
+    }
+    for (const r of weaponRecovery.checks.timing) {
+      expect(r.restores).toHaveLength(r.continuous ? 4 : 1);
+      const single = weaponRecovery.checks.timing.find((c) => c.effect === r.effect && c.hitEvery === r.hitEvery && c.copies === 1)!;
+      expect(r.restores).toEqual(single.restores);
+    }
+    for (const r of weaponRecovery.checks.mixed) {
+      expect(r.hp).toEqual([0, -15]);
+      expect(r.fp).toEqual([2, 0]);
+    }
+    expect(research.weaponRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-weapon-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(weaponRecovery.gameplayVerified).toBe(false);
+    expect(weaponRecovery.mmvDllsExecuted).toBe(false);
+  });
   it("recovers once per Executor unlock and re-arms through the actual reset chain", () => {
     const detail = effectDetail(7034500)!;
     expect(detail.blocks[0].values).toEqual([["HP 恢复", "最大值的 5% + 100"]]);
@@ -758,8 +799,10 @@ describe("MMV effect details", () => {
     expect(once.accumulatorAfterNewAttacks).toBe(7);
     const hit = effectDetail(7350000)!.blocks[0];
     expect(hit.duration).toBeNull();
-    expect(hit.restrictions.join()).toContain("1 秒内再次触发只延长有效期");
-    expect(hit.restrictions.join()).toContain("约每 1.1 秒恢复一次");
+    expect(hit.restrictions.join()).toContain("约 1 秒内只触发一次");
+    expect(hit.restrictions.join()).toContain("连续命中不会延长间隔");
+    // Direct 511700 timer experiments are retained, but actual reinsertion
+    // never reaches that function for these category-zero leaves.
     const refreshed = evidence.timing.find(
       (r) => r.id === 8600211 && r.refreshAt === 0.2,
     )!;

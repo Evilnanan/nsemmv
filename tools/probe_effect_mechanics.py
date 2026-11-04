@@ -455,7 +455,9 @@ for id in snapshot['spells']:
     if not examples or (row['stateInfo'] == 304 and row['accumuVal'] != -999):
         continue
     recovery_timing[id] = dict(lifetime=round(row['effectEndurance'], 6), interval=round(row['motionInterval'], 6),
-        repeatedApplication='independent' if row['spCategory'] == 10 else 'refresh',
+        # Category 0 rejects reinsertion before reaching 511700; audited by
+        # probe_weapon_recovery through the complete native insertion path.
+        repeatedApplication='independent' if row['spCategory'] == 10 else ('ignored' if row['spCategory'] == 0 else 'refresh'),
         resetsAccumulator=row['stateInfo'] == 304, exemplar=examples[0]['id'])
     if conditional:
         recovery_timing[id]['requiresState'] = 2308

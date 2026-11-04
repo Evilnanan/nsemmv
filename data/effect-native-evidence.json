@@ -18101,434 +18101,434 @@
     "8600105": {
       "lifetime": 0.3,
       "interval": 0.4,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600105
     },
     "8600106": {
       "lifetime": 0.3,
       "interval": 0.4,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600105
     },
     "8600107": {
       "lifetime": 0.3,
       "interval": 0.4,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600105
     },
     "8600111": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600113": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600115": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600117": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600119": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600121": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600123": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600125": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600127": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600129": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600131": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600133": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600135": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600137": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600139": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600141": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600145": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600147": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600149": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600151": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600153": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600155": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600157": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600159": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600161": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600163": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600165": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600167": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600205": {
       "lifetime": 0.3,
       "interval": 0.4,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600105
     },
     "8600206": {
       "lifetime": 0.3,
       "interval": 0.4,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600105
     },
     "8600207": {
       "lifetime": 0.3,
       "interval": 0.4,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600105
     },
     "8600211": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600213": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600215": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600217": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600219": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600221": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600223": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600225": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600227": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600229": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600231": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600233": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600235": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600237": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600239": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600241": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600245": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600247": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600249": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600251": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600253": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600255": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600257": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600259": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600261": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600263": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600265": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
     "8600267": {
       "lifetime": 1,
       "interval": 1.1,
-      "repeatedApplication": "refresh",
+      "repeatedApplication": "ignored",
       "resetsAccumulator": false,
       "exemplar": 8600111
     },
