@@ -40,6 +40,7 @@ import successiveAttack from "../../data/effect-successive-attack-evidence.json"
 import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
+import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -57,6 +58,37 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows the feint parry window separately from the longer cancel window", () => {
+    const detail = effectDetail(7036710)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不延长弹反窗口");
+    expect(detail.blocks[0].values).toEqual([["弹反窗口", "动作第 0.13～0.27 秒"]]);
+    expect(detail.blocks[0].restrictions).toEqual(["刺剑／重刺剑"]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    for (const row of scholarFeint.checks.rawEvents) {
+      const attack = row.events.find(e => e.type === 1)!;
+      const cancel = row.events.find(e => e.type === 0 && e.payload.startsWith("12000000"))!;
+      expect(attack.end - attack.start).toBeCloseTo(4 / 30);
+      expect(cancel.end).toBeGreaterThan(attack.end);
+    }
+    for (const row of scholarFeint.checks.dispatch) {
+      if (row.type === 1) {
+        expect(!!row.request).toBe(!!row.copies);
+        if (row.request) {
+          expect(row.request.kind).toBe(64);
+          expect(row.request.behavior).toBe(row.weapon === 5000000 ? 100500591 : 100600591);
+          expect(row.request.timeOffset).toBe(0);
+        }
+      } else expect(row.flags).toBe(row.copies ? (row.code === 18 ? 0x40 : 0x4000000000) : 0);
+    }
+    for (const row of scholarFeint.checks.script)
+      expect(!!row.event).toBe(row.hero === 9 && [15, 16].includes(row.category) && !!row.pressed && !!row.window);
+    expect(scholarFeint.gameplayVerified).toBe(false);
+    expect(research.scholarFeintEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-scholar-feint-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates ghostflame frostbite onset from its lasting vulnerability and honors correction flags", () => {
     const detail = effectDetail(7011200)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1300,7 +1332,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(541);
+    expect(research.coverage.withNumericFields).toBe(542);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
