@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 611,
-    "withNumericFields": 538,
+    "withDetails": 612,
+    "withNumericFields": 539,
     "withMechanicsOnly": 38,
-    "nativeStacking": 487,
+    "nativeStacking": 488,
     "catalog": 2241,
-    "catalogWithDetails": 2054
+    "catalogWithDetails": 2055
   },
   "effects": {
     "0": {
@@ -11926,15 +11926,17 @@
       "states": [
         2061
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7036401
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "scholar-tether"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理"
       ],
       "gameplayVerified": false
     },
@@ -49615,6 +49617,7 @@
   "heroAdjustmentEvidenceSha256": "ad1953dee5f57cd47fbec1a9a3f24e4c7a30b660e6db86668d455d69ecabc4a6",
   "successiveRecoveryEvidenceSha256": "9702067e94660e569cacfe18f852143558149ee3b6d5a031d11d435fad9221ed",
   "successiveAttackEvidenceSha256": "369657f4fbc9bf8ca0204c48d191eeea639b4f9a95addbb53de533f8f50dfea4",
+  "scholarTetherEvidenceSha256": "27db505921ca4ff3a6bccae33ceb04f3056d290e8da92c436bddeffb49cd5108",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

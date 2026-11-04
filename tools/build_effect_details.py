@@ -274,6 +274,12 @@ assert successive_attack['schema'] == 1 and successive_attack['regulationSha256'
 assert successive_attack['exeSha256'] == evidence['exeSha256'] and not successive_attack['gameplayVerified']
 assert successive_attack['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in successive_attack['checks'].items()} == dict(selection=12, threshold=11, multipliers=32, kinds=52, markers=20, lifecycle=6, mixed=2)
+scholar_tether_path = ROOT / 'data/effect-scholar-tether-evidence.json'
+scholar_tether = json.loads(scholar_tether_path.read_text())
+assert scholar_tether['schema'] == 1 and scholar_tether['regulationSha256'] == catalog['regulationSha256']
+assert scholar_tether['exeSha256'] == evidence['exeSha256'] and not scholar_tether['gameplayVerified']
+assert scholar_tether['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in scholar_tether['checks'].items()} == dict(dispatch=8, projectile=3, damage=36, unlink=12, late=6, repeat=6)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -414,6 +420,8 @@ if args.extract:
                 needed.update(map(int, duchess_ultimate['rows']))
             if root == guardian_shock['root']:
                 needed.update(map(int, guardian_shock['rows']))
+            if root == scholar_tether['root']:
+                needed.update(map(int, scholar_tether['rows']))
             if root == wylder_bleed['root']:
                 needed.add(wylder_bleed['leaf'])
             if root == ironeye_poison['root']:
@@ -652,6 +660,7 @@ STACKING_RULES = {
     'hero-adjustment': ('不可叠加', '同一词条只生效一次；不同词条的增减相加', ['hero-adjustment']),
     'successive-recovery': ('可叠加', '恢复量相加；累积衰减也叠加', ['successive-recovery']),
     'successive-attack': ('不可叠加', '重复装备不增加增伤或累积速度', ['successive-attack']),
+    'scholar-tether': ('不可叠加', '重复装备不增加单次伤害', ['scholar-tether']),
     'periodic-hp-recovery': ('可叠加', '恢复量相加，各自计时', ['periodic-hp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -1064,6 +1073,15 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('增伤逐档累积；停止攻击后逐渐衰退。')
         rule = 'successive-attack'
+    if int(id) == scholar_tether['root']:
+        assert list(effect['roots'].values()) == [scholar_tether['root']] and effect['runtimeExclusive'] == -1
+        r = source['spells'][str(scholar_tether['leaf'])]
+        assert r['changeHpPoint'] == 15 and r['changeHpRate'] == 0
+        assert r['effectEndurance'] == 20 and r['motionInterval'] == 1 and r['invocationConditionsStateChange1'] == 2222
+        blocks = [dict(source=scholar_tether['leaf'], phase='连结期间', linked=True,
+                       values=[['HP 伤害', '15 点／次']], restrictions=['仅连结期间计时'], scope=[], duration=20, interval=1)]
+        notes.extend(['未连结时暂停；连结后继续剩余时间。', '多次绝招施加的持续伤害各自计时，可叠加。'])
+        rule = 'scholar-tether'
     if id in passive_resource['effects']:
         root = passive_resource['effects'][id]
         assert list(effect['roots'].values()) == [root] and effect['runtimeExclusive'] == -1
@@ -1423,9 +1441,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1469,6 +1487,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各攻击命中标记的实际投递与权重、最终当前 HP／FP 写入与恢复修正、满资源时处理、死亡／重载及多人交互')
     if rules[id] == 'successive-attack':
         questions.append('各攻击命中标记的实际投递与权重、完整攻击上下文和动作中断、实时调度／最终伤害、死亡／重载及多人交互')
+    if rules[id] == 'scholar-tether':
+        questions.append('完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理')
     if rules[id] == 'spell-family':
         questions.append('完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取')
     if rules[id] == 'undertaker-contact':
@@ -1572,6 +1592,7 @@ research['guardianShockwaveEvidenceSha256'] = hashlib.sha256(guardian_shock_path
 research['heroAdjustmentEvidenceSha256'] = hashlib.sha256(hero_adjustment_path.read_bytes()).hexdigest()
 research['successiveRecoveryEvidenceSha256'] = hashlib.sha256(successive_recovery_path.read_bytes()).hexdigest()
 research['successiveAttackEvidenceSha256'] = hashlib.sha256(successive_attack_path.read_bytes()).hexdigest()
+research['scholarTetherEvidenceSha256'] = hashlib.sha256(scholar_tether_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()

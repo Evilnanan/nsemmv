@@ -37,6 +37,7 @@ import guardianShockwave from "../../data/effect-guardian-shockwave-evidence.jso
 import heroAdjustment from "../../data/effect-hero-adjustment-evidence.json";
 import successiveRecovery from "../../data/effect-successive-recovery-evidence.json";
 import successiveAttack from "../../data/effect-successive-attack-evidence.json";
+import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -54,6 +55,42 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Scholar tether eligibility time from wall time and repeated ultimate applications", () => {
+    const detail = effectDetail(7036400)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加单次伤害");
+    expect(detail.blocks[0].values).toEqual([["HP 伤害", "15 点／次"]]);
+    expect(detail.blocks[0].duration).toBe(20);
+    expect(detail.blocks[0].interval).toBe(1);
+    expect(detail.blocks[0].restrictions).toEqual(["仅连结期间计时"]);
+    expect(detail.notes).toEqual(["未连结时暂停；连结后继续剩余时间。", "多次绝招施加的持续伤害各自计时，可叠加。"]);
+    for (const row of scholarTether.checks.dispatch)
+      expect(row.requests).toHaveLength(row.copies && row.active ? 1 : 0);
+    for (const row of scholarTether.checks.unlink) {
+      expect(row.paused).toBe(row.before);
+      expect(row.after).toBeLessThan(row.before);
+      expect(row.unlinkEffects).toEqual([row.reason ? 708120 : 708121]);
+      expect(row.rejoinEffects).toEqual([708110]);
+    }
+    for (const row of scholarTether.checks.repeat) {
+      expect(row.windowDamage).toBe(row.gap < 20 ? 60 : 30);
+      expect(row.nodePeak).toBe(row.gap < 20 ? 2 : 1);
+      expect(row.remaining).toEqual([]);
+    }
+    for (const row of scholarTether.checks.damage) {
+      if (!row.marker) {
+        expect(row.hits).toEqual([]);
+        expect(row.remaining.every(n => n.lifetime === 20)).toBe(true);
+      }
+      for (const hit of row.hits)
+        expect(hit.packet).toEqual([-15 * row.copies, 0, -15 * row.copies, 0, -15 * row.copies, 0, 0]);
+    }
+    expect(scholarTether.gameplayVerified).toBe(false);
+    expect(research.scholarTetherEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-scholar-tether-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("shows cumulative successive-attack tiers without treating the decay helper as another damage tier", () => {
     const detail = effectDetail(7037600)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1196,7 +1233,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(538);
+    expect(research.coverage.withNumericFields).toBe(539);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
