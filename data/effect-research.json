@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 603,
-    "withNumericFields": 532,
+    "withDetails": 605,
+    "withNumericFields": 534,
     "withMechanicsOnly": 36,
-    "nativeStacking": 420,
+    "nativeStacking": 422,
     "catalog": 2241,
-    "catalogWithDetails": 2046
+    "catalogWithDetails": 2048
   },
   "effects": {
     "0": {
@@ -10110,15 +10110,18 @@
       "states": [
         2082
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7011402,
+        7011401
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "guardian-ultimate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整绝招动作／发射位置／碰撞及范围重入、同帧多次损伤的处理顺序、其他类别 201 保护的覆盖关系、最终损伤及多人／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -10131,15 +10134,18 @@
       "states": [
         2082
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7011402,
+        7011401
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "guardian-ultimate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整绝招动作／发射位置／碰撞及范围重入、同帧多次损伤的处理顺序、其他类别 201 保护的覆盖关系、最终损伤及多人／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49484,6 +49490,7 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
   "raiderSkillEvidenceSha256": "853f246691019d573f3ea20ef8fd0f7c234d2225221f6dfdb3eb78d182d5cb7f",
   "duchessPoiseEvidenceSha256": "7583ef9521d733d09e15bf3d39eef1076010a4b3189b9b0ec5d622f0c7c5c242",

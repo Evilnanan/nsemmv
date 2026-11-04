@@ -200,6 +200,13 @@ assert wylder_bleed['exeSha256'] == evidence['exeSha256'] and not wylder_bleed['
 assert wylder_bleed['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in wylder_bleed['checks'].items()} == dict(dispatch=32, onset=48, damage=7, repeat=3, lifetime=3)
 
+guardian_ultimate_path = ROOT / 'data/effect-guardian-ultimate-evidence.json'
+guardian_ultimate = json.loads(guardian_ultimate_path.read_text())
+assert guardian_ultimate['schema'] == 1 and guardian_ultimate['regulationSha256'] == catalog['regulationSha256']
+assert guardian_ultimate['exeSha256'] == evidence['exeSha256'] and not guardian_ultimate['gameplayVerified']
+assert guardian_ultimate['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in guardian_ultimate['checks'].items()} == dict(dispatch=32, target=12, numeric=15, damage=30, refresh=24, lifetime=6, replenishment=6)
+
 raider_growth_path = ROOT / 'data/effect-raider-growth-evidence.json'
 raider_growth = json.loads(raider_growth_path.read_text())
 assert raider_growth['schema'] == 1 and raider_growth['regulationSha256'] == catalog['regulationSha256']
@@ -313,6 +320,8 @@ if args.extract:
                 needed.add(protection['leaf'])
             if root in tenacity['roots']:
                 needed.update(map(int, tenacity['rows']))
+            if root == guardian_ultimate['root']:
+                needed.update(guardian_ultimate['leaves'])
             if root == raider_growth['root']:
                 needed.update([raider_growth['seed']] + raider_growth['ladder'])
             if root == raider_skill['root']:
@@ -544,6 +553,7 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'guardian-ultimate': ('不可叠加', '再次施加刷新时长', ['guardian-ultimate']),
     'raider-growth': ('不可叠加', '重复装备不加快成长，也不提高上限', ['raider-growth']),
     'raider-skill': ('不可叠加', '重复装备不增加增益或负面效果', ['raider-skill']),
     'duchess-poise': ('不可叠加', '再次施加刷新时长', ['duchess-poise']),
@@ -870,6 +880,18 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if guardian_ultimate['root'] in effect['roots'].values():
+        assert source['spells']['7011401']['neutralDamageCutRate'] == .1
+        assert source['spells']['7011402']['neutralDamageCutRate'] == .8
+        assert all(a['radius'] == 15 for a in guardian_ultimate['assets'])
+        blocks = [dict(source=7011402, phase='绝招落地／维持时', linked=True,
+                       values=[['承伤倍率', '-20%']], restrictions=['自身及周围友方 · 半径 15 米'],
+                       scope=[], duration=30, interval=None),
+                  dict(source=7011401, phase='单次保护（受损后消耗）', linked=True,
+                       values=[['承伤倍率', '-90%'], ['保护最长保留', '60 秒']],
+                       restrictions=['自身及周围友方 · 半径 15 米'], scope=[], duration=None, interval=None)]
+        notes.extend(['两层同时存在时合计减伤 92%。', '维持绝招时约每 0.3 秒重新施加，受损消耗的保护可再次获得。'])
+        rule = 'guardian-ultimate'
     if raider_growth['root'] in effect['roots'].values():
         ladder = raider_growth['ladder']
         assert len(ladder) == 10 and source['spells'][str(ladder[0])]['physicsAttackRate'] == 1.03
@@ -1187,9 +1209,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1207,6 +1229,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if rules[id] == 'executor-tenacity':
         questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
+    if rules[id] == 'guardian-ultimate':
+        questions.append('完整绝招动作／发射位置／碰撞及范围重入、同帧多次损伤的处理顺序、其他类别 201 保护的覆盖关系、最终损伤及多人／重载交互')
     if rules[id] == 'raider-growth':
         questions.append('自身判定球的完整生成／碰撞与命中去重、动作中断及事件重复调度、保存类别 9 的死亡／重载持久性、多人交互')
     if rules[id] == 'raider-skill':
@@ -1292,6 +1316,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()
 research['raiderSkillEvidenceSha256'] = hashlib.sha256(raider_skill_path.read_bytes()).hexdigest()
 research['duchessPoiseEvidenceSha256'] = hashlib.sha256(duchess_poise_path.read_bytes()).hexdigest()

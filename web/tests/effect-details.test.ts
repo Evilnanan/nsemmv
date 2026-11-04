@@ -25,6 +25,7 @@ import tenacity from "../../data/effect-executor-tenacity-evidence.json";
 import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
 import raiderSkill from "../../data/effect-raider-skill-evidence.json";
 import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
+import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
 import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
 import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
@@ -40,6 +41,28 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows both Guardian protections for self and allies and explains the expendable layer", () => {
+    for (const id of [7011400, 7011401]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks.map(b => b.values)).toEqual([
+        [["承伤倍率", "-20%"]], [["承伤倍率", "-90%"], ["保护最长保留", "60 秒"]],
+      ]);
+      expect(detail.blocks.map(b => b.duration)).toEqual([30, null]);
+      expect(detail.blocks.every(b => b.restrictions.includes("自身及周围友方 · 半径 15 米"))).toBe(true);
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.notes).toContain("两层同时存在时合计减伤 92%。");
+    }
+    for (const row of guardianUltimate.checks.target.filter(r => r.leaf !== 7033101))
+      expect(row.allowed).toBe(["self", "friendly"].includes(row.relation));
+    for (const row of guardianUltimate.checks.damage)
+      expect(row.remaining.includes(7011401)).toBe(row.active.includes(7011401) && row.damage <= 0);
+    for (const row of guardianUltimate.checks.replenishment)
+      expect(row.changes.map(c => Math.round(c.rate * 100))).toEqual([8, 80, 8, 80]);
+    expect(guardianUltimate.gameplayVerified).toBe(false);
+    expect(research.guardianUltimateEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guardian-ultimate-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("caps Raider finisher growth at ten multiplicative steps without treating duplicate equipment as growth", () => {
     for (const id of [7031400, 7031401]) {
       const detail = effectDetail(id)!;
@@ -845,7 +868,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(532);
+    expect(research.coverage.withNumericFields).toBe(534);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
