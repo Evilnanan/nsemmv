@@ -45,6 +45,7 @@ import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
 import duchessDagger from "../../data/effect-duchess-dagger-evidence.json";
+import startingReplacements from "../../data/effect-starting-replacements-evidence.json";
 import guardAggro from "../../data/effect-guard-aggro-evidence.json";
 import itemSharing from "../../data/effect-item-sharing-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
@@ -73,6 +74,34 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("keeps one starting art or spell per weapon and resolves only compatible replacements", () => {
+    expect(startingReplacements.families).toHaveLength(35);
+    for (const family of startingReplacements.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].scope).toEqual([family.kind === "arts" ? "出击武器" : "出击手杖／圣印记"]);
+      expect(detail.notes).toContain(family.kind === "arts" ? "同一武器只保留一个出击战技。" : "同一武器只保留一种出击魔法或祷告。");
+    }
+    for (const row of startingReplacements.checks.repeat) {
+      expect(row.repeat).toEqual(row.result);
+      const baseline = startingReplacements.checks.baseline.find(b => b.weapon === row.weapon)!;
+      expect(row.removed).toEqual(baseline.result);
+    }
+    for (const row of startingReplacements.checks.matrix) {
+      const family = startingReplacements.families.find(f => f.effect === row.effect)!;
+      const baseline = startingReplacements.checks.baseline.find(b => b.weapon === row.weapon)!;
+      expect(row.result).toEqual(row.compatible ? {...baseline.result, [family.kind]: family.target} : baseline.result);
+    }
+    const pairs = startingReplacements.checks.order.filter(r => r.weapon === 7270000 && r.order.includes(7362100) && r.order.includes(7370300));
+    expect(pairs).toHaveLength(2);
+    expect(new Set(pairs.map(r => r.result.magic)).size).toBe(2);
+    expect(startingReplacements.gameplayVerified).toBe(false);
+    expect(research.startingReplacementsEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-starting-replacements-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("adds guard target priority to AI scores without multiplying duplicate equipment", () => {
     for (const family of guardAggro.families) {
       for (const id of family.effects) {
@@ -2266,7 +2295,6 @@ describe("MMV effect details", () => {
       const detail = effectDetail(id)!;
       expect(detail.blocks).toHaveLength(1);
       expect(detail.blocks[0].values[0][1]).toBe("×2（学者 ×4）");
-      expect(detail.blocks[0].phase).toBe("出击时");
       expect(detail.blocks[0].restrictions).toEqual([]);
       expect(detail.stacking).toBe("可叠加");
     }

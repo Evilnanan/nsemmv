@@ -8,7 +8,7 @@
     "withDetails": 634,
     "withNumericFields": 560,
     "withMechanicsOnly": 39,
-    "nativeStacking": 512,
+    "nativeStacking": 547,
     "catalog": 2241,
     "catalogWithDetails": 2079
   },
@@ -14779,12 +14779,13 @@
         7122700
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14801,12 +14802,13 @@
         7122800
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14823,12 +14825,13 @@
         7122900
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14845,12 +14848,13 @@
         7123000
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14867,12 +14871,13 @@
         7123100
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14889,12 +14894,13 @@
         7123200
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14911,12 +14917,13 @@
         7123300
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14933,12 +14940,13 @@
         7123400
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14955,12 +14963,13 @@
         7123500
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14977,12 +14986,13 @@
         7123600
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -14999,12 +15009,13 @@
         7123700
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15021,12 +15032,13 @@
         7123800
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15043,12 +15055,13 @@
         7123900
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15065,12 +15078,13 @@
         7124000
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15087,12 +15101,13 @@
         7124100
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15109,12 +15124,13 @@
         7124300
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15131,12 +15147,13 @@
         7124400
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15153,12 +15170,13 @@
         7124500
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15175,12 +15193,13 @@
         7124600
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -15197,12 +15216,13 @@
         7124700
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -17868,12 +17888,13 @@
         7360600
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -17890,12 +17911,13 @@
         7360700
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -17912,12 +17934,13 @@
         7360800
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -17934,12 +17957,13 @@
         7360900
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -17956,12 +17980,13 @@
         7361200
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -17978,12 +18003,13 @@
         7361300
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18000,12 +18026,13 @@
         7362100
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18022,12 +18049,13 @@
         7370300
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18044,12 +18072,13 @@
         7370400
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18066,12 +18095,13 @@
         7370600
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18088,12 +18118,13 @@
         7370900
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18110,12 +18141,13 @@
         7370901
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18132,12 +18164,13 @@
         7371500
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18154,12 +18187,13 @@
         7371600
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -18176,12 +18210,13 @@
         7371700
       ],
       "values": "named-replacement",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "starting-replacements"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "多个出击替换词条的优先顺序、角色限制"
+        "原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步"
       ],
       "gameplayVerified": false
     },
@@ -49712,6 +49747,7 @@
   "guardianHalberdEvidenceSha256": "2e418db4348e384797129c1508651c9e3bbdde74758d7baff09c6f8c3be6887d",
   "wylderFollowupEvidenceSha256": "b31a489e45816d4c96d41e089b982d30609c9dc33f651b058716c8f63ea7e1bc",
   "duchessDaggerEvidenceSha256": "cf5e0374acd830e8f71519161b844bd4a27b07417ab151b86996ba1156b1c2bb",
+  "startingReplacementsEvidenceSha256": "0cdba060d9328349958a2726899305816a54fb8f31ccba5efed83c3a0559e701",
   "guardAggroEvidenceSha256": "e412c1bcf2be396d4e8359f9336091dcc02ceffa4e50e72ede398a93910d55e8",
   "itemSharingEvidenceSha256": "29fe54433e28c302ab5f8f8b4badbcb6ff1c7f2268e676a1401b91821a278845",
   "scholarTetherEvidenceSha256": "27db505921ca4ff3a6bccae33ceb04f3056d290e8da92c436bddeffb49cd5108",

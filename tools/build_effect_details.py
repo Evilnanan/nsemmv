@@ -336,6 +336,14 @@ assert guard_aggro['exeSha256'] == evidence['exeSha256'] and not guard_aggro['ga
 assert guard_aggro['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in guard_aggro['checks'].items()} == dict(script=64, graph=6, dispatch=117, qualification=12, timer=12, score=24)
 guard_aggro_families = {str(id): f for f in guard_aggro['families'] for id in f['effects']}
+starting_replacements_path = ROOT / 'data/effect-starting-replacements-evidence.json'
+starting_replacements = json.loads(starting_replacements_path.read_text())
+assert starting_replacements['schema'] == 1 and starting_replacements['regulationSha256'] == catalog['regulationSha256']
+assert starting_replacements['exeSha256'] == evidence['exeSha256'] and not starting_replacements['gameplayVerified']
+assert starting_replacements['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in starting_replacements['checks'].items()} == dict(compatibility=1780, baseline=32, matrix=1085, repeat=105, order=222, scope=10)
+starting_replacement_families = {str(f['effect']): f for f in starting_replacements['families']}
+
 
 ironeye_ultimate_path = ROOT / 'data/effect-ironeye-ultimate-evidence.json'
 ironeye_ultimate = json.loads(ironeye_ultimate_path.read_text())
@@ -805,6 +813,7 @@ STACKING_RULES = {
     'guardian-halberd': ('不可叠加', '重复装备不增加旋风数量或范围', ['guardian-halberd']),
     'wylder-followup': ('不可叠加', '再次触发刷新附魔时长，不叠加数值', ['wylder-followup']),
     'duchess-dagger': ('不可叠加', '重复装备不增加重演比例或触发次数', ['duchess-dagger']),
+    'starting-replacement': ('不可叠加', '相同词条重复无效', ['starting-replacements']),
     'guard-aggro': ('不可叠加', '同类重复装备不增加优先度；再次触发刷新时长', ['guard-aggro']),
     'item-sharing': ('不可叠加', '重复装备不增加共享范围或效果', ['item-sharing']),
     'ironeye-ultimate': ('不可叠加', '重复装备不增加累积或伤害', ['ironeye-ultimate']),
@@ -1270,6 +1279,16 @@ for id, effect in source['effects'].items():
                        values=[['弹反窗口', '动作第 0.13～0.27 秒']], restrictions=['刺剑／重刺剑'],
                        scope=[], duration=None, interval=None)]
         rule = 'scholar-feint'
+    if id in starting_replacement_families:
+        family = starting_replacement_families[id]
+        assert list(effect['roots'].values()) == [family['root']]
+        field = 'startSwordArtsId' if family['kind'] == 'arts' else 'startMagicId'
+        assert source['spells'][str(family['root'])][field] == family['target']
+        assert len(blocks) == 1 and blocks[0]['duration'] is None
+        blocks[0]['scope'] = ['出击武器'] if family['kind'] == 'arts' else ['出击手杖／圣印记']
+        blocks[0]['restrictions'] = ['出击武器', '需符合战技的武器类别'] if family['kind'] == 'arts' else ['出击手杖／圣印记']
+        notes.append('同一武器只保留一个出击战技。' if family['kind'] == 'arts' else '同一武器只保留一种出击魔法或祷告。')
+        rule = 'starting-replacement'
     if id in guard_aggro_families:
         family = guard_aggro_families[id]
         assert list(effect['roots'].values()) == [family['root']]
@@ -1783,7 +1802,7 @@ for id in sorted(source['effects'], key=int):
     if 2102 in states:
         questions.append('完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递')
     if 2105 in states or 2128 in states:
-        questions.append('多个出击替换词条的优先顺序、角色限制')
+        questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
     elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
@@ -1980,6 +1999,7 @@ research['revenantFamilyEvidenceSha256'] = hashlib.sha256(revenant_family_path.r
 research['guardianHalberdEvidenceSha256'] = hashlib.sha256(guardian_halberd_path.read_bytes()).hexdigest()
 research['wylderFollowupEvidenceSha256'] = hashlib.sha256(wylder_followup_path.read_bytes()).hexdigest()
 research['duchessDaggerEvidenceSha256'] = hashlib.sha256(duchess_dagger_path.read_bytes()).hexdigest()
+research['startingReplacementsEvidenceSha256'] = hashlib.sha256(starting_replacements_path.read_bytes()).hexdigest()
 research['guardAggroEvidenceSha256'] = hashlib.sha256(guard_aggro_path.read_bytes()).hexdigest()
 research['itemSharingEvidenceSha256'] = hashlib.sha256(item_sharing_path.read_bytes()).hexdigest()
 research['scholarTetherEvidenceSha256'] = hashlib.sha256(scholar_tether_path.read_bytes()).hexdigest()

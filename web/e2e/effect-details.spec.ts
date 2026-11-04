@@ -35,6 +35,9 @@ async function longPress(page: Page, target: Locator) {
 }
 
 const decodedMechanics = [
+  [7122700, ["出击时", "辉剑圆阵", "出击武器", "需符合战技的武器类别", "不可叠加", "相同词条重复无效", "同一武器只保留一个出击战技"]],
+  [7361200, ["重力球", "出击手杖／圣印记", "不可叠加", "同一武器只保留一种出击魔法或祷告"]],
+  [7370901, ["雷电柱", "出击手杖／圣印记", "不可叠加", "相同词条重复无效"]],
   [7030700, ["防御时", "受敌人攻击优先度", "+450", "4 秒", "不可叠加", "再次触发刷新时长", "优先度合计 +1050"]],
   [7011300, ["能力发动时", "受敌人攻击优先度", "+600", "2 秒", "不可叠加", "同类重复装备不增加优先度", "优先度合计 +1050"]],
   [7011301, ["+600", "2 秒", "不可叠加", "再次触发刷新时长"]],
@@ -154,7 +157,7 @@ for (let offset = 0; offset < decodedMechanics.length; offset += 12) {
         const rect = el.getBoundingClientRect();
         return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
       })).toBe(true);
-      if (id === 7030700 || id === 7011300 || id === 7050100 || id === 7010700 || id === 7020000 || id === 7011600 || id === 7220210 || id === 7220100 || id === 7010500 || id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
+      if (id === 7122700 || id === 7361200 || id === 7030700 || id === 7011300 || id === 7050100 || id === 7010700 || id === 7020000 || id === 7011600 || id === 7220210 || id === 7220100 || id === 7010500 || id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
         await page.screenshot({ path: testInfo.outputPath(`mechanics-${id}.png`) });
       await details.getByRole("button", { name: "关闭词条详情" }).click();
       await expect(details).toHaveCount(0);
