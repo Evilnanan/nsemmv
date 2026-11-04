@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 630,
-    "withNumericFields": 556,
+    "withDetails": 631,
+    "withNumericFields": 557,
     "withMechanicsOnly": 39,
-    "nativeStacking": 508,
+    "nativeStacking": 509,
     "catalog": 2241,
-    "catalogWithDetails": 2075
+    "catalogWithDetails": 2076
   },
   "effects": {
     "0": {
@@ -13057,15 +13057,19 @@
         2014,
         2104
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7050300,
+        7050102,
+        708503
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "item-sharing"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整消耗动作与范围碰撞／队伍关系、学者熟练度增长、正在发作的异常清理、不同食物类别的覆盖与持续时间修正、最终恢复上限、多来源同帧使用与多人／死亡／重载时序"
       ],
       "gameplayVerified": false
     },
@@ -49702,6 +49706,7 @@
   "guardianHalberdEvidenceSha256": "2e418db4348e384797129c1508651c9e3bbdde74758d7baff09c6f8c3be6887d",
   "wylderFollowupEvidenceSha256": "b31a489e45816d4c96d41e089b982d30609c9dc33f651b058716c8f63ea7e1bc",
   "duchessDaggerEvidenceSha256": "cf5e0374acd830e8f71519161b844bd4a27b07417ab151b86996ba1156b1c2bb",
+  "itemSharingEvidenceSha256": "29fe54433e28c302ab5f8f8b4badbcb6ff1c7f2268e676a1401b91821a278845",
   "scholarTetherEvidenceSha256": "27db505921ca4ff3a6bccae33ceb04f3056d290e8da92c436bddeffb49cd5108",
   "ironeyeUltimateEvidenceSha256": "d6f431d0505ee7d18f41cec8542dc78ecf27ca2422890aaa62cd3ac840e8e174",
   "revenantGhostflameEvidenceSha256": "5f813f0c5dceb9c0140327e4d9735cab48f047e4426a26e38db1f6680b735598",

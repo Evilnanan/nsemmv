@@ -35,6 +35,7 @@ async function longPress(page: Page, target: Locator) {
 }
 
 const decodedMechanics = [
+  [7050100, ["共享半径", "15 米", "星光碎片、苔药", "最大值的 30%", "学者强化后 40%", "不可叠加", "也会降低自身收益", "基础观察力 100", "130 变为 121"]],
   [7010700, ["短剑连击最后一击命中时", "重演伤害比例", "40%", "作用半径", "15 米", "不可叠加", "重复装备不增加重演比例或触发次数", "强化技艺的重演伤害词条不提高此效果的重演比例"]],
   [7020000, ["追加攻击时", "火焰基础攻击力", "+20", "20 秒", "对应手持武器", "不可叠加", "再次触发刷新附魔时长", "保留后施加的效果"]],
   [7011600, ["戟蓄力攻击时", "旋风半径", "3 米", "不可叠加", "重复装备不增加旋风数量或范围"]],
@@ -150,7 +151,7 @@ for (let offset = 0; offset < decodedMechanics.length; offset += 12) {
         const rect = el.getBoundingClientRect();
         return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
       })).toBe(true);
-      if (id === 7010700 || id === 7020000 || id === 7011600 || id === 7220210 || id === 7220100 || id === 7010500 || id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
+      if (id === 7050100 || id === 7010700 || id === 7020000 || id === 7011600 || id === 7220210 || id === 7220100 || id === 7010500 || id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
         await page.screenshot({ path: testInfo.outputPath(`mechanics-${id}.png`) });
       await details.getByRole("button", { name: "关闭词条详情" }).click();
       await expect(details).toHaveCount(0);

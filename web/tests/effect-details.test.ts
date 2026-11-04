@@ -45,6 +45,7 @@ import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
 import duchessDagger from "../../data/effect-duchess-dagger-evidence.json";
+import itemSharing from "../../data/effect-item-sharing-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -71,6 +72,29 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("resolves item-sharing branches and distinguishes shared FP from self restoration", () => {
+    const detail = effectDetail(7050100)!;
+    expect(detail.blocks[0].values).toEqual([["共享半径", "15 米"]]);
+    expect(detail.blocks[1].values).toEqual([["我方专注值恢复", "最大值的 30%（学者强化后 40%）"]]);
+    expect(detail.blocks.every(b => b.duration === null && b.interval === null)).toBe(true);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.notes.join(" ")).toContain("普通白银鸟爪共享后也会降低自身收益");
+    for (const row of itemSharing.checks.trigger)
+      expect(row.requests).toHaveLength(Number(Boolean(row.copies)));
+    for (const row of itemSharing.checks.radius) expect(row.radius).toBe(15);
+    for (const row of itemSharing.checks.cure) {
+      expect(row.remaining[row.kind]).toBe(500);
+      expect(row.remaining.filter(v => v === 250)).toHaveLength(6);
+    }
+    for (const row of itemSharing.checks.fp)
+      expect(row.packet).toEqual([Math.trunc(row.maximum * (row.leaf === 7050102 ? 0.3 : 0.4)), 0]);
+    expect(itemSharing.checks.observation.find(r => r.leaf === 3970)!.neutralDisplay).toBe(130);
+    expect(itemSharing.checks.observation.find(r => r.leaf === 7050303)!.neutralDisplay).toBe(121);
+    expect(itemSharing.gameplayVerified).toBe(false);
+    expect(research.itemSharingEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-item-sharing-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("keeps dagger Restage at 40 percent and hides internal marker lifetimes", () => {
     const detail = effectDetail(7010700)!;
     expect(detail.blocks[0].values).toEqual([["重演伤害比例", "40%"], ["作用半径", "15 米"]]);
@@ -1706,7 +1730,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(39);
-    expect(research.coverage.withNumericFields).toBe(556);
+    expect(research.coverage.withNumericFields).toBe(557);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
