@@ -28,6 +28,7 @@ import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
 import undertakerReset from "../../data/effect-undertaker-reset-evidence.json";
 import treasureMap from "../../data/effect-treasure-map-evidence.json";
 import passiveResource from "../../data/effect-passive-resource-evidence.json";
+import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -45,6 +46,29 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("adds duplicate damage ailments and distinguishes their brief rearming window", () => {
+    for (const family of damageAilment.families) {
+      const detail = effectDetail(family.root)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("同种异常的累积量相加");
+      expect(detail.notes).toContain("触发后有短暂间隔，期间受损不会重复累积。");
+      expect(detail.blocks[0].values[0][1]).toBe(`+${family.amount} 点／次`);
+      expect(detail.blocks[0].duration).toBeNull();
+      for (const row of damageAilment.checks.trigger.filter(r => r.root === family.root)) {
+        const fired = row.damage > 0 && !row.excluded;
+        expect(row.remaining).toBe(10000 - (fired ? row.copies * family.amount : 0));
+      }
+      for (const row of damageAilment.checks.window.filter(r => r.root === family.root)) {
+        expect(row.firstRemaining).toBe(10000 - row.copies * family.amount);
+        expect(row.remaining).toBe(10000 - 2 * row.copies * family.amount);
+      }
+    }
+    expect(damageAilment.gameplayVerified).toBe(false);
+    expect(damageAilment.naturalDecayExecuted).toBe(false);
+    expect(research.damageAilmentEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-damage-ailment-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("applies multiplicative passive resource, poise and flask stacking without conflating recovery channels", () => {
     for (const id of [6610400, 6610500, 6610600, 6611400, 6840100, 7001000, 7001001, 7001002, 7001003, 7001004])
       expect(effectDetail(id)!.stacking).toBe("可叠加");

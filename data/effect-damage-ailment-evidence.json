@@ -1,0 +1,2856 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "families": [
+    {
+      "root": 6820000,
+      "bridge": 6820001,
+      "leaf": 6820002,
+      "field": "poizonAttackPower",
+      "channel": 0,
+      "amount": 52
+    },
+    {
+      "root": 6820100,
+      "bridge": 6820101,
+      "leaf": 6820102,
+      "field": "diseaseAttackPower",
+      "channel": 1,
+      "amount": 44
+    },
+    {
+      "root": 6820200,
+      "bridge": 6820201,
+      "leaf": 6820202,
+      "field": "freezeAttackPower",
+      "channel": 4,
+      "amount": 44
+    },
+    {
+      "root": 6820300,
+      "bridge": 6820301,
+      "leaf": 6820302,
+      "field": "bloodAttackPower",
+      "channel": 2,
+      "amount": 44
+    },
+    {
+      "root": 6820400,
+      "bridge": 6820401,
+      "leaf": 6820402,
+      "field": "madnessAttackPower",
+      "channel": 6,
+      "amount": 40
+    },
+    {
+      "root": 6820500,
+      "bridge": 6820501,
+      "leaf": 6820502,
+      "field": "sleepAttackPower",
+      "channel": 5,
+      "amount": 40
+    },
+    {
+      "root": 6820600,
+      "bridge": 6820601,
+      "leaf": 6820602,
+      "field": "curseAttackPower",
+      "channel": 3,
+      "amount": 32
+    }
+  ],
+  "checks": {
+    "trigger": [
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820001,
+          6820002,
+          6820000
+        ],
+        "remaining": 9948
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820001,
+          6820002,
+          6820000
+        ],
+        "remaining": 9948
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820001,
+          6820001,
+          6820002,
+          6820002,
+          6820000,
+          6820000
+        ],
+        "remaining": 9896
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820001,
+          6820001,
+          6820002,
+          6820002,
+          6820000,
+          6820000
+        ],
+        "remaining": 9896
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820001,
+          6820001,
+          6820001,
+          6820002,
+          6820002,
+          6820002,
+          6820000,
+          6820000,
+          6820000
+        ],
+        "remaining": 9844
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820001,
+          6820001,
+          6820001,
+          6820002,
+          6820002,
+          6820002,
+          6820000,
+          6820000,
+          6820000
+        ],
+        "remaining": 9844
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820101,
+          6820102,
+          6820100
+        ],
+        "remaining": 9956
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820101,
+          6820102,
+          6820100
+        ],
+        "remaining": 9956
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820101,
+          6820101,
+          6820102,
+          6820102,
+          6820100,
+          6820100
+        ],
+        "remaining": 9912
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820101,
+          6820101,
+          6820102,
+          6820102,
+          6820100,
+          6820100
+        ],
+        "remaining": 9912
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820101,
+          6820101,
+          6820101,
+          6820102,
+          6820102,
+          6820102,
+          6820100,
+          6820100,
+          6820100
+        ],
+        "remaining": 9868
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820101,
+          6820101,
+          6820101,
+          6820102,
+          6820102,
+          6820102,
+          6820100,
+          6820100,
+          6820100
+        ],
+        "remaining": 9868
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820201,
+          6820202,
+          6820200
+        ],
+        "remaining": 9956
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820201,
+          6820202,
+          6820200
+        ],
+        "remaining": 9956
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820201,
+          6820201,
+          6820202,
+          6820202,
+          6820200,
+          6820200
+        ],
+        "remaining": 9912
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820201,
+          6820201,
+          6820202,
+          6820202,
+          6820200,
+          6820200
+        ],
+        "remaining": 9912
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820201,
+          6820201,
+          6820201,
+          6820202,
+          6820202,
+          6820202,
+          6820200,
+          6820200,
+          6820200
+        ],
+        "remaining": 9868
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820201,
+          6820201,
+          6820201,
+          6820202,
+          6820202,
+          6820202,
+          6820200,
+          6820200,
+          6820200
+        ],
+        "remaining": 9868
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820301,
+          6820302,
+          6820300
+        ],
+        "remaining": 9956
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820301,
+          6820302,
+          6820300
+        ],
+        "remaining": 9956
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820301,
+          6820301,
+          6820302,
+          6820302,
+          6820300,
+          6820300
+        ],
+        "remaining": 9912
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820301,
+          6820301,
+          6820302,
+          6820302,
+          6820300,
+          6820300
+        ],
+        "remaining": 9912
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820301,
+          6820301,
+          6820301,
+          6820302,
+          6820302,
+          6820302,
+          6820300,
+          6820300,
+          6820300
+        ],
+        "remaining": 9868
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820301,
+          6820301,
+          6820301,
+          6820302,
+          6820302,
+          6820302,
+          6820300,
+          6820300,
+          6820300
+        ],
+        "remaining": 9868
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820401,
+          6820402,
+          6820400
+        ],
+        "remaining": 9960
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820401,
+          6820402,
+          6820400
+        ],
+        "remaining": 9960
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820401,
+          6820401,
+          6820402,
+          6820402,
+          6820400,
+          6820400
+        ],
+        "remaining": 9920
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820401,
+          6820401,
+          6820402,
+          6820402,
+          6820400,
+          6820400
+        ],
+        "remaining": 9920
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820401,
+          6820401,
+          6820401,
+          6820402,
+          6820402,
+          6820402,
+          6820400,
+          6820400,
+          6820400
+        ],
+        "remaining": 9880
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820401,
+          6820401,
+          6820401,
+          6820402,
+          6820402,
+          6820402,
+          6820400,
+          6820400,
+          6820400
+        ],
+        "remaining": 9880
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820501,
+          6820502,
+          6820500
+        ],
+        "remaining": 9960
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820501,
+          6820502,
+          6820500
+        ],
+        "remaining": 9960
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820501,
+          6820501,
+          6820502,
+          6820502,
+          6820500,
+          6820500
+        ],
+        "remaining": 9920
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820501,
+          6820501,
+          6820502,
+          6820502,
+          6820500,
+          6820500
+        ],
+        "remaining": 9920
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820501,
+          6820501,
+          6820501,
+          6820502,
+          6820502,
+          6820502,
+          6820500,
+          6820500,
+          6820500
+        ],
+        "remaining": 9880
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820501,
+          6820501,
+          6820501,
+          6820502,
+          6820502,
+          6820502,
+          6820500,
+          6820500,
+          6820500
+        ],
+        "remaining": 9880
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": 1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 0,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820601,
+          6820602,
+          6820600
+        ],
+        "remaining": 9968
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820601,
+          6820602,
+          6820600
+        ],
+        "remaining": 9968
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820601,
+          6820601,
+          6820602,
+          6820602,
+          6820600,
+          6820600
+        ],
+        "remaining": 9936
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820601,
+          6820601,
+          6820602,
+          6820602,
+          6820600,
+          6820600
+        ],
+        "remaining": 9936
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": -1,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": -1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": 0,
+        "excluded": false,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": 0,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": 1,
+        "excluded": false,
+        "grants": [
+          6820601,
+          6820601,
+          6820601,
+          6820602,
+          6820602,
+          6820602,
+          6820600,
+          6820600,
+          6820600
+        ],
+        "remaining": 9904
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": 1,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": false,
+        "grants": [
+          6820601,
+          6820601,
+          6820601,
+          6820602,
+          6820602,
+          6820602,
+          6820600,
+          6820600,
+          6820600
+        ],
+        "remaining": 9904
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damage": 10000,
+        "excluded": true,
+        "grants": [],
+        "remaining": 10000
+      }
+    ],
+    "window": [
+      {
+        "root": 6820000,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9948,
+        "remaining": 9896
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9948,
+        "remaining": 9896
+      },
+      {
+        "root": 6820000,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9948,
+        "remaining": 9896
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9896,
+        "remaining": 9792
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9896,
+        "remaining": 9792
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9896,
+        "remaining": 9792
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9844,
+        "remaining": 9688
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9844,
+        "remaining": 9688
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9844,
+        "remaining": 9688
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9956,
+        "remaining": 9912
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9912,
+        "remaining": 9824
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9868,
+        "remaining": 9736
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9960,
+        "remaining": 9920
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9960,
+        "remaining": 9920
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9960,
+        "remaining": 9920
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9920,
+        "remaining": 9840
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9920,
+        "remaining": 9840
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9920,
+        "remaining": 9840
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9880,
+        "remaining": 9760
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9880,
+        "remaining": 9760
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9880,
+        "remaining": 9760
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9960,
+        "remaining": 9920
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9960,
+        "remaining": 9920
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9960,
+        "remaining": 9920
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9920,
+        "remaining": 9840
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9920,
+        "remaining": 9840
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9920,
+        "remaining": 9840
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9880,
+        "remaining": 9760
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9880,
+        "remaining": 9760
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9880,
+        "remaining": 9760
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9968,
+        "remaining": 9936
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9968,
+        "remaining": 9936
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9968,
+        "remaining": 9936
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9936,
+        "remaining": 9872
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9936,
+        "remaining": 9872
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9936,
+        "remaining": 9872
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "fps": 30,
+        "rearmFrame": 6,
+        "firstRemaining": 9904,
+        "remaining": 9808
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "fps": 60,
+        "rearmFrame": 10,
+        "firstRemaining": 9904,
+        "remaining": 9808
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "fps": 120,
+        "rearmFrame": 16,
+        "firstRemaining": 9904,
+        "remaining": 9808
+      }
+    ],
+    "continuous": [
+      {
+        "root": 6820000,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9376
+      },
+      {
+        "root": 6820000,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 8752
+      },
+      {
+        "root": 6820000,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8128
+      },
+      {
+        "root": 6820100,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9472
+      },
+      {
+        "root": 6820100,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 8944
+      },
+      {
+        "root": 6820100,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8416
+      },
+      {
+        "root": 6820200,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9472
+      },
+      {
+        "root": 6820200,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 8944
+      },
+      {
+        "root": 6820200,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8416
+      },
+      {
+        "root": 6820300,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9472
+      },
+      {
+        "root": 6820300,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 8944
+      },
+      {
+        "root": 6820300,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8416
+      },
+      {
+        "root": 6820400,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9520
+      },
+      {
+        "root": 6820400,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 9040
+      },
+      {
+        "root": 6820400,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8560
+      },
+      {
+        "root": 6820500,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9520
+      },
+      {
+        "root": 6820500,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 9040
+      },
+      {
+        "root": 6820500,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8560
+      },
+      {
+        "root": 6820600,
+        "copies": 1,
+        "damageCalls": 120,
+        "arrivals": 12,
+        "remaining": 9616
+      },
+      {
+        "root": 6820600,
+        "copies": 2,
+        "damageCalls": 120,
+        "arrivals": 24,
+        "remaining": 9232
+      },
+      {
+        "root": 6820600,
+        "copies": 3,
+        "damageCalls": 120,
+        "arrivals": 36,
+        "remaining": 8848
+      }
+    ],
+    "mixed": [
+      {
+        "roots": [
+          6820000,
+          6820100,
+          6820200,
+          6820300,
+          6820400,
+          6820500,
+          6820600
+        ],
+        "remaining": [
+          9948,
+          9956,
+          9956,
+          9968,
+          9956,
+          9960,
+          9960
+        ]
+      }
+    ]
+  },
+  "native": {
+    "damage": "504D30",
+    "update": "50ACD0",
+    "grant": "3C7FD0 → 3C80A0 → 3DB410",
+    "insert": "50A4C0 → 50D060",
+    "status": "42D110 → 509790 / 42CD70",
+    "reject": "505280"
+  },
+  "stubs": [
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "capacityFixture": 10000,
+  "naturalDecayExecuted": false,
+  "gameplayVerified": false
+}

@@ -218,6 +218,12 @@ assert passive_resource['schema'] == 1 and passive_resource['regulationSha256'] 
 assert passive_resource['exeSha256'] == evidence['exeSha256'] and not passive_resource['gameplayVerified']
 assert passive_resource['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in passive_resource['checks'].items()} == dict(resources=48, poise=74, flask=96, flaskCap=12, ordinaryRecovery=16)
+damage_ailment_path = ROOT / 'data/effect-damage-ailment-evidence.json'
+damage_ailment = json.loads(damage_ailment_path.read_text())
+assert damage_ailment['schema'] == 1 and damage_ailment['regulationSha256'] == catalog['regulationSha256']
+assert damage_ailment['exeSha256'] == evidence['exeSha256'] and not damage_ailment['gameplayVerified']
+assert damage_ailment['paramSha256'] == evidence['paramSha256'] and damage_ailment['capacityFixture'] == 10000
+assert {k: len(v) for k, v in damage_ailment['checks'].items()} == dict(trigger=224, window=63, continuous=21, mixed=1)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -584,6 +590,7 @@ STACKING_RULES = {
     'resource-capacity': ('可叠加', '上限倍率相乘', ['passive-resource']),
     'passive-poise': ('可叠加', '受到的强韧度损耗倍率相乘', ['passive-resource']),
     'flask-recovery': ('可叠加', '恢复量倍率相乘；提升与降低也相乘', ['passive-resource']),
+    'damage-ailment': ('可叠加', '同种异常的累积量相加', ['damage-ailment']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
     'guardian-ultimate': ('不可叠加', '再次施加刷新时长', ['guardian-ultimate']),
     'raider-growth': ('不可叠加', '重复装备不加快成长，也不提高上限', ['raider-growth']),
@@ -1224,10 +1231,14 @@ for id, effect in source['effects'].items():
         assert source['spells'][str(bridge)]['replaceSpEffectId'] == root
         assert source['spells'][str(bridge)]['cycleOccurrenceSpEffectId'] == child
         assert source['spells'][str(child)][measured['field']] == measured['amount']
+        family = next(f for f in damage_ailment['families'] if f['root'] == root)
+        assert (family['bridge'], family['leaf'], family['field'], family['amount']) == (bridge, child, measured['field'], measured['amount'])
         blocks = [dict(source=root, branches=[bridge, child], phase='受到损伤时', linked=False,
                        values=[[STATUS_BUILDUP[measured['field']] + '累积', '+' + num(measured['amount']) + ' 点／次']],
                        scope=[], restrictions=[], duration=None, interval=None)]
         notes.append('积累量不随损伤数值变化。')
+        notes.append('触发后有短暂间隔，期间受损不会重复累积。')
+        rule = 'damage-ailment'
     stacking, stacking_detail, _ = STACKING_RULES[rule]
     rules[id] = rule
     result[id] = dict(info=effect.get('info'), blocks=blocks, stacking=stacking, stackingDetail=stacking_detail, notes=notes)
@@ -1297,6 +1308,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整受击上下文、角色基础强韧与恢复／失衡阈值、动作与多人交互')
     if rules[id] == 'flask-recovery':
         questions.append('完整喝瓶动作、最终当前 HP 上限与治疗修正、共享治疗及多人交互')
+    if rules[id] == 'damage-ailment':
+        questions.append('达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互')
     if rules[id] == 'undertaker-contact':
         questions.append('完整绝招碰撞与同一目标命中去重、状态 624 在玩家与召唤物中的赋予范围、最终治疗修正／溢出及多人交互')
     if rules[id] == 'guardian-ultimate':
@@ -1389,6 +1402,7 @@ research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_b
 research['undertakerResetEvidenceSha256'] = hashlib.sha256(undertaker_reset_path.read_bytes()).hexdigest()
 research['treasureMapEvidenceSha256'] = hashlib.sha256(treasure_map_path.read_bytes()).hexdigest()
 research['passiveResourceEvidenceSha256'] = hashlib.sha256(passive_resource_path.read_bytes()).hexdigest()
+research['damageAilmentEvidenceSha256'] = hashlib.sha256(damage_ailment_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()

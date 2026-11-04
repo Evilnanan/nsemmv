@@ -8,7 +8,7 @@
     "withDetails": 608,
     "withNumericFields": 535,
     "withMechanicsOnly": 38,
-    "nativeStacking": 435,
+    "nativeStacking": 442,
     "catalog": 2241,
     "catalogWithDetails": 2051
   },
@@ -7153,13 +7153,14 @@
         6820002
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7178,13 +7179,14 @@
         6820102
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7203,13 +7205,14 @@
         6820202
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7228,13 +7231,14 @@
         6820302
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7253,13 +7257,14 @@
         6820402
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7278,13 +7283,14 @@
         6820502
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7303,13 +7309,14 @@
         6820602
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "damage-ailment",
         "damage-status"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49520,6 +49527,7 @@
   "undertakerResetEvidenceSha256": "ac6f90a3d941d03662e8dbfe508586e9bdb94bd70028dc9c88c6250b476bb981",
   "treasureMapEvidenceSha256": "806b839dc0763f410b62df700c9c4b287f69dae14e6ba5dd253d31a03608a556",
   "passiveResourceEvidenceSha256": "4ef2d2dff072c025b9ab706a66f1d1a411081f0c918d91b5e5d3a9887c48d826",
+  "damageAilmentEvidenceSha256": "9cb0ebcb3b686378fffa197ee58bd2ad7829ad689af9102b6568e28f4bc66350",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
