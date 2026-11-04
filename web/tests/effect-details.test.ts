@@ -25,6 +25,7 @@ import tenacity from "../../data/effect-executor-tenacity-evidence.json";
 import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
 import raiderSkill from "../../data/effect-raider-skill-evidence.json";
 import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
+import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
 import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
@@ -41,6 +42,26 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows Undertaker contact as one-time ally healing without multiplying duplicate equipment", () => {
+    const detail = effectDetail(7037300)!;
+    expect(detail.blocks[0].values).toEqual([["HP 恢复", "目标最大值的 30% + 100"]]);
+    expect(detail.blocks[0].restrictions).toEqual(["仅友方角色，不含自身"]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.stacking).toBe("不可叠加");
+    for (const row of undertakerContact.checks.dispatch)
+      expect(row.requests.length).toBe(Number(row.copies > 0));
+    for (const row of undertakerContact.checks.target.filter(r => r.effect === 7037301))
+      expect(row.allowed).toBe(row.relation === "friendly");
+    for (const row of undertakerContact.checks.healing) {
+      expect(row.heals.length).toBe(Number(row.qualified));
+      if (row.qualified) expect(row.heals[0].packet[0]).toBe(row.maximum * 0.3 + 100);
+    }
+    expect(undertakerContact.gameplayVerified).toBe(false);
+    expect(research.undertakerContactEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-undertaker-contact-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows both Guardian protections for self and allies and explains the expendable layer", () => {
     for (const id of [7011400, 7011401]) {
       const detail = effectDetail(id)!;
@@ -868,7 +889,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(534);
+    expect(research.coverage.withNumericFields).toBe(535);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
