@@ -22,11 +22,35 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import duration from "../../data/effect-guardian-duration-evidence.json";
 import evasion from "../../data/effect-duchess-evasion-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("binds Guardian tornado lifetimes to the actual held and early-release branches", () => {
+    const detail = effectDetail(7011000)!;
+    expect(detail.blocks[0].values).toEqual([["正常释放", "1 → 7 秒"], ["提前松开按键", "1 → 4 秒"]]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(duration.states.map((r) => r.animation)).toEqual(["a901_510000", "a901_510005"]);
+    for (const row of duration.checks.lifetime)
+      expect(Math.abs(row.expiresFrame / row.fps - row.seconds)).toBeLessThanOrEqual(1.01 / row.fps);
+    for (const row of duration.checks.dispatch) {
+      const eligible = row.active && (row.judge >= 6084 ? row.copies : row.base && !row.copies);
+      expect(row.requests.length).toBe(eligible ? 1 : 0);
+    }
+    for (const row of duration.checks.script) {
+      if (row.interrupt) expect(row.result).toBe("");
+      else if (!row.l2 && !row.skill && row.releaseWindow) expect(row.result).toBe("W_WindAttackCancelEarly");
+      else expect(row.result).toBe(row.ended ? "W_Idle" : "");
+    }
+    // History expiry alone does not prove complete collision cadence.
+    expect(JSON.stringify(detail)).not.toContain("0.5");
+    expect(duration.gameplayVerified).toBe(false);
+    expect(research.guardianDurationEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guardian-duration-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("ties Duchess invulnerability to the actual skill script and conditional animation flag", () => {
     const detail = effectDetail(6500300)!;
     expect(detail.blocks[0].values).toEqual([["无敌时间", "0.4 秒"]]);
@@ -534,7 +558,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(508);
+    expect(research.coverage.withNumericFields).toBe(509);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

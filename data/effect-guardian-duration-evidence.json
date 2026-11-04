@@ -1,0 +1,2612 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "rawTableHashes": {
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "EquipParamWeapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1"
+  },
+  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "functionSha256": "fe5c9f38384acf2812cffd1b7eddf4a442d8072f8d3217b74cc03f02c935d174",
+  "functionLine": 17380,
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "behavior": {
+    "bundleSha256": "0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5",
+    "hkxSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+    "registrySha256": "0ec687b9e503351de483c099eb7c11154880cfd51822a42027cf318a59ae3f20",
+    "metadataOnly": true,
+    "mismatches": [
+      "CustomManualSelectorGenerator"
+    ]
+  },
+  "states": [
+    {
+      "state": "WindAttackStart",
+      "stateItem": 32486,
+      "generator": "WindAttackStart_CMSG",
+      "generatorItem": 41910,
+      "arrayItem": 45854,
+      "clip": "a901_510000_hkx_AutoSet_00",
+      "clipItem": 52749,
+      "animation": "a901_510000"
+    },
+    {
+      "state": "WindAttackCancelEarly",
+      "stateItem": 32485,
+      "generator": "WindAttackCancelEarly_CMSG",
+      "generatorItem": 41908,
+      "arrayItem": 45852,
+      "clip": "a901_510005_hkx_AutoSet_00",
+      "clipItem": 52748,
+      "animation": "a901_510005"
+    }
+  ],
+  "attackComparisons": [
+    {
+      "normal": 600000050,
+      "extended": 600000082,
+      "differences": {
+        "atkDarkCorrection": [
+          100,
+          15
+        ],
+        "atkFireCorrection": [
+          100,
+          15
+        ],
+        "atkMagCorrection": [
+          100,
+          15
+        ],
+        "atkPhysCorrection": [
+          100,
+          15
+        ],
+        "atkSuperArmorCorrection": [
+          100,
+          15
+        ],
+        "atkThunCorrection": [
+          100,
+          15
+        ],
+        "dmgLevel": [
+          9,
+          2
+        ],
+        "mapHitType": [
+          2,
+          0
+        ],
+        "reviveDamageCorrection": [
+          100,
+          20
+        ],
+        "spEffectAtkPowerCorrectRate_byDmg": [
+          100,
+          15
+        ],
+        "spEffectAtkPowerCorrectRate_byRate": [
+          100,
+          15
+        ],
+        "ultimateChargeCorrection": [
+          100,
+          15
+        ]
+      }
+    },
+    {
+      "normal": 600000055,
+      "extended": 600000083,
+      "differences": {
+        "atkDarkCorrection": [
+          100,
+          15
+        ],
+        "atkFireCorrection": [
+          100,
+          15
+        ],
+        "atkMagCorrection": [
+          100,
+          15
+        ],
+        "atkPhysCorrection": [
+          100,
+          15
+        ],
+        "atkSuperArmorCorrection": [
+          100,
+          15
+        ],
+        "atkThunCorrection": [
+          100,
+          15
+        ],
+        "dmgLevel": [
+          9,
+          2
+        ],
+        "mapHitType": [
+          2,
+          0
+        ],
+        "reviveDamageCorrection": [
+          100,
+          20
+        ],
+        "spEffectAtkPowerCorrectRate_byDmg": [
+          100,
+          15
+        ],
+        "spEffectAtkPowerCorrectRate_byRate": [
+          100,
+          15
+        ],
+        "ultimateChargeCorrection": [
+          100,
+          15
+        ]
+      }
+    }
+  ],
+  "root": 7011000,
+  "leaf": 7011001,
+  "base": 7010001,
+  "events": [
+    {
+      "tae": 2901,
+      "animation": 510000,
+      "index": 5,
+      "Type": 2,
+      "StartTime": 1.1666666,
+      "EndTime": 1.2666667,
+      "hex": "0E01000000000000A21700000000D4070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510000,
+      "index": 15,
+      "Type": 2,
+      "StartTime": 1.1666666,
+      "EndTime": 1.2666667,
+      "hex": "0E01000000000000A41700000000D4070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510000,
+      "index": 54,
+      "Type": 2,
+      "StartTime": 1.1666666,
+      "EndTime": 1.2666667,
+      "hex": "8200000000000000C41700000000F5070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510000,
+      "index": 55,
+      "Type": 2,
+      "StartTime": 1.1666666,
+      "EndTime": 1.2666667,
+      "hex": "8200000000000000C51700000000F5070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510005,
+      "index": 1,
+      "Type": 2,
+      "StartTime": 0.5,
+      "EndTime": 0.6,
+      "hex": "0E01000000000000A71700000000D4070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510005,
+      "index": 2,
+      "Type": 2,
+      "StartTime": 0.5,
+      "EndTime": 0.6,
+      "hex": "0E01000000000000A91700000000D4070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510005,
+      "index": 30,
+      "Type": 2,
+      "StartTime": 0.5,
+      "EndTime": 0.6,
+      "hex": "8200000000000000C61700000000F5070000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510005,
+      "index": 31,
+      "Type": 2,
+      "StartTime": 0.5,
+      "EndTime": 0.6,
+      "hex": "8200000000000000C71700000000F5070000FF03000000000000000000000000"
+    }
+  ],
+  "releaseWindows": [
+    {
+      "tae": 2901,
+      "animation": 510000,
+      "index": 28,
+      "Type": 66,
+      "StartTime": 0.43333334,
+      "EndTime": 0.73333335,
+      "hex": "BD870100000000000000000000000000"
+    }
+  ],
+  "paths": [
+    {
+      "judge": 6050,
+      "behavior": 600000050,
+      "parent": 30901000,
+      "child": 30901001,
+      "fields": {
+        "life": 1,
+        "hitRadius": 0.10000000149011612,
+        "hitRadiusMax": 4.5,
+        "dmgHitRecordLifeTime": 0,
+        "atkId_Bullet": 600000050,
+        "intervalCreateBulletId": -1,
+        "intervalCreateTimeMin": 0,
+        "intervalCreateTimeMax": 0,
+        "isUseSharedHitList": 0
+      }
+    },
+    {
+      "judge": 6052,
+      "behavior": 600000052,
+      "parent": 30901002,
+      "child": 30901003,
+      "fields": {
+        "life": 1,
+        "hitRadius": 0.10000000149011612,
+        "hitRadiusMax": 4.5,
+        "dmgHitRecordLifeTime": 0,
+        "atkId_Bullet": 690000001,
+        "intervalCreateBulletId": -1,
+        "intervalCreateTimeMin": 0,
+        "intervalCreateTimeMax": 0,
+        "isUseSharedHitList": 0
+      }
+    },
+    {
+      "judge": 6055,
+      "behavior": 600000055,
+      "parent": 30901005,
+      "child": 30901006,
+      "fields": {
+        "life": 1,
+        "hitRadius": 0.10000000149011612,
+        "hitRadiusMax": 3.5,
+        "dmgHitRecordLifeTime": 0,
+        "atkId_Bullet": 600000055,
+        "intervalCreateBulletId": -1,
+        "intervalCreateTimeMin": 0,
+        "intervalCreateTimeMax": 0,
+        "isUseSharedHitList": 0
+      }
+    },
+    {
+      "judge": 6057,
+      "behavior": 600000057,
+      "parent": 30901007,
+      "child": 30901008,
+      "fields": {
+        "life": 1,
+        "hitRadius": 0.10000000149011612,
+        "hitRadiusMax": 3.5,
+        "dmgHitRecordLifeTime": 0,
+        "atkId_Bullet": 690000001,
+        "intervalCreateBulletId": -1,
+        "intervalCreateTimeMin": 0,
+        "intervalCreateTimeMax": 0,
+        "isUseSharedHitList": 0
+      }
+    },
+    {
+      "judge": 6084,
+      "behavior": 600000084,
+      "parent": 30901110,
+      "child": 30901111,
+      "fields": {
+        "life": 7,
+        "hitRadius": 4,
+        "hitRadiusMax": 4,
+        "dmgHitRecordLifeTime": 0.5,
+        "atkId_Bullet": 600000082,
+        "intervalCreateBulletId": 30901114,
+        "intervalCreateTimeMin": 0.5,
+        "intervalCreateTimeMax": 0.5,
+        "isUseSharedHitList": 1
+      }
+    },
+    {
+      "judge": 6085,
+      "behavior": 600000085,
+      "parent": 30901112,
+      "child": 30901113,
+      "fields": {
+        "life": 7,
+        "hitRadius": 4,
+        "hitRadiusMax": 4,
+        "dmgHitRecordLifeTime": 0,
+        "atkId_Bullet": 690000001,
+        "intervalCreateBulletId": -1,
+        "intervalCreateTimeMin": 0,
+        "intervalCreateTimeMax": 0,
+        "isUseSharedHitList": 0
+      }
+    },
+    {
+      "judge": 6086,
+      "behavior": 600000086,
+      "parent": 30901115,
+      "child": 30901116,
+      "fields": {
+        "life": 4,
+        "hitRadius": 3,
+        "hitRadiusMax": 3,
+        "dmgHitRecordLifeTime": 0.5,
+        "atkId_Bullet": 600000083,
+        "intervalCreateBulletId": 30901119,
+        "intervalCreateTimeMin": 0.5,
+        "intervalCreateTimeMax": 0.5,
+        "isUseSharedHitList": 1
+      }
+    },
+    {
+      "judge": 6087,
+      "behavior": 600000087,
+      "parent": 30901117,
+      "child": 30901118,
+      "fields": {
+        "life": 4,
+        "hitRadius": 3,
+        "hitRadiusMax": 3,
+        "dmgHitRecordLifeTime": 0,
+        "atkId_Bullet": 690000001,
+        "intervalCreateBulletId": -1,
+        "intervalCreateTimeMin": 0,
+        "intervalCreateTimeMax": 0,
+        "isUseSharedHitList": 0
+      }
+    }
+  ],
+  "native": {
+    "dispatch": "40CD80",
+    "behaviorResolver": "668B30",
+    "initializeLifetime": "350DA0",
+    "updateLifetime": "34F130",
+    "phaseTransition": "355270",
+    "historyCreate": "52EFD0",
+    "historyInsert": "52DE70",
+    "historyQuery": "52E7B0",
+    "historyUpdate": "52E7F0"
+  },
+  "checks": {
+    "script": [
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 0,
+        "result": "W_WindAttackCancelEarly"
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_WindAttackCancelEarly"
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 0,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 0,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 0,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 0,
+        "ended": 1,
+        "result": "W_Idle"
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 0,
+        "result": ""
+      },
+      {
+        "l2": 1,
+        "skill": 1,
+        "releaseWindow": 1,
+        "interrupt": 1,
+        "ended": 1,
+        "result": ""
+      }
+    ],
+    "dispatch": [
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000050,
+            "active": true,
+            "instant": true,
+            "payload": "0e01000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6050,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000052,
+            "active": true,
+            "instant": true,
+            "payload": "0e01000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6052,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000084,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000084,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000084,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6084,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000084,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000085,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000085,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000085,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "judge": 6085,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000085,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000055,
+            "active": true,
+            "instant": true,
+            "payload": "0e01000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6055,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000057,
+            "active": true,
+            "instant": true,
+            "payload": "0e01000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6057,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000086,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000086,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000086,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6086,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000086,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 0,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 0,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 0,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 0,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000087,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 0,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 0,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000087,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 1,
+        "copies": 0,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 1,
+        "copies": 0,
+        "active": 1,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7010001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 1,
+        "copies": 1,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 1,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000087,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 1,
+        "copies": 3,
+        "active": 0,
+        "requests": [],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "judge": 6087,
+        "base": 1,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000087,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000000000000101"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7011001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7011000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      }
+    ],
+    "lifetime": [
+      {
+        "bullet": 30901001,
+        "fps": 30,
+        "seconds": 1,
+        "expiresFrame": 30,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901001,
+        "fps": 60,
+        "seconds": 1,
+        "expiresFrame": 61,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901001,
+        "fps": 120,
+        "seconds": 1,
+        "expiresFrame": 121,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901006,
+        "fps": 30,
+        "seconds": 1,
+        "expiresFrame": 30,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901006,
+        "fps": 60,
+        "seconds": 1,
+        "expiresFrame": 61,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901006,
+        "fps": 120,
+        "seconds": 1,
+        "expiresFrame": 121,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901111,
+        "fps": 30,
+        "seconds": 7,
+        "expiresFrame": 211,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901111,
+        "fps": 60,
+        "seconds": 7,
+        "expiresFrame": 420,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901111,
+        "fps": 120,
+        "seconds": 7,
+        "expiresFrame": 841,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901116,
+        "fps": 30,
+        "seconds": 4,
+        "expiresFrame": 121,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901116,
+        "fps": 60,
+        "seconds": 4,
+        "expiresFrame": 241,
+        "finalStage": 3
+      },
+      {
+        "bullet": 30901116,
+        "fps": 120,
+        "seconds": 4,
+        "expiresFrame": 480,
+        "finalStage": 3
+      }
+    ],
+    "hitHistory": [
+      {
+        "fps": 30,
+        "retryAt": null,
+        "expiresFrame": 16,
+        "seconds": 0.5
+      },
+      {
+        "fps": 30,
+        "retryAt": 0.2,
+        "expiresFrame": 16,
+        "seconds": 0.5
+      },
+      {
+        "fps": 60,
+        "retryAt": null,
+        "expiresFrame": 30,
+        "seconds": 0.5
+      },
+      {
+        "fps": 60,
+        "retryAt": 0.2,
+        "expiresFrame": 30,
+        "seconds": 0.5
+      },
+      {
+        "fps": 120,
+        "retryAt": null,
+        "expiresFrame": 61,
+        "seconds": 0.5
+      },
+      {
+        "fps": 120,
+        "retryAt": 0.2,
+        "expiresFrame": 61,
+        "seconds": 0.5
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x34da00 scene/physics/visual fixture; no collision simulation",
+    "0x350410 scene/physics/visual fixture; no collision simulation",
+    "0x353df0 scene/physics/visual fixture; no collision simulation",
+    "0x355d20 scene/physics/visual fixture; no collision simulation",
+    "0x355fe0 scene/physics/visual fixture; no collision simulation",
+    "0x359c80 scene/physics/visual fixture; no collision simulation",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "26909A0 security cookie; preserve return register",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3C7FD0 grant recorder; queue delivered on next simulation frame",
+    "3CED90 isolated actor context",
+    "E6FCB0 actual Behavior row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "Lua input/interrupt fixtures; real WindAttackStart_onUpdate body",
+    "held/released animation schedule supplied; no behavior VM, collision, damage or network simulation",
+    "pooled history object with refcount 1; native entry constructors and pool lifecycle",
+    "synthetic active-phase virtuals do not request early termination",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}

@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 579 |
-| 其中有已解读的数值字段 | 508 |
+| 有可展示的数值、机制或替换法术 | 580 |
+| 其中有已解读的数值字段 | 509 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 347 |
-| 尚未解析到可展示详情 | 58 |
+| 已核对原生叠加处理 | 348 |
+| 尚未解析到可展示详情 | 57 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -473,3 +473,21 @@ Bullet 半径 8 米，Atk 600000070 和叶 7500101 均允许自身／友方、�
 [`probe_duchess_evasion.py`](../../tools/probe_duchess_evasion.py) 与 [`effect-duchess-evasion-evidence.json`](../../data/effect-duchess-evasion-evidence.json) 保存 33 组原脚本分支、25 组原生动画分派、12 组原生生命周期检查。角色上下文、输入和激活的动画事件是夹具；脚本函数、状态查询、插入、更新和动画分派均执行原代码。完整行为图的动画进入／中断、各类特殊攻击和异常伤害入口、联机及重载仍单列待查，未声称所有伤害类型都被屏蔽；`gameplayVerified=false`。
 
 复现：`python tools/probe_duchess_evasion.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <MMV的mod目录>/action/script/c0000.hks <临时目录>/animations.json data/effect-duchess-evasion-evidence.json`。
+
+## 第二十三批：守护者延时旋风的两个实际释放分支
+
+7011000 每 0.1 秒请求 7011001，后者提供状态 2037。普通旋风标记 7010001 提供状态 2004；两者类别 202、优先级 10，相遇时替换。实测原生容器及条件事件分派确认：一份和三份装备产生相同请求，延长分支成立时普通分支不再发射，不能把两组攻击叠在一起计算。
+
+`WindAttackStart_onUpdate` 在公共动作逻辑没有中断、L2 和技艺按键均松开、100285 存在时请求 `W_WindAttackCancelEarly`。100285 来自 TAE 2901／510000 的 Type 66 窗口 13/30～22/30 秒。32 组 Lua 检查覆盖按键、窗口、公共中断和动画结束的组合。行为包 `c0000.behbnd.dcx` SHA-256 为 `0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5`；`WindAttackStart`／`WindAttackCancelEarly` 的 StateInfo 经唯一子生成器分别指向 `a901_510000`／`a901_510005`，没有凭动画编号猜测哪个是提前释放。
+
+[`ExtractEffectBehavior`](../../tools/ExtractEffectBehavior/Program.cs) 只读原行为包，原 HKX 私存于工作目录。安装的 HKLib 类型注册表仅 `CustomManualSelectorGenerator` 哈希不符，因此只在内存副本中清空 THSH 以读取类型元数据，不将对象反序列化为注册表类，也不写回游戏。原哈希、注册表哈希与差异名单均保留。[`effect_behavior_graph.py`](../../tools/effect_behavior_graph.py) 在未改动的原始 HKX 上检查 DATA／ITEM 边界、PTCH 类型、字段引用和实际目标类；本批只接受含单个 ClipGenerator 的两条已核对路径，不宣称执行了完整行为图。
+
+正常释放动画中的普通判定 6050／6052 与延长判定 6084／6085，在 1.1667 秒发射；提前释放动画中的 6055／6057 与 6086／6087，在 0.5 秒发射。`40CD80 → 668B30` 实际状态资格和 Behavior 解析经过 96 组检查。Behavior 600000084／085 对应 30901110／112，再引用持续子弹 30901111／113；600000086／087 对应 30901115／117，再引用 30901116／118。不能拿未被这两个动画调用的 6080～6083 当作普通分支。
+
+实际计时 `350DA0` 从 Bullet +0x10 读取 life、+0xD0 读取随机范围，写入实例 +0x2D4／+0x2D8。`34F130` 逐帧减去 dt，经 `355270` 转至结束阶段。四个伤害子弹在 30／60／120 Hz 共 12 组检查中按 1／1／7／4 秒结束，误差不超过一帧；没有使用动画长度代替 Bullet 生命周期。场景、物理和视觉回调为夹具，停止点为原生进入结束阶段，不执行默认空阶段的虚函数。
+
+延长伤害子弹还配置半径 4／3 米（普通最大半径 4.5／3.5 米）、每次攻击各通道修正 100→15、削韧与绝招累积修正 100→15、救援修正 100→20，以及 dmgLevel 9→2。以上差异保留为后续伤害／范围／动作反应路径的线索，暂不直接写入页面。其每 0.5 秒创建的 30901114／119 使用视觉攻击 690000001，不能因此认定每次子弹生成都造成伤害。
+
+共享命中记录时长为 0.5 秒。`52EFD0 / 52DE70 / 52E7B0 / 52E7F0` 的 6 组检查确认按目标保存、到期删除、重试不刷新、删除后可再次插入。`5363A0` 同时检查攻击实例自身 +0x2C8 和共享 +0x2D0 历史，`5361F0` 向两者记入命中；仅共享历史到期不足以证明完整攻击实例允许再次命中。页面暂只展示已接通的 7／4 秒和不可叠加，不填未经核实的每秒命中数。
+
+复现：先在 Windows 下运行 `ExtractEffectBehavior <Smithbox> <Game> <MMV mod> <private behavior.json>`（注册表 XML 随工具复制，工作目录设为游戏目录供 Oodle 发现）；再运行 `python tools/probe_guardian_duration.py <EXE> <extracted.json> <assets.json> <triggers-tae.json> <c0000.hks> <private behavior.json> data/effect-guardian-duration-evidence.json`。[`证据`](../../data/effect-guardian-duration-evidence.json) 保存 146 组检查及全部夹具边界；没有实机碰撞、完整行为图／攻击实例或联机验证，`gameplayVerified` 为 false。
