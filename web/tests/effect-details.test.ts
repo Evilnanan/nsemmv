@@ -35,6 +35,7 @@ import perfume from "../../data/effect-perfume-evidence.json";
 import duchessUltimate from "../../data/effect-duchess-ultimate-evidence.json";
 import guardianShockwave from "../../data/effect-guardian-shockwave-evidence.json";
 import heroAdjustment from "../../data/effect-hero-adjustment-evidence.json";
+import successiveRecovery from "../../data/effect-successive-recovery-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -52,6 +53,38 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("explains shared successive-attack recovery and the extra decay from duplicate equipment", () => {
+    for (const id of [10000, 7036000, 7036010]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("恢复量相加；累积衰减也叠加");
+      expect(detail.blocks[0].values).toEqual([[id === 7036010 ? "HP恢复" : "FP恢复", id === 7036010 ? "最大值的 3%" : "最大值的 5%"]]);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.notes).toEqual(["累积达到 32 点时触发；每份词条每 0.8 秒减少 1 点累积。", "回血与回蓝共用累积进度，可同时触发。"]);
+    }
+    for (const row of successiveRecovery.checks.threshold)
+      expect(row.recoveries).toHaveLength(row.copies && row.input >= 32 ? 1 : 0);
+    for (const row of successiveRecovery.checks.mixed) {
+      expect(row.recoveries).toHaveLength(row.copies.some(Boolean) ? 1 : 0);
+      for (const r of row.recoveries) {
+        expect(r.fp).toEqual([50 * row.copies[0], 0]);
+        expect(r.hp).toEqual([300 * row.copies[1], 0, 300 * row.copies[1], 0, 0, 0, 0]);
+        expect(r.counter).toBe(0);
+      }
+    }
+    for (const row of successiveRecovery.checks.decay)
+      expect(row.changes.map(r => r.counter)).toEqual([1, 2, 3].map(n => 20 - n * (row.copies[0] + row.copies[1])));
+    for (const row of successiveRecovery.checks.repeat) {
+      expect(row.recoveries).toHaveLength(Math.round(1 / row.gap));
+      expect(row.recoveries[1].frame - row.recoveries[0].frame).toBeLessThan(row.fps);
+    }
+    expect(successiveRecovery.gameplayVerified).toBe(false);
+    expect(research.successiveRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-successive-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("deduplicates identical hero adjustments while combining distinct adjustments at every level", () => {
     for (const family of heroAdjustment.families) {
       for (const id of family.effects) {

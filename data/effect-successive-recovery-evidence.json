@@ -1,0 +1,7882 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "effects": [
+    10000,
+    7036000,
+    7036010
+  ],
+  "roots": [
+    7036000,
+    7036010
+  ],
+  "leaves": [
+    7036001,
+    7036011
+  ],
+  "threshold": 32,
+  "checks": {
+    "threshold": [
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 32,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 33,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 64,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 0,
+        "input": 100,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 1
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 31
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 32,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 33,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 64,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "input": 100,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 1
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 31
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 32,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 33,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 64,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "input": 100,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 1
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 31
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 32,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 33,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 64,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "input": 100,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 32,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 33,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 64,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 0,
+        "input": 100,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 1
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 31
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 32,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 33,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 64,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "input": 100,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 1
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 31
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 32,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 33,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 64,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "input": 100,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 0,
+        "recoveries": [],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 1,
+        "recoveries": [],
+        "finalCounter": 1
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 31,
+        "recoveries": [],
+        "finalCounter": 31
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 32,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 33,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 64,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "input": 100,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalCounter": 0
+      }
+    ],
+    "mixed": [
+      {
+        "copies": [
+          0,
+          0
+        ],
+        "reverse": false,
+        "recoveries": []
+      },
+      {
+        "copies": [
+          0,
+          0
+        ],
+        "reverse": true,
+        "recoveries": []
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          2
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          2
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          2
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          2
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          3
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          3
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          0
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          0
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          1
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          1
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          2
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          2
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          3
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          3
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              100,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          1
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          1
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          2
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          2
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              600,
+              0,
+              600,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "reverse": false,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "reverse": true,
+        "recoveries": [
+          {
+            "frame": 1,
+            "counter": 0,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "markers": [
+      {
+        "marker": 6900,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 2,
+        "counter": 0
+      },
+      {
+        "marker": 6900,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 2,
+        "counter": 2
+      },
+      {
+        "marker": 6900,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 2,
+        "counter": 2
+      },
+      {
+        "marker": 6900,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 2,
+        "counter": 2
+      },
+      {
+        "marker": 6901,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 4,
+        "counter": 0
+      },
+      {
+        "marker": 6901,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 4,
+        "counter": 4
+      },
+      {
+        "marker": 6901,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 4,
+        "counter": 4
+      },
+      {
+        "marker": 6901,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 4,
+        "counter": 4
+      },
+      {
+        "marker": 6902,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 6,
+        "counter": 0
+      },
+      {
+        "marker": 6902,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 6,
+        "counter": 6
+      },
+      {
+        "marker": 6902,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 6,
+        "counter": 6
+      },
+      {
+        "marker": 6902,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 6,
+        "counter": 6
+      },
+      {
+        "marker": 6903,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 8,
+        "counter": 0
+      },
+      {
+        "marker": 6903,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 8,
+        "counter": 8
+      },
+      {
+        "marker": 6903,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 8,
+        "counter": 8
+      },
+      {
+        "marker": 6903,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 8,
+        "counter": 8
+      },
+      {
+        "marker": 6904,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 10,
+        "counter": 0
+      },
+      {
+        "marker": 6904,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 10,
+        "counter": 10
+      },
+      {
+        "marker": 6904,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 10,
+        "counter": 10
+      },
+      {
+        "marker": 6904,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 10,
+        "counter": 10
+      },
+      {
+        "marker": 6905,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 12,
+        "counter": 0
+      },
+      {
+        "marker": 6905,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 12,
+        "counter": 12
+      },
+      {
+        "marker": 6905,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 12,
+        "counter": 12
+      },
+      {
+        "marker": 6905,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 12,
+        "counter": 12
+      },
+      {
+        "marker": 6906,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 14,
+        "counter": 0
+      },
+      {
+        "marker": 6906,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 14,
+        "counter": 14
+      },
+      {
+        "marker": 6906,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 14,
+        "counter": 14
+      },
+      {
+        "marker": 6906,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 14,
+        "counter": 14
+      },
+      {
+        "marker": 6907,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 16,
+        "counter": 0
+      },
+      {
+        "marker": 6907,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 16,
+        "counter": 16
+      },
+      {
+        "marker": 6907,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 16,
+        "counter": 16
+      },
+      {
+        "marker": 6907,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 16,
+        "counter": 16
+      },
+      {
+        "marker": 6908,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 18,
+        "counter": 0
+      },
+      {
+        "marker": 6908,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 18,
+        "counter": 18
+      },
+      {
+        "marker": 6908,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 18,
+        "counter": 18
+      },
+      {
+        "marker": 6908,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 18,
+        "counter": 18
+      },
+      {
+        "marker": 6909,
+        "copies": [
+          0,
+          0
+        ],
+        "weight": 20,
+        "counter": 0
+      },
+      {
+        "marker": 6909,
+        "copies": [
+          1,
+          0
+        ],
+        "weight": 20,
+        "counter": 20
+      },
+      {
+        "marker": 6909,
+        "copies": [
+          3,
+          0
+        ],
+        "weight": 20,
+        "counter": 20
+      },
+      {
+        "marker": 6909,
+        "copies": [
+          1,
+          1
+        ],
+        "weight": 20,
+        "counter": 20
+      }
+    ],
+    "decay": [
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 19
+          },
+          {
+            "frame": 48,
+            "counter": 18
+          },
+          {
+            "frame": 72,
+            "counter": 17
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 19
+          },
+          {
+            "frame": 97,
+            "counter": 18
+          },
+          {
+            "frame": 145,
+            "counter": 17
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 19
+          },
+          {
+            "frame": 193,
+            "counter": 18
+          },
+          {
+            "frame": 289,
+            "counter": 17
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          0
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 18
+          },
+          {
+            "frame": 48,
+            "counter": 16
+          },
+          {
+            "frame": 72,
+            "counter": 14
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 18
+          },
+          {
+            "frame": 97,
+            "counter": 16
+          },
+          {
+            "frame": 145,
+            "counter": 14
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          0
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 18
+          },
+          {
+            "frame": 193,
+            "counter": 16
+          },
+          {
+            "frame": 289,
+            "counter": 14
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 17
+          },
+          {
+            "frame": 48,
+            "counter": 14
+          },
+          {
+            "frame": 72,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 17
+          },
+          {
+            "frame": 97,
+            "counter": 14
+          },
+          {
+            "frame": 145,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 17
+          },
+          {
+            "frame": 193,
+            "counter": 14
+          },
+          {
+            "frame": 289,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 19
+          },
+          {
+            "frame": 48,
+            "counter": 18
+          },
+          {
+            "frame": 72,
+            "counter": 17
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 19
+          },
+          {
+            "frame": 97,
+            "counter": 18
+          },
+          {
+            "frame": 145,
+            "counter": 17
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 19
+          },
+          {
+            "frame": 193,
+            "counter": 18
+          },
+          {
+            "frame": 289,
+            "counter": 17
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 18
+          },
+          {
+            "frame": 48,
+            "counter": 16
+          },
+          {
+            "frame": 72,
+            "counter": 14
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 18
+          },
+          {
+            "frame": 97,
+            "counter": 16
+          },
+          {
+            "frame": 145,
+            "counter": 14
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 18
+          },
+          {
+            "frame": 193,
+            "counter": 16
+          },
+          {
+            "frame": 289,
+            "counter": 14
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          1
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 17
+          },
+          {
+            "frame": 48,
+            "counter": 14
+          },
+          {
+            "frame": 72,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          1
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 17
+          },
+          {
+            "frame": 97,
+            "counter": 14
+          },
+          {
+            "frame": 145,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          2,
+          1
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 17
+          },
+          {
+            "frame": 193,
+            "counter": 14
+          },
+          {
+            "frame": 289,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 24,
+            "counter": 17
+          },
+          {
+            "frame": 48,
+            "counter": 14
+          },
+          {
+            "frame": 72,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 49,
+            "counter": 17
+          },
+          {
+            "frame": 97,
+            "counter": 14
+          },
+          {
+            "frame": 145,
+            "counter": 11
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 97,
+            "counter": 17
+          },
+          {
+            "frame": 193,
+            "counter": 14
+          },
+          {
+            "frame": 289,
+            "counter": 11
+          }
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 5,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 11,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 17,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 23,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 29,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 35,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 41,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 47,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 53,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 59,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 68,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 80,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 92,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 104,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 116,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 134,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 158,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 206,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 230,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          0
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 26,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 74,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 170,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 218,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 5,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 11,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 17,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 23,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 29,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 35,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 41,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 47,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 53,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 59,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 68,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 80,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 92,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 104,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 116,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 134,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 158,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 206,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 230,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          0
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 26,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 74,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 170,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 218,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 5,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 11,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 17,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 23,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 29,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 35,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 41,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 47,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 53,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 59,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 68,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 80,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 92,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 104,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 116,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 134,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 158,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 206,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 230,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          1
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 26,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 74,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 170,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 218,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 5,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 11,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 17,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 23,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 29,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 35,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 41,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 47,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 53,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 59,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 68,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 80,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 92,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 104,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 116,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 134,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 158,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 206,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 230,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          0,
+          3
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 26,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 74,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 170,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 218,
+            "fp": [
+              0,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 5,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 11,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 17,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 23,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 29,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 35,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 41,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 47,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 53,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 59,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 68,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 80,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 92,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 104,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 116,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 134,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 158,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 206,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 230,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          1,
+          1
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 26,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 74,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 170,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 218,
+            "fp": [
+              50,
+              0
+            ],
+            "hp": [
+              300,
+              0,
+              300,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 5,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 11,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 17,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 23,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 29,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 35,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 41,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 47,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 53,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 59,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "fps": 30,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 8,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 20,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 32,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 44,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 56,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 68,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 80,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 92,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 104,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 116,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "fps": 60,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.1,
+        "recoveries": [
+          {
+            "frame": 14,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 38,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 86,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 110,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 134,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 158,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 206,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 230,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "copies": [
+          3,
+          3
+        ],
+        "fps": 120,
+        "marker": 6909,
+        "gap": 0.2,
+        "recoveries": [
+          {
+            "frame": 26,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 74,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 170,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 218,
+            "fp": [
+              150,
+              0
+            ],
+            "hp": [
+              900,
+              0,
+              900,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036000,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 7036010,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      }
+    ],
+    "dedupe": [
+      {
+        "effect": 7036000,
+        "copies": 1,
+        "firstQueue": [
+          7036001
+        ],
+        "rearmedQueue": [
+          7036001,
+          7036001
+        ]
+      },
+      {
+        "effect": 7036000,
+        "copies": 2,
+        "firstQueue": [
+          7036001,
+          7036001
+        ],
+        "rearmedQueue": [
+          7036001,
+          7036001,
+          7036001,
+          7036001
+        ]
+      },
+      {
+        "effect": 7036000,
+        "copies": 3,
+        "firstQueue": [
+          7036001,
+          7036001,
+          7036001
+        ],
+        "rearmedQueue": [
+          7036001,
+          7036001,
+          7036001,
+          7036001,
+          7036001,
+          7036001
+        ]
+      },
+      {
+        "effect": 7036010,
+        "copies": 1,
+        "firstQueue": [
+          7036011
+        ],
+        "rearmedQueue": [
+          7036011,
+          7036011
+        ]
+      },
+      {
+        "effect": 7036010,
+        "copies": 2,
+        "firstQueue": [
+          7036011,
+          7036011
+        ],
+        "rearmedQueue": [
+          7036011,
+          7036011,
+          7036011,
+          7036011
+        ]
+      },
+      {
+        "effect": 7036010,
+        "copies": 3,
+        "firstQueue": [
+          7036011,
+          7036011,
+          7036011
+        ],
+        "rearmedQueue": [
+          7036011,
+          7036011,
+          7036011,
+          7036011,
+          7036011,
+          7036011
+        ]
+      }
+    ]
+  },
+  "rows": {
+    "7036000": {
+      "stateInfo": 304,
+      "spCategory": 10,
+      "effectEndurance": -1,
+      "motionInterval": 0.800000011920929,
+      "accumuOverFireId": 7036001,
+      "accumuOverVal": 32,
+      "accumuVal": -1,
+      "dedupeAccumuTrigger": 1,
+      "changeHpRate": 0,
+      "changeMpRate": 0,
+      "syncTotalHp": 1
+    },
+    "7036010": {
+      "stateInfo": 304,
+      "spCategory": 10,
+      "effectEndurance": -1,
+      "motionInterval": 0.800000011920929,
+      "accumuOverFireId": 7036011,
+      "accumuOverVal": 32,
+      "accumuVal": -1,
+      "dedupeAccumuTrigger": 1,
+      "changeHpRate": 0,
+      "changeMpRate": 0,
+      "syncTotalHp": 1
+    },
+    "7036001": {
+      "stateInfo": 304,
+      "spCategory": 10,
+      "effectEndurance": 1,
+      "motionInterval": 4,
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuVal": -999,
+      "dedupeAccumuTrigger": 0,
+      "changeHpRate": 0,
+      "changeMpRate": -5,
+      "syncTotalHp": 1
+    },
+    "7036011": {
+      "stateInfo": 304,
+      "spCategory": 10,
+      "effectEndurance": 1,
+      "motionInterval": 4,
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuVal": -999,
+      "dedupeAccumuTrigger": 0,
+      "changeHpRate": -3,
+      "changeMpRate": 0,
+      "syncTotalHp": 1
+    }
+  },
+  "native": {
+    "accumulation": "50DBB0 / 50E240 / 50E570 / 50E5E0 / 50E680",
+    "update": "50ACD0 / 511B80 / 511D20",
+    "grant": "3C7FD0 → 3DB410 → 50D060",
+    "resources": "506EC0 / 507460"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "attack weights are tested as supplied marker rows, not a fixed number of actual combat hits",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "hit markers arrive at supplied times; resource packets do not execute final current HP/FP setters or overflow",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "ten native-layout accumulation counters/queues with preallocated vector storage"
+  ],
+  "gameplayVerified": false
+}
