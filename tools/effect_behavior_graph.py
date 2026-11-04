@@ -100,3 +100,41 @@ class BehaviorGraph:
         animation = self.string(self.reference(clip, 'animationName'))
         return dict(state=name, stateItem=index, generator=self.name(generator), generatorItem=generator,
                     arrayItem=array, clip=self.name(clip), clipItem=clip, animation=animation)
+
+    def children(self, index):
+        array = self.reference(index, 'generators')
+        typ, offset, count = self.item(array)
+        assert typ['Identity'] == 'T*<hkbGenerator>' and typ['Size'] == 8
+        result = []
+        for i in range(count):
+            position = offset + i * 8
+            assert self.types[self.patches[position]]['Identity'] == typ['Identity']
+            child = struct.unpack_from('<Q', self.data, position)[0]
+            self.item(child)
+            result.append(child)
+        return result
+
+    def selector_binding(self, index):
+        """Resolve a reviewed manual-selector binding to its graph variable name."""
+        binding_set = self.reference(index, 'variableBindingSet')
+        array = self.reference(binding_set, 'bindings')
+        typ, offset, count = self.item(array)
+        assert typ['Identity'] == 'hkbVariableBindingSet::Binding' and count == 1
+        assert typ['Size'] == 40
+        fields = {f['Name']: f['Offset'] for f in typ['Fields']}
+        assert fields['memberPath'] == 0 and fields['variableIndex'] == 28
+        assert self.types[self.patches[offset]]['Identity'] == 'hkStringPtr'
+        member = self.string(struct.unpack_from('<Q', self.data, offset)[0])
+        assert member == 'selectedGeneratorIndex'
+        variable = struct.unpack_from('<i', self.data, offset + 28)[0]
+        string_sets = [i for i, (t, _, n) in enumerate(self.items) if t and n == 1 and
+                       self.types[t & 0xffffff]['Identity'] == 'hkbBehaviorGraphStringData']
+        assert len(string_sets) == 1
+        names = self.reference(string_sets[0], 'variableNames')
+        nt, no, nc = self.item(names)
+        assert nt['Identity'] == 'hkStringPtr' and nt['Size'] == 8 and 0 <= variable < nc
+        position = no + variable * 8
+        assert self.types[self.patches[position]]['Identity'] == 'hkStringPtr'
+        name = self.string(struct.unpack_from('<Q', self.data, position)[0])
+        return dict(selector=index, bindingSet=binding_set, binding=array, member=member,
+                    variable=variable, name=name, stringSet=string_sets[0], names=names)

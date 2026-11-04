@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import restage from "../../data/effect-duchess-restage-evidence.json";
 import ironeyeMark from "../../data/effect-ironeye-mark-evidence.json";
 import recluseMark from "../../data/effect-recluse-mark-evidence.json";
 import startingGoods from "../../data/effect-starting-goods-evidence.json";
@@ -32,6 +33,26 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("raises Restage's damage share without increasing poise or multiplying duplicate relics", () => {
+    const detail = effectDetail(7290000)!;
+    expect(detail.blocks[0].values).toEqual([["重演伤害比例", "50% → 60%"]]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加重演比例");
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.notes).toEqual(["不提高重演的削韧。"]);
+    const rows = restage.checks.damage.filter((r) => r.values.length === 1 && r.values[0] === 100 && r.statusBits === 15);
+    expect(rows.map((r) => r.result.hp)).toEqual([[-50], [-60]]);
+    expect(rows[0].result.poise).toEqual(rows[1].result.poise);
+    expect(rows[0].result.statuses).toEqual(rows[1].result.statuses);
+    for (const row of restage.checks.selection)
+      expect(row.rate).toBeCloseTo(row.copies ? 0.6 : 0.5);
+    expect(restage.checks.repeat.map((r) => r.result.hp)).toEqual([[-50], [-60], [-60], [-50]]);
+    expect(restage.bindings.map((b) => b.name)).toEqual(["IndexDejavuBlend", "IsRelic_Dejavu", "IsRelic_Dejavu"]);
+    expect(restage.gameplayVerified).toBe(false);
+    expect(research.duchessRestageEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-duchess-restage-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("uses the weakpoint lifetime and preserves longer remaining time without restoring durability", () => {
     const detail = effectDetail(7280000)!;
     expect(detail.blocks[0].values).toEqual([["弱点最长持续时间", "17 → 22 秒"]]);
@@ -656,7 +677,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(521);
+    expect(research.coverage.withNumericFields).toBe(522);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

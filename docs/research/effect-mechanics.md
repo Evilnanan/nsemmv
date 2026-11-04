@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 592 |
-| 其中有已解读的数值字段 | 521 |
+| 有可展示的数值、机制或替换法术 | 593 |
+| 其中有已解读的数值字段 | 522 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 409 |
-| 尚未解析到可展示详情 | 45 |
+| 已核对原生叠加处理 | 410 |
+| 尚未解析到可展示详情 | 44 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -558,3 +558,17 @@ Bullet 半径 8 米，Atk 600000070 和叶 7500101 均允许自身／友方、�
 弱点结构使用的是 **ScratchedPartsParam**，而非名称猜测的 NPC 部位表。参数的 20 字节实际行与所有解码字段逐项一致；原生创建从 +6 读取耐久百分比，与目标最大 HP 相乘取整。从实际表选取 353 个部位 0、正耐久的行逐个创建并验证到期，查表夹具明确指定对应角色与部位，不模拟完整骨骼匹配。这里不将各敌人的耐久、易伤率或击破伤害概括为一个全局数值。
 
 [`脚本`](../../tools/probe_ironeye_mark.py) 与 [`证据`](../../data/effect-ironeye-mark-evidence.json) 保存 **434 组检查**。补充提取 `--tables=ScratchedPartsParam` 后运行：`python tools/probe_ironeye_mark.py <EXE> <extracted.json> <systems.json> <scratched.json> data/effect-ironeye-mark-evidence.json`。查表、骨骼部位、身份／权威、内存分配与网络发送是明确夹具；计时选取、队列写入／处理、节点创建／刷新／移除及存活判断运行原指令。没有模拟完整命中、击破结算或多人投递，`gameplayVerified` 保持 false。
+
+## 女爵重演伤害（第二十八批）
+
+7290000 的状态 2271 通过原生 `508E20` 转成布尔结果，供当前 HKS 的 `ExecDejavu` 设置 `IsRelic_Dejavu`。104 组脚本执行覆盖 11 个角色、三种持握、零／一／三份词条，以及动作、血量、冷却、已在发动中的门槛。连续调用第二次被 `AddDejavuBlend` 阻止，重复装备不形成多个增益档位。
+
+行为图实际变量名通过 `hkbBehaviorGraphStringData.variableNames` 核对：变量 420 为 `IndexDejavuBlend`，450 为 `IsRelic_Dejavu`。手持选择器 16955 转至 17189／17190，两者的 `selectedGeneratorIndex` 都绑定变量 450。普通／增强的单手动画为 `a903_539000 / a903_539005`，双手为 `a903_539100 / a903_539105`。所有数组、字符串与指针引用检查 DATA／ITEM／PTCH，不依赖节点命名猜测。
+
+四个 TAE 的主事件都是 Type 2、0～0.1 秒；普通 judge 6150、增强 judge 6185。8 组活动／停止分派执行原生 `40CD80 → 668B30`，得到 Behavior 600000150／600000185，继而 Bullet 30903000／30903005。两个弹体参数唯一差异是请求 703540／7290001；两种 SpEffect 的唯一差异是 +0x3B0 `restageAttackRate` 为 -1／0.6，均为状态 601。动画里另有受状态 2091 控制的 judge 6149，不混入本词条的主伤害增益。
+
+原生效果到达的 `3CE5B3..3CE5E9` 子段检查状态 601 后调用 `44A340`，负值回退 PlayerCommon +0xD0 的 0.5，非负值直接覆盖重演模块 +0x3C。随后 `733490` 排入重演请求。12 组串联检查覆盖三种持握和零／一／二／三份词条，确认每次选择 **50%／60%**，而非重复乘算。4 组普通、增强及反向重入检查确认系数覆盖；请求队列本身不替代为成功返回值。
+
+`449AAC..449C6D` 对每条历史输入的整数伤害乘该比例并逐项截断累加，浮点削韧则独立使用 PlayerCommon +0xD4，异常触发标志取 OR。480 组矩阵覆盖空记录、零值、小数取整边界、单条／多条输入及 16 种标志。`430F50` 的原指令继续将伤害转为负 HP 请求，并把另一通道交给削韧处理；100 点输入在普通／增强版本分别请求扣除 50／60 HP，削韧与状态请求不变。详情只展示重演比例和削韧不变，不把弹体 0.2 秒寿命写成持续时间，也不把这项升级写为所有攻击的增益。
+
+[`脚本`](../../tools/probe_duchess_restage.py) 与 [`证据`](../../data/effect-duchess-restage-evidence.json) 共 608 组检查，复现：`python tools/probe_duchess_restage.py <EXE> <extracted.json> <assets.json> <systems.json> <c0000.hks> <animations.json> <behavior.json> data/effect-duchess-restage-evidence.json`。角色、按键、历史记录输入、参数查找、锁与权威身份为夹具；最终 HP／削韧出口记录请求，未模拟完整历史录入、时间筛选、资源修正、关联目标或多人投递，`gameplayVerified` 为 false。

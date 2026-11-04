@@ -1,0 +1,10489 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "behaviorParamSha256": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "playerCommonParamSha256": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
+  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "functionSha256": "abf4680fc013174d094471394ae18d3fa696dd90ddf56678e8abcb0efcd6e2d6",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "behavior": {
+    "bundleSha256": "0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5",
+    "hkxSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+    "registrySha256": "0ec687b9e503351de483c099eb7c11154880cfd51822a42027cf318a59ae3f20",
+    "metadataOnly": true,
+    "mismatches": [
+      "CustomManualSelectorGenerator"
+    ]
+  },
+  "root": 7290000,
+  "baseRate": 0.5,
+  "relicRate": 0.6000000238418579,
+  "poiseRate": 0.5,
+  "bindings": [
+    {
+      "selector": 16955,
+      "bindingSet": 17090,
+      "binding": 17188,
+      "member": "selectedGeneratorIndex",
+      "variable": 420,
+      "name": "IndexDejavuBlend",
+      "stringSet": 14,
+      "names": 20
+    },
+    {
+      "selector": 17189,
+      "bindingSet": 17343,
+      "binding": 17508,
+      "member": "selectedGeneratorIndex",
+      "variable": 450,
+      "name": "IsRelic_Dejavu",
+      "stringSet": 14,
+      "names": 20
+    },
+    {
+      "selector": 17190,
+      "bindingSet": 17346,
+      "binding": 17511,
+      "member": "selectedGeneratorIndex",
+      "variable": 450,
+      "name": "IsRelic_Dejavu",
+      "stringSet": 14,
+      "names": 20
+    }
+  ],
+  "animations": [
+    [
+      "a903_539000",
+      "a903_539005"
+    ],
+    [
+      "a903_539100",
+      "a903_539105"
+    ]
+  ],
+  "events": [
+    {
+      "tae": 2903,
+      "animation": 539000,
+      "index": 1,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "820000000000000006180000000000000000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2903,
+      "animation": 539005,
+      "index": 1,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "820000000000000029180000000000000000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2903,
+      "animation": 539100,
+      "index": 1,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "820000000000000006180000000000000000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2903,
+      "animation": 539105,
+      "index": 1,
+      "Type": 2,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "820000000000000029180000000000000000FF03000000000000000000000000"
+    }
+  ],
+  "paths": [
+    {
+      "behavior": 600000150,
+      "bullet": 30903000,
+      "leaf": 703540
+    },
+    {
+      "behavior": 600000185,
+      "bullet": 30903005,
+      "leaf": 7290001
+    }
+  ],
+  "checks": {
+    "script": [
+      {
+        "hero": 0,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 0,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 1,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 2,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 3,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 4,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 0,
+          "boost": 0
+        }
+      },
+      {
+        "hero": 4,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 0,
+          "boost": 1
+        }
+      },
+      {
+        "hero": 4,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 0,
+          "boost": 1
+        }
+      },
+      {
+        "hero": 4,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 1,
+          "boost": 0
+        }
+      },
+      {
+        "hero": 4,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 1,
+          "boost": 1
+        }
+      },
+      {
+        "hero": 4,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 1,
+          "boost": 1
+        }
+      },
+      {
+        "hero": 4,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 1,
+          "boost": 0
+        }
+      },
+      {
+        "hero": 4,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 1,
+          "boost": 1
+        }
+      },
+      {
+        "hero": 4,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 1,
+          "second": 0,
+          "added": [],
+          "resets": 1,
+          "blend": 1,
+          "style": 1,
+          "boost": 1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 5,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 6,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 7,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 8,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 9,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 0,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 0,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 0,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 1,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 1,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 1,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 2,
+        "copies": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 2,
+        "copies": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "hero": 10,
+        "style": 2,
+        "copies": 3,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "gate": "blend",
+        "value": 1,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 1,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "gate": "blend",
+        "value": 2,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 2,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "gate": "ready",
+        "value": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "gate": "hp",
+        "value": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      },
+      {
+        "gate": "pressed",
+        "value": 0,
+        "result": {
+          "first": 0,
+          "second": 0,
+          "added": [],
+          "resets": 0,
+          "blend": 0,
+          "style": -1,
+          "boost": -1
+        }
+      }
+    ],
+    "dispatch": [
+      {
+        "animation": 539000,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539000,
+        "active": 1,
+        "requests": [
+          600000150
+        ]
+      },
+      {
+        "animation": 539005,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539005,
+        "active": 1,
+        "requests": [
+          600000185
+        ]
+      },
+      {
+        "animation": 539100,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539100,
+        "active": 1,
+        "requests": [
+          600000150
+        ]
+      },
+      {
+        "animation": 539105,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 539105,
+        "active": 1,
+        "requests": [
+          600000185
+        ]
+      }
+    ],
+    "selection": [
+      {
+        "style": 0,
+        "copies": 0,
+        "animation": 539000,
+        "leaf": 703540,
+        "rate": 0.5,
+        "queued": 1
+      },
+      {
+        "style": 0,
+        "copies": 1,
+        "animation": 539005,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 0,
+        "copies": 2,
+        "animation": 539005,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 0,
+        "copies": 3,
+        "animation": 539005,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 1,
+        "copies": 0,
+        "animation": 539100,
+        "leaf": 703540,
+        "rate": 0.5,
+        "queued": 1
+      },
+      {
+        "style": 1,
+        "copies": 1,
+        "animation": 539105,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 1,
+        "copies": 2,
+        "animation": 539105,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 1,
+        "copies": 3,
+        "animation": 539105,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 2,
+        "copies": 0,
+        "animation": 539100,
+        "leaf": 703540,
+        "rate": 0.5,
+        "queued": 1
+      },
+      {
+        "style": 2,
+        "copies": 1,
+        "animation": 539105,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 2,
+        "copies": 2,
+        "animation": 539105,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      },
+      {
+        "style": 2,
+        "copies": 3,
+        "animation": 539105,
+        "leaf": 7290001,
+        "rate": 0.6000000238418579,
+        "queued": 1
+      }
+    ],
+    "damage": [
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          0
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          2
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          4
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          5
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          9
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -4
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          10
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          99
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -49
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          999
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -499
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -9
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 703540,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -300
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          0
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          2
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          4
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          5
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          9
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -5
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          10
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -6
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          99
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -59
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          999
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -599
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -11
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 2,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 3,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 5,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 6,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 7,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 8,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 9,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 10,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 11,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 12,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 13,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 14,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "leaf": 7290001,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -360
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      }
+    ],
+    "repeat": [
+      {
+        "sequence": [
+          703540,
+          703540,
+          703540
+        ],
+        "rates": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "sequence": [
+          7290001,
+          7290001,
+          7290001
+        ],
+        "rates": [
+          0.6000000238418579,
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "sequence": [
+          703540,
+          7290001
+        ],
+        "rates": [
+          0.5,
+          0.6000000238418579
+        ],
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "sequence": [
+          7290001,
+          703540
+        ],
+        "rates": [
+          0.6000000238418579,
+          0.5
+        ],
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      }
+    ]
+  },
+  "native": {
+    "state": "508E20",
+    "dispatch": "40CD80",
+    "resolve": "668B30",
+    "arrival": "3CE5B3..3CE5E9",
+    "rate": "44A340",
+    "queue": "733490",
+    "consume": "449AAC..449C6D",
+    "damage": "430F50"
+  },
+  "stubs": [
+    "0x27d0640 isolated animation-owner context / hand identity / empty reference list",
+    "0x3d4180 isolated animation-owner context / hand identity / empty reference list",
+    "0x3d4c10 isolated animation-owner context / hand identity / empty reference list",
+    "0x4d1b20 isolated animation-owner context / hand identity / empty reference list",
+    "0x66b2d0 isolated animation-owner context / hand identity / empty reference list",
+    "0xea76f0 isolated animation-owner context / hand identity / empty reference list",
+    "0xea9a60 isolated animation-owner context / hand identity / empty reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "282970 synthetic actor entity identity",
+    "3975D0 Behavior request recorder; animation dispatch remains native",
+    "3C7FD0 status-effect request recorder",
+    "3CED90 isolated animation-owner context",
+    "426130 HP delta recorder; final caps/modifiers are not simulated",
+    "43CED0 damage notification sink after recorded HP request",
+    "48DE50 poise request recorder; final stagger processing not simulated",
+    "519EF0 authoritative local recipient; no network simulation",
+    "E6FCB0 actual Behavior row lookup",
+    "E81650 actual PlayerCommon PARAM lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "no full hit, resource/stagger modifiers, linked actor, multiplayer or game execution",
+    "original HKS environment/input calls are fixtures; state-2271 result comes from native query",
+    "single-thread fixture mutex lock/unlock",
+    "synthetic absent linked actor identity; secondary replay target not simulated",
+    "synthetic animation-owner virtuals and equipped weapon 1000",
+    "synthetic replay-history records; full recorder, time filtering and scheduling not simulated"
+  ],
+  "gameplayVerified": false
+}
