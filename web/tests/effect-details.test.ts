@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import startingGoods from "../../data/effect-starting-goods-evidence.json";
 import startingWeapon from "../../data/effect-starting-weapon-evidence.json";
 import duration from "../../data/effect-guardian-duration-evidence.json";
 import evasion from "../../data/effect-duchess-evasion-evidence.json";
@@ -29,6 +30,27 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shares pouch expansion with picked pouches while keeping Dragon Heart slots independent", () => {
+    for (const id of [7121000, 7121001]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["道具栏位", "+1"]]);
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("每条 +1 格，与小型随身包合计最多 +4 格");
+    }
+    const capacity = startingGoods.checks.capacity;
+    expect(capacity.find((r) => r.relic === 3 && r.pickup === 0 && r.dragon === 0)?.capacity).toBe(7);
+    expect(capacity.find((r) => r.relic === 3 && r.pickup === 3 && r.dragon === 0)?.capacity).toBe(8);
+    expect(capacity.find((r) => r.relic === 6 && r.pickup === 5 && r.dragon === 2)?.capacity).toBe(10);
+    for (const row of startingGoods.checks.reinitialize) {
+      expect(row.afterRepeat).toBe(row.new);
+      expect(row.capacity).toBe(Math.min(8, 4 + row.new));
+    }
+    expect(startingGoods.checks.allocationFailure).toEqual([{quantity: 0, capacity: 4}]);
+    expect(startingGoods.gameplayVerified).toBe(false);
+    expect(research.startingGoodsEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-starting-goods-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("binds starting infusions to weapon instances and shows their attack penalties", () => {
     for (const id of [7120000, 7120100, 7120200, 7120300]) {
       const detail = effectDetail(id)!;
@@ -589,7 +611,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(516);
+    expect(research.coverage.withNumericFields).toBe(518);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
@@ -1088,17 +1110,24 @@ describe("MMV effect details", () => {
     ]);
     expect(effectDetail(6840200)!.notes).toEqual([]);
   });
-  it("does not unconditionally sum starting-item branches", () => {
-    const blocks = effectDetail(7121100)!.blocks;
-    expect(blocks.map((b) => b.values)).toEqual([
-      [["火焰壶", "×2"]],
-      [["火焰壶", "×2"]],
-    ]);
-    expect(blocks.map((b) => b.phase)).toEqual([
-      "出击时",
-      "额外发放条件待确认",
-    ]);
-    expect(blocks[1].restrictions).toContain("需满足指定状态");
+  it("limits extra starting goods to Scholar and preserves ordinary quantities", () => {
+    for (const id of [7121100, 7126000, 7126001, 7126002]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0].values[0][1]).toBe("×2（学者 ×4）");
+      expect(detail.blocks[0].phase).toBe("出击时");
+      expect(detail.blocks[0].restrictions).toEqual([]);
+      expect(detail.stacking).toBe("可叠加");
+    }
+    for (const id of [7120900, 7122100])
+      expect(effectDetail(id)!.blocks[0].values[0][1]).toBe("×1");
+    expect(effectDetail(6621100)!.blocks[0].values[0][1]).toBe("×1（学者 ×2）");
+    for (const row of startingGoods.checks.selection) {
+      const source = startingGoods.rows[String(row.root) as keyof typeof startingGoods.rows];
+      const extra = [source.invocationConditionsStateChange1, source.invocationConditionsStateChange2,
+        source.invocationConditionsStateChange3].includes(2226);
+      expect(row.quantity).toBe(extra && row.hero !== 9 ? 0 : source.startingItemAmount);
+    }
     expect(effectDetail(7122700)!.blocks[0].values).toEqual([
       ["出击时替换", "辉剑圆阵"],
     ]);

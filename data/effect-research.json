@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 587,
-    "withNumericFields": 516,
+    "withDetails": 589,
+    "withNumericFields": 518,
     "withMechanicsOnly": 36,
-    "nativeStacking": 355,
+    "nativeStacking": 406,
     "catalog": 2241,
-    "catalogWithDetails": 2030
+    "catalogWithDetails": 2032
   },
   "effects": {
     "0": {
@@ -5018,12 +5018,13 @@
         7621001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5042,12 +5043,13 @@
         7621101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5066,12 +5068,13 @@
         7621201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5090,12 +5093,13 @@
         7621301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5114,12 +5118,13 @@
         7621401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5138,12 +5143,13 @@
         7621501
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5162,12 +5168,13 @@
         7621601
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5186,12 +5193,13 @@
         7621701
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5210,12 +5218,13 @@
         7621801
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5234,12 +5243,13 @@
         7621901
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5258,12 +5268,13 @@
         7622001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5282,12 +5293,13 @@
         7622101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5306,12 +5318,13 @@
         7622201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5330,12 +5343,13 @@
         7622301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5354,12 +5368,13 @@
         7622401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5378,12 +5393,13 @@
         7622501
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5402,12 +5418,13 @@
         7622601
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5426,12 +5443,13 @@
         7622701
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5450,12 +5468,13 @@
         7622801
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5474,12 +5493,13 @@
         7622901
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5498,12 +5518,13 @@
         7623001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5522,12 +5543,13 @@
         7623101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5546,12 +5568,13 @@
         7623201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5570,12 +5593,13 @@
         7624001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5594,12 +5618,13 @@
         7624101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5618,12 +5643,13 @@
         7624201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5642,12 +5668,13 @@
         7624301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5666,12 +5693,13 @@
         7624401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -5690,12 +5718,13 @@
         7624501
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14036,12 +14065,13 @@
         7120900
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14054,15 +14084,17 @@
       "states": [
         2102
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7121000
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14075,15 +14107,17 @@
       "states": [
         2102
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7121000
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14102,12 +14136,13 @@
         7121101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14126,12 +14161,13 @@
         7121201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14150,12 +14186,13 @@
         7121301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14174,12 +14211,13 @@
         7121401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14198,12 +14236,13 @@
         7121501
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14222,12 +14261,13 @@
         7121601
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14246,12 +14286,13 @@
         7121701
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14270,12 +14311,13 @@
         7121801
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14294,12 +14336,13 @@
         7121901
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14318,12 +14361,13 @@
         7122001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14340,12 +14384,13 @@
         7122100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14364,12 +14409,13 @@
         7122201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14388,12 +14434,13 @@
         7122301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14412,12 +14459,13 @@
         7122401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14436,12 +14484,13 @@
         7122501
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14460,12 +14509,13 @@
         7122601
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14924,12 +14974,13 @@
         7126001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14948,12 +14999,13 @@
         7126001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -14972,12 +15024,13 @@
         7126001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "starting-goods"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "出击物品发放次数、容量溢出和状态 2226 的额外发放条件"
+        "完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递"
       ],
       "gameplayVerified": false
     },
@@ -49371,6 +49424,7 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "startingGoodsEvidenceSha256": "094c38d5ac7c4e96b80d8466f61cb8726dd10a60516c0ddc57bd511e6f21dcff",
   "startingWeaponEvidenceSha256": "c0481ebb3620335dfd8d9a482a7b89216920a70bc8a063c3350ae24ae9c37181",
   "guardianDurationEvidenceSha256": "74ea90777fe36c69f2e916df389add9ea22b0635608d9649ceb421286b4348d2",
   "duchessEvasionEvidenceSha256": "350dd6bc86ff3b71ed9013e17363c698d3c4da57b8800ed51fe396cda74c8425",

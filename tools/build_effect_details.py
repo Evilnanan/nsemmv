@@ -141,6 +141,14 @@ assert starting_weapon['schema'] == 1 and starting_weapon['regulationSha256'] ==
 assert starting_weapon['exeSha256'] == evidence['exeSha256'] and not starting_weapon['gameplayVerified']
 assert starting_weapon['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in starting_weapon['checks'].items()} == dict(component=70, assignment=12, attack=672, status=300, binding=28)
+starting_goods_path = ROOT / 'data/effect-starting-goods-evidence.json'
+starting_goods = json.loads(starting_goods_path.read_text())
+assert starting_goods['schema'] == 1 and starting_goods['regulationSha256'] == catalog['regulationSha256']
+assert starting_goods['exeSha256'] == evidence['exeSha256'] and not starting_goods['gameplayVerified']
+assert starting_goods['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in starting_goods['checks'].items()} == dict(
+    selection=930, repeat=288, capacity=252, reinitialize=49, allocationFailure=1)
+
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -446,6 +454,8 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'starting-pouch': ('可叠加', '每条 +1 格，与小型随身包合计最多 +4 格', ['starting-goods']),
+    'starting-goods': ('可叠加', '数量相加，按单格上限分装', ['starting-goods']),
     'starting-weapon': ('不可叠加', '出击武器的属性／异常附加只生效一种', ['starting-weapon']),
     'guardian-duration': ('不可叠加', '重复装备不延长旋风持续时间', ['guardian-duration']),
     'duchess-evasion': ('不可叠加', '再次触发刷新时长', ['duchess-evasion']),
@@ -760,6 +770,28 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if roots and all(r.get('stateInfo') == 2102 for r in roots):
+        family = list(effect['roots'].values())
+        assert family in starting_goods['families']
+        for root, row in zip(family, roots):
+            assert all(row[k] == v for k, v in starting_goods['rows'][str(root)].items())
+        item = roots[0]['startGoodsId']
+        if item == 10055:
+            assert family == [7121000] and roots[0]['startingItemAmount'] == 1
+            blocks = [dict(source=family[0], phase='出击时', linked=False,
+                           values=[['道具栏位', '+1']], scope=[], restrictions=[], duration=None, interval=None)]
+            rule = 'starting-pouch'
+        else:
+            ordinary = sum(r['startingItemAmount'] for r in roots
+                           if 2226 not in [r['invocationConditionsStateChange' + str(i)] for i in (1, 2, 3)])
+            scholar = sum(r['startingItemAmount'] for r in roots)
+            amount = '×' + num(ordinary)
+            if scholar != ordinary:
+                amount += '（学者 ×' + num(scholar) + '）'
+            label = source['labels']['GoodsName'][str(item)]
+            blocks = [dict(source=family[0], branches=family[1:], phase='出击时', linked=False,
+                           values=[[label, amount]], scope=[], restrictions=[], duration=None, interval=None)]
+            rule = 'starting-goods'
     initial_root = next((r for r in effect['roots'].values() if r in starting_weapon['roots']), None)
     if initial_root is not None:
         leaves = [initial_root + n for n in range(1, 5)]
@@ -961,7 +993,7 @@ for id in sorted(source['effects'], key=int):
     if any(str(b['source']) in evidence['recoveryTiming'] for b in detail['blocks']):
         refs.append('recovery-timing')
     if 2102 in states:
-        questions.append('出击物品发放次数、容量溢出和状态 2226 的额外发放条件')
+        questions.append('完整出征／重载调度、一般拾取自动装备、道具栏位溢出后的显示／保留和网络投递')
     if 2105 in states or 2128 in states:
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
@@ -1050,6 +1082,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['startingGoodsEvidenceSha256'] = hashlib.sha256(starting_goods_path.read_bytes()).hexdigest()
 research['startingWeaponEvidenceSha256'] = hashlib.sha256(starting_weapon_path.read_bytes()).hexdigest()
 research['guardianDurationEvidenceSha256'] = hashlib.sha256(duration_path.read_bytes()).hexdigest()
 research['duchessEvasionEvidenceSha256'] = hashlib.sha256(evasion_path.read_bytes()).hexdigest()
