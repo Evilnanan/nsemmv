@@ -38,6 +38,7 @@ import heroAdjustment from "../../data/effect-hero-adjustment-evidence.json";
 import successiveRecovery from "../../data/effect-successive-recovery-evidence.json";
 import successiveAttack from "../../data/effect-successive-attack-evidence.json";
 import scholarTether from "../../data/effect-scholar-tether-evidence.json";
+import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -55,6 +56,37 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("keeps charged ultimate poison separate from early release and maintenance timing", () => {
+    const detail = effectDetail(7034600)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加累积或伤害");
+    expect(detail.blocks.map(b => b.values)).toEqual([
+      [["中毒基础累积", "300"]], [["中毒伤害", "最大血量的 0.1% + 10"]],
+    ]);
+    expect(detail.blocks.map(b => b.duration)).toEqual([null, 40]);
+    expect(detail.blocks.map(b => b.interval)).toEqual([null, 1.3]);
+    expect(detail.notes).toEqual(["提前放箭不附加此中毒。", "中毒期间再次命中不刷新这次中毒时长。"]);
+    for (const row of ironeyeUltimate.checks.dispatch) {
+      const poison = row.requests.some(r => r.behavior === 700000140);
+      expect(poison).toBe(!!row.active && row.animation === 620000 && row.state === 2258);
+    }
+    for (const row of ironeyeUltimate.checks.selection) {
+      expect(row.states[2258]).toBe(!!row.copies);
+      expect(row.states[2025]).toBe(!row.copies);
+    }
+    for (const row of ironeyeUltimate.checks.onset)
+      expect(row.rejected).toBe(row.immune || row.resistance > row.amount);
+    for (const row of ironeyeUltimate.checks.damage)
+      expect(row.packet[0]).toBe(-(Math.trunc(row.maximum * .001) + 10));
+    for (const row of ironeyeUltimate.checks.repeat) {
+      expect(row.result).toBe("existing");
+      expect(row.remaining).toBeCloseTo(40 - row.elapsed);
+    }
+    expect(ironeyeUltimate.gameplayVerified).toBe(false);
+    expect(research.ironeyeUltimateEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-ironeye-ultimate-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates Scholar tether eligibility time from wall time and repeated ultimate applications", () => {
     const detail = effectDetail(7036400)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1233,7 +1265,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(539);
+    expect(research.coverage.withNumericFields).toBe(540);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

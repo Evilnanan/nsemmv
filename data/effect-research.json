@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 612,
-    "withNumericFields": 539,
+    "withDetails": 613,
+    "withNumericFields": 540,
     "withMechanicsOnly": 38,
-    "nativeStacking": 488,
+    "nativeStacking": 489,
     "catalog": 2241,
-    "catalogWithDetails": 2055
+    "catalogWithDetails": 2056
   },
   "effects": {
     "0": {
@@ -11450,14 +11450,18 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7034602,
+        7034602
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "ironeye-ultimate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "子弹体攻击上下文与异常继承、同目标命中去重、完整蓄力动作中断／实时调度、异常修正与抵抗成长、其他中毒覆盖、最终 HP 写入及多人／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49618,6 +49622,7 @@
   "successiveRecoveryEvidenceSha256": "9702067e94660e569cacfe18f852143558149ee3b6d5a031d11d435fad9221ed",
   "successiveAttackEvidenceSha256": "369657f4fbc9bf8ca0204c48d191eeea639b4f9a95addbb53de533f8f50dfea4",
   "scholarTetherEvidenceSha256": "27db505921ca4ff3a6bccae33ceb04f3056d290e8da92c436bddeffb49cd5108",
+  "ironeyeUltimateEvidenceSha256": "d6f431d0505ee7d18f41cec8542dc78ecf27ca2422890aaa62cd3ac840e8e174",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
