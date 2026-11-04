@@ -14,6 +14,30 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("uses start-only animation grants without truncating role buffs to the event window", () => {
+    for (const id of [7033300, 7033301]) {
+      const d = effectDetail(id)!;
+      expect(d.blocks[0].values).toEqual([["攻击倍率", "+20%"], ["精力上限", "+20%"], ["承伤倍率", "+20%"]]);
+      expect(d.blocks[0].duration).toBe(40);
+      expect(d.stacking).toBe("不可叠加");
+    }
+    const ult = effectDetail(7036800)!;
+    expect(ult.blocks[0].values).toEqual([["攻击倍率", "+18%"]]);
+    expect(ult.blocks[0].duration).toBe(40);
+    expect(ult.blocks[0].scope).toEqual([]);
+    expect(ult.stacking).toBe("不可叠加");
+    for (const id of [7033500, 7033501]) {
+      const d = effectDetail(id)!;
+      expect(d.blocks[0].values).toEqual([["攻击倍率", "+10%"]]);
+      expect(d.blocks[0].duration).toBe(10);
+      expect(d.stacking).toBe("待确认");
+      expect(research.effects[String(id) as keyof typeof research.effects].openQuestions.join()).toContain("连续技艺");
+    }
+    expect(evidence.actionStart).toHaveLength(12);
+    for (const r of evidence.actionStart) expect(r.emitted).toEqual(r.active ? [r.leaf] : []);
+    expect(evidence.actionValues.filter((r) => "refreshedDuration" in r).map((r) => r.refreshedDuration)).toEqual([40, 40]);
+    expect(triggers.roots["7036800"].events["7036801"].every((r) => r.type === 302 && r.end < .04)).toBe(true);
+  });
   it("distinguishes the totem lifetime, recipient buffs and instantaneous healing", () => {
     for (const id of [7310000, 15000]) {
       const detail = effectDetail(id)!;
@@ -62,7 +86,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(483);
+    expect(research.coverage.withNumericFields).toBe(488);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
@@ -317,7 +341,7 @@ describe("MMV effect details", () => {
         )[seed];
         expect(events.length).toBeGreaterThan(0);
         for (const event of events) {
-          expect([66, 67, 401]).toContain(event.type);
+          expect([66, 67, 302, 401]).toContain(event.type);
           expect(Buffer.from(event.parameters, "hex").readInt32LE()).toBe(seed);
         }
       }

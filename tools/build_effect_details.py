@@ -408,7 +408,7 @@ for id, effect in source['effects'].items():
         rule = 'shop-discount'
     if len(external) == 1 and effect['runtimeExclusive'] == -1:
         family = external[0]['family']
-        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth'):
+        if family not in ('madness-fp', 'revenant-allies', 'random-weapon', 'undertaker-growth', 'wylder-skill'):
             matches = [r for r in evidence['triggerMatching'] if r['family'] == family]
             assert matches and all(r['reused'] == (r['existing'] == r['incoming']) for r in matches)
             rule = {'bolus': 'trigger-tiers', 'grease': 'trigger-attack',
@@ -459,6 +459,15 @@ for id, effect in source['effects'].items():
                 values=[['HP', '+20% 或 +50% 最大 HP']], restrictions=['恢复量随敌人类型变化'],
                 scope=[], duration=None, interval=None)]
             notes.append('图腾增益持续 20 秒；搭配延长绝招时为 30 秒。')
+    if set(effect['roots'].values()) & {7020100, 7020200, 7036800}:
+        for b in blocks:
+            b['scope'] = []
+            if b['source'] == 7020101:
+                assert all(source['spells']['7020101'][k] == 1.2 for k in
+                           ('physicsAttackRate', 'maxStaminaRate', 'neutralDamageCutRate',
+                            'slashDamageCutRate', 'blowDamageCutRate', 'thrustDamageCutRate',
+                            'magicDamageCutRate', 'fireDamageCutRate', 'thunderDamageCutRate', 'darkDamageCutRate'))
+                b['values'] = [['攻击倍率', '+20%'], ['精力上限', '+20%'], ['承伤倍率', '+20%']]
     if id == '7032800':
         edge = links['emitters']['7032802']
         assert len(evidence['zoneMatching']) == 4
@@ -609,6 +618,10 @@ for id in sorted(source['effects'], key=int):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
+    if set(effect['roots'].values()) & {7020100, 7020200, 7036800}:
+        refs.extend(['action-start', 'action-values'])
+    if 7020200 in effect['roots'].values():
+        questions.append('类别 10 的连续技艺施加、独立实例寿命与实际叠加上限')
     if rules[id] == 'totem':
         questions.append('图腾范围重复进入、多人图腾相遇、提前破坏及网络投递时序')
     if rules[id] == 'discovery':

@@ -36,6 +36,9 @@ families = {
     'revenant-allies': ([7031200], '绝招发动时'),
     'critical-runes': ([7031900], '致命一击时'),
     'random-weapon': ([7035700], '切换武器后'),
+    'wylder-ultimate': ([7020100], '绝招发动后'),
+    'wylder-skill': ([7020200], '技艺发动后'),
+    'undertaker-ultimate': ([7036800], '绝招发动后'),
     'undertaker-growth': ([7037400], '发动强化技艺后'),
 }
 events = {}
@@ -45,7 +48,7 @@ for bundle in t['bundles']:
             if anim['headerType'] != 'Standard':
                 continue
             for e in anim['events']:
-                if e['Type'] not in (66, 67, 401):
+                if e['Type'] not in (66, 67, 302, 401):
                     continue
                 raw = bytes.fromhex(e['hex'])
                 id = struct.unpack_from('<i', raw)[0]

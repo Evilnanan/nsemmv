@@ -108,7 +108,12 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             sp = uc.reg_read(UC_X86_REG_RSP)
             uc.reg_write(UC_X86_REG_RIP, struct.unpack('<Q', uc.mem_read(sp, 8))[0])
             uc.reg_write(UC_X86_REG_RSP, sp + 8)
-        if rva == 0x6c8a60 and address - BASE == 0xe78730:
+        if rva == 0x40fff0 and address - BASE == 0x3c8be0:
+            calls.add('3C8BE0 TAE start-event application recorder; active flag handling is native')
+            assert uc.reg_read(UC_X86_REG_RCX) == OBJ + 0x6000
+            emitted.append(uc.reg_read(UC_X86_REG_RDX) & 0xffffffff)
+            finish(0)
+        elif rva == 0x6c8a60 and address - BASE == 0xe78730:
             calls.add('E78730 HeroStatus PARAM lookup using actual extracted rows')
             wrapper = uc.reg_read(UC_X86_REG_RCX)
             id = uc.reg_read(UC_X86_REG_RDX) & 0xffffffff
@@ -457,6 +462,7 @@ trigger_families = {
     'critical-gauge': [7030802, 7030812], 'grease': [7030902, 7030912, 7030922],
     'critical-stamina': [7035102, 7035112, 7035122],
     'critical-runes': [7031901],
+    'wylder-ultimate': [7020101], 'undertaker-ultimate': [7036801],
     'raider-hit': [7031302], 'sixth-sense-gauge': [7032402],
     'sixth-sense-attack': [7032501], 'ironeye-counter': [7034702],
     'madness-fp': [7035502, 7035512], 'weapon-change': [7035902], 'guard-hp': [7036102],
@@ -675,6 +681,41 @@ for existing in (1413000, 7032803):
         zone_matching.append(dict(existing=existing, incoming=incoming, categoryMatch=match,
                                   activeId=actual_id, duration=duration, magicRate=rate))
 
+action_start = []
+for leaf in (7020101, 7020201, 7036801):
+    for active in (0, 1):
+        for mode in (0, 1):
+            def setup(u):
+                u.mem_write(OBJ + 0x18, struct.pack('<Q', OBJ + 0x6000))
+                u.mem_write(OBJ + 0x808, struct.pack('<Q', OBJ + 0x900))
+                u.mem_write(OBJ + 0x818, bytes([active]))
+                u.mem_write(OBJ + 0x900, struct.pack('<i', leaf))
+            emitted = []
+            run(0x40fff0, [], [OBJ, OBJ + 0x800, mode], setup=setup, emitted=emitted)
+            assert emitted == ([leaf] if active else [])
+            action_start.append(dict(leaf=leaf, active=active, mode=mode, emitted=emitted))
+action_values = []
+for leaf in (7020101, 7020201, 7036801):
+    for kind in (0, 1, 2, 3, 4, 5):
+        u = run(0x502830, [leaf], [OBJ, OBJ + 0x800, -1, -1], kind=kind)
+        values = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
+        expected = x['tables']['SpEffectParam'][str(leaf)]['physicsAttackRate'] if kind < 5 else 1
+        assert all(math.isclose(v, expected, abs_tol=1e-6) for v in values)
+        action_values.append(dict(leaf=leaf, kind=kind, rates=values))
+for leaf in (7020101, 7036801):
+    node = OBJ + 0x1000
+    u = run(0x511700, [leaf], [node, leaf, 0, 0], xmm_args={UC_X86_REG_XMM2: 1})
+    duration = struct.unpack('<f', u.mem_read(node + 0x4c, 4))[0]
+    assert duration == 40
+    action_values.append(dict(leaf=leaf, refreshedDuration=duration))
+u = run(0x503800, [7020101], [OBJ, OBJ + 0x500, OBJ + 0x520, OBJ + 0x540, OBJ + 0x800])
+values = list(struct.unpack('<5f', u.mem_read(OBJ + 0x500, 20)))
+assert all(math.isclose(v, 1.2, abs_tol=1e-6) for v in values)
+action_values.append(dict(leaf=7020101, damageRates=values))
+# Category 10 does not reuse an existing instance. Keep the skill's complete
+# repeat-cast behavior open until the grant and expiry paths are connected.
+assert not run(0x510b20, [7020201], [OBJ + 0x1000, 7020201]).reg_read(UC_X86_REG_RAX) & 255
+
 hero = []
 modifiers = sorted({int(row['heroStatusModifier']) for row in x['tables']['SpEffectParam'].values() if row['stateInfo'] == 2123 and row['heroStatusModifier'] >= 0})
 for modifier in modifiers:
@@ -703,7 +744,7 @@ groups = dict(predicates=predicate, attributes=attributes, attack=attack, defens
               timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
               extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions, growthAdvance=growth_advance,
               growthValues=growth_values, zoneMatching=zone_matching, locationValues=location_values,
-              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally)
+              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally, actionStart=action_start, actionValues=action_values)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(),
     systemDefinitionHashes={k:v for k,v in systems['hashes'].items() if k.startswith('defs/')},
     systemParamSha256=system_hashes,
