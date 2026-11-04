@@ -138,3 +138,20 @@ class BehaviorGraph:
         name = self.string(struct.unpack_from('<Q', self.data, position)[0])
         return dict(selector=index, bindingSet=binding_set, binding=array, member=member,
                     variable=variable, name=name, stringSet=string_sets[0], names=names)
+
+    def blender_children(self, index):
+        """Resolve reviewed blender-child pointers and their generator references."""
+        typ, _, count = self.item(index)
+        assert typ['Identity'] == 'hkbBlenderGenerator' and count == 1
+        array = self.reference(index, 'children')
+        typ, offset, count = self.item(array)
+        assert typ['Identity'] == 'T*<hkbBlenderGeneratorChild>' and typ['Size'] == 8
+        result = []
+        for i in range(count):
+            position = offset + i * 8
+            assert self.types[self.patches[position]]['Identity'] == typ['Identity']
+            child = struct.unpack_from('<Q', self.data, position)[0]
+            ct, _, cn = self.item(child)
+            assert ct['Identity'] == 'hkbBlenderGeneratorChild' and cn == 1
+            result.append(dict(child=child, generator=self.reference(child, 'generator')))
+        return result

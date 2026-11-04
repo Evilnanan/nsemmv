@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
 import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
 import absorption from "../../data/effect-recluse-absorption-evidence.json";
 import restage from "../../data/effect-duchess-restage-evidence.json";
@@ -35,6 +36,31 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates poison buildup, periodic damage and the poisoned-target bonus", () => {
+    const detail = effectDetail(6500200)!;
+    expect(detail.blocks.map(b => b.values)).toEqual([
+      [["中毒基础累积", "70"]], [["中毒伤害", "最大血量的 0.1% + 10"]], [["追加伤害", "最大血量的 0.25% + 250"]],
+    ]);
+    expect(detail.blocks.map(b => b.duration)).toEqual([null, 40, null]);
+    expect(detail.blocks.map(b => b.interval)).toEqual([null, 1.3, null]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.notes).toEqual(["中毒期间再次命中不刷新这次中毒时长。", "追加伤害约每 0.1 秒最多触发一次。"]);
+    expect(ironeyePoison.checks.onset.filter(r => r.immune).every(r => r.rejected && r.remaining === r.resistance)).toBe(true);
+    expect(ironeyePoison.checks.damage.find(r => r.maximum === 10000)).toEqual({maximum: 10000, poison: -20, bonus: -275});
+    for (const row of ironeyePoison.checks.bonus)
+      expect(row.damage).toBe(row.prior ? -275 : 0);
+    expect(ironeyePoison.checks.bonusTiming.filter(r => r.fps === 60 && r.hits.length === 31)[0].damage.map(r => r.frame)).toEqual([0,8,16,24]);
+    for (const row of ironeyePoison.checks.repeat)
+      expect(row.remaining).toBe(40 - row.elapsed);
+    for (const row of ironeyePoison.checks.lifetime) {
+      expect(row.ticks).toHaveLength(31);
+      expect(row.ticks.every(t => t.damage === -20)).toBe(true);
+    }
+    expect(ironeyePoison.gameplayVerified).toBe(false);
+    expect(research.ironeyePoisonEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-ironeye-poison-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("reduces a skill-hit target's attack rate with refresh and spell exclusions", () => {
     const detail = effectDetail(6500400)!;
     expect(detail.blocks[0].values).toEqual([["目标攻击倍率", "-13%"]]);
@@ -725,7 +751,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(524);
+    expect(research.coverage.withNumericFields).toBe(525);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
