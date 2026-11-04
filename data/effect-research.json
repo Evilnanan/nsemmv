@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 606,
+    "withDetails": 607,
     "withNumericFields": 535,
-    "withMechanicsOnly": 36,
-    "nativeStacking": 423,
+    "withMechanicsOnly": 37,
+    "nativeStacking": 424,
     "catalog": 2241,
-    "catalogWithDetails": 2049
+    "catalogWithDetails": 2050
   },
   "effects": {
     "0": {
@@ -4443,15 +4443,17 @@
       "states": [
         2059
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7500900
+      ],
+      "values": "decoded-mechanism",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "undertaker-reset"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "完整行为图的收尾进入／中断条件、强化状态与联机同步；最大次数变化及倒地／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49492,6 +49494,7 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "undertakerResetEvidenceSha256": "ac6f90a3d941d03662e8dbfe508586e9bdb94bd70028dc9c88c6250b476bb981",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

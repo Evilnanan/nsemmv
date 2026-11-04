@@ -25,6 +25,7 @@ import tenacity from "../../data/effect-executor-tenacity-evidence.json";
 import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
 import raiderSkill from "../../data/effect-raider-skill-evidence.json";
 import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
+import undertakerReset from "../../data/effect-undertaker-reset-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -42,6 +43,28 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("refills Undertaker skill charges at the finishing animation without storing extra uses", () => {
+    const detail = effectDetail(6500900)!;
+    expect(detail.blocks[0].values).toEqual([["技艺使用次数", "恢复至上限"]]);
+    expect(detail.blocks[0].phase).toBe("绝招收尾动作开始时");
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.notes).toContain("次数已满时不会额外储存。");
+    expect(detail.stacking).toBe("不可叠加");
+    expect(research.effects["6500900"].values).toBe("decoded-mechanism");
+    for (const row of undertakerReset.checks.dispatch) {
+      expect(row.bank).toBe(255);
+      expect(row.refills).toBe(Number(row.copies > 0 && row.active && row.player));
+    }
+    for (const row of undertakerReset.checks.capacity) {
+      expect(row.after.remaining).toBe(row.maximum);
+      expect(row.after.elapsed).toBe(0);
+      expect(row.readyAfter).toBe(true);
+    }
+    expect(undertakerReset.gameplayVerified).toBe(false);
+    expect(research.undertakerResetEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-undertaker-reset-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows Undertaker contact as one-time ally healing without multiplying duplicate equipment", () => {
     const detail = effectDetail(7037300)!;
     expect(detail.blocks[0].values).toEqual([["HP 恢复", "目标最大值的 30% + 100"]]);
@@ -888,7 +911,7 @@ describe("MMV effect details", () => {
       expect(JSON.stringify(detail)).not.toContain("%");
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
-    expect(research.coverage.withMechanicsOnly).toBe(36);
+    expect(research.coverage.withMechanicsOnly).toBe(37);
     expect(research.coverage.withNumericFields).toBe(535);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),

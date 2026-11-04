@@ -1,0 +1,2191 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "heroParamSha256": "6ff2eaef12af031b8814f0aa5243a33a18debffe76cf26aeba6f09362b608013",
+  "hero": {
+    "id": 10,
+    "cooldown": 14,
+    "usageCount": 1
+  },
+  "animationBundleSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "taeSha256": "0968e9ee3d5cce60c64fb1b5b9bac514245894955077fe4747b8ca1ed31052fc",
+  "nativeEventBank": 255,
+  "behaviorSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "functions": [
+    {
+      "name": "BlinkStakeStart_onUpdate",
+      "sha256": "4333c2669a3eeeb769fd9b95089d7f6e16959fadcfa25bf684a65e526bc6dc93"
+    },
+    {
+      "name": "AirBlinkStakeStart_onUpdate",
+      "sha256": "d6eba4758c0cd3e27ec2a4db6287fe15621e1ca29e0ac7c091b904ddb4ca1665"
+    }
+  ],
+  "paths": [
+    {
+      "state": 20979,
+      "blend": 22392,
+      "selector": 32470,
+      "child": 45823,
+      "clip": 60764,
+      "animation": "a909_690001"
+    },
+    {
+      "state": 20979,
+      "blend": 22392,
+      "selector": 32470,
+      "child": 45824,
+      "clip": 60765,
+      "animation": "a909_690011"
+    }
+  ],
+  "events": [
+    {
+      "tae": 2909,
+      "animation": 690001,
+      "index": 44,
+      "Type": 1020,
+      "StartTime": 0,
+      "EndTime": 0.033333335,
+      "hex": "0B080000000000000000000000000000"
+    },
+    {
+      "tae": 2909,
+      "animation": 690011,
+      "index": 45,
+      "Type": 1020,
+      "StartTime": 0,
+      "EndTime": 0.033333335,
+      "hex": "0B080000000000000000000000000000"
+    }
+  ],
+  "root": 7500900,
+  "checks": {
+    "dispatch": [
+      {
+        "animation": 690001,
+        "copies": 0,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 0,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 0,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 0,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 1,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 1,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 1,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 1,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 1
+      },
+      {
+        "animation": 690001,
+        "copies": 2,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 2,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 2,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 2,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 1
+      },
+      {
+        "animation": 690001,
+        "copies": 3,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 3,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 3,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690001,
+        "copies": 3,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 1
+      },
+      {
+        "animation": 690011,
+        "copies": 0,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 0,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 0,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 0,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 1,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 1,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 1,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 1,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 1
+      },
+      {
+        "animation": 690011,
+        "copies": 2,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 2,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 2,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 2,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 1
+      },
+      {
+        "animation": 690011,
+        "copies": 3,
+        "active": false,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 3,
+        "active": false,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 3,
+        "active": true,
+        "player": false,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 0
+      },
+      {
+        "animation": 690011,
+        "copies": 3,
+        "active": true,
+        "player": true,
+        "bank": 255,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "refills": 1
+      }
+    ],
+    "capacity": [
+      {
+        "maximum": 1,
+        "remaining": 0,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 1,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 0,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 1,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 0,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 1,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 0,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 1,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 0,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 1,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 0,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 1,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 1,
+        "remaining": 1,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 1,
+          "maximum": 1,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 0,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 1,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 2,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 0,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 1,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 2,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 0,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 2,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 1,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 2,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 2,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 0,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 2,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 1,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 2,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 2,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 0,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 2,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 1,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 2,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 2,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 0,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 2,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 1,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 2,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 2,
+        "remaining": 2,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 2,
+          "maximum": 2,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 0,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 1,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 2,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 2,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 3,
+        "elapsed": 0,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 0,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 1,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 2,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 2,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 3,
+        "elapsed": 0,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 0,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 1,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 2,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 2,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 3,
+        "elapsed": 7,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 0,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 1,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 2,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 2,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 3,
+        "elapsed": 7,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 7.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 0,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 0,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 1,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 1,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 2,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 2,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 3,
+        "elapsed": 13,
+        "cooldownEffect": null,
+        "before": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 0,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 0,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": false,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 1,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 1,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 2,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 2,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      },
+      {
+        "maximum": 3,
+        "remaining": 3,
+        "elapsed": 13,
+        "cooldownEffect": 7000803,
+        "before": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 13.0,
+          "threshold": 14.0,
+          "base": 14.0
+        },
+        "after": {
+          "remaining": 3,
+          "maximum": 3,
+          "elapsed": 0.0,
+          "threshold": 11.90000057220459,
+          "base": 14.0
+        },
+        "readyBefore": true,
+        "readyAfter": true
+      }
+    ],
+    "repeat": [
+      {
+        "animation": 690001,
+        "copies": 1,
+        "states": [
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          }
+        ],
+        "refills": 4
+      },
+      {
+        "animation": 690001,
+        "copies": 2,
+        "states": [
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          }
+        ],
+        "refills": 4
+      },
+      {
+        "animation": 690001,
+        "copies": 3,
+        "states": [
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          }
+        ],
+        "refills": 4
+      },
+      {
+        "animation": 690011,
+        "copies": 1,
+        "states": [
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          }
+        ],
+        "refills": 4
+      },
+      {
+        "animation": 690011,
+        "copies": 2,
+        "states": [
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          }
+        ],
+        "refills": 4
+      },
+      {
+        "animation": 690011,
+        "copies": 3,
+        "states": [
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          },
+          {
+            "remaining": 1,
+            "maximum": 1,
+            "elapsed": 0.0,
+            "threshold": 14.0,
+            "base": 14.0
+          }
+        ],
+        "refills": 4
+      }
+    ]
+  },
+  "native": {
+    "relocate": "27D0F10 → 27D0940",
+    "iterate": "27D0400",
+    "dispatch": "410CA0 → 413E6F",
+    "state": "508E20",
+    "reset": "48BD40",
+    "cooldown": "42C130 → 508480",
+    "ready": "48BA80"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "3D4180 explicit player/non-player identity",
+    "EA17E0 actual SpEffect PARAM lookup"
+  ],
+  "gameplayVerified": false
+}

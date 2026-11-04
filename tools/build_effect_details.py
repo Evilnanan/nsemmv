@@ -200,6 +200,12 @@ assert wylder_bleed['exeSha256'] == evidence['exeSha256'] and not wylder_bleed['
 assert wylder_bleed['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in wylder_bleed['checks'].items()} == dict(dispatch=32, onset=48, damage=7, repeat=3, lifetime=3)
 
+undertaker_reset_path = ROOT / 'data/effect-undertaker-reset-evidence.json'
+undertaker_reset = json.loads(undertaker_reset_path.read_text())
+assert undertaker_reset['schema'] == 1 and undertaker_reset['regulationSha256'] == catalog['regulationSha256']
+assert undertaker_reset['exeSha256'] == evidence['exeSha256'] and not undertaker_reset['gameplayVerified']
+assert undertaker_reset['paramSha256'] == evidence['paramSha256'] and undertaker_reset['nativeEventBank'] == 255
+assert {k: len(v) for k, v in undertaker_reset['checks'].items()} == dict(dispatch=32, capacity=54, repeat=6)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -561,6 +567,7 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'undertaker-reset': ('不可叠加', '重复装备不增加恢复次数', ['undertaker-reset']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
     'guardian-ultimate': ('不可叠加', '再次施加刷新时长', ['guardian-ultimate']),
     'raider-growth': ('不可叠加', '重复装备不加快成长，也不提高上限', ['raider-growth']),
@@ -889,6 +896,12 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if undertaker_reset['root'] in effect['roots'].values():
+        blocks = [dict(source=undertaker_reset['root'], phase='绝招收尾动作开始时', linked=False,
+                       values=[['技艺使用次数', '恢复至上限']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('次数已满时不会额外储存。')
+        rule = 'undertaker-reset'
     if undertaker_contact['root'] in effect['roots'].values():
         leaf = undertaker_contact['leaf']
         assert source['spells'][str(leaf)]['changeHpRate'] == -30
@@ -1226,9 +1239,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1246,6 +1259,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if rules[id] == 'executor-tenacity':
         questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
+    if rules[id] == 'undertaker-reset':
+        questions.append('完整行为图的收尾进入／中断条件、强化状态与联机同步；最大次数变化及倒地／重载交互')
     if rules[id] == 'undertaker-contact':
         questions.append('完整绝招碰撞与同一目标命中去重、状态 624 在玩家与召唤物中的赋予范围、最终治疗修正／溢出及多人交互')
     if rules[id] == 'guardian-ultimate':
@@ -1304,10 +1319,10 @@ for id in sorted(source['effects'], key=int):
         questions.append('低血量状态切换与其他触发链的时序交互')
     if not detail['blocks']:
         questions.append('尚未解析到可展示数值／机制，继续查原生、事件或动作脚本')
-    numeric = any(any(label not in ('出击时替换', '武器倾向') for label, _ in b['values']) for b in detail['blocks'])
+    numeric = rules[id] != 'undertaker-reset' and any(any(label not in ('出击时替换', '武器倾向') for label, _ in b['values']) for b in detail['blocks'])
     ledger[id] = dict(name=catalog['effects'][id]['name']['zh_CN'], obtainable=id in obtainable, roots=effect['roots'], states=states,
                       detailSources=[sp for b in detail['blocks'] for sp in [b['source'], *b.get('branches', [])]],
-                      values='decoded-fields' if numeric else ('decoded-mechanism' if rules[id] == 'discovery' else ('named-replacement' if detail['blocks'] else 'unresolved')),
+                      values='decoded-fields' if numeric else ('decoded-mechanism' if rules[id] in ('discovery', 'undertaker-reset') else ('named-replacement' if detail['blocks'] else 'unresolved')),
                       stacking='native-analysis' if rules[id] != 'unknown' else 'unresolved',
                       stackingCategory=detail['stacking'],
                       evidence=refs, openQuestions=questions, gameplayVerified=False)
@@ -1335,6 +1350,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['undertakerResetEvidenceSha256'] = hashlib.sha256(undertaker_reset_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()
