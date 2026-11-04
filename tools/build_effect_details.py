@@ -317,6 +317,12 @@ assert wylder_followup['schema'] == 1 and wylder_followup['regulationSha256'] ==
 assert wylder_followup['exeSha256'] == evidence['exeSha256'] and not wylder_followup['gameplayVerified']
 assert wylder_followup['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in wylder_followup['checks'].items()} == dict(script=120, styleScript=6, attackDispatch=6, enchantDispatch=12, values=52, timer=12, overwrite=8, switchHand=2)
+duchess_dagger_path = ROOT / 'data/effect-duchess-dagger-evidence.json'
+duchess_dagger = json.loads(duchess_dagger_path.read_text())
+assert duchess_dagger['schema'] == 1 and duchess_dagger['regulationSha256'] == catalog['regulationSha256']
+assert duchess_dagger['exeSha256'] == evidence['exeSha256'] and not duchess_dagger['gameplayVerified']
+assert duchess_dagger['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in duchess_dagger['checks'].items()} == dict(trigger=45, emptyPayload=3, repeat=12, damage=156, overwrite=5, radius=5, attackSetup=1)
 ironeye_ultimate_path = ROOT / 'data/effect-ironeye-ultimate-evidence.json'
 ironeye_ultimate = json.loads(ironeye_ultimate_path.read_text())
 assert ironeye_ultimate['schema'] == 1 and ironeye_ultimate['regulationSha256'] == catalog['regulationSha256']
@@ -519,6 +525,8 @@ if args.extract:
                 needed.update((revenant_enchant['enchant'], revenant_enchant['frost']))
             if root == wylder_followup['root']:
                 needed.update(map(int, wylder_followup['rows']))
+            if root == duchess_dagger['root']:
+                needed.update(map(int, duchess_dagger['rows']))
             if root == ironeye_ultimate['root']:
                 needed.update(map(int, ironeye_ultimate['rows']))
             if root == revenant_ghostflame['root']:
@@ -778,6 +786,7 @@ STACKING_RULES = {
     'revenant-family': ('不可叠加', '重复装备不增加家人数量', ['revenant-family']),
     'guardian-halberd': ('不可叠加', '重复装备不增加旋风数量或范围', ['guardian-halberd']),
     'wylder-followup': ('不可叠加', '再次触发刷新附魔时长，不叠加数值', ['wylder-followup']),
+    'duchess-dagger': ('不可叠加', '重复装备不增加重演比例或触发次数', ['duchess-dagger']),
     'ironeye-ultimate': ('不可叠加', '重复装备不增加累积或伤害', ['ironeye-ultimate']),
     'revenant-ghostflame': ('不可叠加', '重复装备不增加爆炸次数或冻伤累积', ['revenant-ghostflame']),
     'scholar-feint': ('不可叠加', '重复装备不延长弹反窗口', ['scholar-feint']),
@@ -1241,6 +1250,15 @@ for id, effect in source['effects'].items():
                        values=[['弹反窗口', '动作第 0.13～0.27 秒']], restrictions=['刺剑／重刺剑'],
                        scope=[], duration=None, interval=None)]
         rule = 'scholar-feint'
+    if int(id) in duchess_dagger['effects']:
+        assert list(effect['roots'].values()) == [duchess_dagger['root']]
+        assert source['spells'][str(duchess_dagger['leaf'])]['restageAttackRate'] == .4
+        assert duchess_dagger['bullet']['hitRadius'] == duchess_dagger['bullet']['hitRadiusMax'] == 15
+        blocks = [dict(source=duchess_dagger['leaf'], phase='短剑连击最后一击命中时', linked=True,
+                       values=[['重演伤害比例', '40%'], ['作用半径', '15 米']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('强化技艺的重演伤害词条不提高此效果的重演比例。')
+        rule = 'duchess-dagger'
     if int(id) in wylder_followup['effects']:
         assert list(effect['roots'].values()) == [wylder_followup['root']]
         for leaf in wylder_followup['leaves']:
@@ -1724,9 +1742,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1788,6 +1806,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('家人控制器状态 0／11 的完整生命周期与更新、已在场／死亡／召回时的实际行为、落点碰撞和资源生成、绝招动作中断及多人／重载时序')
     if rules[id] == 'guardian-halberd':
         questions.append('戟动作选择与蓄力分支、中断和时间缩放、弹体着地与完整状态过渡、武器攻击来源及动作修正、命中去重与最终 HP 伤害、多人／死亡／重载时序')
+    if rules[id] == 'duchess-dagger':
+        questions.append('完整武器／动作选择、攻击载荷构造与碰撞、多目标命中的同帧触发及重演队列去重、历史记录时间筛选、最终伤害／削韧修正与多人／死亡／重载时序')
     if rules[id] == 'wylder-followup':
         questions.append('完整钩索动作调度与输入窗口／中断、实际武器攻击数据绑定与附魔资格、攻击修正及最终伤害／耗精力、实际换武器和其他类别附魔、多人／死亡／重载时序')
     if rules[id] in ('flask-sharing', 'gradual-flask'):
@@ -1911,6 +1931,7 @@ research['revenantEnchantEvidenceSha256'] = hashlib.sha256(revenant_enchant_path
 research['revenantFamilyEvidenceSha256'] = hashlib.sha256(revenant_family_path.read_bytes()).hexdigest()
 research['guardianHalberdEvidenceSha256'] = hashlib.sha256(guardian_halberd_path.read_bytes()).hexdigest()
 research['wylderFollowupEvidenceSha256'] = hashlib.sha256(wylder_followup_path.read_bytes()).hexdigest()
+research['duchessDaggerEvidenceSha256'] = hashlib.sha256(duchess_dagger_path.read_bytes()).hexdigest()
 research['scholarTetherEvidenceSha256'] = hashlib.sha256(scholar_tether_path.read_bytes()).hexdigest()
 research['ironeyeUltimateEvidenceSha256'] = hashlib.sha256(ironeye_ultimate_path.read_bytes()).hexdigest()
 research['revenantGhostflameEvidenceSha256'] = hashlib.sha256(revenant_ghostflame_path.read_bytes()).hexdigest()

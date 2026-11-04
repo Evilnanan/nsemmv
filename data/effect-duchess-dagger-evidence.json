@@ -1,0 +1,4156 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "playerCommon": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c"
+  },
+  "effects": [
+    7010700
+  ],
+  "root": 7010700,
+  "marker": 7010702,
+  "emitter": 7010703,
+  "leaf": 7010701,
+  "rate": 0.4000000059604645,
+  "poiseRate": 0.5,
+  "rows": {
+    "7010700": {
+      "stateInfo": 2018,
+      "spCategory": 20,
+      "effectEndurance": -1,
+      "effectTargetAttacker": 0,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "motionInterval": 0,
+      "restageAttackRate": -1
+    },
+    "7010702": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "effectEndurance": 0.10000000149011612,
+      "effectTargetAttacker": 1,
+      "replaceSpEffectId": 7010703,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "motionInterval": 0,
+      "restageAttackRate": -1
+    },
+    "7010703": {
+      "stateInfo": 275,
+      "spCategory": 10,
+      "effectEndurance": 0,
+      "effectTargetAttacker": 0,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 2018,
+      "behaviorId": 600000180,
+      "motionInterval": 0.5,
+      "restageAttackRate": -1
+    },
+    "7010701": {
+      "stateInfo": 601,
+      "spCategory": 20,
+      "effectEndurance": 0,
+      "effectTargetAttacker": 0,
+      "replaceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "behaviorId": -1,
+      "motionInterval": 0,
+      "restageAttackRate": 0.4000000059604645
+    }
+  },
+  "attackPaths": [
+    {
+      "attack": 100836,
+      "payload": 7010702,
+      "behavior": {
+        "id": 100100836,
+        "behaviorJudgeId": 836,
+        "category": 2,
+        "consumeDurability": 0,
+        "consumeSA": 0,
+        "ezStateBehaviorType_old": 1,
+        "heroPoint": 0,
+        "refId": 100836,
+        "refType": 0,
+        "stamina": 6,
+        "variationId": 100
+      }
+    },
+    {
+      "attack": 102236,
+      "payload": 7010702,
+      "behavior": {
+        "id": 100102236,
+        "behaviorJudgeId": 236,
+        "category": 12,
+        "consumeDurability": 0,
+        "consumeSA": 0,
+        "ezStateBehaviorType_old": 1,
+        "heroPoint": 0,
+        "refId": 102236,
+        "refType": 0,
+        "stamina": 6,
+        "variationId": 102
+      }
+    },
+    {
+      "attack": 150050,
+      "payload": 7010702,
+      "behavior": {
+        "id": 100150050,
+        "behaviorJudgeId": 50,
+        "category": 1,
+        "consumeDurability": 0,
+        "consumeSA": 0,
+        "ezStateBehaviorType_old": 1,
+        "heroPoint": 0,
+        "refId": 150050,
+        "refType": 0,
+        "stamina": 9,
+        "variationId": 150
+      }
+    },
+    {
+      "attack": 150250,
+      "payload": 7010702,
+      "behavior": {
+        "id": 100150250,
+        "behaviorJudgeId": 250,
+        "category": 12,
+        "consumeDurability": 0,
+        "consumeSA": 0,
+        "ezStateBehaviorType_old": 1,
+        "heroPoint": 0,
+        "refId": 150250,
+        "refType": 0,
+        "stamina": 11,
+        "variationId": 150
+      }
+    },
+    {
+      "attack": 150450,
+      "payload": 7010702,
+      "behavior": {
+        "id": 100150450,
+        "behaviorJudgeId": 450,
+        "category": 2,
+        "consumeDurability": 0,
+        "consumeSA": 0,
+        "ezStateBehaviorType_old": 1,
+        "heroPoint": 0,
+        "refId": 150450,
+        "refType": 0,
+        "stamina": 9,
+        "variationId": 150
+      }
+    }
+  ],
+  "bullet": {
+    "atkId_Bullet": 600000150,
+    "life": 0.20000000298023224,
+    "numShoot": 1,
+    "hitRadius": 15,
+    "hitRadiusMax": 15,
+    "spEffectId0": 7010701,
+    "HitBulletID": -1
+  },
+  "checks": {
+    "trigger": [
+      {
+        "attack": 100836,
+        "copies": 0,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 100836,
+        "copies": 0,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 100836,
+        "copies": 0,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 100836,
+        "copies": 1,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 100836,
+        "copies": 1,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 100836,
+        "copies": 1,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 100836,
+        "copies": 3,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 100836,
+        "copies": 3,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 100836,
+        "copies": 3,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 102236,
+        "copies": 0,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 102236,
+        "copies": 0,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 102236,
+        "copies": 0,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 102236,
+        "copies": 1,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 102236,
+        "copies": 1,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 102236,
+        "copies": 1,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 102236,
+        "copies": 3,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 102236,
+        "copies": 3,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 102236,
+        "copies": 3,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150050,
+        "copies": 0,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150050,
+        "copies": 0,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150050,
+        "copies": 0,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150050,
+        "copies": 1,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150050,
+        "copies": 1,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150050,
+        "copies": 1,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150050,
+        "copies": 3,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150050,
+        "copies": 3,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150050,
+        "copies": 3,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150250,
+        "copies": 0,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150250,
+        "copies": 0,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150250,
+        "copies": 0,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150250,
+        "copies": 1,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150250,
+        "copies": 1,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150250,
+        "copies": 1,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150250,
+        "copies": 3,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150250,
+        "copies": 3,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150250,
+        "copies": 3,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150450,
+        "copies": 0,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150450,
+        "copies": 0,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150450,
+        "copies": 0,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [],
+        "nodes": []
+      },
+      {
+        "attack": 150450,
+        "copies": 1,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150450,
+        "copies": 1,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150450,
+        "copies": 1,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150450,
+        "copies": 3,
+        "fps": 30,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150450,
+        "copies": 3,
+        "fps": 60,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      },
+      {
+        "attack": 150450,
+        "copies": 3,
+        "fps": 120,
+        "hitRecipient": "enemy",
+        "markerRecipient": "attacker",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ],
+        "nodes": [
+          [
+            7010700,
+            -1.0,
+            4
+          ]
+        ]
+      }
+    ],
+    "emptyPayload": [
+      {
+        "copies": 0,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "requests": []
+      }
+    ],
+    "repeat": [
+      {
+        "copies": 1,
+        "fps": 30,
+        "mode": "same-frame",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          },
+          {
+            "frame": 5,
+            "behavior": 600000180
+          },
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 30,
+        "mode": "spaced",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          },
+          {
+            "frame": 35,
+            "behavior": 600000180
+          },
+          {
+            "frame": 65,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "mode": "same-frame",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          },
+          {
+            "frame": 9,
+            "behavior": 600000180
+          },
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "mode": "spaced",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          },
+          {
+            "frame": 69,
+            "behavior": 600000180
+          },
+          {
+            "frame": 129,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "mode": "same-frame",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          },
+          {
+            "frame": 15,
+            "behavior": 600000180
+          },
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "mode": "spaced",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          },
+          {
+            "frame": 135,
+            "behavior": 600000180
+          },
+          {
+            "frame": 255,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "mode": "same-frame",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          },
+          {
+            "frame": 5,
+            "behavior": 600000180
+          },
+          {
+            "frame": 5,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "mode": "spaced",
+        "requests": [
+          {
+            "frame": 5,
+            "behavior": 600000180
+          },
+          {
+            "frame": 35,
+            "behavior": 600000180
+          },
+          {
+            "frame": 65,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "mode": "same-frame",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          },
+          {
+            "frame": 9,
+            "behavior": 600000180
+          },
+          {
+            "frame": 9,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "mode": "spaced",
+        "requests": [
+          {
+            "frame": 9,
+            "behavior": 600000180
+          },
+          {
+            "frame": 69,
+            "behavior": 600000180
+          },
+          {
+            "frame": 129,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "mode": "same-frame",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          },
+          {
+            "frame": 15,
+            "behavior": 600000180
+          },
+          {
+            "frame": 15,
+            "behavior": 600000180
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "mode": "spaced",
+        "requests": [
+          {
+            "frame": 15,
+            "behavior": 600000180
+          },
+          {
+            "frame": 135,
+            "behavior": 600000180
+          },
+          {
+            "frame": 255,
+            "behavior": 600000180
+          }
+        ]
+      }
+    ],
+    "damage": [
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 0,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 1,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          0
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          2
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -1
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          5
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -2
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          9
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -3
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          99
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -39
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          999
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -399
+          ],
+          "poise": [
+            6.25
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          3,
+          7,
+          11
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -7
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 0,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 1,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 4,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703602
+          ]
+        }
+      },
+      {
+        "skillBoostCopies": 3,
+        "rate": 0.4000000059604645,
+        "values": [
+          100,
+          200,
+          300
+        ],
+        "statusBits": 15,
+        "result": {
+          "hp": [
+            -240
+          ],
+          "poise": [
+            18.75
+          ],
+          "statuses": [
+            703600,
+            703601,
+            703602,
+            703603
+          ]
+        }
+      }
+    ],
+    "overwrite": [
+      {
+        "order": [
+          7010701,
+          7010701,
+          7010701
+        ],
+        "rates": [
+          0.4000000059604645,
+          0.4000000059604645,
+          0.4000000059604645
+        ],
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "order": [
+          703540,
+          7010701
+        ],
+        "rates": [
+          0.5,
+          0.4000000059604645
+        ],
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "order": [
+          7290001,
+          7010701
+        ],
+        "rates": [
+          0.6000000238418579,
+          0.4000000059604645
+        ],
+        "result": {
+          "hp": [
+            -40
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "order": [
+          7010701,
+          703540
+        ],
+        "rates": [
+          0.4000000059604645,
+          0.5
+        ],
+        "result": {
+          "hp": [
+            -50
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      },
+      {
+        "order": [
+          7010701,
+          7290001
+        ],
+        "rates": [
+          0.4000000059604645,
+          0.6000000238418579
+        ],
+        "result": {
+          "hp": [
+            -60
+          ],
+          "poise": [
+            5.0
+          ],
+          "statuses": []
+        }
+      }
+    ],
+    "radius": [
+      {
+        "fraction": -0.5,
+        "radius": 15.0
+      },
+      {
+        "fraction": 0,
+        "radius": 15.0
+      },
+      {
+        "fraction": 0.5,
+        "radius": 15.0
+      },
+      {
+        "fraction": 1,
+        "radius": 15.0
+      },
+      {
+        "fraction": 2,
+        "radius": 15.0
+      }
+    ],
+    "attackSetup": [
+      {
+        "requests": [
+          {
+            "id": 600000150,
+            "radius": 15.0
+          }
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "282970 synthetic actor entity identity",
+    "34A890 attack creation recorder; 34AD90/34B130 visual sinks; 34DC70 false mode predicate",
+    "3975D0 Behavior creation request recorder; no scene collision",
+    "3C7FD0 status-effect request recorder",
+    "3CED90 supplied attacker animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "426130 HP delta recorder; final caps/modifiers are not simulated",
+    "43BE60 call argument 5 skips primary HP damage while running hit-effect delivery; native attacker routing and grant execute",
+    "43CED0 damage notification sink after recorded HP request",
+    "48DE50 poise request recorder; final stagger processing not simulated",
+    "4D1B20 explicit false actor mode predicate",
+    "519EF0 authoritative local recipient; no network simulation",
+    "E6D630 actual AtkParam_Pc row lookup",
+    "E81650 actual PlayerCommon PARAM lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit historical records; history recorder, time window, scheduling, target selection and final caps not simulated",
+    "explicit local hit-score context in mode 0",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "hit payload populated from actual Atk row, but attack construction, animation/moveset selection and collision not executed",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "pending overlapping Restage requests, complete scene emissions, multiplayer and game execution not simulated",
+    "recipient virtual +200 false ordinary hit predicate",
+    "single-thread fixture mutex lock/unlock",
+    "synthetic absent linked actor identity; secondary replay target not simulated",
+    "synthetic source/recipient actors and fixed source component pointers; explicit source local-player identity"
+  ],
+  "native": {
+    "hit": "43BE60 → 3C80A0",
+    "grant": "3C7FD0",
+    "lifecycle": "5057D0 / 50ACD0",
+    "emission": "50AA20 → 3975D0",
+    "radius": "363600",
+    "attackSetup": "362C10 → 34A890",
+    "restage": "3CE5B3..3CE5E9 → 44A340",
+    "consume": "449AAC..449C6D → 430F50"
+  },
+  "gameplayVerified": false
+}

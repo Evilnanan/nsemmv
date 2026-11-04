@@ -44,6 +44,7 @@ import revenantEnchant from "../../data/effect-revenant-enchant-evidence.json";
 import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
+import duchessDagger from "../../data/effect-duchess-dagger-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -70,6 +71,26 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("keeps dagger Restage at 40 percent and hides internal marker lifetimes", () => {
+    const detail = effectDetail(7010700)!;
+    expect(detail.blocks[0].values).toEqual([["重演伤害比例", "40%"], ["作用半径", "15 米"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.notes).toContain("强化技艺的重演伤害词条不提高此效果的重演比例。");
+    for (const row of duchessDagger.checks.trigger) {
+      expect(row.requests).toHaveLength(Number(Boolean(row.copies)));
+      expect(row.markerRecipient).toBe("attacker");
+    }
+    for (const row of duchessDagger.checks.emptyPayload) expect(row.requests).toHaveLength(0);
+    for (const row of duchessDagger.checks.repeat) expect(row.requests).toHaveLength(3);
+    for (const row of duchessDagger.checks.damage) expect(row.rate).toBeCloseTo(0.4);
+    expect(duchessDagger.checks.attackSetup[0].requests).toEqual([{ id: 600000150, radius: 15 }]);
+    expect(duchessDagger.gameplayVerified).toBe(false);
+    expect(research.duchessDaggerEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-duchess-dagger-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("follows greatsword input selection and hand-specific fire enchantment refresh", () => {
     const detail = effectDetail(7020000)!;
     expect(detail.blocks[0].values).toEqual([["火焰基础攻击力", "+20"]]);
@@ -1685,7 +1706,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(39);
-    expect(research.coverage.withNumericFields).toBe(555);
+    expect(research.coverage.withNumericFields).toBe(556);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
