@@ -39,6 +39,7 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7034500, ["最大值的 5% + 100", "维持解放状态不会反复恢复", "不可叠加"]],
     [12002, ["最大值的 10% + 12", "半径 15 米", "约每秒恢复一次", "只刷新有效期", "尚未到期的效果仍可能再恢复一次"]],
     [7012000, ["最大值的 10% + 12", "半径 15 米", "不可叠加"]],
     [7220200, ["+15%", "20 秒", "最大值的 10%", "15 秒", "每 2 秒", "+32.25%", "未消耗的机会在窗口结束时结算"]],

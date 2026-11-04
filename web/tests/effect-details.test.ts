@@ -12,10 +12,35 @@ import totem from "../../data/effect-totem-evidence.json";
 import discovery from "../../data/effect-discovery-evidence.json";
 import lifecycle from "../../data/effect-lifecycle-evidence.json";
 import recovery from "../../data/effect-recovery-evidence.json";
+import executorRecovery from "../../data/effect-executor-recovery-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("recovers once per Executor unlock and re-arms through the actual reset chain", () => {
+    const detail = effectDetail(7034500)!;
+    expect(detail.blocks[0].values).toEqual([["HP 恢复", "最大值的 5% + 100"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes.join()).toContain("维持解放状态不会反复恢复");
+    expect(detail.stacking).toBe("不可叠加");
+    for (const c of executorRecovery.checks.filter((c) => c.name === "threshold")) {
+      const amount = executorRecovery.rows[String(c.incrementEffect) as keyof typeof executorRecovery.rows].accumuVal;
+      expect(c.heals).toHaveLength(c.equipmentCopies && amount * c.count >= 50 ? 1 : 0);
+      if (c.heals.length) expect(c.heals[0].hp).toEqual([-5, -100]);
+    }
+    for (const name of ["already-unlocked", "reset-and-repeat", "reset-warmup"]) {
+      const cases = executorRecovery.checks.filter((c) => c.name === name);
+      expect(cases.map((c) => c.equipmentCopies)).toEqual([1, 3]);
+      expect(cases[0].heals).toEqual(cases[1].heals);
+      expect(cases[0].heals).toHaveLength(name === "reset-and-repeat" ? 2 : 1);
+    }
+    expect(executorRecovery.events.every((e) => e.Type === 67)).toBe(true);
+    expect(research.executorRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-executor-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(executorRecovery.gameplayVerified).toBe(false);
+  });
   it("distinguishes Guardian healing cadence from bullet emissions and the recipient lease", () => {
     for (const id of [12002, 12003, 7012000]) {
       const detail = effectDetail(id)!;
@@ -187,7 +212,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(494);
+    expect(research.coverage.withNumericFields).toBe(495);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

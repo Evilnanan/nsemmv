@@ -52,6 +52,11 @@ assert recovery['schema'] == 1 and recovery['regulationSha256'] == catalog['regu
 assert recovery['exeSha256'] == evidence['exeSha256'] and not recovery['gameplayVerified']
 assert recovery['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in recovery['checks'].items()} == dict(trigger=12, emissionAndRecovery=6, arrival=4)
+executor_path = ROOT / 'data/effect-executor-recovery-evidence.json'
+executor = json.loads(executor_path.read_text())
+assert executor['schema'] == 1 and executor['regulationSha256'] == catalog['regulationSha256']
+assert executor['exeSha256'] == evidence['exeSha256'] and not executor['gameplayVerified']
+assert executor['paramSha256'] == evidence['paramSha256'] and len(executor['checks']) == 24
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -134,6 +139,8 @@ if args.extract:
             needed.update(TOTEM_LEAVES.get(root, []))
             if root == recovery['root']:
                 needed.add(recovery['leaf'])
+            if root == executor['root']:
+                needed.update(map(int, executor['rows']))
             for branch in scripts['effects'].get(str(root), {}).get('branches', []):
                 needed.add(branch['cooldown'])
                 for hand in branch['hands']:
@@ -326,6 +333,7 @@ def block(id, phase, linked, known_states=frozenset()):
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
     'guardian-recovery': ('不可叠加', '同类恢复只刷新有效期', ['recovery-emitter', 'recovery-arrival']),
+    'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'role-repeat': ('不可叠加', '重复装备不增加单次触发收益', ['effect-lifecycle']),
     'wylder-skill': ('不可叠加', '重复装备不增加单次触发收益', ['action-triggers', 'action-start', 'skill-stack']),
     'role-max-hp': ('不可叠加', '同类增益互相覆盖', ['action-triggers', 'role-lifecycle']),
@@ -500,6 +508,16 @@ for id, effect in source['effects'].items():
                        values=[['血量上限', '+50%']], restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('前约 30 秒不因受损结束；之后持续至下次受到损伤。')
         rule = 'role-max-hp'
+    if executor['root'] in effect['roots'].values():
+        leaf = executor['leaf']
+        assert source['spells'][str(leaf)]['changeHpRate'] == -5
+        assert source['spells'][str(leaf)]['changeHpPoint'] == -100
+        blocks = [dict(source=leaf, branches=[int(i) for i in executor['rows'] if int(i) not in (leaf, executor['root'])],
+                       phase='妖刀进入解放状态时', linked=True,
+                       values=[['HP 恢复', '最大值的 5% + 100']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('每次进入解放状态恢复一次；维持解放状态不会反复恢复。')
+        rule = 'executor-recovery'
     if recovery['root'] in effect['roots'].values():
         leaf = recovery['leaf']
         assert source['spells'][str(leaf)]['changeHpRate'] == -10
@@ -679,9 +697,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -695,6 +713,8 @@ for id in sorted(source['effects'], key=int):
             questions.append('击杀分支的具体敌人名单与共享奖励来源；重叠绝招窗口')
     if rules[id] == 'guardian-recovery':
         questions.append('实际碰撞命中、范围重新进入、完整角色队列／施法结束时序与多人网络投递')
+    if rules[id] == 'executor-recovery':
+        questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if 7020200 in effect['roots'].values():
         questions.append('大量连续施加时的实例容量上限、移除调度和跨网络同步')
     if rules[id] == 'totem':
@@ -727,6 +747,7 @@ research['growthEvidenceSha256'] = hashlib.sha256(growth_path.read_bytes()).hexd
 research['totemEvidenceSha256'] = hashlib.sha256(totem_path.read_bytes()).hexdigest()
 research['lifecycleEvidenceSha256'] = hashlib.sha256(lifecycle_path.read_bytes()).hexdigest()
 research['recoveryEvidenceSha256'] = hashlib.sha256(recovery_path.read_bytes()).hexdigest()
+research['executorRecoveryEvidenceSha256'] = hashlib.sha256(executor_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

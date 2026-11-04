@@ -1,0 +1,2188 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "hksSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "root": 7034500,
+  "leaf": 7034502,
+  "events": [
+    {
+      "tae": 2000,
+      "animation": 10005,
+      "effect": 707053,
+      "index": 0,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A0000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19480,
+      "effect": 707055,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19481,
+      "effect": 707055,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19482,
+      "effect": 707055,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19483,
+      "effect": 707055,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19484,
+      "effect": 707055,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19485,
+      "effect": 707055,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19486,
+      "effect": 707056,
+      "index": 33,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "F0C90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19487,
+      "effect": 707055,
+      "index": 28,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19488,
+      "effect": 707055,
+      "index": 27,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EFC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19490,
+      "effect": 707053,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19491,
+      "effect": 707053,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19492,
+      "effect": 707053,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19493,
+      "effect": 707053,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19494,
+      "effect": 707053,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19495,
+      "effect": 707053,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 19496,
+      "effect": 707053,
+      "index": 43,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.06666667,
+      "hex": "EDC90A00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 571020,
+      "effect": 707052,
+      "index": 11,
+      "Type": 67,
+      "StartTime": 0.8333333,
+      "EndTime": 100,
+      "hex": "ECC90A00000000000000000000000000"
+    }
+  ],
+  "rows": {
+    "7034500": {
+      "stateInfo": 2019,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 0,
+      "accumuVal": 0,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "7034501": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "categoryPriority": 0,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 2019,
+      "accumuVal": 0,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": 7034502,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "7034502": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": 1,
+      "motionInterval": 1.100000023841858,
+      "invocationConditionsStateChange1": 2019,
+      "accumuVal": 0,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": -1,
+      "changeHpRate": -5,
+      "changeHpPoint": -100
+    },
+    "707050": {
+      "stateInfo": 312,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 0,
+      "accumuVal": 0,
+      "accumuOverVal": 50,
+      "accumuOverFireId": 707051,
+      "dedupeAccumuTrigger": 1,
+      "replaceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "707051": {
+      "stateInfo": 312,
+      "spCategory": 1007,
+      "categoryPriority": 2,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 0,
+      "accumuVal": 0,
+      "accumuOverVal": 50,
+      "accumuOverFireId": 707057,
+      "dedupeAccumuTrigger": 1,
+      "replaceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "707052": {
+      "stateInfo": 312,
+      "spCategory": 1007,
+      "categoryPriority": 1,
+      "effectEndurance": 1,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 0,
+      "accumuVal": -99999,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": 707050,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "707053": {
+      "stateInfo": 312,
+      "spCategory": 1007,
+      "categoryPriority": 3,
+      "effectEndurance": 0,
+      "motionInterval": 0.5,
+      "invocationConditionsStateChange1": 312,
+      "accumuVal": 5,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "707055": {
+      "stateInfo": 312,
+      "spCategory": 1007,
+      "categoryPriority": 3,
+      "effectEndurance": 0,
+      "motionInterval": 0.10000000149011612,
+      "invocationConditionsStateChange1": 312,
+      "accumuVal": 15,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "707056": {
+      "stateInfo": 312,
+      "spCategory": 1007,
+      "categoryPriority": 3,
+      "effectEndurance": 0,
+      "motionInterval": 0.10000000149011612,
+      "invocationConditionsStateChange1": 312,
+      "accumuVal": 20,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    },
+    "707057": {
+      "stateInfo": 312,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.20000000298023224,
+      "invocationConditionsStateChange1": 0,
+      "accumuVal": -99999,
+      "accumuOverVal": -1,
+      "accumuOverFireId": -1,
+      "dedupeAccumuTrigger": 0,
+      "replaceSpEffectId": 7034501,
+      "changeHpRate": 0,
+      "changeHpPoint": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "threshold",
+      "equipmentCopies": 0,
+      "incrementEffect": 707053,
+      "count": 9,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 5
+        },
+        {
+          "frame": 120,
+          "value": 10
+        },
+        {
+          "frame": 150,
+          "value": 15
+        },
+        {
+          "frame": 180,
+          "value": 20
+        },
+        {
+          "frame": 210,
+          "value": 25
+        },
+        {
+          "frame": 240,
+          "value": 30
+        },
+        {
+          "frame": 270,
+          "value": 35
+        },
+        {
+          "frame": 300,
+          "value": 40
+        },
+        {
+          "frame": 330,
+          "value": 45
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 1,
+      "incrementEffect": 707053,
+      "count": 9,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 5
+        },
+        {
+          "frame": 120,
+          "value": 10
+        },
+        {
+          "frame": 150,
+          "value": 15
+        },
+        {
+          "frame": 180,
+          "value": 20
+        },
+        {
+          "frame": 210,
+          "value": 25
+        },
+        {
+          "frame": 240,
+          "value": 30
+        },
+        {
+          "frame": 270,
+          "value": 35
+        },
+        {
+          "frame": 300,
+          "value": 40
+        },
+        {
+          "frame": 330,
+          "value": 45
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 3,
+      "incrementEffect": 707053,
+      "count": 9,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 5
+        },
+        {
+          "frame": 120,
+          "value": 10
+        },
+        {
+          "frame": 150,
+          "value": 15
+        },
+        {
+          "frame": 180,
+          "value": 20
+        },
+        {
+          "frame": 210,
+          "value": 25
+        },
+        {
+          "frame": 240,
+          "value": 30
+        },
+        {
+          "frame": 270,
+          "value": 35
+        },
+        {
+          "frame": 300,
+          "value": 40
+        },
+        {
+          "frame": 330,
+          "value": 45
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 0,
+      "incrementEffect": 707053,
+      "count": 10,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 361,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 362,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 371,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 373,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 5
+        },
+        {
+          "frame": 120,
+          "value": 10
+        },
+        {
+          "frame": 150,
+          "value": 15
+        },
+        {
+          "frame": 180,
+          "value": 20
+        },
+        {
+          "frame": 210,
+          "value": 25
+        },
+        {
+          "frame": 240,
+          "value": 30
+        },
+        {
+          "frame": 270,
+          "value": 35
+        },
+        {
+          "frame": 300,
+          "value": 40
+        },
+        {
+          "frame": 330,
+          "value": 45
+        },
+        {
+          "frame": 360,
+          "value": 50
+        },
+        {
+          "frame": 363,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 362,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 1,
+      "incrementEffect": 707053,
+      "count": 10,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [
+        {
+          "frame": 381,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 361,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 362,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 371,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 380,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 5
+        },
+        {
+          "frame": 120,
+          "value": 10
+        },
+        {
+          "frame": 150,
+          "value": 15
+        },
+        {
+          "frame": 180,
+          "value": 20
+        },
+        {
+          "frame": 210,
+          "value": 25
+        },
+        {
+          "frame": 240,
+          "value": 30
+        },
+        {
+          "frame": 270,
+          "value": 35
+        },
+        {
+          "frame": 300,
+          "value": 40
+        },
+        {
+          "frame": 330,
+          "value": 45
+        },
+        {
+          "frame": 360,
+          "value": 50
+        },
+        {
+          "frame": 363,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 362,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 3,
+      "incrementEffect": 707053,
+      "count": 10,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [
+        {
+          "frame": 381,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 361,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 362,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 371,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 380,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 5
+        },
+        {
+          "frame": 120,
+          "value": 10
+        },
+        {
+          "frame": 150,
+          "value": 15
+        },
+        {
+          "frame": 180,
+          "value": 20
+        },
+        {
+          "frame": 210,
+          "value": 25
+        },
+        {
+          "frame": 240,
+          "value": 30
+        },
+        {
+          "frame": 270,
+          "value": 35
+        },
+        {
+          "frame": 300,
+          "value": 40
+        },
+        {
+          "frame": 330,
+          "value": 45
+        },
+        {
+          "frame": 360,
+          "value": 50
+        },
+        {
+          "frame": 363,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 362,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 0,
+      "incrementEffect": 707055,
+      "count": 3,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 1,
+      "incrementEffect": 707055,
+      "count": 3,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 3,
+      "incrementEffect": 707055,
+      "count": 3,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 0,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 193,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 1,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 3,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 0,
+      "incrementEffect": 707056,
+      "count": 2,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 20
+        },
+        {
+          "frame": 120,
+          "value": 40
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 1,
+      "incrementEffect": 707056,
+      "count": 2,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 20
+        },
+        {
+          "frame": 120,
+          "value": 40
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 3,
+      "incrementEffect": 707056,
+      "count": 2,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 20
+        },
+        {
+          "frame": 120,
+          "value": 40
+        }
+      ],
+      "unlocks": []
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 0,
+      "incrementEffect": 707056,
+      "count": 3,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 151,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 152,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 161,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 163,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 20
+        },
+        {
+          "frame": 120,
+          "value": 40
+        },
+        {
+          "frame": 150,
+          "value": 60
+        },
+        {
+          "frame": 153,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 152,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 1,
+      "incrementEffect": 707056,
+      "count": 3,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [
+        {
+          "frame": 171,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 151,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 152,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 161,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 170,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 20
+        },
+        {
+          "frame": 120,
+          "value": 40
+        },
+        {
+          "frame": 150,
+          "value": 60
+        },
+        {
+          "frame": 153,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 152,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "threshold",
+      "equipmentCopies": 3,
+      "incrementEffect": 707056,
+      "count": 3,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": false,
+      "heals": [
+        {
+          "frame": 171,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 151,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 152,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 161,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 170,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 20
+        },
+        {
+          "frame": 120,
+          "value": 40
+        },
+        {
+          "frame": 150,
+          "value": 60
+        },
+        {
+          "frame": 153,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 152,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "already-unlocked",
+      "equipmentCopies": 1,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": true,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "reset-and-repeat",
+      "equipmentCopies": 1,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": 400,
+      "extraAttempts": true,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        },
+        {
+          "frame": 611,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        },
+        {
+          "frame": 462,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 591,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 592,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 601,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 610,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        },
+        {
+          "frame": 500,
+          "value": 15
+        },
+        {
+          "frame": 530,
+          "value": 30
+        },
+        {
+          "frame": 560,
+          "value": 45
+        },
+        {
+          "frame": 590,
+          "value": 60
+        },
+        {
+          "frame": 593,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        },
+        {
+          "frame": 400,
+          "unlocked": false
+        },
+        {
+          "frame": 592,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "reset-warmup",
+      "equipmentCopies": 1,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": 450,
+      "extraAttempts": true,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        },
+        {
+          "frame": 512,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        },
+        {
+          "frame": 530,
+          "value": 15
+        },
+        {
+          "frame": 560,
+          "value": 30
+        },
+        {
+          "frame": 590,
+          "value": 45
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        },
+        {
+          "frame": 450,
+          "unlocked": false
+        }
+      ]
+    },
+    {
+      "name": "already-unlocked",
+      "equipmentCopies": 3,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": null,
+      "extraAttempts": true,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "reset-and-repeat",
+      "equipmentCopies": 3,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": 400,
+      "extraAttempts": true,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        },
+        {
+          "frame": 611,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        },
+        {
+          "frame": 462,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 591,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 592,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 601,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 610,
+          "ids": [
+            7034502
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        },
+        {
+          "frame": 500,
+          "value": 15
+        },
+        {
+          "frame": 530,
+          "value": 30
+        },
+        {
+          "frame": 560,
+          "value": 45
+        },
+        {
+          "frame": 590,
+          "value": 60
+        },
+        {
+          "frame": 593,
+          "value": 0
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        },
+        {
+          "frame": 400,
+          "unlocked": false
+        },
+        {
+          "frame": 592,
+          "unlocked": true
+        }
+      ]
+    },
+    {
+      "name": "reset-warmup",
+      "equipmentCopies": 3,
+      "incrementEffect": 707055,
+      "count": 4,
+      "fps": 60,
+      "resetAt": 450,
+      "extraAttempts": true,
+      "heals": [
+        {
+          "frame": 201,
+          "hp": [
+            -5.0,
+            -100.0
+          ]
+        }
+      ],
+      "grants": [
+        {
+          "frame": 62,
+          "ids": [
+            707050
+          ]
+        },
+        {
+          "frame": 181,
+          "ids": [
+            707051
+          ]
+        },
+        {
+          "frame": 182,
+          "ids": [
+            707057
+          ]
+        },
+        {
+          "frame": 191,
+          "ids": [
+            7034501
+          ]
+        },
+        {
+          "frame": 200,
+          "ids": [
+            7034502
+          ]
+        },
+        {
+          "frame": 512,
+          "ids": [
+            707050
+          ]
+        }
+      ],
+      "counters": [
+        {
+          "frame": 0,
+          "value": 0
+        },
+        {
+          "frame": 90,
+          "value": 15
+        },
+        {
+          "frame": 120,
+          "value": 30
+        },
+        {
+          "frame": 150,
+          "value": 45
+        },
+        {
+          "frame": 180,
+          "value": 60
+        },
+        {
+          "frame": 183,
+          "value": 0
+        },
+        {
+          "frame": 530,
+          "value": 15
+        },
+        {
+          "frame": 560,
+          "value": 30
+        },
+        {
+          "frame": 590,
+          "value": 45
+        }
+      ],
+      "unlocks": [
+        {
+          "frame": 182,
+          "unlocked": true
+        },
+        {
+          "frame": 450,
+          "unlocked": false
+        }
+      ]
+    }
+  ],
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "3C7FD0 grant recorder; queue delivered on next simulation frame",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "empty ten-slot accumulator storage and preallocated request-vector capacity",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false
+}
