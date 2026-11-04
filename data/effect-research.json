@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 626,
+    "withDetails": 627,
     "withNumericFields": 553,
-    "withMechanicsOnly": 38,
-    "nativeStacking": 504,
+    "withMechanicsOnly": 39,
+    "nativeStacking": 505,
     "catalog": 2241,
-    "catalogWithDetails": 2071
+    "catalogWithDetails": 2072
   },
   "effects": {
     "0": {
@@ -15477,15 +15477,17 @@
       "states": [
         2034
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7220310
+      ],
+      "values": "decoded-mechanism",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "revenant-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "家人控制器状态 0／11 的完整生命周期与更新、已在场／死亡／召回时的实际行为、落点碰撞和资源生成、绝招动作中断及多人／重载时序"
       ],
       "gameplayVerified": false
     },
@@ -49689,6 +49691,7 @@
   "scholarAilmentEvidenceSha256": "b39984cc2719bae434f0ab6f9cc2381095e5348abba678a5bd8bf999f461443f",
   "wylderFlameEvidenceSha256": "2d5beb98265bfa9bc4da42dbd65e1b4e2931fff04c983a95c5116e28d7726f64",
   "revenantEnchantEvidenceSha256": "e34890f9d44c5cb4f529215252c92d7ea931b13d711af60b0393f8846b7a9672",
+  "revenantFamilyEvidenceSha256": "1bea4d80c824033239efb8bcfd577470af2d9567da98ff3a060c2293d0358030",
   "scholarTetherEvidenceSha256": "27db505921ca4ff3a6bccae33ceb04f3056d290e8da92c436bddeffb49cd5108",
   "ironeyeUltimateEvidenceSha256": "d6f431d0505ee7d18f41cec8542dc78ecf27ca2422890aaa62cd3ac840e8e174",
   "revenantGhostflameEvidenceSha256": "5f813f0c5dceb9c0140327e4d9735cab48f047e4426a26e38db1f6680b735598",

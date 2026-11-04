@@ -35,6 +35,7 @@ async function longPress(page: Page, target: Locator) {
 }
 
 const decodedMechanics = [
+  [7220210, ["发动绝招时", "召唤家人", "三名", "不可叠加", "重复装备不增加家人数量"]],
   [7220100, ["召唤家人时", "魔力基础攻击力", "+60", "冻伤基础累积", "40", "右手武器", "20 秒", "30 秒", "再次施加刷新附魔时长", "保留后施加的效果", "不可叠加"]],
   [7220101, ["最大血量的 10% + 50", "承伤倍率", "+15%", "冻伤期间再次命中不刷新这次冻伤时长"]],
   [7010500, ["绝招释放后", "火焰持续时间", "10 秒", "不可叠加", "重复装备不增加火焰数量或持续时间"]],
@@ -146,7 +147,7 @@ for (let offset = 0; offset < decodedMechanics.length; offset += 12) {
         const rect = el.getBoundingClientRect();
         return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
       })).toBe(true);
-      if (id === 7220100 || id === 7010500 || id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
+      if (id === 7220210 || id === 7220100 || id === 7010500 || id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
         await page.screenshot({ path: testInfo.outputPath(`mechanics-${id}.png`) });
       await details.getByRole("button", { name: "关闭词条详情" }).click();
       await expect(details).toHaveCount(0);

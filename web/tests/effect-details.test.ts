@@ -41,6 +41,7 @@ import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import scholarAilment from "../../data/effect-scholar-ailment-evidence.json";
 import wylderFlame from "../../data/effect-wylder-flame-evidence.json";
 import revenantEnchant from "../../data/effect-revenant-enchant-evidence.json";
+import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -67,6 +68,25 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("resolves three independent family requests without turning trigger lifetime into summon duration", () => {
+    const detail = effectDetail(7220210)!;
+    expect(detail.blocks[0].values).toEqual([["召唤家人", "三名"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加家人数量");
+    for (const row of revenantFamily.checks.dispatch)
+      expect(row.requests).toHaveLength(row.copies && row.enabled ? 1 : 0);
+    for (const row of revenantFamily.checks.emission) {
+      expect(row.status.map(r => r.request)).toEqual([0, 1, 2].map(i => Number(row.success && row.slot === i)));
+      expect(row.deliveries).toHaveLength(Number(row.success));
+    }
+    for (const row of revenantFamily.checks.repeat)
+      expect(row.status.map(r => r.request)).toEqual(row.states.map(s => Number(s === 0)));
+    expect(revenantFamily.gameplayVerified).toBe(false);
+    expect(research.revenantFamilyEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-family-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates Revenant enchantment reapplication from replacement and frost duration", () => {
     for (const id of [7220100, 7220101]) {
       const detail = effectDetail(id)!;
@@ -1622,7 +1642,7 @@ describe("MMV effect details", () => {
       expect(JSON.stringify(detail)).not.toContain("%");
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
-    expect(research.coverage.withMechanicsOnly).toBe(38);
+    expect(research.coverage.withMechanicsOnly).toBe(39);
     expect(research.coverage.withNumericFields).toBe(553);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),

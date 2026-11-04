@@ -1,0 +1,1463 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "tae": "4ff5035e40af59c9f157125409d29ab24c7e74e4331313f53d0874efe792f174",
+    "common": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
+    "buddy": "5d8653f1fae07f4cc7bc63c79c658c21837c8fd84e01ee0e3caeb04a3999e7c0"
+  },
+  "effects": [
+    7220210
+  ],
+  "root": 7220310,
+  "families": [
+    {
+      "slot": 0,
+      "buddy": 27000000,
+      "trigger": 270000,
+      "npc": 137030000,
+      "think": 137030000,
+      "active": 705060,
+      "inactive": 705061
+    },
+    {
+      "slot": 1,
+      "buddy": 27100000,
+      "trigger": 271000,
+      "npc": 143400000,
+      "think": 143400000,
+      "active": 705070,
+      "inactive": 705071
+    },
+    {
+      "slot": 2,
+      "buddy": 27200000,
+      "trigger": 272000,
+      "npc": 149610000,
+      "think": 149610000,
+      "active": 705080,
+      "inactive": 705081
+    }
+  ],
+  "events": [
+    {
+      "animation": 650000,
+      "index": 96,
+      "Type": 2,
+      "StartTime": 1,
+      "EndTime": 1.1,
+      "hex": "DC000000000000008A1800000000F20700000000000000000000000000000000"
+    },
+    {
+      "animation": 650000,
+      "index": 97,
+      "Type": 2,
+      "StartTime": 1,
+      "EndTime": 1.1,
+      "hex": "DC000000000000008B1800000000F20700000000000000000000000000000000"
+    },
+    {
+      "animation": 650000,
+      "index": 98,
+      "Type": 2,
+      "StartTime": 1,
+      "EndTime": 1.1,
+      "hex": "DC000000000000008C1800000000F20700000000000000000000000000000000"
+    }
+  ],
+  "checks": {
+    "dispatch": [
+      {
+        "copies": 0,
+        "enabled": false,
+        "event": 0,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "event": 1,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "event": 2,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "event": 0,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "event": 1,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "event": 2,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "event": 0,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "event": 1,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "event": 2,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "event": 0,
+        "requests": [
+          {
+            "behavior": 600000282,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000000000803f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "event": 1,
+        "requests": [
+          {
+            "behavior": 600000283,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000000000803f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "event": 2,
+        "requests": [
+          {
+            "behavior": 600000284,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000000000803f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "event": 0,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "event": 1,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "event": 2,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "event": 0,
+        "requests": [
+          {
+            "behavior": 600000282,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000000000803f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "event": 1,
+        "requests": [
+          {
+            "behavior": 600000283,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000000000803f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "event": 2,
+        "requests": [
+          {
+            "behavior": 600000284,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000000000803f0101"
+          }
+        ]
+      }
+    ],
+    "controller": [
+      {
+        "state": 0,
+        "position": false,
+        "status": [
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 0,
+        "position": true,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000,
+          27100000,
+          27200000
+        ]
+      },
+      {
+        "state": 1,
+        "position": false,
+        "status": [
+          {
+            "state": 1,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 1,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 1,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 1,
+        "position": true,
+        "status": [
+          {
+            "state": 1,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 1,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 1,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 2,
+        "position": false,
+        "status": [
+          {
+            "state": 2,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 2,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 2,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 2,
+        "position": true,
+        "status": [
+          {
+            "state": 2,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 2,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 2,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 3,
+        "position": false,
+        "status": [
+          {
+            "state": 3,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 3,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 3,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 3,
+        "position": true,
+        "status": [
+          {
+            "state": 3,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 3,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 3,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 4,
+        "position": false,
+        "status": [
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 4,
+        "position": true,
+        "status": [
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 5,
+        "position": false,
+        "status": [
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 5,
+        "position": true,
+        "status": [
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 6,
+        "position": false,
+        "status": [
+          {
+            "state": 6,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 6,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 6,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 6,
+        "position": true,
+        "status": [
+          {
+            "state": 6,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 6,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 6,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 7,
+        "position": false,
+        "status": [
+          {
+            "state": 7,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 7,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 7,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 7,
+        "position": true,
+        "status": [
+          {
+            "state": 7,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 7,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 7,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 8,
+        "position": false,
+        "status": [
+          {
+            "state": 8,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 8,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 8,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 8,
+        "position": true,
+        "status": [
+          {
+            "state": 8,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 8,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 8,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 9,
+        "position": false,
+        "status": [
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 9,
+        "position": true,
+        "status": [
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 10,
+        "position": false,
+        "status": [
+          {
+            "state": 10,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 10,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 10,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 10,
+        "position": true,
+        "status": [
+          {
+            "state": 10,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 10,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 10,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 11,
+        "position": false,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 11,
+        "position": true,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 12,
+        "position": false,
+        "status": [
+          {
+            "state": 12,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 12,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 12,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "state": 12,
+        "position": true,
+        "status": [
+          {
+            "state": 12,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 12,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 12,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      }
+    ],
+    "emission": [
+      {
+        "slot": 0,
+        "success": false,
+        "shots": [
+          30905102
+        ],
+        "deliveries": [],
+        "status": [
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "slot": 0,
+        "success": true,
+        "shots": [
+          30905102
+        ],
+        "deliveries": [
+          270000
+        ],
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000
+        ]
+      },
+      {
+        "slot": 1,
+        "success": false,
+        "shots": [
+          30905103
+        ],
+        "deliveries": [],
+        "status": [
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "slot": 1,
+        "success": true,
+        "shots": [
+          30905103
+        ],
+        "deliveries": [
+          271000
+        ],
+        "status": [
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27100000
+        ]
+      },
+      {
+        "slot": 2,
+        "success": false,
+        "shots": [
+          30905104
+        ],
+        "deliveries": [],
+        "status": [
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "slot": 2,
+        "success": true,
+        "shots": [
+          30905104
+        ],
+        "deliveries": [
+          272000
+        ],
+        "status": [
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27200000
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "states": [
+          0,
+          0,
+          0
+        ],
+        "repeat": 1,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000,
+          27100000,
+          27200000
+        ]
+      },
+      {
+        "states": [
+          0,
+          0,
+          0
+        ],
+        "repeat": 2,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000,
+          27100000,
+          27200000
+        ]
+      },
+      {
+        "states": [
+          0,
+          0,
+          0
+        ],
+        "repeat": 3,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000,
+          27100000,
+          27200000
+        ]
+      },
+      {
+        "states": [
+          11,
+          11,
+          11
+        ],
+        "repeat": 1,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "states": [
+          11,
+          11,
+          11
+        ],
+        "repeat": 2,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "states": [
+          11,
+          11,
+          11
+        ],
+        "repeat": 3,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": []
+      },
+      {
+        "states": [
+          0,
+          11,
+          5
+        ],
+        "repeat": 1,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000
+        ]
+      },
+      {
+        "states": [
+          0,
+          11,
+          5
+        ],
+        "repeat": 2,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000
+        ]
+      },
+      {
+        "states": [
+          0,
+          11,
+          5
+        ],
+        "repeat": 3,
+        "status": [
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 5,
+            "request": 0,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27000000
+        ]
+      },
+      {
+        "states": [
+          4,
+          0,
+          11
+        ],
+        "repeat": 1,
+        "status": [
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": [
+          27100000
+        ]
+      },
+      {
+        "states": [
+          4,
+          0,
+          11
+        ],
+        "repeat": 2,
+        "status": [
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": [
+          27100000
+        ]
+      },
+      {
+        "states": [
+          4,
+          0,
+          11
+        ],
+        "repeat": 3,
+        "status": [
+          {
+            "state": 4,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          },
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          }
+        ],
+        "assetRequests": [
+          27100000
+        ]
+      },
+      {
+        "states": [
+          11,
+          9,
+          0
+        ],
+        "repeat": 1,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27200000
+        ]
+      },
+      {
+        "states": [
+          11,
+          9,
+          0
+        ],
+        "repeat": 2,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27200000
+        ]
+      },
+      {
+        "states": [
+          11,
+          9,
+          0
+        ],
+        "repeat": 3,
+        "status": [
+          {
+            "state": 11,
+            "request": 0,
+            "flags": 2
+          },
+          {
+            "state": 9,
+            "request": 0,
+            "flags": 0
+          },
+          {
+            "state": 0,
+            "request": 1,
+            "flags": 0
+          }
+        ],
+        "assetRequests": [
+          27200000
+        ]
+      }
+    ],
+    "mapping": [
+      {
+        "trigger": 269999,
+        "buddy": 4294967295,
+        "slot": 4294967295
+      },
+      {
+        "trigger": 270000,
+        "buddy": 27000000,
+        "slot": 0
+      },
+      {
+        "trigger": 270001,
+        "buddy": 4294967295,
+        "slot": 4294967295
+      },
+      {
+        "trigger": 271000,
+        "buddy": 27100000,
+        "slot": 1
+      },
+      {
+        "trigger": 272000,
+        "buddy": 27200000,
+        "slot": 2
+      },
+      {
+        "trigger": 273000,
+        "buddy": 4294967295,
+        "slot": 4294967295
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security-cookie return preserves RAX; full animation scheduler and multiplayer not executed",
+    "385410 candidate placement passthrough and 3882E0 ground-placement sink; no scene geometry",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3CED90 isolated actor context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "B31770 asset preload recorder; controller states supplied, controller update/AI not executed",
+    "E6FCB0 actual Behavior row lookup",
+    "E81650/E71710 actual PlayerCommon and Buddy row lookups; exact three-row effect-to-buddy tree supplied",
+    "E87800 actual Bullet rows; 347700 controlled emission outcome and 518F30 source identity",
+    "E954F0 absent NPC row, zero collision radius; 3886A0 explicit available/unavailable owner position",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "actor virtual +150 true overrides base fixture; actual local-player identity comparison executes",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "native": {
+    "animation": "27D0F10 / 27D0400 → 40CD80 → 668B30",
+    "selfGrant": "343280 → 3C7F40 → 3C80A0",
+    "controller": "3DB410 → 460820 → 3860D0 → 38AC90 / 38A9F0 / 386D20"
+  },
+  "gameplayVerified": false
+}
