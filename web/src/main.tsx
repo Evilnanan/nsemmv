@@ -1108,6 +1108,13 @@ function RelicFields({
                     onClick={() => setPicker({ slot: i, curse })}
                     disabled={busy || readOnly || !!meta?.shop}
                   >
+                    {invalid && (
+                      <CircleAlert
+                        className="effect-warning"
+                        size={18}
+                        aria-hidden="true"
+                      />
+                    )}
                     <span>{effectName(id)}</span>
                     <code>
                       {id === EMPTY || id === 0 ? <Plus size={14} /> : id}

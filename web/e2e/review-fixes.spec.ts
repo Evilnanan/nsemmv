@@ -81,7 +81,7 @@ test("shop picker distinguishes ordinary and deep relics with identical names", 
     );
 });
 
-test("invalid effects and both conflicting curses stay conspicuous on hover", async ({
+test("invalid effects and both conflicting curses show warning icons", async ({
   page,
 }, testInfo) => {
   const raw = character();
@@ -93,15 +93,15 @@ test("invalid effects and both conflicting curses stay conspicuous on hover", as
   await load(page, fixture({ 0: raw }));
   await expect(page.locator(".effect-cell.invalid")).toHaveCount(3);
   await expect(page.locator(".effect-cell.curse.invalid")).toHaveCount(2);
+  await expect(page.locator(".effect-warning")).toHaveCount(3);
   await expect(
     page.getByRole("button", { name: "应用修改", exact: true }),
   ).toBeDisabled();
   for (const cell of await page.locator(".effect-cell.invalid").all()) {
     await expect(cell).toHaveAttribute("aria-invalid", "true");
     await cell.hover();
-    await expect(cell).toHaveCSS("border-top-style", "dashed");
-    await expect(cell).toHaveCSS("border-top-color", "rgb(242, 155, 130)");
-    await expect(cell).toHaveCSS("background-color", "rgb(56, 32, 29)");
+    await expect(cell.locator(".effect-warning")).toBeVisible();
+    await expect(cell).toHaveCSS("border-top-style", "solid");
   }
   await page.mouse.move(0, 0);
   await page.screenshot({

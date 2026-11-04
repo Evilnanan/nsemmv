@@ -706,6 +706,7 @@ a {
   align-self: center;
 }
 .effect-cell {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -740,16 +741,15 @@ a {
 .effect-cell.curse code {
   color: #8d7863;
 }
-.effect-cell.invalid,
-.effect-cell.invalid:hover:not(:disabled) {
-  border-color: #f29b82;
-  border-style: dashed;
-  box-shadow: inset 0 0 0 1px #f29b82;
-  background: #38201d;
-  color: #ffe0d5;
+.effect-cell.invalid > span {
+  padding-right: 22px;
 }
-.effect-cell.invalid code {
-  color: #f4b3a0;
+.effect-warning {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  color: #f29b82;
+  pointer-events: none;
 }
 .effect-cell.invalid:disabled {
   opacity: 1;
@@ -1456,15 +1456,6 @@ dialog h2 {
   flex: 1;
   min-width: 0;
   overflow-wrap: anywhere;
-}
-.picker-row.unavailable,
-.picker-row.unavailable:hover {
-  background: #38201d;
-  box-shadow: inset 3px 0 #f29b82;
-}
-.picker-row.incomplete,
-.picker-row.incomplete:hover {
-  box-shadow: inset 3px 0 var(--gold);
 }
 .relic-kind {
   font-size: 11px;
