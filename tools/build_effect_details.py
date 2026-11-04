@@ -343,6 +343,14 @@ assert starting_replacements['exeSha256'] == evidence['exeSha256'] and not start
 assert starting_replacements['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in starting_replacements['checks'].items()} == dict(compatibility=1780, baseline=32, matrix=1085, repeat=105, order=222, scope=10)
 starting_replacement_families = {str(f['effect']): f for f in starting_replacements['families']}
+equipped_exclusivity_path = ROOT / 'data/effect-equipped-exclusivity-evidence.json'
+equipped_exclusivity = json.loads(equipped_exclusivity_path.read_text())
+assert equipped_exclusivity['schema'] == 1 and equipped_exclusivity['regulationSha256'] == catalog['regulationSha256']
+assert equipped_exclusivity['exeSha256'] == evidence['exeSha256'] and not equipped_exclusivity['gameplayVerified']
+assert equipped_exclusivity['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in equipped_exclusivity['checks'].items()} == dict(selection=300, hero=20, mixed=7, groups=25, attributes=36, attack=1248)
+equipped_exclusive_families = {str(f['effect']): f for f in equipped_exclusivity['families']}
+
 
 
 ironeye_ultimate_path = ROOT / 'data/effect-ironeye-ultimate-evidence.json'
@@ -813,6 +821,7 @@ STACKING_RULES = {
     'guardian-halberd': ('不可叠加', '重复装备不增加旋风数量或范围', ['guardian-halberd']),
     'wylder-followup': ('不可叠加', '再次触发刷新附魔时长，不叠加数值', ['wylder-followup']),
     'duchess-dagger': ('不可叠加', '重复装备不增加重演比例或触发次数', ['duchess-dagger']),
+    'equipped-exclusive': ('不可叠加', '相同词条只生效一次', ['equipped-exclusivity']),
     'starting-replacement': ('不可叠加', '相同词条重复无效', ['starting-replacements']),
     'guard-aggro': ('不可叠加', '同类重复装备不增加优先度；再次触发刷新时长', ['guard-aggro']),
     'item-sharing': ('不可叠加', '重复装备不增加共享范围或效果', ['item-sharing']),
@@ -1279,6 +1288,15 @@ for id, effect in source['effects'].items():
                        values=[['弹反窗口', '动作第 0.13～0.27 秒']], restrictions=['刺剑／重刺剑'],
                        scope=[], duration=None, interval=None)]
         rule = 'scholar-feint'
+    if id in equipped_exclusive_families:
+        family = equipped_exclusive_families[id]
+        assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == family['exclusive']
+        assert source['spells'][str(family['root'])]['spCategory'] == 10
+        if id == '7006600':
+            notes.append('与战技攻击强化 +15% 同时生效时，攻击倍率合计 +21.9%。')
+        if id == '7006700':
+            notes.append('与近战攻击强化 +6% 同时生效时，攻击倍率合计 +21.9%。')
+        rule = 'equipped-exclusive'
     if id in starting_replacement_families:
         family = starting_replacement_families[id]
         assert list(effect['roots'].values()) == [family['root']]
@@ -1869,6 +1887,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('家人控制器状态 0／11 的完整生命周期与更新、已在场／死亡／召回时的实际行为、落点碰撞和资源生成、绝招动作中断及多人／重载时序')
     if rules[id] == 'guardian-halberd':
         questions.append('戟动作选择与蓄力分支、中断和时间缩放、弹体着地与完整状态过渡、武器攻击来源及动作修正、命中去重与最终 HP 伤害、多人／死亡／重载时序')
+    if rules[id] == 'equipped-exclusive':
+        questions.append('完整装备更新与其他角色效果汇入、属性到资源上限的曲线和限幅、特殊遗物 2070、攻击实例构造及最终伤害、卸下／重载／联机时序')
     if rules[id] == 'guard-aggro':
         questions.append('完整防御动作调度、松开防御与受击中断的刷新时序、其他选敌因素与最终目标选择、多人／死亡／重载时序')
     if rules[id] == 'item-sharing':
@@ -1999,6 +2019,7 @@ research['revenantFamilyEvidenceSha256'] = hashlib.sha256(revenant_family_path.r
 research['guardianHalberdEvidenceSha256'] = hashlib.sha256(guardian_halberd_path.read_bytes()).hexdigest()
 research['wylderFollowupEvidenceSha256'] = hashlib.sha256(wylder_followup_path.read_bytes()).hexdigest()
 research['duchessDaggerEvidenceSha256'] = hashlib.sha256(duchess_dagger_path.read_bytes()).hexdigest()
+research['equippedExclusivityEvidenceSha256'] = hashlib.sha256(equipped_exclusivity_path.read_bytes()).hexdigest()
 research['startingReplacementsEvidenceSha256'] = hashlib.sha256(starting_replacements_path.read_bytes()).hexdigest()
 research['guardAggroEvidenceSha256'] = hashlib.sha256(guard_aggro_path.read_bytes()).hexdigest()
 research['itemSharingEvidenceSha256'] = hashlib.sha256(item_sharing_path.read_bytes()).hexdigest()

@@ -45,6 +45,7 @@ import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
 import duchessDagger from "../../data/effect-duchess-dagger-evidence.json";
+import equippedExclusivity from "../../data/effect-equipped-exclusivity-evidence.json";
 import startingReplacements from "../../data/effect-starting-replacements-evidence.json";
 import guardAggro from "../../data/effect-guard-aggro-evidence.json";
 import itemSharing from "../../data/effect-item-sharing-evidence.json";
@@ -74,6 +75,33 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("filters exclusive equipment before summing attributes and multiplying applicable attacks", () => {
+    for (const family of equippedExclusivity.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("相同词条只生效一次");
+      expect(detail.blocks[0].duration).toBeNull();
+    }
+    for (const [id, label] of [[7000090, "生命力"], [7000190, "集中力"], [7000290, "耐力"]] as const)
+      expect(effectDetail(id)!.blocks[0].values).toEqual([[label, "+5"]]);
+    for (const row of equippedExclusivity.checks.selection)
+      expect(row.bits).toEqual(row.layout === 0 ? [] : [0, 3]);
+    for (const row of equippedExclusivity.checks.hero)
+      expect(row.bits).toEqual(row.hero === row.allowed ? [0, 3] : []);
+    const attributes = equippedExclusivity.checks.attributes.find(r => r.slots.length === 6 && r.slots[0].length === 3 && !r.disabled)!;
+    expect(attributes.values).toEqual([5, 5, 5, 0, 0, 0, 0, 0]);
+    for (const row of equippedExclusivity.checks.attack) {
+      const active = row.copies > 0 && !row.disabled && ![3, 4, 5, 10].includes(row.kind);
+      const expected = (active && row.effects.includes(7006600) && row.melee ? 1.06 : 1) * (active && row.effects.includes(7006700) && row.art ? 1.15 : 1);
+      for (const value of row.values) expect(value).toBeCloseTo(expected, 5);
+    }
+    expect(effectDetail(7006600)!.notes.join()).toContain("与战技攻击强化 +15% 同时生效时，攻击倍率合计 +21.9%");
+    expect(effectDetail(7006700)!.notes.join()).toContain("与近战攻击强化 +6% 同时生效时，攻击倍率合计 +21.9%");
+    expect(equippedExclusivity.gameplayVerified).toBe(false);
+    expect(research.equippedExclusivityEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-equipped-exclusivity-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("keeps one starting art or spell per weapon and resolves only compatible replacements", () => {
     expect(startingReplacements.families).toHaveLength(35);
     for (const family of startingReplacements.families) {

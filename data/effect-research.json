@@ -8,7 +8,7 @@
     "withDetails": 634,
     "withNumericFields": 560,
     "withMechanicsOnly": 39,
-    "nativeStacking": 547,
+    "nativeStacking": 552,
     "catalog": 2241,
     "catalogWithDetails": 2079
   },
@@ -8070,11 +8070,13 @@
         7000090
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equipped-exclusivity"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整装备更新与其他角色效果汇入、属性到资源上限的曲线和限幅、特殊遗物 2070、攻击实例构造及最终伤害、卸下／重载／联机时序"
       ],
       "gameplayVerified": false
     },
@@ -8160,11 +8162,13 @@
         7000190
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equipped-exclusivity"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整装备更新与其他角色效果汇入、属性到资源上限的曲线和限幅、特殊遗物 2070、攻击实例构造及最终伤害、卸下／重载／联机时序"
       ],
       "gameplayVerified": false
     },
@@ -8250,11 +8254,13 @@
         7000290
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equipped-exclusivity"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整装备更新与其他角色效果汇入、属性到资源上限的曲线和限幅、特殊遗物 2070、攻击实例构造及最终伤害、卸下／重载／联机时序"
       ],
       "gameplayVerified": false
     },
@@ -9893,11 +9899,13 @@
         7006600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equipped-exclusivity"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整装备更新与其他角色效果汇入、属性到资源上限的曲线和限幅、特殊遗物 2070、攻击实例构造及最终伤害、卸下／重载／联机时序"
       ],
       "gameplayVerified": false
     },
@@ -9937,11 +9945,13 @@
         7006700
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "equipped-exclusivity"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整装备更新与其他角色效果汇入、属性到资源上限的曲线和限幅、特殊遗物 2070、攻击实例构造及最终伤害、卸下／重载／联机时序"
       ],
       "gameplayVerified": false
     },
@@ -49747,6 +49757,7 @@
   "guardianHalberdEvidenceSha256": "2e418db4348e384797129c1508651c9e3bbdde74758d7baff09c6f8c3be6887d",
   "wylderFollowupEvidenceSha256": "b31a489e45816d4c96d41e089b982d30609c9dc33f651b058716c8f63ea7e1bc",
   "duchessDaggerEvidenceSha256": "cf5e0374acd830e8f71519161b844bd4a27b07417ab151b86996ba1156b1c2bb",
+  "equippedExclusivityEvidenceSha256": "c4bf2b595dfa5eb8abe6336e18034ef57b3d564f63977090af9fff9db0cf0527",
   "startingReplacementsEvidenceSha256": "0cdba060d9328349958a2726899305816a54fb8f31ccba5efed83c3a0559e701",
   "guardAggroEvidenceSha256": "e412c1bcf2be396d4e8359f9336091dcc02ceffa4e50e72ede398a93910d55e8",
   "itemSharingEvidenceSha256": "29fe54433e28c302ab5f8f8b4badbcb6ff1c7f2268e676a1401b91821a278845",
