@@ -36,6 +36,7 @@ import duchessUltimate from "../../data/effect-duchess-ultimate-evidence.json";
 import guardianShockwave from "../../data/effect-guardian-shockwave-evidence.json";
 import heroAdjustment from "../../data/effect-hero-adjustment-evidence.json";
 import successiveRecovery from "../../data/effect-successive-recovery-evidence.json";
+import successiveAttack from "../../data/effect-successive-attack-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -53,6 +54,37 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows cumulative successive-attack tiers without treating the decay helper as another damage tier", () => {
+    const detail = effectDetail(7037600)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加增伤或累积速度");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].values).toEqual([["攻击倍率", "+5% → +11.83% → +21.89%"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes).toEqual(["增伤逐档累积；停止攻击后逐渐衰退。"]);
+    expect(successiveAttack.rates).toEqual([1.05, 1.065, 1.09, 1]);
+    for (const row of successiveAttack.checks.lifecycle) {
+      expect(row.peak).toBeCloseTo(1.2188925, 5);
+      expect(row.finalCounter).toBe(0);
+      expect(row.transitions.at(-1)!.active).toEqual([]);
+      const same = successiveAttack.checks.lifecycle.find(r => r.fps === row.fps && r.copies === 1)!;
+      expect(row.transitions).toEqual(same.transitions);
+    }
+    for (const row of successiveAttack.checks.mixed) {
+      expect(row.peak).toBeCloseTo(1.2188925, 5);
+      expect(row.recoveries).toHaveLength(5);
+      for (const recovery of row.recoveries) {
+        expect(recovery.recoveryCounter).toBe(0);
+        expect(recovery.attackCounter).toBeGreaterThan(0);
+      }
+    }
+    expect(successiveAttack.gameplayVerified).toBe(false);
+    expect(research.successiveAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-successive-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("explains shared successive-attack recovery and the extra decay from duplicate equipment", () => {
     for (const id of [10000, 7036000, 7036010]) {
       const detail = effectDetail(id)!;

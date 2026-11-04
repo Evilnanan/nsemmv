@@ -8,7 +8,7 @@
     "withDetails": 611,
     "withNumericFields": 538,
     "withMechanicsOnly": 38,
-    "nativeStacking": 486,
+    "nativeStacking": 487,
     "catalog": 2241,
     "catalogWithDetails": 2054
   },
@@ -12322,16 +12322,18 @@
       "detailSources": [
         7037604,
         7037605,
-        7037606
+        7037606,
+        7037603,
+        7037607
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "successive-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "各攻击命中标记的实际投递与权重、完整攻击上下文和动作中断、实时调度／最终伤害、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49612,6 +49614,7 @@
   "guardianShockwaveEvidenceSha256": "d0d9c1e529a7a7e590327e827a9a9a6d27b784a1759689e1d0ef4e97038962e8",
   "heroAdjustmentEvidenceSha256": "ad1953dee5f57cd47fbec1a9a3f24e4c7a30b660e6db86668d455d69ecabc4a6",
   "successiveRecoveryEvidenceSha256": "9702067e94660e569cacfe18f852143558149ee3b6d5a031d11d435fad9221ed",
+  "successiveAttackEvidenceSha256": "369657f4fbc9bf8ca0204c48d191eeea639b4f9a95addbb53de533f8f50dfea4",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
