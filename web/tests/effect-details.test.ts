@@ -41,6 +41,7 @@ import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
+import ailmentGrowth from "../../data/effect-ailment-growth-evidence.json";
 import frostStealth from "../../data/effect-frost-stealth-evidence.json";
 import duchessStealth from "../../data/effect-duchess-stealth-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
@@ -60,6 +61,40 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows ailment growth tiers and delayed clearing without a misleading buff duration", () => {
+    const detail = effectDetail(7037700)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不加快增长，也不提高上限");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].values).toEqual([["攻击倍率", "+3.5% → +7% → +11% → +15.5% → +20% → +25% → +30% → +35% → +40% → +45%"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes).toEqual([
+      "首次满足条件立即获得第一阶，其后每 20 秒提升一阶，最多 10 阶。",
+      "所有异常累积和发作状态消失后，在当前 20 秒计时结束时清空增益。",
+    ]);
+    for (const row of ailmentGrowth.checks.gauges) {
+      expect(row.count).toBe(row.copies && row.buildup ? 1 : 0);
+    }
+    for (const row of ailmentGrowth.checks.growth) {
+      for (const step of row.steps) {
+        expect(step.level).toBe(row.copies ? Math.min(step.index + 1, 10) : 0);
+        expect(step.buffs).toHaveLength(step.level ? 1 : 0);
+      }
+    }
+    for (const row of ailmentGrowth.checks.numeric) {
+      for (const rate of row.rates) expect(rate).toBeCloseTo(row.kind === 5 ? 1 : ailmentGrowth.rates[row.level - 1], 5);
+    }
+    for (const row of ailmentGrowth.checks.timeline) {
+      expect(row.transitions.map(n => n.level)).toEqual([1, 2, 0, 1]);
+      for (const [i, n] of row.transitions.entries()) expect(Math.abs(n.time - [0, 20, 40, 41][i])).toBeLessThanOrEqual(3.01 / row.fps);
+    }
+    for (const row of ailmentGrowth.checks.clear) expect(row.after).toEqual([1, 1, 1, 1, 1]);
+    expect(ailmentGrowth.gameplayVerified).toBe(false);
+    expect(research.ailmentGrowthEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-ailment-growth-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("keeps frost concealment duration separate from the short notification markers", () => {
     const detail = effectDetail(7260700)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1406,7 +1441,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(544);
+    expect(research.coverage.withNumericFields).toBe(545);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
