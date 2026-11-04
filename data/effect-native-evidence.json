@@ -17736,6 +17736,310 @@
       "zeroInterval": false
     }
   ],
+  "skillStack": [
+    {
+      "copies": 0,
+      "markers": 0,
+      "nodes": [
+        {
+          "id": 7020201,
+          "lifetime": 0.0,
+          "flags": 1
+        }
+      ],
+      "rates": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "copies": 0,
+      "markers": 1,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ]
+    },
+    {
+      "copies": 0,
+      "markers": 3,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ]
+    },
+    {
+      "copies": 1,
+      "markers": 1,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727
+      ]
+    },
+    {
+      "copies": 1,
+      "markers": 3,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727
+      ]
+    },
+    {
+      "copies": 2,
+      "markers": 1,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.3310000896453857,
+        1.3310000896453857,
+        1.3310000896453857,
+        1.3310000896453857,
+        1.3310000896453857
+      ]
+    },
+    {
+      "copies": 2,
+      "markers": 3,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.3310000896453857,
+        1.3310000896453857,
+        1.3310000896453857,
+        1.3310000896453857,
+        1.3310000896453857
+      ]
+    },
+    {
+      "copies": 3,
+      "markers": 1,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.4641001224517822,
+        1.4641001224517822,
+        1.4641001224517822,
+        1.4641001224517822,
+        1.4641001224517822
+      ]
+    },
+    {
+      "copies": 3,
+      "markers": 3,
+      "nodes": [
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020200,
+          "lifetime": -1.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 3.0,
+          "flags": 4
+        },
+        {
+          "id": 7020201,
+          "lifetime": 10.0,
+          "flags": 4
+        }
+      ],
+      "rates": [
+        1.4641001224517822,
+        1.4641001224517822,
+        1.4641001224517822,
+        1.4641001224517822,
+        1.4641001224517822
+      ]
+    }
+  ],
   "recoveryTiming": {
     "350401": {
       "lifetime": 1,
@@ -18258,6 +18562,7 @@
     }
   },
   "stubs": [
+    "214E8D0 isolated 0x88-byte node allocation; constructor and insertion execute unchanged",
     "3C7FD0 Scholar ally application recorder; eligibility and effect selection are native",
     "3C7FD0 effect application recorder; dispatch is native",
     "3C8BE0 TAE start-event application recorder; active flag handling is native",
@@ -18270,7 +18575,7 @@
     "E81650 PlayerCommon row 0 lookup, actual ally effect at +0x1a8",
     "E81650 PlayerCommon row 0 lookup, actual extracted decay field at +0x25a",
     "EA17E0 SpEffect PARAM lookup for lifetime refresh using actual row",
-    "EA17E0 growth/refresh lookup using actual SpEffect PARAM rows, including missing next rows"
+    "EA17E0 growth/refresh/insertion lookup using actual SpEffect PARAM rows, including missing next rows"
   ],
   "gameplayVerified": false
 }

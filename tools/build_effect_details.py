@@ -310,6 +310,7 @@ def block(id, phase, linked, known_states=frozenset()):
 
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
+    'wylder-skill': ('不可叠加', '重复装备不增加单次触发收益', ['action-triggers', 'action-start', 'skill-stack']),
     'role-max-hp': ('不可叠加', '同类增益互相覆盖', ['action-triggers', 'role-lifecycle']),
     'totem': ('不可叠加', '同类图腾增益覆盖并刷新持续时间', ['totem-animation', 'totem-native']),
     'attributes': ('可叠加', '能力值相加', ['equip-injection', 'instance-matching', 'attributes']),
@@ -469,6 +470,10 @@ for id, effect in source['effects'].items():
                             'slashDamageCutRate', 'blowDamageCutRate', 'thrustDamageCutRate',
                             'magicDamageCutRate', 'fireDamageCutRate', 'thunderDamageCutRate', 'darkDamageCutRate'))
                 b['values'] = [['攻击倍率', '+20%'], ['精力上限', '+20%'], ['承伤倍率', '+20%']]
+    if 7020200 in effect['roots'].values():
+        assert len(evidence['skillStack']) == 9
+        rule = 'wylder-skill'
+        notes.append('连续发动技艺可叠加增益，倍率相乘、分别计时；两次触发合计 +21%。')
     if 7034100 in effect['roots'].values():
         assert all(source['spells'][str(sp)]['maxHpRate'] == 1.5 for sp in (7034102, 7034104))
         assert source['spells']['7034104']['deleteCriteriaDamage'] == 1
@@ -633,7 +638,7 @@ for id in sorted(source['effects'], key=int):
     if rules[id] == 'role-max-hp':
         questions.append('增益施加、阶段切换和移除时的当前／最大 HP 同步')
     if 7020200 in effect['roots'].values():
-        questions.append('类别 10 的连续技艺施加、独立实例寿命与实际叠加上限')
+        questions.append('大量连续施加时的实例容量上限、移除调度和跨网络同步')
     if rules[id] == 'totem':
         questions.append('图腾范围重复进入、多人图腾相遇、提前破坏及网络投递时序')
     if rules[id] == 'discovery':

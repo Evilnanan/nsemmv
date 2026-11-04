@@ -108,7 +108,11 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             sp = uc.reg_read(UC_X86_REG_RSP)
             uc.reg_write(UC_X86_REG_RIP, struct.unpack('<Q', uc.mem_read(sp, 8))[0])
             uc.reg_write(UC_X86_REG_RSP, sp + 8)
-        if rva == 0x40fff0 and address - BASE == 0x3c8be0:
+        if rva == 0x50d060 and address - BASE == 0x214e8d0:
+            calls.add('214E8D0 isolated 0x88-byte node allocation; constructor and insertion execute unchanged')
+            assert uc.reg_read(UC_X86_REG_RCX) == 0x88
+            finish(OBJ + 0x1c000)
+        elif rva == 0x40fff0 and address - BASE == 0x3c8be0:
             calls.add('3C8BE0 TAE start-event application recorder; active flag handling is native')
             assert uc.reg_read(UC_X86_REG_RCX) == OBJ + 0x6000
             emitted.append(uc.reg_read(UC_X86_REG_RDX) & 0xffffffff)
@@ -156,8 +160,8 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             wrapper = uc.reg_read(UC_X86_REG_RCX)
             uc.mem_write(wrapper, struct.pack('<Qi', nodes[ids.index(id)] + 0x100, id))
             finish(wrapper)
-        elif rva in (0x5077a0, 0x511700) and address - BASE == 0xea17e0:
-            calls.add('EA17E0 growth/refresh lookup using actual SpEffect PARAM rows, including missing next rows')
+        elif rva in (0x5077a0, 0x511700, 0x50d060) and address - BASE == 0xea17e0:
+            calls.add('EA17E0 growth/refresh/insertion lookup using actual SpEffect PARAM rows, including missing next rows')
             id = uc.reg_read(UC_X86_REG_RDX) & 0xffffffff
             wrapper = uc.reg_read(UC_X86_REG_RCX)
             if id in rows and id not in lookup_addresses:
@@ -681,6 +685,39 @@ for existing in (1413000, 7032803):
         zone_matching.append(dict(existing=existing, incoming=incoming, categoryMatch=match,
                                   activeId=actual_id, duration=duration, magicRate=rate))
 
+skill_stack = []
+assert run(0x510b20, [7020200], [OBJ + 0x1000, 7020200]).reg_read(UC_X86_REG_RAX) & 255
+for copies, markers in [(0, 0)] + [(c, m) for c in range(4) for m in (1, 3)]:
+    ids = [7020200] * markers + [7020201] * copies
+    def setup(u):
+        u.mem_write(OBJ + 0x900, struct.pack('<4f', 1, 1, 1, 1))
+        # Match the native state-count bucket for state 2079. Extra marker
+        # fixtures verify a boolean qualification, not extra grants per copy.
+        u.mem_write(OBJ + 0x28, struct.pack('<Q', markers << 40))
+        for i in range(len(ids)):
+            u.mem_write(OBJ + 0x104c + i * 0x600, struct.pack('<f', -1 if i < markers else 3))
+    u = run(0x50d060, ids, [OBJ, 7020201, OBJ + 0x900, -1, 0, 0x3f800000, 0, 0, 16], flags=4, setup=setup)
+    index = u.reg_read(UC_X86_REG_RAX) & 0xffffffff
+    assert index == len(ids)
+    node = struct.unpack('<Q', u.mem_read(OBJ + 8, 8))[0]
+    nodes = []
+    while node:
+        invoke(u, 0x50f740, [node, 0, OBJ, 0], {UC_X86_REG_XMM1: 1})
+        invoke(u, 0x511b80, [node], {UC_X86_REG_XMM1: 0, UC_X86_REG_XMM2: 1, UC_X86_REG_XMM3: 1})
+        id = struct.unpack('<i', u.mem_read(node + 8, 4))[0]
+        lifetime = struct.unpack('<f', u.mem_read(node + 0x4c, 4))[0]
+        flags = struct.unpack('<I', u.mem_read(node + 0x68, 4))[0]
+        nodes.append(dict(id=id, lifetime=lifetime, flags=flags))
+        node = struct.unpack('<Q', u.mem_read(node + 0x38, 8))[0]
+    leaves = [n for n in nodes if n['id'] == 7020201]
+    assert len(leaves) == copies + 1
+    assert [n['lifetime'] for n in leaves] == ([3] * copies + [10] if markers else [0])
+    u.mem_write(OBJ + 0x808, struct.pack('<iiB', 40000, 1, 0))
+    invoke(u, 0x502830, [OBJ, OBJ + 0x800, -1, -1])
+    rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
+    assert all(math.isclose(v, 1.1 ** (copies + 1) if markers else 1, abs_tol=1e-6) for v in rates)
+    skill_stack.append(dict(copies=copies, markers=markers, nodes=nodes, rates=rates))
+
 role_lifecycle = []
 for id in (7034102, 7034103, 7034104, 7220303):
     for damage in (0, 1, 100, 10000):
@@ -791,7 +828,7 @@ groups = dict(predicates=predicate, attributes=attributes, attack=attack, defens
               timing=timing, damageStatus=damage_status, triggerMatching=trigger_matching, triggerValues=trigger_values,
               extraGetters=extra_getters, shopMatching=shop_matching, hpConditions=hp_conditions, growthAdvance=growth_advance,
               growthValues=growth_values, zoneMatching=zone_matching, locationValues=location_values,
-              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally, actionStart=action_start, actionValues=action_values, roleLifecycle=role_lifecycle)
+              guardCounter=guard_counter, scholarDecay=scholar_decay, scholarAlly=scholar_ally, actionStart=action_start, actionValues=action_values, roleLifecycle=role_lifecycle, skillStack=skill_stack)
 a.output.write_text(json.dumps(dict(schema=1, exeSha256=exe_hash, regulationSha256=x['hashes']['regulation.bin'], paramSha256=hashlib.sha256(param).hexdigest(), heroParamSha256=hashlib.sha256(hero_param).hexdigest(),
     systemDefinitionHashes={k:v for k,v in systems['hashes'].items() if k.startswith('defs/')},
     systemParamSha256=system_hashes,

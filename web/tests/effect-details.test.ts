@@ -46,8 +46,16 @@ describe("MMV effect details", () => {
       const d = effectDetail(id)!;
       expect(d.blocks[0].values).toEqual([["攻击倍率", "+10%"]]);
       expect(d.blocks[0].duration).toBe(10);
-      expect(d.stacking).toBe("待确认");
-      expect(research.effects[String(id) as keyof typeof research.effects].openQuestions.join()).toContain("连续技艺");
+      expect(d.stacking).toBe("不可叠加");
+      expect(d.stackingDetail).toContain("重复装备不增加单次触发收益");
+      expect(d.notes.join()).toContain("两次触发合计 +21%");
+      expect(research.effects[String(id) as keyof typeof research.effects].openQuestions.join()).toContain("实例容量上限");
+    }
+    expect(evidence.skillStack).toHaveLength(9);
+    for (const r of evidence.skillStack) {
+      const leaves = r.nodes.filter((n) => n.id === 7020201);
+      expect(leaves.map((n) => n.lifetime)).toEqual(r.markers ? [...Array(r.copies).fill(3), 10] : [0]);
+      for (const rate of r.rates) expect(rate).toBeCloseTo(r.markers ? 1.1 ** (r.copies + 1) : 1, 6);
     }
     expect(evidence.actionStart).toHaveLength(12);
     for (const r of evidence.actionStart) expect(r.emitted).toEqual(r.active ? [r.leaf] : []);

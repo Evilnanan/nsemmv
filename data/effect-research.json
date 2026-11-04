@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "7414977f571341157b06e62956383f36b1bf4d72e3ed107eab9730ecbec3b592",
+  "nativeEvidenceSha256": "2ee619d4052310a3f1cd22ec275199439840271caa3ea806c96eefd8b8722c0d",
   "triggerEvidenceSha256": "c8d8c396ce234a4c8db999e3fdd58cf057fb75124237a46b7ef8013639fda631",
   "coverage": {
     "obtainable": 637,
     "withDetails": 560,
     "withNumericFields": 489,
     "withMechanicsOnly": 36,
-    "nativeStacking": 276,
+    "nativeStacking": 278,
     "catalog": 2241,
     "catalogWithDetails": 2001
   },
@@ -10995,18 +10995,20 @@
         7020201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "action-triggers",
+        "action-start",
+        "skill-stack",
         "action-triggers",
         "action-start",
         "action-values"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "类别 10 的连续技艺施加、独立实例寿命与实际叠加上限"
+        "大量连续施加时的实例容量上限、移除调度和跨网络同步"
       ],
       "gameplayVerified": false
     },
@@ -11023,18 +11025,20 @@
         7020201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "action-triggers",
+        "action-start",
+        "skill-stack",
         "action-triggers",
         "action-start",
         "action-values"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为",
-        "类别 10 的连续技艺施加、独立实例寿命与实际叠加上限"
+        "大量连续施加时的实例容量上限、移除调度和跨网络同步"
       ],
       "gameplayVerified": false
     },
