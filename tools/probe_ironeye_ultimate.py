@@ -222,6 +222,7 @@ for behavior,bullet in ((700000140,30902210),(700000145,30902215)):
     attack=x.x['tables']['AtkParam_Pc'][str(bu['atkId_Bullet'])]
     if bullet==30902210:
         assert bu['spEffectId0']==leaf and struct.unpack_from('<i',bullets[bullet],0x6c)[0]==leaf
+        assert attack['statusAilmentAtkPowerCorrectRate']==100
         assert all(attack[k]==100 for k in ('spEffectAtkPowerCorrectRate_byDmg','spEffectAtkPowerCorrectRate_byPoint','spEffectAtkPowerCorrectRate_byRate'))
     else:assert all(bu['spEffectId'+str(i)]==0 for i in range(5))
     assert all(ch['spEffectId'+str(i)]==0 for i in range(5))
