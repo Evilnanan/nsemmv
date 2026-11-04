@@ -39,6 +39,7 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7034400, ["+35%", "+40%", "5 秒", "前段不适用，后段适用", "收刀不会提前解除", "不可叠加"]],
     [7011100, ["最大值的 15%", "半径 8 米", "自身及周围友方", "重复装备不增加单次恢复量", "可能合并或延后恢复"]],
     [7011101, ["最大值的 15%", "不可叠加"]],
     [7035400, ["基础发狂累积", "每 0.1 秒", "最大值的 10% + 100", "FP 损失", "30", "不同版本的累积相加", "同版重复无效"]],

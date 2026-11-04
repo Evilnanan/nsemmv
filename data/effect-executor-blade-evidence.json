@@ -1,0 +1,3138 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "attackParamSha256": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "root": 7034400,
+  "events": [
+    {
+      "tae": 2000,
+      "animation": 19488,
+      "index": 29,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.2,
+      "hex": "F4C90A00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 571000,
+      "index": 3,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "F4C90A00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 571000,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "21566B00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 571010,
+      "index": 7,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.53333336,
+      "hex": "F4C90A00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 579000,
+      "index": 3,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "F4C90A00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 579001,
+      "index": 3,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "F4C90A00000000000000000000000000"
+    },
+    {
+      "tae": 2907,
+      "animation": 670000,
+      "index": 21,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "24566B00000000000000000000000000"
+    },
+    {
+      "tae": 2990,
+      "animation": 66300,
+      "index": 0,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "F4C90A0000000000"
+    }
+  ],
+  "checks": {
+    "filter": [
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 0,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 16,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 122,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 1,
+        "tag": 130,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 0,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 16,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 122,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": false,
+        "copies": 3,
+        "tag": 130,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 0,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 16,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 0,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 1,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 2,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 11,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 122,
+        "kind": 12,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 1,
+        "tag": 130,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 0,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 16,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 0,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 1,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 2,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 11,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 122,
+        "kind": 12,
+        "attack": [
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858,
+          1.350000023841858
+        ],
+        "hitEffects": [
+          7034403
+        ]
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 0,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 1,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 2,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 3,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 4,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 5,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 11,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      },
+      {
+        "skillState": true,
+        "copies": 3,
+        "tag": 130,
+        "kind": 12,
+        "attack": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hitEffects": []
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "no-equipment",
+        "copies": 0,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": null,
+        "cancel": null,
+        "hits": [
+          30
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": []
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": []
+      },
+      {
+        "name": "no-hit",
+        "copies": 1,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": null,
+        "cancel": null,
+        "hits": [],
+        "grants": [],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 122,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "name": "one-hit",
+        "copies": 1,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": null,
+        "cancel": null,
+        "hits": [
+          30
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": [
+              7034403
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 31,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 122,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 332,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "name": "duplicate-equipment",
+        "copies": 3,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": null,
+        "cancel": null,
+        "hits": [
+          30
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": [
+              7034403
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 31,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 122,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 332,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "name": "repeat-hit",
+        "copies": 1,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": null,
+        "cancel": null,
+        "hits": [
+          30,
+          90
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": [
+              7034403
+            ]
+          },
+          {
+            "frame": 90,
+            "ids": [
+              7034403
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 31,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 122,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 392,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "name": "after-sheathing",
+        "copies": 1,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": null,
+        "cancel": null,
+        "hits": [
+          30,
+          180
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": [
+              7034403
+            ]
+          },
+          {
+            "frame": 180,
+            "ids": []
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 31,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 122,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 332,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "name": "cancel-marker-only",
+        "copies": 1,
+        "fps": 60,
+        "skillStop": 240,
+        "skillRestart": null,
+        "cancel": 120,
+        "hits": [
+          30,
+          210
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": [
+              7034403
+            ]
+          },
+          {
+            "frame": 210,
+            "ids": [
+              7034403
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 31,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 242,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 512,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "name": "skill-restart",
+        "copies": 1,
+        "fps": 60,
+        "skillStop": 120,
+        "skillRestart": 240,
+        "cancel": null,
+        "hits": [
+          30,
+          300
+        ],
+        "grants": [
+          {
+            "frame": 30,
+            "ids": [
+              7034403
+            ]
+          },
+          {
+            "frame": 300,
+            "ids": [
+              7034403
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "frame": 0,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 1,
+            "attack": 1.35,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "frame": 31,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 122,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 242,
+            "attack": 1.35,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 362,
+            "attack": 1.0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 602,
+            "attack": 1.0,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "finalNodes": [
+          {
+            "id": 7034400,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7034401,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      }
+    ],
+    "penalty": [
+      {
+        "copies": 1,
+        "arrivals": [
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 301,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "arrivals": [
+          0,
+          0,
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 301,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "arrivals": [
+          0,
+          240
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 541,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "arrivals": [
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 301,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "arrivals": [
+          0,
+          0,
+          0
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 301,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "arrivals": [
+          0,
+          240
+        ],
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "incoming": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          },
+          {
+            "frame": 541,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    ],
+    "attackRows": [
+      {
+        "attack": 960200,
+        "tags": [
+          119,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960210,
+        "tags": [
+          0,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960220,
+        "tags": [
+          0,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960230,
+        "tags": [
+          0,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960240,
+        "tags": [
+          104,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960300,
+        "tags": [
+          0,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960305,
+        "tags": [
+          100,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960306,
+        "tags": [
+          100,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960310,
+        "tags": [
+          0,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960315,
+        "tags": [
+          100,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960316,
+        "tags": [
+          100,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960320,
+        "tags": [
+          0,
+          122,
+          124,
+          127,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960325,
+        "tags": [
+          0,
+          124,
+          124,
+          127,
+          130
+        ],
+        "rate": 1.0
+      },
+      {
+        "attack": 960326,
+        "tags": [
+          0,
+          122,
+          124,
+          127,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960330,
+        "tags": [
+          0,
+          122,
+          124,
+          128,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960340,
+        "tags": [
+          0,
+          122,
+          124,
+          129,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960350,
+        "tags": [
+          102,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960355,
+        "tags": [
+          102,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960360,
+        "tags": [
+          102,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960365,
+        "tags": [
+          102,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960380,
+        "tags": [
+          103,
+          122,
+          124,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960470,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          0
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960480,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          0
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960500,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960501,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960509,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960510,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960511,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960530,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960550,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960560,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960561,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960590,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          130
+        ],
+        "rate": 1.350000023841858
+      },
+      {
+        "attack": 960591,
+        "tags": [
+          0,
+          122,
+          0,
+          0,
+          0
+        ],
+        "rate": 1.350000023841858
+      }
+    ]
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "3C7FD0 grant recorder; queue delivered on next simulation frame",
+    "3CED90/4D1B20 neutral animation owner; 3C8BE0 next-qualification grant recorder",
+    "E6D630 absent damage-row lookup for isolated attack getter",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false
+}

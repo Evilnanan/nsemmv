@@ -18,10 +18,39 @@ import recluseBleed from "../../data/effect-recluse-bleed-evidence.json";
 import sacrifice from "../../data/effect-revenant-sacrifice-evidence.json";
 import gesture from "../../data/effect-gesture-madness-evidence.json";
 import guardianSkill from "../../data/effect-guardian-skill-evidence.json";
+import blade from "../../data/effect-executor-blade-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("restricts Executor's bonus to tagged skill attacks and keeps the hit penalty after sheathing", () => {
+    const detail = effectDetail(7034400)!;
+    expect(detail.blocks.map((b) => b.values)).toEqual([
+      [["攻击倍率", "+35%"]], [["承伤倍率", "+40%"]],
+    ]);
+    expect(detail.blocks.map((b) => b.duration)).toEqual([null, 5]);
+    expect(detail.notes.join()).toContain("前段不适用，后段适用");
+    expect(detail.notes.join()).toContain("收刀不会提前解除");
+    expect(detail.stacking).toBe("不可叠加");
+    const cases = Object.fromEntries(blade.checks.lifecycle.map((c) => [c.name, c]));
+    expect(cases["no-equipment"].changes).toEqual([{ frame: 0, attack: 1, incoming: [1, 1, 1, 1, 1] }]);
+    expect(cases["one-hit"].changes).toEqual(cases["duplicate-equipment"].changes);
+    expect(cases["after-sheathing"].grants.at(-1)!.ids).toEqual([]);
+    expect(cases["one-hit"].changes.some((c) => c.attack === 1 && c.incoming.every((v) => v === 1.4))).toBe(true);
+    expect(cases["repeat-hit"].changes.at(-1)!.frame - cases["one-hit"].changes.at(-1)!.frame).toBe(60);
+    for (const c of blade.checks.attackRows)
+      expect(c.rate).toBeCloseTo(c.tags.includes(122) ? 1.35 : 1);
+    expect(blade.checks.attackRows.filter((c) => c.rate === 1).map((c) => c.attack)).toEqual([960325]);
+    for (const c of blade.checks.penalty) {
+      expect(c.changes).toHaveLength(2);
+      expect(c.changes[0].incoming).toEqual([1.4, 1.4, 1.4, 1.4, 1.4]);
+      expect(c.changes[1].frame / c.fps).toBeCloseTo(Math.max(...c.arrivals) / c.fps + 5, 1);
+    }
+    expect(research.executorBladeEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-executor-blade-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(blade.gameplayVerified).toBe(false);
+  });
   it("resolves both Guardian skill aliases and preserves overlapping heal arrival behavior", () => {
     const detail = effectDetail(7011100)!;
     expect(detail).toEqual(effectDetail(7011101));
@@ -397,7 +426,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(503);
+    expect(research.coverage.withNumericFields).toBe(504);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
