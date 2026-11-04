@@ -1,0 +1,898 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "tae": "ed581a7afc233d5926308d5e20ca3fefae5477a34de776f19d42e3e7e1c8dba3"
+  },
+  "effects": [
+    7011600
+  ],
+  "root": 7011600,
+  "state": 2036,
+  "events": [
+    {
+      "animation": 30500,
+      "index": 59,
+      "Type": 2,
+      "StartTime": 1.4333333,
+      "EndTime": 1.6333333,
+      "hex": "8200000000000000D21700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 30500,
+      "index": 60,
+      "Type": 2,
+      "StartTime": 1.4333333,
+      "EndTime": 1.6333333,
+      "hex": "8200000000000000D31700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 30510,
+      "index": 55,
+      "Type": 2,
+      "StartTime": 1.5333333,
+      "EndTime": 1.7333333,
+      "hex": "8200000000000000D21700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 30510,
+      "index": 56,
+      "Type": 2,
+      "StartTime": 1.5333333,
+      "EndTime": 1.7333333,
+      "hex": "8200000000000000D31700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 32500,
+      "index": 79,
+      "Type": 2,
+      "StartTime": 1.8333334,
+      "EndTime": 2.0333333,
+      "hex": "8200000000000000D21700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 32500,
+      "index": 80,
+      "Type": 2,
+      "StartTime": 1.8333334,
+      "EndTime": 2.0333333,
+      "hex": "8200000000000000D31700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 32510,
+      "index": 42,
+      "Type": 2,
+      "StartTime": 2.0666666,
+      "EndTime": 2.2666667,
+      "hex": "8200000000000000D21700000000F4070000FF03000000000000000000000000"
+    },
+    {
+      "animation": 32510,
+      "index": 43,
+      "Type": 2,
+      "StartTime": 2.0666666,
+      "EndTime": 2.2666667,
+      "hex": "8200000000000000D31700000000F4070000FF03000000000000000000000000"
+    }
+  ],
+  "bullets": {
+    "30901145": {
+      "life": 0.20000000298023224,
+      "atkId_Bullet": 690000001,
+      "HitBulletID": 30901146,
+      "numShoot": 1,
+      "launchConditionType": 5,
+      "hitRadius": 0.5,
+      "hitRadiusMax": 0.5,
+      "dmgHitRecordLifeTime": 0,
+      "isUseSharedHitList": 0,
+      "isEndlessHit": 0,
+      "intervalCreateBulletId": -1
+    },
+    "30901146": {
+      "life": 0.3499999940395355,
+      "atkId_Bullet": 600000089,
+      "HitBulletID": -1,
+      "numShoot": 1,
+      "launchConditionType": 0,
+      "hitRadius": 3,
+      "hitRadiusMax": 3,
+      "dmgHitRecordLifeTime": 0,
+      "isUseSharedHitList": 0,
+      "isEndlessHit": 0,
+      "intervalCreateBulletId": -1
+    },
+    "30901147": {
+      "life": 0.20000000298023224,
+      "atkId_Bullet": 690000001,
+      "HitBulletID": 30901148,
+      "numShoot": 1,
+      "launchConditionType": 5,
+      "hitRadius": 0.5,
+      "hitRadiusMax": 0.5,
+      "dmgHitRecordLifeTime": 0,
+      "isUseSharedHitList": 0,
+      "isEndlessHit": 0,
+      "intervalCreateBulletId": -1
+    },
+    "30901148": {
+      "life": 0.3499999940395355,
+      "atkId_Bullet": 690000001,
+      "HitBulletID": -1,
+      "numShoot": 1,
+      "launchConditionType": 0,
+      "hitRadius": 3,
+      "hitRadiusMax": 3,
+      "dmgHitRecordLifeTime": 0,
+      "isUseSharedHitList": 0,
+      "isEndlessHit": 0,
+      "intervalCreateBulletId": -1
+    }
+  },
+  "attack": {
+    "atkPhysCorrection": 40,
+    "atkMagCorrection": 40,
+    "atkFireCorrection": 40,
+    "atkThunCorrection": 40,
+    "atkDarkCorrection": 40,
+    "atkType": 3,
+    "spAttribute": 0,
+    "selfTarget": 0,
+    "friendlyTarget": 0,
+    "opposeTarget": 1
+  },
+  "checks": {
+    "dispatch": [
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 30500,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000007777b73f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 30500,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000007777b73f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 30510,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000004444c43f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 30510,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000004444c43f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 32500,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000abaaea3f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 32500,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000abaaea3f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 32510,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000444404400101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 32510,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000444404400101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 30500,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 30510,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 32500,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 32510,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 30500,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000007777b73f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 30500,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000007777b73f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 30510,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000004444c43f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 30510,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff0000000000004444c43f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 32500,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000abaaea3f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 32500,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000abaaea3f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 32510,
+        "requests": [
+          {
+            "behavior": 600000098,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000444404400101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 32510,
+        "requests": [
+          {
+            "behavior": 600000099,
+            "active": true,
+            "instant": true,
+            "payload": "8200000000ff000000000000444404400101"
+          }
+        ]
+      }
+    ],
+    "emitter": [
+      {
+        "bullet": 30901145,
+        "fps": 30,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901145,
+        "fps": 60,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901145,
+        "fps": 120,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901146,
+        "fps": 30,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901146,
+        "fps": 60,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901146,
+        "fps": 120,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901147,
+        "fps": 30,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901147,
+        "fps": 60,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901147,
+        "fps": 120,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901148,
+        "fps": 30,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901148,
+        "fps": 60,
+        "shotFrames": [
+          0
+        ]
+      },
+      {
+        "bullet": 30901148,
+        "fps": 120,
+        "shotFrames": [
+          0
+        ]
+      }
+    ],
+    "chain": [
+      {
+        "bullet": 30901145,
+        "next": 30901146
+      },
+      {
+        "bullet": 30901146,
+        "next": -1
+      },
+      {
+        "bullet": 30901147,
+        "next": 30901148
+      },
+      {
+        "bullet": 30901148,
+        "next": -1
+      }
+    ],
+    "lifetime": [
+      {
+        "bullet": 30901146,
+        "fps": 30,
+        "initial": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "zeroDtUpdates": 60,
+        "expiryFrame": 11
+      },
+      {
+        "bullet": 30901146,
+        "fps": 60,
+        "initial": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "zeroDtUpdates": 60,
+        "expiryFrame": 21
+      },
+      {
+        "bullet": 30901146,
+        "fps": 120,
+        "initial": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "zeroDtUpdates": 60,
+        "expiryFrame": 42
+      },
+      {
+        "bullet": 30901148,
+        "fps": 30,
+        "initial": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "zeroDtUpdates": 60,
+        "expiryFrame": 11
+      },
+      {
+        "bullet": 30901148,
+        "fps": 60,
+        "initial": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "zeroDtUpdates": 60,
+        "expiryFrame": 21
+      },
+      {
+        "bullet": 30901148,
+        "fps": 120,
+        "initial": [
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "zeroDtUpdates": 60,
+        "expiryFrame": 42
+      }
+    ],
+    "radius": [
+      {
+        "bullet": 30901145,
+        "fraction": -0.5,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901145,
+        "fraction": 0,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901145,
+        "fraction": 0.5,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901145,
+        "fraction": 1,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901145,
+        "fraction": 2,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901146,
+        "fraction": -0.5,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901146,
+        "fraction": 0,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901146,
+        "fraction": 0.5,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901146,
+        "fraction": 1,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901146,
+        "fraction": 2,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901147,
+        "fraction": -0.5,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901147,
+        "fraction": 0,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901147,
+        "fraction": 0.5,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901147,
+        "fraction": 1,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901147,
+        "fraction": 2,
+        "radius": 0.5
+      },
+      {
+        "bullet": 30901148,
+        "fraction": -0.5,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901148,
+        "fraction": 0,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901148,
+        "fraction": 0.5,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901148,
+        "fraction": 1,
+        "radius": 3.0
+      },
+      {
+        "bullet": 30901148,
+        "fraction": 2,
+        "radius": 3.0
+      }
+    ],
+    "attackSetup": [
+      {
+        "bullet": 30901145,
+        "requests": [
+          {
+            "id": 690000001,
+            "radius": 0.5
+          }
+        ]
+      },
+      {
+        "bullet": 30901146,
+        "requests": [
+          {
+            "id": 600000089,
+            "radius": 3.0
+          }
+        ]
+      },
+      {
+        "bullet": 30901147,
+        "requests": [
+          {
+            "id": 690000001,
+            "radius": 0.5
+          }
+        ]
+      },
+      {
+        "bullet": 30901148,
+        "requests": [
+          {
+            "id": 690000001,
+            "radius": 3.0
+          }
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x34da00 scene/physics/visual fixture; no collision simulation",
+    "0x350410 scene/physics/visual fixture; no collision simulation",
+    "0x353df0 scene/physics/visual fixture; no collision simulation",
+    "0x355d20 scene/physics/visual fixture; no collision simulation",
+    "0x355fe0 scene/physics/visual fixture; no collision simulation",
+    "0x359c80 scene/physics/visual fixture; no collision simulation",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "26909A0 security cookie; preserve return register",
+    "3473D0 individual projectile creation recorder; native count and loop execute",
+    "34A890 attack-instance creation recorder; 34AD90/34B130 visual sinks and 34DC70 explicit false mode predicate",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3CED90 isolated actor context",
+    "E6FCB0 actual Behavior row lookup",
+    "E87800 actual Guardian Bullet lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "active phase, stage sequence and no-early-termination state virtuals supplied for lifetime checks",
+    "standalone emitter entry points; complete hit-child creation, scene placement, collision, attack-instance reuse and damage calculation not executed",
+    "synthetic active-phase virtuals do not request early termination",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "native": {
+    "animation": "27D0F10 / 27D0400 → 40CD80 → 668B30",
+    "emitter": "343280 → 347700 → 347250",
+    "childParameter": "362EB0",
+    "radius": "363600",
+    "attackSetup": "362C10 → 34A890",
+    "lifetime": "350DA0 → 34F130 → 355270"
+  },
+  "gameplayVerified": false
+}

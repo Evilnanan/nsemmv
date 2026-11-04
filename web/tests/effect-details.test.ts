@@ -42,6 +42,7 @@ import scholarAilment from "../../data/effect-scholar-ailment-evidence.json";
 import wylderFlame from "../../data/effect-wylder-flame-evidence.json";
 import revenantEnchant from "../../data/effect-revenant-enchant-evidence.json";
 import revenantFamily from "../../data/effect-revenant-family-evidence.json";
+import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -68,6 +69,23 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("uses the halberd shockwave radius rather than approach radius or attack lifetime", () => {
+    const detail = effectDetail(7011600)!;
+    expect(detail.blocks[0].values).toEqual([["旋风半径", "3 米"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.stacking).toBe("不可叠加");
+    for (const row of guardianHalberd.checks.dispatch)
+      expect(row.requests).toHaveLength(row.copies && row.enabled ? 1 : 0);
+    for (const row of guardianHalberd.checks.radius)
+      expect(row.radius).toBe([30901146, 30901148].includes(row.bullet) ? 3 : 0.5);
+    const attack = guardianHalberd.checks.attackSetup.find(r => r.bullet === 30901146)!;
+    expect(attack.requests).toEqual([{ id: 600000089, radius: 3 }]);
+    expect(JSON.stringify(detail)).not.toMatch(/0\.35|40%/);
+    expect(guardianHalberd.gameplayVerified).toBe(false);
+    expect(research.guardianHalberdEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guardian-halberd-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("resolves three independent family requests without turning trigger lifetime into summon duration", () => {
     const detail = effectDetail(7220210)!;
     expect(detail.blocks[0].values).toEqual([["召唤家人", "三名"]]);
@@ -1643,7 +1661,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(39);
-    expect(research.coverage.withNumericFields).toBe(553);
+    expect(research.coverage.withNumericFields).toBe(554);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
