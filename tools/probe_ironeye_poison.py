@@ -13,6 +13,7 @@ from pathlib import Path
 from unicorn.x86_const import *
 from native_effect_runtime import BASE, OBJ, STOP, Chain, Inputs, sha
 from native_attack_runtime import Type1Attack
+from native_ailment_runtime import Ailment
 from effect_behavior_graph import BehaviorGraph
 p=argparse.ArgumentParser(description=__doc__)
 for name in ('exe','extracted','assets','animations','behavior','output'):p.add_argument(name,type=Path)
@@ -61,71 +62,11 @@ for state,blender,selector,expected in ((32495,41924,60811,['a902_525000','a902_
     paths.append(dict(state=state,name=graph.name(state),blender=blender,children=children,binding=binding,clips=clips))
 assert graph.state('HurtDaggerAdditionalAttack')['animation']=='a902_520005'
 
-class Poison(Chain):
+class Poison(Ailment):
     def __init__(self, maximum=500, immune=False):
-        super().__init__(inputs)
-        self.q(OBJ + 0x6190, OBJ)
-        self.q(OBJ + 0x63a0, STOP + 0x200)  # owner virtual +1a0: no growth params
-        self.q(OBJ + 0x6410, STOP + 0x201)  # owner virtual +210: no damage exclusion
-        self.q(OBJ + 0x9008, OBJ + 0x6000)  # ailment controller owner
-        self.q(OBJ + 0xe008, OBJ + 0x6000)  # HP data owner
-        self.q(OBJ + 0x61b8, OBJ + 0xf000)
-        self.q(OBJ + 0xf008, OBJ + 0xf400)
-        # Queue/debug-singleton identities only. Original branch predicates run.
-        for address, value in [(BASE + 0x42d85f + 7 + 0x37f4662, OBJ + 0xe800),
-                               (BASE + 0x427bfa + 8 + 0x37e7736, OBJ + 0xf800)]:
-            self.mapped(self.u, 0, address, 8, 0, None)
-            self.q(address, value)
-        for off in (0x9010, 0x902c):
-            self.u.mem_write(OBJ + off, struct.pack('<i', maximum))
-        if immune: self.insert(9642)
-        self.qualify(); self.update(0)
-        self.stubs.add('empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance')
-
-    def hook(self, u, address, size, user):
-        pc = address - BASE
-        def finish(value=0):
-            u.reg_write(UC_X86_REG_RAX, value)
-            sp = u.reg_read(UC_X86_REG_RSP)
-            u.reg_write(UC_X86_REG_RIP, struct.unpack('<Q', u.mem_read(sp, 8))[0])
-            u.reg_write(UC_X86_REG_RSP, sp + 8)
-        if address in (STOP + 0x200, STOP + 0x201):
-            self.stubs.add('owner virtual +1a0 no resistance-growth params; +210 no damage exclusion')
-            finish()
-        elif pc == 0x6ada30:
-            self.stubs.add('6ADA30 ordinary resource-setter context')
-            finish()
-        elif pc == 0x3d4180:
-            self.stubs.add('3D4180 player identity')
-            finish(1)
-        elif pc in (0x4e78a0, 0x4e78c0, 0xdf24d0):
-            self.stubs.add(hex(pc) + ' network-message identity/transport only; no remote delivery')
-            finish()
-        else:
-            super().hook(u, address, size, user)
-
+        super().__init__(inputs, 0, maximum, immune)
     def apply_poison(self, scale=1):
-        # Mirror 3DB410: insert first, then run status processing. A true return
-        # removes that exact node immediately, without expiry replacement.
-        index = self.insert(7500201)
-        if index >= 0x80000000:return "existing"
-        self.q(OBJ + 0x9800, self.lookup[7500201])
-        self.u.mem_write(OBJ + 0x9900, struct.pack('<f', scale))
-        self.u.mem_write(OBJ + 0x9938, struct.pack('<f', 1))
-        rejected = bool(self.invoke(0x42d110, [OBJ + 0x9000, OBJ + 0x9800, OBJ + 0x9900]) & 255)
-        if rejected: self.invoke(0x505280, [OBJ, index])
-        return rejected
-
-    def remaining(self):
-        return struct.unpack('<i', self.u.mem_read(OBJ + 0x9010, 4))[0]
-
-    def hp_packet(self, maximum):
-        # No physical-owner invulnerability/remote state while aggregating. The
-        # actual effect list and native poisonDamageRate multiplier remain live.
-        self.q(OBJ + 0x10, 0)
-        self.invoke(0x506ec0, [OBJ, maximum, OBJ + 0x800, OBJ + 0x808, OBJ + 0x820, 0])
-        self.q(OBJ + 0x10, OBJ + 0x6000)
-        return list(struct.unpack('<7i', self.u.mem_read(OBJ + 0x820, 28)))
+        return self.apply(7500201, scale)
 
 
 checks=dict(dispatch=[],onset=[],damage=[],bonus=[],repeat=[],bonusTiming=[],lifetime=[]);stubs=set()

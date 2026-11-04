@@ -10,7 +10,7 @@ from native_effect_runtime import BASE, OBJ, STOP, Chain
 
 class Type1Attack(Chain):
     def __init__(self, inputs, behaviors, weapons, allowed):
-        super().__init__(inputs);self.requests=[]
+        super().__init__(inputs);self.requests=[];self.missing=[];self.errors=[]
         self.behaviors=behaviors;self.weapons=weapons;self.allowed=allowed
         for off,ptr in ((0x118,STOP+0x201),(0x190,STOP+0x200),(0x260,STOP+0x200),
                         (0x328,BASE+0x668b30),(0x320,STOP+0x201),(0x250,STOP+0x202),
@@ -35,7 +35,14 @@ class Type1Attack(Chain):
         elif pc==0xe6fcb0:
             self.stubs.add('E6FCB0 actual Behavior row lookup');id=u.reg_read(UC_X86_REG_RDX)&0xffffffff
             assert id in self.allowed
-            u.mem_write(OBJ+0xe400,self.behaviors[id]);self.q(u.reg_read(UC_X86_REG_RCX)+8,OBJ+0xe400);ret()
+            if id in self.behaviors:
+                u.mem_write(OBJ+0xe400,self.behaviors[id]);self.q(u.reg_read(UC_X86_REG_RCX)+8,OBJ+0xe400)
+            else:
+                self.missing.append(id);self.q(u.reg_read(UC_X86_REG_RCX)+8,0)
+            ret()
+        elif pc==0x416e30:
+            self.stubs.add('416E30 missing-Behavior diagnostic sink after native failed resolution')
+            self.errors.append(u.reg_read(UC_X86_REG_RDX));ret()
         elif pc==0x4341d0:
             self.stubs.add('4341D0 attack-instance request recorder; collision and attack construction are not simulated')
             sp=u.reg_read(UC_X86_REG_RSP)

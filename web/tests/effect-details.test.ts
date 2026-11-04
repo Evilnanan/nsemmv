@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
 import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
 import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
 import absorption from "../../data/effect-recluse-absorption-evidence.json";
@@ -36,6 +37,28 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("shows the referenced pull-attack bleed and treats its one-second lifetime as a lockout", () => {
+    const detail = effectDetail(6500000)!;
+    expect(detail.blocks.map(b => b.values)).toEqual([[["出血基础累积", "55"]], [["出血伤害", "最大血量的 12.5% + 100"]]]);
+    expect(detail.blocks.map(b => b.duration)).toEqual([null, null]);
+    expect(detail.blocks.map(b => b.interval)).toEqual([null, null]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.notes).toEqual(["该出血发作后约 1 秒内不重复触发。"]);
+    expect(wylderBleed.checks.onset.filter(r => r.immune).every(r => r.rejected && r.remaining === r.resistance)).toBe(true);
+    expect(wylderBleed.checks.damage.find(r => r.maximum === 10000)).toEqual({maximum: 10000, damage: -1350});
+    expect(wylderBleed.unresolved).toEqual({missingBehavior: 600000030, unreferencedLeaf: 7500001});
+    expect(detail.blocks.flatMap(b => [b.source, ...(b.branches ?? [])])).not.toContain(7500001);
+    for (const row of wylderBleed.checks.lifetime)
+      expect(row.damage).toEqual([{frame: 0, damage: -1350}]);
+    for (const row of wylderBleed.checks.repeat) {
+      expect(row.damage).toHaveLength(3);
+      expect(row.damage[1].frame / row.fps).toBeGreaterThanOrEqual(1);
+    }
+    expect(wylderBleed.gameplayVerified).toBe(false);
+    expect(research.wylderBleedEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-wylder-bleed-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates poison buildup, periodic damage and the poisoned-target bonus", () => {
     const detail = effectDetail(6500200)!;
     expect(detail.blocks.map(b => b.values)).toEqual([
@@ -751,7 +774,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(525);
+    expect(research.coverage.withNumericFields).toBe(526);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

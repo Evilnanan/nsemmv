@@ -193,6 +193,13 @@ assert ironeye_poison['exeSha256'] == evidence['exeSha256'] and not ironeye_pois
 assert ironeye_poison['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in ironeye_poison['checks'].items()} == dict(dispatch=32, onset=48, damage=7, bonus=15, repeat=5, bonusTiming=11, lifetime=3)
 
+wylder_bleed_path = ROOT / 'data/effect-wylder-bleed-evidence.json'
+wylder_bleed = json.loads(wylder_bleed_path.read_text())
+assert wylder_bleed['schema'] == 1 and wylder_bleed['regulationSha256'] == catalog['regulationSha256']
+assert wylder_bleed['exeSha256'] == evidence['exeSha256'] and not wylder_bleed['gameplayVerified']
+assert wylder_bleed['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in wylder_bleed['checks'].items()} == dict(dispatch=32, onset=48, damage=7, repeat=3, lifetime=3)
+
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -285,6 +292,8 @@ if args.extract:
                 needed.add(protection['leaf'])
             if root in tenacity['roots']:
                 needed.update(map(int, tenacity['rows']))
+            if root == wylder_bleed['root']:
+                needed.add(wylder_bleed['leaf'])
             if root == ironeye_poison['root']:
                 needed.update(ironeye_poison['leaves'])
             if root == raider_debuff['root']:
@@ -508,6 +517,7 @@ STACKING_RULES = {
     'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'executor-tenacity': ('不可叠加', '重复装备不增加效果', ['executor-tenacity']),
+    'wylder-bleed': ('不可叠加', '重复装备不增加累积或伤害', ['wylder-bleed']),
     'ironeye-poison': ('不可叠加', '重复装备不增加累积或伤害', ['ironeye-poison']),
     'raider-debuff': ('不可叠加', '再次命中刷新时长', ['raider-debuff']),
     'recluse-absorption': ('不可叠加', '同属性再次收集刷新时长；不同属性可同时生效', ['recluse-absorption']),
@@ -830,6 +840,16 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=20, interval=None)]
         notes.append('能力再次发动会追加攻击增益，倍率相乘、分别计时。')
         rule = 'executor-tenacity'
+    if wylder_bleed['root'] in effect['roots'].values():
+        bleed_row = source['spells']['7500002']
+        assert bleed_row['bloodAttackPower'] == 55 and bleed_row['effectEndurance'] == 1
+        assert bleed_row['changeHpRate'] == 12.5 and bleed_row['changeHpPoint'] == 100
+        blocks = [dict(source=7500002, phase='技艺拉拽攻击命中时', linked=True,
+                       values=[['出血基础累积', '55']], scope=[], restrictions=[], duration=None, interval=None),
+                  dict(source=7500002, phase='出血发作时', linked=True,
+                       values=[['出血伤害', '最大血量的 12.5% + 100']], scope=[], restrictions=[], duration=None, interval=None)]
+        notes.append('该出血发作后约 1 秒内不重复触发。')
+        rule = 'wylder-bleed'
     if ironeye_poison['root'] in effect['roots'].values():
         poison_row = source['spells']['7500201']
         assert poison_row['poizonAttackPower'] == 70 and poison_row['effectEndurance'] == 40
@@ -1110,9 +1130,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1130,6 +1150,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
     if rules[id] == 'executor-tenacity':
         questions.append('异常自然结束以外的解除入口、死亡／重载与完整角色投递时序，以及连续触发的实例容量上限')
+    if rules[id] == 'wylder-bleed':
+        questions.append('发射阶段引用缺失的 Behavior 600000030，60 点叶效果 7500001 暂无实际引用；需核对额外运行时路径')
+        questions.append('完整攻击／异常修正输入、碰撞与目标限制、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互')
     if rules[id] == 'ironeye-poison':
         questions.append('完整攻击构造／异常修正输入、命中发作当帧的效果队列顺序、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互')
     if rules[id] == 'raider-debuff':
@@ -1206,6 +1229,7 @@ research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
 research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['executorTenacityEvidenceSha256'] = hashlib.sha256(tenacity_path.read_bytes()).hexdigest()
+research['wylderBleedEvidenceSha256'] = hashlib.sha256(wylder_bleed_path.read_bytes()).hexdigest()
 research['ironeyePoisonEvidenceSha256'] = hashlib.sha256(ironeye_poison_path.read_bytes()).hexdigest()
 research['raiderDebuffEvidenceSha256'] = hashlib.sha256(raider_debuff_path.read_bytes()).hexdigest()
 research['recluseAbsorptionEvidenceSha256'] = hashlib.sha256(absorption_path.read_bytes()).hexdigest()

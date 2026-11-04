@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 596,
-    "withNumericFields": 525,
+    "withDetails": 597,
+    "withNumericFields": 526,
     "withMechanicsOnly": 36,
-    "nativeStacking": 413,
+    "nativeStacking": 414,
     "catalog": 2241,
-    "catalogWithDetails": 2039
+    "catalogWithDetails": 2040
   },
   "effects": {
     "0": {
@@ -4226,15 +4226,19 @@
       "states": [
         2035
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7500002,
+        7500002
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "wylder-bleed"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "发射阶段引用缺失的 Behavior 600000030，60 点叶效果 7500001 暂无实际引用；需核对额外运行时路径",
+        "完整攻击／异常修正输入、碰撞与目标限制、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49448,6 +49452,7 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "wylderBleedEvidenceSha256": "4dc87d62c3b6f2cbdd4a0807a6859cfeea7986475caa80d921c2f2741368b4cd",
   "ironeyePoisonEvidenceSha256": "d75e5ca2709a98406ed61156066a54a0e817df364dea592c9313788b3d0ea218",
   "raiderDebuffEvidenceSha256": "71d3b7d886dff4d745705310f20ee5fd4f7853c214bef80b329f0f243cca460c",
   "recluseAbsorptionEvidenceSha256": "f888a9f7106107f543a8f5a932cb890658b1c49f8604372d54a39d493e389ba1",
