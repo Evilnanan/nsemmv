@@ -1,0 +1,10300 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "magicParamSha256": "22eb8e1965a0390a0f1278bb1bc05f6a8517ef494811f63e31333ba0a2a83bd2",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "root": 7037000,
+  "leaf": 7037001,
+  "families": [
+    {
+      "magic": 6050,
+      "name": "火焰啊，赐予我力量！",
+      "motion": 31,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2431,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2431,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6060,
+      "name": "火焰的庇佑啊",
+      "motion": 31,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2431,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2431,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6250,
+      "name": "黑焰刀刃",
+      "motion": 32,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2432,
+          "animation": 45110,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.16666667,
+          "EndTime": 0.2,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45113,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.46666667,
+          "EndTime": 0.5,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45114,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.46666667,
+          "EndTime": 0.5,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45140,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.8,
+          "EndTime": 0.8333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45145,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.36666667,
+          "EndTime": 0.4,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45150,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.36666667,
+          "EndTime": 0.4,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45170,
+          "index": 4,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45171,
+          "index": 4,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45172,
+          "index": 4,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2432,
+          "animation": 45174,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6260,
+      "name": "黑焰庇佑",
+      "motion": 31,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2431,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2431,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6320,
+      "name": "血焰刀刃",
+      "motion": 112,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2512,
+          "animation": 45110,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.23333333,
+          "EndTime": 0.26666668,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6330,
+      "name": "黄金魔力防护",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6340,
+      "name": "黄金树庇佑",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6420,
+      "name": "紧急恢复",
+      "motion": 33,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2433,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2433,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6421,
+      "name": "恢复",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6422,
+      "name": "大恢复",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6423,
+      "name": "王之恢复",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6424,
+      "name": "黄金树恢复",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6430,
+      "name": "恩惠赐福",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6431,
+      "name": "黄金树恩惠",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6450,
+      "name": "火防护",
+      "motion": 33,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2433,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2433,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6460,
+      "name": "魔力防护",
+      "motion": 33,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2433,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2433,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6470,
+      "name": "雷防护",
+      "motion": 33,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2433,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2433,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6480,
+      "name": "圣防护",
+      "motion": 33,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2433,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2433,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 1,
+          "EndTime": 1.0333333,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6490,
+      "name": "王之圣防护",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6600,
+      "name": "黄金树立誓",
+      "motion": 35,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2435,
+          "animation": 45011,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1.0333333,
+          "EndTime": 1.0666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2435,
+          "animation": 45111,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1.0333333,
+          "EndTime": 1.0666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6610,
+      "name": "黄金树庇佑",
+      "motion": 35,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2435,
+          "animation": 45011,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1.0333333,
+          "EndTime": 1.0666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2435,
+          "animation": 45111,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1.0333333,
+          "EndTime": 1.0666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6620,
+      "name": "卡利亚恩惠",
+      "motion": 35,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2435,
+          "animation": 45011,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1.0333333,
+          "EndTime": 1.0666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2435,
+          "animation": 45111,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 1.0333333,
+          "EndTime": 1.0666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6740,
+      "name": "不变盾牌",
+      "motion": 49,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2449,
+          "animation": 45010,
+          "index": 10,
+          "Type": 64,
+          "StartTime": 0.36666667,
+          "EndTime": 0.4,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2449,
+          "animation": 45015,
+          "index": 16,
+          "Type": 64,
+          "StartTime": 0.36666667,
+          "EndTime": 0.4,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6760,
+      "name": "因果性原理",
+      "motion": 86,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2486,
+          "animation": 45010,
+          "index": 10,
+          "Type": 64,
+          "StartTime": 0.4,
+          "EndTime": 0.43333334,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2486,
+          "animation": 45110,
+          "index": 10,
+          "Type": 64,
+          "StartTime": 0.4,
+          "EndTime": 0.43333334,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6770,
+      "name": "圣律剑刃",
+      "motion": 104,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2504,
+          "animation": 45110,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.33333334,
+          "EndTime": 0.36666667,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6840,
+      "name": "野兽活力",
+      "motion": 31,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2431,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2431,
+          "animation": 45110,
+          "index": 1,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6960,
+      "name": "雷武器",
+      "motion": 59,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2459,
+          "animation": 45110,
+          "index": 4,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 6971,
+      "name": "龙雷庇佑",
+      "motion": 60,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2460,
+          "animation": 45010,
+          "index": 2,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2460,
+          "animation": 45110,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 7230,
+      "name": "毒刃",
+      "motion": 112,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2512,
+          "animation": 45110,
+          "index": 3,
+          "Type": 64,
+          "StartTime": 0.23333333,
+          "EndTime": 0.26666668,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 7330,
+      "name": "夏玻利利的嘶吼",
+      "motion": 90,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2490,
+          "animation": 45010,
+          "index": 14,
+          "Type": 64,
+          "StartTime": 0.56666666,
+          "EndTime": 0.6,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2490,
+          "animation": 45110,
+          "index": 14,
+          "Type": 64,
+          "StartTime": 0.56666666,
+          "EndTime": 0.6,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 7900,
+      "name": "火焰重罪",
+      "motion": 24,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2424,
+          "animation": 45010,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 1.4666667,
+          "EndTime": 1.5,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2424,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2424,
+          "animation": 45110,
+          "index": 5,
+          "Type": 64,
+          "StartTime": 1.4666667,
+          "EndTime": 1.5,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2424,
+          "animation": 45111,
+          "index": 4,
+          "Type": 64,
+          "StartTime": 0.5,
+          "EndTime": 0.53333336,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 7903,
+      "name": "黄金雷防护",
+      "motion": 34,
+      "slot": 9,
+      "effect": 7037001,
+      "events": [
+        {
+          "tae": 2434,
+          "animation": 45011,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        },
+        {
+          "tae": 2434,
+          "animation": 45111,
+          "index": 6,
+          "Type": 64,
+          "StartTime": 0.6666667,
+          "EndTime": 0.7,
+          "hex": "0B0000000000FFFF09000000FF000000"
+        }
+      ]
+    },
+    {
+      "magic": 2006400,
+      "name": "远方之恢复",
+      "motion": 179,
+      "slot": 9,
+      "effect": 7037001,
+      "events": []
+    }
+  ],
+  "unresolvedMotion": {
+    "magic": 2006400,
+    "tae": 2579,
+    "animations": [
+      {
+        "animation": 45010,
+        "headerType": "Standard",
+        "header": {
+          "Type": 0,
+          "IsLoopByDefault": false,
+          "ImportsHKX": false,
+          "AllowDelayLoad": false,
+          "ImportHKXSourceAnimID": -1
+        },
+        "events": [
+          {
+            "index": 2,
+            "Type": 64,
+            "StartTime": 0.6666667,
+            "EndTime": 0.7,
+            "hex": "500000000000FFFF00010000FF000000"
+          }
+        ]
+      },
+      {
+        "animation": 45110,
+        "headerType": "Standard",
+        "header": {
+          "Type": 0,
+          "IsLoopByDefault": false,
+          "ImportsHKX": false,
+          "AllowDelayLoad": false,
+          "ImportHKXSourceAnimID": -1
+        },
+        "events": [
+          {
+            "index": 1,
+            "Type": 64,
+            "StartTime": 0.6666667,
+            "EndTime": 0.7,
+            "hex": "500000000000FFFF00010000FF000000"
+          }
+        ]
+      }
+    ],
+    "bullets": {
+      "210640000": {
+        "HitBulletID": 210640001,
+        "intervalCreateBulletId": -1,
+        "spEffectIDForShooter": 0,
+        "spEffectId0": 0,
+        "spEffectId1": 0,
+        "spEffectId2": 0,
+        "spEffectId3": 0,
+        "spEffectId4": 0
+      },
+      "210640001": {
+        "HitBulletID": -1,
+        "intervalCreateBulletId": -1,
+        "spEffectIDForShooter": 0,
+        "spEffectId0": 21640000,
+        "spEffectId1": 21640001,
+        "spEffectId2": 474,
+        "spEffectId3": 0,
+        "spEffectId4": 0
+      }
+    }
+  },
+  "checks": {
+    "slots": [
+      {
+        "magic": 6050,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6060,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6250,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6260,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6320,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6330,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6340,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6420,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6421,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6422,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6423,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6424,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6430,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6431,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6450,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6460,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6470,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6480,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6490,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6600,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6610,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6620,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6740,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6760,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6770,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6840,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6960,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 6971,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 7230,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 7330,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 7900,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 7903,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": true
+      },
+      {
+        "magic": 2006400,
+        "category": 2,
+        "effect": 7037001,
+        "consumeType": 2,
+        "animationMatched": false
+      }
+    ],
+    "dispatch": [
+      {
+        "magic": 6050,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6050,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6050,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6060,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6060,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6060,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6060,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6060,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6060,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6060,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6060,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6060,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6060,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6060,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6060,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45113,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45113,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45113,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45113,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45113,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45113,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45114,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45114,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45114,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45114,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45114,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45114,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45140,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45140,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45140,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45140,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45140,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45140,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45145,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45145,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45145,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45145,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45145,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45145,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45150,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45150,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45150,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45150,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45150,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45150,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45170,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45170,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45170,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45170,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45170,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45170,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45171,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45171,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45171,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45171,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45171,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45171,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45172,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45172,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45172,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45172,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45172,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45172,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45174,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45174,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45174,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45174,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6250,
+        "animation": 45174,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6250,
+        "animation": 45174,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6260,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6260,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6260,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6260,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6260,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6260,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6260,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6260,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6260,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6260,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6260,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6260,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6320,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6320,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6320,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6320,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6320,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6320,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6330,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6330,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6330,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6330,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6330,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6330,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6330,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6330,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6330,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6330,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6330,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6330,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6340,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6340,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6340,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6340,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6340,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6340,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6340,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6340,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6340,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6340,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6340,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6340,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6420,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6420,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6420,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6420,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6420,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6420,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6420,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6420,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6420,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6420,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6420,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6420,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6421,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6421,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6421,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6421,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6421,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6421,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6421,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6421,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6421,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6421,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6421,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6421,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6422,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6422,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6422,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6422,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6422,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6422,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6422,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6422,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6422,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6422,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6422,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6422,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6423,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6423,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6423,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6423,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6423,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6423,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6423,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6423,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6423,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6423,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6423,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6423,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6424,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6424,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6424,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6424,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6424,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6424,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6424,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6424,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6424,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6424,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6424,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6424,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6430,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6430,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6430,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6430,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6430,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6430,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6430,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6430,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6430,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6430,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6430,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6430,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6431,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6431,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6431,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6431,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6431,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6431,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6431,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6431,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6431,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6431,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6431,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6431,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6450,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6450,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6450,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6450,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6450,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6450,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6450,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6450,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6450,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6450,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6450,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6450,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6460,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6460,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6460,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6460,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6460,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6460,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6460,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6460,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6460,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6460,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6460,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6460,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6470,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6470,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6470,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6470,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6470,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6470,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6470,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6470,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6470,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6470,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6470,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6470,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6480,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6480,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6480,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6480,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6480,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6480,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6480,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6480,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6480,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6480,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6480,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6480,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6490,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6490,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6490,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6490,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6490,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6490,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6490,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6490,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6490,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6490,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6490,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6490,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6600,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6600,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6600,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6600,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6600,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6600,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6600,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6600,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6600,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6600,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6600,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6600,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6610,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6610,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6610,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6610,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6610,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6610,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6610,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6610,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6610,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6610,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6610,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6610,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6620,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6620,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6620,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6620,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6620,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6620,
+        "animation": 45011,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6620,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6620,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6620,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6620,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6620,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6620,
+        "animation": 45111,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6740,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6740,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6740,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6740,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6740,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6740,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6740,
+        "animation": 45015,
+        "eventIndex": 16,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6740,
+        "animation": 45015,
+        "eventIndex": 16,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6740,
+        "animation": 45015,
+        "eventIndex": 16,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6740,
+        "animation": 45015,
+        "eventIndex": 16,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6740,
+        "animation": 45015,
+        "eventIndex": 16,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6740,
+        "animation": 45015,
+        "eventIndex": 16,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6760,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6760,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6760,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6760,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6760,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6760,
+        "animation": 45010,
+        "eventIndex": 10,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6760,
+        "animation": 45110,
+        "eventIndex": 10,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6760,
+        "animation": 45110,
+        "eventIndex": 10,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6760,
+        "animation": 45110,
+        "eventIndex": 10,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6760,
+        "animation": 45110,
+        "eventIndex": 10,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6760,
+        "animation": 45110,
+        "eventIndex": 10,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6760,
+        "animation": 45110,
+        "eventIndex": 10,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6770,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6770,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6770,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6770,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6770,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6770,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6840,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6840,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6840,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6840,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6840,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6840,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6840,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6840,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6840,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6840,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6840,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6840,
+        "animation": 45110,
+        "eventIndex": 1,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6960,
+        "animation": 45110,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6960,
+        "animation": 45110,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6960,
+        "animation": 45110,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6960,
+        "animation": 45110,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6960,
+        "animation": 45110,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6960,
+        "animation": 45110,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6971,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6971,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6971,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6971,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6971,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6971,
+        "animation": 45010,
+        "eventIndex": 2,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6971,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6971,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6971,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6971,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6971,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6971,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7230,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7230,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7230,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7230,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7230,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7230,
+        "animation": 45110,
+        "eventIndex": 3,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7330,
+        "animation": 45010,
+        "eventIndex": 14,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7330,
+        "animation": 45010,
+        "eventIndex": 14,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7330,
+        "animation": 45010,
+        "eventIndex": 14,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7330,
+        "animation": 45010,
+        "eventIndex": 14,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7330,
+        "animation": 45010,
+        "eventIndex": 14,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7330,
+        "animation": 45010,
+        "eventIndex": 14,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7330,
+        "animation": 45110,
+        "eventIndex": 14,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7330,
+        "animation": 45110,
+        "eventIndex": 14,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7330,
+        "animation": 45110,
+        "eventIndex": 14,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7330,
+        "animation": 45110,
+        "eventIndex": 14,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7330,
+        "animation": 45110,
+        "eventIndex": 14,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7330,
+        "animation": 45110,
+        "eventIndex": 14,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45010,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45010,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45010,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45010,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45010,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45010,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45110,
+        "eventIndex": 5,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45110,
+        "eventIndex": 5,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45110,
+        "eventIndex": 5,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45110,
+        "eventIndex": 5,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45110,
+        "eventIndex": 5,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45110,
+        "eventIndex": 5,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45111,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45111,
+        "eventIndex": 4,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45111,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45111,
+        "eventIndex": 4,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7900,
+        "animation": 45111,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7900,
+        "animation": 45111,
+        "eventIndex": 4,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7903,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7903,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7903,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7903,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7903,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7903,
+        "animation": 45011,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7903,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7903,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 0,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7903,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7903,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 7903,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 7903,
+        "animation": 45111,
+        "eventIndex": 6,
+        "copies": 3,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "lifecycle": [
+      {
+        "copies": 0,
+        "casts": [
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "rates": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "casts": [
+          0,
+          120
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "rates": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "casts": [
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "rates": [
+              1.19,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "tick": 241,
+            "rates": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "casts": [
+          0,
+          120
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "rates": [
+              1.19,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "tick": 361,
+            "rates": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "casts": [
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "rates": [
+              1.19,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "tick": 241,
+            "rates": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "casts": [
+          0,
+          120
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "rates": [
+              1.19,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "tick": 361,
+            "rates": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    ],
+    "attack": [
+      {
+        "kind": 0,
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "kind": 1,
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "kind": 2,
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "kind": 3,
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "kind": 4,
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "kind": 5,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "E926C0 actual Magic lookup; wrapper version 6",
+    "selected-spell virtual supplies requested Magic ID; no equipped-catalyst legality test",
+    "actor virtuals supply no weapon row, hand identity and neutral effect context / cost modifier",
+    "3CED90/4D1B20 neutral animation-owner identity",
+    "4B1B90 available emitter-owner identity",
+    "3C7F40 self-grant recorder; delivered before next qualification",
+    "384A30 terminal cost-commit recorder; native cost calculation is retained",
+    "3D74F0/B31990 action/HUD notifications omitted",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "E6D630 absent attack PARAM lookup for untagged attack getter",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false
+}

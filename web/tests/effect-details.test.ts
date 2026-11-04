@@ -19,10 +19,37 @@ import sacrifice from "../../data/effect-revenant-sacrifice-evidence.json";
 import gesture from "../../data/effect-gesture-madness-evidence.json";
 import guardianSkill from "../../data/effect-guardian-skill-evidence.json";
 import blade from "../../data/effect-executor-blade-evidence.json";
+import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("requires a prayer animation grant and keeps the unconnected distant-heal slot unresolved", () => {
+    const detail = effectDetail(7037000)!;
+    expect(detail.blocks[0].values).toEqual([["物理攻击倍率", "+19%"]]);
+    expect(detail.blocks[0].duration).toBe(60);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("再次触发刷新时长");
+    expect(detail.notes.join()).toContain("恢复类祷告和武器附魔也可触发");
+    expect(detail.notes.join()).toContain("远方之恢复的触发待确认");
+    expect(prayer.families.filter((f) => !f.events.length).map((f) => f.magic)).toEqual([2006400]);
+    for (const c of prayer.checks.dispatch) {
+      expect(c.grants).toEqual(c.active ? [7037001] : []);
+      expect(c.rates[0]).toBeCloseTo(c.active && c.copies ? 1.19 : 1);
+      expect(c.rates.slice(1)).toEqual([1, 1, 1, 1]);
+    }
+    for (const c of prayer.checks.lifecycle) {
+      expect(c.changes).toHaveLength(c.copies ? 2 : 1);
+      if (c.copies) {
+        expect(c.changes[0].rates).toEqual([1.19, 1, 1, 1, 1]);
+        expect(Math.abs(c.changes[1].tick * c.dt - (Math.max(...c.casts) * c.dt + 60))).toBeLessThanOrEqual(.5);
+      }
+    }
+    expect(research.undertakerPrayerEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-undertaker-prayer-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(prayer.gameplayVerified).toBe(false);
+  });
   it("restricts Executor's bonus to tagged skill attacks and keeps the hit penalty after sheathing", () => {
     const detail = effectDetail(7034400)!;
     expect(detail.blocks.map((b) => b.values)).toEqual([
@@ -426,7 +453,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(504);
+    expect(research.coverage.withNumericFields).toBe(505);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
