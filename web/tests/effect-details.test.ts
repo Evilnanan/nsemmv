@@ -42,6 +42,7 @@ import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
 import attackNullify from "../../data/effect-attack-nullify-evidence.json";
+import rally from "../../data/effect-rally-recovery-evidence.json";
 import ailmentGrowth from "../../data/effect-ailment-growth-evidence.json";
 import frostStealth from "../../data/effect-frost-stealth-evidence.json";
 import duchessStealth from "../../data/effect-duchess-stealth-evidence.json";
@@ -62,6 +63,45 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates rally recovery amounts, grade stacking and the recoverable HP window", () => {
+    for (const [id, bonus] of [[7005600, null], [6005600, "+25%"], [6005601, "+35%"], [9090200, "+35%"]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe(id === 9090200 ? "可叠加" : "不同等级可叠加");
+      expect(detail.blocks[0].values).toEqual([
+        ["可追回血量", "通常为本次损失的 100%"],
+        ["保留时间", "通常 4 秒"],
+        ["可追回血量消退速度", "每秒最大血量的 100%"],
+        ...(bonus ? [["攻击回血量", bonus]] : []),
+      ]);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.notes.join()).toContain("不按造成伤害的比例计算");
+      expect(detail.notes.join()).toContain("再次受损可能使先前未追回的血量提前消退");
+    }
+    for (const row of rally.checks.recovery) {
+      expect(row.amount).toBe(Math.trunc(Math.fround(row.base * row.rate)));
+      expect(row.after.hp).toBe(700 + (row.ids.length ? Math.min(300, row.amount) : 0));
+      expect(row.queued.timer).toBe(row.ids.length ? 4 : 0);
+    }
+    const combined = rally.checks.recovery.find(r => r.ids.join() === "7005600,7005601,7005602" && r.attack === 0)!;
+    const plusTwo = rally.checks.recovery.find(r => r.ids.join() === "7005602,7005602,7005602" && r.attack === 0)!;
+    expect(combined.amount).toBe(59);
+    expect(plusTwo.amount).toBe(47);
+    for (const row of rally.checks.pool) {
+      expect(row.after.hp).toBe(1000 - row.damage);
+      expect(row.after.pool).toBe(row.ids.length ? row.damage * row.packet.rate : 0);
+      expect(row.after.timer).toBe(row.after.pool ? 4 * row.packet.time : 0);
+    }
+    for (const row of rally.checks.timeline) {
+      expect(Math.abs(row.decayAt - 4)).toBeLessThanOrEqual(1.01 / row.fps);
+      expect(Math.abs(row.emptyAt - (4 + 300 / row.maximum))).toBeLessThanOrEqual(2.01 / row.fps);
+    }
+    expect(rally.checks.controls.find(r => "name" in r)?.after.hp).toBe(0);
+    expect(rally.gameplayVerified).toBe(false);
+    expect(research.rallyRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-rally-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("distinguishes attack nullification from immunity to attached ailments", () => {
     const detail = effectDetail(7037800)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1474,7 +1514,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(546);
+    expect(research.coverage.withNumericFields).toBe(547);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

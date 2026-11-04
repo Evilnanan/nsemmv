@@ -1,0 +1,6697 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "attackParamSha256": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+  "npcAttackParamSha256": "700575340ff58463201520169fa0193db8e963f93e9e686eafd5b4cdec8f87a1",
+  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "effects": {
+    "7005600": 7005600,
+    "6005600": 7005601,
+    "6005601": 7005602,
+    "9090200": 8981200
+  },
+  "rows": {
+    "7005600": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": -1,
+      "effectTargetAI": 0,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 0,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 0,
+      "effectTargetLive": 0,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 0,
+      "effectTargetSelf": 0,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 449,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7005601": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": -1,
+      "effectTargetAI": 0,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 0,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 0,
+      "effectTargetLive": 0,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 0,
+      "effectTargetSelf": 0,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1.25,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 449,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "7005602": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": -1,
+      "effectTargetAI": 0,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 0,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 0,
+      "effectTargetLive": 0,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 0,
+      "effectTargetSelf": 0,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1.350000023841858,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 449,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    },
+    "8981200": {
+      "accumuOverFireId": -1,
+      "accumuOverVal": -1,
+      "accumuUnderFireId": -1,
+      "accumuUnderVal": -1,
+      "accumuVal": 0,
+      "addAwarePointCorrectValue_forMe": 0,
+      "addAwarePointCorrectValue_forTarget": 0,
+      "addBehaviorJudgeId_add": 0,
+      "addBehaviorJudgeId_condition": -1,
+      "addDeceasedLv": 0,
+      "addDexterityStatus": 0,
+      "addEndureStatus": 0,
+      "addFaithStatus": 0,
+      "addFootEffectSfxId": -1,
+      "additionalCharacterSkillUse": 0,
+      "addLifeForceStatus": 0,
+      "addLuckStatus": 0,
+      "addMagicStatus": 0,
+      "addStrengthStatus": 0,
+      "addVitalityStatus": 0,
+      "addWillpowerStatus": 0,
+      "analyzeAcquire_effectId": -1,
+      "analyzeSelfLevel1_effectId": -1,
+      "analyzeSelfLevel2_effectId": -1,
+      "analyzeSelfLevel3_effectId": -1,
+      "animIdOffset": -1,
+      "antiMagicIgnore": 0,
+      "AppearAiSoundId": 0,
+      "applyIdOnGetSoul": 0,
+      "applyIdOnKillSp": -1,
+      "applyPartsGroup": 0,
+      "arrowBehaviorOffset": 0,
+      "artsConsumptionRate": 1,
+      "atkAttribute": 254,
+      "atkFlickPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "bAdjustAgilityAblity": 0,
+      "bAdjustFaithAblity": 0,
+      "bAdjustMagicAblity": 0,
+      "bAdjustStrengthAblity": 0,
+      "bCurrHPIndependeMaxHP": 0,
+      "behaviorId": -1,
+      "bGameClearBonus": 0,
+      "bloodAttackPower": 0,
+      "bloodDamageRate": 100,
+      "bloodDefDamageRate": 1,
+      "bloodInflictRate": 1,
+      "blowAttackPower": 0,
+      "blowAttackPowerRate": 1,
+      "blowAttackRate": 1,
+      "blowDamageCutRate": 1,
+      "bowDistRate": 0,
+      "categoryPriority": 0,
+      "changeBloodResistPoint": 0,
+      "changeCurseResistPoint": 0,
+      "changeDiseaseResistPoint": 0,
+      "changeFreezeResistPoint": 0,
+      "changeGuardAngle": -1,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeHpEstusFlaskPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpPoint": 0,
+      "changeHpRate": 0,
+      "changeMadnessResistPoint": 0,
+      "changeMagicSlot": 0,
+      "changeMiracleSlot": 0,
+      "changeMpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskPoint": 0,
+      "changeMpEstusFlaskRate": 0,
+      "changeMpPoint": 0,
+      "changeMpRate": 0,
+      "changePoisonResistPoint": 0,
+      "changeSaPoint": 0,
+      "changeSaRecoveryVelocity": 1,
+      "changeSleepResistPoint": 0,
+      "changeStaminaPoint": 0,
+      "changeStaminaRate": 0,
+      "changeSuperArmorPoint": 0,
+      "changeTeamType": -1,
+      "characterSkillCooldownReduction": 1,
+      "chrProxyHeightRate": 1,
+      "clearSoul": 0,
+      "clearTarget": 0,
+      "conditionHp": -1,
+      "conditionHpRate": -1,
+      "conditionStamina": -1,
+      "consumeStaminaRate": 1,
+      "contractLifeRate": 1,
+      "corrosionIgnore": 0,
+      "currentHealthAttackRate": 0,
+      "curseAttackPower": 0,
+      "curseDefDamageRate": 1,
+      "curseInflictRate": 1,
+      "cycleOccurrenceSpEffectId": -1,
+      "darkAttackPower": 0,
+      "darkAttackPowerRate": 1,
+      "darkAttackRate": 1,
+      "darkDamageCutRate": 1,
+      "darkDiffenceRate": 1,
+      "dedupeAccumuTrigger": 0,
+      "defEnemyDmgCorrectRate_Dark": 1,
+      "defEnemyDmgCorrectRate_Fire": 1,
+      "defEnemyDmgCorrectRate_Magic": 1,
+      "defEnemyDmgCorrectRate_Physics": 1,
+      "defEnemyDmgCorrectRate_Thunder": 1,
+      "defFlickPower": 0,
+      "defObjDmgCorrectRate": 1,
+      "defObjectAttackPowerRate": 1,
+      "deleteCriteriaDamage": 0,
+      "dexterityCancelSystemOnlyAddDexterity": 0,
+      "disableBlood": 0,
+      "disableCurse": 0,
+      "disableDisease": 0,
+      "disableFreeze": 0,
+      "disableMadness": 0,
+      "disablePoison": 0,
+      "disableSleep": 0,
+      "diseaseAttackPower": 0,
+      "diseaseDamageRate": 100,
+      "diseaseDefDamageRate": 1,
+      "diseaseInflictRate": 1,
+      "dispDartDebuffStacks": 0,
+      "dispIconNonactive": 0,
+      "displayIconForPermamentEffect": 0,
+      "dmgLv_BlowLL": 0,
+      "dmgLv_BlowM": 0,
+      "dmgLv_BlowS": 0,
+      "dmgLv_Breath": 0,
+      "dmgLv_L": 0,
+      "dmgLv_M": 0,
+      "dmgLv_Min": 0,
+      "dmgLv_None": 0,
+      "dmgLv_Push": 0,
+      "dmgLv_S": 0,
+      "dmgLv_Strike": 0,
+      "dmgLv_Uppercut": 0,
+      "dmypolyId": -1,
+      "dontDeleteOnDead": 0,
+      "effectEndDeleteDecalGroupId": -1,
+      "effectEndurance": -1,
+      "effectTargetAI": 0,
+      "effectTargetAttacker": 0,
+      "effectTargetEnemy": 0,
+      "effectTargetFriend": 0,
+      "effectTargetFriendlyTarget": 0,
+      "effectTargetGhost": 0,
+      "effectTargetLive": 0,
+      "effectTargetOpposeTarget": 0,
+      "effectTargetPcDeceased": 0,
+      "effectTargetPcHorse": 0,
+      "effectTargetPlayer": 0,
+      "effectTargetSelf": 0,
+      "effectTargetSelfTarget": 1,
+      "enableCharm": 0,
+      "enableLifeTime": 0,
+      "enemyStateInfoTrigger": 0,
+      "eraseOnBonfireRecover": 0,
+      "extendLifeRate": 1,
+      "eye_angX": 0,
+      "eye_angY": 0,
+      "fakeTargetIgnore": 0,
+      "fakeTargetIgnoreAjin": 0,
+      "fakeTargetIgnoreAnimal": 0,
+      "fakeTargetIgnoreMirageArts": 0,
+      "fakeTargetIgnoreUndead": 0,
+      "fallDamageRate": 1,
+      "fireAttackPower": 0,
+      "fireAttackPowerRate": 1,
+      "fireAttackRate": 1,
+      "fireDamageCutRate": 1,
+      "fireDiffence": 1,
+      "fireDiffenceRate": 1,
+      "flickDamageCutRate": 0,
+      "freezeAttackPower": 0,
+      "freezeDamageRate": 100,
+      "freezeDefDamageRate": 1,
+      "frostInflictRate": 1,
+      "goodsConsumptionRate": 1,
+      "grabityIgnore": 0,
+      "guardDefFlickPowerRate": 1,
+      "guardStaminaCutRate": 1,
+      "guardStaminaMult": 1,
+      "hasTarget": 0,
+      "haveSoulRate": 1,
+      "hearingAiSoundLevel": -1,
+      "hearingSearchAdd": 0,
+      "hearingSearchCutIgnore": 0,
+      "hearingSearchEnemyAdd": 0,
+      "hearingSearchEnemyRate": 1,
+      "hearingSearchRate": 1,
+      "heroPointDamage": 0,
+      "heroStatusId": -1,
+      "heroStatusModifier": -1,
+      "hpRecoverRate": 1,
+      "hugeEnemyPickupHeightOverwrite": 0,
+      "iconId": -1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "isCheckAboveShadowTest": 0,
+      "isContractSpEffectLife": 0,
+      "isDestinedDeathHpMult": 0,
+      "isDisableNetSync": 0,
+      "isExtendSpEffectLife": 0,
+      "isHpBurnEffect": 0,
+      "isIgnoreNoDamage": 0,
+      "isPeriodicEffect": 0,
+      "isStopSearchedNotify": 0,
+      "isSubSaUseMultiplayCorrect": 1,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "isWaitModeDelete": 0,
+      "itemDropRate": 0,
+      "lifeReductionRate": 1,
+      "lifeReductionType": 0,
+      "lookAtTargetPosOffset": 0,
+      "madnessAttackPower": 0,
+      "madnessDamageRate": 100,
+      "madnessDefDamageRate": 1,
+      "madnessInflictRate": 1,
+      "magicAttackPower": 0,
+      "magicAttackPowerRate": 1,
+      "magicAttackRate": 1,
+      "magicConsumptionRate": 1,
+      "magicDamageCutRate": 1,
+      "magicDiffence": 1,
+      "magicDiffenceRate": 1,
+      "magicEffectTimeChange": 0,
+      "magicSubCategoryChange1": 0,
+      "magicSubCategoryChange2": 0,
+      "magicSubCategoryChange3": 0,
+      "magParamChange": 0,
+      "maxHpRate": 1,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "miracleConsumptionRate": 1,
+      "miracleParamChange": 0,
+      "modifyPlayerLevel": 0,
+      "motionInterval": 0,
+      "moveType": 0,
+      "mpRecoverChangeSpeed": 0,
+      "necromancyActivationSpEffectId": -1,
+      "neutralAttackPower": 0,
+      "neutralAttackPowerRate": 1,
+      "neutralAttackRate": 1,
+      "neutralDamageCutRate": 1,
+      "noDead": 0,
+      "NoGuardDamageRate": 1,
+      "overwrite_BackHome_LookTargetDist": 0,
+      "overwrite_backhomeBattleDist": 0,
+      "overwrite_backhomeDist": 0,
+      "overwrite_maxBackhomeDist": 0,
+      "physicsAttackPower": 0,
+      "physicsAttackPowerRate": 1,
+      "physicsAttackRate": 1,
+      "physicsDiffence": 1,
+      "physicsDiffenceRate": 1,
+      "playerHandValue": 3,
+      "poisonDamageRate": 100,
+      "poisonDefDamageRate": 1,
+      "poisonInflictRate": 1,
+      "poizonAttackPower": 0,
+      "quaternaryIconId": -1,
+      "rainDamageCorrection": 1,
+      "randomChanceValue": 0,
+      "rayCastPassedTime": -1,
+      "regainGaugeDamage": 0,
+      "regainRate": 1.350000023841858,
+      "registBloodChangeRate": 1,
+      "registCurseChangeRate": 1,
+      "registDiseaseChangeRate": 1,
+      "registFreezeChangeRate": 1,
+      "registMadnessChangeRate": 1,
+      "registPoizonChangeRate": 1,
+      "registSleepChangeRate": 1,
+      "repAtkDmgLv": 0,
+      "replaceSpEffectId": -1,
+      "replanningOnFire": 0,
+      "requestBlackSOS": 0,
+      "requestForceJoinBlackSOS": 0,
+      "requestForceJoinBlackSOS_B": 0,
+      "requestKickSession": 0,
+      "requestLeaveColiseumSession": 0,
+      "requestLeaveSession": 0,
+      "requestNpcInveda": 0,
+      "requestSOS": 0,
+      "restageAttackRate": -1,
+      "revenantFamily_spEffectId_1": -1,
+      "revenantFamily_spEffectId_2": -1,
+      "revenantFamily_spEffectId_3": -1,
+      "runeDiscountValue": 0,
+      "saAttackPowerRate": 1,
+      "saReceiveDamageRate": 1,
+      "saveCategory": -1,
+      "secondaryIconId": -1,
+      "shamanConsumptionRate": 1,
+      "shamanParamChange": 0,
+      "sightSearchAdd": 0,
+      "sightSearchCutIgnore": 0,
+      "sightSearchEnemyAdd": 0,
+      "sightSearchEnemyRate": 1,
+      "sightSearchRate": 1,
+      "slashAttackPower": 0,
+      "slashAttackPowerRate": 1,
+      "slashAttackRate": 1,
+      "slashDamageCutRate": 1,
+      "sleepAttackPower": 0,
+      "sleepDamageRate": 100,
+      "sleepDefDamageRate": 1,
+      "sleepInflictRate": 1,
+      "soul": 0,
+      "soulRate": 1,
+      "spAttribute": 254,
+      "spAttributeVariationValue": 0,
+      "spCategory": 20,
+      "spEffectTextId_1": -1,
+      "spEffectTextId_2": -1,
+      "spEffectTextId_3": -1,
+      "spEffectTextId_4": -1,
+      "staminaAttackRate": 1,
+      "staminaRecoverChangeSpeed": 0,
+      "startGoodsId": -1,
+      "startingItemAmount": 0,
+      "startMagicId": -1,
+      "startSwordArtsId": -1,
+      "stateInfo": 449,
+      "subSa": -1,
+      "subSaBonusMax": -1,
+      "subSaBonusRate_Bleed": 1,
+      "subSaBonusRate_Blight": 1,
+      "subSaBonusRate_Fire": 1,
+      "subSaBonusRate_Frostbite": 1,
+      "subSaBonusRate_Holy": 1,
+      "subSaBonusRate_Lightning": 1,
+      "subSaBonusRate_Madness": 1,
+      "subSaBonusRate_Magic": 1,
+      "subSaBonusRate_Poison": 1,
+      "subSaBonusRate_ScarletRot": 1,
+      "subSaBonusRate_Sleep": 1,
+      "syncTotalHp": 1,
+      "targetPriority": 0,
+      "teamOffenseEffectivity": -1,
+      "tertiaryIconId": -1,
+      "throwAttackParamChange": 0,
+      "throwCondition": 0,
+      "thrustAttackPower": 0,
+      "thrustAttackPowerRate": 1,
+      "thrustAttackRate": 1,
+      "thrustDamageCutRate": 1,
+      "thunderAttackPower": 0,
+      "thunderAttackPowerRate": 1,
+      "thunderAttackRate": 1,
+      "thunderDamageCutRate": 1,
+      "thunderDiffence": 1,
+      "thunderDiffenceRate": 1,
+      "toughnessDamageCutRate": 1,
+      "triggerAttachedWeapon": 0,
+      "triggerEffectOnKnockback_unk": -1,
+      "triggerOnWepType": 0,
+      "ultimateArtDuration": 0,
+      "ultimateArtGauge": 0,
+      "ultimateArtGaugeChargeRate": 1,
+      "ultimateArtGaugeRate": 1,
+      "ultimateArtGaugeRecovery": 0,
+      "unk_00": 0,
+      "unk_04": -1,
+      "unk_05": 0,
+      "unknown_0x352_6": 1,
+      "unknown_239a": 0,
+      "unknown_239b": 0,
+      "unknown_239c": 0,
+      "unknown_239e": 0,
+      "unknown_239f": 0,
+      "unknown_239g": 0,
+      "unknown_239h": 0,
+      "unknown_240": -1,
+      "unknown_241a": 0,
+      "unknown_241b_1": 1,
+      "unknown_241b_4": 0,
+      "unknown_241b_6": 0,
+      "unknown_241b_8": 0,
+      "unknown_241d": 0,
+      "value_Magnification": 1,
+      "vfxId": -1,
+      "vfxId1": -1,
+      "vfxId2": -1,
+      "vfxId3": -1,
+      "vfxId4": -1,
+      "vfxId5": -1,
+      "vfxId6": -1,
+      "vfxId7": -1,
+      "vitalSpotChangeRate": 1,
+      "vowType0": 1,
+      "vowType1": 1,
+      "vowType10": 1,
+      "vowType11": 1,
+      "vowType12": 1,
+      "vowType13": 1,
+      "vowType14": 1,
+      "vowType15": 1,
+      "vowType2": 1,
+      "vowType3": 1,
+      "vowType4": 1,
+      "vowType5": 1,
+      "vowType6": 1,
+      "vowType7": 1,
+      "vowType8": 1,
+      "vowType9": 1,
+      "weakDmgRateA": 1,
+      "weakDmgRateB": 1,
+      "weakDmgRateC": 1,
+      "weakDmgRateD": 1,
+      "weakDmgRateE": 1,
+      "weakDmgRateF": 1,
+      "weakPointValue": 0,
+      "weaponTypeDiscovery": -1,
+      "wepParamChange": 0,
+      "wepTypeTrigger": 1,
+      "wepTypeTriggerCount": 0,
+      "wetConditionDepth": 0
+    }
+  },
+  "attackFields": {
+    "0": {
+      "wepRegainHpScale": 100,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90240": {
+      "wepRegainHpScale": 105,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "800130": {
+      "wepRegainHpScale": 85,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "1103105": {
+      "wepRegainHpScale": 160,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90500": {
+      "wepRegainHpScale": 1000,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90630": {
+      "wepRegainHpScale": 30,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "500105": {
+      "wepRegainHpScale": 190,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "400010": {
+      "wepRegainHpScale": 102,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "900105": {
+      "wepRegainHpScale": 145,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "1103115": {
+      "wepRegainHpScale": 170,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90130": {
+      "wepRegainHpScale": 90,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "302100": {
+      "wepRegainHpScale": 125,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "400020": {
+      "wepRegainHpScale": 106,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "300000790": {
+      "wepRegainHpScale": 0,
+      "atkRegainHp": 140,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "302105": {
+      "wepRegainHpScale": 200,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "100635": {
+      "wepRegainHpScale": 180,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "900380": {
+      "wepRegainHpScale": 250,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "300000795": {
+      "wepRegainHpScale": 0,
+      "atkRegainHp": 70,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "3212705": {
+      "wepRegainHpScale": 100,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": 1
+    },
+    "100906": {
+      "wepRegainHpScale": 50,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90030": {
+      "wepRegainHpScale": 110,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90160": {
+      "wepRegainHpScale": 140,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "150320": {
+      "wepRegainHpScale": 55,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "210782001": {
+      "wepRegainHpScale": 100,
+      "atkRegainHp": 100,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "820": {
+      "wepRegainHpScale": 0,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "3300020": {
+      "wepRegainHpScale": 104,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "300000953": {
+      "wepRegainHpScale": 70,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "300000832": {
+      "wepRegainHpScale": 5,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90050": {
+      "wepRegainHpScale": 115,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "500040": {
+      "wepRegainHpScale": 107,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "5002825": {
+      "wepRegainHpScale": 40,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "30000841": {
+      "wepRegainHpScale": 0,
+      "atkRegainHp": 40,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "610125": {
+      "wepRegainHpScale": 10,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "302301901": {
+      "wepRegainHpScale": 35,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90325": {
+      "wepRegainHpScale": 120,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90330": {
+      "wepRegainHpScale": 80,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90203": {
+      "wepRegainHpScale": 20,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "880000890": {
+      "wepRegainHpScale": 38,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "1612000": {
+      "wepRegainHpScale": 63,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "150115": {
+      "wepRegainHpScale": 75,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "2001900": {
+      "wepRegainHpScale": 92,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90100": {
+      "wepRegainHpScale": 130,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "90105": {
+      "wepRegainHpScale": 150,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "318330": {
+      "wepRegainHpScale": 95,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "880000891": {
+      "wepRegainHpScale": 18,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "802300": {
+      "wepRegainHpScale": 135,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    }
+  },
+  "npcFields": {
+    "0": {
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": -1
+    },
+    "7000000": {
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 0,
+      "regainableSlotId": -1
+    },
+    "8000015": {
+      "regainableTimeScale": 0,
+      "regainableHpRateScale": 0,
+      "regainableSlotId": -1
+    }
+  },
+  "weaponFields": {
+    "1000000": 35,
+    "5000000": 40,
+    "3000000": 60
+  },
+  "preservationSeconds": 4,
+  "decayMaxHpPerSecond": 1,
+  "checks": {
+    "builders": [
+      {
+        "attack": 0,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 0,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 40.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 0,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 60.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 820,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 0.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 820,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 0.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 820,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 0.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90030,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 38.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90030,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 44.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90030,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 66.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90050,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 40.25,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90050,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 46.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90050,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 69.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90100,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 45.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90100,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 52.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90100,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 78.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90105,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 52.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90105,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 60.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90105,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 90.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90130,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 31.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90130,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 36.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90130,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 54.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90160,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 49.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90160,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 56.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90160,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 84.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90203,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 6.999999523162842,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90203,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 7.999999523162842,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90203,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 11.999999046325684,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90240,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 36.75,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90240,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 42.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90240,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 62.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90325,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 41.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90325,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 47.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90325,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 71.99999237060547,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90330,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 27.999998092651367,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90330,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 31.999998092651367,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90330,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 47.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90500,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 350.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90500,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 400.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90500,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 600.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90630,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 10.499999046325684,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90630,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 11.999999046325684,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 90630,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 17.999998092651367,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 100635,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 63.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 100635,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 72.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 100635,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 108.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 100906,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 17.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 100906,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 20.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 100906,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 30.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 150115,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 26.25,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 150115,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 30.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 150115,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 45.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 150320,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 19.25,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 150320,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 22.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 150320,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 33.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302100,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 43.75,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302100,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 50.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302100,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 75.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302105,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 70.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302105,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 80.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302105,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 120.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 318330,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 33.25,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 318330,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 38.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 318330,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 57.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 400010,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.70000076293945,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 400010,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 40.79999923706055,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 400010,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 61.19999694824219,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 400020,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 37.099998474121094,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 400020,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 42.39999771118164,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 400020,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 63.599998474121094,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 500040,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 37.44999694824219,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 500040,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 42.79999542236328,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 500040,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 64.19999694824219,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 500105,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 66.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 500105,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 76.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 500105,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 114.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 610125,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 3.499999761581421,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 610125,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 3.999999761581421,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 610125,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 5.999999523162842,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 800130,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 29.749998092651367,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 800130,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 34.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 800130,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 50.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 802300,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 47.25,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 802300,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 54.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 802300,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 81.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 900105,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 50.749996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 900105,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 57.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 900105,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 86.99999237060547,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 900380,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 87.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 900380,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 100.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 900380,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 150.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1103105,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 55.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1103105,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 63.999996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1103105,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 95.99999237060547,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1103115,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 59.499996185302734,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1103115,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 68.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1103115,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 101.99999237060547,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1612000,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 22.049999237060547,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1612000,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 25.200000762939453,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 1612000,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 37.79999923706055,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 2001900,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 32.19999694824219,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 2001900,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 36.79999923706055,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 2001900,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 55.19999694824219,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 3300020,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 36.39999771118164,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 3300020,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 41.599998474121094,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 3300020,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 62.39999771118164,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 5002825,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 13.999999046325684,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 5002825,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 15.999999046325684,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 5002825,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 23.999998092651367,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 30000841,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 40.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 30000841,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 40.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 30000841,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 40.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 210782001,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 135.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 210782001,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 140.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 210782001,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 160.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000790,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 140.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000790,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 140.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000790,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 140.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000795,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 70.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000795,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 70.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000795,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 70.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000832,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 1.7499998807907104,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000832,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 1.9999998807907104,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000832,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 2.999999761581421,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000953,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 24.5,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000953,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 28.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 300000953,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 42.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302301901,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 12.25,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302301901,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 14.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 302301901,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 21.0,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 880000890,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 13.300000190734863,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 880000890,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 15.199999809265137,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 880000890,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 22.799999237060547,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 880000891,
+        "weapon": 1000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 6.299999713897705,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 880000891,
+        "weapon": 5000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 7.199999809265137,
+          "slot": -1
+        }
+      },
+      {
+        "attack": 880000891,
+        "weapon": 3000000,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 10.799999237060547,
+          "slot": -1
+        }
+      }
+    ],
+    "recovery": [
+      {
+        "ids": [],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1,
+        "amount": 35,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1,
+        "amount": 35,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1,
+        "amount": 135,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1,
+        "amount": 135,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1,
+        "amount": 140,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1,
+        "amount": 140,
+        "queued": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.0,
+        "amount": 35,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 35.0
+        },
+        "after": {
+          "hp": 735,
+          "pool": 265.0,
+          "protected": 265.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.0,
+        "amount": 35,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 35.0
+        },
+        "after": {
+          "hp": 735,
+          "pool": 265.0,
+          "protected": 265.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.0,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.0,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.0,
+        "amount": 135,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 135.0
+        },
+        "after": {
+          "hp": 835,
+          "pool": 165.0,
+          "protected": 165.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.0,
+        "amount": 135,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 135.0
+        },
+        "after": {
+          "hp": 835,
+          "pool": 165.0,
+          "protected": 165.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.0,
+        "amount": 140,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 140.0
+        },
+        "after": {
+          "hp": 840,
+          "pool": 160.0,
+          "protected": 160.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.0,
+        "amount": 140,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 140.0
+        },
+        "after": {
+          "hp": 840,
+          "pool": 160.0,
+          "protected": 160.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.25,
+        "amount": 43,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 43.0
+        },
+        "after": {
+          "hp": 743,
+          "pool": 257.0,
+          "protected": 257.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.25,
+        "amount": 43,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 43.0
+        },
+        "after": {
+          "hp": 743,
+          "pool": 257.0,
+          "protected": 257.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.25,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.25,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.25,
+        "amount": 168,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 168.0
+        },
+        "after": {
+          "hp": 868,
+          "pool": 132.0,
+          "protected": 132.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.25,
+        "amount": 168,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 168.0
+        },
+        "after": {
+          "hp": 868,
+          "pool": 132.0,
+          "protected": 132.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.25,
+        "amount": 175,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 175.0
+        },
+        "after": {
+          "hp": 875,
+          "pool": 125.0,
+          "protected": 125.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.25,
+        "amount": 175,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 175.0
+        },
+        "after": {
+          "hp": 875,
+          "pool": 125.0,
+          "protected": 125.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.350000023841858,
+        "amount": 47,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 47.0
+        },
+        "after": {
+          "hp": 747,
+          "pool": 253.0,
+          "protected": 253.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.350000023841858,
+        "amount": 47,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 47.0
+        },
+        "after": {
+          "hp": 747,
+          "pool": 253.0,
+          "protected": 253.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.350000023841858,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.350000023841858,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.350000023841858,
+        "amount": 182,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 182.0
+        },
+        "after": {
+          "hp": 882,
+          "pool": 118.0,
+          "protected": 118.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.350000023841858,
+        "amount": 182,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 182.0
+        },
+        "after": {
+          "hp": 882,
+          "pool": 118.0,
+          "protected": 118.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.350000023841858,
+        "amount": 189,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 189.0
+        },
+        "after": {
+          "hp": 889,
+          "pool": 111.0,
+          "protected": 111.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.350000023841858,
+        "amount": 189,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 189.0
+        },
+        "after": {
+          "hp": 889,
+          "pool": 111.0,
+          "protected": 111.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.0,
+        "amount": 35,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 35.0
+        },
+        "after": {
+          "hp": 735,
+          "pool": 265.0,
+          "protected": 265.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.0,
+        "amount": 35,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 35.0
+        },
+        "after": {
+          "hp": 735,
+          "pool": 265.0,
+          "protected": 265.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.0,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.0,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.0,
+        "amount": 135,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 135.0
+        },
+        "after": {
+          "hp": 835,
+          "pool": 165.0,
+          "protected": 165.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.0,
+        "amount": 135,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 135.0
+        },
+        "after": {
+          "hp": 835,
+          "pool": 165.0,
+          "protected": 165.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.0,
+        "amount": 140,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 140.0
+        },
+        "after": {
+          "hp": 840,
+          "pool": 160.0,
+          "protected": 160.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005600,
+          7005600
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.0,
+        "amount": 140,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 140.0
+        },
+        "after": {
+          "hp": 840,
+          "pool": 160.0,
+          "protected": 160.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.25,
+        "amount": 43,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 43.0
+        },
+        "after": {
+          "hp": 743,
+          "pool": 257.0,
+          "protected": 257.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.25,
+        "amount": 43,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 43.0
+        },
+        "after": {
+          "hp": 743,
+          "pool": 257.0,
+          "protected": 257.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.25,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.25,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.25,
+        "amount": 168,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 168.0
+        },
+        "after": {
+          "hp": 868,
+          "pool": 132.0,
+          "protected": 132.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.25,
+        "amount": 168,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 168.0
+        },
+        "after": {
+          "hp": 868,
+          "pool": 132.0,
+          "protected": 132.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.25,
+        "amount": 175,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 175.0
+        },
+        "after": {
+          "hp": 875,
+          "pool": 125.0,
+          "protected": 125.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005601,
+          7005601,
+          7005601
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.25,
+        "amount": 175,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 175.0
+        },
+        "after": {
+          "hp": 875,
+          "pool": 125.0,
+          "protected": 125.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.350000023841858,
+        "amount": 47,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 47.0
+        },
+        "after": {
+          "hp": 747,
+          "pool": 253.0,
+          "protected": 253.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.350000023841858,
+        "amount": 47,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 47.0
+        },
+        "after": {
+          "hp": 747,
+          "pool": 253.0,
+          "protected": 253.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.350000023841858,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.350000023841858,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.350000023841858,
+        "amount": 182,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 182.0
+        },
+        "after": {
+          "hp": 882,
+          "pool": 118.0,
+          "protected": 118.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.350000023841858,
+        "amount": 182,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 182.0
+        },
+        "after": {
+          "hp": 882,
+          "pool": 118.0,
+          "protected": 118.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.350000023841858,
+        "amount": 189,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 189.0
+        },
+        "after": {
+          "hp": 889,
+          "pool": 111.0,
+          "protected": 111.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.350000023841858,
+        "amount": 189,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 189.0
+        },
+        "after": {
+          "hp": 889,
+          "pool": 111.0,
+          "protected": 111.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.6875,
+        "amount": 59,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 59.0
+        },
+        "after": {
+          "hp": 759,
+          "pool": 241.0,
+          "protected": 241.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.6875,
+        "amount": 59,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 59.0
+        },
+        "after": {
+          "hp": 759,
+          "pool": 241.0,
+          "protected": 241.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.6875,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.6875,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.6875,
+        "amount": 227,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 227.0
+        },
+        "after": {
+          "hp": 927,
+          "pool": 73.0,
+          "protected": 73.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.6875,
+        "amount": 227,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 227.0
+        },
+        "after": {
+          "hp": 927,
+          "pool": 73.0,
+          "protected": 73.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.6875,
+        "amount": 236,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 236.0
+        },
+        "after": {
+          "hp": 936,
+          "pool": 64.0,
+          "protected": 64.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600,
+          7005601,
+          7005602
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.6875,
+        "amount": 236,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 236.0
+        },
+        "after": {
+          "hp": 936,
+          "pool": 64.0,
+          "protected": 64.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.6875,
+        "amount": 59,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 59.0
+        },
+        "after": {
+          "hp": 759,
+          "pool": 241.0,
+          "protected": 241.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.6875,
+        "amount": 59,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 59.0
+        },
+        "after": {
+          "hp": 759,
+          "pool": 241.0,
+          "protected": 241.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.6875,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.6875,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.6875,
+        "amount": 227,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 227.0
+        },
+        "after": {
+          "hp": 927,
+          "pool": 73.0,
+          "protected": 73.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.6875,
+        "amount": 227,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 227.0
+        },
+        "after": {
+          "hp": 927,
+          "pool": 73.0,
+          "protected": 73.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.6875,
+        "amount": 236,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 236.0
+        },
+        "after": {
+          "hp": 936,
+          "pool": 64.0,
+          "protected": 64.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005601
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.6875,
+        "amount": 236,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 236.0
+        },
+        "after": {
+          "hp": 936,
+          "pool": 64.0,
+          "protected": 64.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.8225001096725464,
+        "amount": 63,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 63.0
+        },
+        "after": {
+          "hp": 763,
+          "pool": 237.0,
+          "protected": 237.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.8225001096725464,
+        "amount": 63,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 63.0
+        },
+        "after": {
+          "hp": 763,
+          "pool": 237.0,
+          "protected": 237.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.8225001096725464,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.8225001096725464,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.8225001096725464,
+        "amount": 246,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 246.0
+        },
+        "after": {
+          "hp": 946,
+          "pool": 54.0,
+          "protected": 54.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.8225001096725464,
+        "amount": 246,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 246.0
+        },
+        "after": {
+          "hp": 946,
+          "pool": 54.0,
+          "protected": 54.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.8225001096725464,
+        "amount": 255,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 255.0
+        },
+        "after": {
+          "hp": 955,
+          "pool": 45.0,
+          "protected": 45.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          8981200
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.8225001096725464,
+        "amount": 255,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 255.0
+        },
+        "after": {
+          "hp": 955,
+          "pool": 45.0,
+          "protected": 45.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 0,
+        "damage": 1,
+        "base": 35.0,
+        "rate": 1.350000023841858,
+        "amount": 47,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 47.0
+        },
+        "after": {
+          "hp": 747,
+          "pool": 253.0,
+          "protected": 253.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 0,
+        "damage": 10000,
+        "base": 35.0,
+        "rate": 1.350000023841858,
+        "amount": 47,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 47.0
+        },
+        "after": {
+          "hp": 747,
+          "pool": 253.0,
+          "protected": 253.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 820,
+        "damage": 1,
+        "base": 0.0,
+        "rate": 1.350000023841858,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 820,
+        "damage": 10000,
+        "base": 0.0,
+        "rate": 1.350000023841858,
+        "amount": 0,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 210782001,
+        "damage": 1,
+        "base": 135.0,
+        "rate": 1.350000023841858,
+        "amount": 182,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 182.0
+        },
+        "after": {
+          "hp": 882,
+          "pool": 118.0,
+          "protected": 118.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 210782001,
+        "damage": 10000,
+        "base": 135.0,
+        "rate": 1.350000023841858,
+        "amount": 182,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 182.0
+        },
+        "after": {
+          "hp": 882,
+          "pool": 118.0,
+          "protected": 118.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 300000790,
+        "damage": 1,
+        "base": 140.0,
+        "rate": 1.350000023841858,
+        "amount": 189,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 189.0
+        },
+        "after": {
+          "hp": 889,
+          "pool": 111.0,
+          "protected": 111.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          8981200,
+          8981200,
+          8981200
+        ],
+        "attack": 300000790,
+        "damage": 10000,
+        "base": 140.0,
+        "rate": 1.350000023841858,
+        "amount": 189,
+        "queued": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 189.0
+        },
+        "after": {
+          "hp": 889,
+          "pool": 111.0,
+          "protected": 111.0,
+          "timer": 3.9833333492279053,
+          "pending": 0.0
+        }
+      }
+    ],
+    "pool": [
+      {
+        "ids": [],
+        "attack": 0,
+        "damage": 100,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 0,
+        "damage": 300,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 7000000,
+        "damage": 100,
+        "packet": {
+          "rate": 0.0,
+          "time": 1.0,
+          "base": 1.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 7000000,
+        "damage": 300,
+        "packet": {
+          "rate": 0.0,
+          "time": 1.0,
+          "base": 1.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 8000015,
+        "damage": 100,
+        "packet": {
+          "rate": 0.0,
+          "time": 0.0,
+          "base": 0.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [],
+        "attack": 8000015,
+        "damage": 300,
+        "packet": {
+          "rate": 0.0,
+          "time": 0.0,
+          "base": 0.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 0,
+        "damage": 100,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 100.0,
+          "protected": 100.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 0,
+        "damage": 300,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 7000000,
+        "damage": 100,
+        "packet": {
+          "rate": 0.0,
+          "time": 1.0,
+          "base": 1.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 7000000,
+        "damage": 300,
+        "packet": {
+          "rate": 0.0,
+          "time": 1.0,
+          "base": 1.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 8000015,
+        "damage": 100,
+        "packet": {
+          "rate": 0.0,
+          "time": 0.0,
+          "base": 0.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005600
+        ],
+        "attack": 8000015,
+        "damage": 300,
+        "packet": {
+          "rate": 0.0,
+          "time": 0.0,
+          "base": 0.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 0,
+        "damage": 100,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 100.0,
+          "protected": 100.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 0,
+        "damage": 300,
+        "packet": {
+          "rate": 1.0,
+          "time": 1.0,
+          "base": 35.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 7000000,
+        "damage": 100,
+        "packet": {
+          "rate": 0.0,
+          "time": 1.0,
+          "base": 1.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 7000000,
+        "damage": 300,
+        "packet": {
+          "rate": 0.0,
+          "time": 1.0,
+          "base": 1.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 8000015,
+        "damage": 100,
+        "packet": {
+          "rate": 0.0,
+          "time": 0.0,
+          "base": 0.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "ids": [
+          7005602,
+          7005602,
+          7005602
+        ],
+        "attack": 8000015,
+        "damage": 300,
+        "packet": {
+          "rate": 0.0,
+          "time": 0.0,
+          "base": 0.0,
+          "slot": -1
+        },
+        "after": {
+          "hp": 700,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 0.0,
+          "pending": 0.0
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "maximum": 1000,
+        "fps": 30,
+        "copies": 1,
+        "decayAt": 4.033333333333333,
+        "emptyAt": 4.3,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.466142177581787e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 1000,
+        "fps": 30,
+        "copies": 3,
+        "decayAt": 4.033333333333333,
+        "emptyAt": 4.3,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.466142177581787e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 1000,
+        "fps": 60,
+        "copies": 1,
+        "decayAt": 4.016666666666667,
+        "emptyAt": 4.3,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.1404197216033936e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 1000,
+        "fps": 60,
+        "copies": 3,
+        "decayAt": 4.016666666666667,
+        "emptyAt": 4.3,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.1404197216033936e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 1000,
+        "fps": 120,
+        "copies": 1,
+        "decayAt": 4.0,
+        "emptyAt": 4.291666666666667,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.9999866485595703,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 0.9999743700027466,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 700,
+            "pool": 291.6666564941406,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 1000,
+        "fps": 120,
+        "copies": 3,
+        "decayAt": 4.0,
+        "emptyAt": 4.291666666666667,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.9999866485595703,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 0.9999743700027466,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 700,
+            "pool": 291.6666564941406,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 2000,
+        "fps": 30,
+        "copies": 1,
+        "decayAt": 4.033333333333333,
+        "emptyAt": 4.166666666666667,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.466142177581787e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 1700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 2000,
+        "fps": 30,
+        "copies": 3,
+        "decayAt": 4.033333333333333,
+        "emptyAt": 4.166666666666667,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.466142177581787e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 1700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 2000,
+        "fps": 60,
+        "copies": 1,
+        "decayAt": 4.016666666666667,
+        "emptyAt": 4.15,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.1404197216033936e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 1700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 2000,
+        "fps": 60,
+        "copies": 3,
+        "decayAt": 4.016666666666667,
+        "emptyAt": 4.15,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.0000009536743164,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 1.0000028610229492,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 3.1404197216033936e-06,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 1700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 2000,
+        "fps": 120,
+        "copies": 1,
+        "decayAt": 4.0,
+        "emptyAt": 4.141666666666667,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.9999866485595703,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 0.9999743700027466,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 1700,
+            "pool": 283.3333435058594,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 1700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      },
+      {
+        "maximum": 2000,
+        "fps": 120,
+        "copies": 3,
+        "decayAt": 4.0,
+        "emptyAt": 4.141666666666667,
+        "snapshots": [
+          {
+            "time": 1.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 2.9999866485595703,
+            "pending": 0.0
+          },
+          {
+            "time": 3.0,
+            "hp": 1700,
+            "pool": 300.0,
+            "protected": 300.0,
+            "timer": 0.9999743700027466,
+            "pending": 0.0
+          },
+          {
+            "time": 4.0,
+            "hp": 1700,
+            "pool": 283.3333435058594,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          },
+          {
+            "time": 5.0,
+            "hp": 1700,
+            "pool": 0.0,
+            "protected": 0.0,
+            "timer": 0.0,
+            "pending": 0.0
+          }
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "attack": 0,
+        "first": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "second": {
+          "hp": 600,
+          "pool": 400.0,
+          "protected": 100.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 600,
+          "pool": 300.0,
+          "protected": 100.0,
+          "timer": 3.9000000953674316,
+          "pending": 0.0
+        }
+      },
+      {
+        "attack": 3212705,
+        "first": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "second": {
+          "hp": 600,
+          "pool": 400.0,
+          "protected": 400.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 600,
+          "pool": 400.0,
+          "protected": 400.0,
+          "timer": 3.9000000953674316,
+          "pending": 0.0
+        }
+      }
+    ],
+    "healing": [
+      {
+        "initial": 800,
+        "heal": 0,
+        "before": {
+          "hp": 500,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 800,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "initial": 800,
+        "heal": 100,
+        "before": {
+          "hp": 600,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 900,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "initial": 800,
+        "heal": 400,
+        "before": {
+          "hp": 900,
+          "pool": 100.0,
+          "protected": 100.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 1000,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "initial": 1000,
+        "heal": 500,
+        "before": {
+          "hp": 1000,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 1000,
+          "pool": 0.0,
+          "protected": 0.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      }
+    ],
+    "controls": [
+      {
+        "damage": 0,
+        "scaled": false,
+        "scale": 1,
+        "amount": 0,
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "damage": -100,
+        "scaled": false,
+        "scale": 1,
+        "amount": 0,
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "damage": 100,
+        "scaled": true,
+        "scale": 0.5,
+        "amount": 21,
+        "after": {
+          "hp": 721,
+          "pool": 279.0,
+          "protected": 279.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "damage": 100,
+        "scaled": true,
+        "scale": 0,
+        "amount": 0,
+        "after": {
+          "hp": 700,
+          "pool": 300.0,
+          "protected": 300.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "damage": 100,
+        "scaled": false,
+        "scale": 0.5,
+        "amount": 43,
+        "after": {
+          "hp": 743,
+          "pool": 257.0,
+          "protected": 257.0,
+          "timer": 4.0,
+          "pending": 0.0
+        }
+      },
+      {
+        "name": "zero-hp-does-not-recover",
+        "before": {
+          "hp": 0,
+          "pool": 1000.0,
+          "protected": 1000.0,
+          "timer": 4.0,
+          "pending": 0.0
+        },
+        "after": {
+          "hp": 0,
+          "pool": 1000.0,
+          "protected": 1000.0,
+          "timer": 4.0,
+          "pending": 35.0
+        }
+      }
+    ]
+  },
+  "native": {
+    "metadata": "E70C45..E70CDE within E70350",
+    "hit": "43BE60",
+    "hp": "426130 → 427BC0 → 426B00",
+    "recovery": "43F37D..43F3F2 within 43ED80 → 50F230 → 507BC0 → 3DA510 → 4275A0",
+    "update": "4289C0 → 269D000",
+    "repeat": "4B2D50 → 4BFCF0"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "27F2470 explicit actor component identity 22; native 4BFCF0 source/slot comparison remains live",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "4B3D40 deferred hit-target notification sink after HP recovery queue",
+    "6ADA30 ordinary resource-setter context",
+    "E6D630 actual PC/NPC AtkParam lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "attack metadata and outgoing-hit inner branches use explicit contexts; full collision and outer attack construction/dispatch are not simulated",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit local hit-score context in mode 0",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "hit module virtual +50 notification sink",
+    "incoming damage amount is supplied; native HP loss, pool, timer, queue and integer recovery writes execute",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "recipient virtual +200 false ordinary hit predicate",
+    "source/slot identity is supplied; actual attack animation usage, full death/reload and network synchronization remain unverified"
+  ],
+  "gameplayVerified": false
+}

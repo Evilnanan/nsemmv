@@ -45,7 +45,7 @@ if (args.Length == 5 && args[4].StartsWith("--tables=")) {
 foreach (var name in tableNames) {
     var defName = name switch {
         "BehaviorParam_PC" => "BehaviorParam",
-        "AtkParam_Pc" => "AtkParam",
+        "AtkParam_Pc" or "AtkParam_Npc" => "AtkParam",
         "ItemLotParam_map" or "ItemLotParam_enemy" => "ItemLotParam",
         _ => name
     };
