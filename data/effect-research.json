@@ -8,7 +8,7 @@
     "withDetails": 611,
     "withNumericFields": 538,
     "withMechanicsOnly": 38,
-    "nativeStacking": 463,
+    "nativeStacking": 483,
     "catalog": 2241,
     "catalogWithDetails": 2054
   },
@@ -6692,13 +6692,14 @@
         7640000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6715,13 +6716,14 @@
         7640100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6738,13 +6740,14 @@
         7641000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6761,13 +6764,14 @@
         7641100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6784,13 +6788,14 @@
         7642000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6807,13 +6812,14 @@
         7642100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6830,13 +6836,14 @@
         7643000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6853,13 +6860,14 @@
         7643100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6876,13 +6884,14 @@
         7644000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6899,13 +6908,14 @@
         7644100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6922,13 +6932,14 @@
         7645000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6945,13 +6956,14 @@
         7645100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6968,13 +6980,14 @@
         7646000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -6991,13 +7004,14 @@
         7646100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7014,13 +7028,14 @@
         7647000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7037,13 +7052,14 @@
         7647100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7060,13 +7076,14 @@
         7647200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7083,13 +7100,14 @@
         7647300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7106,13 +7124,14 @@
         7647400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -7129,13 +7148,14 @@
         7647500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "hero-adjustment",
         "hero"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49593,6 +49613,7 @@
   "perfumeEvidenceSha256": "1375afcdbfddf026c3d2d1182a4841f069cfcb9d8395d515899e61a546dafd0b",
   "duchessUltimateEvidenceSha256": "7e6725f822ebddb767bbcf5693797edce1cf2e73e44853f1d86bd8da209590c5",
   "guardianShockwaveEvidenceSha256": "d0d9c1e529a7a7e590327e827a9a9a6d27b784a1759689e1d0ef4e97038962e8",
+  "heroAdjustmentEvidenceSha256": "ad1953dee5f57cd47fbec1a9a3f24e4c7a30b660e6db86668d455d69ecabc4a6",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

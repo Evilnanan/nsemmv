@@ -34,6 +34,7 @@ import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
 import duchessUltimate from "../../data/effect-duchess-ultimate-evidence.json";
 import guardianShockwave from "../../data/effect-guardian-shockwave-evidence.json";
+import heroAdjustment from "../../data/effect-hero-adjustment-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -51,6 +52,40 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("deduplicates identical hero adjustments while combining distinct adjustments at every level", () => {
+    for (const family of heroAdjustment.families) {
+      for (const id of family.effects) {
+        const detail = effectDetail(id)!;
+        expect(detail.stacking).toBe("不可叠加");
+        expect(detail.stackingDetail).toBe("同一词条只生效一次；不同词条的增减相加");
+        expect(detail.blocks[0].restrictions).toEqual([]);
+        expect(detail.blocks[0].phase).toBe("随等级调整能力值");
+        const cases = heroAdjustment.checks.single.filter(r => r.effect === id);
+        const single = cases.find(r => r.copies === 1 && r.role === "matching")!;
+        const baseline = cases.find(r => r.copies === 0)!;
+        for (const row of cases)
+          expect(row.levels).toEqual(row.copies && row.role === "matching" ? single.levels : baseline.levels);
+      }
+      const cases = heroAdjustment.checks.combined.filter(r => r.hero === family.hero);
+      for (const row of cases) {
+        const unique = cases.find(r => r.copies[0] === Math.min(1, row.copies[0]) && r.copies[1] === Math.min(1, row.copies[1]))!;
+        expect(row.levels).toEqual(unique.levels);
+      }
+    }
+    for (const row of heroAdjustment.checks.roleChange) {
+      expect(row.removed).toEqual(row.before);
+      expect(row.restored).toEqual(row.active);
+    }
+    for (const row of heroAdjustment.checks.floor)
+      expect(row.values).toEqual(row.adjustment.map(v => Math.max(0, v)));
+    const combined = heroAdjustment.checks.combined.find(r => r.hero === 1 && r.copies.join() === "1,1")!;
+    expect(combined.levels.find(r => r.level === 12)!.values).toEqual([41, 26, 24, 37, 30, 27, 27, 10]);
+    expect(heroAdjustment.gameplayVerified).toBe(false);
+    expect(research.heroAdjustmentEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-hero-adjustment-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("shows the Guardian shockwave HP component without turning emitter timers into cooldowns", () => {
     const detail = effectDetail(7033400)!;
     expect(detail.stacking).toBe("不可叠加");

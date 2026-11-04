@@ -254,6 +254,14 @@ assert guardian_shock['schema'] == 1 and guardian_shock['regulationSha256'] == c
 assert guardian_shock['exeSha256'] == evidence['exeSha256'] and not guardian_shock['gameplayVerified']
 assert guardian_shock['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in guardian_shock['checks'].items()} == dict(trigger=54, repeat=6, projectile=3, target=4, damage=16)
+hero_adjustment_path = ROOT / 'data/effect-hero-adjustment-evidence.json'
+hero_adjustment = json.loads(hero_adjustment_path.read_text())
+assert hero_adjustment['schema'] == 1 and hero_adjustment['regulationSha256'] == catalog['regulationSha256']
+assert hero_adjustment['exeSha256'] == evidence['exeSha256'] and not hero_adjustment['gameplayVerified']
+assert hero_adjustment['paramSha256'] == evidence['paramSha256']
+assert hero_adjustment['heroStatusParamSha256'] == evidence['heroParamSha256']
+assert len(hero_adjustment['families']) == 10
+assert {k: len(v) for k, v in hero_adjustment['checks'].items()} == dict(single=240, combined=160, roleChange=20, disabled=20, floor=20)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -629,6 +637,7 @@ STACKING_RULES = {
     'perfume': ('可叠加', '攻击倍率相乘', ['perfume']),
     'duchess-ultimate': ('不可叠加', '重复装备不增加时长或增伤', ['duchess-ultimate']),
     'guardian-shockwave': ('不可叠加', '重复装备不增加冲击波数量', ['guardian-shockwave']),
+    'hero-adjustment': ('不可叠加', '同一词条只生效一次；不同词条的增减相加', ['hero-adjustment']),
     'periodic-hp-recovery': ('可叠加', '恢复量相加，各自计时', ['periodic-hp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -1006,6 +1015,17 @@ for id, effect in source['effects'].items():
         assert source['spells'][id]['changeHpPoint'] == row['changeHpPoint']
         assert source['spells'][id]['motionInterval'] == row['motionInterval']
         rule = 'periodic-hp-recovery' if row['changeHpPoint'] < 0 else 'periodic-hp-loss'
+    for family in hero_adjustment['families']:
+        if int(id) in family['effects']:
+            index = family['effects'].index(int(id))
+            root = family['roots'][index]
+            assert list(effect['roots'].values()) == [root]
+            assert effect['runtimeExclusive'] == family['runtimeExclusive'][index]
+            assert source['spells'][str(root)]['stateInfo'] == 2123
+            assert source['spells'][str(root)]['heroStatusModifier'] == family['modifiers'][index]
+            assert source['spells'][str(root)]['invocationConditionsStateChange1'] == family['state']
+            blocks = [block(root, '随等级调整能力值', False, {family['state']})]
+            rule = 'hero-adjustment'
     if id in passive_resource['effects']:
         root = passive_resource['effects'][id]
         assert list(effect['roots'].values()) == [root] and effect['runtimeExclusive'] == -1
@@ -1405,6 +1425,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('各攻击命中标记的实际投递与权重、绝招自身碰撞是否贡献累积、完整动作中断／重叠绝招、实时帧调度、死亡／重载及多人交互')
     if rules[id] == 'guardian-shockwave':
         questions.append('冲击波物理伤害的来源缩放与最终计算、真实半径插值／碰撞／同一目标去重、完整防御反应和动作中断、原生 2114 分支的额外行为、最终 HP 写入及多人／重载交互')
+    if rules[id] == 'hero-adjustment':
+        questions.append('默认成长曲线以外的角色覆盖、实时属性刷新与最终 HP／FP 等派生资源同步、重载及多人交互')
     if rules[id] == 'spell-family':
         questions.append('完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取')
     if rules[id] == 'undertaker-contact':
@@ -1505,6 +1527,7 @@ research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_byte
 research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()
 research['duchessUltimateEvidenceSha256'] = hashlib.sha256(duchess_ultimate_path.read_bytes()).hexdigest()
 research['guardianShockwaveEvidenceSha256'] = hashlib.sha256(guardian_shock_path.read_bytes()).hexdigest()
+research['heroAdjustmentEvidenceSha256'] = hashlib.sha256(hero_adjustment_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()
