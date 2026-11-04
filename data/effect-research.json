@@ -8,7 +8,7 @@
     "withDetails": 608,
     "withNumericFields": 535,
     "withMechanicsOnly": 38,
-    "nativeStacking": 442,
+    "nativeStacking": 456,
     "catalog": 2241,
     "catalogWithDetails": 2051
   },
@@ -12595,11 +12595,13 @@
         7043200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12616,11 +12618,13 @@
         7043300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12637,11 +12641,13 @@
         7043400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12658,11 +12664,13 @@
         7043500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12679,11 +12687,13 @@
         7043600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12700,11 +12710,13 @@
         7043700
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12721,11 +12733,13 @@
         7043800
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12742,11 +12756,13 @@
         7044000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12763,11 +12779,13 @@
         7044100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12784,11 +12802,13 @@
         7044200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12805,11 +12825,13 @@
         7044300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12826,11 +12848,13 @@
         7044400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12847,11 +12871,13 @@
         7044500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -12868,11 +12894,13 @@
         7044600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-family"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取"
       ],
       "gameplayVerified": false
     },
@@ -49528,6 +49556,7 @@
   "treasureMapEvidenceSha256": "806b839dc0763f410b62df700c9c4b287f69dae14e6ba5dd253d31a03608a556",
   "passiveResourceEvidenceSha256": "4ef2d2dff072c025b9ab706a66f1d1a411081f0c918d91b5e5d3a9887c48d826",
   "damageAilmentEvidenceSha256": "9cb0ebcb3b686378fffa197ee58bd2ad7829ad689af9102b6568e28f4bc66350",
+  "spellFamilyEvidenceSha256": "ef330b83e6b4410895f895e8fc3736101cf592dff2641b4589c1e74d1fd59150",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

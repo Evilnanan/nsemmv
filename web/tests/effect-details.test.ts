@@ -29,6 +29,7 @@ import undertakerReset from "../../data/effect-undertaker-reset-evidence.json";
 import treasureMap from "../../data/effect-treasure-map-evidence.json";
 import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import damageAilment from "../../data/effect-damage-ailment-evidence.json";
+import spellFamily from "../../data/effect-spell-family-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -46,6 +47,26 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("stacks family-specific spell multipliers while preserving native type and category filters", () => {
+    for (const family of spellFamily.families) {
+      const detail = effectDetail(family.root)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("攻击倍率相乘");
+      expect(detail.blocks[0].values).toEqual([["攻击倍率", "+2.5%"]]);
+    }
+    const selected = (root: number, spell: number) => spellFamily.checks.selection.find(r => r.root === root && r.spell === spell)!;
+    expect(selected(7043300, 4431).applied).toBe(true);
+    expect(selected(7043300, 6907).applied).toBe(false);
+    expect(selected(7043700, 4720).applied).toBe(true);
+    for (const row of spellFamily.checks.repeat) {
+      const expected = row.disabled ? 1 : 1.025 ** row.copies;
+      expect(row.values.every(v => Math.abs(v - expected) < 1e-6)).toBe(true);
+    }
+    expect(spellFamily.gameplayVerified).toBe(false);
+    expect(research.spellFamilyEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-spell-family-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("adds duplicate damage ailments and distinguishes their brief rearming window", () => {
     for (const family of damageAilment.families) {
       const detail = effectDetail(family.root)!;
