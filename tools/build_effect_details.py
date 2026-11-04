@@ -28,6 +28,12 @@ growth = json.loads(growth_path.read_text())
 assert growth['schema'] == 1 and growth['regulationSha256'] == catalog['regulationSha256']
 evidence_path = ROOT / 'data/effect-native-evidence.json'
 evidence = json.loads(evidence_path.read_text())
+discovery_path = ROOT / 'data/effect-discovery-evidence.json'
+discovery = json.loads(discovery_path.read_text())
+assert discovery['schema'] == 1 and discovery['regulationSha256'] == catalog['regulationSha256']
+assert discovery['exeSha256'] == evidence['exeSha256'] and not discovery['gameplayVerified']
+assert discovery['rowCount'] == 35755 and discovery['groupCount'] == 3627
+assert len(discovery['biasedGroups']) == 39 and len(discovery['draws']) == 1626
 
 # Only fields with understood units enter the human-readable summary.
 RATES = {
@@ -302,7 +308,7 @@ STACKING_RULES = {
     'resistance': ('可叠加', '抵抗力点数相加', ['equip-injection', 'instance-matching', 'resistance']),
     'fp-cost': ('可叠加', 'FP 消耗倍率相乘', ['equip-injection', 'instance-matching', 'fpCost']),
     'weapon-count': ('不可叠加', '同种武器条件重复无效；不同武器种类分别满足条件时，可同时生效', ['instance-matching', 'weapon-count']),
-    'discovery': ('不可叠加', '多个武器倾向同时存在时，采用生效列表中的第一个', ['discovery']),
+    'discovery': ('不可叠加', '多个武器倾向同时存在时，采用生效列表中的第一个', ['discovery', 'discovery-selection', 'discovery-draws']),
     'skill-uses': ('不可叠加', '同一技艺次数词条重复装备只生效一次', ['equip-injection', 'instance-matching', 'skillUses']),
     'kill': ('不同等级可叠加', '普通版与＋１版各生效一次，恢复量相加；同等级重复无效',
              ['equip-injection', 'instance-matching', 'killMatching', 'killDispatch', 'gaugeApply']),
@@ -377,7 +383,14 @@ for id, effect in source['effects'].items():
     if len(roots) == 1 and roots[0].get('stateInfo') == 2122:
         rule = 'discovery'
         name = catalog['effects'][id]['name']['zh_CN']
-        notes.append(name.replace('通过潜在能力，能比较容易找到', '潜在能力武器倾向：'))
+        root = next(iter(effect['roots'].values()))
+        measured = [r for r in discovery['selection'] if r['ids'] == [root]]
+        assert len(measured) == 10 and all(r['bias'] == roots[0]['weaponTypeDiscovery'] for r in measured)
+        assert name.startswith('通过潜在能力，能比较容易找到')
+        blocks = [dict(source=root, phase='潜在能力奖励', linked=False,
+                       values=[['武器倾向', name.removeprefix('通过潜在能力，能比较容易找到')]],
+                       restrictions=['替换角色默认倾向'], scope=[], duration=None, interval=None)]
+        notes.append('仅影响支持武器倾向的奖励；具体概率随奖池和候选权重变化。')
     if len(roots) == 1 and list(effect['roots'].values())[0] in (7033200, 7270100):
         rule = 'skill-uses'
     if len(roots) == 1 and list(effect['roots'].values())[0] in (7230000, 7230001):
@@ -565,20 +578,23 @@ for id in sorted(source['effects'], key=int):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
+    if rules[id] == 'discovery':
+        questions.append('所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理')
     if any(source['spells'].get(str(sp), {}).get(k, -1) > 0 for sp in effect['roots'].values() for k in ('conditionHp', 'conditionHpRate')):
         refs.append('hpConditions')
         questions.append('低血量状态切换与其他触发链的时序交互')
     if not detail['blocks']:
         questions.append('尚未解析到可展示数值／机制，继续查原生、事件或动作脚本')
-    numeric = any(any(label != '出击时替换' for label, _ in b['values']) for b in detail['blocks'])
+    numeric = any(any(label not in ('出击时替换', '武器倾向') for label, _ in b['values']) for b in detail['blocks'])
     ledger[id] = dict(name=catalog['effects'][id]['name']['zh_CN'], obtainable=id in obtainable, roots=effect['roots'], states=states,
                       detailSources=[sp for b in detail['blocks'] for sp in [b['source'], *b.get('branches', [])]],
-                      values='decoded-fields' if numeric else ('named-replacement' if detail['blocks'] else 'unresolved'),
+                      values='decoded-fields' if numeric else ('decoded-mechanism' if rules[id] == 'discovery' else ('named-replacement' if detail['blocks'] else 'unresolved')),
                       stacking='native-analysis' if rules[id] != 'unknown' else 'unresolved',
                       stackingCategory=detail['stacking'],
                       evidence=refs, openQuestions=questions, gameplayVerified=False)
 coverage = dict(obtainable=len(obtainable), withDetails=sum(bool(result[e]['blocks']) for e in obtainable),
                 withNumericFields=sum(ledger[e]['values'] == 'decoded-fields' for e in obtainable),
+                withMechanicsOnly=sum(ledger[e]['values'] == 'decoded-mechanism' for e in obtainable),
                 nativeStacking=sum(ledger[e]['stacking'] == 'native-analysis' for e in obtainable),
                 catalog=len(ledger), catalogWithDetails=sum(bool(d['blocks']) for d in result.values()))
 research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
@@ -587,5 +603,6 @@ research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
 research['linkEvidenceSha256'] = hashlib.sha256(link_path.read_bytes()).hexdigest()
 research['scriptEvidenceSha256'] = hashlib.sha256(script_path.read_bytes()).hexdigest()
 research['growthEvidenceSha256'] = hashlib.sha256(growth_path.read_bytes()).hexdigest()
+research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

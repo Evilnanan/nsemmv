@@ -5,11 +5,12 @@
   "triggerEvidenceSha256": "f4aa3c791b751265e2793cfcc487872a07096398aa9322a602c4cddfbedbabe3",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 515,
+    "withDetails": 551,
     "withNumericFields": 480,
+    "withMechanicsOnly": 36,
     "nativeStacking": 269,
     "catalog": 2241,
-    "catalogWithDetails": 1953
+    "catalogWithDetails": 1990
   },
   "effects": {
     "0": {
@@ -5659,15 +5660,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630000
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5680,15 +5685,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630100
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5701,15 +5710,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630200
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5722,15 +5735,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630300
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5743,15 +5760,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630400
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5764,15 +5785,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630500
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5785,15 +5810,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630600
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5806,15 +5835,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630700
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5827,15 +5860,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630800
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5848,15 +5885,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7630900
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5869,15 +5910,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631000
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5890,15 +5935,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631100
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5911,15 +5960,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631200
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5932,15 +5985,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631300
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5953,15 +6010,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631400
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5974,15 +6035,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631500
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -5995,15 +6060,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631600
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6016,15 +6085,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631700
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6037,15 +6110,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631800
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6058,15 +6135,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7631900
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6079,15 +6160,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632000
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6100,15 +6185,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632100
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6121,15 +6210,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632200
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6142,15 +6235,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632300
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6163,15 +6260,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632400
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6184,15 +6285,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632500
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6205,15 +6310,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632600
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6226,15 +6335,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632700
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6247,15 +6360,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632800
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6268,15 +6385,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7632900
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6289,15 +6410,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633000
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6310,15 +6435,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633100
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6331,15 +6460,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633200
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6352,15 +6485,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633300
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6373,15 +6510,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633400
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6394,15 +6535,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633500
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -6415,15 +6560,19 @@
       "states": [
         2122
       ],
-      "detailSources": [],
-      "values": "unresolved",
+      "detailSources": [
+        7633600
+      ],
+      "values": "decoded-mechanism",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "discovery"
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
       ],
       "openQuestions": [
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
       ],
       "gameplayVerified": false
     },
@@ -48980,7 +49129,8 @@
       "gameplayVerified": false
     }
   },
-  "linkEvidenceSha256": "1e4f9c3b8a33d7a44e714ebc77f693c62a3ebb9fcf6d09a80cedb8fd5ed2e990",
+  "linkEvidenceSha256": "9e29490ecd42f86866e3a1629425732b9bb3089b63193bd4b88f2e39ccee4e88",
   "scriptEvidenceSha256": "8db8790c700b0b8b8de2a6802d32ec0e34716a3783bac1dcd9be992049ba1600",
-  "growthEvidenceSha256": "2bd1736037de07e96bf3220f051c49af225d6f2b4d629f118a6e141baeed2699"
+  "growthEvidenceSha256": "2bd1736037de07e96bf3220f051c49af225d6f2b4d629f118a6e141baeed2699",
+  "discoveryEvidenceSha256": "be359953e1c4735d2f0b63cfddcfe7469c89f6fc062909aef9565f191e8e8c53"
 }

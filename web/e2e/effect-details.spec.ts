@@ -44,6 +44,8 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
     [7036200, ["-62.5%", "不可叠加"]],
     [7036300, ["+15%", "30 秒", "不可叠加"]],
     [7150000, ["当前 HP 的 5%", "物理伤害"]],
+    [6632300, ["武器倾向", "弓", "替换角色默认倾向", "具体概率随奖池和候选权重变化", "不可叠加"]],
+    [6633600, ["武器倾向", "调香瓶", "替换角色默认倾向"]],
   ] as const) {
     await page.getByLabel("搜索词条").fill(String(id));
     const row = page.locator(".effect-choice-inspect").filter({ hasText: String(id) });
@@ -54,7 +56,7 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
       const rect = el.getBoundingClientRect();
       return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
     })).toBe(true);
-    if (id === 7032800 || id === 7060000)
+    if (id === 7032800 || id === 7060000 || id === 6632300)
       await page.screenshot({ path: testInfo.outputPath(`mechanics-${id}.png`) });
     await details.getByRole("button", { name: "关闭词条详情" }).click();
     await expect(details).toHaveCount(0);

@@ -7,6 +7,7 @@
     "defs/BehaviorParam.xml": "682eb53e76fe824bbf4283cb1c6161c16eb8ec4457d9b8485ed821a7ab11a2f8",
     "defs/Bullet.xml": "2243e5f8530666de8630d29bc118e87a1627ae0f589aa06d514bbf7bf6d2a638",
     "defs/EquipParamGoods.xml": "c4bd63486daac1211a1763b787579ed5649981bf40cc9fa2f3bb66254e2d1c53",
+    "defs/GameSystemCommonParam.xml": "7fa812374e020771e9074c08b3ef2256b8a9578c28dd02bd537048c7324e158c",
     "defs/HeroStatusParam.xml": "de776f0355fb0afb877018bfcad51ce68235cc8d2d59e2a2c457f31fe5611dac",
     "defs/Magic.xml": "bccd416a8b6aeab2576db366872a4713e8698eac397ee8fbf7fe8c526501c354",
     "defs/SpEffectParam.xml": "a9985be2b9b464867aecab63c04f85114eea3032d38f5f0d2cb66f33926d0c15",

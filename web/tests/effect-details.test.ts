@@ -8,10 +8,58 @@ import triggers from "../../data/effect-trigger-source.json";
 import links from "../../data/effect-link-source.json";
 import scripts from "../../data/effect-script-evidence.json";
 import growth from "../../data/effect-growth-source.json";
+import discovery from "../../data/effect-discovery-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("describes weapon bias replacement without inventing a fixed percentage", () => {
+    for (let id = 6630000; id <= 6633600; id += 100) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0].source).toBe(id + 1000000);
+      expect(detail.blocks[0].values).toEqual([
+        ["武器倾向", catalog.effects[id].name.zh_CN.replace("通过潜在能力，能比较容易找到", "")],
+      ]);
+      expect(detail.blocks[0].restrictions).toContain("替换角色默认倾向");
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.notes.join()).toContain("具体概率随奖池和候选权重变化");
+      expect(detail.stacking).toBe("不可叠加");
+      expect(JSON.stringify(detail)).not.toContain("%");
+    }
+    expect(research.effects["6632300"].values).toBe("decoded-mechanism");
+    expect(research.coverage.withMechanicsOnly).toBe(36);
+    expect(research.coverage.withNumericFields).toBe(480);
+    expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(discovery.regulationSha256).toBe(catalog.regulationSha256);
+    expect(discovery.gameplayVerified).toBe(false);
+  });
+  it("preserves repeated ItemTable IDs and native first-bias selection across all heroes", () => {
+    expect(discovery.rowCount).toBe(35755);
+    expect(discovery.groupCount).toBe(3627);
+    expect(discovery.biasedGroups).toHaveLength(39);
+    const rows = discovery.rows.filter((r) => r.id === 3000200);
+    expect(rows.length).toBeGreaterThan(100);
+    expect(new Set(rows.map((r) => r.index)).size).toBe(rows.length);
+    const firstBias = discovery.selection.filter((r) => r.ids.length === 2);
+    expect(firstBias.map((r) => r.bias)).toEqual([51, 57, 51, 51]);
+    for (const hero of new Set(discovery.selection.map((r) => r.hero))) {
+      expect(discovery.selection.find((r) => r.hero === hero && !r.ids.length)!.bias).toBe(1000 + hero * 100);
+      expect(discovery.selection.find((r) => r.hero === hero && r.ids[0] === 7632300)!.bias).toBe(51);
+    }
+    // A new weapon type has no candidate in some older pools. Generic pools
+    // remain unchanged; the UI must not promise a universal chance or fallback.
+    const missing = discovery.draws.find((r) => r.group === 3000250 && r.bias === 93)!;
+    expect(missing.totalWeight).toBe(0);
+    expect(missing.selectedIndex).toBeNull();
+    const generic = discovery.draws.filter((r) => r.group === 2003002);
+    expect(new Set(generic.map((r) => r.totalWeight))).toEqual(new Set([21000]));
+    expect(new Set(generic.map((r) => r.selectedIndex)).size).toBe(1);
+    const gated = discovery.draws.filter((r) => r.group === 2000);
+    expect(gated.map((r) => r.totalWeight)).toEqual([0, 0, 0, 100]);
+  });
   it("distinguishes the magic field from its recipient lease and follows native last-hit replacement", () => {
     const detail = effectDetail(7032800)!;
     expect(detail.blocks).toHaveLength(1);

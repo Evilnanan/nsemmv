@@ -6,8 +6,8 @@ using System.Text.Json;
 using System.Xml.Linq;
 using SoulsFormats;
 
-if (args.Length is not (4 or 5) || (args.Length == 5 && args[4] is not ("--research" or "--systems")))
-    throw new ArgumentException("Usage: ExtractEffectDetails <Smithbox> <Game> <MMV mod> <output.json> [--research|--systems]");
+if (args.Length is not (4 or 5) || (args.Length == 5 && args[4] is not ("--research" or "--systems" or "--discovery")))
+    throw new ArgumentException("Usage: ExtractEffectDetails <Smithbox> <Game> <MMV mod> <output.json> [--research|--systems|--discovery]");
 var smithbox = Path.GetFullPath(args[0]);
 var game = Path.GetFullPath(args[1]);
 var mod = Path.GetFullPath(args[2]);
@@ -29,11 +29,14 @@ if (hashes["regulation.bin"] != "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f
 var binder = SFUtil.DecryptNightreignRegulation(regulation);
 if (binder.Version != "10350000") throw new InvalidDataException("Unsupported regulation version");
 var tables = new SortedDictionary<string, SortedDictionary<int, SortedDictionary<string, double>>>();
+var orderedTables = new SortedDictionary<string, List<object>>();
 var tableNames = new[] { "AttachEffectParam", "SpEffectParam", "HeroStatusParam", "EquipParamGoods", "SwordArtsParam" };
 if (args.Length == 5 && args[4] == "--research")
     tableNames = tableNames.Concat(new[] { "BehaviorParam_PC", "Bullet", "AtkParam_Pc", "Magic", "GameSystemCommonParam" }).ToArray();
 if (args.Length == 5 && args[4] == "--systems")
     tableNames = new[] { "GameSystemCommonParam", "PlayerCommonParam" };
+if (args.Length == 5 && args[4] == "--discovery")
+    tableNames = new[] { "HeroParam", "ItemTableParam" };
 foreach (var name in tableNames) {
     var defName = name == "BehaviorParam_PC" ? "BehaviorParam" : name == "AtkParam_Pc" ? "AtkParam" : name;
     var defPath = Path.Combine(smithbox, "Assets/PARAM/NR/Defs", defName + ".xml");
@@ -55,6 +58,9 @@ foreach (var name in tableNames) {
         var param = PARAM.Read(bytes);
         param.ApplyParamdef(PARAMDEF.XmlDeserialize(temp));
         var rows = new SortedDictionary<int, SortedDictionary<string, double>>();
+        var ordered = new List<object>();
+        var duplicateIds = param.Rows.GroupBy(r => r.ID).Where(g => g.Count() > 1).Select(g => g.Key).ToHashSet();
+        var rowIndex = 0;
         foreach (var row in param.Rows) {
             var values = new SortedDictionary<string, double>();
             foreach (var cell in row.Cells)
@@ -62,9 +68,15 @@ foreach (var name in tableNames) {
                     var value = Convert.ToDouble(cell.Value);
                     if (double.IsFinite(value)) values[cell.Def.InternalName] = value;
                 }
-            rows[row.ID] = values;
+            // A group key is not a unique row ID. Preserve every ItemTable row;
+            // quarantine ambiguous IDs in other tables instead of choosing one.
+            if (name == "ItemTableParam" || duplicateIds.Contains(row.ID))
+                ordered.Add(new { index = rowIndex, id = row.ID, fields = values });
+            else rows.Add(row.ID, values);
+            rowIndex++;
         }
-        tables[name] = rows;
+        if (ordered.Count > 0) orderedTables[name] = ordered;
+        if (name != "ItemTableParam") tables[name] = rows;
     } finally { File.Delete(temp); }
 }
 var texts = new SortedDictionary<string, SortedDictionary<string, SortedDictionary<int, string>>>();
@@ -90,7 +102,7 @@ foreach (var (folder, locale) in new[] { ("engus", "en_US"), ("zhocn", "zh_CN") 
 }
 Directory.CreateDirectory(Path.GetDirectoryName(output)!);
 using (var stream = File.Create(output))
-    JsonSerializer.Serialize(stream, new { schema = 1, regulationVersion = binder.Version, hashes, tables, texts });
+    JsonSerializer.Serialize(stream, new { schema = 1, regulationVersion = binder.Version, hashes, tables, orderedTables, texts });
 using (var stream = File.OpenRead(output))
     using (var check = JsonDocument.Parse(stream)) { _ = check.RootElement.GetProperty("schema"); }
 Console.WriteLine("Extracted effect parameters and descriptions; inputs unchanged.");
