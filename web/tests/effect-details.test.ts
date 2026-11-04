@@ -30,6 +30,7 @@ import treasureMap from "../../data/effect-treasure-map-evidence.json";
 import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
+import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -47,6 +48,24 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("adds periodic HP copies while retaining independent timers and gain/loss channels", () => {
+    expect(effectDetail(7001100)?.stacking).toBe("可叠加");
+    expect(effectDetail(7001100)?.stackingDetail).toBe("恢复量相加，各自计时");
+    expect(effectDetail(6850500)?.stackingDetail).toBe("消耗量相加，各自计时");
+    for (const row of periodicHp.checks.mixed) {
+      for (const pulse of row.pulses) {
+        expect(pulse.packet).toEqual([2 * row.heal, 0, 2 * row.heal, row.drain ? -2 * row.drain : 0, 0, 0, 0]);
+      }
+    }
+    const staggered = periodicHp.checks.staggered.find(r => r.first === 7001100 && r.second === 6850500 && r.fps === 60)!;
+    expect(staggered.pulses[0]).toEqual({frame: 0, packet: [2, 0, 2, 0, 0, 0, 0]});
+    expect(staggered.pulses[1]).toEqual({frame: 30, packet: [0, 0, 0, -2, 0, 0, 0]});
+    expect(periodicHp.gameplayVerified).toBe(false);
+    expect(research.periodicHpEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-periodic-hp-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("stacks family-specific spell multipliers while preserving native type and category filters", () => {
     for (const family of spellFamily.families) {
       const detail = effectDetail(family.root)!;

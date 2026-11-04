@@ -1,0 +1,5289 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "rows": {
+    "7001100": {
+      "changeHpPoint": -2,
+      "motionInterval": 1,
+      "effectEndurance": -1,
+      "spCategory": 10,
+      "stateInfo": 0,
+      "bCurrHPIndependeMaxHP": 1
+    },
+    "6850500": {
+      "changeHpPoint": 2,
+      "motionInterval": 1,
+      "effectEndurance": -1,
+      "spCategory": 10,
+      "stateInfo": 0,
+      "bCurrHPIndependeMaxHP": 0
+    }
+  },
+  "checks": {
+    "snapshot": [
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 0,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 0,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 1,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 1,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 99,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 99,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 1000,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 1000,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 2345,
+        "disabled": false,
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "maximum": 2345,
+        "disabled": true,
+        "packet": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timing": [
+      {
+        "root": 7001100,
+        "copies": 1,
+        "fps": 30,
+        "pulseFrames": [
+          0,
+          31,
+          61,
+          91
+        ],
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "fps": 60,
+        "pulseFrames": [
+          0,
+          62,
+          122,
+          182
+        ],
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 1,
+        "fps": 120,
+        "pulseFrames": [
+          0,
+          122,
+          242,
+          362
+        ],
+        "packet": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "fps": 30,
+        "pulseFrames": [
+          0,
+          31,
+          61,
+          91
+        ],
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "fps": 60,
+        "pulseFrames": [
+          0,
+          62,
+          122,
+          182
+        ],
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 2,
+        "fps": 120,
+        "pulseFrames": [
+          0,
+          122,
+          242,
+          362
+        ],
+        "packet": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "fps": 30,
+        "pulseFrames": [
+          0,
+          31,
+          61,
+          91
+        ],
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "fps": 60,
+        "pulseFrames": [
+          0,
+          62,
+          122,
+          182
+        ],
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7001100,
+        "copies": 3,
+        "fps": 120,
+        "pulseFrames": [
+          0,
+          122,
+          242,
+          362
+        ],
+        "packet": [
+          6,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "fps": 30,
+        "pulseFrames": [
+          0,
+          31,
+          61,
+          91
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "fps": 60,
+        "pulseFrames": [
+          0,
+          62,
+          122,
+          182
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 1,
+        "fps": 120,
+        "pulseFrames": [
+          0,
+          122,
+          242,
+          362
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "fps": 30,
+        "pulseFrames": [
+          0,
+          31,
+          61,
+          91
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "fps": 60,
+        "pulseFrames": [
+          0,
+          62,
+          122,
+          182
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 2,
+        "fps": 120,
+        "pulseFrames": [
+          0,
+          122,
+          242,
+          362
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "fps": 30,
+        "pulseFrames": [
+          0,
+          31,
+          61,
+          91
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "fps": 60,
+        "pulseFrames": [
+          0,
+          62,
+          122,
+          182
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "root": 6850500,
+        "copies": 3,
+        "fps": 120,
+        "pulseFrames": [
+          0,
+          122,
+          242,
+          362
+        ],
+        "packet": [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "mixed": [
+      {
+        "heal": 0,
+        "drain": 0,
+        "fps": 30,
+        "pulses": []
+      },
+      {
+        "heal": 0,
+        "drain": 0,
+        "fps": 60,
+        "pulses": []
+      },
+      {
+        "heal": 0,
+        "drain": 0,
+        "fps": 120,
+        "pulses": []
+      },
+      {
+        "heal": 0,
+        "drain": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              0,
+              0,
+              0,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 0,
+        "drain": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              0,
+              0,
+              0,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 0,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 0,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 0,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              2,
+              0,
+              2,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              2,
+              0,
+              2,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 1,
+        "drain": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              2,
+              0,
+              2,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 0,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 0,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 0,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              4,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              4,
+              0,
+              4,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              4,
+              0,
+              4,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 2,
+        "drain": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              4,
+              0,
+              4,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 0,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 0,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 0,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              6,
+              0,
+              6,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              6,
+              0,
+              6,
+              -4,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "heal": 3,
+        "drain": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              6,
+              0,
+              6,
+              -6,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "staggered": [
+      {
+        "first": 7001100,
+        "second": 7001100,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 15,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 45,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 75,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 7001100,
+        "second": 7001100,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 151,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 7001100,
+        "second": 7001100,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 181,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 301,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 7001100,
+        "second": 6850500,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 15,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 45,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 75,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 7001100,
+        "second": 6850500,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 151,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 7001100,
+        "second": 6850500,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 181,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 301,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 6850500,
+        "second": 7001100,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 15,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 45,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 75,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 6850500,
+        "second": 7001100,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 151,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 6850500,
+        "second": 7001100,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 181,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 301,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 6850500,
+        "second": 6850500,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 15,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 31,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 45,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 75,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 6850500,
+        "second": 6850500,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 62,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 91,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 151,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 182,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "first": 6850500,
+        "second": 6850500,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 122,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 181,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 242,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 301,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 362,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "arrivalBaseline": [
+      {
+        "root": 7001100,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 90,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "root": 7001100,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 181,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "root": 7001100,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 241,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 361,
+            "packet": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "root": 6850500,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 90,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "root": 6850500,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 181,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "root": 6850500,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 241,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 361,
+            "packet": [
+              0,
+              0,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "native": {
+    "insert": "50D060",
+    "qualify": "5057D0",
+    "update": "50ACD0 → 511B80",
+    "hp": "506EC0 → 50B860 → 510100 / 510130"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "optional physical owner omitted only during HP aggregation; no current HP setter, hurt event, death, overheal or multiplayer execution"
+  ],
+  "gameplayVerified": false
+}

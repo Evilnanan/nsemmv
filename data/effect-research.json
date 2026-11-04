@@ -8,7 +8,7 @@
     "withDetails": 608,
     "withNumericFields": 535,
     "withMechanicsOnly": 38,
-    "nativeStacking": 456,
+    "nativeStacking": 458,
     "catalog": 2241,
     "catalogWithDetails": 2051
   },
@@ -7539,11 +7539,13 @@
         6850500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "periodic-hp"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终当前 HP 写入与治疗修正、满血／濒死时恢复和消耗的顺序、受损触发及死亡／重载／多人交互"
       ],
       "gameplayVerified": false
     },
@@ -8928,11 +8930,13 @@
         7001100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "periodic-hp"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终当前 HP 写入与治疗修正、满血／濒死时恢复和消耗的顺序、受损触发及死亡／重载／多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49557,6 +49561,7 @@
   "passiveResourceEvidenceSha256": "4ef2d2dff072c025b9ab706a66f1d1a411081f0c918d91b5e5d3a9887c48d826",
   "damageAilmentEvidenceSha256": "9cb0ebcb3b686378fffa197ee58bd2ad7829ad689af9102b6568e28f4bc66350",
   "spellFamilyEvidenceSha256": "ef330b83e6b4410895f895e8fc3736101cf592dff2641b4589c1e74d1fd59150",
+  "periodicHpEvidenceSha256": "c9000112c6fe37ff03966d4e94bc0a86a2e937d10cc7ee99736d570967a7c0bc",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
