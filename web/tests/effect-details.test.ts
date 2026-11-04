@@ -32,6 +32,7 @@ import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
+import duchessUltimate from "../../data/effect-duchess-ultimate-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -49,6 +50,36 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Duchess ultimate duration from cumulative attack tiers and their decay", () => {
+    for (const id of [7033000, 7033001]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("重复装备不增加时长或增伤");
+      expect(detail.blocks[0].values).toEqual([["绝招持续时间", "15 → 25 秒"]]);
+      expect(detail.blocks[0].restrictions).toEqual(["仅自身"]);
+      expect(detail.blocks[1].values).toEqual([["攻击倍率", "+9% → +23.17% → +47.80% → +77.36%"]]);
+      expect(detail.blocks.every(b => b.duration === null && b.interval === null)).toBe(true);
+      expect(detail.notes).toEqual(["增伤逐档累积；停止攻击后逐渐衰退。"]);
+    }
+    for (const row of duchessUltimate.checks.threshold) {
+      const expected = duchessUltimate.thresholds.flatMap((threshold, i) => row.input >= threshold ? [7033028 + i] : []);
+      expect([...row.queued].sort()).toEqual([...expected, ...expected].sort());
+    }
+    for (const row of duchessUltimate.checks.lifecycle) {
+      expect(row.peak).toBeCloseTo(1.09 * 1.13 * 1.2 * 1.2, 5);
+      expect(row.transitions.at(-1)?.multiplier).toBe(1);
+      expect(row.finalNodes).toEqual([]);
+    }
+    for (const row of duchessUltimate.checks.dispatch) {
+      const fires = !!row.active && row.state === (row.judge === 7149 ? 2021 : 2022);
+      expect(row.requests.length).toBe(fires ? 1 : 0);
+    }
+    expect(duchessUltimate.gameplayVerified).toBe(false);
+    expect(research.duchessUltimateEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-duchess-ultimate-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("distinguishes perfume items and weapons without presenting renewal as accumulating buffs", () => {
     for (const [id, rates] of [[7043100, ["+15%", "+5%"]], [6043100, ["+30%", "+10%"]]] as const) {
       const detail = effectDetail(id)!;
@@ -1041,7 +1072,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(535);
+    expect(research.coverage.withNumericFields).toBe(537);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

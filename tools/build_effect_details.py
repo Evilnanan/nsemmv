@@ -242,6 +242,12 @@ assert perfume['schema'] == 1 and perfume['regulationSha256'] == catalog['regula
 assert perfume['exeSha256'] == evidence['exeSha256'] and not perfume['gameplayVerified']
 assert perfume['paramSha256'] == evidence['paramSha256'] and len(perfume['families']) == 2
 assert {k: len(v) for k, v in perfume['checks'].items()} == dict(filters=3616, kinds=156, disabled=48, lifecycle=48)
+duchess_ultimate_path = ROOT / 'data/effect-duchess-ultimate-evidence.json'
+duchess_ultimate = json.loads(duchess_ultimate_path.read_text())
+assert duchess_ultimate['schema'] == 1 and duchess_ultimate['regulationSha256'] == catalog['regulationSha256']
+assert duchess_ultimate['exeSha256'] == evidence['exeSha256'] and not duchess_ultimate['gameplayVerified']
+assert duchess_ultimate['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in duchess_ultimate['checks'].items()} == dict(selection=12, dispatch=24, threshold=11, multipliers=32, kinds=52, markers=20, lifecycle=6, duration=12)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -378,6 +384,8 @@ if args.extract:
                 needed.update(raider_skill['leaves'])
             if root == duchess_poise['root']:
                 needed.add(duchess_poise['leaf'])
+            if root == duchess_ultimate['root']:
+                needed.update(map(int, duchess_ultimate['rows']))
             if root == wylder_bleed['root']:
                 needed.add(wylder_bleed['leaf'])
             if root == ironeye_poison['root']:
@@ -611,6 +619,7 @@ STACKING_RULES = {
     'damage-ailment': ('可叠加', '同种异常的累积量相加', ['damage-ailment']),
     'spell-family': ('可叠加', '攻击倍率相乘', ['spell-family']),
     'perfume': ('可叠加', '攻击倍率相乘', ['perfume']),
+    'duchess-ultimate': ('不可叠加', '重复装备不增加时长或增伤', ['duchess-ultimate']),
     'periodic-hp-recovery': ('可叠加', '恢复量相加，各自计时', ['periodic-hp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -959,6 +968,20 @@ for id, effect in source['effects'].items():
             b['duration'] = b['interval'] = None
             blocks.append(b)
         rule = 'perfume'
+    if int(id) in duchess_ultimate['effects']:
+        assert list(effect['roots'].values()) == [duchess_ultimate['root']] and effect['runtimeExclusive'] == -1
+        assert source['spells']['7033010']['effectEndurance'] == 25
+        assert source['spells']['703500']['effectEndurance'] == 15
+        assert duchess_ultimate['thresholds'] == [17, 30, 45, 60]
+        assert duchess_ultimate['rates'] == [1.09, 1.13, 1.2, 1.2]
+        blocks = [dict(source=7033010, phase='绝招发动后', linked=True,
+                       values=[['绝招持续时间', '15 → 25 秒']],
+                       restrictions=['仅自身'], scope=[], duration=None, interval=None),
+                  dict(source=7033024, branches=list(range(7033025, 7033032)), phase='绝招期间连续攻击', linked=True,
+                       values=[['攻击倍率', '+9% → +23.17% → +47.80% → +77.36%']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('增伤逐档累积；停止攻击后逐渐衰退。')
+        rule = 'duchess-ultimate'
     if id in periodic_hp['rows']:
         row = periodic_hp['rows'][id]
         assert list(effect['roots'].values()) == [int(id)] and effect['runtimeExclusive'] == -1
@@ -1324,9 +1347,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1360,6 +1383,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('最终当前 HP 写入与治疗修正、满血／濒死时恢复和消耗的顺序、受损触发及死亡／重载／多人交互')
     if rules[id] == 'perfume':
         questions.append('完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用')
+    if rules[id] == 'duchess-ultimate':
+        questions.append('各攻击命中标记的实际投递与权重、绝招自身碰撞是否贡献累积、完整动作中断／重叠绝招、实时帧调度、死亡／重载及多人交互')
     if rules[id] == 'spell-family':
         questions.append('完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取')
     if rules[id] == 'undertaker-contact':
@@ -1458,6 +1483,7 @@ research['damageAilmentEvidenceSha256'] = hashlib.sha256(damage_ailment_path.rea
 research['spellFamilyEvidenceSha256'] = hashlib.sha256(spell_family_path.read_bytes()).hexdigest()
 research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_bytes()).hexdigest()
 research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()
+research['duchessUltimateEvidenceSha256'] = hashlib.sha256(duchess_ultimate_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()

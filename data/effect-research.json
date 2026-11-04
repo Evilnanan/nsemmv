@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 608,
-    "withNumericFields": 535,
+    "withDetails": 610,
+    "withNumericFields": 537,
     "withMechanicsOnly": 38,
-    "nativeStacking": 460,
+    "nativeStacking": 462,
     "catalog": 2241,
-    "catalogWithDetails": 2051
+    "catalogWithDetails": 2053
   },
   "effects": {
     "0": {
@@ -10980,14 +10980,25 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7033010,
+        7033024,
+        7033025,
+        7033026,
+        7033027,
+        7033028,
+        7033029,
+        7033030,
+        7033031
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "duchess-ultimate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "各攻击命中标记的实际投递与权重、绝招自身碰撞是否贡献累积、完整动作中断／重叠绝招、实时帧调度、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -11000,14 +11011,25 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7033010,
+        7033024,
+        7033025,
+        7033026,
+        7033027,
+        7033028,
+        7033029,
+        7033030,
+        7033031
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "duchess-ultimate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "各攻击命中标记的实际投递与权重、绝招自身碰撞是否贡献累积、完整动作中断／重叠绝招、实时帧调度、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49565,6 +49587,7 @@
   "spellFamilyEvidenceSha256": "ef330b83e6b4410895f895e8fc3736101cf592dff2641b4589c1e74d1fd59150",
   "periodicHpEvidenceSha256": "c9000112c6fe37ff03966d4e94bc0a86a2e937d10cc7ee99736d570967a7c0bc",
   "perfumeEvidenceSha256": "1375afcdbfddf026c3d2d1182a4841f069cfcb9d8395d515899e61a546dafd0b",
+  "duchessUltimateEvidenceSha256": "7e6725f822ebddb767bbcf5693797edce1cf2e73e44853f1d86bd8da209590c5",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
