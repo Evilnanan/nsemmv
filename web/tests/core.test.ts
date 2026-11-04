@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { fixture, character } from "./fixtures";
 import { Session } from "../src/core/session";
 import { SaveContainer } from "../src/core/container";
+import { catalog } from "../src/core/catalog";
 import {
   Character,
   addRelic,
@@ -19,6 +20,41 @@ import {
 } from "../src/core/rules";
 const simple = toRoll([7000000, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]);
 describe("browser binary codec", () => {
+  it("preserves each same-name shop relic's actual type and fixed effects on export", () => {
+    const s = Session.open(fixture(), "test");
+    const records = [
+      {
+        id: 2060,
+        deep: false,
+        effects: [7123900, 7260400, 7260700],
+        curses: [],
+      },
+      {
+        id: 19063,
+        deep: true,
+        effects: [6610702, 6633100, 7037501],
+        curses: [6851000],
+      },
+    ];
+    for (const { id } of records) {
+      expect(catalog.relics[id].name.zh_CN).toBe("雾霾的黑夜");
+      s.apply(0, { type: "add", id, roll: fixedRoll(id)! });
+    }
+    const reopened = Session.open(s.export(), "reopen");
+    for (const { id, deep, effects, curses } of records) {
+      const r = reopened.view(0).relics.find((r) => r.id === id)!;
+      expect(catalog.relics[r.id].deep).toBe(deep);
+      expect(catalog.relics[r.id].shop).toBe(true);
+      expect(r.roll.map((p) => p.effect).sort()).toEqual(effects);
+      expect(
+        r.roll
+          .map((p) => p.curse)
+          .filter((id) => id !== EMPTY)
+          .sort(),
+      ).toEqual(curses);
+      expect(checkRoll(r.id, r.roll)).toEqual([]);
+    }
+  });
   it("reads without mutating and returns an identical no-op container", () => {
     const input = fixture();
     const s = Session.open(input, "NR0000.dbb");

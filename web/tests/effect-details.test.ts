@@ -966,9 +966,12 @@ describe("MMV effect details", () => {
       "适用：近战攻击",
     );
     expect(effectDetail(7000900)!.blocks[0].values).toEqual([
-      ["绝招量表自然累积", "+5%"],
-      ["攻击／效果的绝招累积", "+5%"],
+      ["绝招量表累积（所有来源）", "+5%"],
     ]);
+    expect(effectDetail(6840200)!.blocks[0].values).toEqual([
+      ["绝招量表累积（所有来源）", "-15%"],
+    ]);
+    expect(effectDetail(6840200)!.notes).toEqual([]);
   });
   it("does not unconditionally sum starting-item branches", () => {
     const blocks = effectDetail(7121100)!.blocks;

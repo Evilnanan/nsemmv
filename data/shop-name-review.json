@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "messageSha256": {
+    "zh_CN": "378c6b8ca06c0d4472487c8bf4a4b25847186c32164e4156bc31e36e5e00be1a",
+    "en_US": "541712561a676b9e224a1b3b6228f144ded0eead2eea2eba27d1ea918d83fc98"
+  },
+  "checkedRelics": 1515,
+  "checkedPositiveWeightPools": 1173,
+  "mismatches": 0,
+  "relics": [
+    {
+      "id": 2060,
+      "name": {
+        "zh_CN": "雾霾的黑夜",
+        "en_US": "Night of the Miasma"
+      },
+      "color": 2,
+      "deep": false,
+      "obtainable": true,
+      "salable": false,
+      "shop": true,
+      "pools": [
+        707260700,
+        707123900,
+        707260400,
+        -1,
+        -1,
+        -1
+      ],
+      "sources": [
+        "ItemTableParam:46000"
+      ],
+      "fixedEffects": [
+        [
+          7260700
+        ],
+        [
+          7123900
+        ],
+        [
+          7260400
+        ],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "id": 19063,
+      "name": {
+        "zh_CN": "雾霾的黑夜",
+        "en_US": "Night-Hued Glass"
+      },
+      "color": 2,
+      "deep": true,
+      "obtainable": true,
+      "salable": false,
+      "shop": true,
+      "pools": [
+        707037501,
+        6633100,
+        6610702,
+        -1,
+        -1,
+        6851000
+      ],
+      "sources": [
+        "ShopLineupParam:13419"
+      ],
+      "fixedEffects": [
+        [
+          7037501
+        ],
+        [
+          6633100
+        ],
+        [
+          6610702
+        ],
+        [],
+        [],
+        [
+          6851000
+        ]
+      ]
+    }
+  ],
+  "gameplayVerified": false
+}

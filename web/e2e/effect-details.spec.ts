@@ -39,6 +39,7 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [6840200, ["绝招量表累积（所有来源）", "-15%", "可叠加"]],
     [6500100, ["承伤倍率", "-18%", "30 秒", "自身及周围友方", "半径 8 米", "同类效果再次施加刷新时长"]],
     [7037000, ["物理攻击倍率", "+19%", "60 秒", "再次触发刷新时长", "恢复类祷告和武器附魔也可触发", "远方之恢复的触发待确认"]],
     [7034400, ["+35%", "+40%", "5 秒", "前段不适用，后段适用", "收刀不会提前解除", "不可叠加"]],

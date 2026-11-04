@@ -264,6 +264,7 @@ def stats(row):
     for fields, label in [
         (['physicsAttackRate', 'magicAttackRate', 'fireAttackRate', 'thunderAttackRate', 'darkAttackRate'], '攻击倍率'),
         (['slashDamageCutRate', 'blowDamageCutRate', 'thrustDamageCutRate', 'neutralDamageCutRate'], '物理承伤'),
+        (['ultimateArtGaugeRate', 'ultimateArtGaugeChargeRate'], '绝招量表累积（所有来源）'),
     ]:
         numbers = [row.get(k, 1) for k in fields]
         if len(set(numbers)) == 1 and numbers[0] != 1:
@@ -420,7 +421,7 @@ STACKING_RULES = {
     'attack': ('可叠加', '攻击倍率相乘', ['equip-injection', 'instance-matching', 'attack']),
     'defense': ('可叠加', '承伤倍率相乘', ['equip-injection', 'instance-matching', 'defense']),
     'cooldown': ('可叠加', '冷却时间倍率相乘', ['equip-injection', 'instance-matching', 'cooldown']),
-    'gauge': ('可叠加', '各自累积通道的倍率相乘', ['equip-injection', 'instance-matching', 'gauge']),
+    'gauge': ('可叠加', '绝招量表累积倍率相乘', ['equip-injection', 'instance-matching', 'gauge']),
     'resistance': ('可叠加', '抵抗力点数相加', ['equip-injection', 'instance-matching', 'resistance']),
     'fp-cost': ('可叠加', 'FP 消耗倍率相乘', ['equip-injection', 'instance-matching', 'fpCost']),
     'weapon-count': ('不可叠加', '同种武器条件重复无效；不同武器种类分别满足条件时，可同时生效', ['instance-matching', 'weapon-count']),
@@ -809,8 +810,7 @@ for id, effect in source['effects'].items():
 
         notes.append('混合魔法的其他强化效果尚未解明。')
     if id == '6840200':
-        assert roots[0]['ultimateArtGaugeChargeRate'] == 0.85
-        notes.append('影响所有来源的绝招量表累积。')
+        assert roots[0]['ultimateArtGaugeRate'] == roots[0]['ultimateArtGaugeChargeRate'] == 0.85
     if id in {str(i) for i in range(6820000, 6820700, 100)}:
         measured = next(r for r in evidence['damageStatus'] if r['root'] == int(id) and 'amount' in r)
         root, bridge, child = (measured[k] for k in ('root', 'bridge', 'child'))

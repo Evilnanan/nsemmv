@@ -381,6 +381,9 @@ function ItemPicker({
               <Gem size={20} />
             </span>
             <span>{r.name.zh_CN}</span>
+            {r.shop && (
+              <span className="relic-kind">{r.deep ? "深层" : "普通"}</span>
+            )}
             <code>{r.id}</code>
           </button>
         ))}
@@ -1061,8 +1064,8 @@ function RelicFields({
           />
         </label>
         <span className={`type-chip color-${meta?.color ?? 4}`}>
-          {meta?.shop ? "商店遗物" : meta?.deep ? "深层" : "普通"} ·{" "}
-          {colorNames[meta?.color ?? 4]}
+          {meta?.shop && "商店遗物 · "}
+          {meta?.deep ? "深层" : "普通"} · {colorNames[meta?.color ?? 4]}
         </span>
         <div className="spacer" />
         <Tool
@@ -1090,6 +1093,9 @@ function RelicFields({
             <span className="pair-number">0{i + 1}</span>
             {([false, true] as const).map((curse) => {
               const id = curse ? pair.curse : pair.effect;
+              const invalid =
+                issues.some((x) => x.slot === i + (curse ? 3 : 0)) ||
+                candidateConflicts(draft.roll, i, curse, id).length > 0;
               return (
                 <EffectInspect
                   key={String(curse)}
@@ -1097,7 +1103,8 @@ function RelicFields({
                   className="effect-cell-inspect"
                 >
                   <button
-                    className={`effect-cell ${curse ? "curse" : ""} ${issues.some((x) => x.slot === i + (curse ? 3 : 0)) ? "invalid" : ""}`}
+                    className={`effect-cell ${curse ? "curse" : ""} ${invalid ? "invalid" : ""}`}
+                    aria-invalid={invalid || undefined}
                     onClick={() => setPicker({ slot: i, curse })}
                     disabled={busy || readOnly || !!meta?.shop}
                   >

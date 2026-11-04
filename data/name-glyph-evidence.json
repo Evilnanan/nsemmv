@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "entry": "13BF850",
+  "stopBefore": "13BF8C9",
+  "testedCodeUnits": 65536,
+  "mapping": {
+    "2472": "0023",
+    "2473": "003F",
+    "3251": "003C",
+    "3252": "003E",
+    "3253": "0025",
+    "3254": "FF3C",
+    "3255": "00A5"
+  },
+  "unchangedCodeUnits": 65529,
+  "gameplayVerified": false
+}

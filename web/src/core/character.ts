@@ -1,4 +1,5 @@
 import { Binary, EMPTY, concat, invariant } from "./binary";
+import { displayGameText, storeGameText } from "./game-text";
 import { catalog, heroNames } from "./catalog";
 import { type Roll, requireRoll, toRoll, values } from "./rules";
 export interface ItemRecord {
@@ -107,7 +108,7 @@ export class Character {
     }
     this.stateEnd = p;
     this.nameOffset = p + 0x94;
-    this.name = b.text(this.nameOffset, 16);
+    this.name = displayGameText(b.text(this.nameOffset, 16));
     this.countOffset = this.nameOffset + 0x5b8;
     this.entriesOffset = this.countOffset + 4;
     let cursor = this.countOffset;
@@ -260,7 +261,7 @@ export class Character {
             handles: Array.from({ length: 6 }, (_, i) =>
               b.u32(cursor + 48 + i * 4),
             ),
-            name: b.text(cursor + 4, 18),
+            name: displayGameText(b.text(cursor + 4, 18)),
             counter: b.u8(cursor + 3),
           });
         }
@@ -548,9 +549,13 @@ export function savePreset(
     existing.hero === hero &&
     existing.vessel === vessel &&
     existing.handles.join() === handles.join();
+  const storedName =
+    existing?.name === name.trim()
+      ? c.b.text(existing.offset + 4, 18)
+      : storeGameText(name.trim());
   if (sameContents) {
     if (existing.name === name.trim()) return out;
-    b.putText(existing.offset + 4, 18, name.trim());
+    b.putText(existing.offset + 4, 18, storedName);
     b.put8(existing.offset + 40, 0);
     b.put8(existing.offset + 41, 0);
     return out;
@@ -575,7 +580,7 @@ export function savePreset(
   b.put8(p, 1);
   b.put8(p + 1, hero);
   b.put8(p + 3, 0);
-  b.putText(p + 4, 18, name.trim());
+  b.putText(p + 4, 18, storedName);
   b.put8(p + 40, 0);
   b.put8(p + 41, 0);
   b.put32(p + 44, vessel);

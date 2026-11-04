@@ -91,7 +91,7 @@ foreach (var (folder, locale) in new[] { ("engus", "en_US"), ("zhocn", "zh_CN") 
         var path = Path.Combine(mod, "msg", folder, kind + "_dlc01.msgbnd.dcx");
         hashes[$"msg/{folder}/{kind}_dlc01.msgbnd.dcx"] = Hash(path);
         var messages = BND4.Read(path);
-        foreach (var name in kind == "item" ? new[] { "AttachEffectInfo", "AttachEffectName", "GoodsName", "MagicName", "SwordArtsName" } : new[] { "SpEffectInfo", "SpEffectName", "SpEffectCaption" }) {
+        foreach (var name in kind == "item" ? new[] { "AntiqueName", "AttachEffectInfo", "AttachEffectName", "GoodsName", "MagicName", "SwordArtsName" } : new[] { "SpEffectInfo", "SpEffectName", "SpEffectCaption" }) {
             var entries = new SortedDictionary<int, string>();
             var fmgName = name == "SwordArtsName" ? "ArtsName" : name;
             foreach (var suffix in new[] { "", "_dlc01" }) {
