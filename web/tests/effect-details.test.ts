@@ -40,6 +40,7 @@ import successiveAttack from "../../data/effect-successive-attack-evidence.json"
 import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import scholarAilment from "../../data/effect-scholar-ailment-evidence.json";
 import wylderFlame from "../../data/effect-wylder-flame-evidence.json";
+import revenantEnchant from "../../data/effect-revenant-enchant-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -66,6 +67,29 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Revenant enchantment reapplication from replacement and frost duration", () => {
+    for (const id of [7220100, 7220101]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["魔力基础攻击力", "+60"], ["冻伤基础累积", "40"]]);
+      expect(detail.blocks[0].restrictions).toEqual(["右手武器"]);
+      expect(detail.blocks[0].duration).toBe(20);
+      expect(detail.blocks[1].duration).toBeNull();
+      expect(detail.blocks[2].duration).toBe(30);
+      expect(detail.stackingDetail).toContain("再次施加刷新附魔时长");
+    }
+    for (const row of revenantEnchant.checks.timer) {
+      expect(Math.abs(row.expiryFrame / row.fps - (row.reapply ? 25 : 20))).toBeLessThanOrEqual(4 / row.fps);
+      if (row.reapply) expect(row.remainingAfterReapply).toBe(20);
+    }
+    for (const row of revenantEnchant.checks.overwrite)
+      expect(row.nodes.map(n => n.id)).toEqual([row.order.at(-1)]);
+    for (const row of revenantEnchant.checks.correction)
+      expect(row.remaining).toBe(500 - 40 * row.scale);
+    expect(revenantEnchant.gameplayVerified).toBe(false);
+    expect(research.revenantEnchantEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-enchant-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows flame lifetime without treating standalone emitter counts as scene hits", () => {
     const detail = effectDetail(7010500)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1599,7 +1623,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(551);
+    expect(research.coverage.withNumericFields).toBe(553);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

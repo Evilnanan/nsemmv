@@ -1,0 +1,1489 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "tae": "4ff5035e40af59c9f157125409d29ab24c7e74e4331313f53d0874efe792f174",
+    "behaviorGraph": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4"
+  },
+  "effects": [
+    7220100,
+    7220101
+  ],
+  "root": 7220200,
+  "enchant": 7220201,
+  "frost": 1809,
+  "events": [
+    {
+      "animation": 551010,
+      "index": 37,
+      "Type": 2,
+      "StartTime": 0.56666666,
+      "EndTime": 0.6666667,
+      "hex": "DC00000000000000891800000000050800000000000000000000000000000000"
+    },
+    {
+      "animation": 551020,
+      "index": 37,
+      "Type": 2,
+      "StartTime": 0.56666666,
+      "EndTime": 0.6666667,
+      "hex": "DC00000000000000891800000000050800000000000000000000000000000000"
+    },
+    {
+      "animation": 551030,
+      "index": 37,
+      "Type": 2,
+      "StartTime": 0.56666666,
+      "EndTime": 0.6666667,
+      "hex": "DC00000000000000891800000000050800000000000000000000000000000000"
+    }
+  ],
+  "graphStates": [
+    {
+      "state": "NecromanceSummon1",
+      "stateItem": 32002,
+      "binding": {
+        "selector": 41134,
+        "bindingSet": 44722,
+        "binding": 50941,
+        "member": "selectedGeneratorIndex",
+        "variable": 453,
+        "name": "IsEnableSummonAct",
+        "stringSet": 14,
+        "names": 20
+      },
+      "clips": [
+        "a905_551010",
+        "a905_551011"
+      ]
+    },
+    {
+      "state": "NecromanceSummon2",
+      "stateItem": 32003,
+      "binding": {
+        "selector": 41136,
+        "bindingSet": 44725,
+        "binding": 50944,
+        "member": "selectedGeneratorIndex",
+        "variable": 453,
+        "name": "IsEnableSummonAct",
+        "stringSet": 14,
+        "names": 20
+      },
+      "clips": [
+        "a905_551020",
+        "a905_551021"
+      ]
+    },
+    {
+      "state": "NecromanceSummon3",
+      "stateItem": 32004,
+      "binding": {
+        "selector": 41138,
+        "bindingSet": 44728,
+        "binding": 50947,
+        "member": "selectedGeneratorIndex",
+        "variable": 453,
+        "name": "IsEnableSummonAct",
+        "stringSet": 14,
+        "names": 20
+      },
+      "clips": [
+        "a905_551030",
+        "a905_551031"
+      ]
+    },
+    {
+      "state": "NecromanceSummon1_Upper",
+      "stateItem": 41350,
+      "binding": {
+        "selector": 45035,
+        "bindingSet": 51401,
+        "binding": 58981,
+        "member": "selectedGeneratorIndex",
+        "variable": 453,
+        "name": "IsEnableSummonAct",
+        "stringSet": 14,
+        "names": 20
+      },
+      "clips": [
+        "a905_551010",
+        "a905_551011"
+      ]
+    },
+    {
+      "state": "NecromanceSummon2_Upper",
+      "stateItem": 41351,
+      "binding": {
+        "selector": 45037,
+        "bindingSet": 51404,
+        "binding": 58984,
+        "member": "selectedGeneratorIndex",
+        "variable": 453,
+        "name": "IsEnableSummonAct",
+        "stringSet": 14,
+        "names": 20
+      },
+      "clips": [
+        "a905_551020",
+        "a905_551021"
+      ]
+    },
+    {
+      "state": "NecromanceSummon3_Upper",
+      "stateItem": 41352,
+      "binding": {
+        "selector": 45039,
+        "bindingSet": 51407,
+        "binding": 58987,
+        "member": "selectedGeneratorIndex",
+        "variable": 453,
+        "name": "IsEnableSummonAct",
+        "stringSet": 14,
+        "names": 20
+      },
+      "clips": [
+        "a905_551030",
+        "a905_551031"
+      ]
+    }
+  ],
+  "rows": {
+    "7220200": {
+      "stateInfo": 2053,
+      "spCategory": 20,
+      "playerHandValue": 3,
+      "effectEndurance": -1,
+      "magicAttackPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "7220201": {
+      "stateInfo": 64,
+      "spCategory": 162,
+      "playerHandValue": 1,
+      "effectEndurance": 20,
+      "magicAttackPower": 60,
+      "atkOccurrenceSpEffectId": 1809,
+      "arrowBehaviorOffset": 23,
+      "isUseAtkParamAtkPowerCorrect": 1,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "1809": {
+      "stateInfo": 260,
+      "spCategory": 10007,
+      "playerHandValue": 3,
+      "effectEndurance": 30,
+      "magicAttackPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 1,
+      "freezeAttackPower": 40,
+      "changeHpRate": 10,
+      "changeHpPoint": 50,
+      "neutralDamageCutRate": 1.149999976158142,
+      "magicDamageCutRate": 1.149999976158142,
+      "fireDamageCutRate": 1.149999976158142,
+      "thunderDamageCutRate": 1.149999976158142,
+      "darkDamageCutRate": 1.149999976158142
+    },
+    "881": {
+      "stateInfo": 64,
+      "spCategory": 162,
+      "playerHandValue": 1,
+      "effectEndurance": 40,
+      "magicAttackPower": 20,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 10,
+      "isUseAtkParamAtkPowerCorrect": 1,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "1627": {
+      "stateInfo": 62,
+      "spCategory": 162,
+      "playerHandValue": 3,
+      "effectEndurance": 20,
+      "magicAttackPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 0,
+      "isUseAtkParamAtkPowerCorrect": 1,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    }
+  },
+  "checks": {
+    "dispatch": [
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 551010,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 551020,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": false,
+        "animation": 551030,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 551010,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 551020,
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": true,
+        "animation": 551030,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 551010,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 551020,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": false,
+        "animation": 551030,
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 551010,
+        "requests": [
+          {
+            "behavior": 600000281,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000001111113f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 551020,
+        "requests": [
+          {
+            "behavior": 600000281,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000001111113f0101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": true,
+        "animation": 551030,
+        "requests": [
+          {
+            "behavior": 600000281,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000001111113f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 551010,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 551020,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": false,
+        "animation": 551030,
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 551010,
+        "requests": [
+          {
+            "behavior": 600000281,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000001111113f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 551020,
+        "requests": [
+          {
+            "behavior": 600000281,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000001111113f0101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": true,
+        "animation": 551030,
+        "requests": [
+          {
+            "behavior": 600000281,
+            "active": true,
+            "instant": true,
+            "payload": "dc00000000000000000000001111113f0101"
+          }
+        ]
+      }
+    ],
+    "emission": [
+      {
+        "success": false,
+        "fps": 30,
+        "attempts": [
+          0
+        ],
+        "nodes": []
+      },
+      {
+        "success": false,
+        "fps": 60,
+        "attempts": [
+          0
+        ],
+        "nodes": []
+      },
+      {
+        "success": false,
+        "fps": 120,
+        "attempts": [
+          0
+        ],
+        "nodes": []
+      },
+      {
+        "success": true,
+        "fps": 30,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 7220201,
+            "lifetime": 19.000015,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "success": true,
+        "fps": 60,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 7220201,
+            "lifetime": 19.000015,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "success": true,
+        "fps": 120,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 7220201,
+            "lifetime": 19.000015,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "values": [
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 11,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 0,
+        "attack": 10000,
+        "kind": 12,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 1,
+        "points": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 11,
+        "points": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 1,
+        "attack": 10000,
+        "kind": 12,
+        "points": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 1,
+        "points": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 11,
+        "points": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "copies": 3,
+        "attack": 10000,
+        "kind": 12,
+        "points": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "timer": [
+      {
+        "copies": 1,
+        "reapply": false,
+        "fps": 30,
+        "expiryFrame": 602,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "copies": 1,
+        "reapply": false,
+        "fps": 60,
+        "expiryFrame": 1203,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "copies": 1,
+        "reapply": false,
+        "fps": 120,
+        "expiryFrame": 2403,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "copies": 1,
+        "reapply": true,
+        "fps": 30,
+        "expiryFrame": 751,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "copies": 1,
+        "reapply": true,
+        "fps": 60,
+        "expiryFrame": 1502,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "copies": 1,
+        "reapply": true,
+        "fps": 120,
+        "expiryFrame": 3002,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "copies": 3,
+        "reapply": false,
+        "fps": 30,
+        "expiryFrame": 602,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "copies": 3,
+        "reapply": false,
+        "fps": 60,
+        "expiryFrame": 1203,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "copies": 3,
+        "reapply": false,
+        "fps": 120,
+        "expiryFrame": 2403,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "copies": 3,
+        "reapply": true,
+        "fps": 30,
+        "expiryFrame": 751,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "copies": 3,
+        "reapply": true,
+        "fps": 60,
+        "expiryFrame": 1502,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "copies": 3,
+        "reapply": true,
+        "fps": 120,
+        "expiryFrame": 3002,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      }
+    ],
+    "overwrite": [
+      {
+        "order": [
+          7220201,
+          881
+        ],
+        "nodes": [
+          {
+            "id": 881,
+            "lifetime": 40.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          20.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "order": [
+          881,
+          7220201
+        ],
+        "nodes": [
+          {
+            "id": 7220201,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "order": [
+          7220201,
+          7220201
+        ],
+        "nodes": [
+          {
+            "id": 7220201,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "order": [
+          7220201,
+          1627
+        ],
+        "nodes": [
+          {
+            "id": 1627,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          0.0,
+          25.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "order": [
+          1627,
+          7220201
+        ],
+        "nodes": [
+          {
+            "id": 7220201,
+            "lifetime": 20.0,
+            "flags": 4
+          }
+        ],
+        "right": [
+          0.0,
+          60.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "left": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "correction": [
+      {
+        "scale": 0,
+        "remaining": 500,
+        "sent": [
+          {
+            "id": 1809,
+            "scales": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      {
+        "scale": 0.5,
+        "remaining": 480,
+        "sent": [
+          {
+            "id": 1809,
+            "scales": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "scale": 1,
+        "remaining": 460,
+        "sent": [
+          {
+            "id": 1809,
+            "scales": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "scale": 2,
+        "remaining": 420,
+        "sent": [
+          {
+            "id": 1809,
+            "scales": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              2.0
+            ]
+          }
+        ]
+      }
+    ],
+    "onset": [
+      {
+        "resistance": 40,
+        "hit": 1,
+        "result": false,
+        "remaining": 40,
+        "hp": -150
+      },
+      {
+        "resistance": 40,
+        "hit": 2,
+        "result": "existing",
+        "remaining": 40,
+        "hp": 0
+      },
+      {
+        "resistance": 40,
+        "hit": 3,
+        "result": "existing",
+        "remaining": 40,
+        "hp": 0
+      },
+      {
+        "resistance": 41,
+        "hit": 1,
+        "result": true,
+        "remaining": 1,
+        "hp": 0
+      },
+      {
+        "resistance": 41,
+        "hit": 2,
+        "result": false,
+        "remaining": 41,
+        "hp": -150
+      },
+      {
+        "resistance": 41,
+        "hit": 3,
+        "result": "existing",
+        "remaining": 41,
+        "hp": 0
+      },
+      {
+        "resistance": 100,
+        "hit": 1,
+        "result": true,
+        "remaining": 60,
+        "hp": 0
+      },
+      {
+        "resistance": 100,
+        "hit": 2,
+        "result": true,
+        "remaining": 20,
+        "hp": 0
+      },
+      {
+        "resistance": 100,
+        "hit": 3,
+        "result": false,
+        "remaining": 100,
+        "hp": -150
+      },
+      {
+        "resistance": 500,
+        "hit": 1,
+        "result": true,
+        "remaining": 460,
+        "hp": 0
+      },
+      {
+        "resistance": 500,
+        "hit": 2,
+        "result": true,
+        "remaining": 420,
+        "hp": 0
+      },
+      {
+        "resistance": 500,
+        "hit": 3,
+        "result": true,
+        "remaining": 380,
+        "hp": 0
+      }
+    ],
+    "damage": [
+      {
+        "maximum": 1,
+        "hp": -50,
+        "damageMultipliers": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      },
+      {
+        "maximum": 137,
+        "hp": -63,
+        "damageMultipliers": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      },
+      {
+        "maximum": 1000,
+        "hp": -150,
+        "damageMultipliers": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      },
+      {
+        "maximum": 10000,
+        "hp": -1050,
+        "damageMultipliers": [
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142,
+          1.149999976158142
+        ]
+      }
+    ],
+    "frostLifetime": [
+      {
+        "fps": 30,
+        "reapplyAt": 5,
+        "reapplyResult": "existing",
+        "expiryFrame": 903
+      },
+      {
+        "fps": 60,
+        "reapplyAt": 5,
+        "reapplyResult": "existing",
+        "expiryFrame": 1803
+      },
+      {
+        "fps": 120,
+        "reapplyAt": 5,
+        "reapplyResult": "existing",
+        "expiryFrame": 3603
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "347700 controlled scene emission outcome; source grant runs natively",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3CED90 isolated actor context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "518F30 supplied projectile source owner",
+    "E6D630 actual AtkParam_Pc lookup for supplied attack context",
+    "E6D630 actual AtkParam_Pc row lookup",
+    "E6FCB0 actual Behavior row lookup",
+    "E87800 actual enchant Bullet lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "attack kind and 10000 attack row supplied; weapon/arrow hit-data construction and actual payload binding not executed",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit local hit-score context in mode 0",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "frost payload supplied in hit slot 5; 43BE60 argument 5 skips physical HP damage while native effect delivery executes",
+    "full summon eligibility, game behavior VM, physical spawn and multiplayer not executed",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "recipient virtual +200 false ordinary hit predicate",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "native": {
+    "animation": "27D0F10 / 27D0400 → 40CD80 → 668B30",
+    "selfGrant": "343280 → 3C7F40 → 3C80A0",
+    "attack": "502830 → 511010",
+    "hit": "43BE60 → 3C80A0",
+    "ailment": "50D060 → 42D110 / 505280",
+    "hp": "506EC0 → 50B860",
+    "defense": "503800"
+  },
+  "gameplayVerified": false
+}
