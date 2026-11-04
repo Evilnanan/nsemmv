@@ -24,6 +24,7 @@ import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
 import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
 import raiderSkill from "../../data/effect-raider-skill-evidence.json";
+import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
 import ironeyePoison from "../../data/effect-ironeye-poison-evidence.json";
 import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
@@ -39,6 +40,27 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("caps Raider finisher growth at ten multiplicative steps without treating duplicate equipment as growth", () => {
+    for (const id of [7031400, 7031401]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["攻击倍率", "每次 ×1.03，最多约 +34.39%"], ["成长上限", "10 次"]]);
+      expect(detail.blocks[0].phase).toBe("强化反击的最后一击时");
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("重复装备不加快成长，也不提高上限");
+    }
+    for (const row of raiderGrowth.checks.growth) {
+      expect(row.steps.map(s => s.level)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10]);
+      expect(row.steps.at(-1)!.rates.every(v => Math.abs(v - 1.03 ** 10) < 0.000001)).toBe(true);
+      expect(row.notifications).toBe(10);
+    }
+    expect(raiderGrowth.attack.selfTarget).toBe(1);
+    expect(raiderGrowth.attack.opposeTarget).toBe(0);
+    expect(raiderGrowth.gameplayVerified).toBe(false);
+    expect(research.raiderGrowthEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-raider-growth-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates Raider's ordinary and empowered skill rates without displaying a maintenance lifetime", () => {
     for (const id of [7031500, 7031501]) {
       const detail = effectDetail(id)!;
@@ -823,7 +845,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(530);
+    expect(research.coverage.withNumericFields).toBe(532);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

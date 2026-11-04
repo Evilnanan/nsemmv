@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 601,
-    "withNumericFields": 530,
+    "withDetails": 603,
+    "withNumericFields": 532,
     "withMechanicsOnly": 36,
-    "nativeStacking": 418,
+    "nativeStacking": 420,
     "catalog": 2241,
-    "catalogWithDetails": 2044
+    "catalogWithDetails": 2046
   },
   "effects": {
     "0": {
@@ -10550,15 +10550,26 @@
       "states": [
         2080
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7031501,
+        7031502,
+        7031503,
+        7031504,
+        7031505,
+        7031506,
+        7031507,
+        7031508,
+        7031509,
+        7031510
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "raider-growth"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "自身判定球的完整生成／碰撞与命中去重、动作中断及事件重复调度、保存类别 9 的死亡／重载持久性、多人交互"
       ],
       "gameplayVerified": false
     },
@@ -10571,15 +10582,26 @@
       "states": [
         2080
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7031501,
+        7031502,
+        7031503,
+        7031504,
+        7031505,
+        7031506,
+        7031507,
+        7031508,
+        7031509,
+        7031510
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "raider-growth"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "自身判定球的完整生成／碰撞与命中去重、动作中断及事件重复调度、保存类别 9 的死亡／重载持久性、多人交互"
       ],
       "gameplayVerified": false
     },
@@ -49462,6 +49484,7 @@
   "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
+  "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
   "raiderSkillEvidenceSha256": "853f246691019d573f3ea20ef8fd0f7c234d2225221f6dfdb3eb78d182d5cb7f",
   "duchessPoiseEvidenceSha256": "7583ef9521d733d09e15bf3d39eef1076010a4b3189b9b0ec5d622f0c7c5c242",
   "wylderBleedEvidenceSha256": "4dc87d62c3b6f2cbdd4a0807a6859cfeea7986475caa80d921c2f2741368b4cd",
