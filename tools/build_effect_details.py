@@ -34,6 +34,15 @@ assert discovery['schema'] == 1 and discovery['regulationSha256'] == catalog['re
 assert discovery['exeSha256'] == evidence['exeSha256'] and not discovery['gameplayVerified']
 assert discovery['rowCount'] == 35755 and discovery['groupCount'] == 3627
 assert len(discovery['biasedGroups']) == 39 and len(discovery['draws']) == 1626
+totem_path = ROOT / 'data/effect-totem-evidence.json'
+totem = json.loads(totem_path.read_text())
+assert totem['schema'] == 1 and totem['regulationSha256'] == catalog['regulationSha256']
+assert totem['exeSha256'] == evidence['exeSha256'] and not totem['gameplayVerified']
+assert sum(map(len, totem['checks'].values())) == 86
+TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
+                7030000: [7030002, 7030003],
+                7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
+
 
 # Only fields with understood units enter the human-readable summary.
 RATES = {
@@ -109,6 +118,7 @@ if args.extract:
             needed.update(triggers['roots'].get(str(root), {}).get('seeds', []))
             needed.update(scripts['effects'].get(str(root), {}).get('seeds', []))
             needed.update(evidence.get('effectLinks', {}).get(str(root), []))
+            needed.update(TOTEM_LEAVES.get(root, []))
             for branch in scripts['effects'].get(str(root), {}).get('branches', []):
                 needed.add(branch['cooldown'])
                 for hand in branch['hands']:
@@ -300,6 +310,7 @@ def block(id, phase, linked, known_states=frozenset()):
 
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
+    'totem': ('不可叠加', '同类图腾增益覆盖并刷新持续时间', ['totem-animation', 'totem-native']),
     'attributes': ('可叠加', '能力值相加', ['equip-injection', 'instance-matching', 'attributes']),
     'attack': ('可叠加', '攻击倍率相乘', ['equip-injection', 'instance-matching', 'attack']),
     'defense': ('可叠加', '承伤倍率相乘', ['equip-injection', 'instance-matching', 'defense']),
@@ -428,6 +439,26 @@ for id, effect in source['effects'].items():
                        values=[['属性攻击力', '+20（随机一种）'],
                                ['概率', ' / '.join(b['name'] + ' ' + num(b['chance']) + '%' for b in branches)]],
                        scope=[], restrictions=['作用于切换的那只手'], duration=10, interval=None)]
+    totem_roots = set(effect['roots'].values()) & TOTEM_LEAVES.keys()
+    if totem_roots:
+        assert len(totem_roots) == 1
+        root = totem_roots.pop()
+        rule = 'totem'
+        if root == 7310000:
+            blocks = [dict(source=root, branches=TOTEM_LEAVES[root], phase='绝招发动后', linked=True,
+                values=[['图腾持续时间', '20 → 30 秒'], ['攻击增益持续时间', '30 → 45 秒']],
+                restrictions=[], scope=[], duration=None, interval=None)]
+        elif root == 7030000:
+            assert source['spells']['7030002']['toughnessDamageCutRate'] == .1
+            blocks = [dict(source=7030002, branches=[7030003], phase='获得图腾增益后', linked=True,
+                values=[['强韧度损耗', '-90%']], restrictions=[], scope=[], duration=20, interval=None)]
+            notes.append('搭配延长绝招时持续 30 秒。')
+        else:
+            assert [source['spells'][str(i)]['changeHpRate'] for i in (7090306, 7090303)] == [-20, -50]
+            blocks = [dict(source=7090300, branches=TOTEM_LEAVES[root], phase='图腾增益期间打倒敌人时', linked=True,
+                values=[['HP', '+20% 或 +50% 最大 HP']], restrictions=['恢复量随敌人类型变化'],
+                scope=[], duration=None, interval=None)]
+            notes.append('图腾增益持续 20 秒；搭配延长绝招时为 30 秒。')
     if id == '7032800':
         edge = links['emitters']['7032802']
         assert len(evidence['zoneMatching']) == 4
@@ -578,6 +609,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
+    if rules[id] == 'totem':
+        questions.append('图腾范围重复进入、多人图腾相遇、提前破坏及网络投递时序')
     if rules[id] == 'discovery':
         questions.append('所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理')
     if any(source['spells'].get(str(sp), {}).get(k, -1) > 0 for sp in effect['roots'].values() for k in ('conditionHp', 'conditionHpRate')):
@@ -603,6 +636,7 @@ research = dict(schema=1, regulationSha256=source['hashes']['regulation.bin'],
 research['linkEvidenceSha256'] = hashlib.sha256(link_path.read_bytes()).hexdigest()
 research['scriptEvidenceSha256'] = hashlib.sha256(script_path.read_bytes()).hexdigest()
 research['growthEvidenceSha256'] = hashlib.sha256(growth_path.read_bytes()).hexdigest()
+research['totemEvidenceSha256'] = hashlib.sha256(totem_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

@@ -1,0 +1,1173 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "gameplayVerified": false,
+  "assets": {
+    "chr/c0000.anibnd.dcx": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+    "chr/c0000_a6x.anibnd.dcx": "68e8e74f2df2e9a124b62e95091eca19cd27686e6df3db938bbe22fe1e7b8abd"
+  },
+  "asset": {
+    "id": 302000,
+    "defaultLifetime": 20,
+    "fade": 0.5
+  },
+  "animation": {
+    "tae": 2904,
+    "id": 640000,
+    "events": [
+      {
+        "index": 26,
+        "Type": 2,
+        "StartTime": 3.1333334,
+        "EndTime": 3.2333333,
+        "hex": "0300000000000000201C00000000D00800000004000000000000000000000000"
+      },
+      {
+        "index": 27,
+        "Type": 67,
+        "StartTime": 0,
+        "EndTime": 0.033333335,
+        "hex": "B28A6F00000000000000000000000000"
+      },
+      {
+        "index": 28,
+        "Type": 2,
+        "StartTime": 3.1333334,
+        "EndTime": 3.2333333,
+        "hex": "FA00000000000000481C00000000410800000004000000000000000000000000"
+      }
+    ]
+  },
+  "chains": [
+    {
+      "behavior": 700000200,
+      "bullets": [
+        {
+          "id": 30904000,
+          "HitBulletID": 30904001,
+          "assetNo_Hit": -1,
+          "life": 0.5,
+          "hitRadius": 0.10000000149011612,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 790000000,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904001,
+          "HitBulletID": 30904002,
+          "assetNo_Hit": -1,
+          "life": 0.10000000149011612,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 700000200,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904002,
+          "HitBulletID": 30904003,
+          "assetNo_Hit": 302000,
+          "life": 0.20000000298023224,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 700000200,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904003,
+          "HitBulletID": 30904004,
+          "assetNo_Hit": -1,
+          "life": 0.10000000149011612,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 700000200,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904004,
+          "HitBulletID": -1,
+          "assetNo_Hit": -1,
+          "life": 20,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 1,
+          "atkId_Bullet": 700000205,
+          "spEffectId0": 704100,
+          "spEffectId1": 7030002,
+          "spEffectId2": 7090302
+        }
+      ]
+    },
+    {
+      "behavior": 700000240,
+      "bullets": [
+        {
+          "id": 30904200,
+          "HitBulletID": 30904201,
+          "assetNo_Hit": -1,
+          "life": 0.5,
+          "hitRadius": 0.10000000149011612,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 790000001,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904201,
+          "HitBulletID": 30904202,
+          "assetNo_Hit": -1,
+          "life": 0.10000000149011612,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 700000200,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904202,
+          "HitBulletID": 30904203,
+          "assetNo_Hit": 302000,
+          "life": 0.20000000298023224,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 700000200,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904203,
+          "HitBulletID": 30904204,
+          "assetNo_Hit": -1,
+          "life": 0.10000000149011612,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 0,
+          "atkId_Bullet": 700000200,
+          "spEffectId0": 0,
+          "spEffectId1": 0,
+          "spEffectId2": 0
+        },
+        {
+          "id": 30904204,
+          "HitBulletID": -1,
+          "assetNo_Hit": -1,
+          "life": 30,
+          "hitRadius": 12,
+          "dmgHitRecordLifeTime": 60,
+          "isEndlessHit": 1,
+          "atkId_Bullet": 700000205,
+          "spEffectId0": 7310003,
+          "spEffectId1": 7030003,
+          "spEffectId2": 7090304
+        }
+      ]
+    }
+  ],
+  "attack": {
+    "id": 700000205,
+    "selfTarget": 1,
+    "friendlyTarget": 1,
+    "opposeTarget": 0,
+    "disableHitSpEffect": 0
+  },
+  "spells": {
+    "7310000": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0.10000000149011612,
+      "cycleOccurrenceSpEffectId": 7310001,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 0
+    },
+    "7310001": {
+      "stateInfo": 2113,
+      "spCategory": 202,
+      "categoryPriority": 45,
+      "effectEndurance": 5,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 30,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 0
+    },
+    "7310002": {
+      "stateInfo": 2256,
+      "spCategory": 202,
+      "categoryPriority": 45,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 0
+    },
+    "7310003": {
+      "stateInfo": 0,
+      "spCategory": 201,
+      "categoryPriority": 143,
+      "effectEndurance": 45,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1.149999976158142,
+      "magicAttackRate": 1.149999976158142,
+      "fireAttackRate": 1.149999976158142,
+      "thunderAttackRate": 1.149999976158142,
+      "darkAttackRate": 1.149999976158142,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 1
+    },
+    "704100": {
+      "stateInfo": 0,
+      "spCategory": 201,
+      "categoryPriority": 143,
+      "effectEndurance": 30,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1.149999976158142,
+      "magicAttackRate": 1.149999976158142,
+      "fireAttackRate": 1.149999976158142,
+      "thunderAttackRate": 1.149999976158142,
+      "darkAttackRate": 1.149999976158142,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 1
+    },
+    "7030000": {
+      "stateInfo": 2008,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 0
+    },
+    "7030002": {
+      "stateInfo": 0,
+      "spCategory": 202,
+      "categoryPriority": 82,
+      "effectEndurance": 20,
+      "motionInterval": 21,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 0.10000000149011612,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 2008,
+      "isContractSpEffectLife": 0
+    },
+    "7030003": {
+      "stateInfo": 0,
+      "spCategory": 202,
+      "categoryPriority": 82,
+      "effectEndurance": 30,
+      "motionInterval": 31,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 0.10000000149011612,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 2008,
+      "isContractSpEffectLife": 0
+    },
+    "7090300": {
+      "stateInfo": 2042,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 0,
+      "isContractSpEffectLife": 0
+    },
+    "7090301": {
+      "stateInfo": 199,
+      "spCategory": 202,
+      "categoryPriority": 83,
+      "effectEndurance": 0.6000000238418579,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": 7090306,
+      "applyIdOnGetSoul": 7090303,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    },
+    "7090302": {
+      "stateInfo": 199,
+      "spCategory": 202,
+      "categoryPriority": 83,
+      "effectEndurance": 20,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": 7090306,
+      "applyIdOnGetSoul": 7090303,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    },
+    "7090303": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": -50,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    },
+    "7090304": {
+      "stateInfo": 199,
+      "spCategory": 202,
+      "categoryPriority": 83,
+      "effectEndurance": 30,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": 7090307,
+      "applyIdOnGetSoul": 7090305,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    },
+    "7090305": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": -50,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    },
+    "7090306": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": -20,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    },
+    "7090307": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "categoryPriority": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "cycleOccurrenceSpEffectId": -1,
+      "ultimateArtDuration": 0,
+      "physicsAttackRate": 1,
+      "magicAttackRate": 1,
+      "fireAttackRate": 1,
+      "thunderAttackRate": 1,
+      "darkAttackRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpRate": -20,
+      "changeHpPoint": 0,
+      "applyIdOnKillSp": -1,
+      "applyIdOnGetSoul": 0,
+      "invocationConditionsStateChange1": 2042,
+      "isContractSpEffectLife": 0
+    }
+  },
+  "checks": {
+    "behavior": [
+      {
+        "judge": 7200,
+        "behavior": 700000200,
+        "weapon": 1000
+      },
+      {
+        "judge": 7240,
+        "behavior": 700000240,
+        "weapon": 1000
+      },
+      {
+        "judge": 7231,
+        "behavior": 700000231,
+        "weapon": 1000
+      }
+    ],
+    "duration": [
+      {
+        "ids": [],
+        "flags": 0,
+        "value": -1.0
+      },
+      {
+        "ids": [],
+        "flags": 2148270083,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310000
+        ],
+        "flags": 0,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310000
+        ],
+        "flags": 2148270083,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310001
+        ],
+        "flags": 0,
+        "value": 30.0
+      },
+      {
+        "ids": [
+          7310001
+        ],
+        "flags": 2148270083,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310002
+        ],
+        "flags": 0,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310002
+        ],
+        "flags": 2148270083,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310001,
+          7310001
+        ],
+        "flags": 0,
+        "value": 30.0
+      },
+      {
+        "ids": [
+          7310001,
+          7310001
+        ],
+        "flags": 2148270083,
+        "value": -1.0
+      },
+      {
+        "ids": [
+          7310002,
+          7310001
+        ],
+        "flags": 0,
+        "value": 30.0
+      },
+      {
+        "ids": [
+          7310002,
+          7310001
+        ],
+        "flags": 2148270083,
+        "value": -1.0
+      }
+    ],
+    "assetLifetime": [
+      {
+        "override": -1,
+        "attached": false,
+        "value": 0.0
+      },
+      {
+        "override": -1,
+        "attached": true,
+        "value": 20.0
+      },
+      {
+        "override": 0,
+        "attached": false,
+        "value": 0.0
+      },
+      {
+        "override": 0,
+        "attached": true,
+        "value": 20.0
+      },
+      {
+        "override": 30,
+        "attached": false,
+        "value": 0.0
+      },
+      {
+        "override": 30,
+        "attached": true,
+        "value": 30.0
+      },
+      {
+        "override": 60,
+        "attached": false,
+        "value": 0.0
+      },
+      {
+        "override": 60,
+        "attached": true,
+        "value": 60.0
+      }
+    ],
+    "timer": [
+      {
+        "life": 20,
+        "fade": 0.5,
+        "dt": 0,
+        "remaining": 20.5,
+        "opacity": 1.0,
+        "deleted": false
+      },
+      {
+        "life": 20,
+        "fade": 0.5,
+        "dt": 20,
+        "remaining": 0.5,
+        "opacity": 1.0,
+        "deleted": false
+      },
+      {
+        "life": 20,
+        "fade": 0.5,
+        "dt": 20.25,
+        "remaining": 0.25,
+        "opacity": 0.5,
+        "deleted": false
+      },
+      {
+        "life": 20,
+        "fade": 0.5,
+        "dt": 20.5,
+        "remaining": 0.0,
+        "opacity": 0.0,
+        "deleted": true
+      },
+      {
+        "life": 20,
+        "fade": 0.5,
+        "dt": 21,
+        "remaining": -0.5,
+        "opacity": 0.0,
+        "deleted": true
+      },
+      {
+        "life": 30,
+        "fade": 0.5,
+        "dt": 0,
+        "remaining": 30.5,
+        "opacity": 1.0,
+        "deleted": false
+      },
+      {
+        "life": 30,
+        "fade": 0.5,
+        "dt": 30,
+        "remaining": 0.5,
+        "opacity": 1.0,
+        "deleted": false
+      },
+      {
+        "life": 30,
+        "fade": 0.5,
+        "dt": 30.25,
+        "remaining": 0.25,
+        "opacity": 0.5,
+        "deleted": false
+      },
+      {
+        "life": 30,
+        "fade": 0.5,
+        "dt": 30.5,
+        "remaining": 0.0,
+        "opacity": 0.0,
+        "deleted": true
+      },
+      {
+        "life": 30,
+        "fade": 0.5,
+        "dt": 31,
+        "remaining": -0.5,
+        "opacity": 0.0,
+        "deleted": true
+      }
+    ],
+    "matching": [
+      {
+        "family": "duration",
+        "existing": 7310001,
+        "incoming": 7310001,
+        "category": 202,
+        "priority": 45,
+        "active": 7310001,
+        "duration": 5.0
+      },
+      {
+        "family": "duration",
+        "existing": 7310001,
+        "incoming": 7310002,
+        "category": 202,
+        "priority": 45,
+        "active": 7310002,
+        "duration": -1.0
+      },
+      {
+        "family": "duration",
+        "existing": 7310002,
+        "incoming": 7310001,
+        "category": 202,
+        "priority": 45,
+        "active": 7310001,
+        "duration": 5.0
+      },
+      {
+        "family": "duration",
+        "existing": 7310002,
+        "incoming": 7310002,
+        "category": 202,
+        "priority": 45,
+        "active": 7310002,
+        "duration": -1.0
+      },
+      {
+        "family": "attack",
+        "existing": 704100,
+        "incoming": 704100,
+        "category": 201,
+        "priority": 143,
+        "active": 704100,
+        "duration": 30.0
+      },
+      {
+        "family": "attack",
+        "existing": 704100,
+        "incoming": 7310003,
+        "category": 201,
+        "priority": 143,
+        "active": 7310003,
+        "duration": 45.0
+      },
+      {
+        "family": "attack",
+        "existing": 7310003,
+        "incoming": 704100,
+        "category": 201,
+        "priority": 143,
+        "active": 704100,
+        "duration": 30.0
+      },
+      {
+        "family": "attack",
+        "existing": 7310003,
+        "incoming": 7310003,
+        "category": 201,
+        "priority": 143,
+        "active": 7310003,
+        "duration": 45.0
+      },
+      {
+        "family": "poise",
+        "existing": 7030002,
+        "incoming": 7030002,
+        "category": 202,
+        "priority": 82,
+        "active": 7030002,
+        "duration": 20.0
+      },
+      {
+        "family": "poise",
+        "existing": 7030002,
+        "incoming": 7030003,
+        "category": 202,
+        "priority": 82,
+        "active": 7030003,
+        "duration": 30.0
+      },
+      {
+        "family": "poise",
+        "existing": 7030003,
+        "incoming": 7030002,
+        "category": 202,
+        "priority": 82,
+        "active": 7030002,
+        "duration": 20.0
+      },
+      {
+        "family": "poise",
+        "existing": 7030003,
+        "incoming": 7030003,
+        "category": 202,
+        "priority": 82,
+        "active": 7030003,
+        "duration": 30.0
+      },
+      {
+        "family": "healing",
+        "existing": 7090301,
+        "incoming": 7090301,
+        "category": 202,
+        "priority": 83,
+        "active": 7090301,
+        "duration": 0.6000000238418579
+      },
+      {
+        "family": "healing",
+        "existing": 7090301,
+        "incoming": 7090302,
+        "category": 202,
+        "priority": 83,
+        "active": 7090302,
+        "duration": 20.0
+      },
+      {
+        "family": "healing",
+        "existing": 7090301,
+        "incoming": 7090304,
+        "category": 202,
+        "priority": 83,
+        "active": 7090304,
+        "duration": 30.0
+      },
+      {
+        "family": "healing",
+        "existing": 7090302,
+        "incoming": 7090301,
+        "category": 202,
+        "priority": 83,
+        "active": 7090301,
+        "duration": 0.6000000238418579
+      },
+      {
+        "family": "healing",
+        "existing": 7090302,
+        "incoming": 7090302,
+        "category": 202,
+        "priority": 83,
+        "active": 7090302,
+        "duration": 20.0
+      },
+      {
+        "family": "healing",
+        "existing": 7090302,
+        "incoming": 7090304,
+        "category": 202,
+        "priority": 83,
+        "active": 7090304,
+        "duration": 30.0
+      },
+      {
+        "family": "healing",
+        "existing": 7090304,
+        "incoming": 7090301,
+        "category": 202,
+        "priority": 83,
+        "active": 7090301,
+        "duration": 0.6000000238418579
+      },
+      {
+        "family": "healing",
+        "existing": 7090304,
+        "incoming": 7090302,
+        "category": 202,
+        "priority": 83,
+        "active": 7090302,
+        "duration": 20.0
+      },
+      {
+        "family": "healing",
+        "existing": 7090304,
+        "incoming": 7090304,
+        "category": 202,
+        "priority": 83,
+        "active": 7090304,
+        "duration": 30.0
+      }
+    ],
+    "poise": [
+      {
+        "ids": [],
+        "flags": 0,
+        "value": 1.0
+      },
+      {
+        "ids": [],
+        "flags": 2148270083,
+        "value": 1.0
+      },
+      {
+        "ids": [
+          7030000
+        ],
+        "flags": 0,
+        "value": 1.0
+      },
+      {
+        "ids": [
+          7030000
+        ],
+        "flags": 2148270083,
+        "value": 1.0
+      },
+      {
+        "ids": [
+          7030002
+        ],
+        "flags": 0,
+        "value": 0.10000000149011612
+      },
+      {
+        "ids": [
+          7030002
+        ],
+        "flags": 2148270083,
+        "value": 1.0
+      },
+      {
+        "ids": [
+          7030003
+        ],
+        "flags": 0,
+        "value": 0.10000000149011612
+      },
+      {
+        "ids": [
+          7030003
+        ],
+        "flags": 2148270083,
+        "value": 1.0
+      }
+    ],
+    "killDispatch": [
+      {
+        "id": 7090301,
+        "special": 0,
+        "flags": 0,
+        "emitted": [
+          7090303
+        ]
+      },
+      {
+        "id": 7090301,
+        "special": 0,
+        "flags": 2148270083,
+        "emitted": []
+      },
+      {
+        "id": 7090301,
+        "special": 1,
+        "flags": 0,
+        "emitted": [
+          7090306
+        ]
+      },
+      {
+        "id": 7090301,
+        "special": 1,
+        "flags": 2148270083,
+        "emitted": []
+      },
+      {
+        "id": 7090302,
+        "special": 0,
+        "flags": 0,
+        "emitted": [
+          7090303
+        ]
+      },
+      {
+        "id": 7090302,
+        "special": 0,
+        "flags": 2148270083,
+        "emitted": []
+      },
+      {
+        "id": 7090302,
+        "special": 1,
+        "flags": 0,
+        "emitted": [
+          7090306
+        ]
+      },
+      {
+        "id": 7090302,
+        "special": 1,
+        "flags": 2148270083,
+        "emitted": []
+      },
+      {
+        "id": 7090304,
+        "special": 0,
+        "flags": 0,
+        "emitted": [
+          7090305
+        ]
+      },
+      {
+        "id": 7090304,
+        "special": 0,
+        "flags": 2148270083,
+        "emitted": []
+      },
+      {
+        "id": 7090304,
+        "special": 1,
+        "flags": 0,
+        "emitted": [
+          7090307
+        ]
+      },
+      {
+        "id": 7090304,
+        "special": 1,
+        "flags": 2148270083,
+        "emitted": []
+      }
+    ],
+    "healing": [
+      {
+        "id": 7090303,
+        "flags": 0,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090303,
+        "flags": 4,
+        "hpChangePercent": -50.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090303,
+        "flags": 2148270083,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090305,
+        "flags": 0,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090305,
+        "flags": 4,
+        "hpChangePercent": -50.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090305,
+        "flags": 2148270083,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090306,
+        "flags": 0,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090306,
+        "flags": 4,
+        "hpChangePercent": -20.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090306,
+        "flags": 2148270083,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090307,
+        "flags": 0,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090307,
+        "flags": 4,
+        "hpChangePercent": -20.0,
+        "hpChangePoints": 0.0
+      },
+      {
+        "id": 7090307,
+        "flags": 2148270083,
+        "hpChangePercent": 0.0,
+        "hpChangePoints": 0.0
+      }
+    ]
+  },
+  "fixtures": [
+    "0x3d4c10 player context / weapon wrapper",
+    "0xea76f0 player context / weapon wrapper",
+    "0xea9a60 player context / weapon wrapper",
+    "3C7FD0 effect application recorder",
+    "E6FCB0 actual Behavior PARAM lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped weapon PARAM lookup",
+    "synthetic player vtable and equipped weapon identity"
+  ]
+}

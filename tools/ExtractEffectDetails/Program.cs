@@ -6,8 +6,8 @@ using System.Text.Json;
 using System.Xml.Linq;
 using SoulsFormats;
 
-if (args.Length is not (4 or 5) || (args.Length == 5 && args[4] is not ("--research" or "--systems" or "--discovery")))
-    throw new ArgumentException("Usage: ExtractEffectDetails <Smithbox> <Game> <MMV mod> <output.json> [--research|--systems|--discovery]");
+if (args.Length is not (4 or 5) || (args.Length == 5 && args[4] is not ("--research" or "--systems" or "--discovery") && !args[4].StartsWith("--tables=")))
+    throw new ArgumentException("Usage: ExtractEffectDetails <Smithbox> <Game> <MMV mod> <output.json> [--research|--systems|--discovery|--tables=Name,Name]");
 var smithbox = Path.GetFullPath(args[0]);
 var game = Path.GetFullPath(args[1]);
 var mod = Path.GetFullPath(args[2]);
@@ -37,6 +37,11 @@ if (args.Length == 5 && args[4] == "--systems")
     tableNames = new[] { "GameSystemCommonParam", "PlayerCommonParam" };
 if (args.Length == 5 && args[4] == "--discovery")
     tableNames = new[] { "HeroParam", "ItemTableParam" };
+if (args.Length == 5 && args[4].StartsWith("--tables=")) {
+    tableNames = args[4][9..].Split(',');
+    if (tableNames.Any(n => n.Length == 0 || n.Any(c => !char.IsAsciiLetterOrDigit(c) && c != '_')))
+        throw new ArgumentException("Invalid table name");
+}
 foreach (var name in tableNames) {
     var defName = name == "BehaviorParam_PC" ? "BehaviorParam" : name == "AtkParam_Pc" ? "AtkParam" : name;
     var defPath = Path.Combine(smithbox, "Assets/PARAM/NR/Defs", defName + ".xml");

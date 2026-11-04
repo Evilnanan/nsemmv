@@ -39,6 +39,9 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7310000, ["图腾持续时间", "20 → 30 秒", "30 → 45 秒", "不可叠加"]],
+    [7030000, ["强韧度损耗", "-90%", "30 秒"]],
+    [7090300, ["+20% 或 +50% 最大 HP", "恢复量随敌人类型变化", "覆盖并刷新"]],
     [7032800, ["魔法阵持续时间", "30 秒", "半径 4.2 米", "1.5 秒", "不自动保留较强者"]],
     [7060000, ["约 +5%", "约 +1.5%", "拟态敌人最多计 2 档（需击败变身后的目标）", "倍率相乘"]],
     [7036200, ["-62.5%", "不可叠加"]],

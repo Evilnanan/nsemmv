@@ -8,11 +8,44 @@ import triggers from "../../data/effect-trigger-source.json";
 import links from "../../data/effect-link-source.json";
 import scripts from "../../data/effect-script-evidence.json";
 import growth from "../../data/effect-growth-source.json";
+import totem from "../../data/effect-totem-evidence.json";
 import discovery from "../../data/effect-discovery-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("distinguishes the totem lifetime, recipient buffs and instantaneous healing", () => {
+    for (const id of [7310000, 15000]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([
+        ["图腾持续时间", "20 → 30 秒"],
+        ["攻击增益持续时间", "30 → 45 秒"],
+      ]);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.stacking).toBe("不可叠加");
+    }
+    const poise = effectDetail(7030000)!;
+    expect(poise.blocks[0].values).toEqual([["强韧度损耗", "-90%"]]);
+    expect(poise.blocks[0].duration).toBe(20);
+    expect(poise.notes.join()).toContain("30 秒");
+    for (const id of [7090300, 15002]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["HP", "+20% 或 +50% 最大 HP"]]);
+      expect(detail.blocks[0].duration).toBeNull();
+      expect(detail.blocks[0].interval).toBeNull();
+      expect(detail.blocks[0].restrictions).toContain("恢复量随敌人类型变化");
+      expect(detail.stackingDetail).toContain("覆盖并刷新");
+    }
+    // Timer fade must not be included in the gameplay field duration.
+    expect(totem.checks.timer.filter((r) => r.dt === r.life).every((r) => !r.deleted && r.remaining === .5)).toBe(true);
+    expect(totem.checks.timer.filter((r) => r.dt >= r.life + .5).every((r) => r.deleted)).toBe(true);
+    expect(totem.checks.matching.every((r) => r.active === r.incoming)).toBe(true);
+    expect(totem.checks.killDispatch.filter((r) => !r.flags).every((r) => r.emitted.length === 1)).toBe(true);
+    expect(totem.gameplayVerified).toBe(false);
+    expect(research.totemEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-totem-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("describes weapon bias replacement without inventing a fixed percentage", () => {
     for (let id = 6630000; id <= 6633600; id += 100) {
       const detail = effectDetail(id)!;
@@ -29,7 +62,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(480);
+    expect(research.coverage.withNumericFields).toBe(483);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

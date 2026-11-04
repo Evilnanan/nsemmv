@@ -17637,7 +17637,7 @@
     "3C7FD0 effect application recorder; dispatch is native",
     "42C120 / 3D4180 synthetic gauge owner without player HUD notification",
     "42C120 synthetic Scholar owner for reviewed ally-grant branch",
-    "E6D630 absent weapon PARAM lookup",
+    "E6D630 absent attack PARAM lookup",
     "E76D50 GameSystemCommon row 0 lookup, actual extracted unknown_30C at +0x30c",
     "E78720 HeroStatus PARAM wrapper cleanup",
     "E78730 HeroStatus PARAM lookup using actual extracted rows",

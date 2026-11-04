@@ -1,7 +1,7 @@
 """Execute pinned PC effect predicates/calculators with actual MMV PARAM rows.
 
 Inputs stay read-only. The emulator has synthetic nodes, no OS/game process.
-The absent weapon PARAM lookup is stubbed; no multiplier or matching predicate
+The absent attack PARAM lookup is stubbed; no multiplier or matching predicate
 is substituted. This checks effect-instance behavior, not the whole expedition.
 """
 import argparse
@@ -176,7 +176,7 @@ def run(rva, ids, args, kind=0, flags=0, emitted=None, setup=None, xmm_args=None
             uc.mem_write(wrapper, struct.pack('<QI', system_row, 0))
             finish(wrapper)
         if address - BASE == 0xe6d630:
-            calls.add('E6D630 absent weapon PARAM lookup')
+            calls.add('E6D630 absent attack PARAM lookup')
             uc.reg_write(UC_X86_REG_RAX, uc.reg_read(UC_X86_REG_RCX))
             sp = uc.reg_read(UC_X86_REG_RSP)
             uc.reg_write(UC_X86_REG_RIP, struct.unpack('<Q', uc.mem_read(sp, 8))[0])
