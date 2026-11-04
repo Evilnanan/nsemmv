@@ -1,0 +1,1461 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "behaviorParamSha256": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+  "attackParamSha256": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "animationBundleSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "behaviorSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+  "paths": [
+    {
+      "state": "SmashAttack1",
+      "stateItem": 41918,
+      "generator": "SmashAttack1_CMSG",
+      "generatorItem": 45860,
+      "arrayItem": 52756,
+      "clip": "a904_541010_hkx_AutoSet_00",
+      "clipItem": 60805,
+      "animation": "a904_541010"
+    },
+    {
+      "state": "SmashAttack2",
+      "stateItem": 41919,
+      "generator": "SmashAttack2_CMSG",
+      "generatorItem": 45862,
+      "arrayItem": 52758,
+      "clip": "a904_541020_hkx_AutoSet_02",
+      "clipItem": 60806,
+      "animation": "a904_541020"
+    }
+  ],
+  "events": [
+    {
+      "tae": 2904,
+      "animation": 541010,
+      "index": 2,
+      "Type": 1,
+      "StartTime": 0.6666667,
+      "EndTime": 0.8,
+      "hex": "000000000100000060180000FF035B0900000000000000000000000000000000"
+    },
+    {
+      "tae": 2904,
+      "animation": 541020,
+      "index": 2,
+      "Type": 1,
+      "StartTime": 1.8666667,
+      "EndTime": 2.0333333,
+      "hex": "00000000010000006A180000FF035B0900000000000000000000000000000000"
+    }
+  ],
+  "root": 7500400,
+  "leaf": 7500401,
+  "attacks": {
+    "600000240": {
+      "selfTarget": 0,
+      "friendlyTarget": 0,
+      "opposeTarget": 1,
+      "disableHitSpEffect": 0,
+      "spEffectId0": 6905,
+      "spEffectId1": 7500401,
+      "spEffectId2": -1,
+      "spEffectId3": -1,
+      "spEffectId4": -1
+    },
+    "600000250": {
+      "selfTarget": 0,
+      "friendlyTarget": 0,
+      "opposeTarget": 1,
+      "disableHitSpEffect": 0,
+      "spEffectId0": 6908,
+      "spEffectId1": 7500401,
+      "spEffectId2": -1,
+      "spEffectId3": -1,
+      "spEffectId4": -1
+    }
+  },
+  "checks": {
+    "dispatch": [
+      {
+        "animation": 541010,
+        "copies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 541010,
+        "copies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 541010,
+        "copies": 1,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 600000240,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 541010,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000240,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.13333332538604736
+          }
+        ]
+      },
+      {
+        "animation": 541010,
+        "copies": 2,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 600000240,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 541010,
+        "copies": 2,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000240,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.13333332538604736
+          }
+        ]
+      },
+      {
+        "animation": 541010,
+        "copies": 3,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 600000240,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 541010,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000240,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.13333332538604736
+          }
+        ]
+      },
+      {
+        "animation": 541020,
+        "copies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 541020,
+        "copies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 541020,
+        "copies": 1,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 600000250,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 541020,
+        "copies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000250,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.16666662693023682
+          }
+        ]
+      },
+      {
+        "animation": 541020,
+        "copies": 2,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 600000250,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 541020,
+        "copies": 2,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000250,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.16666662693023682
+          }
+        ]
+      },
+      {
+        "animation": 541020,
+        "copies": 3,
+        "active": 0,
+        "requests": [
+          {
+            "behavior": 600000250,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.0
+          }
+        ]
+      },
+      {
+        "animation": 541020,
+        "copies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000250,
+            "kind": 0,
+            "slot": 1,
+            "hand": 6,
+            "elapsed": 0.16666662693023682
+          }
+        ]
+      }
+    ],
+    "arrival": [
+      {
+        "count": 0,
+        "attackKind": 0,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 1,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 2,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 3,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 4,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 5,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 6,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 7,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 8,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 9,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 0,
+        "attackKind": 10,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": []
+      },
+      {
+        "count": 1,
+        "attackKind": 0,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 1,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 2,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 3,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 4,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 5,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 6,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 7,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 8,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 9,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "attackKind": 10,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 0,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 1,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 2,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 3,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 4,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 5,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 6,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 7,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 8,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 9,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "attackKind": 10,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 0,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 1,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 2,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 3,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 4,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 5,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 6,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 7,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 8,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 9,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "attackKind": 10,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 0,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 1,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 2,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 3,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 4,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 5,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 6,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 7,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 8,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 9,
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "count": 6,
+        "attackKind": 10,
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "refresh": [
+      {
+        "elapsed": 0,
+        "repeats": 1,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 0,
+        "repeats": 2,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 0,
+        "repeats": 3,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 1,
+        "repeats": 1,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 1,
+        "repeats": 2,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 1,
+        "repeats": 3,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 5,
+        "repeats": 1,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 5,
+        "repeats": 2,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 5,
+        "repeats": 3,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 12,
+        "repeats": 1,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 12,
+        "repeats": 2,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      },
+      {
+        "elapsed": 12,
+        "repeats": 3,
+        "nodes": [
+          {
+            "id": 7500401,
+            "lifetime": 13.0,
+            "flags": 4
+          }
+        ],
+        "rates": [
+          0.87,
+          0.87,
+          0.87,
+          0.87,
+          0.87
+        ]
+      }
+    ],
+    "lifetime": [
+      {
+        "fps": 30,
+        "expiryFrame": 392
+      },
+      {
+        "fps": 60,
+        "expiryFrame": 783
+      },
+      {
+        "fps": 120,
+        "expiryFrame": 1563
+      }
+    ]
+  },
+  "native": {
+    "dispatch": "414820",
+    "type1": "40CA20",
+    "state": "508E20",
+    "behavior": "668B30",
+    "insert": "50D060",
+    "qualify": "5057D0",
+    "update": "50ACD0",
+    "attack": "502830"
+  },
+  "stubs": [
+    "0x3d4c10 isolated actor context / hand identity",
+    "0x4d1b20 isolated actor context / hand identity",
+    "0xea76f0 isolated actor context / hand identity",
+    "0xea9a60 isolated actor context / hand identity",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "3CED90 isolated animation-owner context",
+    "415EA0 attack animation-reference sink after request",
+    "4341D0 attack-instance request recorder; collision and attack construction are not simulated",
+    "E6D630 absent attack PARAM lookup for untagged attack getter",
+    "E6FCB0 actual Behavior row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic animation-owner virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}

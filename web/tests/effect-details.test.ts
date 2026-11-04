@@ -22,6 +22,7 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import raiderDebuff from "../../data/effect-raider-debuff-evidence.json";
 import absorption from "../../data/effect-recluse-absorption-evidence.json";
 import restage from "../../data/effect-duchess-restage-evidence.json";
 import ironeyeMark from "../../data/effect-ironeye-mark-evidence.json";
@@ -34,6 +35,31 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("reduces a skill-hit target's attack rate with refresh and spell exclusions", () => {
+    const detail = effectDetail(6500400)!;
+    expect(detail.blocks[0].values).toEqual([["目标攻击倍率", "-13%"]]);
+    expect(detail.blocks[0].duration).toBe(13);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("再次命中刷新时长");
+    expect(detail.notes).toEqual(["不影响按魔法、祷告或特殊法术处理的攻击。"]);
+    for (const row of raiderDebuff.checks.arrival) {
+      expect(row.rates).toEqual(Array(5).fill(row.count && ![3,4,5,10].includes(row.attackKind) ? 0.87 : 1));
+      expect(row.nodes).toHaveLength(row.count ? 1 : 0);
+    }
+    for (const row of raiderDebuff.checks.refresh) {
+      expect(row.rates).toEqual(Array(5).fill(0.87));
+      expect(row.nodes).toHaveLength(1);
+      expect(row.nodes[0].lifetime).toBe(13);
+    }
+    for (const row of raiderDebuff.checks.dispatch)
+      expect(row.requests).toHaveLength(row.copies ? 1 : 0);
+    for (const row of raiderDebuff.checks.lifetime)
+      expect(Math.abs(row.expiryFrame / row.fps - 13)).toBeLessThanOrEqual(3.01 / row.fps);
+    expect(raiderDebuff.gameplayVerified).toBe(false);
+    expect(research.raiderDebuffEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-raider-debuff-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("protects the collected element with independent timers and same-element refresh", () => {
     const detail = effectDetail(6500600)!;
     expect(detail.blocks[0].values).toEqual([["对应属性减伤", "20%"]]);
@@ -699,7 +725,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(523);
+    expect(research.coverage.withNumericFields).toBe(524);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

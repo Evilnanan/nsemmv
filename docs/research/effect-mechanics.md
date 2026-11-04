@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 594 |
-| 其中有已解读的数值字段 | 523 |
+| 有可展示的数值、机制或替换法术 | 595 |
+| 其中有已解读的数值字段 | 524 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 411 |
-| 尚未解析到可展示详情 | 43 |
+| 已核对原生叠加处理 | 412 |
+| 尚未解析到可展示详情 | 42 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -582,3 +582,13 @@ Bullet 半径 8 米，Atk 600000070 和叶 7500101 均允许自身／友方、�
 四个短期收集标记自然结束后分别请求 7500601～7500604；使用逐帧资格更新、原生到期替换及显式下一帧投递，避免把短期标记的 0.3 秒误写成减伤时长。四个叶效果都要求状态 2396，持续 30 秒，对应属性承伤倍率 0.8。原生 `503800` 读取防御结果：没有词条不减伤，装备一至三份均只减伤 20%；不同属性的叶效果可以并存，同属性再次触发只刷新自己的 30 秒，物理承伤不变。
 
 [`脚本`](../../tools/probe_recluse_absorption.py) 与 [`证据`](../../data/effect-recluse-absorption-evidence.json) 共 326 组检查，包括 16 组资格／数值、30 组属性组合／刷新、12 组 30／60／120 FPS 到期验证。复现：`python tools/probe_recluse_absorption.py <EXE> <extracted.json> <animations.json> <behavior.json> data/effect-recluse-absorption-evidence.json`。并未模拟属性痕空间选择、完整动作中断、混合魔法生成、最终伤害结算或多人投递，`gameplayVerified` 为 false。
+
+## 无赖技艺命中后的减攻（第 30 批）
+
+6500400 的根效果 7500400 提供状态 2395。实际行为图的 `SmashAttack1`／`SmashAttack2` 指向 a904_541010／541020，各自 Type 1 事件 2 在 0.6667～0.8 秒／1.8667～2.0333 秒请求 judge 6240／6250，条件都是状态 2395。原生 `414820 → 40CA20 → 508E20 → 668B30` 解析出 Behavior 600000240／600000250；两行均直接引用同编号 AtkParam_Pc，其 spEffectId1 都是 7500401，攻击目标只含敌对方，且不禁止命中特效。
+
+16 组事件检查覆盖两个动作、零／一／二／三份词条及活动／停止上下文。无根状态不请求攻击，有状态只请求一次；Type 1 的停止上下文仍向攻击实例层传递请求，elapsed 为零，不能误套 Type 2 的活动事件门槛。攻击实例构造与碰撞到达保留为明确夹具，未把它们描述为完整命中实测。
+
+7500401 不要求接收者持有遗物状态。原生插入、资格检查与 `502830` 数值 getter 确认其物理／魔力／火／雷／圣攻击倍率均为 0.87，持续 13 秒；重复到达合并为一份并刷新到 13 秒。55 组输入类型检查同时保留不生效的路径：`511010` 的 kind 3／4／10 分别检查 +0x160 bit7、+0x161 bit0、+0x259 bit5，即 `magParamChange`／`miracleParamChange`／`shamanParamChange`，本效果均为零；kind 5 的该倍率出口也保持中性。详情只列已对应到玩家概念的法术例外，不把敌人的属性攻击直接等同于施法来源。
+
+[`脚本`](../../tools/probe_raider_debuff.py) 与 [`证据`](../../data/effect-raider-debuff-evidence.json) 共 86 组检查，另含 12 组刷新及 3 组 30／60／120 FPS 到期验证。复现：`python tools/probe_raider_debuff.py <EXE> <extracted.json> <assets.json> <animations.json> <behavior.json> data/effect-raider-debuff-evidence.json`。完整攻击实例、碰撞、最终伤害修正及多人／重载未模拟，`gameplayVerified` 为 false。
