@@ -5,12 +5,12 @@
 | 当前进度 | 数量 |
 | --- | ---: |
 | 已建研究记录（完整目录／可获取范围） | 2241／637 |
-| 有可展示的数值、机制或替换法术 | 570 |
-| 其中有已解读的数值字段 | 499 |
+| 有可展示的数值、机制或替换法术 | 572 |
+| 其中有已解读的数值字段 | 501 |
 | 其中仅有替换法术名称 | 35 |
 | 其中仅有机制说明 | 36 |
-| 已核对原生叠加处理 | 336 |
-| 尚未解析到可展示详情 | 67 |
+| 已核对原生叠加处理 | 338 |
+| 尚未解析到可展示详情 | 65 |
 
 这些是不同维度的覆盖数，不能相加作为“完全解明”数量。`decoded-fields` 只表示解读了数值字段；`decoded-mechanism` 单独记录不含新数值的机制说明；`native-analysis` 表示当前代码处理已核对，不表示完成了整局、多人或所有边界的游戏实测。没有完成游戏实测的条目统一保留 `gameplayVerified: false`。研究记录不进入主界面。
 
@@ -34,6 +34,7 @@ python tools/probe_executor_recovery.py <游戏目录>/nightreign.exe <临时目
 python tools/probe_weapon_recovery.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json data/effect-weapon-recovery-evidence.json
 python tools/probe_recluse_bleed.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/animations.json data/effect-recluse-bleed-evidence.json
 python tools/probe_revenant_sacrifice.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/assets.json <临时目录>/animations.json <MMV的mod目录>/action/script/c0000.hks data/effect-revenant-sacrifice-evidence.json
+python tools/probe_gesture_madness.py <游戏目录>/nightreign.exe <临时目录>/extracted.json <临时目录>/animations.json data/effect-gesture-madness-evidence.json
 python tools/build_effect_details.py --extract <临时目录>/extracted.json
 ```
 
@@ -53,7 +54,7 @@ python tools/build_effect_growth.py <临时目录>/extracted.json <临时目录>
 
 [`probe_effect_mechanics.py`](../../tools/probe_effect_mechanics.py) 在 Unicorn 内执行原 EXE 的指令，使用实际 MMV 的 1024 字节 SpEffect 行、28 字节 HeroStatus 行，构造效果链表和有效/无效节点。字段偏移先与提取器解码结果逐行核对。遇到未准备的依赖或超过执行预算即失败。
 
-目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**、执行者回血 **24 组**、武器命中恢复 **200 组**、隐士自出血 **22 组**、复仇者献血 **39 组**，另有 **248 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
+目前主验证文件有 **1728 组原生检查**，武器倾向另有 **2020 组**（394 组倾向选择、1626 组抽选），图腾 **86 组**、完整效果链 **56 组**、守护者回血 **22 组**、执行者回血 **24 组**、武器命中恢复 **200 组**、隐士自出血 **22 组**、复仇者献血 **39 组**、盘腿坐发狂 **41 组**，另有 **248 组实际 HKS 分支检查**。原生结果按谓词、能力值、倍率、计时、触发、成长等分别记录，不把记录数当成已解明词条数。
 
 外部依赖替代包括：`E6D630` 无攻击（AtkParam）行的查询，`E78730` 用实际 HeroStatus 字节实现的表查询，`E78720` 表包装对象清理；杀敌分派的 `3C7FD0` 记录下游效果 ID，随后单独执行真实数值聚合；绝招结算中的 `42C120/3D4180` 提供无玩家 HUD 通知的合成 owner；计时刷新中的 `EA17E0` 查询实际 SpEffect 行。完整清单保存在输出的 `stubs`。倍率、实例匹配、等级选择、插值、取整、计时、累计值重置均执行原生代码。没有启动游戏进程，没有模拟完整远征。
 
@@ -381,3 +382,17 @@ Bullet 半径 30 米，命中附加 7010902 和 7010905。Atk 790000003 不允�
 **获救后另有真实的持续恢复。** 7010905 可作用于倒地角色，作为无限寿命标记；实际 HKS `NearDeathRevival_onActivate` 只在持有此标记时发 7010906。后者替换标记，每次恢复最大 HP 的 100%，0.5 秒寿命、0 周期，每次原生更新都结算。30／60／120 Hz 隔离运行均得到约 0.5 秒的连续恢复，最后结算点受资格／过期移除顺序影响，至多跨两个更新边界。这段寿命确有生效意义，详情保留“持续恢复”和约 0.5 秒。`NearDeathStart_onActivate` 发 7010909 清除同类别标记，未倒地时获得标记不保证下次倒地后仍可使用。
 
 [`probe_revenant_sacrifice.py`](../../tools/probe_revenant_sacrifice.py) 共 43 组：六组开始／结束与装备数量、六组不同更新频率下的发射成功／失败、十二组 HP 换算、十五组叶节点与标记生命周期、四组实际 HKS 函数分支。类别 201／优先级 54 的标记、恢复与清除实际执行覆盖处理；重复标记只保留一份。证据见 [`effect-revenant-sacrifice-evidence.json`](../../data/effect-revenant-sacrifice-evidence.json)。发射结果、owner 身份、Lua 环境与投递为明确夹具，`gameplayVerified` 保持 false。
+
+## 第十六批：盘腿坐的持续累积与发狂结算
+
+7035400／7035410 分别提供状态 2278／2375。TAE 2000／80911 的事件 9／10 均为 Type 67，在 0～6.1 秒区间维护 7035401／7035411；两个种子要求各自的根状态，每 0.1 秒请求 7035402／7035412。
+
+这里不能把动画事件当成一次性施加。实际 `40FF20` 调用 `509150` 查询已有节点：缺少时经 `3C8BE0` 请求插入，已有时调用 `50A630` 标记 node +0x7C 的 bit 2。`50ACD0` 在本次移除判断中保留仍被动画维护的节点，`511B80` 更新后清除此标记。新探针每次更新都执行该事件派发与容器生命周期，不直接改写寿命或伪造刷新。种子的零秒寿命因此不等于只触发一次。另在私有检查中将隐士 7032901 的 0.1 秒事件窗口接入同一维护路径，仍只得到一次出血请求；没有以盘腿坐的频率套用其它动画。
+
+两种叶节点均为状态 437，每次基础发狂累积 10。`42D110 → EA0D20 / 5021C0 / 42E0E0 → 42CD70` 实际处理异常来源修正、免疫及剩余抗性；未达到阈值时立即删除刚插入的叶节点，不结算 HP／FP 或运行后继。达到阈值才保留节点，基础损失为 **最大 HP 的 10% + 100**，以及 **30 FP**。正号的 changeHp／changeMp 字段在这里都是损失，不是恢复。1 秒寿命／2 秒内部周期仅产生初始一次损失，不显示成持续扣血。49060 与到期替换 1110 的状态 467 仍留待连接完整的动作反应。
+
+原生 +0x3C5 bit 0 对应 `unknown_241b_1`，选择上下文中的异常累积倍率；不是 +0x353 bit 7 的 `unknown_239h`。探针明确填入七种异常的中性倍率与整体倍率，再执行实际运算。未把未初始化的零倍率造成的零累积误判为词条无效。自然退条、动态抗性成长及非中性来源修正仍未与整段角色更新接通，因此详情只写基础累积和约 0.1 秒间隔，不承诺固定几秒发狂。
+
+同一版本重复装备不会增加种子或累积；两种版本的动画事件各自维护各自种子，未发狂阶段的累积相加。21 组节奏检查覆盖 30／60／120 Hz 与无装备、单份、三份及两种版本的组合，比较相同输入下的完整请求和抗性变化。16 组发作检查覆盖两版本、剩余抗性 9／10／11／100 与免疫开关；只有实际发作才产生一次 HP／FP 损失。四组资源检查覆盖最大值 1／99／137／1000，137 最大 HP 时损失 113 HP，FP 损失始终为 30。
+
+[`probe_gesture_madness.py`](../../tools/probe_gesture_madness.py) 与 [`effect-gesture-madness-evidence.json`](../../data/effect-gesture-madness-evidence.json) 保存 41 组检查。夹具只在给定的一秒动作输入内维护事件，发作情景在首次发作后停止动作输入；没有模拟发狂反应如何自动中断动作、自然退条、完整网络与重载。所有 `gameplayVerified` 保持 false。

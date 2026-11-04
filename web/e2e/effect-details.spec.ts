@@ -39,6 +39,8 @@ test("newly decoded mechanics remain readable on desktop and mobile", async ({ p
   await page.locator(".effect-cell").first().click();
   const details = page.getByRole("dialog", { name: "词条详情", exact: true });
   for (const [id, expected] of [
+    [7035400, ["基础发狂累积", "每 0.1 秒", "最大值的 10% + 100", "FP 损失", "30", "不同版本的累积相加", "同版重复无效"]],
+    [7035410, ["实际发狂时", "免疫发狂", "不会因此损失 HP／FP"]],
     [7010900, ["最大值的 50%", "最大值的 100%", "半径 30 米", "不含自身", "获救时", "0.5 秒", "持续恢复"]],
     [16002, ["最大值的 50%", "不可叠加"]],
     [7032900, ["最大值的 20%", "HP 归零", "+16%", "30 秒", "+34.56%", "免疫时也不会获得增攻"]],

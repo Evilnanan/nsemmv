@@ -16,10 +16,46 @@ import executorRecovery from "../../data/effect-executor-recovery-evidence.json"
 import weaponRecovery from "../../data/effect-weapon-recovery-evidence.json";
 import recluseBleed from "../../data/effect-recluse-bleed-evidence.json";
 import sacrifice from "../../data/effect-revenant-sacrifice-evidence.json";
+import gesture from "../../data/effect-gesture-madness-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("keeps held gesture buildup separate from madness onset and distinguishes the two versions", () => {
+    for (const id of [7035400, 7035410]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["基础发狂累积", "10"]]);
+      expect(detail.blocks[0].restrictions).toContain("约每 0.1 秒累积一次");
+      expect(detail.blocks[1].values).toEqual([["基础 HP 损失", "最大值的 10% + 100"], ["FP 损失", "30"]]);
+      expect(detail.blocks.every((b) => b.duration === null)).toBe(true);
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("不同版本的累积相加；同版重复无效");
+    }
+    for (const fps of [30, 60, 120]) {
+      const cases = gesture.checks.cadence.filter((c) => c.fps === fps);
+      expect(cases[1].attempts).toEqual(cases[2].attempts);
+      expect(cases[3].attempts).toEqual(cases[4].attempts);
+      expect(cases[5].attempts).toEqual(cases[6].attempts);
+      expect(cases[5].attempts).toHaveLength(cases[1].attempts.length * 2);
+      for (const c of cases) {
+        expect(c.resources).toEqual([]);
+        expect(c.remaining).toBe(c.startingResistance - c.attempts.length * 10);
+      }
+    }
+    for (const c of gesture.checks.onset) {
+      expect(c.resources).toHaveLength(c.immune ? 0 : 1);
+      if (c.immune) expect(c.remaining).toBe(c.startingResistance);
+      else expect(c.resources[0]).toMatchObject({ hp: -200, fp: -30 });
+    }
+    for (const c of gesture.checks.resources) {
+      expect(c.packet[0]).toBe(-Math.trunc(c.maximum * .1 + 100));
+      expect(c.fp).toEqual([-30, 0]);
+    }
+    expect(research.gestureMadnessEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-gesture-madness-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(gesture.gameplayVerified).toBe(false);
+  });
   it("separates Revenant's one-shot sacrifice and ally heal from continuous revival recovery", () => {
     const detail = effectDetail(7010900)!;
     expect(detail).toEqual(effectDetail(16002));
@@ -335,7 +371,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(499);
+    expect(research.coverage.withNumericFields).toBe(501);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

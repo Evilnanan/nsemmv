@@ -77,6 +77,12 @@ assert sacrifice['exeSha256'] == evidence['exeSha256'] and not sacrifice['gamepl
 assert sacrifice['paramSha256'] == evidence['paramSha256']
 assert sacrifice['scriptSha256'] == scripts['scriptSha256']
 assert {k: len(v) for k, v in sacrifice['checks'].items()} == dict(trigger=6, emission=6, hp=12, lifecycle=15, script=4)
+gesture_path = ROOT / 'data/effect-gesture-madness-evidence.json'
+gesture = json.loads(gesture_path.read_text())
+assert gesture['schema'] == 1 and gesture['regulationSha256'] == catalog['regulationSha256']
+assert gesture['exeSha256'] == evidence['exeSha256'] and not gesture['gameplayVerified']
+assert gesture['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in gesture['checks'].items()} == dict(cadence=21, onset=16, resources=4)
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -163,6 +169,8 @@ if args.extract:
                 needed.update(map(int, executor['rows']))
             if root == sacrifice['root']:
                 needed.update(map(int, sacrifice['rows']))
+            if root in gesture['roots']:
+                needed.update([root + 1, root + 2])
             for branch in scripts['effects'].get(str(root), {}).get('branches', []):
                 needed.add(branch['cooldown'])
                 for hand in branch['hands']:
@@ -363,6 +371,7 @@ STACKING_RULES = {
     'weapon-recovery': ('不可叠加', '同种词条重复无效；回血与回蓝可同时生效', ['weapon-recovery']),
     'recluse-bleed': ('不可叠加', '重复装备不增加单次触发收益', ['recluse-bleed']),
     'revenant-sacrifice': ('不可叠加', '重复装备不增加单次触发收益', ['revenant-sacrifice']),
+    'gesture-madness': ('可叠加', '不同版本的累积相加；同版重复无效', ['gesture-madness']),
     'role-repeat': ('不可叠加', '重复装备不增加单次触发收益', ['effect-lifecycle']),
     'wylder-skill': ('不可叠加', '重复装备不增加单次触发收益', ['action-triggers', 'action-start', 'skill-stack']),
     'role-max-hp': ('不可叠加', '同类增益互相覆盖', ['action-triggers', 'role-lifecycle']),
@@ -558,6 +567,20 @@ for id, effect in source['effects'].items():
         notes.extend(['需实际触发自身出血；免疫时也不会获得增攻。',
                       '多次发动的增益倍率相乘、分别计时；两次合计 +34.56%。'])
         rule = 'recluse-bleed'
+    gesture_roots = set(effect['roots'].values()) & set(gesture['roots'])
+    if gesture_roots:
+        root = next(iter(gesture_roots))
+        leaf = source['spells'][str(root + 2)]
+        assert leaf['madnessAttackPower'] == 10 and leaf['changeHpRate'] == 10
+        assert leaf['changeHpPoint'] == 100 and leaf['changeMpPoint'] == 30
+        blocks = [dict(source=root + 2, branches=[root + 1], phase='盘腿坐期间', linked=True,
+                       values=[['基础发狂累积', '10']], restrictions=['约每 0.1 秒累积一次'],
+                       scope=[], duration=None, interval=None),
+                  dict(source=root + 2, phase='实际发狂时', linked=True,
+                       values=[['基础 HP 损失', '最大值的 10% + 100'], ['FP 损失', '30']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('免疫发狂时不会累积，也不会因此损失 HP／FP。')
+        rule = 'gesture-madness'
     if sacrifice['root'] in effect['roots'].values():
         assert source['spells']['7010901']['changeHpRate'] == 50
         assert all(source['spells'][str(i)]['changeHpRate'] == -100 for i in (7010902, 7010906))
@@ -762,9 +785,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -784,6 +807,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('出血伤害修正与保护状态组合、完整角色投递／倒地／网络／重载交互')
     if rules[id] == 'revenant-sacrifice':
         questions.append('完整命中／救援队列、低血量与绝招保护状态的结算顺序、多人来源及重载交互')
+    if rules[id] == 'gesture-madness':
+        questions.append('自然退条／抗性成长与来源修正、发狂反应自动中断动作、完整角色队列／网络／重载交互')
     if id in weapon_recovery_families:
         if rules[id] != 'weapon-recovery':
             refs.append('weapon-recovery')
@@ -825,6 +850,7 @@ research['executorRecoveryEvidenceSha256'] = hashlib.sha256(executor_path.read_b
 research['weaponRecoveryEvidenceSha256'] = hashlib.sha256(weapon_recovery_path.read_bytes()).hexdigest()
 research['recluseBleedEvidenceSha256'] = hashlib.sha256(recluse_bleed_path.read_bytes()).hexdigest()
 research['revenantSacrificeEvidenceSha256'] = hashlib.sha256(sacrifice_path.read_bytes()).hexdigest()
+research['gestureMadnessEvidenceSha256'] = hashlib.sha256(gesture_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

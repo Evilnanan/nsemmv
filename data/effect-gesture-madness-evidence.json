@@ -1,0 +1,5063 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "roots": [
+    7035400,
+    7035410
+  ],
+  "events": [
+    {
+      "tae": 2000,
+      "animation": 80911,
+      "index": 9,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 6.1,
+      "hex": "095A6B00000000000000000000000000"
+    },
+    {
+      "tae": 2000,
+      "animation": 80911,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 6.1,
+      "hex": "135A6B00000000000000000000000000"
+    }
+  ],
+  "checks": {
+    "cadence": [
+      {
+        "equipment": [],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [],
+        "grants": [],
+        "resources": [],
+        "remaining": 99999
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 4,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 7,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 10,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 13,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 16,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 19,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 22,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 25,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 28,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 3,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 6,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 9,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 12,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 15,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 18,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 21,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 24,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 27,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035400,
+          7035400,
+          7035400
+        ],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 4,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 7,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 10,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 13,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 16,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 19,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 22,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 25,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 28,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 3,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 6,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 9,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 12,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 15,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 18,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 21,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 24,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 27,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 4,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 7,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 10,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 13,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 16,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 19,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 22,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 25,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 28,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 3,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 6,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 9,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 12,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 15,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 18,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 21,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 24,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 27,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035410,
+          7035410,
+          7035410
+        ],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 4,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 7,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 10,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 13,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 16,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 19,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 22,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 25,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 28,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 3,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 6,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 9,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 12,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 15,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 18,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 21,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 24,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 27,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035400,
+          7035410
+        ],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 4,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 4,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 7,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 7,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 10,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 10,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 13,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 13,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          },
+          {
+            "frame": 16,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99889
+          },
+          {
+            "frame": 16,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99879
+          },
+          {
+            "frame": 19,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99869
+          },
+          {
+            "frame": 19,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99859
+          },
+          {
+            "frame": 22,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99849
+          },
+          {
+            "frame": 22,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99839
+          },
+          {
+            "frame": 25,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99829
+          },
+          {
+            "frame": 25,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99819
+          },
+          {
+            "frame": 28,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99809
+          },
+          {
+            "frame": 28,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99799
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 3,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 6,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 9,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 12,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 15,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 18,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 21,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 24,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 27,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99799
+      },
+      {
+        "equipment": [
+          7035400,
+          7035400,
+          7035400,
+          7035410,
+          7035410,
+          7035410
+        ],
+        "fps": 30,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 4,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 4,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 7,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 7,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 10,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 10,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 13,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 13,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          },
+          {
+            "frame": 16,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99889
+          },
+          {
+            "frame": 16,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99879
+          },
+          {
+            "frame": 19,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99869
+          },
+          {
+            "frame": 19,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99859
+          },
+          {
+            "frame": 22,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99849
+          },
+          {
+            "frame": 22,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99839
+          },
+          {
+            "frame": 25,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99829
+          },
+          {
+            "frame": 25,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99819
+          },
+          {
+            "frame": 28,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99809
+          },
+          {
+            "frame": 28,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99799
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 3,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 6,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 9,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 12,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 15,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 18,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 21,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 24,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 27,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99799
+      },
+      {
+        "equipment": [],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [],
+        "grants": [],
+        "resources": [],
+        "remaining": 99999
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035400,
+          7035400,
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035410,
+          7035410,
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035400,
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99889
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99879
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99869
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99859
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99849
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99839
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99829
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99819
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99809
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99799
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99799
+      },
+      {
+        "equipment": [
+          7035400,
+          7035400,
+          7035400,
+          7035410,
+          7035410,
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99889
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99879
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99869
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99859
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99849
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99839
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99829
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99819
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99809
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99799
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99799
+      },
+      {
+        "equipment": [],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [],
+        "grants": [],
+        "resources": [],
+        "remaining": 99999
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 62,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 74,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 86,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 98,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 110,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 61,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 73,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 85,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 97,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 109,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035400,
+          7035400,
+          7035400
+        ],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 62,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 74,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 86,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 98,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 110,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 61,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 73,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 85,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 97,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 109,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 62,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 74,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 86,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 98,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 110,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 61,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 73,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 85,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 97,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 109,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035410,
+          7035410,
+          7035410
+        ],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 62,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 74,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 86,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 98,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 110,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 61,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 73,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 85,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 97,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 109,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99899
+      },
+      {
+        "equipment": [
+          7035400,
+          7035410
+        ],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          },
+          {
+            "frame": 62,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99889
+          },
+          {
+            "frame": 62,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99879
+          },
+          {
+            "frame": 74,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99869
+          },
+          {
+            "frame": 74,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99859
+          },
+          {
+            "frame": 86,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99849
+          },
+          {
+            "frame": 86,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99839
+          },
+          {
+            "frame": 98,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99829
+          },
+          {
+            "frame": 98,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99819
+          },
+          {
+            "frame": 110,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99809
+          },
+          {
+            "frame": 110,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99799
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 61,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 73,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 85,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 97,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 109,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99799
+      },
+      {
+        "equipment": [
+          7035400,
+          7035400,
+          7035400,
+          7035410,
+          7035410,
+          7035410
+        ],
+        "fps": 120,
+        "startingResistance": 99999,
+        "immune": false,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99989
+          },
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99979
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99969
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99959
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99949
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99939
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99929
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99919
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99909
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99899
+          },
+          {
+            "frame": 62,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99889
+          },
+          {
+            "frame": 62,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99879
+          },
+          {
+            "frame": 74,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99869
+          },
+          {
+            "frame": 74,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99859
+          },
+          {
+            "frame": 86,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99849
+          },
+          {
+            "frame": 86,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99839
+          },
+          {
+            "frame": 98,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99829
+          },
+          {
+            "frame": 98,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99819
+          },
+          {
+            "frame": 110,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99809
+          },
+          {
+            "frame": 110,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 99799
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 61,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 73,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 85,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 97,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          },
+          {
+            "frame": 109,
+            "ids": [
+              7035402,
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 99799
+      }
+    ],
+    "onset": [
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 9,
+        "immune": false,
+        "stoppedAfterOnset": 1,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 9
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 1,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 63,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 1,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 9
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 9,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 9
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 10,
+        "immune": false,
+        "stoppedAfterOnset": 1,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 10
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 1,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 63,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 1,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 10
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 10,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 10
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 11,
+        "immune": false,
+        "stoppedAfterOnset": 8,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 1
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 11
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 8,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 70,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 8,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 11
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 11,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 11
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 100,
+        "immune": false,
+        "stoppedAfterOnset": 56,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 90
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 80
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 70
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 60
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 50
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 40
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 30
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 20
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 100
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 56,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 118,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 56,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 100
+      },
+      {
+        "equipment": [
+          7035400
+        ],
+        "fps": 60,
+        "startingResistance": 100,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 8,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 14,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 20,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 26,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 32,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 38,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 44,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 50,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 56,
+            "leaf": 7035402,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035402
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035402
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 100
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 9,
+        "immune": false,
+        "stoppedAfterOnset": 1,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 9
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 1,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 63,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 1,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 9
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 9,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 9
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 9
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 10,
+        "immune": false,
+        "stoppedAfterOnset": 1,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 10
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 1,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 63,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 1,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 10
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 10,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 10
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 11,
+        "immune": false,
+        "stoppedAfterOnset": 8,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 1
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 11
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 8,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 70,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 8,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 11
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 11,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 11
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 11
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 100,
+        "immune": false,
+        "stoppedAfterOnset": 56,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 90
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 80
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 70
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 60
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 50
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 40
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 30
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 20
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 10
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": true,
+            "remaining": 100
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 56,
+            "ids": [
+              49060
+            ]
+          },
+          {
+            "frame": 118,
+            "ids": [
+              1110
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "frame": 56,
+            "hp": -200,
+            "fp": -30
+          }
+        ],
+        "remaining": 100
+      },
+      {
+        "equipment": [
+          7035410
+        ],
+        "fps": 60,
+        "startingResistance": 100,
+        "immune": true,
+        "stoppedAfterOnset": null,
+        "attempts": [
+          {
+            "frame": 1,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 8,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 14,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 20,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 26,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 32,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 38,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 44,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 50,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          },
+          {
+            "frame": 56,
+            "leaf": 7035412,
+            "insertRejected": false,
+            "onset": false,
+            "remaining": 100
+          }
+        ],
+        "grants": [
+          {
+            "frame": 0,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 7,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 13,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 19,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 25,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 31,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 37,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 43,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 49,
+            "ids": [
+              7035412
+            ]
+          },
+          {
+            "frame": 55,
+            "ids": [
+              7035412
+            ]
+          }
+        ],
+        "resources": [],
+        "remaining": 100
+      }
+    ],
+    "resources": [
+      {
+        "maximum": 1,
+        "packet": [
+          -100,
+          0,
+          -100,
+          0,
+          -100,
+          0,
+          0
+        ],
+        "fp": [
+          -30,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "packet": [
+          -109,
+          0,
+          -109,
+          0,
+          -109,
+          0,
+          0
+        ],
+        "fp": [
+          -30,
+          0
+        ]
+      },
+      {
+        "maximum": 137,
+        "packet": [
+          -113,
+          0,
+          -113,
+          0,
+          -113,
+          0,
+          0
+        ],
+        "fp": [
+          -30,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "packet": [
+          -200,
+          0,
+          -200,
+          0,
+          -200,
+          0,
+          0
+        ],
+        "fp": [
+          -30,
+          0
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "3C7FD0 grant recorder; queue delivered on next simulation frame",
+    "3CED90/4D1B20 neutral animation-owner context; 3C8BE0 requests delivered before next qualification",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "gameplayVerified": false,
+  "limits": [
+    "one second of held action input; automatic interruption on onset is not simulated",
+    "neutral source scaling; no passive gauge decay or dynamic resistance growth",
+    "no full actor damage reaction, network or reload"
+  ]
+}
