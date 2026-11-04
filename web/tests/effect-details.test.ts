@@ -39,6 +39,7 @@ import successiveRecovery from "../../data/effect-successive-recovery-evidence.j
 import successiveAttack from "../../data/effect-successive-attack-evidence.json";
 import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
+import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -56,6 +57,40 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates ghostflame frostbite onset from its lasting vulnerability and honors correction flags", () => {
+    const detail = effectDetail(7011200)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.blocks.map(b => b.values)).toEqual([
+      [["爆炸半径", "4 → 10 米"], ["冻伤基础累积", "50"]],
+      [["冻伤伤害", "最大血量的 10% + 50"]], [["承伤倍率", "+15%"]],
+    ]);
+    expect(detail.blocks.map(b => b.duration)).toEqual([null, null, 30]);
+    expect(detail.blocks.every(b => b.interval === null)).toBe(true);
+    expect(detail.notes).toEqual(["再次命中不刷新这次冻伤时长。"]);
+    for (const row of revenantGhostflame.checks.correction) {
+      const expected = row.effect === 7500201 ? row.scale * (row.slot < 5 ? row.extra : 1) : 1;
+      expect(row.appliedScale).toBe(expected);
+      if (row.effect === 1501000) expect(row.amount).toBe(50);
+      expect(row.remaining).toBe(1000 - row.amount);
+    }
+    for (const row of revenantGhostflame.checks.onset)
+      expect(row.triggered).toBe(!row.immune && row.resistance <= 50);
+    for (const row of revenantGhostflame.checks.damage) {
+      expect(row.packet[0]).toBe(-(Math.trunc(row.maximum * .1) + 50));
+      expect(row.rates.every(v => Math.abs(v - 1.15) < .00001)).toBe(true);
+      expect(row.nodes.filter(n => n.id === 1501000)).toHaveLength(1);
+    }
+    for (const row of revenantGhostflame.checks.lifetime) {
+      expect(row.hits).toHaveLength(1);
+      expect(row.hits[0].frame).toBe(0);
+      expect(Math.abs(row.lastActiveFrame / row.fps - 30)).toBeLessThan(.11);
+      expect(row.remaining).toEqual([]);
+    }
+    expect(revenantGhostflame.gameplayVerified).toBe(false);
+    expect(research.revenantGhostflameEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-ghostflame-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("keeps charged ultimate poison separate from early release and maintenance timing", () => {
     const detail = effectDetail(7034600)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1265,7 +1300,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(540);
+    expect(research.coverage.withNumericFields).toBe(541);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

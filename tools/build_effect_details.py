@@ -287,6 +287,12 @@ assert ironeye_ultimate['schema'] == 1 and ironeye_ultimate['regulationSha256'] 
 assert ironeye_ultimate['exeSha256'] == evidence['exeSha256'] and not ironeye_ultimate['gameplayVerified']
 assert ironeye_ultimate['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in ironeye_ultimate['checks'].items()} == dict(script=32, selection=12, dispatch=12, onset=30, damage=7, repeat=5, lifetime=3)
+revenant_ghostflame_path = ROOT / 'data/effect-revenant-ghostflame-evidence.json'
+revenant_ghostflame = json.loads(revenant_ghostflame_path.read_text())
+assert revenant_ghostflame['schema'] == 1 and revenant_ghostflame['regulationSha256'] == catalog['regulationSha256']
+assert revenant_ghostflame['exeSha256'] == evidence['exeSha256'] and not revenant_ghostflame['gameplayVerified']
+assert revenant_ghostflame['paramSha256'] == evidence['paramSha256']
+assert {k: len(v) for k, v in revenant_ghostflame['checks'].items()} == dict(dispatch=8, projectile=3, correction=96, onset=12, damage=21, repeat=4, lifetime=3)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
 assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
@@ -431,6 +437,8 @@ if args.extract:
                 needed.update(map(int, scholar_tether['rows']))
             if root == ironeye_ultimate['root']:
                 needed.update(map(int, ironeye_ultimate['rows']))
+            if root == revenant_ghostflame['root']:
+                needed.update(map(int, revenant_ghostflame['rows']))
             if root == wylder_bleed['root']:
                 needed.add(wylder_bleed['leaf'])
             if root == ironeye_poison['root']:
@@ -671,6 +679,7 @@ STACKING_RULES = {
     'successive-attack': ('不可叠加', '重复装备不增加增伤或累积速度', ['successive-attack']),
     'scholar-tether': ('不可叠加', '重复装备不增加单次伤害', ['scholar-tether']),
     'ironeye-ultimate': ('不可叠加', '重复装备不增加累积或伤害', ['ironeye-ultimate']),
+    'revenant-ghostflame': ('不可叠加', '重复装备不增加爆炸次数或冻伤累积', ['revenant-ghostflame']),
     'periodic-hp-recovery': ('可叠加', '恢复量相加，各自计时', ['periodic-hp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -1103,6 +1112,20 @@ for id, effect in source['effects'].items():
                        values=[['中毒伤害', '最大血量的 0.1% + 10']], restrictions=[], scope=[], duration=40, interval=1.3)]
         notes.extend(['提前放箭不附加此中毒。', '中毒期间再次命中不刷新这次中毒时长。'])
         rule = 'ironeye-ultimate'
+    if int(id) == revenant_ghostflame['root']:
+        assert list(effect['roots'].values()) == [revenant_ghostflame['root']] and effect['runtimeExclusive'] == -1
+        r = source['spells'][str(revenant_ghostflame['leaf'])]
+        assert r['freezeAttackPower'] == 50 and r['changeHpRate'] == 10 and r['changeHpPoint'] == 50
+        assert r['effectEndurance'] == 30 and r['motionInterval'] == 99
+        assert math.isclose(r['magicDamageCutRate'], 1.15, rel_tol=1e-6)
+        blocks = [dict(source=revenant_ghostflame['leaf'], phase='爆炸命中时', linked=True,
+                       values=[['爆炸半径', '4 → 10 米'], ['冻伤基础累积', '50']], restrictions=[], scope=[], duration=None, interval=None),
+                  dict(source=revenant_ghostflame['leaf'], phase='冻伤发作时', linked=True,
+                       values=[['冻伤伤害', '最大血量的 10% + 50']], restrictions=[], scope=[], duration=None, interval=None),
+                  dict(source=revenant_ghostflame['leaf'], phase='冻伤期间', linked=True,
+                       values=[['承伤倍率', '+15%']], restrictions=[], scope=[], duration=30, interval=None)]
+        notes.append('再次命中不刷新这次冻伤时长。')
+        rule = 'revenant-ghostflame'
     if id in passive_resource['effects']:
         root = passive_resource['effects'][id]
         assert list(effect['roots'].values()) == [root] and effect['runtimeExclusive'] == -1
@@ -1462,9 +1485,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'revenant-ghostflame', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'revenant-ghostflame', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1512,6 +1535,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理')
     if rules[id] == 'ironeye-ultimate':
         questions.append('子弹体攻击上下文与异常继承、同目标命中去重、完整蓄力动作中断／实时调度、异常修正与抵抗成长、其他中毒覆盖、最终 HP 写入及多人／重载交互')
+    if rules[id] == 'revenant-ghostflame':
+        questions.append('爆炸魔力伤害的来源缩放与最终计算、完整弹体到命中数据构造／碰撞去重、实际半径插值、其他冻伤覆盖及火焰解除、自然退条与抵抗成长、最终 HP 写入及多人／重载交互')
     if rules[id] == 'spell-family':
         questions.append('完整施法／弹体的类别继承与特殊替换路径、最终伤害／增益效果及多人交互；Magic 行存在不代表均可在当前局获取')
     if rules[id] == 'undertaker-contact':
@@ -1617,6 +1642,7 @@ research['successiveRecoveryEvidenceSha256'] = hashlib.sha256(successive_recover
 research['successiveAttackEvidenceSha256'] = hashlib.sha256(successive_attack_path.read_bytes()).hexdigest()
 research['scholarTetherEvidenceSha256'] = hashlib.sha256(scholar_tether_path.read_bytes()).hexdigest()
 research['ironeyeUltimateEvidenceSha256'] = hashlib.sha256(ironeye_ultimate_path.read_bytes()).hexdigest()
+research['revenantGhostflameEvidenceSha256'] = hashlib.sha256(revenant_ghostflame_path.read_bytes()).hexdigest()
 research['undertakerContactEvidenceSha256'] = hashlib.sha256(undertaker_contact_path.read_bytes()).hexdigest()
 research['guardianUltimateEvidenceSha256'] = hashlib.sha256(guardian_ultimate_path.read_bytes()).hexdigest()
 research['raiderGrowthEvidenceSha256'] = hashlib.sha256(raider_growth_path.read_bytes()).hexdigest()
