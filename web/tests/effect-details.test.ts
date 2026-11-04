@@ -45,6 +45,7 @@ import revenantFamily from "../../data/effect-revenant-family-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
 import duchessDagger from "../../data/effect-duchess-dagger-evidence.json";
+import guardAggro from "../../data/effect-guard-aggro-evidence.json";
 import itemSharing from "../../data/effect-item-sharing-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
@@ -72,6 +73,37 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("adds guard target priority to AI scores without multiplying duplicate equipment", () => {
+    for (const family of guardAggro.families) {
+      for (const id of family.effects) {
+        const detail = effectDetail(id)!;
+        expect(detail.blocks[0].values).toEqual([["受敌人攻击优先度", `+${family.priority}`]]);
+        expect(detail.blocks[0].duration).toBe(family.duration);
+        expect(detail.blocks[0].interval).toBeNull();
+        expect(detail.stacking).toBe("不可叠加");
+        expect(detail.notes.join()).toContain("优先度合计 +1050");
+        expect(JSON.stringify(detail)).not.toContain("%");
+      }
+    }
+    for (const row of guardAggro.checks.score) {
+      const expected = row.order.reduce((sum, root) => sum + (root === 7030700 ? 450 : 600), 0);
+      expect(row.priority).toBe(expected);
+      expect(row.score).toBe(row.baseline + expected);
+    }
+    for (const row of guardAggro.checks.qualification) {
+      const matches = row.root === row.marker - 1;
+      expect(row.priority).toBe(matches ? (row.root === 7030700 ? 450 : 600) : 0);
+    }
+    for (const row of guardAggro.checks.timer) {
+      const family = guardAggro.families.find(f => f.root === row.root)!;
+      expect(Math.abs((row.expiryFrame - row.startFrame) / row.fps - family.duration - Number(row.reapply))).toBeLessThanOrEqual(4 / row.fps);
+      if (row.reapply) expect(row.refresh).toHaveLength(1);
+    }
+    expect(guardAggro.gameplayVerified).toBe(false);
+    expect(research.guardAggroEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guard-aggro-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("resolves item-sharing branches and distinguishes shared FP from self restoration", () => {
     const detail = effectDetail(7050100)!;
     expect(detail.blocks[0].values).toEqual([["共享半径", "15 米"]]);
@@ -1730,7 +1762,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(39);
-    expect(research.coverage.withNumericFields).toBe(557);
+    expect(research.coverage.withNumericFields).toBe(560);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

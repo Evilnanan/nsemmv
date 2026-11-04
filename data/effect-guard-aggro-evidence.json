@@ -1,0 +1,2687 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "2000": "0d5e549747bd2280aafa2260b00eb83e4769eb8da666b7575e66f8aace3ee54a",
+    "2015": "19e3a25ffb7c6c72da2d2805ac8518d32a88e2568363a3833ca96490d4c172e2",
+    "hks": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+    "behaviorGraph": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4"
+  },
+  "families": [
+    {
+      "effects": [
+        7030700
+      ],
+      "root": 7030700,
+      "state": 2010,
+      "marker": 7030701,
+      "leaf": 7030702,
+      "priority": 450,
+      "duration": 4
+    },
+    {
+      "effects": [
+        7011300,
+        7011301
+      ],
+      "root": 7033300,
+      "state": 2265,
+      "marker": 7033301,
+      "leaf": 7033302,
+      "priority": 600,
+      "duration": 2
+    }
+  ],
+  "events": [
+    {
+      "track": 2000,
+      "animation": 100,
+      "index": 12,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.2,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 110,
+      "index": 11,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 120,
+      "index": 15,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 160,
+      "index": 18,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 160,
+      "index": 20,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 20440,
+      "index": 15,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 20441,
+      "index": 13,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 20442,
+      "index": 13,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 20443,
+      "index": 13,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23000,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 1.9333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23010,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23020,
+      "index": 15,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23080,
+      "index": 21,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 1.9333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23080,
+      "index": 23,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23100,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 1.9333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23110,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23120,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23200,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 1.9333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23210,
+      "index": 13,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23220,
+      "index": 14,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23230,
+      "index": 6,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23240,
+      "index": 7,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2000,
+      "animation": 23250,
+      "index": 7,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 100,
+      "index": 8,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.6666667,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 110,
+      "index": 9,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.6666667,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 120,
+      "index": 8,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.6666667,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 160,
+      "index": 18,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.3333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 160,
+      "index": 20,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23000,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23010,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23020,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23080,
+      "index": 21,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 1.9333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23080,
+      "index": 23,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 0.1,
+      "hex": "D5516B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23100,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23110,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23120,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23200,
+      "index": 12,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23210,
+      "index": 12,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    },
+    {
+      "track": 2015,
+      "animation": 23220,
+      "index": 12,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 2.7333333,
+      "hex": "AD476B00000000000000000000000000"
+    }
+  ],
+  "rows": {
+    "7030700": {
+      "stateInfo": 2010,
+      "spCategory": 10,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "targetPriority": 0
+    },
+    "7030701": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "effectEndurance": 0,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": 7030702,
+      "invocationConditionsStateChange1": 2010,
+      "targetPriority": 0
+    },
+    "7030702": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 4,
+      "motionInterval": 4.099999904632568,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "invocationConditionsStateChange1": 2010,
+      "targetPriority": 450
+    },
+    "7033300": {
+      "stateInfo": 2265,
+      "spCategory": 20,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "invocationConditionsStateChange1": 0,
+      "targetPriority": 0
+    },
+    "7033301": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0,
+      "replaceSpEffectId": 7033302,
+      "cycleOccurrenceSpEffectId": -1,
+      "invocationConditionsStateChange1": 2265,
+      "targetPriority": 0
+    },
+    "7033302": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 2,
+      "motionInterval": 2.0999999046325684,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "invocationConditionsStateChange1": 2265,
+      "targetPriority": 600
+    }
+  },
+  "checks": {
+    "script": [
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "1|0|GuardOn,0,0"
+      },
+      {
+        "hero": 0,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "1|0|GuardOn,0,0"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "1|0|GuardOn,0,0"
+      },
+      {
+        "hero": 0,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "1|0|GuardOn,0,0"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "1|0|GuardOn,0,0"
+      },
+      {
+        "hero": 2,
+        "ability": 0,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "1|0|GuardOn,0,0"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 0,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 0,
+        "enabled": 1,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 0,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 0,
+        "style": 3,
+        "result": "0|nil|"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 0,
+        "result": "1|5|GuardOn,0,0"
+      },
+      {
+        "hero": 2,
+        "ability": 1,
+        "button": 1,
+        "stamina": 100,
+        "enabled": 1,
+        "style": 3,
+        "result": "1|5|GuardOn,0,0"
+      }
+    ],
+    "graph": [
+      {
+        "selector": 44372,
+        "binding": {
+          "selector": 44372,
+          "bindingSet": 48891,
+          "binding": 55056,
+          "member": "selectedGeneratorIndex",
+          "variable": 42,
+          "name": "IndexGuardStyle",
+          "stringSet": 14,
+          "names": 20
+        },
+        "index": 0,
+        "branch": 55057,
+        "clips": [
+          "a000_000100",
+          "a002_000100",
+          "a003_000100",
+          "a010_000100",
+          "a011_000100",
+          "a012_000100",
+          "a013_000100",
+          "a015_000100"
+        ]
+      },
+      {
+        "selector": 44372,
+        "binding": {
+          "selector": 44372,
+          "bindingSet": 48891,
+          "binding": 55056,
+          "member": "selectedGeneratorIndex",
+          "variable": 42,
+          "name": "IndexGuardStyle",
+          "stringSet": 14,
+          "names": 20
+        },
+        "index": 5,
+        "branch": 55062,
+        "clips": [
+          "a000_000160",
+          "a015_000160"
+        ]
+      },
+      {
+        "selector": 58040,
+        "binding": {
+          "selector": 58040,
+          "bindingSet": 64332,
+          "binding": 72033,
+          "member": "selectedGeneratorIndex",
+          "variable": 42,
+          "name": "IndexGuardStyle",
+          "stringSet": 14,
+          "names": 20
+        },
+        "index": 0,
+        "branch": 72034,
+        "clips": [
+          "a000_000100",
+          "a002_000100",
+          "a003_000100",
+          "a010_000100",
+          "a011_000100",
+          "a012_000100",
+          "a013_000100",
+          "a015_000100"
+        ]
+      },
+      {
+        "selector": 58040,
+        "binding": {
+          "selector": 58040,
+          "bindingSet": 64332,
+          "binding": 72033,
+          "member": "selectedGeneratorIndex",
+          "variable": 42,
+          "name": "IndexGuardStyle",
+          "stringSet": 14,
+          "names": 20
+        },
+        "index": 5,
+        "branch": 72039,
+        "clips": [
+          "a000_000160",
+          "a015_000160"
+        ]
+      },
+      {
+        "selector": 96490,
+        "binding": {
+          "selector": 96490,
+          "bindingSet": 100267,
+          "binding": 104822,
+          "member": "selectedGeneratorIndex",
+          "variable": 42,
+          "name": "IndexGuardStyle",
+          "stringSet": 14,
+          "names": 20
+        },
+        "index": 0,
+        "branch": 104823,
+        "clips": [
+          "a000_023000",
+          "a002_023000",
+          "a003_023000",
+          "a010_023000",
+          "a011_023000",
+          "a012_023000",
+          "a013_023000",
+          "a015_023000",
+          "a016_023000"
+        ]
+      },
+      {
+        "selector": 96490,
+        "binding": {
+          "selector": 96490,
+          "bindingSet": 100267,
+          "binding": 104822,
+          "member": "selectedGeneratorIndex",
+          "variable": 42,
+          "name": "IndexGuardStyle",
+          "stringSet": 14,
+          "names": 20
+        },
+        "index": 5,
+        "branch": 104828,
+        "clips": [
+          "a000_023080",
+          "a015_023080"
+        ]
+      }
+    ],
+    "dispatch": [
+      {
+        "track": 2000,
+        "animation": 100,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 100,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 100,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 110,
+        "event": 11,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 110,
+        "event": 11,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 110,
+        "event": 11,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 120,
+        "event": 15,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 120,
+        "event": 15,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 120,
+        "event": 15,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 160,
+        "event": 18,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 160,
+        "event": 18,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 160,
+        "event": 18,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 160,
+        "event": 20,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 160,
+        "event": 20,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 160,
+        "event": 20,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20440,
+        "event": 15,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 20440,
+        "event": 15,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20440,
+        "event": 15,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20441,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 20441,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20441,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20442,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 20442,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20442,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20443,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 20443,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 20443,
+        "event": 13,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 23000,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23000,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23000,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23010,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23010,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23010,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23020,
+        "event": 15,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23020,
+        "event": 15,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23020,
+        "event": 15,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23080,
+        "event": 21,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23080,
+        "event": 21,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23080,
+        "event": 21,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23080,
+        "event": 23,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23080,
+        "event": 23,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 23080,
+        "event": 23,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2000,
+        "animation": 23100,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23100,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23100,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23110,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23110,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23110,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23120,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23120,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23120,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23200,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23200,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23200,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23210,
+        "event": 13,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23210,
+        "event": 13,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23210,
+        "event": 13,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23220,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23220,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23220,
+        "event": 14,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23230,
+        "event": 6,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23230,
+        "event": 6,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23230,
+        "event": 6,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23240,
+        "event": 7,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23240,
+        "event": 7,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23240,
+        "event": 7,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23250,
+        "event": 7,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2000,
+        "animation": 23250,
+        "event": 7,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2000,
+        "animation": 23250,
+        "event": 7,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 100,
+        "event": 8,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 100,
+        "event": 8,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 100,
+        "event": 8,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 110,
+        "event": 9,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 110,
+        "event": 9,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 110,
+        "event": 9,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 120,
+        "event": 8,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 120,
+        "event": 8,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 120,
+        "event": 8,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 160,
+        "event": 18,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 160,
+        "event": 18,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 160,
+        "event": 18,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 160,
+        "event": 20,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 160,
+        "event": 20,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2015,
+        "animation": 160,
+        "event": 20,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2015,
+        "animation": 23000,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23000,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23000,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23010,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23010,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23010,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23020,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23020,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23020,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23080,
+        "event": 21,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23080,
+        "event": 21,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23080,
+        "event": 21,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23080,
+        "event": 23,
+        "marker": 7033301,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23080,
+        "event": 23,
+        "marker": 7033301,
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2015,
+        "animation": 23080,
+        "event": 23,
+        "marker": 7033301,
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "track": 2015,
+        "animation": 23100,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23100,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23100,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23110,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23110,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23110,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23120,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23120,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23120,
+        "event": 10,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23200,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23200,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23200,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23210,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23210,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23210,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23220,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 0,
+        "priority": 0.0,
+        "score": 100.0
+      },
+      {
+        "track": 2015,
+        "animation": 23220,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "track": 2015,
+        "animation": 23220,
+        "event": 12,
+        "marker": 7030701,
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      }
+    ],
+    "qualification": [
+      {
+        "root": 0,
+        "marker": 7030701,
+        "activityByte": 0,
+        "priority": 0.0
+      },
+      {
+        "root": 0,
+        "marker": 7030701,
+        "activityByte": 1,
+        "priority": 0.0
+      },
+      {
+        "root": 0,
+        "marker": 7033301,
+        "activityByte": 0,
+        "priority": 0.0
+      },
+      {
+        "root": 0,
+        "marker": 7033301,
+        "activityByte": 1,
+        "priority": 0.0
+      },
+      {
+        "root": 7030700,
+        "marker": 7030701,
+        "activityByte": 0,
+        "priority": 450.0
+      },
+      {
+        "root": 7030700,
+        "marker": 7030701,
+        "activityByte": 1,
+        "priority": 450.0
+      },
+      {
+        "root": 7030700,
+        "marker": 7033301,
+        "activityByte": 0,
+        "priority": 0.0
+      },
+      {
+        "root": 7030700,
+        "marker": 7033301,
+        "activityByte": 1,
+        "priority": 0.0
+      },
+      {
+        "root": 7033300,
+        "marker": 7030701,
+        "activityByte": 0,
+        "priority": 0.0
+      },
+      {
+        "root": 7033300,
+        "marker": 7030701,
+        "activityByte": 1,
+        "priority": 0.0
+      },
+      {
+        "root": 7033300,
+        "marker": 7033301,
+        "activityByte": 0,
+        "priority": 600.0
+      },
+      {
+        "root": 7033300,
+        "marker": 7033301,
+        "activityByte": 1,
+        "priority": 600.0
+      }
+    ],
+    "timer": [
+      {
+        "root": 7030700,
+        "fps": 30,
+        "reapply": false,
+        "startFrame": 2,
+        "expiryFrame": 124,
+        "refresh": null
+      },
+      {
+        "root": 7030700,
+        "fps": 30,
+        "reapply": true,
+        "startFrame": 2,
+        "expiryFrame": 154,
+        "refresh": [
+          {
+            "id": 7030702,
+            "lifetime": 3.533334,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "root": 7030700,
+        "fps": 60,
+        "reapply": false,
+        "startFrame": 2,
+        "expiryFrame": 244,
+        "refresh": null
+      },
+      {
+        "root": 7030700,
+        "fps": 60,
+        "reapply": true,
+        "startFrame": 2,
+        "expiryFrame": 304,
+        "refresh": [
+          {
+            "id": 7030702,
+            "lifetime": 3.516667,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "root": 7030700,
+        "fps": 120,
+        "reapply": false,
+        "startFrame": 2,
+        "expiryFrame": 483,
+        "refresh": null
+      },
+      {
+        "root": 7030700,
+        "fps": 120,
+        "reapply": true,
+        "startFrame": 2,
+        "expiryFrame": 603,
+        "refresh": [
+          {
+            "id": 7030702,
+            "lifetime": 3.508327,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "root": 7033300,
+        "fps": 30,
+        "reapply": false,
+        "startFrame": 6,
+        "expiryFrame": 68,
+        "refresh": null
+      },
+      {
+        "root": 7033300,
+        "fps": 30,
+        "reapply": true,
+        "startFrame": 6,
+        "expiryFrame": 98,
+        "refresh": [
+          {
+            "id": 7033302,
+            "lifetime": 1.666667,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "root": 7033300,
+        "fps": 60,
+        "reapply": false,
+        "startFrame": 10,
+        "expiryFrame": 132,
+        "refresh": null
+      },
+      {
+        "root": 7033300,
+        "fps": 60,
+        "reapply": true,
+        "startFrame": 10,
+        "expiryFrame": 192,
+        "refresh": [
+          {
+            "id": 7033302,
+            "lifetime": 1.65,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "root": 7033300,
+        "fps": 120,
+        "reapply": false,
+        "startFrame": 16,
+        "expiryFrame": 258,
+        "refresh": null
+      },
+      {
+        "root": 7033300,
+        "fps": 120,
+        "reapply": true,
+        "startFrame": 16,
+        "expiryFrame": 378,
+        "refresh": [
+          {
+            "id": 7033302,
+            "lifetime": 1.625,
+            "flags": 8
+          }
+        ]
+      }
+    ],
+    "score": [
+      {
+        "baseline": 0,
+        "order": [
+          7030700
+        ],
+        "copies": 1,
+        "priority": 450.0,
+        "score": 450.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7030700
+        ],
+        "copies": 3,
+        "priority": 450.0,
+        "score": 450.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7033300
+        ],
+        "copies": 1,
+        "priority": 600.0,
+        "score": 600.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7033300
+        ],
+        "copies": 3,
+        "priority": 600.0,
+        "score": 600.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7030700,
+          7033300
+        ],
+        "copies": 1,
+        "priority": 1050.0,
+        "score": 1050.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7030700,
+          7033300
+        ],
+        "copies": 3,
+        "priority": 1050.0,
+        "score": 1050.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7033300,
+          7030700
+        ],
+        "copies": 1,
+        "priority": 1050.0,
+        "score": 1050.0
+      },
+      {
+        "baseline": 0,
+        "order": [
+          7033300,
+          7030700
+        ],
+        "copies": 3,
+        "priority": 1050.0,
+        "score": 1050.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7030700
+        ],
+        "copies": 1,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7030700
+        ],
+        "copies": 3,
+        "priority": 450.0,
+        "score": 550.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7033300
+        ],
+        "copies": 1,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7033300
+        ],
+        "copies": 3,
+        "priority": 600.0,
+        "score": 700.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7030700,
+          7033300
+        ],
+        "copies": 1,
+        "priority": 1050.0,
+        "score": 1150.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7030700,
+          7033300
+        ],
+        "copies": 3,
+        "priority": 1050.0,
+        "score": 1150.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7033300,
+          7030700
+        ],
+        "copies": 1,
+        "priority": 1050.0,
+        "score": 1150.0
+      },
+      {
+        "baseline": 100,
+        "order": [
+          7033300,
+          7030700
+        ],
+        "copies": 3,
+        "priority": 1050.0,
+        "score": 1150.0
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7030700
+        ],
+        "copies": 1,
+        "priority": 450.0,
+        "score": 1684.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7030700
+        ],
+        "copies": 3,
+        "priority": 450.0,
+        "score": 1684.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7033300
+        ],
+        "copies": 1,
+        "priority": 600.0,
+        "score": 1834.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7033300
+        ],
+        "copies": 3,
+        "priority": 600.0,
+        "score": 1834.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7030700,
+          7033300
+        ],
+        "copies": 1,
+        "priority": 1050.0,
+        "score": 2284.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7030700,
+          7033300
+        ],
+        "copies": 3,
+        "priority": 1050.0,
+        "score": 2284.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7033300,
+          7030700
+        ],
+        "copies": 1,
+        "priority": 1050.0,
+        "score": 2284.5
+      },
+      {
+        "baseline": 1234.5,
+        "order": [
+          7033300,
+          7030700
+        ],
+        "copies": 3,
+        "priority": 1050.0,
+        "score": 2284.5
+      }
+    ]
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security-cookie stub preserves return value",
+    "2FE510 provides explicit unrelated baseline; 2EE910/2EE990/2FE7A0/2FE4B0/2FE7F0 return zero unrelated score terms",
+    "3CED90/4D1B20 explicit animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "Lua input, stamina, weapon, ability and actor responses are fixtures; actual ExecGuard executes",
+    "Type 67 always calls 40FF20 with apply=true; activity byte does not suppress grants",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "full animation scheduling, guard release cadence, damage interruptions, enemy target selection, multiplayer and game execution not simulated",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "target virtual +20 accepts, +A0 returns zero position, +208 supplies actor; actual +F0 getter executes"
+  ],
+  "native": {
+    "type67": "27D0F10 / 27D0400 → 410CA0 → 40FF20",
+    "grant": "3C7FD0",
+    "lifecycle": "5057D0 / 50ACD0",
+    "priority": "505B40",
+    "accessor": "2DE580 → 4249F0 → 42C120 → 505B40",
+    "score": "2EFB50 / 2EFCB0 / 7586307"
+  },
+  "gameplayVerified": false
+}
