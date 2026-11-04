@@ -35,6 +35,8 @@ async function longPress(page: Page, target: Locator) {
 }
 
 const decodedMechanics = [
+  [7036700, ["异常造成的血量损伤", "+30%", "中毒／腐败／出血／冻伤／发狂", "20 秒", "不增加催眠、发狂造成的专注值损失", "断开连结不提前解除", "不可叠加"]],
+  [7036701, ["+30%", "20 秒", "刷新时长，不叠加倍率"]],
   [7010200, ["自身血量恢复", "60% → 50%", "最大值的 30%", "半径 15 米，不含自身", "自身 8 秒／我方 4 秒", "最大值的 15%", "接受治疗者自身的圣杯瓶恢复量", "不可叠加"]],
   [8440200, ["60% → 10%", "每次最大值的 1%", "8 秒", "0.1 秒", "再次喝瓶刷新持续恢复，不叠加速度"]],
   [7037800, ["存在减伤降低效果时", "攻击失效概率", "20%", "不可叠加", "重复装备不提高概率", "其他减伤抵消负面效果后仍可触发", "成功触发仍可能累积异常"]],
@@ -141,7 +143,7 @@ for (let offset = 0; offset < decodedMechanics.length; offset += 12) {
         const rect = el.getBoundingClientRect();
         return el.scrollWidth <= el.clientWidth && rect.left >= 0 && rect.right <= innerWidth;
       })).toBe(true);
-      if (id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
+      if (id === 7036700 || id === 7010200 || id === 7032800 || id === 7060000 || id === 6632300)
         await page.screenshot({ path: testInfo.outputPath(`mechanics-${id}.png`) });
       await details.getByRole("button", { name: "关闭词条详情" }).click();
       await expect(details).toHaveCount(0);

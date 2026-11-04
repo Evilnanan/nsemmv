@@ -1,0 +1,2099 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "assetHashes": {
+    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
+    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
+    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "common": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
+    "tae": "05df3be3ccba558f65f2632d1e08b109c6708821efd304fdb454a553235e5949",
+    "behaviorGraph": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4"
+  },
+  "root": 7036700,
+  "leaf": 7036701,
+  "effects": [
+    7036700,
+    7036701
+  ],
+  "state": {
+    "state": "JointChainStart",
+    "stateItem": 20976,
+    "generator": "JointChainStart_CMSG",
+    "generatorItem": 22387,
+    "arrayItem": 24309,
+    "clip": "a908_680000_hkx_AutoSet_01",
+    "clipItem": 26706,
+    "animation": "a908_680000"
+  },
+  "events": [
+    {
+      "animation": 680000,
+      "index": 4,
+      "Type": 2,
+      "StartTime": 2.5,
+      "EndTime": 2.6,
+      "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+    },
+    {
+      "animation": 680000,
+      "index": 61,
+      "Type": 2,
+      "StartTime": 2.5,
+      "EndTime": 2.6,
+      "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+    }
+  ],
+  "rows": {
+    "7036700": {
+      "stateInfo": 2028,
+      "spCategory": 20,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeMpRate": 0,
+      "changeMpPoint": 0,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    },
+    "7036701": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 20,
+      "motionInterval": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeMpRate": 0,
+      "changeMpPoint": 0,
+      "poisonDamageRate": 130,
+      "diseaseDamageRate": 130,
+      "bloodDamageRate": 130,
+      "freezeDamageRate": 130,
+      "sleepDamageRate": 130,
+      "madnessDamageRate": 130
+    },
+    "834": {
+      "stateInfo": 2,
+      "spCategory": 10004,
+      "effectEndurance": 40,
+      "motionInterval": 1.2999999523162842,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 0.10000000149011612,
+      "changeHpPoint": 10,
+      "changeMpRate": 0,
+      "changeMpPoint": 0,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    },
+    "3128": {
+      "stateInfo": 5,
+      "spCategory": 10005,
+      "effectEndurance": 40,
+      "motionInterval": 1.2999999523162842,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 0.15000000596046448,
+      "changeHpPoint": 15,
+      "changeMpRate": 0,
+      "changeMpPoint": 0,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    },
+    "870": {
+      "stateInfo": 6,
+      "spCategory": 10003,
+      "effectEndurance": 1,
+      "motionInterval": 2,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 12.5,
+      "changeHpPoint": 100,
+      "changeMpRate": 0,
+      "changeMpPoint": 0,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    },
+    "829": {
+      "stateInfo": 260,
+      "spCategory": 10007,
+      "effectEndurance": 30,
+      "motionInterval": 99,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 10,
+      "changeHpPoint": 50,
+      "changeMpRate": 0,
+      "changeMpPoint": 0,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    },
+    "1745": {
+      "stateInfo": 436,
+      "spCategory": 10009,
+      "effectEndurance": 60,
+      "motionInterval": 65,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeMpRate": 10,
+      "changeMpPoint": 30,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    },
+    "920": {
+      "stateInfo": 437,
+      "spCategory": 10010,
+      "effectEndurance": 1,
+      "motionInterval": 2,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "changeHpRate": 15,
+      "changeHpPoint": 100,
+      "changeMpRate": 10,
+      "changeMpPoint": 30,
+      "poisonDamageRate": 100,
+      "diseaseDamageRate": 100,
+      "bloodDamageRate": 100,
+      "freezeDamageRate": 100,
+      "sleepDamageRate": 100,
+      "madnessDamageRate": 100
+    }
+  },
+  "bullet": {
+    "atkId_Bullet": 700000410,
+    "spEffectId0": 7036701,
+    "life": 0.10000000149011612,
+    "hitRadius": 30,
+    "numShoot": 1,
+    "isEndlessHit": 0
+  },
+  "checks": {
+    "dispatch": [
+      {
+        "copies": 0,
+        "enabled": 0,
+        "event": {
+          "animation": 680000,
+          "index": 4,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": 0,
+        "event": {
+          "animation": 680000,
+          "index": 61,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 0,
+        "enabled": 1,
+        "event": {
+          "animation": 680000,
+          "index": 4,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+        },
+        "requests": [
+          {
+            "behavior": 700000400,
+            "active": true,
+            "instant": true,
+            "payload": "840300000000000000000000000020400101"
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "enabled": 1,
+        "event": {
+          "animation": 680000,
+          "index": 61,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": 0,
+        "event": {
+          "animation": 680000,
+          "index": 4,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": 0,
+        "event": {
+          "animation": 680000,
+          "index": 61,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 1,
+        "enabled": 1,
+        "event": {
+          "animation": 680000,
+          "index": 4,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+        },
+        "requests": [
+          {
+            "behavior": 700000400,
+            "active": true,
+            "instant": true,
+            "payload": "840300000000000000000000000020400101"
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "enabled": 1,
+        "event": {
+          "animation": 680000,
+          "index": 61,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+        },
+        "requests": [
+          {
+            "behavior": 700000401,
+            "active": true,
+            "instant": true,
+            "payload": "840300000000000000000000000020400101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": 0,
+        "event": {
+          "animation": 680000,
+          "index": 4,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": 0,
+        "event": {
+          "animation": 680000,
+          "index": 61,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+        },
+        "requests": []
+      },
+      {
+        "copies": 3,
+        "enabled": 1,
+        "event": {
+          "animation": 680000,
+          "index": 4,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E81C00000000000000000004000000000000000000000000"
+        },
+        "requests": [
+          {
+            "behavior": 700000400,
+            "active": true,
+            "instant": true,
+            "payload": "840300000000000000000000000020400101"
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "enabled": 1,
+        "event": {
+          "animation": 680000,
+          "index": 61,
+          "Type": 2,
+          "StartTime": 2.5,
+          "EndTime": 2.6,
+          "hex": "8403000000000000E91C00000000EC0700000004000000000000000000000000"
+        },
+        "requests": [
+          {
+            "behavior": 700000401,
+            "active": true,
+            "instant": true,
+            "payload": "840300000000000000000000000020400101"
+          }
+        ]
+      }
+    ],
+    "projectile": [
+      {
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "fps": 60,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      }
+    ],
+    "targets": [
+      {
+        "sourceType": 1,
+        "recipientType": 0,
+        "accepted": false
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 1,
+        "accepted": false
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 2,
+        "accepted": false
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 3,
+        "accepted": false
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 4,
+        "accepted": false
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 5,
+        "accepted": false
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 6,
+        "accepted": true
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 7,
+        "accepted": true
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 8,
+        "accepted": true
+      },
+      {
+        "sourceType": 1,
+        "recipientType": 9,
+        "accepted": true
+      }
+    ],
+    "damage": [
+      {
+        "copies": 0,
+        "onset": 834,
+        "maximum": 101,
+        "hp": [
+          -10,
+          0,
+          -10,
+          0,
+          -10,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 834,
+        "maximum": 1000,
+        "hp": [
+          -11,
+          0,
+          -11,
+          0,
+          -11,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 834,
+        "maximum": 10000,
+        "hp": [
+          -20,
+          0,
+          -20,
+          0,
+          -20,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 3128,
+        "maximum": 101,
+        "hp": [
+          -15,
+          0,
+          -15,
+          0,
+          -15,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 3128,
+        "maximum": 1000,
+        "hp": [
+          -16,
+          0,
+          -16,
+          0,
+          -16,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 3128,
+        "maximum": 10000,
+        "hp": [
+          -30,
+          0,
+          -30,
+          0,
+          -30,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 870,
+        "maximum": 101,
+        "hp": [
+          -112,
+          0,
+          -112,
+          0,
+          -112,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 870,
+        "maximum": 1000,
+        "hp": [
+          -225,
+          0,
+          -225,
+          0,
+          -225,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 870,
+        "maximum": 10000,
+        "hp": [
+          -1350,
+          0,
+          -1350,
+          0,
+          -1350,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 829,
+        "maximum": 101,
+        "hp": [
+          -60,
+          0,
+          -60,
+          0,
+          -60,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 829,
+        "maximum": 1000,
+        "hp": [
+          -150,
+          0,
+          -150,
+          0,
+          -150,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 829,
+        "maximum": 10000,
+        "hp": [
+          -1050,
+          0,
+          -1050,
+          0,
+          -1050,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 1745,
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -40,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 1745,
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -130,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 1745,
+        "maximum": 10000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -1030,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 920,
+        "maximum": 101,
+        "hp": [
+          -115,
+          0,
+          -115,
+          0,
+          -115,
+          0,
+          0
+        ],
+        "fp": [
+          -40,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 920,
+        "maximum": 1000,
+        "hp": [
+          -250,
+          0,
+          -250,
+          0,
+          -250,
+          0,
+          0
+        ],
+        "fp": [
+          -130,
+          0
+        ]
+      },
+      {
+        "copies": 0,
+        "onset": 920,
+        "maximum": 10000,
+        "hp": [
+          -1600,
+          0,
+          -1600,
+          0,
+          -1600,
+          0,
+          0
+        ],
+        "fp": [
+          -1030,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 834,
+        "maximum": 101,
+        "hp": [
+          -13,
+          0,
+          -13,
+          0,
+          -13,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 834,
+        "maximum": 1000,
+        "hp": [
+          -14,
+          0,
+          -14,
+          0,
+          -14,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 834,
+        "maximum": 10000,
+        "hp": [
+          -26,
+          0,
+          -26,
+          0,
+          -26,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 3128,
+        "maximum": 101,
+        "hp": [
+          -19,
+          0,
+          -19,
+          0,
+          -19,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 3128,
+        "maximum": 1000,
+        "hp": [
+          -21,
+          0,
+          -21,
+          0,
+          -21,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 3128,
+        "maximum": 10000,
+        "hp": [
+          -39,
+          0,
+          -39,
+          0,
+          -39,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 870,
+        "maximum": 101,
+        "hp": [
+          -146,
+          0,
+          -146,
+          0,
+          -146,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 870,
+        "maximum": 1000,
+        "hp": [
+          -292,
+          0,
+          -292,
+          0,
+          -292,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 870,
+        "maximum": 10000,
+        "hp": [
+          -1755,
+          0,
+          -1755,
+          0,
+          -1755,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 829,
+        "maximum": 101,
+        "hp": [
+          -78,
+          0,
+          -78,
+          0,
+          -78,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 829,
+        "maximum": 1000,
+        "hp": [
+          -195,
+          0,
+          -195,
+          0,
+          -195,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 829,
+        "maximum": 10000,
+        "hp": [
+          -1365,
+          0,
+          -1365,
+          0,
+          -1365,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 1745,
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -40,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 1745,
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -130,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 1745,
+        "maximum": 10000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -1030,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 920,
+        "maximum": 101,
+        "hp": [
+          -149,
+          0,
+          -149,
+          0,
+          -149,
+          0,
+          0
+        ],
+        "fp": [
+          -40,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 920,
+        "maximum": 1000,
+        "hp": [
+          -325,
+          0,
+          -325,
+          0,
+          -325,
+          0,
+          0
+        ],
+        "fp": [
+          -130,
+          0
+        ]
+      },
+      {
+        "copies": 1,
+        "onset": 920,
+        "maximum": 10000,
+        "hp": [
+          -2080,
+          0,
+          -2080,
+          0,
+          -2080,
+          0,
+          0
+        ],
+        "fp": [
+          -1030,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 834,
+        "maximum": 101,
+        "hp": [
+          -13,
+          0,
+          -13,
+          0,
+          -13,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 834,
+        "maximum": 1000,
+        "hp": [
+          -14,
+          0,
+          -14,
+          0,
+          -14,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 834,
+        "maximum": 10000,
+        "hp": [
+          -26,
+          0,
+          -26,
+          0,
+          -26,
+          1,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 3128,
+        "maximum": 101,
+        "hp": [
+          -19,
+          0,
+          -19,
+          0,
+          -19,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 3128,
+        "maximum": 1000,
+        "hp": [
+          -21,
+          0,
+          -21,
+          0,
+          -21,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 3128,
+        "maximum": 10000,
+        "hp": [
+          -39,
+          0,
+          -39,
+          0,
+          -39,
+          2,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 870,
+        "maximum": 101,
+        "hp": [
+          -146,
+          0,
+          -146,
+          0,
+          -146,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 870,
+        "maximum": 1000,
+        "hp": [
+          -292,
+          0,
+          -292,
+          0,
+          -292,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 870,
+        "maximum": 10000,
+        "hp": [
+          -1755,
+          0,
+          -1755,
+          0,
+          -1755,
+          4,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 829,
+        "maximum": 101,
+        "hp": [
+          -78,
+          0,
+          -78,
+          0,
+          -78,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 829,
+        "maximum": 1000,
+        "hp": [
+          -195,
+          0,
+          -195,
+          0,
+          -195,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 829,
+        "maximum": 10000,
+        "hp": [
+          -1365,
+          0,
+          -1365,
+          0,
+          -1365,
+          8,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 1745,
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -40,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 1745,
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -130,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 1745,
+        "maximum": 10000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          -1030,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 920,
+        "maximum": 101,
+        "hp": [
+          -149,
+          0,
+          -149,
+          0,
+          -149,
+          0,
+          0
+        ],
+        "fp": [
+          -40,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 920,
+        "maximum": 1000,
+        "hp": [
+          -325,
+          0,
+          -325,
+          0,
+          -325,
+          0,
+          0
+        ],
+        "fp": [
+          -130,
+          0
+        ]
+      },
+      {
+        "copies": 3,
+        "onset": 920,
+        "maximum": 10000,
+        "hp": [
+          -2080,
+          0,
+          -2080,
+          0,
+          -2080,
+          0,
+          0
+        ],
+        "fp": [
+          -1030,
+          0
+        ]
+      }
+    ],
+    "buildup": [
+      {
+        "copies": 0,
+        "kind": 0,
+        "effect": 834,
+        "incoming": 30,
+        "remaining": 470
+      },
+      {
+        "copies": 0,
+        "kind": 1,
+        "effect": 3128,
+        "incoming": 40,
+        "remaining": 460
+      },
+      {
+        "copies": 0,
+        "kind": 2,
+        "effect": 870,
+        "incoming": 60,
+        "remaining": 440
+      },
+      {
+        "copies": 0,
+        "kind": 4,
+        "effect": 829,
+        "incoming": 30,
+        "remaining": 470
+      },
+      {
+        "copies": 0,
+        "kind": 5,
+        "effect": 1745,
+        "incoming": 45,
+        "remaining": 455
+      },
+      {
+        "copies": 0,
+        "kind": 6,
+        "effect": 920,
+        "incoming": 40,
+        "remaining": 460
+      },
+      {
+        "copies": 1,
+        "kind": 0,
+        "effect": 834,
+        "incoming": 30,
+        "remaining": 470
+      },
+      {
+        "copies": 1,
+        "kind": 1,
+        "effect": 3128,
+        "incoming": 40,
+        "remaining": 460
+      },
+      {
+        "copies": 1,
+        "kind": 2,
+        "effect": 870,
+        "incoming": 60,
+        "remaining": 440
+      },
+      {
+        "copies": 1,
+        "kind": 4,
+        "effect": 829,
+        "incoming": 30,
+        "remaining": 470
+      },
+      {
+        "copies": 1,
+        "kind": 5,
+        "effect": 1745,
+        "incoming": 45,
+        "remaining": 455
+      },
+      {
+        "copies": 1,
+        "kind": 6,
+        "effect": 920,
+        "incoming": 40,
+        "remaining": 460
+      },
+      {
+        "copies": 3,
+        "kind": 0,
+        "effect": 834,
+        "incoming": 30,
+        "remaining": 470
+      },
+      {
+        "copies": 3,
+        "kind": 1,
+        "effect": 3128,
+        "incoming": 40,
+        "remaining": 460
+      },
+      {
+        "copies": 3,
+        "kind": 2,
+        "effect": 870,
+        "incoming": 60,
+        "remaining": 440
+      },
+      {
+        "copies": 3,
+        "kind": 4,
+        "effect": 829,
+        "incoming": 30,
+        "remaining": 470
+      },
+      {
+        "copies": 3,
+        "kind": 5,
+        "effect": 1745,
+        "incoming": 45,
+        "remaining": 455
+      },
+      {
+        "copies": 3,
+        "kind": 6,
+        "effect": 920,
+        "incoming": 40,
+        "remaining": 460
+      }
+    ],
+    "unlink": [
+      {
+        "marker": 708100,
+        "reason": 0,
+        "fps": 30,
+        "before": 18.000031,
+        "after": 15.000048,
+        "linked": false,
+        "removal": [
+          708121
+        ]
+      },
+      {
+        "marker": 708100,
+        "reason": 0,
+        "fps": 60,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708121
+        ]
+      },
+      {
+        "marker": 708100,
+        "reason": 0,
+        "fps": 120,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708121
+        ]
+      },
+      {
+        "marker": 708100,
+        "reason": 1,
+        "fps": 30,
+        "before": 18.000031,
+        "after": 15.000048,
+        "linked": false,
+        "removal": [
+          708120
+        ]
+      },
+      {
+        "marker": 708100,
+        "reason": 1,
+        "fps": 60,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708120
+        ]
+      },
+      {
+        "marker": 708100,
+        "reason": 1,
+        "fps": 120,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708120
+        ]
+      },
+      {
+        "marker": 708110,
+        "reason": 0,
+        "fps": 30,
+        "before": 18.000031,
+        "after": 15.000048,
+        "linked": false,
+        "removal": [
+          708121
+        ]
+      },
+      {
+        "marker": 708110,
+        "reason": 0,
+        "fps": 60,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708121
+        ]
+      },
+      {
+        "marker": 708110,
+        "reason": 0,
+        "fps": 120,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708121
+        ]
+      },
+      {
+        "marker": 708110,
+        "reason": 1,
+        "fps": 30,
+        "before": 18.000031,
+        "after": 15.000048,
+        "linked": false,
+        "removal": [
+          708120
+        ]
+      },
+      {
+        "marker": 708110,
+        "reason": 1,
+        "fps": 60,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708120
+        ]
+      },
+      {
+        "marker": 708110,
+        "reason": 1,
+        "fps": 120,
+        "before": 18.000031,
+        "after": 15.000076,
+        "linked": false,
+        "removal": [
+          708120
+        ]
+      }
+    ],
+    "refresh": [
+      {
+        "copies": 1,
+        "refresh": false,
+        "fps": 30,
+        "expiryFrame": 602,
+        "refreshLifetime": null
+      },
+      {
+        "copies": 1,
+        "refresh": false,
+        "fps": 60,
+        "expiryFrame": 1203,
+        "refreshLifetime": null
+      },
+      {
+        "copies": 1,
+        "refresh": false,
+        "fps": 120,
+        "expiryFrame": 2403,
+        "refreshLifetime": null
+      },
+      {
+        "copies": 1,
+        "refresh": true,
+        "fps": 30,
+        "expiryFrame": 751,
+        "refreshLifetime": 20.0
+      },
+      {
+        "copies": 1,
+        "refresh": true,
+        "fps": 60,
+        "expiryFrame": 1502,
+        "refreshLifetime": 20.0
+      },
+      {
+        "copies": 1,
+        "refresh": true,
+        "fps": 120,
+        "expiryFrame": 3002,
+        "refreshLifetime": 20.0
+      },
+      {
+        "copies": 3,
+        "refresh": false,
+        "fps": 30,
+        "expiryFrame": 602,
+        "refreshLifetime": null
+      },
+      {
+        "copies": 3,
+        "refresh": false,
+        "fps": 60,
+        "expiryFrame": 1203,
+        "refreshLifetime": null
+      },
+      {
+        "copies": 3,
+        "refresh": false,
+        "fps": 120,
+        "expiryFrame": 2403,
+        "refreshLifetime": null
+      },
+      {
+        "copies": 3,
+        "refresh": true,
+        "fps": 30,
+        "expiryFrame": 751,
+        "refreshLifetime": 20.0
+      },
+      {
+        "copies": 3,
+        "refresh": true,
+        "fps": 60,
+        "expiryFrame": 1502,
+        "refreshLifetime": 20.0
+      },
+      {
+        "copies": 3,
+        "refresh": true,
+        "fps": 120,
+        "expiryFrame": 3002,
+        "refreshLifetime": 20.0
+      }
+    ],
+    "late": [
+      {
+        "fps": 30,
+        "debuffArrivalSeconds": 2,
+        "pulses": [
+          {
+            "frame": 0,
+            "hp": -11
+          },
+          {
+            "frame": 39,
+            "hp": -11
+          },
+          {
+            "frame": 78,
+            "hp": -14
+          },
+          {
+            "frame": 117,
+            "hp": -14
+          },
+          {
+            "frame": 156,
+            "hp": -14
+          },
+          {
+            "frame": 195,
+            "hp": -14
+          },
+          {
+            "frame": 234,
+            "hp": -14
+          },
+          {
+            "frame": 273,
+            "hp": -14
+          },
+          {
+            "frame": 312,
+            "hp": -14
+          },
+          {
+            "frame": 351,
+            "hp": -14
+          },
+          {
+            "frame": 390,
+            "hp": -14
+          },
+          {
+            "frame": 429,
+            "hp": -14
+          },
+          {
+            "frame": 468,
+            "hp": -14
+          },
+          {
+            "frame": 507,
+            "hp": -14
+          },
+          {
+            "frame": 546,
+            "hp": -14
+          },
+          {
+            "frame": 585,
+            "hp": -14
+          },
+          {
+            "frame": 624,
+            "hp": -14
+          },
+          {
+            "frame": 663,
+            "hp": -11
+          },
+          {
+            "frame": 702,
+            "hp": -11
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "debuffArrivalSeconds": 2,
+        "pulses": [
+          {
+            "frame": 0,
+            "hp": -11
+          },
+          {
+            "frame": 79,
+            "hp": -11
+          },
+          {
+            "frame": 157,
+            "hp": -14
+          },
+          {
+            "frame": 235,
+            "hp": -14
+          },
+          {
+            "frame": 313,
+            "hp": -14
+          },
+          {
+            "frame": 391,
+            "hp": -14
+          },
+          {
+            "frame": 469,
+            "hp": -14
+          },
+          {
+            "frame": 547,
+            "hp": -14
+          },
+          {
+            "frame": 625,
+            "hp": -14
+          },
+          {
+            "frame": 703,
+            "hp": -14
+          },
+          {
+            "frame": 781,
+            "hp": -14
+          },
+          {
+            "frame": 859,
+            "hp": -14
+          },
+          {
+            "frame": 937,
+            "hp": -14
+          },
+          {
+            "frame": 1015,
+            "hp": -14
+          },
+          {
+            "frame": 1093,
+            "hp": -14
+          },
+          {
+            "frame": 1171,
+            "hp": -14
+          },
+          {
+            "frame": 1249,
+            "hp": -14
+          },
+          {
+            "frame": 1327,
+            "hp": -11
+          },
+          {
+            "frame": 1405,
+            "hp": -11
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "debuffArrivalSeconds": 2,
+        "pulses": [
+          {
+            "frame": 0,
+            "hp": -11
+          },
+          {
+            "frame": 157,
+            "hp": -11
+          },
+          {
+            "frame": 313,
+            "hp": -14
+          },
+          {
+            "frame": 469,
+            "hp": -14
+          },
+          {
+            "frame": 625,
+            "hp": -14
+          },
+          {
+            "frame": 781,
+            "hp": -14
+          },
+          {
+            "frame": 937,
+            "hp": -14
+          },
+          {
+            "frame": 1093,
+            "hp": -14
+          },
+          {
+            "frame": 1249,
+            "hp": -14
+          },
+          {
+            "frame": 1405,
+            "hp": -14
+          },
+          {
+            "frame": 1561,
+            "hp": -14
+          },
+          {
+            "frame": 1717,
+            "hp": -14
+          },
+          {
+            "frame": 1873,
+            "hp": -14
+          },
+          {
+            "frame": 2029,
+            "hp": -14
+          },
+          {
+            "frame": 2185,
+            "hp": -14
+          },
+          {
+            "frame": 2341,
+            "hp": -14
+          },
+          {
+            "frame": 2497,
+            "hp": -14
+          },
+          {
+            "frame": 2653,
+            "hp": -11
+          },
+          {
+            "frame": 2809,
+            "hp": -11
+          }
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "347700 successful projectile recorder, without scene collision",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3CED90 isolated actor context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "42C120 explicit source actor identity",
+    "43BE60 argument 5 is 1: physical HP damage is skipped while effect delivery runs",
+    "519140 explicit network-handle recipient lookup",
+    "E6D630 actual AtkParam_Pc row lookup",
+    "E6FCB0 actual Behavior row lookup",
+    "E81650 actual PlayerCommon row lookup",
+    "E87800 actual Scholar ailment Bullet lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "actual onset rows are explicitly inserted for isolated HP/FP amounts; buildup input is separately exercised",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "collision arrivals, actor/team identity and projectile ownership supplied; complete target acquisition, geometry, resource setters and multiplayer transport not executed",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit local hit-score context in mode 0",
+    "explicit one-target source map and recipient link list; original detach/rejoin execute unchanged",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "recipient virtual +200 false ordinary hit predicate",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "native": {
+    "animation": "27D0F10 / 27D0400 → 40CD80 → 668B30",
+    "hit": "43BE60 → 3C80A0",
+    "buildup": "42D110",
+    "unlink": "4507C0 → 44F180 / 452870 / 44B800 → 3C7FD0",
+    "hp": "506EC0 → 50B860",
+    "fp": "507460"
+  },
+  "gameplayVerified": false
+}

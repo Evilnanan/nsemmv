@@ -38,6 +38,7 @@ import heroAdjustment from "../../data/effect-hero-adjustment-evidence.json";
 import successiveRecovery from "../../data/effect-successive-recovery-evidence.json";
 import successiveAttack from "../../data/effect-successive-attack-evidence.json";
 import scholarTether from "../../data/effect-scholar-tether-evidence.json";
+import scholarAilment from "../../data/effect-scholar-ailment-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
@@ -64,6 +65,36 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Scholar ailment HP damage from buildup, FP loss and link lifetime", () => {
+    for (const id of [7036700, 7036701]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.blocks[0].values).toEqual([["异常造成的血量损伤", "+30%"]]);
+      expect(detail.blocks[0].restrictions).toEqual(["中毒／腐败／出血／冻伤／发狂"]);
+      expect(detail.blocks[0].duration).toBe(20);
+      expect(detail.notes.join()).toContain("不增加催眠、发狂造成的专注值损失");
+      expect(detail.notes.join()).toContain("断开连结不提前解除");
+    }
+    for (const row of scholarAilment.checks.damage) {
+      const single = scholarAilment.checks.damage.find(r => r.copies === 1 && r.onset === row.onset && r.maximum === row.maximum)!;
+      const plain = scholarAilment.checks.damage.find(r => r.copies === 0 && r.onset === row.onset && r.maximum === row.maximum)!;
+      expect(row.fp).toEqual(plain.fp);
+      if (row.copies === 3) expect(row.hp).toEqual(single.hp);
+      if (row.onset === 1745) expect(row.hp[0]).toBe(0);
+    }
+    for (const row of scholarAilment.checks.buildup)
+      expect(row.remaining).toBe(500 - row.incoming);
+    for (const row of scholarAilment.checks.unlink) {
+      expect(row.linked).toBe(false);
+      expect(row.after).toBeCloseTo(15, 2);
+    }
+    for (const row of scholarAilment.checks.refresh)
+      expect(Math.abs(row.expiryFrame / row.fps - (row.refresh ? 25 : 20))).toBeLessThanOrEqual(4 / row.fps);
+    expect(scholarAilment.gameplayVerified).toBe(false);
+    expect(research.scholarAilmentEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-scholar-ailment-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates flask sharing's self cost, ally healing and conditional restoration", () => {
     for (const id of [11001, 7010200]) {
       const detail = effectDetail(id)!;
@@ -1552,7 +1583,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(548);
+    expect(research.coverage.withNumericFields).toBe(550);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
