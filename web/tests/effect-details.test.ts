@@ -41,6 +41,7 @@ import scholarTether from "../../data/effect-scholar-tether-evidence.json";
 import ironeyeUltimate from "../../data/effect-ironeye-ultimate-evidence.json";
 import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.json";
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
+import frostStealth from "../../data/effect-frost-stealth-evidence.json";
 import duchessStealth from "../../data/effect-duchess-stealth-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
@@ -59,6 +60,42 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("keeps frost concealment duration separate from the short notification markers", () => {
+    const detail = effectDetail(7260700)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不延长隐身");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0].source).toBe(7260703);
+    expect(detail.blocks[0].phase).toBe("自身或附近敌人冻伤时");
+    expect(detail.blocks[0].values).toEqual([["隐身时间", "5 秒"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.blocks[0].interval).toBeNull();
+    expect(detail.notes).toEqual(["再次触发刷新持续时间；队友冻伤不触发。"]);
+    for (const row of frostStealth.checks.onset) {
+      expect(row.shots).toHaveLength(!row.immune && row.resistance <= 50 ? 1 : 0);
+    }
+    for (const row of frostStealth.checks.recipients) {
+      const eligible = row.same || [6, 7, 8, 9].includes(row.sourceType);
+      expect(row.markerPresent).toBe(eligible);
+      expect(row.hidden).toBe(!!row.copies && eligible);
+      expect(row.nodes.filter(n => n.id === 7260703)).toHaveLength(row.hidden ? 1 : 0);
+    }
+    for (const row of frostStealth.checks.lifetime) {
+      if (row.copies) {
+        expect(row.first).not.toBeNull();
+        expect(Math.abs((row.last! - row.first! + 1) / row.fps - 5)).toBeLessThanOrEqual(3.01 / row.fps);
+      } else expect(row.first).toBeNull();
+      expect(row.remaining.some(n => n.id === 7260703)).toBe(false);
+    }
+    for (const row of frostStealth.checks.repeat) {
+      expect(row.lifetimes.every(n => n.lifetime > 4.8 && n.lifetime <= 5)).toBe(true);
+      expect(Math.abs(row.transitions.at(-1)!.frame / 60 - row.starts.at(-1)! - 5)).toBeLessThan(.1);
+    }
+    expect(frostStealth.gameplayVerified).toBe(false);
+    expect(research.frostStealthEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-frost-stealth-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("shows the lasting backstab concealment without exposing its maintenance timers", () => {
     const detail = effectDetail(7031800)!;
     expect(detail.stacking).toBe("不可叠加");
@@ -1369,7 +1406,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(543);
+    expect(research.coverage.withNumericFields).toBe(544);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
