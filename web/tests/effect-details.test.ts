@@ -22,12 +22,43 @@ import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
 import protection from "../../data/effect-guardian-protection-evidence.json";
 import tenacity from "../../data/effect-executor-tenacity-evidence.json";
+import startingWeapon from "../../data/effect-starting-weapon-evidence.json";
 import duration from "../../data/effect-guardian-duration-evidence.json";
 import evasion from "../../data/effect-duchess-evasion-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("binds starting infusions to weapon instances and shows their attack penalties", () => {
+    for (const id of [7120000, 7120100, 7120200, 7120300]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values[0]).toEqual(["物理攻击力", "-30／-40／-50／-60"]);
+      expect(detail.blocks[0].values[1][1]).toBe("+33／+44／+55／+66");
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("出击武器的属性／异常附加只生效一种");
+    }
+    for (const [id, label, amount] of [[7120400, "基础冻伤累积", "35"], [7120500, "基础中毒累积", "35"], [7120600, "基础出血累积", "25"]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].values).toEqual([["攻击力", "-15%"]]);
+      expect(detail.blocks[1].values).toEqual([[label, amount]]);
+      expect(detail.blocks.every((b) => b.duration === null && b.interval === null)).toBe(true);
+    }
+    for (const row of startingWeapon.checks.assignment)
+      expect(row.attached).toBe(row.containerOrder.at(-1) ?? -1);
+    for (const row of startingWeapon.checks.component.filter((r) => "repeat" in r)) {
+      expect(row.repeat).toEqual([]);
+      expect(row.afterUnequip).toEqual([]);
+    }
+    for (const row of startingWeapon.checks.binding.filter((r) => !r.residentLevels.includes(r.weaponLevel))) {
+      expect(row.points).toEqual([0, 0, 0, 0, 0]);
+      expect(row.rates).toEqual([1, 1, 1, 1, 1]);
+    }
+    expect(startingWeapon.checks.status.filter((r) => r.attached === -1).every((r) => !r.effects.length)).toBe(true);
+    expect(startingWeapon.gameplayVerified).toBe(false);
+    expect(research.startingWeaponEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-starting-weapon-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("binds Guardian tornado lifetimes to the actual held and early-release branches", () => {
     const detail = effectDetail(7011000)!;
     expect(detail.blocks[0].values).toEqual([["正常释放", "1 → 7 秒"], ["提前松开按键", "1 → 4 秒"]]);
@@ -558,7 +589,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(509);
+    expect(research.coverage.withNumericFields).toBe(516);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
