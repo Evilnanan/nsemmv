@@ -299,6 +299,12 @@ assert scholar_feint['schema'] == 1 and scholar_feint['regulationSha256'] == cat
 assert scholar_feint['exeSha256'] == evidence['exeSha256'] and not scholar_feint['gameplayVerified']
 assert scholar_feint['paramSha256'] == evidence['paramSha256'] and scholar_feint['scriptSha256'] == scripts['scriptSha256']
 assert {k: len(v) for k, v in scholar_feint['checks'].items()} == dict(rawEvents=27, dispatch=972, script=64)
+flask_sharing_path = ROOT / 'data/effect-flask-sharing-evidence.json'
+flask_sharing = json.loads(flask_sharing_path.read_text())
+assert flask_sharing['schema'] == 1 and flask_sharing['regulationSha256'] == catalog['regulationSha256']
+assert flask_sharing['exeSha256'] == evidence['exeSha256'] and not flask_sharing['gameplayVerified']
+assert flask_sharing['paramSha256'] == evidence['paramSha256'] and flask_sharing['scriptSha256'] == scripts['scriptSha256']
+assert {k: len(v) for k, v in flask_sharing['checks'].items()} == dict(branches=32, projectile=8, amounts=64, targets=44, sourceModifiers=9, timeline=24)
 rally_path = ROOT / 'data/effect-rally-recovery-evidence.json'
 rally = json.loads(rally_path.read_text())
 assert rally['schema'] == 1 and rally['regulationSha256'] == catalog['regulationSha256']
@@ -475,6 +481,8 @@ if args.extract:
                 needed.update(map(int, ironeye_ultimate['rows']))
             if root == revenant_ghostflame['root']:
                 needed.update(map(int, revenant_ghostflame['rows']))
+            if root in (flask_sharing['root'], 8440200):
+                needed.update(map(int, flask_sharing['rows']))
             if root == attack_nullify['effect']:
                 needed.update(map(int, attack_nullify['rows']))
             if root in ailment_growth['roots']:
@@ -725,6 +733,8 @@ STACKING_RULES = {
     'ironeye-ultimate': ('不可叠加', '重复装备不增加累积或伤害', ['ironeye-ultimate']),
     'revenant-ghostflame': ('不可叠加', '重复装备不增加爆炸次数或冻伤累积', ['revenant-ghostflame']),
     'scholar-feint': ('不可叠加', '重复装备不延长弹反窗口', ['scholar-feint']),
+    'flask-sharing': ('不可叠加', '重复装备不增加恢复量；同类持续恢复再次施加刷新时长，不叠加速度', ['flask-sharing']),
+    'gradual-flask': ('不可叠加', '再次喝瓶刷新持续恢复，不叠加速度', ['flask-sharing']),
     'rally-recovery': ('不同等级可叠加', '同等级不重复；+1 与 +2 的恢复量倍率相乘，普通版无额外加成', ['rally-recovery']),
     'rally-blessing': ('可叠加', '可与遗物的恢复量倍率相乘；自身不重复', ['rally-recovery']),
     'attack-nullify': ('不可叠加', '重复装备不提高概率', ['attack-nullify']),
@@ -1183,6 +1193,33 @@ for id, effect in source['effects'].items():
                        values=[['弹反窗口', '动作第 0.13～0.27 秒']], restrictions=['刺剑／重刺剑'],
                        scope=[], duration=None, interval=None)]
         rule = 'scholar-feint'
+    if int(id) in flask_sharing['effects']:
+        assert list(effect['roots'].values()) == [flask_sharing['root']] and flask_sharing['radius'] == 15
+        blocks = [
+            dict(source=7010220, phase='使用圣杯瓶时', linked=True,
+                 values=[['自身血量恢复', '最大值的 60% → 50%']], restrictions=[], scope=['仅自身'], duration=None, interval=None),
+            dict(source=7010221, phase='周围我方人物', linked=True,
+                 values=[['血量恢复', '最大值的 30%'], ['治疗范围', '半径 15 米，不含自身']], restrictions=[], scope=['半径 15 米，不含自身'], duration=None, interval=None),
+            dict(source=7010241, branches=[7010240,7010230,7010231], phase='搭配缓慢恢复时', linked=True,
+                 values=[['自身瞬间恢复', '最大血量的 10%'], ['我方瞬间恢复', '最大血量的 5%'],
+                         ['持续恢复', '约每 0.1 秒恢复最大血量的 1%'], ['持续时间', '自身 8 秒／我方 4 秒']],
+                 restrictions=[], scope=[], duration=None, interval=None),
+            dict(source=7010260, branches=[7010250], phase='喝瓶回蓝效果共存时', linked=True,
+                 values=[['自身专注值恢复', '最大值的 30%'], ['我方专注值恢复', '最大值的 15%']],
+                 restrictions=[], scope=[], duration=None, interval=None),
+        ]
+        notes.append('瞬间回血按接受治疗者自身的圣杯瓶恢复量加成或减益调整；持续回血不受这项修正影响。')
+        rule = 'flask-sharing'
+    if int(id) == 8440200:
+        assert list(effect['roots'].values()) == [8440200]
+        blocks = [
+            dict(source=7010230, phase='使用圣杯瓶时', linked=True,
+                 values=[['瞬间血量恢复', '最大值的 60% → 10%']], restrictions=[], scope=['仅自身'], duration=None, interval=None),
+            dict(source=7010231, phase='随后持续恢复', linked=True,
+                 values=[['血量恢复', '每次最大值的 1%']], restrictions=[], scope=['仅自身'], duration=8, interval=.1),
+        ]
+        notes.append('瞬间回血受圣杯瓶恢复量加成或减益影响；持续回血不受这项修正影响。')
+        rule = 'gradual-flask'
     if id in rally['effects']:
         root = rally['effects'][id]
         assert list(effect['roots'].values()) == [root]
@@ -1586,9 +1623,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -1640,6 +1677,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('爆炸魔力伤害的来源缩放与最终计算、完整弹体到命中数据构造／碰撞去重、实际半径插值、其他冻伤覆盖及火焰解除、自然退条与抵抗成长、最终 HP 写入及多人／重载交互')
     if rules[id] == 'scholar-feint':
         questions.append('右手／双持分支中 nil hand 的原生接口处理、完整动作选择与时间缩放、实际弹反碰撞和成功取消／失败伤害、精力扣除及多人同步')
+    if rules[id] in ('flask-sharing', 'gradual-flask'):
+        questions.append('完整消耗道具与动作中断、实际范围碰撞和不同施术者投递、最终 HP／FP 上限与其他治疗修正、死亡／重载及联机时序')
     if rules[id] in ('rally-recovery', 'rally-blessing'):
         questions.append('攻击动作与武器组合的完整可达性、零保留／零回收参数的实际来源、死亡／重载与多人投递；外层攻击构造和命中调度')
     if rules[id] == 'attack-nullify':
@@ -1757,6 +1796,7 @@ research['scholarTetherEvidenceSha256'] = hashlib.sha256(scholar_tether_path.rea
 research['ironeyeUltimateEvidenceSha256'] = hashlib.sha256(ironeye_ultimate_path.read_bytes()).hexdigest()
 research['revenantGhostflameEvidenceSha256'] = hashlib.sha256(revenant_ghostflame_path.read_bytes()).hexdigest()
 research['scholarFeintEvidenceSha256'] = hashlib.sha256(scholar_feint_path.read_bytes()).hexdigest()
+research['flaskSharingEvidenceSha256'] = hashlib.sha256(flask_sharing_path.read_bytes()).hexdigest()
 research['rallyRecoveryEvidenceSha256'] = hashlib.sha256(rally_path.read_bytes()).hexdigest()
 research['attackNullifyEvidenceSha256'] = hashlib.sha256(attack_nullify_path.read_bytes()).hexdigest()
 research['ailmentGrowthEvidenceSha256'] = hashlib.sha256(ailment_growth_path.read_bytes()).hexdigest()

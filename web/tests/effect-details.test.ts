@@ -43,6 +43,7 @@ import revenantGhostflame from "../../data/effect-revenant-ghostflame-evidence.j
 import scholarFeint from "../../data/effect-scholar-feint-evidence.json";
 import attackNullify from "../../data/effect-attack-nullify-evidence.json";
 import rally from "../../data/effect-rally-recovery-evidence.json";
+import flaskSharing from "../../data/effect-flask-sharing-evidence.json";
 import ailmentGrowth from "../../data/effect-ailment-growth-evidence.json";
 import frostStealth from "../../data/effect-frost-stealth-evidence.json";
 import duchessStealth from "../../data/effect-duchess-stealth-evidence.json";
@@ -63,6 +64,43 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates flask sharing's self cost, ally healing and conditional restoration", () => {
+    for (const id of [11001, 7010200]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.blocks[0].values).toEqual([["自身血量恢复", "最大值的 60% → 50%"]]);
+      expect(detail.blocks[1].values).toEqual([["血量恢复", "最大值的 30%"], ["治疗范围", "半径 15 米，不含自身"]]);
+      expect(detail.blocks[1].scope).toEqual(["半径 15 米，不含自身"]);
+      expect(detail.blocks[2].values).toContainEqual(["持续时间", "自身 8 秒／我方 4 秒"]);
+      expect(detail.blocks[3].values).toEqual([["自身专注值恢复", "最大值的 30%"], ["我方专注值恢复", "最大值的 15%"]]);
+      expect(detail.blocks.every(b => b.duration === null && b.interval === null)).toBe(true);
+      expect(detail.notes.join()).toContain("接受治疗者自身的圣杯瓶恢复量");
+    }
+    const gradual = effectDetail(8440200)!;
+    expect(gradual.blocks[0].duration).toBeNull();
+    expect(gradual.blocks[1].duration).toBe(8);
+    expect(gradual.blocks[1].interval).toBe(.1);
+    for (const row of flaskSharing.checks.branches) {
+      expect(row.packets.reduce((sum, p) => sum + p.hp, 0)).toBe(row.gradual ? 100 : row.copies ? 500 : 600);
+      expect(row.packets.reduce((sum, p) => sum + p.fp, 0)).toBe(row.fp ? 30 : 0);
+      expect(row.allyBehaviors).toEqual(row.copies ? [
+        ...(row.gradual ? [900102240, 900102241] : [900102221]), ...(row.fp ? [900102260] : []),
+      ] : []);
+    }
+    for (const row of flaskSharing.checks.sourceModifiers)
+      expect(row.hp[1]).toBe(row.recipient === 7611400 ? 330 : row.recipient === 6840100 ? 255 : 300);
+    for (const row of flaskSharing.checks.targets)
+      expect(row.accepted).toBe(!row.same && "sourceType" in row && [1, 2, 4].includes(row.sourceType ?? -1));
+    for (const row of flaskSharing.checks.timeline.filter(r => r.copies === 3)) {
+      const single = flaskSharing.checks.timeline.find(r => r.copies === 1 && r.leaf === row.leaf && r.fps === row.fps && r.refresh === row.refresh)!;
+      expect(row.pulseFrames).toEqual(single.pulseFrames);
+      expect(row.amount).toBe(10);
+    }
+    expect(flaskSharing.gameplayVerified).toBe(false);
+    expect(research.flaskSharingEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-flask-sharing-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("separates rally recovery amounts, grade stacking and the recoverable HP window", () => {
     for (const [id, bonus] of [[7005600, null], [6005600, "+25%"], [6005601, "+35%"], [9090200, "+35%"]] as const) {
       const detail = effectDetail(id)!;
@@ -1514,7 +1552,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(38);
-    expect(research.coverage.withNumericFields).toBe(547);
+    expect(research.coverage.withNumericFields).toBe(548);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

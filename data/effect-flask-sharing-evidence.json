@@ -1,0 +1,4999 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "animationBundleSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "taeSha256": "0d5e549747bd2280aafa2260b00eb83e4769eb8da666b7575e66f8aace3ee54a",
+  "behaviorBundleSha256": "0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5",
+  "bulletParamSha256": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
+  "effects": [
+    11001,
+    7010200
+  ],
+  "root": 7010200,
+  "rows": {
+    "501000": {
+      "stateInfo": 625,
+      "spCategory": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "replaceSpEffectId": 501025,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": -60,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "501025": {
+      "stateInfo": 275,
+      "spCategory": 0,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 1,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": 1500,
+      "dmypolyId": 900
+    },
+    "7010200": {
+      "stateInfo": 2344,
+      "spCategory": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010211": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "replaceSpEffectId": 7010299,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 0,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 2344,
+      "invocationConditionsStateChange2": 2015,
+      "invocationConditionsStateChange3": 2262,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010220": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": -50,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010221": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": -30,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010230": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": -10,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010231": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 8,
+      "motionInterval": 0.10000000149011612,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": -1,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010240": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": -5,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010241": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 4,
+      "motionInterval": 0.10000000149011612,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": -1,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010250": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": -30,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010260": {
+      "stateInfo": 0,
+      "spCategory": 20,
+      "effectEndurance": 0.10000000149011612,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": -15,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "7010280": {
+      "stateInfo": 275,
+      "spCategory": 20,
+      "effectEndurance": 0,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": 900102221,
+      "dmypolyId": 900
+    },
+    "7010281": {
+      "stateInfo": 275,
+      "spCategory": 20,
+      "effectEndurance": 0,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": 900102240,
+      "dmypolyId": 900
+    },
+    "7010282": {
+      "stateInfo": 275,
+      "spCategory": 20,
+      "effectEndurance": 0,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": 900102241,
+      "dmypolyId": 900
+    },
+    "7010283": {
+      "stateInfo": 275,
+      "spCategory": 20,
+      "effectEndurance": 0,
+      "motionInterval": 0.5,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": 900102260,
+      "dmypolyId": 900
+    },
+    "7010299": {
+      "stateInfo": 0,
+      "spCategory": 10,
+      "effectEndurance": 0,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "8440200": {
+      "stateInfo": 2015,
+      "spCategory": 0,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    },
+    "8970020": {
+      "stateInfo": 2262,
+      "spCategory": 10,
+      "effectEndurance": -1,
+      "motionInterval": 0,
+      "replaceSpEffectId": -1,
+      "cycleOccurrenceSpEffectId": -1,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "changeHpEstusFlaskRate": 0,
+      "changeHpEstusFlaskCorrectRate": 1,
+      "changeMpEstusFlaskRate": 0,
+      "effectTargetSelf": 1,
+      "effectTargetFriend": 1,
+      "effectTargetEnemy": 0,
+      "invocationConditionsStateChange1": 0,
+      "invocationConditionsStateChange2": 0,
+      "invocationConditionsStateChange3": 0,
+      "behaviorId": -1,
+      "dmypolyId": -1
+    }
+  },
+  "emissions": {
+    "7010280": 900102221,
+    "7010281": 900102240,
+    "7010282": 900102241,
+    "7010283": 900102260
+  },
+  "leaves": {
+    "900102221": 7010221,
+    "900102240": 7010240,
+    "900102241": 7010241,
+    "900102260": 7010260
+  },
+  "radius": 15,
+  "paths": [
+    {
+      "state": 50173,
+      "name": "ItemDrinking",
+      "selector": 56956,
+      "clips": [
+        "a000_050111",
+        "a000_050116"
+      ]
+    },
+    {
+      "state": 83047,
+      "name": "ItemDrinking_Upper",
+      "selector": 93657,
+      "clips": [
+        "a000_050111",
+        "a000_050116"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "animation": 50111,
+      "index": 10,
+      "Type": 67,
+      "StartTime": 0.26666668,
+      "EndTime": 0.3,
+      "hex": "A3F76A00000000000000000000000000"
+    },
+    {
+      "animation": 50116,
+      "index": 15,
+      "Type": 67,
+      "StartTime": 0.26666668,
+      "EndTime": 0.3,
+      "hex": "A3F76A00000000000000000000000000"
+    }
+  ],
+  "checks": {
+    "branches": [
+      {
+        "animation": 50111,
+        "copies": 0,
+        "gradual": false,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 16,
+            "hp": 600,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": []
+      },
+      {
+        "animation": 50111,
+        "copies": 0,
+        "gradual": false,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 600,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              501000,
+              7010250
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 0,
+        "gradual": true,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 0,
+        "gradual": true,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010250
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 1,
+        "gradual": false,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 1,
+        "gradual": false,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102221,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 1,
+        "gradual": true,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 1,
+        "gradual": true,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 3,
+        "gradual": false,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 3,
+        "gradual": false,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102221,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 3,
+        "gradual": true,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 3,
+        "gradual": true,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 0,
+        "gradual": false,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 16,
+            "hp": 600,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": []
+      },
+      {
+        "animation": 50116,
+        "copies": 0,
+        "gradual": false,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 600,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              501000,
+              7010250
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 0,
+        "gradual": true,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 0,
+        "gradual": true,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010250
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 1,
+        "gradual": false,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 1,
+        "gradual": false,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102221,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 1,
+        "gradual": true,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 1,
+        "gradual": true,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 3,
+        "gradual": false,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 3,
+        "gradual": false,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 500,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102221,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010220,
+              7010280,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 3,
+        "gradual": true,
+        "fp": false,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 3,
+        "gradual": true,
+        "fp": true,
+        "fps": 60,
+        "packets": [
+          {
+            "frame": 19,
+            "hp": 100,
+            "fp": 30
+          }
+        ],
+        "allyBehaviors": [
+          900102240,
+          900102241,
+          900102260
+        ],
+        "scriptCalls": [
+          {
+            "frame": 19,
+            "ids": [
+              7010230,
+              7010231,
+              7010281,
+              7010282,
+              7010250,
+              7010283
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 1,
+        "gradual": false,
+        "fp": false,
+        "fps": 30,
+        "packets": [
+          {
+            "frame": 10,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 10,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 1,
+        "gradual": false,
+        "fp": false,
+        "fps": 120,
+        "packets": [
+          {
+            "frame": 37,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 37,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 3,
+        "gradual": false,
+        "fp": false,
+        "fps": 30,
+        "packets": [
+          {
+            "frame": 10,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 10,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "copies": 3,
+        "gradual": false,
+        "fp": false,
+        "fps": 120,
+        "packets": [
+          {
+            "frame": 37,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 37,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 1,
+        "gradual": false,
+        "fp": false,
+        "fps": 30,
+        "packets": [
+          {
+            "frame": 10,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 10,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 1,
+        "gradual": false,
+        "fp": false,
+        "fps": 120,
+        "packets": [
+          {
+            "frame": 37,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 37,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 3,
+        "gradual": false,
+        "fp": false,
+        "fps": 30,
+        "packets": [
+          {
+            "frame": 10,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 10,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "copies": 3,
+        "gradual": false,
+        "fp": false,
+        "fps": 120,
+        "packets": [
+          {
+            "frame": 37,
+            "hp": 500,
+            "fp": 0
+          }
+        ],
+        "allyBehaviors": [
+          900102221
+        ],
+        "scriptCalls": [
+          {
+            "frame": 37,
+            "ids": [
+              7010220,
+              7010280
+            ]
+          }
+        ]
+      }
+    ],
+    "projectile": [
+      {
+        "bullet": 900102221,
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102221,
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102240,
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102240,
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102241,
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102241,
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102260,
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "bullet": 900102260,
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      }
+    ],
+    "amounts": [
+      {
+        "leaf": 7010220,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          0,
+          500,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          55,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          550,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          42,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          425,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          47,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010220,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          467,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          0,
+          100,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          11,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          110,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          85,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010230,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          93,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010231,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          30
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          300
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          30
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          300
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          30
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          300
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          30
+        ]
+      },
+      {
+        "leaf": 7010250,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          300
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          0,
+          300,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          33,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          330,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          25,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010221,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          280,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          55,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          42,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010240,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          46,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010241,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          0
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          15
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          150
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [
+          7611400
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          15
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [
+          7611400
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          150
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          15
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          150
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 101,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          15
+        ]
+      },
+      {
+        "leaf": 7010260,
+        "mods": [
+          7611400,
+          6840100
+        ],
+        "maximum": 1000,
+        "hp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fp": [
+          0,
+          150
+        ]
+      }
+    ],
+    "targets": [
+      {
+        "leaf": 7010221,
+        "sourceType": 0,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 1,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 2,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 3,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 4,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 5,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 6,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 7,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 8,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "sourceType": 9,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 0,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 1,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 2,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 3,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 4,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 5,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 6,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 7,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 8,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "sourceType": 9,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 0,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 1,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 2,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 3,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 4,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 5,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 6,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 7,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 8,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "sourceType": 9,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 0,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 1,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 2,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 3,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 4,
+        "same": false,
+        "accepted": true
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 5,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 6,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 7,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 8,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "sourceType": 9,
+        "same": false,
+        "accepted": false
+      },
+      {
+        "leaf": 7010221,
+        "same": true,
+        "accepted": false
+      },
+      {
+        "leaf": 7010240,
+        "same": true,
+        "accepted": false
+      },
+      {
+        "leaf": 7010241,
+        "same": true,
+        "accepted": false
+      },
+      {
+        "leaf": 7010260,
+        "same": true,
+        "accepted": false
+      }
+    ],
+    "sourceModifiers": [
+      {
+        "source": null,
+        "recipient": null,
+        "hp": [
+          0,
+          300,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": null,
+        "recipient": 7611400,
+        "hp": [
+          0,
+          330,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": null,
+        "recipient": 6840100,
+        "hp": [
+          0,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 7611400,
+        "recipient": null,
+        "hp": [
+          0,
+          300,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 7611400,
+        "recipient": 7611400,
+        "hp": [
+          0,
+          330,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 7611400,
+        "recipient": 6840100,
+        "hp": [
+          0,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 6840100,
+        "recipient": null,
+        "hp": [
+          0,
+          300,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 6840100,
+        "recipient": 7611400,
+        "hp": [
+          0,
+          330,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 6840100,
+        "recipient": 6840100,
+        "hp": [
+          0,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "leaf": 7010231,
+        "fps": 30,
+        "copies": 1,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196,
+          199,
+          202,
+          205,
+          208,
+          211,
+          214,
+          217,
+          220,
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010231,
+        "fps": 30,
+        "copies": 1,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196,
+          199,
+          202,
+          205,
+          208,
+          211,
+          214,
+          217,
+          220,
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241,
+          244,
+          247,
+          250,
+          253,
+          256,
+          259,
+          262,
+          265,
+          268,
+          271,
+          274,
+          277,
+          280,
+          283,
+          286,
+          289,
+          292,
+          295,
+          298,
+          301
+        ],
+        "amount": 10,
+        "refreshedLifetime": 7.966667
+      },
+      {
+        "leaf": 7010231,
+        "fps": 30,
+        "copies": 3,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196,
+          199,
+          202,
+          205,
+          208,
+          211,
+          214,
+          217,
+          220,
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010231,
+        "fps": 30,
+        "copies": 3,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196,
+          199,
+          202,
+          205,
+          208,
+          211,
+          214,
+          217,
+          220,
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241,
+          244,
+          247,
+          250,
+          253,
+          256,
+          259,
+          262,
+          265,
+          268,
+          271,
+          274,
+          277,
+          280,
+          283,
+          286,
+          289,
+          292,
+          295,
+          298,
+          301
+        ],
+        "amount": 10,
+        "refreshedLifetime": 7.966667
+      },
+      {
+        "leaf": 7010231,
+        "fps": 60,
+        "copies": 1,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242,
+          248,
+          254,
+          260,
+          266,
+          272,
+          278,
+          284,
+          290,
+          296,
+          302,
+          308,
+          314,
+          320,
+          326,
+          332,
+          338,
+          344,
+          350,
+          356,
+          362,
+          368,
+          374,
+          380,
+          386,
+          392,
+          398,
+          404,
+          410,
+          416,
+          422,
+          428,
+          434,
+          440,
+          446,
+          452,
+          458,
+          464,
+          470,
+          476
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010231,
+        "fps": 60,
+        "copies": 1,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242,
+          248,
+          254,
+          260,
+          266,
+          272,
+          278,
+          284,
+          290,
+          296,
+          302,
+          308,
+          314,
+          320,
+          326,
+          332,
+          338,
+          344,
+          350,
+          356,
+          362,
+          368,
+          374,
+          380,
+          386,
+          392,
+          398,
+          404,
+          410,
+          416,
+          422,
+          428,
+          434,
+          440,
+          446,
+          452,
+          458,
+          464,
+          470,
+          476,
+          482,
+          488,
+          494,
+          500,
+          506,
+          512,
+          518,
+          524,
+          530,
+          536,
+          542,
+          548,
+          554,
+          560,
+          566,
+          572,
+          578,
+          584,
+          590,
+          596
+        ],
+        "amount": 10,
+        "refreshedLifetime": 7.983333
+      },
+      {
+        "leaf": 7010231,
+        "fps": 60,
+        "copies": 3,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242,
+          248,
+          254,
+          260,
+          266,
+          272,
+          278,
+          284,
+          290,
+          296,
+          302,
+          308,
+          314,
+          320,
+          326,
+          332,
+          338,
+          344,
+          350,
+          356,
+          362,
+          368,
+          374,
+          380,
+          386,
+          392,
+          398,
+          404,
+          410,
+          416,
+          422,
+          428,
+          434,
+          440,
+          446,
+          452,
+          458,
+          464,
+          470,
+          476
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010231,
+        "fps": 60,
+        "copies": 3,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242,
+          248,
+          254,
+          260,
+          266,
+          272,
+          278,
+          284,
+          290,
+          296,
+          302,
+          308,
+          314,
+          320,
+          326,
+          332,
+          338,
+          344,
+          350,
+          356,
+          362,
+          368,
+          374,
+          380,
+          386,
+          392,
+          398,
+          404,
+          410,
+          416,
+          422,
+          428,
+          434,
+          440,
+          446,
+          452,
+          458,
+          464,
+          470,
+          476,
+          482,
+          488,
+          494,
+          500,
+          506,
+          512,
+          518,
+          524,
+          530,
+          536,
+          542,
+          548,
+          554,
+          560,
+          566,
+          572,
+          578,
+          584,
+          590,
+          596
+        ],
+        "amount": 10,
+        "refreshedLifetime": 7.983333
+      },
+      {
+        "leaf": 7010231,
+        "fps": 120,
+        "copies": 1,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470,
+          482,
+          494,
+          506,
+          518,
+          530,
+          542,
+          554,
+          566,
+          578,
+          590,
+          602,
+          614,
+          626,
+          638,
+          650,
+          662,
+          674,
+          686,
+          698,
+          710,
+          722,
+          734,
+          746,
+          758,
+          770,
+          782,
+          794,
+          806,
+          818,
+          830,
+          842,
+          854,
+          866,
+          878,
+          890,
+          902,
+          914,
+          926,
+          938,
+          950,
+          962
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010231,
+        "fps": 120,
+        "copies": 1,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470,
+          482,
+          494,
+          506,
+          518,
+          530,
+          542,
+          554,
+          566,
+          578,
+          590,
+          602,
+          614,
+          626,
+          638,
+          650,
+          662,
+          674,
+          686,
+          698,
+          710,
+          722,
+          734,
+          746,
+          758,
+          770,
+          782,
+          794,
+          806,
+          818,
+          830,
+          842,
+          854,
+          866,
+          878,
+          890,
+          902,
+          914,
+          926,
+          938,
+          950,
+          962,
+          974,
+          986,
+          998,
+          1010,
+          1022,
+          1034,
+          1046,
+          1058,
+          1070,
+          1082,
+          1094,
+          1106,
+          1118,
+          1130,
+          1142,
+          1154,
+          1166,
+          1178,
+          1190
+        ],
+        "amount": 10,
+        "refreshedLifetime": 7.991667
+      },
+      {
+        "leaf": 7010231,
+        "fps": 120,
+        "copies": 3,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470,
+          482,
+          494,
+          506,
+          518,
+          530,
+          542,
+          554,
+          566,
+          578,
+          590,
+          602,
+          614,
+          626,
+          638,
+          650,
+          662,
+          674,
+          686,
+          698,
+          710,
+          722,
+          734,
+          746,
+          758,
+          770,
+          782,
+          794,
+          806,
+          818,
+          830,
+          842,
+          854,
+          866,
+          878,
+          890,
+          902,
+          914,
+          926,
+          938,
+          950,
+          962
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010231,
+        "fps": 120,
+        "copies": 3,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470,
+          482,
+          494,
+          506,
+          518,
+          530,
+          542,
+          554,
+          566,
+          578,
+          590,
+          602,
+          614,
+          626,
+          638,
+          650,
+          662,
+          674,
+          686,
+          698,
+          710,
+          722,
+          734,
+          746,
+          758,
+          770,
+          782,
+          794,
+          806,
+          818,
+          830,
+          842,
+          854,
+          866,
+          878,
+          890,
+          902,
+          914,
+          926,
+          938,
+          950,
+          962,
+          974,
+          986,
+          998,
+          1010,
+          1022,
+          1034,
+          1046,
+          1058,
+          1070,
+          1082,
+          1094,
+          1106,
+          1118,
+          1130,
+          1142,
+          1154,
+          1166,
+          1178,
+          1190
+        ],
+        "amount": 10,
+        "refreshedLifetime": 7.991667
+      },
+      {
+        "leaf": 7010241,
+        "fps": 30,
+        "copies": 1,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010241,
+        "fps": 30,
+        "copies": 1,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181
+        ],
+        "amount": 10,
+        "refreshedLifetime": 3.966667
+      },
+      {
+        "leaf": 7010241,
+        "fps": 30,
+        "copies": 3,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010241,
+        "fps": 30,
+        "copies": 3,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181
+        ],
+        "amount": 10,
+        "refreshedLifetime": 3.966667
+      },
+      {
+        "leaf": 7010241,
+        "fps": 60,
+        "copies": 1,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010241,
+        "fps": 60,
+        "copies": 1,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242,
+          248,
+          254,
+          260,
+          266,
+          272,
+          278,
+          284,
+          290,
+          296,
+          302,
+          308,
+          314,
+          320,
+          326,
+          332,
+          338,
+          344,
+          350,
+          356
+        ],
+        "amount": 10,
+        "refreshedLifetime": 3.983333
+      },
+      {
+        "leaf": 7010241,
+        "fps": 60,
+        "copies": 3,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010241,
+        "fps": 60,
+        "copies": 3,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74,
+          80,
+          86,
+          92,
+          98,
+          104,
+          110,
+          116,
+          122,
+          128,
+          134,
+          140,
+          146,
+          152,
+          158,
+          164,
+          170,
+          176,
+          182,
+          188,
+          194,
+          200,
+          206,
+          212,
+          218,
+          224,
+          230,
+          236,
+          242,
+          248,
+          254,
+          260,
+          266,
+          272,
+          278,
+          284,
+          290,
+          296,
+          302,
+          308,
+          314,
+          320,
+          326,
+          332,
+          338,
+          344,
+          350,
+          356
+        ],
+        "amount": 10,
+        "refreshedLifetime": 3.983333
+      },
+      {
+        "leaf": 7010241,
+        "fps": 120,
+        "copies": 1,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010241,
+        "fps": 120,
+        "copies": 1,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470,
+          482,
+          494,
+          506,
+          518,
+          530,
+          542,
+          554,
+          566,
+          578,
+          590,
+          602,
+          614,
+          626,
+          638,
+          650,
+          662,
+          674,
+          686,
+          698,
+          710
+        ],
+        "amount": 10,
+        "refreshedLifetime": 3.991667
+      },
+      {
+        "leaf": 7010241,
+        "fps": 120,
+        "copies": 3,
+        "refresh": false,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470
+        ],
+        "amount": 10,
+        "refreshedLifetime": null
+      },
+      {
+        "leaf": 7010241,
+        "fps": 120,
+        "copies": 3,
+        "refresh": true,
+        "pulseFrames": [
+          0,
+          14,
+          26,
+          38,
+          50,
+          62,
+          74,
+          86,
+          98,
+          110,
+          122,
+          134,
+          146,
+          158,
+          170,
+          182,
+          194,
+          206,
+          218,
+          230,
+          242,
+          254,
+          266,
+          278,
+          290,
+          302,
+          314,
+          326,
+          338,
+          350,
+          362,
+          374,
+          386,
+          398,
+          410,
+          422,
+          434,
+          446,
+          458,
+          470,
+          482,
+          494,
+          506,
+          518,
+          530,
+          542,
+          554,
+          566,
+          578,
+          590,
+          602,
+          614,
+          626,
+          638,
+          650,
+          662,
+          674,
+          686,
+          698,
+          710
+        ],
+        "amount": 10,
+        "refreshedLifetime": 3.991667
+      }
+    ]
+  },
+  "native": {
+    "event": "410CA0",
+    "grant": "3C7FD0",
+    "update": "5057D0 → 50ACD0",
+    "emission": "50AA20 → 3975D0",
+    "projectile": "343280",
+    "recipient": "43BE60 → 3C80A0",
+    "hp": "506EC0 → 50B860",
+    "fp": "507460"
+  },
+  "stubs": [
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "347700 projectile creation recorder; no scene geometry",
+    "3975D0 native Behavior emission recorder; no collision",
+    "3CED90 explicit animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "4D1B20 ordinary locally active actor",
+    "E6D630 actual AtkParam_Pc row lookup",
+    "E87800 actual flask Bullet lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "actual HKS ExecChangeFlask runs in Lua with env queries bridged to native active node IDs and act calls bridged to genuine native self-grants",
+    "actual friendly hit arrives after explicit collision; geometry, final HP/FP setters, overheal, death/reload and network synchronization remain unverified",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit TAE window scheduling and default 501000 consumable arrival; full item consumption and animation interruption are not simulated",
+    "explicit local hit-score context in mode 0",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "recipient virtual +200 false ordinary hit predicate"
+  ],
+  "gameplayVerified": false
+}
