@@ -26,6 +26,7 @@ import duchessPoise from "../../data/effect-duchess-poise-evidence.json";
 import raiderSkill from "../../data/effect-raider-skill-evidence.json";
 import raiderGrowth from "../../data/effect-raider-growth-evidence.json";
 import undertakerReset from "../../data/effect-undertaker-reset-evidence.json";
+import treasureMap from "../../data/effect-treasure-map-evidence.json";
 import undertakerContact from "../../data/effect-undertaker-contact-evidence.json";
 import guardianUltimate from "../../data/effect-guardian-ultimate-evidence.json";
 import wylderBleed from "../../data/effect-wylder-bleed-evidence.json";
@@ -43,6 +44,30 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("keeps treasure markers local and does not infer fixed counts or complete map coverage", () => {
+    const detail = effectDetail(7070000)!;
+    expect(detail.blocks[0].values).toEqual([["显示范围", "自己的地图"]]);
+    expect(detail.blocks[0].duration).toBeNull();
+    expect(detail.notes).toEqual(["只标记已出现的宝藏，不增加宝藏数量。"]);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(research.effects["7070000"].values).toBe("decoded-mechanism");
+    for (const row of treasureMap.checks.visibility) {
+      const point = treasureMap.points.find(p => p.id === row.point)!;
+      expect(row.eligible).toBe(row.reveal && row.spawn && !row.opened);
+      expect(row.visible).toBe(row.eligible && Boolean(point.displayMask & 1));
+      expect(row.otherMode).toBe(row.eligible && Boolean(point.displayMask & 2));
+    }
+    for (const row of treasureMap.checks.copies) {
+      expect(row.nodes).toHaveLength(row.copies);
+      expect(row.present).toBe(row.copies > 0);
+    }
+    expect(treasureMap.checks.unbound.every(row => !row.visible)).toBe(true);
+    expect(treasureMap.gameplayVerified).toBe(false);
+    expect(treasureMap.eventVmExecuted).toBe(false);
+    expect(research.treasureMapEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-treasure-map-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
   it("refills Undertaker skill charges at the finishing animation without storing extra uses", () => {
     const detail = effectDetail(6500900)!;
     expect(detail.blocks[0].values).toEqual([["技艺使用次数", "恢复至上限"]]);
@@ -911,7 +936,7 @@ describe("MMV effect details", () => {
       expect(JSON.stringify(detail)).not.toContain("%");
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
-    expect(research.coverage.withMechanicsOnly).toBe(37);
+    expect(research.coverage.withMechanicsOnly).toBe(38);
     expect(research.coverage.withNumericFields).toBe(535);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),

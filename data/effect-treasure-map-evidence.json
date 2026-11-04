@@ -1,0 +1,2595 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "mapParamSha256": "185e26e503266a8ae730fb2136facf9856987c474541e9519c0a28a5e1b8008e",
+  "root": 7070001,
+  "event": {
+    "ID": 90015100,
+    "RestBehavior": 1,
+    "Parameters": [
+      {
+        "InstructionIndex": 1,
+        "TargetStartByte": 4,
+        "SourceStartByte": 0,
+        "ByteCount": 4,
+        "UnkID": 0
+      },
+      {
+        "InstructionIndex": 2,
+        "TargetStartByte": 4,
+        "SourceStartByte": 4,
+        "ByteCount": 4,
+        "UnkID": 0
+      },
+      {
+        "InstructionIndex": 3,
+        "TargetStartByte": 8,
+        "SourceStartByte": 8,
+        "ByteCount": 4,
+        "UnkID": 0
+      },
+      {
+        "InstructionIndex": 4,
+        "TargetStartByte": 4,
+        "SourceStartByte": 12,
+        "ByteCount": 4,
+        "UnkID": 0
+      }
+    ],
+    "instructions": [
+      {
+        "Bank": 2000,
+        "ID": 2,
+        "hex": "00000000"
+      },
+      {
+        "Bank": 1003,
+        "ID": 2,
+        "hex": "0000000000000000"
+      },
+      {
+        "Bank": 2003,
+        "ID": 66,
+        "hex": "000000000000000001000000"
+      },
+      {
+        "Bank": 4,
+        "ID": 5,
+        "hex": "00000000204E0000FFFFFFFF010000000000803F"
+      },
+      {
+        "Bank": 2003,
+        "ID": 66,
+        "hex": "000000000000000001000000"
+      }
+    ]
+  },
+  "initializations": [
+    {
+      "index": 320,
+      "slot": 0,
+      "appearance": 8000,
+      "spawn": 9100,
+      "effect": 7070001,
+      "display": 8120
+    },
+    {
+      "index": 321,
+      "slot": 1,
+      "appearance": 8000,
+      "spawn": 9111,
+      "effect": 7070001,
+      "display": 8131
+    },
+    {
+      "index": 322,
+      "slot": 2,
+      "appearance": 8000,
+      "spawn": 9106,
+      "effect": 7070001,
+      "display": 8126
+    },
+    {
+      "index": 323,
+      "slot": 3,
+      "appearance": 8001,
+      "spawn": 9101,
+      "effect": 7070001,
+      "display": 8121
+    },
+    {
+      "index": 324,
+      "slot": 4,
+      "appearance": 8001,
+      "spawn": 9110,
+      "effect": 7070001,
+      "display": 8130
+    },
+    {
+      "index": 325,
+      "slot": 5,
+      "appearance": 8001,
+      "spawn": 9107,
+      "effect": 7070001,
+      "display": 8127
+    },
+    {
+      "index": 326,
+      "slot": 6,
+      "appearance": 8002,
+      "spawn": 9102,
+      "effect": 7070001,
+      "display": 8122
+    },
+    {
+      "index": 327,
+      "slot": 7,
+      "appearance": 8002,
+      "spawn": 9109,
+      "effect": 7070001,
+      "display": 8129
+    },
+    {
+      "index": 328,
+      "slot": 8,
+      "appearance": 8002,
+      "spawn": 9108,
+      "effect": 7070001,
+      "display": 8128
+    },
+    {
+      "index": 329,
+      "slot": 9,
+      "appearance": 8003,
+      "spawn": 9103,
+      "effect": 7070001,
+      "display": 8123
+    },
+    {
+      "index": 330,
+      "slot": 10,
+      "appearance": 8003,
+      "spawn": 9108,
+      "effect": 7070001,
+      "display": 8128
+    },
+    {
+      "index": 331,
+      "slot": 11,
+      "appearance": 8003,
+      "spawn": 9109,
+      "effect": 7070001,
+      "display": 8129
+    },
+    {
+      "index": 332,
+      "slot": 12,
+      "appearance": 8004,
+      "spawn": 9104,
+      "effect": 7070001,
+      "display": 8124
+    },
+    {
+      "index": 333,
+      "slot": 13,
+      "appearance": 8004,
+      "spawn": 9107,
+      "effect": 7070001,
+      "display": 8127
+    },
+    {
+      "index": 334,
+      "slot": 14,
+      "appearance": 8004,
+      "spawn": 9110,
+      "effect": 7070001,
+      "display": 8130
+    },
+    {
+      "index": 335,
+      "slot": 15,
+      "appearance": 8005,
+      "spawn": 9105,
+      "effect": 7070001,
+      "display": 8125
+    },
+    {
+      "index": 336,
+      "slot": 16,
+      "appearance": 8005,
+      "spawn": 9106,
+      "effect": 7070001,
+      "display": 8126
+    },
+    {
+      "index": 337,
+      "slot": 17,
+      "appearance": 8005,
+      "spawn": 9111,
+      "effect": 7070001,
+      "display": 8131
+    },
+    {
+      "index": 338,
+      "slot": 18,
+      "appearance": 8006,
+      "spawn": 9106,
+      "effect": 7070001,
+      "display": 8126
+    },
+    {
+      "index": 339,
+      "slot": 19,
+      "appearance": 8006,
+      "spawn": 9105,
+      "effect": 7070001,
+      "display": 8125
+    },
+    {
+      "index": 340,
+      "slot": 20,
+      "appearance": 8006,
+      "spawn": 9100,
+      "effect": 7070001,
+      "display": 8120
+    },
+    {
+      "index": 341,
+      "slot": 21,
+      "appearance": 8007,
+      "spawn": 9107,
+      "effect": 7070001,
+      "display": 8127
+    },
+    {
+      "index": 342,
+      "slot": 22,
+      "appearance": 8007,
+      "spawn": 9104,
+      "effect": 7070001,
+      "display": 8124
+    },
+    {
+      "index": 343,
+      "slot": 23,
+      "appearance": 8007,
+      "spawn": 9101,
+      "effect": 7070001,
+      "display": 8121
+    },
+    {
+      "index": 344,
+      "slot": 24,
+      "appearance": 8008,
+      "spawn": 9108,
+      "effect": 7070001,
+      "display": 8128
+    },
+    {
+      "index": 345,
+      "slot": 25,
+      "appearance": 8008,
+      "spawn": 9103,
+      "effect": 7070001,
+      "display": 8123
+    },
+    {
+      "index": 346,
+      "slot": 26,
+      "appearance": 8008,
+      "spawn": 9102,
+      "effect": 7070001,
+      "display": 8122
+    },
+    {
+      "index": 347,
+      "slot": 27,
+      "appearance": 8009,
+      "spawn": 9109,
+      "effect": 7070001,
+      "display": 8129
+    },
+    {
+      "index": 348,
+      "slot": 28,
+      "appearance": 8009,
+      "spawn": 9102,
+      "effect": 7070001,
+      "display": 8122
+    },
+    {
+      "index": 349,
+      "slot": 29,
+      "appearance": 8009,
+      "spawn": 9103,
+      "effect": 7070001,
+      "display": 8123
+    },
+    {
+      "index": 350,
+      "slot": 30,
+      "appearance": 8010,
+      "spawn": 9110,
+      "effect": 7070001,
+      "display": 8130
+    },
+    {
+      "index": 351,
+      "slot": 31,
+      "appearance": 8010,
+      "spawn": 9101,
+      "effect": 7070001,
+      "display": 8121
+    },
+    {
+      "index": 352,
+      "slot": 32,
+      "appearance": 8010,
+      "spawn": 9104,
+      "effect": 7070001,
+      "display": 8124
+    },
+    {
+      "index": 353,
+      "slot": 33,
+      "appearance": 8011,
+      "spawn": 9111,
+      "effect": 7070001,
+      "display": 8131
+    },
+    {
+      "index": 354,
+      "slot": 34,
+      "appearance": 8011,
+      "spawn": 9100,
+      "effect": 7070001,
+      "display": 8120
+    },
+    {
+      "index": 355,
+      "slot": 35,
+      "appearance": 8011,
+      "spawn": 9105,
+      "effect": 7070001,
+      "display": 8125
+    }
+  ],
+  "points": [
+    {
+      "id": 64423650,
+      "reveal": 8130,
+      "spawn": 9110,
+      "opened": 1045378200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64423748,
+      "reveal": 8128,
+      "spawn": 9108,
+      "opened": 1043378220,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64423844,
+      "reveal": 8124,
+      "spawn": 9104,
+      "opened": 1042388200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64423940,
+      "reveal": 8120,
+      "spawn": 9100,
+      "opened": 1042398200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64423945,
+      "reveal": 8125,
+      "spawn": 9105,
+      "opened": 1043388200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64433749,
+      "reveal": 8129,
+      "spawn": 9109,
+      "opened": 1042368200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64433846,
+      "reveal": 8126,
+      "spawn": 9106,
+      "opened": 1044388210,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64433941,
+      "reveal": 8121,
+      "spawn": 9101,
+      "opened": 1043398200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64443847,
+      "reveal": 8127,
+      "spawn": 9107,
+      "opened": 1042378200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64443942,
+      "reveal": 8122,
+      "spawn": 9102,
+      "opened": 1044398200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64453651,
+      "reveal": 8131,
+      "spawn": 9111,
+      "opened": 1044368200,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 64453943,
+      "reveal": 8123,
+      "spawn": 9103,
+      "opened": 1045398210,
+      "displayMask": 1,
+      "boundToRelicEvent": true
+    },
+    {
+      "id": 164237950,
+      "reveal": 8730,
+      "spawn": 9110,
+      "opened": 1027408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164337905,
+      "reveal": 8725,
+      "spawn": 9105,
+      "opened": 1037408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164337906,
+      "reveal": 8726,
+      "spawn": 9106,
+      "opened": 1037408301,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164338907,
+      "reveal": 8727,
+      "spawn": 9107,
+      "opened": 1038408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164338911,
+      "reveal": 8731,
+      "spawn": 9111,
+      "opened": 1038408301,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164339909,
+      "reveal": 8729,
+      "spawn": 9109,
+      "opened": 1039408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164436900,
+      "reveal": 8720,
+      "spawn": 9100,
+      "opened": 1046408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164436901,
+      "reveal": 8721,
+      "spawn": 9101,
+      "opened": 1046408301,
+      "displayMask": 2,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164438908,
+      "reveal": 8728,
+      "spawn": 9108,
+      "opened": 1048408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164537902,
+      "reveal": 8722,
+      "spawn": 9102,
+      "opened": 1057408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164537903,
+      "reveal": 8723,
+      "spawn": 9103,
+      "opened": 1057408301,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    },
+    {
+      "id": 164538904,
+      "reveal": 8724,
+      "spawn": 9104,
+      "opened": 1058408300,
+      "displayMask": 1,
+      "boundToRelicEvent": false
+    }
+  ],
+  "chests": [
+    {
+      "point": 64423650,
+      "interactions": []
+    },
+    {
+      "point": 64423748,
+      "interactions": [
+        {
+          "map": "map/mapstudio/m60_10_09_12.msb.dcx",
+          "sha256": "9d5ee78a093e5793c72412408bdd5936fae171e4853a3e3915f4386ae547ab27",
+          "asset": 1043371220,
+          "model": "AEG599_902",
+          "objact": 210,
+          "flag": 1043378220,
+          "itemLot": 1383000000
+        }
+      ]
+    },
+    {
+      "point": 64423844,
+      "interactions": []
+    },
+    {
+      "point": 64423940,
+      "interactions": []
+    },
+    {
+      "point": 64423945,
+      "interactions": []
+    },
+    {
+      "point": 64433749,
+      "interactions": [
+        {
+          "map": "map/mapstudio/m60_10_09_12.msb.dcx",
+          "sha256": "9d5ee78a093e5793c72412408bdd5936fae171e4853a3e3915f4386ae547ab27",
+          "asset": 1042361200,
+          "model": "AEG599_902",
+          "objact": 210,
+          "flag": 1042368200,
+          "itemLot": 1383000000
+        }
+      ]
+    },
+    {
+      "point": 64433846,
+      "interactions": []
+    },
+    {
+      "point": 64433941,
+      "interactions": []
+    },
+    {
+      "point": 64443847,
+      "interactions": [
+        {
+          "map": "map/mapstudio/m60_10_09_12.msb.dcx",
+          "sha256": "9d5ee78a093e5793c72412408bdd5936fae171e4853a3e3915f4386ae547ab27",
+          "asset": 1042371200,
+          "model": "AEG599_902",
+          "objact": 210,
+          "flag": 1042378200,
+          "itemLot": 1383000000
+        }
+      ]
+    },
+    {
+      "point": 64443942,
+      "interactions": []
+    },
+    {
+      "point": 64453651,
+      "interactions": []
+    },
+    {
+      "point": 64453943,
+      "interactions": []
+    }
+  ],
+  "eventAssets": {
+    "event/common.emevd.dcx": "91680d83cd2b7509c303c3c3bdfda98b03c3a5c42e1d985f2901a29547ee6ba6",
+    "event/common_func.emevd.dcx": "6417c15ce944837b96120012dcedfda6ea7a3def7d5ecdb9b534e3a8f0ba297d"
+  },
+  "checks": {
+    "visibility": [
+      {
+        "point": 64423650,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64423650,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64423748,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64423844,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64423940,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64423945,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64433749,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64433846,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64433941,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64443847,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64443942,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64453651,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 64453943,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164237950,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164337905,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164337906,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164338907,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164338911,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164339909,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164436900,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164436901,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": false,
+        "otherMode": true
+      },
+      {
+        "point": 164436901,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164438908,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164537902,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164537903,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": false,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": false,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": false,
+        "spawn": true,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": false,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": true,
+        "spawn": false,
+        "opened": false,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": true,
+        "spawn": false,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": true,
+        "spawn": true,
+        "opened": false,
+        "eligible": true,
+        "visible": true,
+        "otherMode": false
+      },
+      {
+        "point": 164538904,
+        "reveal": true,
+        "spawn": true,
+        "opened": true,
+        "eligible": false,
+        "visible": false,
+        "otherMode": false
+      }
+    ],
+    "override": [
+      {
+        "point": 64423650,
+        "opened": false,
+        "mode": false,
+        "override": false,
+        "visible": true
+      },
+      {
+        "point": 64423650,
+        "opened": false,
+        "mode": false,
+        "override": true,
+        "visible": true
+      },
+      {
+        "point": 64423650,
+        "opened": false,
+        "mode": true,
+        "override": false,
+        "visible": false
+      },
+      {
+        "point": 64423650,
+        "opened": false,
+        "mode": true,
+        "override": true,
+        "visible": false
+      },
+      {
+        "point": 64423650,
+        "opened": true,
+        "mode": false,
+        "override": false,
+        "visible": false
+      },
+      {
+        "point": 64423650,
+        "opened": true,
+        "mode": false,
+        "override": true,
+        "visible": true
+      },
+      {
+        "point": 64423650,
+        "opened": true,
+        "mode": true,
+        "override": false,
+        "visible": false
+      },
+      {
+        "point": 64423650,
+        "opened": true,
+        "mode": true,
+        "override": true,
+        "visible": false
+      }
+    ],
+    "copies": [
+      {
+        "copies": 0,
+        "nodes": [],
+        "present": false
+      },
+      {
+        "copies": 1,
+        "nodes": [
+          {
+            "id": 7070001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ],
+        "present": true
+      },
+      {
+        "copies": 2,
+        "nodes": [
+          {
+            "id": 7070001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7070001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ],
+        "present": true
+      },
+      {
+        "copies": 3,
+        "nodes": [
+          {
+            "id": 7070001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7070001,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7070001,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ],
+        "present": true
+      }
+    ],
+    "unbound": [
+      {
+        "point": 164237950,
+        "flags": [
+          8130,
+          9110
+        ],
+        "visible": false
+      },
+      {
+        "point": 164337905,
+        "flags": [
+          8125,
+          9105
+        ],
+        "visible": false
+      },
+      {
+        "point": 164337906,
+        "flags": [
+          8126,
+          9106
+        ],
+        "visible": false
+      },
+      {
+        "point": 164338907,
+        "flags": [
+          8127,
+          9107
+        ],
+        "visible": false
+      },
+      {
+        "point": 164338911,
+        "flags": [
+          8131,
+          9111
+        ],
+        "visible": false
+      },
+      {
+        "point": 164339909,
+        "flags": [
+          8129,
+          9109
+        ],
+        "visible": false
+      },
+      {
+        "point": 164436900,
+        "flags": [
+          8120,
+          9100
+        ],
+        "visible": false
+      },
+      {
+        "point": 164436901,
+        "flags": [
+          8121,
+          9101
+        ],
+        "visible": false
+      },
+      {
+        "point": 164438908,
+        "flags": [
+          8128,
+          9108
+        ],
+        "visible": false
+      },
+      {
+        "point": 164537902,
+        "flags": [
+          8122,
+          9102
+        ],
+        "visible": false
+      },
+      {
+        "point": 164537903,
+        "flags": [
+          8123,
+          9103
+        ],
+        "visible": false
+      },
+      {
+        "point": 164538904,
+        "flags": [
+          8124,
+          9104
+        ],
+        "visible": false
+      }
+    ]
+  },
+  "native": {
+    "open": "EAAA70",
+    "area": "EAAC20",
+    "missing": "EAA9D0",
+    "point": "9048A0",
+    "pin": "90A010",
+    "context": "5EC560"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "5E7260 explicit event-flag store; native map gates and pin update unchanged",
+    "EA17E0 actual SpEffect PARAM lookup"
+  ],
+  "eventVmExecuted": false,
+  "gameplayVerified": false
+}

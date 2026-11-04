@@ -27,7 +27,10 @@ var files = Directory.GetFiles(Path.Combine(mod, "event"), "*.emevd.dcx").Order(
 var maps = Directory.GetFiles(Path.Combine(mod, "map/mapstudio"), "*.msb.dcx").Order().Select(path => {
     var map = MSB_NR.Read(path);
     return new { path = Path.GetRelativePath(mod, path).Replace('\\', '/'), sha256 = Hash(path),
-        enemies = map.Parts.Enemies.Select(e => new { e.EntityData.EntityID, e.Name, e.ModelName }) };
+        enemies = map.Parts.Enemies.Select(e => new { e.EntityData.EntityID, e.Name, e.ModelName }),
+        assets = map.Parts.Assets.Select(e => new { e.EntityData.EntityID, e.Name, e.ModelName }),
+        interactions = map.Events.ObjActs.Select(e => new { e.Name, e.ObjActPartName, e.ObjActParamId, e.StateType, e.EventFlagID }),
+        treasures = map.Events.Treasures.Select(e => new { e.Name, e.TreasurePartName, e.ItemLotID, e.InChest }) };
 }).ToArray();
 Directory.CreateDirectory(Path.GetDirectoryName(output)!);
 using (var stream = File.Create(output)) JsonSerializer.Serialize(stream, new { schema = 1, regulationSha256 = regulationHash, files, maps });

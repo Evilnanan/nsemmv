@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
   "coverage": {
     "obtainable": 637,
-    "withDetails": 607,
+    "withDetails": 608,
     "withNumericFields": 535,
-    "withMechanicsOnly": 37,
-    "nativeStacking": 424,
+    "withMechanicsOnly": 38,
+    "nativeStacking": 425,
     "catalog": 2241,
-    "catalogWithDetails": 2050
+    "catalogWithDetails": 2051
   },
   "effects": {
     "0": {
@@ -13027,14 +13027,17 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7070001
+      ],
+      "values": "decoded-mechanism",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "treasure-map"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "另一组 8720～8731 显示标志的赋值路径、地图模式与显示覆盖；缺失的原版合并地图资产、完整事件调度、标志清除与多人／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -49495,6 +49498,7 @@
   "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
   "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
   "undertakerResetEvidenceSha256": "ac6f90a3d941d03662e8dbfe508586e9bdb94bd70028dc9c88c6250b476bb981",
+  "treasureMapEvidenceSha256": "806b839dc0763f410b62df700c9c4b287f69dae14e6ba5dd253d31a03608a556",
   "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
   "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
   "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",

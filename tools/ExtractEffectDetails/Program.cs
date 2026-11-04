@@ -43,7 +43,12 @@ if (args.Length == 5 && args[4].StartsWith("--tables=")) {
         throw new ArgumentException("Invalid table name");
 }
 foreach (var name in tableNames) {
-    var defName = name == "BehaviorParam_PC" ? "BehaviorParam" : name == "AtkParam_Pc" ? "AtkParam" : name;
+    var defName = name switch {
+        "BehaviorParam_PC" => "BehaviorParam",
+        "AtkParam_Pc" => "AtkParam",
+        "ItemLotParam_map" or "ItemLotParam_enemy" => "ItemLotParam",
+        _ => name
+    };
     var defPath = Path.Combine(smithbox, "Assets/PARAM/NR/Defs", defName + ".xml");
     hashes["defs/" + defName + ".xml"] = Hash(defPath);
     var definition = XDocument.Load(defPath);
