@@ -104,6 +104,13 @@ assert prayer['exeSha256'] == evidence['exeSha256'] and not prayer['gameplayVeri
 assert prayer['paramSha256'] == evidence['paramSha256']
 assert prayer['animationSha256'] == recovery['animationSha256']
 assert {k: len(v) for k, v in prayer['checks'].items()} == dict(slots=33, dispatch=420, lifecycle=6, attack=6)
+protection_path = ROOT / 'data/effect-guardian-protection-evidence.json'
+protection = json.loads(protection_path.read_text())
+assert protection['schema'] == 1 and protection['regulationSha256'] == catalog['regulationSha256']
+assert protection['exeSha256'] == evidence['exeSha256'] and not protection['gameplayVerified']
+assert protection['paramSha256'] == evidence['paramSha256']
+assert protection['animationSha256'] == recovery['animationSha256']
+assert {k: len(v) for k, v in protection['checks'].items()} == dict(trigger=12, emission=3, lifecycle=6)
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
                 7090300: [7090302, 7090303, 7090304, 7090305, 7090306, 7090307]}
@@ -192,6 +199,8 @@ if args.extract:
                 needed.update([7034401, 7034402, 7034403])
             if root == prayer['root']:
                 needed.add(prayer['leaf'])
+            if root == protection['root']:
+                needed.add(protection['leaf'])
             if root == executor['root']:
                 needed.update(map(int, executor['rows']))
             if root == sacrifice['root']:
@@ -397,6 +406,7 @@ STACKING_RULES = {
     'guardian-skill': ('不可叠加', '重复装备不增加单次恢复量', ['guardian-skill']),
     'executor-blade': ('不可叠加', '重复装备不增加增益或负面效果', ['executor-blade']),
     'undertaker-prayer': ('不可叠加', '再次触发刷新时长', ['undertaker-prayer']),
+    'guardian-protection': ('不可叠加', '同类效果再次施加刷新时长', ['guardian-protection']),
     'executor-recovery': ('不可叠加', '重复装备不增加单次恢复量', ['executor-recovery']),
     'weapon-recovery': ('不可叠加', '同种词条重复无效；回血与回蓝可同时生效', ['weapon-recovery']),
     'recluse-bleed': ('不可叠加', '重复装备不增加单次触发收益', ['recluse-bleed']),
@@ -677,6 +687,15 @@ for id, effect in source['effects'].items():
                        restrictions=['自身及周围友方 · 半径 8 米'], scope=[], duration=None, interval=None)]
         notes.append('同类恢复同时到达只恢复一次；短时间内再次到达可能合并或延后恢复。')
         rule = 'guardian-skill'
+    if protection['root'] in effect['roots'].values():
+        leaf = protection['leaf']
+        assert source['spells'][str(leaf)]['neutralDamageCutRate'] == .82
+        assert source['spells'][str(leaf)]['effectEndurance'] == 30
+        assert protection['bullet']['hitRadius'] == 8
+        blocks = [dict(source=leaf, phase='获得技艺增益后', linked=True,
+                       values=[['承伤倍率', '-18%']],
+                       restrictions=['自身及周围友方 · 半径 8 米'], scope=[], duration=30, interval=None)]
+        rule = 'guardian-protection'
     if 7220300 in effect['roots'].values():
         assert source['spells']['7220305']['physicsAttackRate'] == 1.15
         assert source['spells']['7220305']['effectEndurance'] == 20
@@ -844,9 +863,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
@@ -858,7 +877,7 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整角色／网络发放队列时序、极端实例容量与倒地／重载状态')
         if 7032700 in effect['roots'].values():
             questions.append('击杀分支的具体敌人名单与共享奖励来源；重叠绝招窗口')
-    if rules[id] in ('guardian-recovery', 'guardian-skill'):
+    if rules[id] in ('guardian-recovery', 'guardian-skill', 'guardian-protection'):
         questions.append('实际碰撞命中、范围重新进入、完整角色队列／施法结束时序与多人网络投递')
     if rules[id] == 'executor-recovery':
         questions.append('各格挡动作的实际进入条件、完整角色队列及中断／倒地／重载交互')
@@ -918,6 +937,7 @@ research['gestureMadnessEvidenceSha256'] = hashlib.sha256(gesture_path.read_byte
 research['guardianSkillEvidenceSha256'] = hashlib.sha256(guardian_skill_path.read_bytes()).hexdigest()
 research['executorBladeEvidenceSha256'] = hashlib.sha256(blade_path.read_bytes()).hexdigest()
 research['undertakerPrayerEvidenceSha256'] = hashlib.sha256(prayer_path.read_bytes()).hexdigest()
+research['guardianProtectionEvidenceSha256'] = hashlib.sha256(protection_path.read_bytes()).hexdigest()
 research['discoveryEvidenceSha256'] = hashlib.sha256(discovery_path.read_bytes()).hexdigest()
 (ROOT / 'data/effect-research.json').write_text(json.dumps(research, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(result)} details; coverage={coverage}; {out.stat().st_size} browser bytes')

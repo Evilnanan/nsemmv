@@ -1,0 +1,381 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "root": 7500100,
+  "leaf": 7500101,
+  "events": [
+    {
+      "tae": 2901,
+      "animation": 510000,
+      "index": 21,
+      "Type": 2,
+      "StartTime": 1.2,
+      "EndTime": 1.2666667,
+      "hex": "8403000000000000B6170000000058090000FF03000000000000000000000000"
+    },
+    {
+      "tae": 2901,
+      "animation": 510005,
+      "index": 3,
+      "Type": 2,
+      "StartTime": 0.53333336,
+      "EndTime": 0.6,
+      "hex": "8403000000000000B6170000000058090000FF03000000000000000000000000"
+    }
+  ],
+  "behavior": {
+    "behaviorJudgeId": 70,
+    "category": 0,
+    "consumeDurability": 0,
+    "consumeSA": 0,
+    "ezStateBehaviorType_old": 1,
+    "heroPoint": 0,
+    "refId": 30901070,
+    "refType": 1,
+    "stamina": 0,
+    "variationId": 0
+  },
+  "bullet": {
+    "hitRadius": 8,
+    "shootInterval": 1,
+    "life": 1,
+    "spEffectId0": 7500101,
+    "spEffectIDForShooter": 0,
+    "atkId_Bullet": 600000070
+  },
+  "targetFlags": {
+    "selfTarget": 1,
+    "friendlyTarget": 1,
+    "opposeTarget": 0
+  },
+  "checks": {
+    "trigger": [
+      {
+        "animation": 510000,
+        "equipmentCopies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 510000,
+        "equipmentCopies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 510000,
+        "equipmentCopies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 510000,
+        "equipmentCopies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000070,
+            "active": true,
+            "instant": true,
+            "payload": "8403000000ff000000000000000000000101"
+          }
+        ]
+      },
+      {
+        "animation": 510000,
+        "equipmentCopies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 510000,
+        "equipmentCopies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000070,
+            "active": true,
+            "instant": true,
+            "payload": "8403000000ff000000000000000000000101"
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "equipmentCopies": 0,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 510005,
+        "equipmentCopies": 0,
+        "active": 1,
+        "requests": []
+      },
+      {
+        "animation": 510005,
+        "equipmentCopies": 1,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 510005,
+        "equipmentCopies": 1,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000070,
+            "active": true,
+            "instant": true,
+            "payload": "8403000000ff000000000000000000000101"
+          }
+        ]
+      },
+      {
+        "animation": 510005,
+        "equipmentCopies": 3,
+        "active": 0,
+        "requests": []
+      },
+      {
+        "animation": 510005,
+        "equipmentCopies": 3,
+        "active": 1,
+        "requests": [
+          {
+            "behavior": 600000070,
+            "active": true,
+            "instant": true,
+            "payload": "8403000000ff000000000000000000000101"
+          }
+        ]
+      }
+    ],
+    "emission": [
+      {
+        "fps": 30,
+        "emissions": [
+          0
+        ]
+      },
+      {
+        "fps": 60,
+        "emissions": [
+          0
+        ]
+      },
+      {
+        "fps": 120,
+        "emissions": [
+          0
+        ]
+      }
+    ],
+    "lifecycle": [
+      {
+        "copies": 1,
+        "arrivals": [
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "incoming": [
+              0.82,
+              0.82,
+              0.82,
+              0.82,
+              0.82
+            ]
+          },
+          {
+            "tick": 121,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "arrivals": [
+          0,
+          0,
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "incoming": [
+              0.82,
+              0.82,
+              0.82,
+              0.82,
+              0.82
+            ]
+          },
+          {
+            "tick": 121,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "arrivals": [
+          0,
+          80
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "incoming": [
+              0.82,
+              0.82,
+              0.82,
+              0.82,
+              0.82
+            ]
+          },
+          {
+            "tick": 201,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "arrivals": [
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "incoming": [
+              0.82,
+              0.82,
+              0.82,
+              0.82,
+              0.82
+            ]
+          },
+          {
+            "tick": 121,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "arrivals": [
+          0,
+          0,
+          0
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "incoming": [
+              0.82,
+              0.82,
+              0.82,
+              0.82,
+              0.82
+            ]
+          },
+          {
+            "tick": 121,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "arrivals": [
+          0,
+          80
+        ],
+        "dt": 0.25,
+        "changes": [
+          {
+            "tick": 0,
+            "incoming": [
+              0.82,
+              0.82,
+              0.82,
+              0.82,
+              0.82
+            ]
+          },
+          {
+            "tick": 201,
+            "incoming": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "stubs": [
+    "0x27d0640 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4180 isolated actor context / hand identity / empty animation reference list",
+    "0x3d4c10 isolated actor context / hand identity / empty animation reference list",
+    "0x4d1b20 isolated actor context / hand identity / empty animation reference list",
+    "0x66b2d0 isolated actor context / hand identity / empty animation reference list",
+    "0xea76f0 isolated actor context / hand identity / empty animation reference list",
+    "0xea9a60 isolated actor context / hand identity / empty animation reference list",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "347700 successful projectile-emission recorder; receiver arrivals are separate fixtures",
+    "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
+    "3CED90 isolated actor context",
+    "E6FCB0 actual Behavior row lookup",
+    "E87800 actual Bullet row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic player virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}

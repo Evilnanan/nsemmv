@@ -20,10 +20,31 @@ import gesture from "../../data/effect-gesture-madness-evidence.json";
 import guardianSkill from "../../data/effect-guardian-skill-evidence.json";
 import blade from "../../data/effect-executor-blade-evidence.json";
 import prayer from "../../data/effect-undertaker-prayer-evidence.json";
+import protection from "../../data/effect-guardian-protection-evidence.json";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("separates Guardian protection lifetime from the emitter and refreshes without multiplying", () => {
+    const detail = effectDetail(6500100)!;
+    expect(detail.blocks[0].values).toEqual([["承伤倍率", "-18%"]]);
+    expect(detail.blocks[0].restrictions).toContain("自身及周围友方 · 半径 8 米");
+    expect(detail.blocks[0].duration).toBe(30);
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("同类效果再次施加刷新时长");
+    for (const c of protection.checks.trigger)
+      expect(c.requests).toHaveLength(c.equipmentCopies && c.active ? 1 : 0);
+    for (const c of protection.checks.emission) expect(c.emissions).toEqual([0]);
+    for (const c of protection.checks.lifecycle) {
+      expect(c.changes).toHaveLength(2);
+      expect(c.changes[0].incoming).toEqual([.82, .82, .82, .82, .82]);
+      expect(Math.abs(c.changes[1].tick * c.dt - (Math.max(...c.arrivals) * c.dt + 30))).toBeLessThanOrEqual(.5);
+    }
+    expect(research.guardianProtectionEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guardian-protection-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    expect(protection.gameplayVerified).toBe(false);
+  });
   it("requires a prayer animation grant and keeps the unconnected distant-heal slot unresolved", () => {
     const detail = effectDetail(7037000)!;
     expect(detail.blocks[0].values).toEqual([["物理攻击倍率", "+19%"]]);
@@ -453,7 +474,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(36);
-    expect(research.coverage.withNumericFields).toBe(505);
+    expect(research.coverage.withNumericFields).toBe(506);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
