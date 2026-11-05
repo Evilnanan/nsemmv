@@ -58,10 +58,6 @@ select option {
   color: #e6e6dc;
   background-color: #1b2119;
 }
-select option:checked {
-  color: #141813;
-  background-color: #c2ac78;
-}
 .character-choice {
   display: flex;
   align-items: center;
