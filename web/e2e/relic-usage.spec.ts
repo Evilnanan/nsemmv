@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import { usageFixture, longPresetName } from "../tests/relic-usage.fixture";
+import { selectCharacter } from "./character-select-helper";
 
 test("shows equipment and preset references in both relic editors without changing the save", async ({
   page,
@@ -35,9 +36,9 @@ test("shows equipment and preset references in both relic editors without changi
   await page.screenshot({ path: testInfo.outputPath("inventory-usage.png") });
   await page.locator(".relic-card").nth(1).click();
   await expect(usage).toContainText("未使用");
-  await page.getByLabel("角色槽").selectOption("1");
+  await selectCharacter(page, 1);
   await expect(usage).toContainText("未使用");
-  await page.getByLabel("角色槽").selectOption("0");
+  await selectCharacter(page, 0);
   await page.getByRole("button", { name: "预设", exact: true }).click();
   await page.locator(".preset-card").filter({ hasText: "搓招流" }).click();
   await expect(

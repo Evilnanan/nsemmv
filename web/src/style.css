@@ -383,11 +383,75 @@ a {
   padding: 0 32px;
   border-bottom: 1px solid var(--line);
 }
-.characterbar select {
+.character-select-trigger {
   border: 0;
   background: transparent;
   padding-left: 0;
   max-width: 240px;
+}
+.character-select {
+  position: relative;
+  min-width: 0;
+}
+.character-select-trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.character-select-trigger > span {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.character-select-trigger > svg {
+  flex-shrink: 0;
+}
+.character-select-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  width: max-content;
+  min-width: 100%;
+  max-width: min(320px, calc(100vw - 100px));
+  max-height: min(320px, 60dvh);
+  overflow: auto;
+  padding: 5px;
+  border: 1px solid #5b604e;
+  border-radius: 7px;
+  background: #1b2119;
+  box-shadow: 0 8px 24px #0008;
+}
+.character-select-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  text-align: left;
+  color: #e6e6dc;
+  background: transparent;
+}
+.character-select-option > span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.character-select-option > svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+.character-select-option.active {
+  color: #141813;
+  background: #c2ac78;
+}
+.character-select-option.active > svg {
+  color: inherit;
 }
 .character-meta {
   color: var(--muted);
@@ -1372,7 +1436,7 @@ dialog h2 {
   .characterbar {
     gap: 12px;
   }
-  .characterbar select {
+  .character-select-trigger {
     max-width: 165px;
     font-size: 12px;
   }

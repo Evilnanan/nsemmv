@@ -54,6 +54,7 @@ import { type SessionView, type Edit } from "./core/session";
 import { request, download } from "./client";
 import { EffectInspect } from "./components/EffectInspect";
 import { RelicUsage, RelicUsageSummary } from "./components/RelicUsage";
+import { CharacterSelect } from "./components/CharacterSelect";
 import { relicUsage, matchesUsage, type UsageFilter } from "./core/relic-usage";
 import "./style.css";
 type Icon = typeof Gem;
@@ -706,28 +707,19 @@ function App() {
           <>
             <div className="characterbar">
               <div className="character-choice">
-                <select
-                  aria-label="角色槽"
+                <CharacterSelect
+                  characters={view.characters}
                   disabled={busy}
                   value={view.slot}
-                  onChange={(e) => {
+                  onChange={(slot) => {
                     if (discard())
-                      void run(async () => {
-                        const next = await request<SessionView>(
-                          "view",
-                          Number(e.target.value),
-                        );
+                      return run(async () => {
+                        const next = await request<SessionView>("view", slot);
                         setView(next);
                         select(next.relics[0]?.handle, next);
                       });
                   }}
-                >
-                  {view.characters.map((c) => (
-                    <option key={c.slot} value={c.slot}>
-                      {String(c.slot + 1).padStart(2, "0")} · {c.name}
-                    </option>
-                  ))}
-                </select>
+                />
                 <Tool
                   icon={Pencil}
                   label="角色改名"

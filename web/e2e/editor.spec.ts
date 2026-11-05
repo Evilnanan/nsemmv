@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { fixture, character } from "../tests/fixtures";
 import { Session } from "../src/core/session";
 import { equal } from "../src/core/binary";
+import { selectCharacter } from "./character-select-helper";
 
 test("local save: open, modify, undo, export, reopen and retain another slot", async ({
   page,
@@ -24,7 +25,7 @@ test("local save: open, modify, undo, export, reopen and retain another slot", a
   });
   await expect(page.getByLabel("角色槽")).toBeVisible();
   await expect(page.getByLabel("Item ID")).toHaveValue("100");
-  await page.getByLabel("角色槽").selectOption("1");
+  await selectCharacter(page, 1);
   await page.getByRole("button", { name: "收藏遗物", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "取消收藏", exact: true }),
@@ -189,7 +190,9 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   ).toBe(true);
   await page.getByRole("button", { name: "应用修改", exact: true }).click();
   await expect(page.getByLabel("预设名称")).toHaveValue("保留中文草稿");
-  await expect(page.locator(".preset-slot-cell").first().locator(".preset-effect")).toContainText("集中力");
+  await expect(
+    page.locator(".preset-slot-cell").first().locator(".preset-effect"),
+  ).toContainText("集中力");
   await page
     .getByRole("button", { name: "编辑预设遗物 1", exact: true })
     .click();
@@ -200,7 +203,9 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   page.once("dialog", (d) => d.accept());
   await page.getByRole("button", { name: "关闭", exact: true }).click();
   await expect(page.getByLabel("预设名称")).toHaveValue("保留中文草稿");
-  await expect(page.locator(".preset-slot-cell").first().locator(".preset-effect")).toContainText("集中力");
+  await expect(
+    page.locator(".preset-slot-cell").first().locator(".preset-effect"),
+  ).toContainText("集中力");
   await page
     .getByRole("button", { name: "查看预设遗物 4", exact: true })
     .click();
