@@ -1382,6 +1382,119 @@ dialog h2 {
   overflow: hidden;
   background: #1b2119;
 }
+.relic-usage {
+  margin: 0 0 18px;
+  padding: 12px;
+  border: 1px solid #35402c;
+  border-radius: 6px;
+  background: #1b2119;
+  min-width: 0;
+}
+.relic-usage h3,
+.preset-relic-editor .relic-usage h3 {
+  margin: 0 0 9px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.usage-list {
+  max-height: 240px;
+  overflow: auto;
+}
+.usage-hero {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 10px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.usage-hero + .usage-hero {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #35402c;
+}
+.usage-hero strong {
+  font-weight: 500;
+}
+.usage-hero ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.usage-hero li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.usage-hero li + li {
+  margin-top: 6px;
+}
+.usage-hero li > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--muted);
+}
+.usage-hero small {
+  flex-shrink: 0;
+  font-size: 10px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.usage-hero li > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.usage-hero .usage-equipped > svg,
+.usage-hero .usage-equipped > small {
+  color: var(--gold);
+}
+.usage-hero code,
+.usage-empty {
+  font-size: 11px;
+  color: var(--muted);
+}
+.preset-relic-editor .relic-usage {
+  margin-bottom: 0;
+}
+.usage-summary {
+  display: grid;
+  gap: 4px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--muted);
+  min-width: 0;
+}
+.usage-summary-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px 8px;
+}
+.usage-summary-hero strong {
+  font-weight: 500;
+  color: #d9d9cf;
+}
+.usage-summary-hero > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.preset-slot-cell > .usage-summary {
+  padding: 8px 15px 0;
+}
+.relic-option-content {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.slot-options .relic-option {
+  align-items: start;
+}
+.usage-filter {
+  max-width: 100%;
+  margin: 10px 0;
+}
 .preset-slot-heading {
   display: flex;
   align-items: center;

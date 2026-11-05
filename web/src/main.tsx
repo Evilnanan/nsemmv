@@ -53,6 +53,8 @@ import {
 import { type SessionView, type Edit } from "./core/session";
 import { request, download } from "./client";
 import { EffectInspect } from "./components/EffectInspect";
+import { RelicUsage, RelicUsageSummary } from "./components/RelicUsage";
+import { relicUsage, matchesUsage, type UsageFilter } from "./core/relic-usage";
 import "./style.css";
 type Icon = typeof Gem;
 function Tool({
@@ -887,9 +889,6 @@ function App() {
                             {meta?.deep ? "DEEP RELIC" : "RELIC"}
                           </span>
                           <h2>{meta?.name.zh_CN ?? "未知遗物"}</h2>
-                          <span className="owners">
-                            {current?.owners || "—"}
-                          </span>
                         </div>
                         <div className="detail-tools">
                           {draft.handle !== undefined && (
@@ -945,6 +944,10 @@ function App() {
                           )}
                         </div>
                       </header>
+                      <RelicUsage
+                        loadouts={view.loadouts}
+                        handle={draft.handle}
+                      />
                       <RelicFields
                         draft={draft}
                         setDraft={setDraft}
@@ -1243,6 +1246,14 @@ function Presets({
     } | null>(null),
     [slot, setSlot] = useState<number | null>(null),
     [search, setSearch] = useState("");
+  const [usageFilter, setUsageFilter] = useState<UsageFilter>("all");
+  const usages = useMemo(
+    () =>
+      new Map(
+        view.relics.map((r) => [r.handle, relicUsage(view.loadouts, r.handle)]),
+      ),
+    [view.relics, view.loadouts],
+  );
   const [relicEdit, setRelicEdit] = useState<{
     draft: Draft;
     slot: number;
@@ -1446,7 +1457,14 @@ function Presets({
                         />
                       )}
                     </div>
-                    {r && <PresetEffects relic={r} />}
+                    {r && (
+                      <>
+                        <RelicUsageSummary
+                          usage={usages.get(r.handle) ?? null}
+                        />
+                        <PresetEffects relic={r} />
+                      </>
+                    )}
                   </div>
                 );
               })}
@@ -1467,6 +1485,20 @@ function Presets({
                     onClick={() => setSlot(null)}
                   />
                 </div>
+                <select
+                  className="usage-filter"
+                  aria-label="筛选遗物使用情况"
+                  value={usageFilter}
+                  onChange={(e) =>
+                    setUsageFilter(e.target.value as UsageFilter)
+                  }
+                >
+                  <option value="all">全部使用情况</option>
+                  <option value="unshared">未被其他角色使用</option>
+                  <option value="unused">未使用</option>
+                  <option value="current">当前角色使用</option>
+                  <option value="other">其他角色使用</option>
+                </select>
                 <div className="slot-options">
                   <button
                     className="picker-row"
@@ -1489,6 +1521,11 @@ function Presets({
                         (color === 4 || color === m.color) &&
                         (!edit.handles.includes(r.handle) ||
                           edit.handles[slot] === r.handle) &&
+                        matchesUsage(
+                          usages.get(r.handle) ?? null,
+                          edit.hero,
+                          usageFilter,
+                        ) &&
                         `${r.id} ${r.roll.map((p) => effectName(p.effect)).join(" ")}`.includes(
                           search,
                         )
@@ -1497,7 +1534,7 @@ function Presets({
                     .slice(0, 80)
                     .map((r) => (
                       <button
-                        className="picker-row"
+                        className="picker-row relic-option"
                         key={r.handle}
                         onClick={() => {
                           const handles = [...edit.handles];
@@ -1507,11 +1544,16 @@ function Presets({
                         }}
                       >
                         <code>{r.id}</code>
-                        <span>
-                          {r.roll
-                            .filter((p) => p.effect !== EMPTY)
-                            .map((p) => effectName(p.effect))
-                            .join(" / ")}
+                        <span className="relic-option-content">
+                          <span>
+                            {r.roll
+                              .filter((p) => p.effect !== EMPTY)
+                              .map((p) => effectName(p.effect))
+                              .join(" / ")}
+                          </span>
+                          <RelicUsageSummary
+                            usage={usages.get(r.handle) ?? null}
+                          />
                         </span>
                       </button>
                     ))}
@@ -1579,6 +1621,10 @@ function Presets({
             <h3>
               {catalog.relics[relicEdit.draft.id]?.name.zh_CN ?? "未知遗物"}
             </h3>
+            <RelicUsage
+              loadouts={view.loadouts}
+              handle={relicEdit.draft.handle}
+            />
             <RelicFields
               draft={relicEdit.draft}
               setDraft={(draft) => setRelicEdit({ ...relicEdit, draft })}
