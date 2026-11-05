@@ -398,6 +398,7 @@ function ItemPicker({
   );
 }
 function App() {
+  const [rename, setRename] = useState<string | null>(null);
   const [hideUnavailable, setHideUnavailable] = useState(false);
   const [view, setView] = useState<SessionView | null>(null),
     [busy, setBusy] = useState(false),
@@ -425,7 +426,8 @@ function App() {
     (draft.handle === undefined ||
       draft.id !== current?.id ||
       JSON.stringify(draft.roll) !== JSON.stringify(current?.roll));
-  const dirty = !!view?.dirty || draftDirty || childDirty;
+  const renameDirty = rename !== null && rename !== view?.name;
+  const dirty = !!view?.dirty || draftDirty || childDirty || renameDirty;
   useEffect(() => {
     const f = (e: BeforeUnloadEvent) => {
       if (dirty) {
@@ -470,6 +472,7 @@ function App() {
       });
       setView(next);
       setDocumentId((id) => id + 1);
+      setRename(null);
       select(next.relics[0]?.handle, next);
       setPage(0);
       setQ("");
@@ -702,28 +705,39 @@ function App() {
         ) : (
           <>
             <div className="characterbar">
-              <select
-                aria-label="角色槽"
-                disabled={busy}
-                value={view.slot}
-                onChange={(e) => {
-                  if (discard())
-                    void run(async () => {
-                      const next = await request<SessionView>(
-                        "view",
-                        Number(e.target.value),
-                      );
-                      setView(next);
-                      select(next.relics[0]?.handle, next);
-                    });
-                }}
-              >
-                {view.characters.map((c) => (
-                  <option key={c.slot} value={c.slot}>
-                    {String(c.slot + 1).padStart(2, "0")} · {c.name}
-                  </option>
-                ))}
-              </select>
+              <div className="character-choice">
+                <select
+                  aria-label="角色槽"
+                  disabled={busy}
+                  value={view.slot}
+                  onChange={(e) => {
+                    if (discard())
+                      void run(async () => {
+                        const next = await request<SessionView>(
+                          "view",
+                          Number(e.target.value),
+                        );
+                        setView(next);
+                        select(next.relics[0]?.handle, next);
+                      });
+                  }}
+                >
+                  {view.characters.map((c) => (
+                    <option key={c.slot} value={c.slot}>
+                      {String(c.slot + 1).padStart(2, "0")} · {c.name}
+                    </option>
+                  ))}
+                </select>
+                <Tool
+                  icon={Pencil}
+                  label="角色改名"
+                  disabled={busy || draftDirty || childDirty}
+                  onClick={() => {
+                    setError("");
+                    setRename(view.name);
+                  }}
+                />
+              </div>
               <span className="character-meta">
                 <Gem size={14} />
                 {view.relics.length}
@@ -999,6 +1013,55 @@ function App() {
           <code>NSE / 0.3</code>
         </footer>
       </div>
+      {view && rename !== null && (
+        <Modal
+          title="角色改名"
+          onClose={() => {
+            if (!busy && (!renameDirty || window.confirm("放弃未应用的修改？")))
+              setRename(null);
+          }}
+        >
+          <form
+            className="rename-form"
+            onSubmit={async (event) => {
+              event.preventDefault();
+              if (busy || !rename.trim() || rename.trim() === view.name) return;
+              if (await apply({ type: "rename", name: rename }))
+                setRename(null);
+            }}
+          >
+            <label>
+              名称
+              <input
+                aria-label="角色名称"
+                autoFocus
+                maxLength={16}
+                value={rename}
+                disabled={busy}
+                onChange={(e) => setRename(e.target.value)}
+              />
+            </label>
+            <span className="name-length">{rename.length} / 16</span>
+            {error && (
+              <div className="validation bad" role="alert">
+                {error}
+              </div>
+            )}
+            <div className="modal-actions">
+              <div className="spacer" />
+              <button
+                type="submit"
+                className="apply"
+                aria-label="保存角色名称"
+                title="保存角色名称"
+                disabled={busy || !rename.trim() || rename.trim() === view.name}
+              >
+                <Check size={19} />
+              </button>
+            </div>
+          </form>
+        </Modal>
+      )}
       {picker && draft && (
         <EffectPicker
           itemId={draft.id}

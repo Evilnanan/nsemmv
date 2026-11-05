@@ -53,12 +53,13 @@ export function character() {
 }
 export function fixture(
   chars: Record<number, Uint8Array> = { 0: character() },
+  summary?: Uint8Array,
 ) {
   const key = Uint8Array.from([
     0x18, 0xf6, 0x32, 0x66, 0x05, 0xbd, 0x17, 0x8a, 0x55, 0x24, 0x52, 0x3a,
     0xc0, 0xa0, 0xc6, 0x09,
   ]);
-  const global = new Uint8Array(256);
+  const global = summary?.slice() ?? new Uint8Array(256);
   for (const slot of Object.keys(chars)) global[32 + Number(slot)] = 1;
   global.set([39, 0, 0, 70, 65, 67, 69], 93);
   const payloads = Array.from({ length: 11 }, (_, i) =>

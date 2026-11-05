@@ -76,17 +76,22 @@ export class SaveContainer {
     }
     return out;
   }
-  occupied(): number[] {
+  characterDirectoryOffset(): number {
     const bytes = this.entries[10].plain,
       marker = [39, 0, 0, 70, 65, 67, 69],
-      matches: number[][] = [];
+      matches: number[] = [];
     for (let p = 61; p + marker.length <= bytes.length; p++)
       if (marker.every((v, i) => bytes[p + i] === v)) {
         const flags = [...bytes.subarray(p - 61, p - 51)];
-        if (flags.every((v) => v === 0 || v === 1))
-          matches.push(flags.flatMap((v, i) => (v ? [i] : [])));
+        if (flags.every((v) => v === 0 || v === 1)) matches.push(p - 61);
       }
     invariant(matches.length === 1, "角色目录无法唯一识别");
     return matches[0];
+  }
+  occupied(): number[] {
+    const offset = this.characterDirectoryOffset();
+    return [...this.entries[10].plain.subarray(offset, offset + 10)].flatMap(
+      (value, slot) => (value ? [slot] : []),
+    );
   }
 }

@@ -13,7 +13,9 @@ import {
 } from "./character";
 import { equal, invariant } from "./binary";
 import { type Roll, checkRoll } from "./rules";
+import { renameCharacter } from "./character-name";
 export type Edit =
+  | { type: "rename"; name: string }
   | { type: "edit"; handle: number; id: number; roll: Roll }
   | { type: "add"; id: number; roll: Roll }
   | { type: "remove"; handle: number }
@@ -52,7 +54,7 @@ export interface SessionView {
   };
   goods: number[];
 }
-type Change = { slot: number; before: Uint8Array; after: Uint8Array };
+type Change = { slot: number; before: Uint8Array; after: Uint8Array }[];
 export class Session {
   readonly container: SaveContainer;
   readonly occupied: number[];
@@ -78,13 +80,16 @@ export class Session {
       this.occupied === undefined || this.occupied.includes(slot),
       "角色槽为空",
     );
+    return this.entryBytes(slot);
+  }
+  private entryBytes(slot: number) {
     return this.changes.get(slot) ?? this.container.entries[slot].plain;
   }
   dirty() {
-    return this.occupied.some(
+    return [...new Set([...this.changes.keys(), ...this.saved.keys()])].some(
       (slot) =>
         !equal(
-          this.bytes(slot),
+          this.entryBytes(slot),
           this.saved.get(slot) ?? this.container.entries[slot].plain,
         ),
     );
@@ -133,7 +138,22 @@ export class Session {
     const before = this.bytes(slot);
     let after: Uint8Array = before;
     let handle: number | undefined;
+    const change: Change = [];
     switch (op.type) {
+      case "rename": {
+        const summary = this.entryBytes(10);
+        const result = renameCharacter(
+          before,
+          summary,
+          this.container.characterDirectoryOffset(),
+          slot,
+          op.name,
+        );
+        after = result.character;
+        if (!equal(summary, result.summary))
+          change.push({ slot: 10, before: summary, after: result.summary });
+        break;
+      }
       case "edit":
         after = editRelic(before, op.handle, op.id, op.roll);
         break;
@@ -170,8 +190,9 @@ export class Session {
       new Character(after),
     );
     if (!equal(before, after)) {
-      this.changes.set(slot, after);
-      this.undoStack.push({ slot, before, after });
+      change.push({ slot, before, after });
+      for (const c of change) this.changes.set(c.slot, c.after);
+      this.undoStack.push(change);
       if (this.undoStack.length > 20) this.undoStack.shift();
       this.redoStack = [];
     }
@@ -180,14 +201,14 @@ export class Session {
   undo() {
     const c = this.undoStack.pop();
     if (c) {
-      this.changes.set(c.slot, c.before);
+      for (const entry of c) this.changes.set(entry.slot, entry.before);
       this.redoStack.push(c);
     }
   }
   redo() {
     const c = this.redoStack.pop();
     if (c) {
-      this.changes.set(c.slot, c.after);
+      for (const entry of c) this.changes.set(entry.slot, entry.after);
       this.undoStack.push(c);
     }
   }
@@ -199,9 +220,9 @@ export class Session {
       );
     const result = this.container.write(this.changes);
     const reopened = SaveContainer.open(result);
-    for (const slot of this.occupied) {
+    for (const slot of new Set([...this.occupied, ...this.changes.keys()])) {
       const written = reopened.entries[slot].plain,
-        expected = this.bytes(slot);
+        expected = this.entryBytes(slot);
       invariant(
         equal(
           written.subarray(0, written.length - 28),
@@ -210,7 +231,9 @@ export class Session {
         "导出回读不一致",
       );
     }
-    this.saved = new Map(this.occupied.map((s) => [s, this.bytes(s).slice()]));
+    this.saved = new Map(
+      [...this.changes.keys()].map((s) => [s, this.entryBytes(s).slice()]),
+    );
     return result;
   }
   original() {
