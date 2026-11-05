@@ -32,11 +32,12 @@ export function renameCharacter(
   slot: number,
   input: string,
 ) {
+  const c = new Character(character);
+  if (input === c.name) return { character, summary };
   const name = input.trim();
   invariant(name.length > 0, "角色名称不能为空");
   invariant(!/[\u0000-\u001f\u007f]/.test(name), "角色名称不能包含控制字符");
   invariant(name.length <= 16, "角色名称最多 16 个 UTF-16 字符");
-  const c = new Character(character);
   if (name === c.name) return { character, summary };
   const offset = summaryNameOffset(summary, directory, slot, c.name);
   const next = character.slice(),

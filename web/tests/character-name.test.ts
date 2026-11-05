@@ -30,7 +30,9 @@ describe("character rename", () => {
       const p = e.index === 1 ? offset : e.index === 10 ? 42 + 0x290 : -100;
       const masked = e.plain.slice(0, e.plain.length - 28);
       if (p >= 0) masked.set(original.subarray(p, p + 32), p);
-      expect(equal(masked, original.subarray(0, original.length - 28))).toBe(true);
+      expect(equal(masked, original.subarray(0, original.length - 28))).toBe(
+        true,
+      );
     }
     s.undo();
     expect(s.dirty()).toBe(true);
@@ -49,6 +51,11 @@ describe("character rename", () => {
   });
 
   it("preserves an unchanged spelling, allows full-length Unicode, and rejects invalid writes atomically", () => {
+    const spacedInput = nameFixture(["  OvO  ", ",㉒_㉑,"]);
+    const spaced = Session.open(spacedInput, "spaced");
+    spaced.apply(0, { type: "rename", name: "  OvO  " });
+    expect(equal(spaced.export(), spacedInput)).toBe(true);
+    expect(spaced.view(0).canUndo).toBe(false);
     const s = Session.open(nameFixture(), "names");
     s.apply(1, { type: "rename", name: ",>_<," });
     expect(s.view(1).canUndo).toBe(false);

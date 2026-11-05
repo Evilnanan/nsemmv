@@ -1025,7 +1025,13 @@ function App() {
             className="rename-form"
             onSubmit={async (event) => {
               event.preventDefault();
-              if (busy || !rename.trim() || rename.trim() === view.name) return;
+              if (
+                busy ||
+                !rename.trim() ||
+                rename === view.name ||
+                rename.trim() === view.name
+              )
+                return;
               if (await apply({ type: "rename", name: rename }))
                 setRename(null);
             }}
@@ -1054,7 +1060,12 @@ function App() {
                 className="apply"
                 aria-label="保存角色名称"
                 title="保存角色名称"
-                disabled={busy || !rename.trim() || rename.trim() === view.name}
+                disabled={
+                  busy ||
+                  !rename.trim() ||
+                  rename === view.name ||
+                  rename.trim() === view.name
+                }
               >
                 <Check size={19} />
               </button>
