@@ -8,7 +8,7 @@
     "withDetails": 634,
     "withNumericFields": 560,
     "withMechanicsOnly": 39,
-    "nativeStacking": 552,
+    "nativeStacking": 554,
     "catalog": 2241,
     "catalogWithDetails": 2079
   },
@@ -12565,12 +12565,13 @@
         7040200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "critical-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -12587,12 +12588,13 @@
         7040201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "critical-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -49757,6 +49759,7 @@
   "guardianHalberdEvidenceSha256": "2e418db4348e384797129c1508651c9e3bbdde74758d7baff09c6f8c3be6887d",
   "wylderFollowupEvidenceSha256": "b31a489e45816d4c96d41e089b982d30609c9dc33f651b058716c8f63ea7e1bc",
   "duchessDaggerEvidenceSha256": "cf5e0374acd830e8f71519161b844bd4a27b07417ab151b86996ba1156b1c2bb",
+  "criticalAttackEvidenceSha256": "93c02f7df10e4ee623a8754612e49c3bd359acbb4a233288c1ba6d8553085491",
   "equippedExclusivityEvidenceSha256": "c4bf2b595dfa5eb8abe6336e18034ef57b3d564f63977090af9fff9db0cf0527",
   "startingReplacementsEvidenceSha256": "0cdba060d9328349958a2726899305816a54fb8f31ccba5efed83c3a0559e701",
   "guardAggroEvidenceSha256": "e412c1bcf2be396d4e8359f9336091dcc02ceffa4e50e72ede398a93910d55e8",

@@ -1,3 +1,4 @@
+import criticalAttack from "../../data/effect-critical-attack-evidence.json";
 import { describe, expect, it } from "vitest";
 import { catalog } from "../src/core/catalog";
 import { effectDetail } from "../src/core/effect-details";
@@ -75,6 +76,32 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("multiplies repeated normal critical bonuses but deduplicates the +1 version before combining", () => {
+    expect(criticalAttack.checks).toHaveLength(624);
+    for (const row of criticalAttack.checks) {
+      const normal = row.effects.filter((id) => id === 7040200).length;
+      const plus = Number(row.effects.includes(7040201));
+      expect(row.accepted.filter((id) => id === 7040200)).toHaveLength(normal);
+      expect(row.accepted.filter((id) => id === 7040201)).toHaveLength(plus);
+      const active = row.critical && !row.disabled && ![3, 4, 5, 10].includes(row.kind);
+      const expected = active ? 1.18 ** normal * 1.23 ** plus : 1;
+      for (const value of row.values) expect(value).toBeCloseTo(expected, 5);
+    }
+    expect(effectDetail(7040200)!.stacking).toBe("可叠加");
+    expect(effectDetail(7040200)!.stackingDetail).toContain("两条合计 +39.24%");
+    expect(effectDetail(7040201)!.stacking).toBe("不同等级可叠加");
+    expect(effectDetail(7040201)!.stackingDetail).toContain("＋１版只生效一条");
+    for (const id of [7040200, 7040201]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[0].phase).toBe("致命一击时");
+      expect(detail.notes.join()).toContain("合计 +45.14%");
+    }
+    expect(criticalAttack.gameplayVerified).toBe(false);
+    expect(research.criticalAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-critical-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("filters exclusive equipment before summing attributes and multiplying applicable attacks", () => {
     for (const family of equippedExclusivity.families) {
       const detail = effectDetail(family.effect)!;

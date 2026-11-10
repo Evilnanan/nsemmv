@@ -350,6 +350,14 @@ assert equipped_exclusivity['exeSha256'] == evidence['exeSha256'] and not equipp
 assert equipped_exclusivity['paramSha256'] == evidence['paramSha256']
 assert {k: len(v) for k, v in equipped_exclusivity['checks'].items()} == dict(selection=300, hero=20, mixed=7, groups=25, attributes=36, attack=1248)
 equipped_exclusive_families = {str(f['effect']): f for f in equipped_exclusivity['families']}
+critical_attack_path = ROOT / 'data/effect-critical-attack-evidence.json'
+critical_attack = json.loads(critical_attack_path.read_text())
+assert critical_attack['schema'] == 1 and critical_attack['regulationSha256'] == catalog['regulationSha256']
+assert critical_attack['exeSha256'] == evidence['exeSha256'] and not critical_attack['gameplayVerified']
+assert critical_attack['paramSha256'] == evidence['paramSha256']
+assert len(critical_attack['checks']) == 624
+critical_attack_families = {str(f['effect']): f for f in critical_attack['families']}
+
 
 
 
@@ -793,6 +801,8 @@ def block(id, phase, linked, known_states=frozenset()):
 
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
+    'critical-normal': ('可叠加', '普通版重复装备时倍率相乘；两条合计 +39.24%', ['critical-attack']),
+    'critical-plus': ('不同等级可叠加', '＋１版只生效一条；可与普通版倍率相乘', ['critical-attack']),
     'guardian-recovery': ('不可叠加', '同类恢复只刷新有效期', ['recovery-emitter', 'recovery-arrival']),
     'guardian-skill': ('不可叠加', '重复装备不增加单次恢复量', ['guardian-skill']),
     'executor-blade': ('不可叠加', '重复装备不增加增益或负面效果', ['executor-blade']),
@@ -1288,6 +1298,14 @@ for id, effect in source['effects'].items():
                        values=[['弹反窗口', '动作第 0.13～0.27 秒']], restrictions=['刺剑／重刺剑'],
                        scope=[], duration=None, interval=None)]
         rule = 'scholar-feint'
+    if id in critical_attack_families:
+        family = critical_attack_families[id]
+        assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == family['exclusive']
+        assert math.isclose(source['spells'][id]['physicsAttackRate'], family['rate'], rel_tol=1e-6)
+        assert len(blocks) == 1 and blocks[0]['duration'] is None
+        blocks[0]['phase'] = '致命一击时'
+        notes.append('普通版与＋１版各一条时，致命一击攻击倍率合计 +45.14%。')
+        rule = 'critical-normal' if id == '7040200' else 'critical-plus'
     if id in equipped_exclusive_families:
         family = equipped_exclusive_families[id]
         assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == family['exclusive']
@@ -1823,10 +1841,12 @@ for id in sorted(source['effects'], key=int):
         questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('critical-normal', 'critical-plus', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
     if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
+    if rules[id] in ('critical-normal', 'critical-plus'):
+        questions.append('完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入')
     if rules[id] == 'growth':
         questions.append('计数源的完整地点名单、跨日／重载恢复与同类来源相遇')
     if set(effect['roots'].values()) & {7020100, 7020200, 7036800}:
@@ -2019,6 +2039,7 @@ research['revenantFamilyEvidenceSha256'] = hashlib.sha256(revenant_family_path.r
 research['guardianHalberdEvidenceSha256'] = hashlib.sha256(guardian_halberd_path.read_bytes()).hexdigest()
 research['wylderFollowupEvidenceSha256'] = hashlib.sha256(wylder_followup_path.read_bytes()).hexdigest()
 research['duchessDaggerEvidenceSha256'] = hashlib.sha256(duchess_dagger_path.read_bytes()).hexdigest()
+research['criticalAttackEvidenceSha256'] = hashlib.sha256(critical_attack_path.read_bytes()).hexdigest()
 research['equippedExclusivityEvidenceSha256'] = hashlib.sha256(equipped_exclusivity_path.read_bytes()).hexdigest()
 research['startingReplacementsEvidenceSha256'] = hashlib.sha256(starting_replacements_path.read_bytes()).hexdigest()
 research['guardAggroEvidenceSha256'] = hashlib.sha256(guard_aggro_path.read_bytes()).hexdigest()
