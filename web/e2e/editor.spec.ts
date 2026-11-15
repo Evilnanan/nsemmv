@@ -185,7 +185,7 @@ test("edits a preset relic in place, retains the preset draft and protects shop 
   });
   expect(
     await page
-      .locator("dialog")
+      .getByRole("dialog", { name: "遗物", exact: true })
       .evaluate((el) => el.scrollWidth <= el.clientWidth),
   ).toBe(true);
   await page.getByRole("button", { name: "应用修改", exact: true }).click();

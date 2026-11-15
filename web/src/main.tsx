@@ -55,7 +55,10 @@ import { request, download } from "./client";
 import { EffectInspect } from "./components/EffectInspect";
 import { RelicUsage, RelicUsageSummary } from "./components/RelicUsage";
 import { CharacterSelect } from "./components/CharacterSelect";
-import { relicUsage, matchesUsage, type UsageFilter } from "./core/relic-usage";
+import { relicUsage } from "./core/relic-usage";
+import { PresetEffects } from "./components/PresetEffects";
+import { PresetRelicPicker } from "./components/PresetRelicPicker";
+import { fitPresetHandles } from "./core/preset-editor";
 import "./style.css";
 type Icon = typeof Gem;
 function Tool({
@@ -91,11 +94,13 @@ function Modal({
   onClose,
   children,
   className,
+  hidden = false,
 }: {
   title: string;
   onClose: () => void;
   children: React.ReactNode;
   className?: string;
+  hidden?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -104,6 +109,8 @@ function Modal({
   return (
     <dialog
       ref={ref}
+      hidden={hidden}
+      aria-label={title}
       className={className}
       onCancel={(e) => {
         e.preventDefault();
@@ -1249,43 +1256,6 @@ function RelicFields({
   );
 }
 
-function PresetEffects({ relic }: { relic: SessionView["relics"][number] }) {
-  const issues = checkRoll(relic.id, relic.roll);
-  return (
-    <div className="preset-effects" aria-label="遗物词条">
-      {relic.roll.map((pair, index) => (
-        <div className="preset-effect-pair" key={index}>
-          {([false, true] as const).map((curse) => {
-            const id = curse ? pair.curse : pair.effect;
-            if (id === EMPTY || id === 0) return null;
-            const invalid =
-              issues.some((issue) => issue.slot === index + (curse ? 3 : 0)) ||
-              candidateConflicts(relic.roll, index, curse, id).length > 0;
-            return (
-              <EffectInspect key={String(curse)} id={id}>
-                <div
-                  className={`preset-effect ${curse ? "curse" : ""}`}
-                  aria-invalid={invalid || undefined}
-                >
-                  {curse && <small>Curse</small>}
-                  <span>{effectName(id)}</span>
-                  {invalid && (
-                    <CircleAlert
-                      className="preset-effect-warning"
-                      size={16}
-                      aria-label="词条不可用"
-                    />
-                  )}
-                </div>
-              </EffectInspect>
-            );
-          })}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function Presets({
   hideUnavailable,
   onHideUnavailable,
@@ -1310,9 +1280,16 @@ function Presets({
       handles: number[];
       index?: number;
     } | null>(null),
-    [slot, setSlot] = useState<number | null>(null),
-    [search, setSearch] = useState("");
-  const [usageFilter, setUsageFilter] = useState<UsageFilter>("all");
+    [slot, setSlot] = useState<number | null>(null);
+  const slotButtons = useRef<(HTMLButtonElement | null)[]>([]);
+  function closePicker() {
+    const previous = slot;
+    setSlot(null);
+    requestAnimationFrame(() => {
+      if (previous !== null)
+        slotButtons.current[previous]?.focus({ preventScroll: true });
+    });
+  }
   const usages = useMemo(
     () =>
       new Map(
@@ -1372,14 +1349,15 @@ function Presets({
           icon={Plus}
           label="新增预设"
           disabled={busy}
-          onClick={() =>
+          onClick={() => {
+            setSlot(null);
             setEdit({
               name: "",
               hero: 7,
               vessel: available(7)[0]?.id ?? 7000,
               handles: [0, 0, 0, 0, 0, 0],
-            })
-          }
+            });
+          }}
         />
       </div>
       <div className="preset-grid">
@@ -1387,7 +1365,10 @@ function Presets({
           <button
             key={p.index}
             className="preset-card"
-            onClick={() => setEdit({ ...p })}
+            onClick={() => {
+              setSlot(null);
+              setEdit({ ...p, handles: [...p.handles] });
+            }}
           >
             <div className="preset-top">
               <span>{heroNames[p.hero]}</span>
@@ -1418,11 +1399,17 @@ function Presets({
           </button>
         ))}
       </div>
-      {edit && !relicEdit && (
+      {edit && (
         <Modal
           title="预设"
-          className="preset-dialog"
+          hidden={!!relicEdit}
+          className={`preset-dialog ${slot !== null ? "choosing-relic" : ""}`}
           onClose={() => {
+            if (busy) return;
+            if (slot !== null) {
+              closePicker();
+              return;
+            }
             if (!changed || window.confirm("放弃未保存的预设？")) {
               setEdit(null);
               setSlot(null);
@@ -1430,209 +1417,215 @@ function Presets({
           }}
         >
           <div className="preset-form">
-            <label>
-              名称
-              <input
-                aria-label="预设名称"
-                maxLength={18}
-                value={edit.name}
-                onChange={(e) => setEdit({ ...edit, name: e.target.value })}
-              />
-            </label>
-            <div className="form-row">
-              <label>
-                角色
-                <select
-                  aria-label="夜渡者"
-                  value={edit.hero}
-                  onChange={(e) => {
-                    const hero = Number(e.target.value);
-                    setEdit({
-                      ...edit,
-                      hero,
-                      vessel: available(hero)[0]?.id ?? hero * 1000,
-                      handles: [0, 0, 0, 0, 0, 0],
-                    });
-                  }}
-                >
-                  {heroNames.slice(1).map((name, i) => (
-                    <option value={i + 1} key={i}>
-                      {name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                器皿
-                <select
-                  aria-label="器皿"
-                  value={edit.vessel}
-                  onChange={(e) =>
-                    setEdit({
-                      ...edit,
-                      vessel: Number(e.target.value),
-                      handles: [0, 0, 0, 0, 0, 0],
-                    })
-                  }
-                >
-                  {available(edit.hero).map((v) => (
-                    <option key={v.id} value={v.id}>
-                      {catalog.vessels[v.id].name.zh_CN}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-            <div className="preset-slots">
-              {edit.handles.map((h, i) => {
-                const r = view.relics.find((r) => r.handle === h),
-                  m = r && catalog.relics[r.id];
-                return (
-                  <div className="preset-slot-cell" key={i}>
-                    <div className="preset-slot-heading">
-                      <button
-                        aria-label={`预设遗物 ${i + 1}`}
-                        className={`preset-slot ${slot === i ? "on" : ""}`}
-                        onClick={() => {
-                          setSlot(i);
-                          setSearch("");
-                        }}
-                      >
-                        <Gem
-                          size={22}
-                          className={`color-${catalog.vessels[edit.vessel].colors[i]}`}
-                        />
-                        <span>{m?.name.zh_CN ?? "—"}</span>
-                        <small>{i < 3 ? "普通" : "深层"}</small>
-                      </button>
-                      {r && (
-                        <Tool
-                          icon={m?.shop ? Eye : Pencil}
-                          label={`${m?.shop ? "查看" : "编辑"}预设遗物 ${i + 1}`}
-                          disabled={busy}
-                          onClick={() =>
-                            setRelicEdit({
-                              slot: i,
-                              draft: {
-                                handle: r.handle,
-                                id: r.id,
-                                roll: r.roll.map((p) => ({ ...p })),
-                              },
-                            })
-                          }
-                        />
-                      )}
-                    </div>
-                    {r && (
-                      <>
-                        <RelicUsageSummary
-                          usage={usages.get(r.handle) ?? null}
-                        />
-                        <PresetEffects relic={r} />
-                      </>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            {slot !== null && (
-              <div className="slot-picker">
-                <div className="search">
-                  <Search size={15} />
-                  <input
-                    aria-label="搜索预设遗物"
-                    placeholder="词条 / ID"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                  />
-                  <Tool
-                    icon={X}
-                    label="关闭遗物选择"
-                    onClick={() => setSlot(null)}
-                  />
-                </div>
-                <select
-                  className="usage-filter"
-                  aria-label="筛选遗物使用情况"
-                  value={usageFilter}
-                  onChange={(e) =>
-                    setUsageFilter(e.target.value as UsageFilter)
-                  }
-                >
-                  <option value="all">全部使用情况</option>
-                  <option value="unshared">未被其他角色使用</option>
-                  <option value="unused">未使用</option>
-                  <option value="current">当前角色使用</option>
-                  <option value="other">其他角色使用</option>
-                </select>
-                <div className="slot-options">
-                  <button
-                    className="picker-row"
-                    onClick={() => {
-                      const handles = [...edit.handles];
-                      handles[slot] = 0;
-                      setEdit({ ...edit, handles });
-                      setSlot(null);
-                    }}
-                  >
-                    —
-                  </button>
-                  {view.relics
-                    .filter((r) => {
-                      const m = catalog.relics[r.id],
-                        color = catalog.vessels[edit.vessel].colors[slot];
-                      return (
-                        m &&
-                        m.deep === slot >= 3 &&
-                        (color === 4 || color === m.color) &&
-                        (!edit.handles.includes(r.handle) ||
-                          edit.handles[slot] === r.handle) &&
-                        matchesUsage(
-                          usages.get(r.handle) ?? null,
-                          edit.hero,
-                          usageFilter,
-                        ) &&
-                        `${r.id} ${r.roll.map((p) => effectName(p.effect)).join(" ")}`.includes(
-                          search,
-                        )
-                      );
-                    })
-                    .slice(0, 80)
-                    .map((r) => (
-                      <button
-                        className="picker-row relic-option"
-                        key={r.handle}
-                        onClick={() => {
-                          const handles = [...edit.handles];
-                          handles[slot] = r.handle;
-                          setEdit({ ...edit, handles });
+            <div className="preset-workspace">
+              <div className="preset-overview">
+                <div className="preset-metadata">
+                  <label>
+                    名称
+                    <input
+                      aria-label="预设名称"
+                      maxLength={18}
+                      value={edit.name}
+                      onChange={(e) =>
+                        setEdit({ ...edit, name: e.target.value })
+                      }
+                    />
+                  </label>
+                  <div className="form-row">
+                    <label>
+                      角色
+                      <select
+                        aria-label="夜渡者"
+                        value={edit.hero}
+                        onChange={(e) => {
+                          const hero = Number(e.target.value);
+                          const vessel = available(hero)[0]?.id ?? hero * 1000;
                           setSlot(null);
+                          setEdit({
+                            ...edit,
+                            hero,
+                            vessel,
+                            handles: fitPresetHandles(
+                              edit.handles,
+                              catalog.vessels[vessel]?.colors ?? [],
+                              view.relics,
+                            ),
+                          });
                         }}
                       >
-                        <code>{r.id}</code>
-                        <span className="relic-option-content">
-                          <span>
-                            {r.roll
-                              .filter((p) => p.effect !== EMPTY)
-                              .map((p) => effectName(p.effect))
-                              .join(" / ")}
-                          </span>
-                          <RelicUsageSummary
-                            usage={usages.get(r.handle) ?? null}
-                          />
-                        </span>
-                      </button>
-                    ))}
+                        {heroNames.slice(1).map((name, i) => (
+                          <option value={i + 1} key={i}>
+                            {name}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                    <label>
+                      器皿
+                      <select
+                        aria-label="器皿"
+                        value={edit.vessel}
+                        onChange={(e) => {
+                          const vessel = Number(e.target.value);
+                          setSlot(null);
+                          setEdit({
+                            ...edit,
+                            vessel,
+                            handles: fitPresetHandles(
+                              edit.handles,
+                              catalog.vessels[vessel].colors,
+                              view.relics,
+                            ),
+                          });
+                        }}
+                      >
+                        {available(edit.hero).map((v) => (
+                          <option key={v.id} value={v.id}>
+                            {catalog.vessels[v.id].name.zh_CN}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
                 </div>
+                <nav className="preset-slot-nav" aria-label="预设槽位">
+                  {edit.handles.map((h, i) => (
+                    <button
+                      type="button"
+                      key={i}
+                      aria-label={`定位${i < 3 ? "普通" : "深层"}遗物 ${(i % 3) + 1}`}
+                      className={`${!h ? "vacant" : ""}`}
+                      onClick={() => {
+                        slotButtons.current[i]?.scrollIntoView({
+                          block: "start",
+                          behavior: "smooth",
+                        });
+                        slotButtons.current[i]?.focus({ preventScroll: true });
+                      }}
+                    >
+                      <Gem
+                        size={18}
+                        className={`color-${catalog.vessels[edit.vessel].colors[i]}`}
+                      />
+                      <span>{(i % 3) + 1}</span>
+                    </button>
+                  ))}
+                </nav>
+                {[0, 3].map((start) => (
+                  <section
+                    className="preset-slot-group"
+                    key={start}
+                    aria-label={start === 0 ? "普通遗物" : "深层遗物"}
+                  >
+                    <div className="preset-group-heading">
+                      <h3>{start === 0 ? "普通" : "深层"}</h3>
+                      <span>
+                        {
+                          edit.handles.slice(start, start + 3).filter(Boolean)
+                            .length
+                        }{" "}
+                        / 3
+                      </span>
+                    </div>
+                    <div className="preset-slots">
+                      {edit.handles.slice(start, start + 3).map((h, offset) => {
+                        const i = start + offset;
+                        const r = view.relics.find((r) => r.handle === h),
+                          m = r && catalog.relics[r.id];
+                        const color = catalog.vessels[edit.vessel].colors[i];
+                        return (
+                          <div
+                            className={`preset-slot-cell ${slot === i ? "selected" : ""} ${!r ? "empty-slot" : ""}`}
+                            key={i}
+                          >
+                            <div className="preset-slot-heading">
+                              <button
+                                ref={(node) => {
+                                  slotButtons.current[i] = node;
+                                }}
+                                type="button"
+                                aria-label={`预设遗物 ${i + 1}`}
+                                aria-expanded={slot === i}
+                                className={`preset-slot ${slot === i ? "on" : ""}`}
+                                onClick={() => setSlot(i)}
+                              >
+                                <Gem size={22} className={`color-${color}`} />
+                                <span>{m?.name.zh_CN ?? "选择遗物"}</span>
+                                <small>
+                                  {(i % 3) + 1} ·{" "}
+                                  {color === 4 ? "任意颜色" : colorNames[color]}
+                                </small>
+                              </button>
+                              {r && (
+                                <Tool
+                                  icon={m?.shop ? Eye : Pencil}
+                                  label={`${m?.shop ? "查看" : "编辑"}预设遗物 ${i + 1}`}
+                                  disabled={busy}
+                                  onClick={() =>
+                                    setRelicEdit({
+                                      slot: i,
+                                      draft: {
+                                        handle: r.handle,
+                                        id: r.id,
+                                        roll: r.roll.map((p) => ({ ...p })),
+                                      },
+                                    })
+                                  }
+                                />
+                              )}
+                              {r && (
+                                <Tool
+                                  icon={X}
+                                  label={`移除预设遗物 ${i + 1}`}
+                                  disabled={busy}
+                                  onClick={() => {
+                                    const handles = [...edit.handles];
+                                    handles[i] = 0;
+                                    setEdit({ ...edit, handles });
+                                  }}
+                                />
+                              )}
+                            </div>
+                            {r && (
+                              <>
+                                <RelicUsageSummary
+                                  usage={usages.get(r.handle) ?? null}
+                                />
+                                <PresetEffects relic={r} />
+                              </>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </section>
+                ))}
               </div>
-            )}
+              {slot !== null && (
+                <PresetRelicPicker
+                  view={view}
+                  hero={edit.hero}
+                  colors={catalog.vessels[edit.vessel].colors}
+                  handles={edit.handles}
+                  slot={slot}
+                  usages={usages}
+                  onClose={closePicker}
+                  onPick={(handle) => {
+                    const handles = [...edit.handles];
+                    handles[slot] = handle;
+                    setEdit({ ...edit, handles });
+                    closePicker();
+                  }}
+                />
+              )}
+            </div>
             {error && (
               <div className="validation bad" role="alert">
                 <CircleAlert size={16} />
                 {error}
               </div>
             )}
-            <div className="modal-actions">
+            <div className="modal-actions preset-actions">
               {edit.index !== undefined && (
                 <Tool
                   icon={Trash2}
@@ -1663,8 +1656,11 @@ function Presets({
                 />
               )}
               <div className="spacer" />
+              <span className="preset-save-state" aria-live="polite">
+                {changed ? "未保存" : "已保存"}
+              </span>
               <button
-                className="apply"
+                className="apply preset-save"
                 aria-label="保存预设"
                 title="保存预设"
                 disabled={
@@ -1676,6 +1672,7 @@ function Presets({
                 }}
               >
                 <Check size={19} />
+                <span>保存</span>
               </button>
             </div>
           </div>
