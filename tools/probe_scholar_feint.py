@@ -17,7 +17,7 @@ weaponraw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes()
 b=Inputs.table(behaviorraw,0x30);w=Inputs.table(weaponraw,0x298)
 t=json.loads(a.animations.read_text());assets=json.loads(a.assets.read_text())
 assert assets['hashes']['regulation.bin']==x.x['hashes']['regulation.bin']
-assert t['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert t['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 root=7036710
 assert x.spells[str(root)]['stateInfo']==2033 and x.spells[str(root)]['spCategory']==20
 assert x.x['tables']['AttachEffectParam'][str(root)]['passiveSpEffectId_1']==root
@@ -104,7 +104,7 @@ for weapon,copies,active in itertools.product((5000000,6000000),(0,1,3),(0,1)):
  stubs.update(c.stubs)
 
 graph=BehaviorGraph(a.behavior);paths=[]
-for state,expected in ((30076,['a279_035100','a281_035100']),(30085,['a039_035950'])):
+for state,expected in ((graph.named('AttackLeftBackStepCancel', 'hkbStateMachine::StateInfo'),['a279_035100','a281_035100']),(graph.named('MirrorAttackRightSpecial1', 'hkbStateMachine::StateInfo'),['a039_035950'])):
  gen=graph.reference(state,'generator');clips=[graph.string(graph.reference(ch,'animationName')) for ch in graph.children(gen)]
  assert sorted(clips)==sorted(expected)
  for clip in clips:
@@ -112,7 +112,7 @@ for state,expected in ((30076,['a279_035100','a281_035100']),(30085,['a039_03595
   assert len([e for e in events if e['tae']==tid and e['animation']==anim])==3
  paths.append(dict(state=state,name=graph.name(state),generator=gen,clips=clips))
 
-script=a.script.read_bytes();assert sha(script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+script=a.script.read_bytes();assert sha(script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=script.decode('utf-8-sig').replace('\r\n','\n');functions=[]
 for name in ('GetEquipType','IsEnableBackStepCancel','AttackLeftHeavy1_onUpdate'):
  start=source.index('function '+name+'(');functions.append(source[start:source.index('\nfunction ',start+1)])

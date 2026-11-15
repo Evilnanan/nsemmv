@@ -1,10 +1,19 @@
 import { describe, it, expect } from "vitest";
 import { catalog, relicDefinitions, poolSets } from "../src/core/catalog";
-import { fixedRoll, checkRoll, effectChoices, toRoll } from "../src/core/rules";
+import { fixedRoll, checkRoll, effectChoices, toRoll, candidateConflicts } from "../src/core/rules";
 import oracle from "./mmv-oracle.json" with { type: "json" };
 describe("pinned MMV catalog", () => {
-  it("matches 5310 independent Python validator outcomes across all obtainable IDs", () => {
-    expect(oracle.length).toBe(5310);
+  it("uses Hotfix1 compatibility groups without merging same-name effects", () => {
+    expect(catalog.profile).toBe("Daybreak 2.1.9 Beta2-Hotfix1");
+    const roll = toRoll([8330110, 0, 0, 0, 0, 0]);
+    expect(candidateConflicts(roll, 1, false, 8330120)).toEqual([]);
+    expect(candidateConflicts(roll, 1, false, 8330111)).toHaveLength(1);
+    expect(catalog.effects[7040201].name).toEqual(catalog.effects[7040202].name);
+    expect(catalog.effects[7040201].exclusive).toBe(400);
+    expect(catalog.effects[7040202].exclusive).toBe(-1);
+  });
+  it("matches 6228 independent Python validator outcomes across all obtainable IDs", () => {
+    expect(oracle.length).toBe(6228);
     for (const c of oracle)
       expect(
         checkRoll(c.id, toRoll(c.values)).length === 0,
@@ -13,7 +22,7 @@ describe("pinned MMV catalog", () => {
   });
   it("covers every unsalable obtainable shop relic and its fixed legal roll", () => {
     expect(Object.values(catalog.relics).filter((r) => r.shop)).toHaveLength(
-      206,
+      215,
     );
     expect(
       [136, 12004, 12005, 12006, 12007].every(
@@ -26,7 +35,7 @@ describe("pinned MMV catalog", () => {
       ),
     ).toBe(true);
     const shops = relicDefinitions.filter((r) => r.shop);
-    expect(shops.length).toBe(134);
+    expect(shops.length).toBe(143);
     for (const r of shops) {
       const roll = fixedRoll(r.id);
       expect(roll, `${r.id}`).not.toBeNull();

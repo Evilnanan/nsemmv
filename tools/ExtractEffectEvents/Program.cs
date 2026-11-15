@@ -16,7 +16,7 @@ NativeLibrary.SetDllImportResolver(typeof(EMEVD).Assembly, (name, _, _) => Nativ
 Directory.SetCurrentDirectory(game);
 string Hash(string path) => Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path))).ToLowerInvariant();
 var regulationHash = Hash(Path.Combine(mod, "regulation.bin"));
-if (regulationHash != "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06")
+if (regulationHash != "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342")
     throw new InvalidDataException("Unsupported regulation hash");
 var files = Directory.GetFiles(Path.Combine(mod, "event"), "*.emevd.dcx").Order().Select(path => {
     var emevd = EMEVD.Read(path);

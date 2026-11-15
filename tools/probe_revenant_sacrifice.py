@@ -26,7 +26,7 @@ inputs = Inputs(a.exe, a.extracted)
 assets = json.loads(a.assets.read_text())
 tae = json.loads(a.animations.read_text())
 assert assets['hashes']['regulation.bin'] == inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256'] == '1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256'] == '806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 raw_tables = {name: path.read_bytes() for name, path in (
     ('Bullet', a.extracted.with_suffix('.Bullet.param')),
     ('BehaviorParam_PC', a.extracted.with_suffix('.BehaviorParam_PC.param')),
@@ -209,7 +209,7 @@ for fps in (30,60,120):
         stubs.update(c.stubs)
 
 script_raw = a.script.read_bytes()
-assert sha(script_raw) == '786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert sha(script_raw) == '96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 script = script_raw.decode('utf-8-sig').replace('\r\n','\n')
 lua = ctypes.CDLL(ctypes.util.find_library('lua5.4'))
 lua.luaL_newstate.restype = ctypes.c_void_p

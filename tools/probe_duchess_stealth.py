@@ -14,7 +14,7 @@ p=argparse.ArgumentParser(description=__doc__)
 for name in ('exe','extracted','animations','throws','output'):p.add_argument(name,type=Path)
 a=p.parse_args();x=Inputs(a.exe,a.extracted)
 t=json.loads(a.animations.read_text());throws=json.loads(a.throws.read_text())
-assert t['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert t['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 assert throws['hashes']['regulation.bin']==x.x['hashes']['regulation.bin']
 root,marker,leaf=9200002,7031801,7031803
 assert x.x['tables']['AttachEffectParam']['7031800']['passiveSpEffectId_1']==root
@@ -27,7 +27,7 @@ r=x.spells[str(leaf)];assert r['spCategory']==20 and r['stateInfo']==8 and r['ef
 assert math.isclose(r['sightSearchEnemyRate'],.01,abs_tol=1e-7) and r['hearingSearchEnemyRate']==0
 assert struct.unpack_from('<2f',x.rows[leaf],0xfc)==(r['sightSearchEnemyRate'],0)
 events=[dict(tae=ta['ID'],animation=an['ID'],**e) for bu in t['bundles'] for ta in bu['taes'] for an in ta['animations'] for e in an['events'] if e['Type']==67 and struct.unpack_from('<i',bytes.fromhex(e['hex']))[0]==marker]
-assert len(events)==30 and all(e['animation']==31710 and e['StartTime']==0 and math.isclose(e['EndTime'],.1,abs_tol=1e-7) for e in events)
+assert len(events)==33 and all(e['animation'] in (31710,231710) and e['StartTime']==0 and math.isclose(e['EndTime'],.1,abs_tol=1e-7) for e in events)
 class Actor(Ailment):
  def __init__(self,kind=0,maximum=500):
   # Reuse the actor setup; explicitly initialize every channel, including the

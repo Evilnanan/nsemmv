@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "eventSha256": "91680d83cd2b7509c303c3c3bdfda98b03c3a5c42e1d985f2901a29547ee6ba6",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "eventSha256": "da5dfbd6296d73cfa492a2ef10894fe0df2d4b228269303f14721a2e3d62e033",
   "roots": {
     "7060101": {
       "event": 1403,
       "slot": 0,
-      "initializationIndex": 398,
+      "initializationIndex": 400,
       "arguments": [
         7060101,
         7060100,
@@ -73,7 +73,7 @@
     "7060400": {
       "event": 1406,
       "slot": 0,
-      "initializationIndex": 399,
+      "initializationIndex": 401,
       "arguments": [
         7060400,
         7060401,
@@ -124,7 +124,7 @@
     "7060600": {
       "event": 1406,
       "slot": 1,
-      "initializationIndex": 400,
+      "initializationIndex": 402,
       "arguments": [
         7060600,
         7060601,
@@ -158,7 +158,7 @@
     "7060500": {
       "event": 1406,
       "slot": 2,
-      "initializationIndex": 401,
+      "initializationIndex": 403,
       "arguments": [
         7060500,
         7060501,
@@ -192,7 +192,7 @@
     "7060300": {
       "event": 1406,
       "slot": 3,
-      "initializationIndex": 402,
+      "initializationIndex": 404,
       "arguments": [
         7060300,
         7060301,
@@ -226,22 +226,23 @@
     "7060001": {
       "family": "special-locations",
       "grants": [
-        7060000,
-        7060002
+        7060000
       ],
       "eventLimit": null,
       "sources": [
         {
           "event": 1400,
           "slot": 0,
-          "initializationIndex": 393,
+          "initializationIndex": 394,
           "arguments": [
             7060001,
             7060000
           ],
-          "counter": 8145,
+          "counter": 8150,
           "grant": 7060000,
-          "grantsPerEvent": 3,
+          "grantsPerEvent": 6,
+          "grantsPerCompletion": 2,
+          "completionLimit": 3,
           "thresholds": [
             1,
             2,
@@ -251,14 +252,16 @@
         {
           "event": 1402,
           "slot": 0,
-          "initializationIndex": 394,
+          "initializationIndex": 396,
           "arguments": [
             7060001,
             7060000
           ],
           "counter": 8155,
           "grant": 7060000,
-          "grantsPerEvent": 2,
+          "grantsPerEvent": 6,
+          "grantsPerCompletion": 3,
+          "completionLimit": 2,
           "thresholds": [
             1,
             2
@@ -267,14 +270,16 @@
         {
           "event": 1407,
           "slot": 0,
-          "initializationIndex": 395,
+          "initializationIndex": 397,
           "arguments": [
             7060001,
-            7060002
+            7060000
           ],
           "counter": 8135,
-          "grant": 7060002,
-          "grantsPerEvent": 2,
+          "grant": 7060000,
+          "grantsPerEvent": 5,
+          "grantsPerCompletion": 5,
+          "completionLimit": 1,
           "thresholds": [
             1
           ]
@@ -282,29 +287,34 @@
         {
           "event": 1408,
           "slot": 0,
-          "initializationIndex": 396,
+          "initializationIndex": 398,
           "arguments": [
             7060001,
             7060000
           ],
           "counter": 8140,
           "grant": 7060000,
-          "grantsPerEvent": 1,
+          "grantsPerEvent": 8,
+          "grantsPerCompletion": 4,
+          "completionLimit": 2,
           "thresholds": [
-            1
+            1,
+            2
           ]
         },
         {
           "event": 1409,
           "slot": 0,
-          "initializationIndex": 397,
+          "initializationIndex": 399,
           "arguments": [
             7060001,
-            7060002
+            7060000
           ],
           "counter": 8180,
-          "grant": 7060002,
-          "grantsPerEvent": 8,
+          "grant": 7060000,
+          "grantsPerEvent": 10,
+          "grantsPerCompletion": 1,
+          "completionLimit": 10,
           "thresholds": [
             1,
             2,
@@ -313,7 +323,9 @@
             5,
             6,
             7,
-            8
+            8,
+            9,
+            10
           ]
         }
       ],
@@ -330,13 +342,17 @@
             7069007,
             7069008,
             7069009,
-            7069010
-          ],
-          "priority": 11
-        },
-        {
-          "grant": 7060002,
-          "stages": [
+            7069010,
+            7069011,
+            7069012,
+            7069013,
+            7069014,
+            7069015,
+            7069016,
+            7069017,
+            7069018,
+            7069019,
+            7069020,
             7069021,
             7069022,
             7069023,
@@ -346,9 +362,19 @@
             7069027,
             7069028,
             7069029,
-            7069030
+            7069030,
+            7069031,
+            7069032,
+            7069033,
+            7069034,
+            7069035,
+            7069036,
+            7069037,
+            7069038,
+            7069039,
+            7069040
           ],
-          "priority": 17
+          "priority": 11
         }
       ]
     },
@@ -398,7 +424,215 @@
           "UnkID": 0
         },
         {
-          "InstructionIndex": 13,
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 14,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 16,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 22,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 24,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        }
+      ],
+      "instructions": [
+        {
+          "Bank": 2000,
+          "ID": 2,
+          "hex": "00000000"
+        },
+        {
+          "Bank": 1004,
+          "ID": 2,
+          "hex": "00000000204E0000FFFFFFFF0000000001000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "01000000E12300000404000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "06010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000D61F00000404000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "E12300000400000003000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "02000000E12300000404000002000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "06010200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000D61F00000404000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "E12300000400000003000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "03000000E12300000404000003000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "06010300"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000D61F00000404000003000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "E12300000400000003000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        }
+      ]
+    },
+    "1402": {
+      "ID": 1402,
+      "RestBehavior": 1,
+      "Parameters": [
+        {
+          "InstructionIndex": 1,
+          "TargetStartByte": 8,
+          "SourceStartByte": 0,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 10,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 16,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 18,
           "TargetStartByte": 4,
           "SourceStartByte": 4,
           "ByteCount": 4,
@@ -426,156 +660,12 @@
         {
           "Bank": 3,
           "ID": 12,
-          "hex": "01000000A52300000404000001000000"
-        },
-        {
-          "Bank": 1000,
-          "ID": 101,
-          "hex": "01010100"
-        },
-        {
-          "Bank": 3,
-          "ID": 12,
-          "hex": "00000000D11F00000404000001000000"
-        },
-        {
-          "Bank": 2003,
-          "ID": 127,
-          "hex": "A52300000400000003000000"
-        },
-        {
-          "Bank": 2004,
-          "ID": 8,
-          "hex": "204E000000000000"
-        },
-        {
-          "Bank": 1001,
-          "ID": 1,
-          "hex": "01000000"
-        },
-        {
-          "Bank": 1014,
-          "ID": 1,
-          "hex": ""
-        },
-        {
-          "Bank": 3,
-          "ID": 12,
-          "hex": "02000000A52300000404000002000000"
-        },
-        {
-          "Bank": 1000,
-          "ID": 101,
-          "hex": "02010200"
-        },
-        {
-          "Bank": 3,
-          "ID": 12,
-          "hex": "00000000D11F00000404000002000000"
-        },
-        {
-          "Bank": 2003,
-          "ID": 127,
-          "hex": "A52300000400000003000000"
-        },
-        {
-          "Bank": 2004,
-          "ID": 8,
-          "hex": "204E000000000000"
-        },
-        {
-          "Bank": 1001,
-          "ID": 1,
-          "hex": "01000000"
-        },
-        {
-          "Bank": 1014,
-          "ID": 2,
-          "hex": ""
-        },
-        {
-          "Bank": 3,
-          "ID": 12,
-          "hex": "03000000A52300000404000003000000"
-        },
-        {
-          "Bank": 1000,
-          "ID": 101,
-          "hex": "03010300"
-        },
-        {
-          "Bank": 3,
-          "ID": 12,
-          "hex": "00000000D11F00000404000003000000"
-        },
-        {
-          "Bank": 2003,
-          "ID": 127,
-          "hex": "A52300000400000003000000"
-        },
-        {
-          "Bank": 2004,
-          "ID": 8,
-          "hex": "204E000000000000"
-        },
-        {
-          "Bank": 1001,
-          "ID": 1,
-          "hex": "01000000"
-        },
-        {
-          "Bank": 1014,
-          "ID": 3,
-          "hex": ""
-        }
-      ]
-    },
-    "1402": {
-      "ID": 1402,
-      "RestBehavior": 1,
-      "Parameters": [
-        {
-          "InstructionIndex": 1,
-          "TargetStartByte": 8,
-          "SourceStartByte": 0,
-          "ByteCount": 4,
-          "UnkID": 0
-        },
-        {
-          "InstructionIndex": 6,
-          "TargetStartByte": 4,
-          "SourceStartByte": 4,
-          "ByteCount": 4,
-          "UnkID": 0
-        },
-        {
-          "InstructionIndex": 13,
-          "TargetStartByte": 4,
-          "SourceStartByte": 4,
-          "ByteCount": 4,
-          "UnkID": 0
-        }
-      ],
-      "instructions": [
-        {
-          "Bank": 2000,
-          "ID": 2,
-          "hex": "00000000"
-        },
-        {
-          "Bank": 1004,
-          "ID": 2,
-          "hex": "00000000204E0000FFFFFFFF0000000001000000"
-        },
-        {
-          "Bank": 3,
-          "ID": 12,
           "hex": "01000000AF2300000304000001000000"
         },
         {
           "Bank": 1000,
-          "ID": 101,
-          "hex": "01010100"
+          "ID": 1,
+          "hex": "08010100"
         },
         {
           "Bank": 3,
@@ -595,12 +685,27 @@
         {
           "Bank": 1001,
           "ID": 1,
-          "hex": "01000000"
+          "hex": "1E000000"
         },
         {
-          "Bank": 1014,
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
           "ID": 1,
-          "hex": ""
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
         },
         {
           "Bank": 3,
@@ -609,8 +714,8 @@
         },
         {
           "Bank": 1000,
-          "ID": 101,
-          "hex": "02010200"
+          "ID": 1,
+          "hex": "08010200"
         },
         {
           "Bank": 3,
@@ -630,12 +735,27 @@
         {
           "Bank": 1001,
           "ID": 1,
-          "hex": "01000000"
+          "hex": "1E000000"
         },
         {
-          "Bank": 1014,
-          "ID": 2,
-          "hex": ""
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
         }
       ]
     },
@@ -2033,14 +2153,35 @@
           "UnkID": 0
         },
         {
-          "InstructionIndex": 3,
+          "InstructionIndex": 6,
           "TargetStartByte": 4,
           "SourceStartByte": 4,
           "ByteCount": 4,
           "UnkID": 0
         },
         {
-          "InstructionIndex": 5,
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 10,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 12,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 14,
           "TargetStartByte": 4,
           "SourceStartByte": 4,
           "ByteCount": 4,
@@ -2061,7 +2202,52 @@
         {
           "Bank": 3,
           "ID": 12,
+          "hex": "010000009A2400000304000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "0B010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
           "hex": "00000000C71F00000304000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "9A2400000300000001000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
         },
         {
           "Bank": 2004,
@@ -2092,7 +2278,56 @@
           "UnkID": 0
         },
         {
-          "InstructionIndex": 3,
+          "InstructionIndex": 6,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 8,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 10,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 12,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 19,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 21,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 23,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 25,
           "TargetStartByte": 4,
           "SourceStartByte": 4,
           "ByteCount": 4,
@@ -2113,12 +2348,127 @@
         {
           "Bank": 3,
           "ID": 12,
+          "hex": "010000009F2400000304000001000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "0A010100"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
           "hex": "00000000CC1F00000404000001000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "9F2400000300000002000000"
         },
         {
           "Bank": 2004,
           "ID": 8,
           "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "020000009F2400000303000002000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 0,
+          "hex": "02000000B41D0000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "0A000200"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000CC1F00000404000002000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "9F2400000300000002000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "1E000000"
         }
       ]
     },
@@ -2188,6 +2538,20 @@
           "SourceStartByte": 4,
           "ByteCount": 4,
           "UnkID": 0
+        },
+        {
+          "InstructionIndex": 54,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
+        },
+        {
+          "InstructionIndex": 60,
+          "TargetStartByte": 4,
+          "SourceStartByte": 4,
+          "ByteCount": 4,
+          "UnkID": 0
         }
       ],
       "instructions": [
@@ -2219,7 +2583,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2249,7 +2613,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2279,7 +2643,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2309,7 +2673,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2339,7 +2703,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2369,7 +2733,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2399,7 +2763,7 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2429,7 +2793,67 @@
         {
           "Bank": 2003,
           "ID": 127,
-          "hex": "DC2300000400000008000000"
+          "hex": "DC230000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "09000000DC2300000404000009000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010900"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F00000404000009000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC230000040000000A000000"
+        },
+        {
+          "Bank": 2004,
+          "ID": 8,
+          "hex": "204E000000000000"
+        },
+        {
+          "Bank": 1001,
+          "ID": 1,
+          "hex": "01000000"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "0A000000DC230000040400000A000000"
+        },
+        {
+          "Bank": 1000,
+          "ID": 1,
+          "hex": "04010A00"
+        },
+        {
+          "Bank": 3,
+          "ID": 12,
+          "hex": "00000000F41F0000040400000A000000"
+        },
+        {
+          "Bank": 2003,
+          "ID": 127,
+          "hex": "DC230000040000000A000000"
         },
         {
           "Bank": 2004,
@@ -2445,36 +2869,36 @@
     }
   },
   "producerAssets": {
-    "event/common_func.emevd.dcx": "6417c15ce944837b96120012dcedfda6ea7a3def7d5ecdb9b534e3a8f0ba297d",
-    "event/m30_00_00_00.emevd.dcx": "38952ba3eaaac350b1eb006d1d909eba0969a5c2855db11c98c9ec7a3e56ef25",
-    "event/m30_30_00_00.emevd.dcx": "c8e277e8e877401913fdbbb938d7ee024e8be9a82b76445252b21eef69362570",
-    "event/m32_00_00_00.emevd.dcx": "261cff5c7ec754453b3133f8dd0091f1ea53472ef9d31676c5e2b075ca386df7",
-    "event/m32_10_00_00.emevd.dcx": "e1893813adc9b830c561b5f19d9f892030847fe7c1f9c6e9a5b2569370f208ca",
-    "event/m32_20_00_00.emevd.dcx": "d57f999ca08bf19db3a97b5c5ca4b23be1fb407e5d06ce03c6bf6aa65dd29538",
-    "event/m34_00_00_00.emevd.dcx": "ef5b91ba59cb954d50370aa1296ac88c12a5f96b6960f6606bf80648be9b87a8",
-    "event/m34_10_00_00.emevd.dcx": "9063fdf74d665c90fadc21ea0b42f26d4ad7950e140783d9d2493b0d58921e92",
-    "event/m34_20_00_00.emevd.dcx": "4dc65ea67cea1909c0d8cbf2ccef715e2c0080966110c37c153330f7b2c9728e",
-    "event/m34_30_00_00.emevd.dcx": "ccf6492e85fc81d647c7779fdc4ca0bb47ec75fbd8e28ce9c9ec148f3b5e3fbf",
-    "event/m38_00_00_00.emevd.dcx": "314be3f1457a268fb2de5afa4d4bfae338226b56c837130baa01f755f8666c4b",
-    "event/m38_10_00_00.emevd.dcx": "de0575851c57aabe33a106332f125f78033f9724c5fcaaebe45e56d620d941ca",
+    "event/common_func.emevd.dcx": "3b386a2f6190d1ec6ffab36c2113f292e8016d8c8b8ca638050bffc11d3c44e0",
+    "event/m30_00_00_00.emevd.dcx": "76d3faa0fa12d73a46c6bff17214541e3bf8dcffb713912bb7a10fbad472da96",
+    "event/m30_30_00_00.emevd.dcx": "0d0f98d356f0c55e1b62dd76111716b38dd8c9afd806d3723b1fc243d5827d48",
+    "event/m32_00_00_00.emevd.dcx": "227071e7bf3bb3cc4d7351230b19a521316533fe7dd44398c457fbb0218bcd55",
+    "event/m32_10_00_00.emevd.dcx": "4270f9c507dce209a538d2e631f4c91be201c87d5e7555c5ec6fce6093ebc9b0",
+    "event/m32_20_00_00.emevd.dcx": "5c2f01ef4fb9eb90b3611b9a73b3053ed87fad5e93d5e0d527ab9182e58efc68",
+    "event/m34_00_00_00.emevd.dcx": "0bcac4ccc2077de3a871370ef5bcff70f5984c2ac450960577d00cdd810cd5c8",
+    "event/m34_10_00_00.emevd.dcx": "76cf7b9c0d1f330aa2c5f5707fc613cb3925a45da527b6640f9d61bf5b24ccff",
+    "event/m34_20_00_00.emevd.dcx": "e08b28586711da96eb40db1ebed1e00477ae179877ef7112cc98187ade712841",
+    "event/m34_30_00_00.emevd.dcx": "5d15ae3afb20ed0b112ccbc4cd1a746f7db759c4c8feb458bc14c2e6c7881a9c",
+    "event/m38_00_00_00.emevd.dcx": "f18a8cd823bcbc603cf7868036b7553ac7ea709cc9103635c3a359eaa3ac9fa7",
+    "event/m38_10_00_00.emevd.dcx": "371a8d643c0eafb82ab364ce859cd38eff878316462fcc4c42418016ced2ee41",
     "event/m46_70_00_00.emevd.dcx": "0852a95d762bd4a932bd1563202525a898d4e5a65fc798fa2569ad5a3d5291e6",
-    "event/m50_00_00_00.emevd.dcx": "3871a8b4df3064a35e81eb09866af4ca340a1d1f9a7db7c84348ccfbecc0c4bb",
-    "event/m50_01_00_00.emevd.dcx": "f1fefc6d06e8005fa3d9b838c03e014aff3b7c09596f8521b425251f843fdc8e",
-    "event/m50_02_00_00.emevd.dcx": "5ceb62d39eeb9b0e062848d6b1950df2660e1192c5ce50c7ecc2548a58ad05fb",
-    "event/m50_03_00_00.emevd.dcx": "e8c7013b568d00551c77d48040318bd000465dd4759f0949d1d13d03299cbb1b",
-    "event/m50_04_00_00.emevd.dcx": "5d73d6bc24c5797ebdd5e7da9c2bee97c86cd22e87b8ca647839fe82ea8a34bc",
-    "event/m50_05_00_00.emevd.dcx": "25b2bc64b8841418041191d87060ccf458eed3be6eb69c9c8a850a6ffd5be4e8",
-    "event/m50_06_00_00.emevd.dcx": "b925447723a513fd43648db90a63f193fbe6abdd9253cc4bd3d82d863368cd65",
-    "event/m50_10_00_00.emevd.dcx": "d86c01b805739cdef351152a68ef4eddf005c99184b0876c68d523adedee162f",
-    "event/m50_11_00_00.emevd.dcx": "72f8621ec8a7b3d09476f976b739e27f0611fa6c2154734a4a0fa802db8e4338",
+    "event/m50_00_00_00.emevd.dcx": "7261581959aa8f7ff4e843ed165015876e354049d7e342e61b8156a002086afc",
+    "event/m50_01_00_00.emevd.dcx": "14f118774553c8de703f20aaca91704de2803d3135ec0baad7140be10b5080cc",
+    "event/m50_02_00_00.emevd.dcx": "af1d02e2cd3727b98f42d09b68581e1e231b7fc23ef4d64e353dc1efaa4264d6",
+    "event/m50_03_00_00.emevd.dcx": "313fba23f432935235aa6ab6718507c64ac388415327727ce3ed0dba50df7d9d",
+    "event/m50_04_00_00.emevd.dcx": "94ecb701689a0f3359446948828ab6bb3ac52a735eee376aa385430b18aaa246",
+    "event/m50_05_00_00.emevd.dcx": "eb58ca5a1b06885fa34934a0a19468d068e690727034e7e8fb5ed6287003d20b",
+    "event/m50_06_00_00.emevd.dcx": "5ebf60afbdcdb940782ac52d61af3f2fbc1c8c17075bcc3c13981bc01a4736ba",
+    "event/m50_10_00_00.emevd.dcx": "18c17a8cf23c1d0cd49ab4f4c9e62eef16ddd1856a6553355450653b2b1078f8",
+    "event/m50_11_00_00.emevd.dcx": "480d84e1b7008b8449532b3dff5687ef7f85675b283036e6268e159df7e51cd4",
     "event/m52_40_00_00.emevd.dcx": "b4eb0acf162954f36c458f768472721a69b2a252ff60ffcb68bed2eb2bae0af2",
-    "event/m52_42_00_00.emevd.dcx": "2e0eee364f7d6db37fb7a700cadd9c737d7a4ec0879506059086845d11c9f978",
-    "event/m52_45_00_00.emevd.dcx": "df0e40f3f0d19fa3ccc2a2b2fd94641805b845fcf7fb85c51bb57ff73aae12df",
+    "event/m52_42_00_00.emevd.dcx": "734d8bae8a5a8e3869036a04d451d6634a095b60d34c2a61d02ee709310bd35d",
+    "event/m52_45_00_00.emevd.dcx": "e842089fb4a903eb5f8688ddce17fb9864259d10a71cc91204476937a1c83a49",
     "event/m52_46_00_00.emevd.dcx": "ecc01a6d26198b5287d335c681f8d1137513a82d57023a03bbe1b25eb7989bd8",
     "event/m52_50_00_00.emevd.dcx": "ee0017cfe717c9e6cf2ad5838c98ff64d77d6e06700bef88766c517654ad4edf",
-    "event/m52_52_00_00.emevd.dcx": "e50305c7561fa7ca358626d500fea5df6e877502a59b3103a4bd61c6171a2b0a",
+    "event/m52_52_00_00.emevd.dcx": "59da4c6da3d04ddcf4c7223091bcd766ef148a0ac5cc3d846ea433a7846974da",
     "event/m52_55_00_00.emevd.dcx": "b80a089ea6f2113321a7efb0acc92fb6c45313790c63195aef05ed86f4439554",
-    "event/m52_57_00_00.emevd.dcx": "3d04b1eecedbdc61555d784fcff50cc5c3e1cfe3e15905c863bd45c60347cf9d",
+    "event/m52_57_00_00.emevd.dcx": "8094468f3e9c3a11389f692631ba1ade39fba81cefd2d56c8d84b885bacb5e44",
     "event/m60_42_36_00.emevd.dcx": "95dd33bcf610141f2e0aeb49b74cd279b146f7ee0cf181cdc5d5ce1e97ff51c0",
     "event/m60_42_36_10.emevd.dcx": "95dd33bcf610141f2e0aeb49b74cd279b146f7ee0cf181cdc5d5ce1e97ff51c0",
     "event/m60_42_36_20.emevd.dcx": "95dd33bcf610141f2e0aeb49b74cd279b146f7ee0cf181cdc5d5ce1e97ff51c0",
@@ -2791,7 +3215,7 @@
         {
           "Bank": 2003,
           "ID": 31,
-          "hex": "D11F00000400000007000000"
+          "hex": "D61F00000400000007000000"
         },
         {
           "Bank": 1000,
@@ -3422,7 +3846,7 @@
       "arguments": [
         30000800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3437,7 +3861,7 @@
       "arguments": [
         30000810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3480,7 +3904,7 @@
       "arguments": [
         30300800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3495,7 +3919,7 @@
       "arguments": [
         30300810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3538,7 +3962,7 @@
       "arguments": [
         32000800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3553,7 +3977,7 @@
       "arguments": [
         32000810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3590,13 +4014,13 @@
     {
       "path": "event/m32_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 35,
+      "index": 43,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         32100800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3605,13 +4029,13 @@
     {
       "path": "event/m32_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 54,
+      "index": 62,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         32100810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3620,13 +4044,13 @@
     {
       "path": "event/m32_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 73,
+      "index": 81,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         32100820,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3669,7 +4093,7 @@
       "arguments": [
         32200800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3678,13 +4102,13 @@
     {
       "path": "event/m32_20_00_00.emevd.dcx",
       "event": 0,
-      "index": 45,
+      "index": 54,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         32200810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3727,7 +4151,7 @@
       "arguments": [
         34000800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3742,7 +4166,7 @@
       "arguments": [
         34000810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3757,7 +4181,7 @@
       "arguments": [
         34000820,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3772,7 +4196,7 @@
       "arguments": [
         34000830,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3809,13 +4233,13 @@
     {
       "path": "event/m34_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 26,
+      "index": 33,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         34100800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3824,13 +4248,13 @@
     {
       "path": "event/m34_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 45,
+      "index": 52,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         34100810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3839,13 +4263,13 @@
     {
       "path": "event/m34_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 64,
+      "index": 71,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         34100820,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3854,13 +4278,13 @@
     {
       "path": "event/m34_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 83,
+      "index": 90,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         34100830,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3869,13 +4293,13 @@
     {
       "path": "event/m34_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 102,
+      "index": 109,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         34100840,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3918,7 +4342,7 @@
       "arguments": [
         34200800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3927,13 +4351,13 @@
     {
       "path": "event/m34_20_00_00.emevd.dcx",
       "event": 0,
-      "index": 45,
+      "index": 54,
       "target": 90015051,
       "slot": 0,
       "arguments": [
         34200810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -3976,7 +4400,7 @@
       "arguments": [
         34300800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -4019,7 +4443,7 @@
       "arguments": [
         38000810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -4034,7 +4458,7 @@
       "arguments": [
         38000850,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -4077,7 +4501,7 @@
       "arguments": [
         38100800,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -4092,7 +4516,7 @@
       "arguments": [
         38100810,
         8180,
-        8,
+        10,
         0
       ],
       "counter": 8180,
@@ -4114,7 +4538,7 @@
         904650601,
         46700800
       ],
-      "counter": 8145,
+      "counter": 8150,
       "units": 1
     },
     {
@@ -4133,7 +4557,7 @@
         903560000,
         46700810
       ],
-      "counter": 8145,
+      "counter": 8150,
       "units": 1
     },
     {
@@ -4152,7 +4576,7 @@
         903570000,
         46700820
       ],
-      "counter": 8145,
+      "counter": 8150,
       "units": 1
     },
     {
@@ -4171,7 +4595,7 @@
         902500301,
         46700830
       ],
-      "counter": 8145,
+      "counter": 8150,
       "units": 1
     },
     {
@@ -4190,7 +4614,7 @@
         902500301,
         46700840
       ],
-      "counter": 8145,
+      "counter": 8150,
       "units": 1
     },
     {
@@ -4209,13 +4633,28 @@
         902500301,
         46700850
       ],
-      "counter": 8145,
+      "counter": 8150,
       "units": 1
     },
     {
       "path": "event/m50_00_00_00.emevd.dcx",
       "event": 0,
-      "index": 52,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50000800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_00_00_00.emevd.dcx",
+      "event": 0,
+      "index": 53,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4229,7 +4668,7 @@
     {
       "path": "event/m50_00_00_00.emevd.dcx",
       "event": 0,
-      "index": 54,
+      "index": 55,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4243,7 +4682,22 @@
     {
       "path": "event/m50_01_00_00.emevd.dcx",
       "event": 0,
-      "index": 37,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50010810,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_01_00_00.emevd.dcx",
+      "event": 0,
+      "index": 38,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4257,7 +4711,7 @@
     {
       "path": "event/m50_01_00_00.emevd.dcx",
       "event": 0,
-      "index": 39,
+      "index": 40,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4271,7 +4725,22 @@
     {
       "path": "event/m50_02_00_00.emevd.dcx",
       "event": 0,
-      "index": 36,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50020800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_02_00_00.emevd.dcx",
+      "event": 0,
+      "index": 37,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4285,7 +4754,7 @@
     {
       "path": "event/m50_02_00_00.emevd.dcx",
       "event": 0,
-      "index": 38,
+      "index": 39,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4299,7 +4768,22 @@
     {
       "path": "event/m50_03_00_00.emevd.dcx",
       "event": 0,
-      "index": 56,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50030800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_03_00_00.emevd.dcx",
+      "event": 0,
+      "index": 57,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4313,7 +4797,7 @@
     {
       "path": "event/m50_03_00_00.emevd.dcx",
       "event": 0,
-      "index": 58,
+      "index": 59,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4327,7 +4811,22 @@
     {
       "path": "event/m50_04_00_00.emevd.dcx",
       "event": 0,
-      "index": 36,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50040800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_04_00_00.emevd.dcx",
+      "event": 0,
+      "index": 37,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4341,7 +4840,7 @@
     {
       "path": "event/m50_04_00_00.emevd.dcx",
       "event": 0,
-      "index": 38,
+      "index": 39,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4355,7 +4854,22 @@
     {
       "path": "event/m50_05_00_00.emevd.dcx",
       "event": 0,
-      "index": 40,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50050800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_05_00_00.emevd.dcx",
+      "event": 0,
+      "index": 41,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4369,7 +4883,7 @@
     {
       "path": "event/m50_05_00_00.emevd.dcx",
       "event": 0,
-      "index": 42,
+      "index": 43,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4383,7 +4897,22 @@
     {
       "path": "event/m50_06_00_00.emevd.dcx",
       "event": 0,
-      "index": 46,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50060800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_06_00_00.emevd.dcx",
+      "event": 0,
+      "index": 47,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4397,7 +4926,7 @@
     {
       "path": "event/m50_06_00_00.emevd.dcx",
       "event": 0,
-      "index": 48,
+      "index": 49,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4411,7 +4940,67 @@
     {
       "path": "event/m50_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 102,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50100800,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 6,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50100820,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 10,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50100830,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 14,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50100840,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_10_00_00.emevd.dcx",
+      "event": 0,
+      "index": 106,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4425,7 +5014,7 @@
     {
       "path": "event/m50_10_00_00.emevd.dcx",
       "event": 0,
-      "index": 104,
+      "index": 108,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4439,7 +5028,67 @@
     {
       "path": "event/m50_11_00_00.emevd.dcx",
       "event": 0,
-      "index": 130,
+      "index": 2,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50110820,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_11_00_00.emevd.dcx",
+      "event": 0,
+      "index": 6,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50110830,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_11_00_00.emevd.dcx",
+      "event": 0,
+      "index": 10,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50110840,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_11_00_00.emevd.dcx",
+      "event": 0,
+      "index": 14,
+      "target": 90015051,
+      "slot": 0,
+      "arguments": [
+        50110860,
+        8180,
+        10,
+        0
+      ],
+      "counter": 8180,
+      "units": 1
+    },
+    {
+      "path": "event/m50_11_00_00.emevd.dcx",
+      "event": 0,
+      "index": 134,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4453,7 +5102,7 @@
     {
       "path": "event/m50_11_00_00.emevd.dcx",
       "event": 0,
-      "index": 132,
+      "index": 136,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4525,7 +5174,7 @@
     {
       "path": "event/m52_42_00_00.emevd.dcx",
       "event": 0,
-      "index": 15,
+      "index": 25,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4540,7 +5189,7 @@
     {
       "path": "event/m52_42_00_00.emevd.dcx",
       "event": 0,
-      "index": 33,
+      "index": 53,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4555,7 +5204,7 @@
     {
       "path": "event/m52_42_00_00.emevd.dcx",
       "event": 0,
-      "index": 50,
+      "index": 70,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4569,7 +5218,7 @@
     {
       "path": "event/m52_42_00_00.emevd.dcx",
       "event": 0,
-      "index": 52,
+      "index": 72,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4583,7 +5232,7 @@
     {
       "path": "event/m52_45_00_00.emevd.dcx",
       "event": 0,
-      "index": 15,
+      "index": 26,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4598,7 +5247,7 @@
     {
       "path": "event/m52_45_00_00.emevd.dcx",
       "event": 0,
-      "index": 31,
+      "index": 52,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4613,7 +5262,7 @@
     {
       "path": "event/m52_45_00_00.emevd.dcx",
       "event": 0,
-      "index": 48,
+      "index": 69,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4627,7 +5276,7 @@
     {
       "path": "event/m52_45_00_00.emevd.dcx",
       "event": 0,
-      "index": 50,
+      "index": 71,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4757,7 +5406,7 @@
     {
       "path": "event/m52_52_00_00.emevd.dcx",
       "event": 0,
-      "index": 22,
+      "index": 35,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4772,7 +5421,7 @@
     {
       "path": "event/m52_52_00_00.emevd.dcx",
       "event": 0,
-      "index": 38,
+      "index": 61,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4787,7 +5436,7 @@
     {
       "path": "event/m52_52_00_00.emevd.dcx",
       "event": 0,
-      "index": 57,
+      "index": 80,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4801,7 +5450,7 @@
     {
       "path": "event/m52_52_00_00.emevd.dcx",
       "event": 0,
-      "index": 59,
+      "index": 82,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4873,7 +5522,7 @@
     {
       "path": "event/m52_57_00_00.emevd.dcx",
       "event": 0,
-      "index": 15,
+      "index": 25,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4888,7 +5537,7 @@
     {
       "path": "event/m52_57_00_00.emevd.dcx",
       "event": 0,
-      "index": 31,
+      "index": 51,
       "target": 90015051,
       "slot": 0,
       "arguments": [
@@ -4903,7 +5552,7 @@
     {
       "path": "event/m52_57_00_00.emevd.dcx",
       "event": 0,
-      "index": 48,
+      "index": 68,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -4917,7 +5566,7 @@
     {
       "path": "event/m52_57_00_00.emevd.dcx",
       "event": 0,
-      "index": 50,
+      "index": 70,
       "target": 90015304,
       "slot": 0,
       "arguments": [
@@ -5602,7 +6251,7 @@
       "eventIndex": 19,
       "pairedIndex": 20,
       "map": "map/mapstudio/m60_43_36_40.msb.dcx",
-      "mapSha256": "747d251e475ba26164a13e7bccfd71f4458671f2e7030f4a060564412d552bcf",
+      "mapSha256": "bd53eab1f8cc1cb7a555d95b72a547bbf8bad1fe7b05312ccbaa52ea81ca6f52",
       "original": {
         "EntityID": 1036400400,
         "Name": "c3661_9007",
@@ -5619,7 +6268,7 @@
       "eventIndex": 23,
       "pairedIndex": 24,
       "map": "map/mapstudio/m60_43_37_40.msb.dcx",
-      "mapSha256": "c09d63696cd2c8b1a762153d6c6702512da5cd520b78eccd4a6e432247f39437",
+      "mapSha256": "4f6792b6bc8e439f09fb2442f2288f1e95bb0416813315319fe25ba0e49c0f5b",
       "original": {
         "EntityID": 1037400400,
         "Name": "c4372_9001",
@@ -5636,7 +6285,7 @@
       "eventIndex": 33,
       "pairedIndex": 34,
       "map": "map/mapstudio/m60_43_37_50.msb.dcx",
-      "mapSha256": "f727740e4e85535f9a07f87ce602ce5dcaa1cfc0e868afa61f1739e95aae48d6",
+      "mapSha256": "0604d9054cb5698431998d98863654bde9186ca5c7fd52bd01f35530f55aadc5",
       "original": {
         "EntityID": 1037500300,
         "Name": "c4371_9000",
@@ -5653,7 +6302,7 @@
       "eventIndex": 20,
       "pairedIndex": 21,
       "map": "map/mapstudio/m60_43_39_40.msb.dcx",
-      "mapSha256": "b5fa000c956dd2f19bcc70616dcb1f7cda9b81327af083d6867a730295ec025c",
+      "mapSha256": "6ac7cdb18cdbe88bb6524e1ac0e5e270edcb4de34174fa2a7a5462c00f3c23ac",
       "original": {
         "EntityID": 1039400400,
         "Name": "c2275_9002",
@@ -5806,7 +6455,7 @@
       "eventIndex": 26,
       "pairedIndex": 27,
       "map": "map/mapstudio/m60_45_36_30.msb.dcx",
-      "mapSha256": "db959699b98bb0c7bcfba1738ccce9d8f160ae02b8ea7de2386385033a32c1bb",
+      "mapSha256": "d20ff23c7493032e11e01191cb72902f974e2416e557d64cd95c9c41e9e1dc9c",
       "original": {
         "EntityID": 1056300300,
         "Name": "c4311_9005",
@@ -5823,7 +6472,7 @@
       "eventIndex": 22,
       "pairedIndex": 23,
       "map": "map/mapstudio/m60_45_37_40.msb.dcx",
-      "mapSha256": "97c6b18efef7d1466042c46b266e029c30b5383cd2a5282c7bdcae37470526b6",
+      "mapSha256": "1252512482ef87b89d0f879045c67db17709feab486eb58f3c3efbf095fcd684",
       "original": {
         "EntityID": 1057400400,
         "Name": "c4383_9003",

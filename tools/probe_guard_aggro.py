@@ -16,7 +16,7 @@ a=p.parse_args();x=Inputs(a.exe,a.extracted)
 graph=BehaviorGraph(a.behavior);animations=json.loads(a.animations.read_text())
 tracks={t['ID']:t for b in animations['bundles'] for t in b['taes'] if t['ID'] in(2000,2015)}
 raws={id:Path(str(a.animations)+'.'+str(id)+'.tae').read_bytes() for id in tracks}
-raw_script=a.script.read_bytes();assert sha(raw_script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+raw_script=a.script.read_bytes();assert sha(raw_script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=raw_script.decode('utf-8-sig').replace('\r\n','\n')
 start=source.index('function ExecGuard(');guard_function=source[start:source.index('\nfunction ',start+1)]
 class Actor(Ailment):
@@ -154,12 +154,12 @@ end
  ok=bool(button and stamina and enabled);selection=5 if hero==2 and buff else 0
  assert result==(f'1|{selection}|GuardOn,0,0' if ok else '0|nil|'),result
  record('script',hero=hero,ability=buff,button=button,stamina=stamina,enabled=enabled,style=style,result=result)
-for selector in (44372,58040,96490):
+for selector in (graph.named('GuardOnIdle Selector', 'hkbManualSelectorGenerator'),graph.named('GuardOn Selector00', 'hkbManualSelectorGenerator'),graph.named('GuardOnWalk_Selector', 'hkbManualSelectorGenerator')):
  binding=graph.selector_binding(selector);assert binding['name']=='IndexGuardStyle' and binding['variable']==42
  for index in(0,5):
   branch=graph.children(selector)[index];clips=[graph.string(graph.reference(clip,'animationName')) for clip in graph.children(branch)]
-  suffix=('023080' if index==5 else '023000') if selector==96490 else ('000160' if index==5 else '000100')
-  styles=[0,15] if index==5 else [0,2,3,10,11,12,13,15]+([16] if selector==96490 else [])
+  suffix=('023080' if index==5 else '023000') if selector==graph.named('GuardOnWalk_Selector', 'hkbManualSelectorGenerator') else ('000160' if index==5 else '000100')
+  styles=[0,15] if index==5 else [0,2,3,10,11,12,13,15]+([16] if selector==graph.named('GuardOnWalk_Selector', 'hkbManualSelectorGenerator') else [])
   assert clips==[f'a{style:03}_'+suffix for style in styles],clips
   record('graph',selector=selector,binding=binding,index=index,branch=branch,clips=clips)
 # Confirm the real virtual accessor slot; do not infer a getter from a nearby

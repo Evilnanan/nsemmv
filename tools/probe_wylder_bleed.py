@@ -19,12 +19,12 @@ for name in ('exe','extracted','assets','animations','behavior','output'):p.add_
 a=p.parse_args();inputs=Inputs(a.exe,a.extracted)
 assets=json.loads(a.assets.read_text());tae=json.loads(a.animations.read_text());graph=BehaviorGraph(a.behavior)
 assert assets['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 behavior_raw=a.extracted.with_suffix('.BehaviorParam_PC.param').read_bytes()
 attack_raw=a.extracted.with_suffix('.AtkParam_Pc.param').read_bytes()
 weapon_raw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes()
 behaviors=Inputs.table(behavior_raw,0x30);attacks=Inputs.table(attack_raw,0x1d0);weapons=Inputs.table(weapon_raw,0x298)
-assert 600000030 not in behaviors and 600000030 not in attacks
+assert 600000030 in behaviors and 600000030 in attacks
 rows=inputs.spells;leaf=rows['7500002']
 assert rows['7500000']['stateInfo']==2035
 assert leaf['bloodAttackPower']==55 and leaf['stateInfo']==6 and leaf['spCategory']==10003
@@ -34,8 +34,8 @@ assert leaf['isUseStatusAilmentAtkPowerCorrect']==1 and leaf['cycleOccurrenceSpE
 assert rows['500']['changeHpRate']==rows['500']['changeHpPoint']==0
 assert rows['9642']['disableBlood']==1
 assert rows['7500001']['bloodAttackPower']==60
-for table in ('BehaviorParam_PC','Bullet','AtkParam_Pc'):
-    assert not any(v==7500001 for r in inputs.x['tables'][table].values() for v in r.values())
+assert inputs.x['tables']['BehaviorParam_PC']['600000030']['refType']==0
+assert struct.unpack_from('<2i',attacks[600000030],24)==(6902,7500001)
 assert struct.unpack_from('<i',behaviors[600000035],12)[0]==600000035
 assert inputs.x['tables']['BehaviorParam_PC']['600000035']['refType']==0
 assert struct.unpack_from('<2i',attacks[600000035],24)==(6902,7500002)
@@ -58,7 +58,7 @@ for e,copies,active in itertools.product(events,(0,1,2,3),(0,1)):
     assert len(c.requests)==bool(copies)
     expected=600000035 if e['animation']%10==5 else 600000030
     if c.requests:assert c.requests[0]['behavior']==expected
-    assert c.missing==([600000030]*2 if copies and expected==600000030 else [])
+    assert c.missing==[]
     checks['dispatch'].append(dict(animation=e['animation'],copies=copies,active=active,requests=c.requests,missingRows=c.missing));stubs.update(c.stubs)
 for immune,resistance,scale in itertools.product((False,True),(1,54,55,56,110,500),(.5,1,1.5,2)):
     c=Ailment(inputs,2,resistance,immune);rejected=c.apply(7500002,scale);c.qualify();c.update(0)
@@ -94,11 +94,19 @@ for fps in (30,60,120):
 output=dict(schema=1,exeSha256=sha(inputs.raw),regulationSha256=inputs.x['hashes']['regulation.bin'],paramSha256=sha(inputs.param),
             behaviorParamSha256=sha(behavior_raw),attackParamSha256=sha(attack_raw),weaponParamSha256=sha(weapon_raw),
             animationBundleSha256=tae['bundles'][0]['sha256'],behaviorSha256=graph.metadata['hkxSha256'],paths=paths,events=events,
-            root=7500000,leaf=7500002,unresolved=dict(missingBehavior=600000030,unreferencedLeaf=7500001),checks=checks,
+            root=7500000,leaf=7500002,leaves=[7500001,7500002],unresolved={},checks=checks,
             native=dict(dispatch='414820',type1='40CA20',state='508E20',behavior='668B30',insert='50D060',status='42D110',
                         immunity='509790',accumulation='42CD70',remove='505280',qualify='5057D0',update='50ACD0',hp='506EC0'),
             stubs=sorted(stubs|{'attack instances/collision and status-correction inputs are fixtures; no complete gameplay or network',
-                               'unresolved missing Behavior 600000030 is only recorded; no claim that its animation cannot trigger another runtime path',
+                               'both Hotfix1 behavior rows and their payloads are present; no full collision or scene simulation',
                                'cycle effect 500 has no HP change and is recorded without simulating visual delivery'}),gameplayVerified=False)
+checks['firing'] = []
+for resistance in (59,60,61,120):
+    c=Ailment(inputs,2,resistance);rejected=c.apply(7500001);c.qualify();c.update(0)
+    assert rejected==(resistance>60)
+    hp=c.hp_packet(10000)[0]
+    assert hp==(-1350 if resistance<=60 else 0)
+    checks['firing'].append(dict(resistance=resistance,accumulation=60,rejected=rejected,damage=hp))
+    stubs.update(c.stubs)
 a.output.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
 print('PASS',sum(map(len,checks.values())),'native Wylder bleed cases')

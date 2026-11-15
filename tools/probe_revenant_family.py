@@ -21,7 +21,7 @@ taeraw=Path(str(a.animations)+'.2905.tae').read_bytes()
 commonraw=a.common.with_suffix('.PlayerCommonParam.param').read_bytes()
 assert json.loads(a.common.read_text())['hashes']['regulation.bin']==x.x['hashes']['regulation.bin']
 off=struct.unpack_from('<Q',commonraw,0x48)[0];common=commonraw[off:]
-buddyraw=a.buddy.read_bytes();assert sha(buddyraw)=='5d8653f1fae07f4cc7bc63c79c658c21837c8fd84e01ee0e3caeb04a3999e7c0'
+buddyraw=a.buddy.read_bytes();assert sha(buddyraw)=='4a90b27fb0ea1df1d858d754a08e768fa7937ee6dd322705dcf008d6ad905a81'
 buddy=Inputs.table(buddyraw,0x70)
 root=7220310
 class Actor(Ailment):
@@ -157,7 +157,7 @@ class Summon(Actor):
 
 checks={k:[] for k in ('dispatch','controller','emission','repeat','mapping')};stubs=set()
 def record(key,c,**row):checks[key].append(row);stubs.update(c.stubs)
-assert x.x['tables']['AttachEffectParam']['7220210']['passiveSpEffectId_1']==root
+assert all(x.x['tables']['AttachEffectParam'][id]['passiveSpEffectId_1']==root and x.x['tables']['AttachEffectParam'][id]['exclusivityId']==-1 for id in ('7220210','7220211'))
 assert x.spells[str(root)]['stateInfo']==2034 and x.spells[str(root)]['spCategory']==20
 families=[]
 for i in range(3):
@@ -220,7 +220,7 @@ for id in (269999,270000,270001,271000,272000,273000):
  record('mapping',c,trigger=id,buddy=result,slot=index)
 output=dict(schema=1,exeSha256=sha(x.raw),regulationSha256=x.x['hashes']['regulation.bin'],paramSha256=sha(x.param),
  assetHashes={**{k:sha(v) for k,v in raws.items()},'weapon':sha(weaponraw),'tae':sha(taeraw),'common':sha(commonraw),'buddy':sha(buddyraw)},
- effects=[7220210],root=root,families=families,events=events,checks=checks,
+ effects=[7220210,7220211],root=root,families=families,events=events,checks=checks,
  stubs=sorted(stubs|{'E81650/E71710 actual PlayerCommon and Buddy row lookups; exact three-row effect-to-buddy tree supplied',
  'actor virtual +150 true overrides base fixture; actual local-player identity comparison executes',
  'E954F0 absent NPC row, zero collision radius; 3886A0 explicit available/unavailable owner position',

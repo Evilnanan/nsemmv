@@ -11,7 +11,7 @@ from native_ailment_runtime import Ailment
 from native_animation_runtime import NativeTae
 from effect_behavior_graph import BehaviorGraph
 p=argparse.ArgumentParser(description=__doc__)
-for name in ('exe','extracted','assets','animations','behavior','output'):p.add_argument(name,type=Path)
+for name in ('exe','extracted','assets','animations','script','behavior','output'):p.add_argument(name,type=Path)
 a=p.parse_args();x=Inputs(a.exe,a.extracted)
 raws={name:a.extracted.with_suffix('.'+name+'.param').read_bytes() for name in ('AtkParam_Pc','BehaviorParam_PC','Bullet')}
 attacks=Inputs.table(raws['AtkParam_Pc'],0x1d0);behaviors=Inputs.table(raws['BehaviorParam_PC'],0x30);bullets=Inputs.table(raws['Bullet'],0x100)
@@ -19,7 +19,15 @@ weaponraw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes();weapons=I
 assert json.loads(a.assets.read_text())['hashes']['regulation.bin']==x.x['hashes']['regulation.bin']
 animations=json.loads(a.animations.read_text());track=next(t for b in animations['bundles'] for t in b['taes'] if t['ID']==2905)
 taeraw=Path(str(a.animations)+'.2905.tae').read_bytes();graph=BehaviorGraph(a.behavior)
-root,enchant,frost=7220200,7220201,1809
+root,enchant,frost=7220200,7220203,1809
+alternate=7220206;seed=7220201
+script=a.script.read_bytes()
+assert sha(script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
+text=script.decode('utf-8-sig').replace('\r\n','\n')
+start=text.index('function SetStyleSpecialEffect(')
+style_function=text[start:text.index('\nfunction ',start+1)]
+# This exact function is executed separately by probe_wylder_followup.py.
+assert 'HAND_LEFT_BOTH' in style_function and '100620' in style_function and '100621' in style_function
 class Actor(Ailment):
  def __init__(self,kind=0,maximum=500):
   # Reuse the actor setup; explicitly initialize every channel, including the
@@ -57,12 +65,27 @@ class Actor(Ailment):
 
 
 class Enchant(Actor):
- def __init__(self,success=True):super().__init__();self.success=success;self.shots=[];self.frame=0
+ def __init__(self,success=True,hand=1):
+  self.hand=hand;super().__init__();self.success=success;self.shots=[];self.frame=0
+  self.q(OBJ+0x6478,STOP+0x800)
+  # Actual stance markers selected by SetStyleSpecialEffect: left two-hand or right/default.
+  if hand:self.grant(100621 if hand==2 else 100620)
  def hook(self,u,address,size,user):
   pc=address-BASE
   def ret(v=0):
    u.reg_write(UC_X86_REG_RAX,v);sp=u.reg_read(UC_X86_REG_RSP);u.reg_write(UC_X86_REG_RIP,struct.unpack('<Q',u.mem_read(sp,8))[0]);u.reg_write(UC_X86_REG_RSP,sp+8)
-  if pc==0xe6d630:
+  if address==STOP+0x800:
+   self.stubs.add('actor virtual +278 explicit style 0/2 for context-12 hand check');ret(2 if self.hand==2 else 0)
+  elif pc==0x3cf020:
+   self.stubs.add('3CF020 equipped hand weapon ID supplied as 1000000');ret(1000000)
+  elif pc==0xea9a60:
+   self.stubs.add('EA9A60 weapon wrapper cleanup');ret()
+  elif pc==0xea7fc0:
+   self.stubs.add('EA7FC0 actual supplied weapon PARAM lookup');id=u.reg_read(UC_X86_REG_RDX)&0xffffffff
+   ptr=u.reg_read(UC_X86_REG_RCX)
+   if id in weapons:u.mem_write(OBJ+0x1c000,weapons[id])
+   u.mem_write(ptr,struct.pack('<iiQ',id,0,OBJ+0x1c000 if id in weapons else 0));ret(ptr)
+  elif pc==0xe6d630:
    self.stubs.add('E6D630 actual AtkParam_Pc lookup for supplied attack context');id=u.reg_read(UC_X86_REG_R8)&0xffffffff;ptr=u.reg_read(UC_X86_REG_RCX);u.mem_write(OBJ+0x1b000,attacks[id]);u.mem_write(ptr,struct.pack('<iii4xQ',id,0,1,OBJ+0x1b000));ret(ptr)
   elif pc==0xe87800:
    self.stubs.add('E87800 actual enchant Bullet lookup');id=u.reg_read(UC_X86_REG_RDX)&0xffffffff;assert id==30905101
@@ -77,7 +100,8 @@ class Enchant(Actor):
   self.invoke(0x343280,[slot],{UC_X86_REG_XMM1:1/60})
  def points(self,kind):
   out=OBJ+0x8400;self.u.mem_write(out,bytes(0x300));self.u.mem_write(out+0x10,bytes([kind]));self.u.mem_write(out+8,struct.pack('<ii',10000,1))
-  self.invoke(0x502830,[OBJ,out,-1,-1]);return [struct.unpack('<f',self.u.mem_read(out+off,4))[0] for off in(0x48,0x5c,0x60,0x64,0x68)]
+  self.u.mem_write(out+0x2c,struct.pack('<i',1000000))
+  self.invoke(0x502830,[OBJ,out,1000000,-1]);return [struct.unpack('<f',self.u.mem_read(out+off,4))[0] for off in(0x48,0x5c,0x60,0x64,0x68)]
 
 C=OBJ+0x60000;HIT=OBJ+0x61000;SOURCE=OBJ+0x62000;SEFFECT=OBJ+0x63000
 class Hit(Actor):
@@ -177,7 +201,9 @@ class Dispatch(Chain):
 
 checks={k:[] for k in ('dispatch','emission','values','timer','overwrite','correction','onset','damage','frostLifetime')};stubs=set()
 def record(key,c,**row):checks[key].append(row);stubs.update(c.stubs)
-def step(c,fps):c.qualify();c.update(1/fps)
+def step(c,fps):
+ c.qualify()
+ c.update(1/fps)
 def active(c,id):return [n for n in c.nodes() if n['id']==id and not n['flags']&0x800c0003]
 def defense(c):
  c.u.mem_write(OBJ+0x800,bytes(0x200));c.invoke(0x503800,[OBJ,OBJ+0x500,OBJ+0x520,OBJ+0x540,OBJ+0x800])
@@ -187,26 +213,26 @@ for id in (7220100,7220101):
  assert x.x['tables']['AttachEffectParam'][str(id)]['exclusivityId']==-1
 assert x.spells[str(root)]['stateInfo']==2053 and x.spells[str(root)]['spCategory']==20
 r=x.spells[str(enchant)];f=x.spells[str(frost)]
-assert r['magicAttackPower']==60 and r['effectEndurance']==20 and r['playerHandValue']==1
-assert r['stateInfo']==64 and r['spCategory']==162 and r['atkOccurrenceSpEffectId']==frost
+assert r['magicAttackPower']==50 and r['effectEndurance']==20 and r['playerHandValue']==1
+assert r['stateInfo']==152 and r['spCategory']==162 and r['atkOccurrenceSpEffectId']==frost
 assert r['isUseAtkParamAtkPowerCorrect']==1
 assert f['freezeAttackPower']==40 and f['effectEndurance']==30 and f['changeHpRate']==10 and f['changeHpPoint']==50
 assert f['isUseStatusAilmentAtkPowerCorrect']==1 and f['stateInfo']==260 and f['spCategory']==10007
 assert all(math.isclose(f[k+'DamageCutRate'],1.15,rel_tol=1e-6) for k in ('neutral','slash','blow','thrust','magic','fire','thunder','dark'))
 behavior=x.x['tables']['BehaviorParam_PC']['600000281'];bullet=x.x['tables']['Bullet']['30905101']
 assert behavior['refType']==1 and behavior['refId']==30905101
-assert bullet['spEffectIDForShooter']==enchant and bullet['numShoot']==1 and bullet['atkId_Bullet']==-1
+assert bullet['spEffectIDForShooter']==seed and bullet['numShoot']==1 and bullet['atkId_Bullet']==-1
 # Pointer-checked normal/alternate clips and the graph variable are recorded;
 # do not infer summon success from a selector variable's English name.
 graph_states=[]
-for state_id in (32002,32003,32004,41350,41351,41352):
+for state_id in (graph.named('NecromanceSummon1', 'hkbStateMachine::StateInfo'),graph.named('NecromanceSummon2', 'hkbStateMachine::StateInfo'),graph.named('NecromanceSummon3', 'hkbStateMachine::StateInfo'),graph.named('NecromanceSummon1_Upper', 'hkbStateMachine::StateInfo'),graph.named('NecromanceSummon2_Upper', 'hkbStateMachine::StateInfo'),graph.named('NecromanceSummon3_Upper', 'hkbStateMachine::StateInfo')):
  selector=graph.reference(state_id,'generator');binding=graph.selector_binding(selector)
  assert binding['name']=='IsEnableSummonAct'
  clips=[]
  for branch in graph.children(selector):
   children=graph.children(branch);assert len(children)==1
   clips.append(graph.string(graph.reference(children[0],'animationName')))
- expected=551010+10*((state_id-32002) if state_id<41350 else state_id-41350)
+ expected=551010+10*((state_id-graph.named('NecromanceSummon1', 'hkbStateMachine::StateInfo')) if state_id<graph.named('NecromanceSummon1_Upper', 'hkbStateMachine::StateInfo') else state_id-graph.named('NecromanceSummon1_Upper', 'hkbStateMachine::StateInfo'))
  assert clips==[f'a905_{expected}',f'a905_{expected+1}']
  graph_states.append(dict(state=graph.name(state_id),stateItem=state_id,binding=binding,clips=clips))
 events=[dict(animation=an['ID'],**e) for an in track['animations'] for e in an['events']
@@ -229,40 +255,35 @@ for copies,enabled in itertools.product((0,1,3),(0,1)):
    if expected:assert c.requests[0]['behavior']==600000281 and c.requests[0]['instant']
    record('dispatch',c,copies=copies,enabled=bool(enabled),animation=event['animation'],requests=c.requests[:]);found+=1
   assert found==1
-for success,fps in itertools.product((False,True),(30,60,120)):
- c=Enchant(success);slot=OBJ+0x1a000
- c.u.mem_write(slot,bytes(0x600));c.u.mem_write(slot+0x329,b'\1');c.u.mem_write(slot+0x334,struct.pack('<I',30905101));c.u.mem_write(slot+0x494,b'\1')
- for frame in range(fps):
-  c.frame=frame;c.invoke(0x343280,[slot],{UC_X86_REG_XMM1:1/fps});step(c,fps)
- assert len(active(c,enchant))==int(success)
- if success:assert c.shots==[0] and abs(active(c,enchant)[0]['lifetime']-19)<.001
- record('emission',c,success=success,fps=fps,attempts=c.shots,nodes=c.nodes())
-for copies in (0,1,3):
- c=Enchant()
- for _ in range(copies):c.emit()
+for hand,success,fps in itertools.product((0,1,2),(False,True),(30,60,120)):
+ c=Enchant(success,hand);c.emit()
+ for frame in range(fps):step(c,fps)
+ live=[n['id'] for n in c.nodes() if n['id'] in (enchant,alternate) and not n['flags']&0x800c0003]
+ assert live==([alternate if hand==2 else enchant] if success and hand else []),(hand,success,fps,c.nodes())
+ assert c.shots==[0]
+ record('emission',c,hand=hand,success=success,fps=fps,attempts=c.shots,nodes=c.nodes())
+for hand,copies in itertools.product((1,2),(0,1,3)):
+ c=Enchant(hand=hand);leaf=enchant if hand==1 else alternate
+ for _ in range(copies):c.grant(leaf)
  c.qualify();c.update(0)
  for kind in range(13):
-  points=c.points(kind);expected=60 if copies and kind in (1,11,12) else 0
-  assert points==[0,expected,0,0,0]
-  record('values',c,copies=copies,attack=10000,kind=kind,points=points)
-for copies,reapply,fps in itertools.product((1,3),(False,True),(30,60,120)):
- c=Enchant()
- for _ in range(copies):c.emit()
+  points=c.points(kind);expected=50 if copies and (kind in (1,11,12) if hand==1 else kind in (2,11,12)) else 0
+  assert points==[0,expected,0,0,0],(hand,copies,kind,points)
+  record('values',c,hand=hand,copies=copies,attack=10000,kind=kind,points=points)
+for leaf,copies,reapply,fps in itertools.product((enchant,alternate),(1,3),(False,True),(30,60,120)):
+ c=Enchant(hand=0)
+ for _ in range(copies):c.grant(leaf)
  c.qualify();c.update(0);remaining_after=None
  for frame in range(1,27*fps):
-  if reapply and frame==5*fps:c.emit();remaining_after=next(n['lifetime'] for n in c.nodes() if n['id']==enchant)
+  if reapply and frame==5*fps:c.grant(leaf);remaining_after=next(n['lifetime'] for n in c.nodes() if n['id']==leaf)
   step(c,fps)
-  if not active(c,enchant):break
- assert abs(frame/fps-(25 if reapply else 20))<=4/fps,(copies,reapply,fps,frame,remaining_after,c.nodes())
+  if not active(c,leaf):break
+ assert abs(frame/fps-(25 if reapply else 20))<=4/fps,(leaf,copies,reapply,fps,frame)
  if reapply:assert remaining_after==20
- assert c.points(1)==[0]*5
- # Allow normal expiry cleanup before the next independent application.
- for _ in range(3):step(c,fps)
- c.emit();c.qualify();c.update(0)
- assert active(c,enchant) and active(c,enchant)[0]['lifetime']==20 and c.points(1)==[0,60,0,0,0],(copies,reapply,fps,frame,c.nodes())
- record('timer',c,copies=copies,reapply=reapply,fps=fps,expiryFrame=frame,remainingAfterReapply=remaining_after,newLifetime=20)
+ assert c.points(1)==c.points(2)==[0]*5
+ record('timer',c,leaf=leaf,copies=copies,reapply=reapply,fps=fps,expiryFrame=frame,remainingAfterReapply=remaining_after,newLifetime=20)
 for pair in ((enchant,881),(881,enchant),(enchant,enchant),(enchant,1627),(1627,enchant)):
- c=Enchant()
+ c=Enchant(hand=0)
  for id in pair:c.grant(id);c.qualify();c.update(0)
  assert [n['id'] for n in c.nodes()]==[pair[-1]]
  record('overwrite',c,order=pair,nodes=c.nodes(),right=c.points(1),left=c.points(2))
@@ -298,10 +319,11 @@ fields=('stateInfo','spCategory','playerHandValue','effectEndurance','magicAttac
         'isUseAtkParamAtkPowerCorrect','isUseStatusAilmentAtkPowerCorrect','freezeAttackPower','changeHpRate','changeHpPoint',
         'neutralDamageCutRate','magicDamageCutRate','fireDamageCutRate','thunderDamageCutRate','darkDamageCutRate')
 output=dict(schema=1,exeSha256=sha(x.raw),regulationSha256=x.x['hashes']['regulation.bin'],paramSha256=sha(x.param),
- assetHashes={**{k:sha(v) for k,v in raws.items()},'weapon':sha(weaponraw),'tae':sha(taeraw),'behaviorGraph':graph.metadata['hkxSha256']},
- effects=[7220100,7220101],root=root,enchant=enchant,frost=frost,events=events,graphStates=graph_states,
- rows={str(id):{k:x.spells[str(id)][k] for k in fields} for id in (root,enchant,frost,881,1627)},
- checks=checks,stubs=sorted(stubs|{'attack kind and 10000 attack row supplied; weapon/arrow hit-data construction and actual payload binding not executed',
+ assetHashes={**{k:sha(v) for k,v in raws.items()},'weapon':sha(weaponraw),'tae':sha(taeraw),'behaviorGraph':graph.metadata['hkxSha256'],'script':sha(script)},
+ styleFunction=style_function,
+ effects=[7220100,7220101],root=root,enchant=enchant,alternateEnchant=alternate,seed=seed,frost=frost,events=events,graphStates=graph_states,
+ rows={str(id):{k:x.spells[str(id)][k] for k in fields} for id in (root,seed,7220202,enchant,7220205,alternate,frost,881,1627)},
+ checks=checks,stubs=sorted(stubs|{'attack kind, 10000 attack row and eligible weapon 1000000 supplied; weapon/arrow hit-data construction and actual payload binding not executed',
  'frost payload supplied in hit slot 5; 43BE60 argument 5 skips physical HP damage while native effect delivery executes',
  'full summon eligibility, game behavior VM, physical spawn and multiplayer not executed'}),
  native=dict(animation='27D0F10 / 27D0400 → 40CD80 → 668B30',selfGrant='343280 → 3C7F40 → 3C80A0',attack='502830 → 511010',

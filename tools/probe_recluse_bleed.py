@@ -20,7 +20,7 @@ p.add_argument('output', type=Path)
 a = p.parse_args()
 inputs = Inputs(a.exe, a.extracted)
 tae = json.loads(a.animations.read_text())
-assert tae['bundles'][0]['sha256'] == '1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256'] == '806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 r = inputs.spells
 assert r['7032900']['stateInfo'] == r['7032901']['invocationConditionsStateChange1'] == 2206
 assert r['7032901']['cycleOccurrenceSpEffectId'] == 7032902 and r['7032901']['effectEndurance'] == 0

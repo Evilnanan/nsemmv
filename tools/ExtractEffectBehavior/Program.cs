@@ -13,7 +13,7 @@ AppDomain.CurrentDomain.AssemblyResolve += (_, r) => Assembly.LoadFrom(Path.Comb
 NativeLibrary.SetDllImportResolver(typeof(BND4).Assembly, (name, _, _) => NativeLibrary.Load(Path.Combine(game, name.EndsWith(".dll") ? name : name + ".dll")));
 string Hash(byte[] bytes) => Convert.ToHexString(SHA256.HashData(bytes)).ToLowerInvariant();
 var bundle = File.ReadAllBytes(Path.Combine(mod, "chr/c0000.behbnd.dcx"));
-if (Hash(bundle) != "0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5")
+if (Hash(bundle) is not ("bdf5a755bdffb24d9a8f2361f8a7632f44f72eb0d29c706d407ef772cc92c62b" or "0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5"))
     throw new InvalidDataException("Unsupported behavior bundle");
 Directory.SetCurrentDirectory(game);
 var original = BND4.Read(bundle).Files.Single(f => f.ID == 7000500).Bytes.ToArray();

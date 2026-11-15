@@ -12,350 +12,571 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--extract', type=Path)
+parser.add_argument('--extract-only', action='store_true', help='Refresh current PARAM/text snapshot before running native probes')
 args = parser.parse_args()
+if args.extract_only and not args.extract:
+    parser.error('--extract-only requires --extract')
 profile = json.loads((ROOT / 'data/source-profile.json').read_text())
 catalog = json.loads((ROOT / 'web/src/data/catalog.json').read_text())
 trigger_path = ROOT / 'data/effect-trigger-source.json'
 triggers = json.loads(trigger_path.read_text())
-assert triggers['schema'] == 1 and triggers['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert triggers['schema'] == 1 and triggers['regulationSha256'] == catalog['regulationSha256']
 link_path = ROOT / 'data/effect-link-source.json'
 links = json.loads(link_path.read_text())
-assert links['schema'] == 1 and links['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert links['schema'] == 1 and links['regulationSha256'] == catalog['regulationSha256']
 script_path = ROOT / 'data/effect-script-evidence.json'
 scripts = json.loads(script_path.read_text())
-assert scripts['schema'] == 1 and scripts['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert scripts['schema'] == 1 and scripts['regulationSha256'] == catalog['regulationSha256']
 growth_path = ROOT / 'data/effect-growth-source.json'
 growth = json.loads(growth_path.read_text())
-assert growth['schema'] == 1 and growth['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert growth['schema'] == 1 and growth['regulationSha256'] == catalog['regulationSha256']
 evidence_path = ROOT / 'data/effect-native-evidence.json'
 evidence = json.loads(evidence_path.read_text())
 discovery_path = ROOT / 'data/effect-discovery-evidence.json'
 discovery = json.loads(discovery_path.read_text())
-assert discovery['schema'] == 1 and discovery['regulationSha256'] == catalog['regulationSha256']
-assert discovery['exeSha256'] == evidence['exeSha256'] and not discovery['gameplayVerified']
-assert discovery['rowCount'] == 35755 and discovery['groupCount'] == 3627
-assert len(discovery['biasedGroups']) == 39 and len(discovery['draws']) == 1626
+if not args.extract_only:
+    assert discovery['schema'] == 1 and discovery['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert discovery['exeSha256'] == evidence['exeSha256'] and not discovery['gameplayVerified']
+if not args.extract_only:
+    assert discovery['rowCount'] == 36058 and discovery['groupCount'] == 3667
+if not args.extract_only:
+    assert len(discovery['biasedGroups']) == 39 and len(discovery['draws']) == 1666
 totem_path = ROOT / 'data/effect-totem-evidence.json'
 totem = json.loads(totem_path.read_text())
-assert totem['schema'] == 1 and totem['regulationSha256'] == catalog['regulationSha256']
-assert totem['exeSha256'] == evidence['exeSha256'] and not totem['gameplayVerified']
-assert sum(map(len, totem['checks'].values())) == 86
+if not args.extract_only:
+    assert totem['schema'] == 1 and totem['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert totem['exeSha256'] == evidence['exeSha256'] and not totem['gameplayVerified']
+if not args.extract_only:
+    assert sum(map(len, totem['checks'].values())) == 86
 lifecycle_path = ROOT / 'data/effect-lifecycle-evidence.json'
 lifecycle = json.loads(lifecycle_path.read_text())
-assert lifecycle['schema'] == 1 and lifecycle['regulationSha256'] == catalog['regulationSha256']
-assert lifecycle['exeSha256'] == evidence['exeSha256'] and not lifecycle['gameplayVerified']
-assert lifecycle['paramSha256'] == evidence['paramSha256']
-assert len(lifecycle['checks']['revenant']) == 8 and len(lifecycle['checks']['fp']) == 18
-assert len(lifecycle['checks']['duchess']) == 12 and len(lifecycle['checks']['attack']) == 18
+if not args.extract_only:
+    assert lifecycle['schema'] == 1 and lifecycle['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert lifecycle['exeSha256'] == evidence['exeSha256'] and not lifecycle['gameplayVerified']
+if not args.extract_only:
+    assert lifecycle['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert len(lifecycle['checks']['revenant']) == 8 and len(lifecycle['checks']['fp']) == 18
+if not args.extract_only:
+    assert len(lifecycle['checks']['duchess']) == 12 and len(lifecycle['checks']['attack']) == 18
 recovery_path = ROOT / 'data/effect-recovery-evidence.json'
 recovery = json.loads(recovery_path.read_text())
-assert recovery['schema'] == 1 and recovery['regulationSha256'] == catalog['regulationSha256']
-assert recovery['exeSha256'] == evidence['exeSha256'] and not recovery['gameplayVerified']
-assert recovery['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in recovery['checks'].items()} == dict(trigger=12, emissionAndRecovery=6, arrival=4)
+if not args.extract_only:
+    assert recovery['schema'] == 1 and recovery['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert recovery['exeSha256'] == evidence['exeSha256'] and not recovery['gameplayVerified']
+if not args.extract_only:
+    assert recovery['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in recovery['checks'].items()} == dict(trigger=12, emissionAndRecovery=6, arrival=4)
 executor_path = ROOT / 'data/effect-executor-recovery-evidence.json'
 executor = json.loads(executor_path.read_text())
-assert executor['schema'] == 1 and executor['regulationSha256'] == catalog['regulationSha256']
-assert executor['exeSha256'] == evidence['exeSha256'] and not executor['gameplayVerified']
-assert executor['paramSha256'] == evidence['paramSha256'] and len(executor['checks']) == 24
+if not args.extract_only:
+    assert executor['schema'] == 1 and executor['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert executor['exeSha256'] == evidence['exeSha256'] and not executor['gameplayVerified']
+if not args.extract_only:
+    assert executor['paramSha256'] == evidence['paramSha256'] and len(executor['checks']) == 24
 weapon_recovery_path = ROOT / 'data/effect-weapon-recovery-evidence.json'
 weapon_recovery = json.loads(weapon_recovery_path.read_text())
-assert weapon_recovery['schema'] == 1 and weapon_recovery['regulationSha256'] == catalog['regulationSha256']
-assert weapon_recovery['exeSha256'] == evidence['exeSha256'] and not weapon_recovery['gameplayVerified']
-assert weapon_recovery['paramSha256'] == evidence['paramSha256']
-assert len(weapon_recovery['families']) == 56 and len(weapon_recovery['checks']['reapplication']) == 62
+if not args.extract_only:
+    assert weapon_recovery['schema'] == 1 and weapon_recovery['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert weapon_recovery['exeSha256'] == evidence['exeSha256'] and not weapon_recovery['gameplayVerified']
+if not args.extract_only:
+    assert weapon_recovery['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert len(weapon_recovery['families']) == 56 and len(weapon_recovery['checks']['reapplication']) == 62
 weapon_recovery_families = {str(f['effect']): f for f in weapon_recovery['families']}
 recluse_bleed_path = ROOT / 'data/effect-recluse-bleed-evidence.json'
 recluse_bleed = json.loads(recluse_bleed_path.read_text())
-assert recluse_bleed['schema'] == 1 and recluse_bleed['regulationSha256'] == catalog['regulationSha256']
-assert recluse_bleed['exeSha256'] == evidence['exeSha256'] and not recluse_bleed['gameplayVerified']
-assert recluse_bleed['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in recluse_bleed['checks'].items()} == dict(onset=8, hp=7, lifecycle=7)
+if not args.extract_only:
+    assert recluse_bleed['schema'] == 1 and recluse_bleed['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert recluse_bleed['exeSha256'] == evidence['exeSha256'] and not recluse_bleed['gameplayVerified']
+if not args.extract_only:
+    assert recluse_bleed['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in recluse_bleed['checks'].items()} == dict(onset=8, hp=7, lifecycle=7)
 sacrifice_path = ROOT / 'data/effect-revenant-sacrifice-evidence.json'
 sacrifice = json.loads(sacrifice_path.read_text())
-assert sacrifice['schema'] == 1 and sacrifice['regulationSha256'] == catalog['regulationSha256']
-assert sacrifice['exeSha256'] == evidence['exeSha256'] and not sacrifice['gameplayVerified']
-assert sacrifice['paramSha256'] == evidence['paramSha256']
-assert sacrifice['scriptSha256'] == scripts['scriptSha256']
-assert {k: len(v) for k, v in sacrifice['checks'].items()} == dict(trigger=6, emission=6, hp=12, lifecycle=15, script=4)
+if not args.extract_only:
+    assert sacrifice['schema'] == 1 and sacrifice['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert sacrifice['exeSha256'] == evidence['exeSha256'] and not sacrifice['gameplayVerified']
+if not args.extract_only:
+    assert sacrifice['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert sacrifice['scriptSha256'] == scripts['scriptSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in sacrifice['checks'].items()} == dict(trigger=6, emission=6, hp=12, lifecycle=15, script=4)
 gesture_path = ROOT / 'data/effect-gesture-madness-evidence.json'
 gesture = json.loads(gesture_path.read_text())
-assert gesture['schema'] == 1 and gesture['regulationSha256'] == catalog['regulationSha256']
-assert gesture['exeSha256'] == evidence['exeSha256'] and not gesture['gameplayVerified']
-assert gesture['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in gesture['checks'].items()} == dict(cadence=21, onset=16, resources=4)
+if not args.extract_only:
+    assert gesture['schema'] == 1 and gesture['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert gesture['exeSha256'] == evidence['exeSha256'] and not gesture['gameplayVerified']
+if not args.extract_only:
+    assert gesture['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in gesture['checks'].items()} == dict(cadence=21, onset=16, resources=4)
 guardian_skill_path = ROOT / 'data/effect-guardian-skill-evidence.json'
 guardian_skill = json.loads(guardian_skill_path.read_text())
-assert guardian_skill['schema'] == 1 and guardian_skill['regulationSha256'] == catalog['regulationSha256']
-assert guardian_skill['exeSha256'] == evidence['exeSha256'] and not guardian_skill['gameplayVerified']
-assert guardian_skill['paramSha256'] == evidence['paramSha256']
-assert guardian_skill['animationSha256'] == recovery['animationSha256']
-assert {k: len(v) for k, v in guardian_skill['checks'].items()} == dict(trigger=12, emissionAndRecovery=6, hp=4, arrival=6)
+if not args.extract_only:
+    assert guardian_skill['schema'] == 1 and guardian_skill['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert guardian_skill['exeSha256'] == evidence['exeSha256'] and not guardian_skill['gameplayVerified']
+if not args.extract_only:
+    assert guardian_skill['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert guardian_skill['animationSha256'] == recovery['animationSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in guardian_skill['checks'].items()} == dict(trigger=12, emissionAndRecovery=6, hp=4, arrival=6)
 blade_path = ROOT / 'data/effect-executor-blade-evidence.json'
 blade = json.loads(blade_path.read_text())
-assert blade['schema'] == 1 and blade['regulationSha256'] == catalog['regulationSha256']
-assert blade['exeSha256'] == evidence['exeSha256'] and not blade['gameplayVerified']
-assert blade['paramSha256'] == evidence['paramSha256']
-assert blade['animationSha256'] == recovery['animationSha256']
-assert {k: len(v) for k, v in blade['checks'].items()} == dict(filter=128, lifecycle=8, penalty=6, attackRows=34)
+if not args.extract_only:
+    assert blade['schema'] == 1 and blade['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert blade['exeSha256'] == evidence['exeSha256'] and not blade['gameplayVerified']
+if not args.extract_only:
+    assert blade['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert blade['animationSha256'] == recovery['animationSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in blade['checks'].items()} == dict(filter=128, lifecycle=8, penalty=6, attackRows=34)
 prayer_path = ROOT / 'data/effect-undertaker-prayer-evidence.json'
 prayer = json.loads(prayer_path.read_text())
-assert prayer['schema'] == 1 and prayer['regulationSha256'] == catalog['regulationSha256']
-assert prayer['exeSha256'] == evidence['exeSha256'] and not prayer['gameplayVerified']
-assert prayer['paramSha256'] == evidence['paramSha256']
-assert prayer['animationSha256'] == recovery['animationSha256']
-assert {k: len(v) for k, v in prayer['checks'].items()} == dict(slots=33, dispatch=420, lifecycle=6, attack=6)
+if not args.extract_only:
+    assert prayer['schema'] == 1 and prayer['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert prayer['exeSha256'] == evidence['exeSha256'] and not prayer['gameplayVerified']
+if not args.extract_only:
+    assert prayer['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert prayer['animationSha256'] == recovery['animationSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in prayer['checks'].items()} == dict(slots=33, dispatch=420, lifecycle=6, attack=6)
 protection_path = ROOT / 'data/effect-guardian-protection-evidence.json'
 protection = json.loads(protection_path.read_text())
-assert protection['schema'] == 1 and protection['regulationSha256'] == catalog['regulationSha256']
-assert protection['exeSha256'] == evidence['exeSha256'] and not protection['gameplayVerified']
-assert protection['paramSha256'] == evidence['paramSha256']
-assert protection['animationSha256'] == recovery['animationSha256']
-assert {k: len(v) for k, v in protection['checks'].items()} == dict(trigger=12, emission=3, lifecycle=6)
+if not args.extract_only:
+    assert protection['schema'] == 1 and protection['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert protection['exeSha256'] == evidence['exeSha256'] and not protection['gameplayVerified']
+if not args.extract_only:
+    assert protection['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert protection['animationSha256'] == recovery['animationSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in protection['checks'].items()} == dict(trigger=12, emission=3, lifecycle=6)
 tenacity_path = ROOT / 'data/effect-executor-tenacity-evidence.json'
 tenacity = json.loads(tenacity_path.read_text())
-assert tenacity['schema'] == 1 and tenacity['regulationSha256'] == catalog['regulationSha256']
-assert tenacity['exeSha256'] == evidence['exeSha256'] and not tenacity['gameplayVerified']
-assert tenacity['paramSha256'] == evidence['paramSha256']
-assert tenacity['playerCommonSha256'] == evidence['systemParamSha256']['PlayerCommonParam']
-assert {k: len(v) for k, v in tenacity['checks'].items()} == dict(trigger=99, lifecycle=13, hp=5, resistance=3)
+if not args.extract_only:
+    assert tenacity['schema'] == 1 and tenacity['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert tenacity['exeSha256'] == evidence['exeSha256'] and not tenacity['gameplayVerified']
+if not args.extract_only:
+    assert tenacity['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert tenacity['playerCommonSha256'] == evidence['systemParamSha256']['PlayerCommonParam']
+if not args.extract_only:
+    assert {k: len(v) for k, v in tenacity['checks'].items()} == dict(trigger=99, lifecycle=13, hp=5, resistance=3)
 evasion_path = ROOT / 'data/effect-duchess-evasion-evidence.json'
 evasion = json.loads(evasion_path.read_text())
-assert evasion['schema'] == 1 and evasion['regulationSha256'] == catalog['regulationSha256']
-assert evasion['exeSha256'] == evidence['exeSha256'] and not evasion['gameplayVerified']
-assert evasion['paramSha256'] == evidence['paramSha256']
-assert evasion['scriptSha256'] == scripts['scriptSha256']
-assert evasion['animationSha256'] == recovery['animationSha256']
-assert {k: len(v) for k, v in evasion['checks'].items()} == dict(script=33, dispatch=25, lifecycle=12)
+if not args.extract_only:
+    assert evasion['schema'] == 1 and evasion['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert evasion['exeSha256'] == evidence['exeSha256'] and not evasion['gameplayVerified']
+if not args.extract_only:
+    assert evasion['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert evasion['scriptSha256'] == scripts['scriptSha256']
+if not args.extract_only:
+    assert evasion['animationSha256'] == recovery['animationSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in evasion['checks'].items()} == dict(script=33, dispatch=25, lifecycle=12)
 duration_path = ROOT / 'data/effect-guardian-duration-evidence.json'
 duration = json.loads(duration_path.read_text())
-assert duration['schema'] == 1 and duration['regulationSha256'] == catalog['regulationSha256']
-assert duration['exeSha256'] == evidence['exeSha256'] and not duration['gameplayVerified']
-assert duration['paramSha256'] == evidence['paramSha256']
-assert duration['scriptSha256'] == scripts['scriptSha256']
-assert duration['animationSha256'] == recovery['animationSha256']
-assert duration['behavior']['bundleSha256'] == '0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5'
-assert {k: len(v) for k, v in duration['checks'].items()} == dict(script=32, dispatch=96, lifetime=12, hitHistory=6)
+if not args.extract_only:
+    assert duration['schema'] == 1 and duration['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert duration['exeSha256'] == evidence['exeSha256'] and not duration['gameplayVerified']
+if not args.extract_only:
+    assert duration['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert duration['scriptSha256'] == scripts['scriptSha256']
+if not args.extract_only:
+    assert duration['animationSha256'] == recovery['animationSha256']
+if not args.extract_only:
+    assert duration['behavior']['bundleSha256'] == 'bdf5a755bdffb24d9a8f2361f8a7632f44f72eb0d29c706d407ef772cc92c62b'
+if not args.extract_only:
+    assert {k: len(v) for k, v in duration['checks'].items()} == dict(script=32, dispatch=96, lifetime=12, hitHistory=6)
 starting_weapon_path = ROOT / 'data/effect-starting-weapon-evidence.json'
 starting_weapon = json.loads(starting_weapon_path.read_text())
-assert starting_weapon['schema'] == 1 and starting_weapon['regulationSha256'] == catalog['regulationSha256']
-assert starting_weapon['exeSha256'] == evidence['exeSha256'] and not starting_weapon['gameplayVerified']
-assert starting_weapon['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in starting_weapon['checks'].items()} == dict(component=70, assignment=12, attack=672, status=300, binding=28)
+if not args.extract_only:
+    assert starting_weapon['schema'] == 1 and starting_weapon['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert starting_weapon['exeSha256'] == evidence['exeSha256'] and not starting_weapon['gameplayVerified']
+if not args.extract_only:
+    assert starting_weapon['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in starting_weapon['checks'].items()} == dict(component=70, assignment=12, attack=672, status=300, binding=28)
 starting_goods_path = ROOT / 'data/effect-starting-goods-evidence.json'
 starting_goods = json.loads(starting_goods_path.read_text())
-assert starting_goods['schema'] == 1 and starting_goods['regulationSha256'] == catalog['regulationSha256']
-assert starting_goods['exeSha256'] == evidence['exeSha256'] and not starting_goods['gameplayVerified']
-assert starting_goods['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in starting_goods['checks'].items()} == dict(
-    selection=930, repeat=288, capacity=252, reinitialize=49, allocationFailure=1)
+if not args.extract_only:
+    assert starting_goods['schema'] == 1 and starting_goods['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert starting_goods['exeSha256'] == evidence['exeSha256'] and not starting_goods['gameplayVerified']
+if not args.extract_only:
+    assert starting_goods['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in starting_goods['checks'].items()} == dict(
+        selection=930, repeat=288, capacity=252, reinitialize=49, allocationFailure=1)
 
 recluse_mark_path = ROOT / 'data/effect-recluse-mark-evidence.json'
 recluse_mark = json.loads(recluse_mark_path.read_text())
-assert recluse_mark['schema'] == 1 and recluse_mark['regulationSha256'] == catalog['regulationSha256']
-assert recluse_mark['exeSha256'] == evidence['exeSha256'] and not recluse_mark['gameplayVerified']
-assert recluse_mark['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in recluse_mark['checks'].items()} == dict(dispatch=24, lifetime=12, recovery=588, overlap=2)
+if not args.extract_only:
+    assert recluse_mark['schema'] == 1 and recluse_mark['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert recluse_mark['exeSha256'] == evidence['exeSha256'] and not recluse_mark['gameplayVerified']
+if not args.extract_only:
+    assert recluse_mark['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in recluse_mark['checks'].items()} == dict(dispatch=24, lifetime=12, recovery=588, overlap=2)
 
 ironeye_mark_path = ROOT / 'data/effect-ironeye-mark-evidence.json'
 ironeye_mark = json.loads(ironeye_mark_path.read_text())
-assert ironeye_mark['schema'] == 1 and ironeye_mark['regulationSha256'] == catalog['regulationSha256']
-assert ironeye_mark['exeSha256'] == evidence['exeSha256'] and not ironeye_mark['gameplayVerified']
-assert ironeye_mark['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in ironeye_mark['checks'].items()} == dict(selection=48, lifetime=9, refresh=16, breakage=8, rows=353)
-assert (ironeye_mark['baseDuration'], ironeye_mark['extendedDuration']) == (17, 22)
+if not args.extract_only:
+    assert ironeye_mark['schema'] == 1 and ironeye_mark['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert ironeye_mark['exeSha256'] == evidence['exeSha256'] and not ironeye_mark['gameplayVerified']
+if not args.extract_only:
+    assert ironeye_mark['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in ironeye_mark['checks'].items()} == dict(selection=48, lifetime=9, refresh=16, breakage=8, rows=357)
+if not args.extract_only:
+    assert (ironeye_mark['baseDuration'], ironeye_mark['extendedDuration']) == (17, 22)
 
 restage_path = ROOT / 'data/effect-duchess-restage-evidence.json'
 restage = json.loads(restage_path.read_text())
-assert restage['schema'] == 1 and restage['regulationSha256'] == catalog['regulationSha256']
-assert restage['exeSha256'] == evidence['exeSha256'] and not restage['gameplayVerified']
-assert restage['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in restage['checks'].items()} == dict(script=104, dispatch=8, selection=12, damage=480, repeat=4)
-assert restage['baseRate'] == .5 and abs(restage['relicRate'] - .6) < 1e-6
+if not args.extract_only:
+    assert restage['schema'] == 1 and restage['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert restage['exeSha256'] == evidence['exeSha256'] and not restage['gameplayVerified']
+if not args.extract_only:
+    assert restage['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in restage['checks'].items()} == dict(script=104, dispatch=8, selection=12, damage=480, repeat=4)
+if not args.extract_only:
+    assert restage['baseRate'] == .5 and abs(restage['relicRate'] - .6) < 1e-6
 
 absorption_path = ROOT / 'data/effect-recluse-absorption-evidence.json'
 absorption = json.loads(absorption_path.read_text())
-assert absorption['schema'] == 1 and absorption['regulationSha256'] == catalog['regulationSha256']
-assert absorption['exeSha256'] == evidence['exeSha256'] and not absorption['gameplayVerified']
-assert absorption['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in absorption['checks'].items()} == dict(dispatch=240, reset=28, protection=16, refresh=30, lifetime=12)
+if not args.extract_only:
+    assert absorption['schema'] == 1 and absorption['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert absorption['exeSha256'] == evidence['exeSha256'] and not absorption['gameplayVerified']
+if not args.extract_only:
+    assert absorption['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in absorption['checks'].items()} == dict(dispatch=240, reset=28, protection=16, refresh=30, lifetime=12)
 
 raider_debuff_path = ROOT / 'data/effect-raider-debuff-evidence.json'
 raider_debuff = json.loads(raider_debuff_path.read_text())
-assert raider_debuff['schema'] == 1 and raider_debuff['regulationSha256'] == catalog['regulationSha256']
-assert raider_debuff['exeSha256'] == evidence['exeSha256'] and not raider_debuff['gameplayVerified']
-assert raider_debuff['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in raider_debuff['checks'].items()} == dict(dispatch=16, arrival=55, refresh=12, lifetime=3)
+if not args.extract_only:
+    assert raider_debuff['schema'] == 1 and raider_debuff['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert raider_debuff['exeSha256'] == evidence['exeSha256'] and not raider_debuff['gameplayVerified']
+if not args.extract_only:
+    assert raider_debuff['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in raider_debuff['checks'].items()} == dict(dispatch=16, arrival=55, refresh=12, lifetime=3)
 
 ironeye_poison_path = ROOT / 'data/effect-ironeye-poison-evidence.json'
 ironeye_poison = json.loads(ironeye_poison_path.read_text())
-assert ironeye_poison['schema'] == 1 and ironeye_poison['regulationSha256'] == catalog['regulationSha256']
-assert ironeye_poison['exeSha256'] == evidence['exeSha256'] and not ironeye_poison['gameplayVerified']
-assert ironeye_poison['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in ironeye_poison['checks'].items()} == dict(dispatch=32, onset=48, damage=7, bonus=15, repeat=5, bonusTiming=11, lifetime=3)
+if not args.extract_only:
+    assert ironeye_poison['schema'] == 1 and ironeye_poison['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert ironeye_poison['exeSha256'] == evidence['exeSha256'] and not ironeye_poison['gameplayVerified']
+if not args.extract_only:
+    assert ironeye_poison['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in ironeye_poison['checks'].items()} == dict(dispatch=32, onset=48, damage=7, bonus=15, repeat=5, bonusTiming=11, lifetime=3)
 
 wylder_bleed_path = ROOT / 'data/effect-wylder-bleed-evidence.json'
 wylder_bleed = json.loads(wylder_bleed_path.read_text())
-assert wylder_bleed['schema'] == 1 and wylder_bleed['regulationSha256'] == catalog['regulationSha256']
-assert wylder_bleed['exeSha256'] == evidence['exeSha256'] and not wylder_bleed['gameplayVerified']
-assert wylder_bleed['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in wylder_bleed['checks'].items()} == dict(dispatch=32, onset=48, damage=7, repeat=3, lifetime=3)
+if not args.extract_only:
+    assert wylder_bleed['schema'] == 1 and wylder_bleed['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert wylder_bleed['exeSha256'] == evidence['exeSha256'] and not wylder_bleed['gameplayVerified']
+if not args.extract_only:
+    assert wylder_bleed['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in wylder_bleed['checks'].items()} == dict(dispatch=32, onset=48, damage=7, repeat=3, lifetime=3, firing=4)
 
 undertaker_reset_path = ROOT / 'data/effect-undertaker-reset-evidence.json'
 undertaker_reset = json.loads(undertaker_reset_path.read_text())
-assert undertaker_reset['schema'] == 1 and undertaker_reset['regulationSha256'] == catalog['regulationSha256']
-assert undertaker_reset['exeSha256'] == evidence['exeSha256'] and not undertaker_reset['gameplayVerified']
-assert undertaker_reset['paramSha256'] == evidence['paramSha256'] and undertaker_reset['nativeEventBank'] == 255
-assert {k: len(v) for k, v in undertaker_reset['checks'].items()} == dict(dispatch=32, capacity=54, repeat=6)
+if not args.extract_only:
+    assert undertaker_reset['schema'] == 1 and undertaker_reset['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert undertaker_reset['exeSha256'] == evidence['exeSha256'] and not undertaker_reset['gameplayVerified']
+if not args.extract_only:
+    assert undertaker_reset['paramSha256'] == evidence['paramSha256'] and undertaker_reset['nativeEventBank'] == 255
+if not args.extract_only:
+    assert {k: len(v) for k, v in undertaker_reset['checks'].items()} == dict(dispatch=32, capacity=54, repeat=6)
 treasure_map_path = ROOT / 'data/effect-treasure-map-evidence.json'
 treasure_map = json.loads(treasure_map_path.read_text())
-assert treasure_map['schema'] == 1 and treasure_map['regulationSha256'] == catalog['regulationSha256']
-assert treasure_map['exeSha256'] == evidence['exeSha256'] and not treasure_map['gameplayVerified']
-assert treasure_map['paramSha256'] == evidence['paramSha256'] and not treasure_map['eventVmExecuted']
-assert {k: len(v) for k, v in treasure_map['checks'].items()} == dict(visibility=192, override=8, copies=4, unbound=12)
+if not args.extract_only:
+    assert treasure_map['schema'] == 1 and treasure_map['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert treasure_map['exeSha256'] == evidence['exeSha256'] and not treasure_map['gameplayVerified']
+if not args.extract_only:
+    assert treasure_map['paramSha256'] == evidence['paramSha256'] and not treasure_map['eventVmExecuted']
+if not args.extract_only:
+    assert {k: len(v) for k, v in treasure_map['checks'].items()} == dict(visibility=192, override=8, copies=4, unbound=12)
 passive_resource_path = ROOT / 'data/effect-passive-resource-evidence.json'
 passive_resource = json.loads(passive_resource_path.read_text())
-assert passive_resource['schema'] == 1 and passive_resource['regulationSha256'] == catalog['regulationSha256']
-assert passive_resource['exeSha256'] == evidence['exeSha256'] and not passive_resource['gameplayVerified']
-assert passive_resource['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in passive_resource['checks'].items()} == dict(resources=48, poise=74, flask=96, flaskCap=12, ordinaryRecovery=16)
+if not args.extract_only:
+    assert passive_resource['schema'] == 1 and passive_resource['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert passive_resource['exeSha256'] == evidence['exeSha256'] and not passive_resource['gameplayVerified']
+if not args.extract_only:
+    assert passive_resource['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in passive_resource['checks'].items()} == dict(resources=48, poise=74, flask=96, flaskCap=12, ordinaryRecovery=16)
 damage_ailment_path = ROOT / 'data/effect-damage-ailment-evidence.json'
 damage_ailment = json.loads(damage_ailment_path.read_text())
-assert damage_ailment['schema'] == 1 and damage_ailment['regulationSha256'] == catalog['regulationSha256']
-assert damage_ailment['exeSha256'] == evidence['exeSha256'] and not damage_ailment['gameplayVerified']
-assert damage_ailment['paramSha256'] == evidence['paramSha256'] and damage_ailment['capacityFixture'] == 10000
-assert {k: len(v) for k, v in damage_ailment['checks'].items()} == dict(trigger=224, window=63, continuous=21, mixed=1)
+if not args.extract_only:
+    assert damage_ailment['schema'] == 1 and damage_ailment['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert damage_ailment['exeSha256'] == evidence['exeSha256'] and not damage_ailment['gameplayVerified']
+if not args.extract_only:
+    assert damage_ailment['paramSha256'] == evidence['paramSha256'] and damage_ailment['capacityFixture'] == 10000
+if not args.extract_only:
+    assert {k: len(v) for k, v in damage_ailment['checks'].items()} == dict(trigger=224, window=63, continuous=21, mixed=1)
 spell_family_path = ROOT / 'data/effect-spell-family-evidence.json'
 spell_family = json.loads(spell_family_path.read_text())
-assert spell_family['schema'] == 1 and spell_family['regulationSha256'] == catalog['regulationSha256']
-assert spell_family['exeSha256'] == evidence['exeSha256'] and not spell_family['gameplayVerified']
-assert spell_family['paramSha256'] == evidence['paramSha256'] and len(spell_family['families']) == 14
-assert {k: len(v) for k, v in spell_family['checks'].items()} == dict(selection=1386, repeat=112, kinds=182, mixed=99)
+if not args.extract_only:
+    assert spell_family['schema'] == 1 and spell_family['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert spell_family['exeSha256'] == evidence['exeSha256'] and not spell_family['gameplayVerified']
+if not args.extract_only:
+    assert spell_family['paramSha256'] == evidence['paramSha256'] and len(spell_family['families']) == 14
+if not args.extract_only:
+    assert {k: len(v) for k, v in spell_family['checks'].items()} == dict(selection=1386, repeat=112, kinds=182, mixed=99)
 periodic_hp_path = ROOT / 'data/effect-periodic-hp-evidence.json'
 periodic_hp = json.loads(periodic_hp_path.read_text())
-assert periodic_hp['schema'] == 1 and periodic_hp['regulationSha256'] == catalog['regulationSha256']
-assert periodic_hp['exeSha256'] == evidence['exeSha256'] and not periodic_hp['gameplayVerified']
-assert periodic_hp['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in periodic_hp['checks'].items()} == dict(snapshot=64, timing=18, mixed=48, staggered=12, arrivalBaseline=6)
+if not args.extract_only:
+    assert periodic_hp['schema'] == 1 and periodic_hp['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert periodic_hp['exeSha256'] == evidence['exeSha256'] and not periodic_hp['gameplayVerified']
+if not args.extract_only:
+    assert periodic_hp['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in periodic_hp['checks'].items()} == dict(snapshot=64, timing=18, mixed=48, staggered=12, arrivalBaseline=6)
 perfume_path = ROOT / 'data/effect-perfume-evidence.json'
 perfume = json.loads(perfume_path.read_text())
-assert perfume['schema'] == 1 and perfume['regulationSha256'] == catalog['regulationSha256']
-assert perfume['exeSha256'] == evidence['exeSha256'] and not perfume['gameplayVerified']
-assert perfume['paramSha256'] == evidence['paramSha256'] and len(perfume['families']) == 2
-assert {k: len(v) for k, v in perfume['checks'].items()} == dict(filters=3616, kinds=156, disabled=48, lifecycle=48)
+if not args.extract_only:
+    assert perfume['schema'] == 1 and perfume['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert perfume['exeSha256'] == evidence['exeSha256'] and not perfume['gameplayVerified']
+if not args.extract_only:
+    assert perfume['paramSha256'] == evidence['paramSha256'] and len(perfume['families']) == 2
+if not args.extract_only:
+    assert {k: len(v) for k, v in perfume['checks'].items()} == dict(filters=3616, kinds=156, disabled=48, lifecycle=48)
 duchess_ultimate_path = ROOT / 'data/effect-duchess-ultimate-evidence.json'
 duchess_ultimate = json.loads(duchess_ultimate_path.read_text())
-assert duchess_ultimate['schema'] == 1 and duchess_ultimate['regulationSha256'] == catalog['regulationSha256']
-assert duchess_ultimate['exeSha256'] == evidence['exeSha256'] and not duchess_ultimate['gameplayVerified']
-assert duchess_ultimate['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in duchess_ultimate['checks'].items()} == dict(selection=12, dispatch=24, threshold=11, multipliers=32, kinds=52, markers=20, lifecycle=6, duration=12)
+if not args.extract_only:
+    assert duchess_ultimate['schema'] == 1 and duchess_ultimate['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert duchess_ultimate['exeSha256'] == evidence['exeSha256'] and not duchess_ultimate['gameplayVerified']
+if not args.extract_only:
+    assert duchess_ultimate['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in duchess_ultimate['checks'].items()} == dict(selection=12, dispatch=24, threshold=11, multipliers=32, kinds=52, markers=20, lifecycle=6, duration=12)
 guardian_shock_path = ROOT / 'data/effect-guardian-shockwave-evidence.json'
 guardian_shock = json.loads(guardian_shock_path.read_text())
-assert guardian_shock['schema'] == 1 and guardian_shock['regulationSha256'] == catalog['regulationSha256']
-assert guardian_shock['exeSha256'] == evidence['exeSha256'] and not guardian_shock['gameplayVerified']
-assert guardian_shock['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in guardian_shock['checks'].items()} == dict(trigger=54, repeat=6, projectile=3, target=4, damage=16)
+if not args.extract_only:
+    assert guardian_shock['schema'] == 1 and guardian_shock['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert guardian_shock['exeSha256'] == evidence['exeSha256'] and not guardian_shock['gameplayVerified']
+if not args.extract_only:
+    assert guardian_shock['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in guardian_shock['checks'].items()} == dict(trigger=54, repeat=6, projectile=3, target=4, damage=16)
 hero_adjustment_path = ROOT / 'data/effect-hero-adjustment-evidence.json'
 hero_adjustment = json.loads(hero_adjustment_path.read_text())
-assert hero_adjustment['schema'] == 1 and hero_adjustment['regulationSha256'] == catalog['regulationSha256']
-assert hero_adjustment['exeSha256'] == evidence['exeSha256'] and not hero_adjustment['gameplayVerified']
-assert hero_adjustment['paramSha256'] == evidence['paramSha256']
-assert hero_adjustment['heroStatusParamSha256'] == evidence['heroParamSha256']
-assert len(hero_adjustment['families']) == 10
-assert {k: len(v) for k, v in hero_adjustment['checks'].items()} == dict(single=240, combined=160, roleChange=20, disabled=20, floor=20)
+if not args.extract_only:
+    assert hero_adjustment['schema'] == 1 and hero_adjustment['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert hero_adjustment['exeSha256'] == evidence['exeSha256'] and not hero_adjustment['gameplayVerified']
+if not args.extract_only:
+    assert hero_adjustment['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert hero_adjustment['heroStatusParamSha256'] == evidence['heroParamSha256']
+if not args.extract_only:
+    assert len(hero_adjustment['families']) == 10
+if not args.extract_only:
+    assert {k: len(v) for k, v in hero_adjustment['checks'].items()} == dict(single=240, combined=160, roleChange=20, disabled=20, floor=20)
 successive_recovery_path = ROOT / 'data/effect-successive-recovery-evidence.json'
 successive_recovery = json.loads(successive_recovery_path.read_text())
-assert successive_recovery['schema'] == 1 and successive_recovery['regulationSha256'] == catalog['regulationSha256']
-assert successive_recovery['exeSha256'] == evidence['exeSha256'] and not successive_recovery['gameplayVerified']
-assert successive_recovery['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in successive_recovery['checks'].items()} == dict(threshold=56, mixed=32, markers=40, decay=21, repeat=36, dedupe=6)
+if not args.extract_only:
+    assert successive_recovery['schema'] == 1 and successive_recovery['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert successive_recovery['exeSha256'] == evidence['exeSha256'] and not successive_recovery['gameplayVerified']
+if not args.extract_only:
+    assert successive_recovery['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in successive_recovery['checks'].items()} == dict(threshold=56, mixed=32, markers=40, decay=21, repeat=36, dedupe=6)
 successive_attack_path = ROOT / 'data/effect-successive-attack-evidence.json'
 successive_attack = json.loads(successive_attack_path.read_text())
-assert successive_attack['schema'] == 1 and successive_attack['regulationSha256'] == catalog['regulationSha256']
-assert successive_attack['exeSha256'] == evidence['exeSha256'] and not successive_attack['gameplayVerified']
-assert successive_attack['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in successive_attack['checks'].items()} == dict(selection=12, threshold=11, multipliers=32, kinds=52, markers=20, lifecycle=6, mixed=2)
+if not args.extract_only:
+    assert successive_attack['schema'] == 1 and successive_attack['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert successive_attack['exeSha256'] == evidence['exeSha256'] and not successive_attack['gameplayVerified']
+if not args.extract_only:
+    assert successive_attack['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in successive_attack['checks'].items()} == dict(selection=12, threshold=11, multipliers=32, kinds=52, markers=20, lifecycle=6, mixed=2)
 scholar_tether_path = ROOT / 'data/effect-scholar-tether-evidence.json'
 scholar_tether = json.loads(scholar_tether_path.read_text())
-assert scholar_tether['schema'] == 1 and scholar_tether['regulationSha256'] == catalog['regulationSha256']
-assert scholar_tether['exeSha256'] == evidence['exeSha256'] and not scholar_tether['gameplayVerified']
-assert scholar_tether['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in scholar_tether['checks'].items()} == dict(dispatch=8, projectile=3, damage=36, unlink=12, late=6, repeat=6)
+if not args.extract_only:
+    assert scholar_tether['schema'] == 1 and scholar_tether['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert scholar_tether['exeSha256'] == evidence['exeSha256'] and not scholar_tether['gameplayVerified']
+if not args.extract_only:
+    assert scholar_tether['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in scholar_tether['checks'].items()} == dict(dispatch=8, projectile=3, damage=36, unlink=12, late=6, repeat=6)
 scholar_ailment_path = ROOT / 'data/effect-scholar-ailment-evidence.json'
 scholar_ailment = json.loads(scholar_ailment_path.read_text())
-assert scholar_ailment['schema'] == 1 and scholar_ailment['regulationSha256'] == catalog['regulationSha256']
-assert scholar_ailment['exeSha256'] == evidence['exeSha256'] and not scholar_ailment['gameplayVerified']
-assert scholar_ailment['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in scholar_ailment['checks'].items()} == dict(dispatch=12, projectile=3, targets=10, damage=54, buildup=18, unlink=12, refresh=12, late=3)
+if not args.extract_only:
+    assert scholar_ailment['schema'] == 1 and scholar_ailment['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert scholar_ailment['exeSha256'] == evidence['exeSha256'] and not scholar_ailment['gameplayVerified']
+if not args.extract_only:
+    assert scholar_ailment['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in scholar_ailment['checks'].items()} == dict(dispatch=12, projectile=3, targets=10, damage=54, buildup=18, unlink=12, refresh=12, late=3)
 wylder_flame_path = ROOT / 'data/effect-wylder-flame-evidence.json'
 wylder_flame = json.loads(wylder_flame_path.read_text())
-assert wylder_flame['schema'] == 1 and wylder_flame['regulationSha256'] == catalog['regulationSha256']
-assert wylder_flame['exeSha256'] == evidence['exeSha256'] and not wylder_flame['gameplayVerified']
-assert wylder_flame['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in wylder_flame['checks'].items()} == dict(dispatch=30, emitter=9, chain=3, lifetime=3)
+if not args.extract_only:
+    assert wylder_flame['schema'] == 1 and wylder_flame['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert wylder_flame['exeSha256'] == evidence['exeSha256'] and not wylder_flame['gameplayVerified']
+if not args.extract_only:
+    assert wylder_flame['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in wylder_flame['checks'].items()} == dict(dispatch=30, emitter=9, chain=3, lifetime=3)
 revenant_enchant_path = ROOT / 'data/effect-revenant-enchant-evidence.json'
 revenant_enchant = json.loads(revenant_enchant_path.read_text())
-assert revenant_enchant['schema'] == 1 and revenant_enchant['regulationSha256'] == catalog['regulationSha256']
-assert revenant_enchant['exeSha256'] == evidence['exeSha256'] and not revenant_enchant['gameplayVerified']
-assert revenant_enchant['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in revenant_enchant['checks'].items()} == dict(dispatch=18, emission=6, values=39, timer=12, overwrite=5, correction=4, onset=12, damage=4, frostLifetime=3)
+if not args.extract_only:
+    assert revenant_enchant['schema'] == 1 and revenant_enchant['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert revenant_enchant['exeSha256'] == evidence['exeSha256'] and not revenant_enchant['gameplayVerified']
+if not args.extract_only:
+    assert revenant_enchant['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in revenant_enchant['checks'].items()} == dict(dispatch=18, emission=18, values=78, timer=24, overwrite=5, correction=4, onset=12, damage=4, frostLifetime=3)
 revenant_family_path = ROOT / 'data/effect-revenant-family-evidence.json'
 revenant_family = json.loads(revenant_family_path.read_text())
-assert revenant_family['schema'] == 1 and revenant_family['regulationSha256'] == catalog['regulationSha256']
-assert revenant_family['exeSha256'] == evidence['exeSha256'] and not revenant_family['gameplayVerified']
-assert revenant_family['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in revenant_family['checks'].items()} == dict(dispatch=18, controller=26, emission=6, repeat=15, mapping=6)
+if not args.extract_only:
+    assert revenant_family['schema'] == 1 and revenant_family['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert revenant_family['exeSha256'] == evidence['exeSha256'] and not revenant_family['gameplayVerified']
+if not args.extract_only:
+    assert revenant_family['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in revenant_family['checks'].items()} == dict(dispatch=18, controller=26, emission=6, repeat=15, mapping=6)
 guardian_halberd_path = ROOT / 'data/effect-guardian-halberd-evidence.json'
 guardian_halberd = json.loads(guardian_halberd_path.read_text())
-assert guardian_halberd['schema'] == 1 and guardian_halberd['regulationSha256'] == catalog['regulationSha256']
-assert guardian_halberd['exeSha256'] == evidence['exeSha256'] and not guardian_halberd['gameplayVerified']
-assert guardian_halberd['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in guardian_halberd['checks'].items()} == dict(dispatch=48, emitter=12, chain=4, lifetime=6, radius=20, attackSetup=4)
+if not args.extract_only:
+    assert guardian_halberd['schema'] == 1 and guardian_halberd['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert guardian_halberd['exeSha256'] == evidence['exeSha256'] and not guardian_halberd['gameplayVerified']
+if not args.extract_only:
+    assert guardian_halberd['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in guardian_halberd['checks'].items()} == dict(dispatch=48, emitter=12, chain=4, lifetime=6, radius=20, attackSetup=4)
 wylder_followup_path = ROOT / 'data/effect-wylder-followup-evidence.json'
 wylder_followup = json.loads(wylder_followup_path.read_text())
-assert wylder_followup['schema'] == 1 and wylder_followup['regulationSha256'] == catalog['regulationSha256']
-assert wylder_followup['exeSha256'] == evidence['exeSha256'] and not wylder_followup['gameplayVerified']
-assert wylder_followup['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in wylder_followup['checks'].items()} == dict(script=120, styleScript=6, attackDispatch=6, enchantDispatch=12, values=52, timer=12, overwrite=8, switchHand=2)
+if not args.extract_only:
+    assert wylder_followup['schema'] == 1 and wylder_followup['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert wylder_followup['exeSha256'] == evidence['exeSha256'] and not wylder_followup['gameplayVerified']
+if not args.extract_only:
+    assert wylder_followup['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in wylder_followup['checks'].items()} == dict(script=120, styleScript=6, attackDispatch=6, enchantDispatch=12, values=52, timer=12, overwrite=8, switchHand=2)
 duchess_dagger_path = ROOT / 'data/effect-duchess-dagger-evidence.json'
 duchess_dagger = json.loads(duchess_dagger_path.read_text())
-assert duchess_dagger['schema'] == 1 and duchess_dagger['regulationSha256'] == catalog['regulationSha256']
-assert duchess_dagger['exeSha256'] == evidence['exeSha256'] and not duchess_dagger['gameplayVerified']
-assert duchess_dagger['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in duchess_dagger['checks'].items()} == dict(trigger=45, emptyPayload=3, repeat=12, damage=156, overwrite=5, radius=5, attackSetup=1)
+if not args.extract_only:
+    assert duchess_dagger['schema'] == 1 and duchess_dagger['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert duchess_dagger['exeSha256'] == evidence['exeSha256'] and not duchess_dagger['gameplayVerified']
+if not args.extract_only:
+    assert duchess_dagger['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in duchess_dagger['checks'].items()} == dict(trigger=45, emptyPayload=3, repeat=12, damage=156, overwrite=5, radius=5, attackSetup=1)
 item_sharing_path = ROOT / 'data/effect-item-sharing-evidence.json'
 item_sharing = json.loads(item_sharing_path.read_text())
-assert item_sharing['schema'] == 1 and item_sharing['regulationSha256'] == catalog['regulationSha256']
-assert item_sharing['exeSha256'] == evidence['exeSha256'] and not item_sharing['gameplayVerified']
-assert item_sharing['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in item_sharing['checks'].items()} == dict(selection=252, trigger=144, radius=126, attackSetup=42, arrival=84, cure=21, fp=6, observation=6, refresh=16)
+if not args.extract_only:
+    assert item_sharing['schema'] == 1 and item_sharing['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert item_sharing['exeSha256'] == evidence['exeSha256'] and not item_sharing['gameplayVerified']
+if not args.extract_only:
+    assert item_sharing['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in item_sharing['checks'].items()} == dict(selection=252, trigger=144, radius=126, attackSetup=42, arrival=84, cure=21, fp=6, observation=6, refresh=16)
 guard_aggro_path = ROOT / 'data/effect-guard-aggro-evidence.json'
 guard_aggro = json.loads(guard_aggro_path.read_text())
-assert guard_aggro['schema'] == 1 and guard_aggro['regulationSha256'] == catalog['regulationSha256']
-assert guard_aggro['exeSha256'] == evidence['exeSha256'] and not guard_aggro['gameplayVerified']
-assert guard_aggro['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in guard_aggro['checks'].items()} == dict(script=64, graph=6, dispatch=117, qualification=12, timer=12, score=24)
+if not args.extract_only:
+    assert guard_aggro['schema'] == 1 and guard_aggro['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert guard_aggro['exeSha256'] == evidence['exeSha256'] and not guard_aggro['gameplayVerified']
+if not args.extract_only:
+    assert guard_aggro['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in guard_aggro['checks'].items()} == dict(script=64, graph=6, dispatch=117, qualification=12, timer=12, score=24)
 guard_aggro_families = {str(id): f for f in guard_aggro['families'] for id in f['effects']}
 starting_replacements_path = ROOT / 'data/effect-starting-replacements-evidence.json'
 starting_replacements = json.loads(starting_replacements_path.read_text())
-assert starting_replacements['schema'] == 1 and starting_replacements['regulationSha256'] == catalog['regulationSha256']
-assert starting_replacements['exeSha256'] == evidence['exeSha256'] and not starting_replacements['gameplayVerified']
-assert starting_replacements['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in starting_replacements['checks'].items()} == dict(compatibility=1780, baseline=32, matrix=1085, repeat=105, order=222, scope=10)
+if not args.extract_only:
+    assert starting_replacements['schema'] == 1 and starting_replacements['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert starting_replacements['exeSha256'] == evidence['exeSha256'] and not starting_replacements['gameplayVerified']
+if not args.extract_only:
+    assert starting_replacements['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in starting_replacements['checks'].items()} == dict(compatibility=1780, baseline=32, matrix=1085, repeat=105, order=222, scope=10)
 starting_replacement_families = {str(f['effect']): f for f in starting_replacements['families']}
 equipped_exclusivity_path = ROOT / 'data/effect-equipped-exclusivity-evidence.json'
 equipped_exclusivity = json.loads(equipped_exclusivity_path.read_text())
-assert equipped_exclusivity['schema'] == 1 and equipped_exclusivity['regulationSha256'] == catalog['regulationSha256']
-assert equipped_exclusivity['exeSha256'] == evidence['exeSha256'] and not equipped_exclusivity['gameplayVerified']
-assert equipped_exclusivity['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in equipped_exclusivity['checks'].items()} == dict(selection=300, hero=20, mixed=7, groups=25, attributes=36, attack=1248)
+if not args.extract_only:
+    assert equipped_exclusivity['schema'] == 1 and equipped_exclusivity['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert equipped_exclusivity['exeSha256'] == evidence['exeSha256'] and not equipped_exclusivity['gameplayVerified']
+if not args.extract_only:
+    assert equipped_exclusivity['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in equipped_exclusivity['checks'].items()} == dict(selection=300, hero=20, mixed=7, groups=25, attributes=36, attack=1248)
 equipped_exclusive_families = {str(f['effect']): f for f in equipped_exclusivity['families']}
 critical_attack_path = ROOT / 'data/effect-critical-attack-evidence.json'
 critical_attack = json.loads(critical_attack_path.read_text())
-assert critical_attack['schema'] == 1 and critical_attack['regulationSha256'] == catalog['regulationSha256']
-assert critical_attack['exeSha256'] == evidence['exeSha256'] and not critical_attack['gameplayVerified']
-assert critical_attack['paramSha256'] == evidence['paramSha256']
-assert len(critical_attack['checks']) == 624
+if not args.extract_only:
+    assert critical_attack['schema'] == 1 and critical_attack['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert critical_attack['exeSha256'] == evidence['exeSha256'] and not critical_attack['gameplayVerified']
+if not args.extract_only:
+    assert critical_attack['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert len(critical_attack['checks']) == 1040
 critical_attack_families = {str(f['effect']): f for f in critical_attack['families']}
 
 
@@ -363,91 +584,147 @@ critical_attack_families = {str(f['effect']): f for f in critical_attack['famili
 
 ironeye_ultimate_path = ROOT / 'data/effect-ironeye-ultimate-evidence.json'
 ironeye_ultimate = json.loads(ironeye_ultimate_path.read_text())
-assert ironeye_ultimate['schema'] == 1 and ironeye_ultimate['regulationSha256'] == catalog['regulationSha256']
-assert ironeye_ultimate['exeSha256'] == evidence['exeSha256'] and not ironeye_ultimate['gameplayVerified']
-assert ironeye_ultimate['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in ironeye_ultimate['checks'].items()} == dict(script=32, selection=12, dispatch=12, onset=30, damage=7, repeat=5, lifetime=3)
+if not args.extract_only:
+    assert ironeye_ultimate['schema'] == 1 and ironeye_ultimate['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert ironeye_ultimate['exeSha256'] == evidence['exeSha256'] and not ironeye_ultimate['gameplayVerified']
+if not args.extract_only:
+    assert ironeye_ultimate['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in ironeye_ultimate['checks'].items()} == dict(script=32, selection=12, dispatch=12, onset=30, damage=7, repeat=5, lifetime=3)
 revenant_ghostflame_path = ROOT / 'data/effect-revenant-ghostflame-evidence.json'
 revenant_ghostflame = json.loads(revenant_ghostflame_path.read_text())
-assert revenant_ghostflame['schema'] == 1 and revenant_ghostflame['regulationSha256'] == catalog['regulationSha256']
-assert revenant_ghostflame['exeSha256'] == evidence['exeSha256'] and not revenant_ghostflame['gameplayVerified']
-assert revenant_ghostflame['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in revenant_ghostflame['checks'].items()} == dict(dispatch=8, projectile=3, correction=96, onset=12, damage=21, repeat=4, lifetime=3)
+if not args.extract_only:
+    assert revenant_ghostflame['schema'] == 1 and revenant_ghostflame['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert revenant_ghostflame['exeSha256'] == evidence['exeSha256'] and not revenant_ghostflame['gameplayVerified']
+if not args.extract_only:
+    assert revenant_ghostflame['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in revenant_ghostflame['checks'].items()} == dict(dispatch=8, projectile=3, correction=96, onset=12, damage=21, repeat=4, lifetime=3)
 scholar_feint_path = ROOT / 'data/effect-scholar-feint-evidence.json'
 scholar_feint = json.loads(scholar_feint_path.read_text())
-assert scholar_feint['schema'] == 1 and scholar_feint['regulationSha256'] == catalog['regulationSha256']
-assert scholar_feint['exeSha256'] == evidence['exeSha256'] and not scholar_feint['gameplayVerified']
-assert scholar_feint['paramSha256'] == evidence['paramSha256'] and scholar_feint['scriptSha256'] == scripts['scriptSha256']
-assert {k: len(v) for k, v in scholar_feint['checks'].items()} == dict(rawEvents=27, dispatch=972, script=64)
+if not args.extract_only:
+    assert scholar_feint['schema'] == 1 and scholar_feint['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert scholar_feint['exeSha256'] == evidence['exeSha256'] and not scholar_feint['gameplayVerified']
+if not args.extract_only:
+    assert scholar_feint['paramSha256'] == evidence['paramSha256'] and scholar_feint['scriptSha256'] == scripts['scriptSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in scholar_feint['checks'].items()} == dict(rawEvents=27, dispatch=972, script=64)
 flask_sharing_path = ROOT / 'data/effect-flask-sharing-evidence.json'
 flask_sharing = json.loads(flask_sharing_path.read_text())
-assert flask_sharing['schema'] == 1 and flask_sharing['regulationSha256'] == catalog['regulationSha256']
-assert flask_sharing['exeSha256'] == evidence['exeSha256'] and not flask_sharing['gameplayVerified']
-assert flask_sharing['paramSha256'] == evidence['paramSha256'] and flask_sharing['scriptSha256'] == scripts['scriptSha256']
-assert {k: len(v) for k, v in flask_sharing['checks'].items()} == dict(branches=32, projectile=8, amounts=64, targets=44, sourceModifiers=9, timeline=24)
+if not args.extract_only:
+    assert flask_sharing['schema'] == 1 and flask_sharing['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert flask_sharing['exeSha256'] == evidence['exeSha256'] and not flask_sharing['gameplayVerified']
+if not args.extract_only:
+    assert flask_sharing['paramSha256'] == evidence['paramSha256'] and flask_sharing['scriptSha256'] == scripts['scriptSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in flask_sharing['checks'].items()} == dict(branches=32, projectile=8, amounts=64, targets=44, sourceModifiers=9, timeline=24)
 rally_path = ROOT / 'data/effect-rally-recovery-evidence.json'
 rally = json.loads(rally_path.read_text())
-assert rally['schema'] == 1 and rally['regulationSha256'] == catalog['regulationSha256']
-assert rally['exeSha256'] == evidence['exeSha256'] and not rally['gameplayVerified']
-assert rally['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in rally['checks'].items()} == dict(builders=135, recovery=88, pool=18, timeline=12, repeat=2, healing=4, controls=6)
+if not args.extract_only:
+    assert rally['schema'] == 1 and rally['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert rally['exeSha256'] == evidence['exeSha256'] and not rally['gameplayVerified']
+if not args.extract_only:
+    assert rally['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in rally['checks'].items()} == dict(builders=135, recovery=88, pool=18, timeline=12, repeat=2, healing=4, controls=6)
 attack_nullify_path = ROOT / 'data/effect-attack-nullify-evidence.json'
 attack_nullify = json.loads(attack_nullify_path.read_text())
-assert attack_nullify['schema'] == 1 and attack_nullify['regulationSha256'] == catalog['regulationSha256']
-assert attack_nullify['exeSha256'] == evidence['exeSha256'] and not attack_nullify['gameplayVerified']
-assert attack_nullify['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in attack_nullify['checks'].items()} == dict(predicate=24, rolls=200, controls=8, ailments=21, repeat=2)
+if not args.extract_only:
+    assert attack_nullify['schema'] == 1 and attack_nullify['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert attack_nullify['exeSha256'] == evidence['exeSha256'] and not attack_nullify['gameplayVerified']
+if not args.extract_only:
+    assert attack_nullify['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in attack_nullify['checks'].items()} == dict(predicate=24, rolls=200, controls=8, ailments=21, repeat=2)
 ailment_growth_path = ROOT / 'data/effect-ailment-growth-evidence.json'
 ailment_growth = json.loads(ailment_growth_path.read_text())
-assert ailment_growth['schema'] == 1 and ailment_growth['regulationSha256'] == catalog['regulationSha256']
-assert ailment_growth['exeSha256'] == evidence['exeSha256'] and not ailment_growth['gameplayVerified']
-assert ailment_growth['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in ailment_growth['checks'].items()} == dict(gauges=63, activeStates=14, growth=6, numeric=50, timeline=3, clear=6)
+if not args.extract_only:
+    assert ailment_growth['schema'] == 1 and ailment_growth['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert ailment_growth['exeSha256'] == evidence['exeSha256'] and not ailment_growth['gameplayVerified']
+if not args.extract_only:
+    assert ailment_growth['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in ailment_growth['checks'].items()} == dict(gauges=63, activeStates=14, growth=6, numeric=50, timeline=3, clear=6)
 frost_stealth_path = ROOT / 'data/effect-frost-stealth-evidence.json'
 frost_stealth = json.loads(frost_stealth_path.read_text())
-assert frost_stealth['schema'] == 1 and frost_stealth['regulationSha256'] == catalog['regulationSha256']
-assert frost_stealth['exeSha256'] == evidence['exeSha256'] and not frost_stealth['gameplayVerified']
-assert frost_stealth['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in frost_stealth['checks'].items()} == dict(onset=12, projectile=3, recipients=33, lifetime=18, repeat=16, sourceVariants=6)
+if not args.extract_only:
+    assert frost_stealth['schema'] == 1 and frost_stealth['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert frost_stealth['exeSha256'] == evidence['exeSha256'] and not frost_stealth['gameplayVerified']
+if not args.extract_only:
+    assert frost_stealth['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in frost_stealth['checks'].items()} == dict(onset=12, projectile=3, recipients=33, lifetime=18, repeat=16, sourceVariants=6)
 duchess_stealth_path = ROOT / 'data/effect-duchess-stealth-evidence.json'
 duchess_stealth = json.loads(duchess_stealth_path.read_text())
-assert duchess_stealth['schema'] == 1 and duchess_stealth['regulationSha256'] == catalog['regulationSha256']
-assert duchess_stealth['exeSha256'] == evidence['exeSha256'] and not duchess_stealth['gameplayVerified']
-assert duchess_stealth['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in duchess_stealth['checks'].items()} == dict(rawEvents=3, dispatch=12, lifetime=9, repeat=10, damage=9)
+if not args.extract_only:
+    assert duchess_stealth['schema'] == 1 and duchess_stealth['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert duchess_stealth['exeSha256'] == evidence['exeSha256'] and not duchess_stealth['gameplayVerified']
+if not args.extract_only:
+    assert duchess_stealth['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in duchess_stealth['checks'].items()} == dict(rawEvents=3, dispatch=12, lifetime=9, repeat=10, damage=9)
 undertaker_contact_path = ROOT / 'data/effect-undertaker-contact-evidence.json'
 undertaker_contact = json.loads(undertaker_contact_path.read_text())
-assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
-assert undertaker_contact['exeSha256'] == evidence['exeSha256'] and not undertaker_contact['gameplayVerified']
-assert undertaker_contact['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in undertaker_contact['checks'].items()} == dict(dispatch=32, target=8, healing=24, arrival=24, lateQualification=3)
+if not args.extract_only:
+    assert undertaker_contact['schema'] == 1 and undertaker_contact['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert undertaker_contact['exeSha256'] == evidence['exeSha256'] and not undertaker_contact['gameplayVerified']
+if not args.extract_only:
+    assert undertaker_contact['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in undertaker_contact['checks'].items()} == dict(dispatch=32, target=8, healing=24, arrival=24, lateQualification=3)
 guardian_ultimate_path = ROOT / 'data/effect-guardian-ultimate-evidence.json'
 guardian_ultimate = json.loads(guardian_ultimate_path.read_text())
-assert guardian_ultimate['schema'] == 1 and guardian_ultimate['regulationSha256'] == catalog['regulationSha256']
-assert guardian_ultimate['exeSha256'] == evidence['exeSha256'] and not guardian_ultimate['gameplayVerified']
-assert guardian_ultimate['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in guardian_ultimate['checks'].items()} == dict(dispatch=32, target=12, numeric=15, damage=30, refresh=24, lifetime=6, replenishment=6)
+if not args.extract_only:
+    assert guardian_ultimate['schema'] == 1 and guardian_ultimate['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert guardian_ultimate['exeSha256'] == evidence['exeSha256'] and not guardian_ultimate['gameplayVerified']
+if not args.extract_only:
+    assert guardian_ultimate['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in guardian_ultimate['checks'].items()} == dict(dispatch=32, target=12, numeric=15, damage=30, refresh=24, lifetime=6, replenishment=6)
 
 raider_growth_path = ROOT / 'data/effect-raider-growth-evidence.json'
 raider_growth = json.loads(raider_growth_path.read_text())
-assert raider_growth['schema'] == 1 and raider_growth['regulationSha256'] == catalog['regulationSha256']
-assert raider_growth['exeSha256'] == evidence['exeSha256'] and not raider_growth['gameplayVerified']
-assert raider_growth['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in raider_growth['checks'].items()} == dict(dispatch=8, growth=18, numeric=110, repeat=5, stable=3)
+if not args.extract_only:
+    assert raider_growth['schema'] == 1 and raider_growth['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert raider_growth['exeSha256'] == evidence['exeSha256'] and not raider_growth['gameplayVerified']
+if not args.extract_only:
+    assert raider_growth['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in raider_growth['checks'].items()} == dict(dispatch=8, growth=18, numeric=110, repeat=5, stable=3)
 
 raider_skill_path = ROOT / 'data/effect-raider-skill-evidence.json'
 raider_skill = json.loads(raider_skill_path.read_text())
-assert raider_skill['schema'] == 1 and raider_skill['regulationSha256'] == catalog['regulationSha256']
-assert raider_skill['exeSha256'] == evidence['exeSha256'] and not raider_skill['gameplayVerified']
-assert raider_skill['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in raider_skill['checks'].items()} == dict(script=8, dispatch=72, numeric=88, maintenance=18, transition=6, overlap=6)
+if not args.extract_only:
+    assert raider_skill['schema'] == 1 and raider_skill['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert raider_skill['exeSha256'] == evidence['exeSha256'] and not raider_skill['gameplayVerified']
+if not args.extract_only:
+    assert raider_skill['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in raider_skill['checks'].items()} == dict(script=8, dispatch=72, numeric=88, maintenance=18, transition=6, overlap=6)
 
 duchess_poise_path = ROOT / 'data/effect-duchess-poise-evidence.json'
 duchess_poise = json.loads(duchess_poise_path.read_text())
-assert duchess_poise['schema'] == 1 and duchess_poise['regulationSha256'] == catalog['regulationSha256']
-assert duchess_poise['exeSha256'] == evidence['exeSha256'] and not duchess_poise['gameplayVerified']
-assert duchess_poise['paramSha256'] == evidence['paramSha256']
-assert {k: len(v) for k, v in duchess_poise['checks'].items()} == dict(dispatch=32, emission=3, consumer=28, refresh=12, lifetime=3)
+if not args.extract_only:
+    assert duchess_poise['schema'] == 1 and duchess_poise['regulationSha256'] == catalog['regulationSha256']
+if not args.extract_only:
+    assert duchess_poise['exeSha256'] == evidence['exeSha256'] and not duchess_poise['gameplayVerified']
+if not args.extract_only:
+    assert duchess_poise['paramSha256'] == evidence['paramSha256']
+if not args.extract_only:
+    assert {k: len(v) for k, v in duchess_poise['checks'].items()} == dict(dispatch=32, emission=3, consumer=28, refresh=12, lifetime=3)
 
 TOTEM_LEAVES = {7310000: [7310001, 7310002, 7310003, 704100],
                 7030000: [7030002, 7030003],
@@ -584,7 +861,7 @@ if args.extract:
             if root == duchess_stealth['root']:
                 needed.update(map(int, duchess_stealth['rows']))
             if root == wylder_bleed['root']:
-                needed.add(wylder_bleed['leaf'])
+                needed.update((wylder_bleed['leaf'], 7500001))
             if root == ironeye_poison['root']:
                 needed.update(ironeye_poison['leaves'])
             if root == raider_debuff['root']:
@@ -635,6 +912,9 @@ if args.extract:
                   spells={str(id): {k: round(v, 6) for k, v in spells[str(id)].items() if k in FIELDS}
                           for id in sorted(needed) if str(id) in spells})
     source_path.write_text(json.dumps(source, ensure_ascii=False, separators=(',', ':')) + '\n')
+if args.extract_only:
+    print('Extracted current effect snapshot; native evidence has not been validated yet')
+    raise SystemExit(0)
 source = json.loads(source_path.read_text())
 assert source['schema'] == 1
 assert source['hashes']['regulation.bin'] == catalog['regulationSha256'] == profile['input_sha256']['regulation.bin']
@@ -802,6 +1082,7 @@ def block(id, phase, linked, known_states=frozenset()):
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
     'critical-normal': ('可叠加', '普通版重复装备时倍率相乘；两条合计 +39.24%', ['critical-attack']),
+    'critical-shop': ('可叠加', '商店版＋１重复装备时倍率相乘；可与普通版、非商店版＋１叠加', ['critical-attack']),
     'critical-plus': ('不同等级可叠加', '＋１版只生效一条；可与普通版倍率相乘', ['critical-attack']),
     'guardian-recovery': ('不可叠加', '同类恢复只刷新有效期', ['recovery-emitter', 'recovery-arrival']),
     'guardian-skill': ('不可叠加', '重复装备不增加单次恢复量', ['guardian-skill']),
@@ -823,7 +1104,7 @@ STACKING_RULES = {
     'hero-adjustment': ('不可叠加', '同一词条只生效一次；不同词条的增减相加', ['hero-adjustment']),
     'successive-recovery': ('可叠加', '恢复量相加；累积衰减也叠加', ['successive-recovery']),
     'successive-attack': ('不可叠加', '重复装备不增加增伤或累积速度', ['successive-attack']),
-    'scholar-tether': ('不可叠加', '重复装备不增加单次伤害', ['scholar-tether']),
+    'scholar-tether': ('待确认', '', ['scholar-tether']),
     'scholar-ailment': ('不可叠加', '同类效果再次施加刷新时长，不叠加倍率', ['scholar-ailment']),
     'wylder-flame': ('不可叠加', '重复装备不增加火焰数量或持续时间', ['wylder-flame']),
     'revenant-enchant': ('不可叠加', '再次施加刷新附魔时长，不叠加数值', ['revenant-enchant']),
@@ -959,9 +1240,10 @@ for id, effect in source['effects'].items():
         root = next(iter(effect['roots'].values()))
         measured = [r for r in discovery['selection'] if r['ids'] == [root]]
         assert len(measured) == 10 and all(r['bias'] == roots[0]['weaponTypeDiscovery'] for r in measured)
-        assert name.startswith('通过潜在能力，能比较容易找到')
+        prefix = next((p for p in ('通过潜在能力，能比较容易找到', '通过潜在能力，比较容易找到') if name.startswith(p)), None)
+        assert prefix is not None
         blocks = [dict(source=root, phase='潜在能力奖励', linked=False,
-                       values=[['武器倾向', name.removeprefix('通过潜在能力，能比较容易找到')]],
+                       values=[['武器倾向', name.removeprefix(prefix)]],
                        restrictions=['替换角色默认倾向'], scope=[], duration=None, interval=None)]
         notes.append('仅影响支持武器倾向的奖励；具体概率随奖池和候选权重变化。')
     if len(roots) == 1 and list(effect['roots'].values())[0] in (7033200, 7270100):
@@ -1263,9 +1545,9 @@ for id, effect in source['effects'].items():
         r = source['spells'][str(scholar_tether['leaf'])]
         assert r['changeHpPoint'] == 15 and r['changeHpRate'] == 0
         assert r['effectEndurance'] == 20 and r['motionInterval'] == 1 and r['invocationConditionsStateChange1'] == 2222
-        blocks = [dict(source=scholar_tether['leaf'], phase='连结期间', linked=True,
-                       values=[['HP 伤害', '15 点／次']], restrictions=['仅连结期间计时'], scope=[], duration=20, interval=1)]
-        notes.extend(['未连结时暂停；连结后继续剩余时间。', '多次绝招施加的持续伤害各自计时，可叠加。'])
+        assert scholar_tether['routeConfirmed'] is False
+        blocks = []
+        notes.append('本版本的连结持续伤害触发路径尚未确认。')
         rule = 'scholar-tether'
     if int(id) == ironeye_ultimate['root']:
         assert list(effect['roots'].values()) == [ironeye_ultimate['root']] and effect['runtimeExclusive'] == -1
@@ -1301,11 +1583,11 @@ for id, effect in source['effects'].items():
     if id in critical_attack_families:
         family = critical_attack_families[id]
         assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == family['exclusive']
-        assert math.isclose(source['spells'][id]['physicsAttackRate'], family['rate'], rel_tol=1e-6)
+        assert math.isclose(source['spells'][str(family['root'])]['physicsAttackRate'], family['rate'], rel_tol=1e-6)
         assert len(blocks) == 1 and blocks[0]['duration'] is None
         blocks[0]['phase'] = '致命一击时'
         notes.append('普通版与＋１版各一条时，致命一击攻击倍率合计 +45.14%。')
-        rule = 'critical-normal' if id == '7040200' else 'critical-plus'
+        rule = 'critical-normal' if id == '7040200' else ('critical-shop' if id == '7040202' else 'critical-plus')
     if id in equipped_exclusive_families:
         family = equipped_exclusive_families[id]
         assert list(effect['roots'].values()) == [family['root']] and effect['runtimeExclusive'] == family['exclusive']
@@ -1384,15 +1666,15 @@ for id, effect in source['effects'].items():
         assert list(effect['roots'].values()) == [revenant_enchant['root']]
         buff = source['spells'][str(revenant_enchant['enchant'])]
         frost = source['spells'][str(revenant_enchant['frost'])]
-        assert buff['magicAttackPower'] == 60 and buff['effectEndurance'] == 20
+        assert buff['magicAttackPower'] == 50 and buff['effectEndurance'] == 20
         assert frost['freezeAttackPower'] == 40 and frost['effectEndurance'] == 30
         blocks = [dict(source=revenant_enchant['enchant'], phase='召唤家人时', linked=True,
-                       values=[['魔力基础攻击力', '+60'], ['冻伤基础累积', '40']], restrictions=['右手武器'], scope=[], duration=20, interval=None),
+                       values=[['魔力基础攻击力', '+50'], ['冻伤基础累积', '40']], restrictions=['可附魔武器；双持左手时附魔左手，否则附魔右手'], scope=[], duration=20, interval=None),
                   dict(source=revenant_enchant['frost'], phase='冻伤发作时', linked=True,
                        values=[['冻伤伤害', '最大血量的 10% + 50']], restrictions=[], scope=[], duration=None, interval=None),
                   dict(source=revenant_enchant['frost'], phase='冻伤期间', linked=True,
                        values=[['承伤倍率', '+15%']], restrictions=[], scope=[], duration=30, interval=None)]
-        notes.extend(['与同类右手附魔互相覆盖，保留后施加的效果。', '冻伤期间再次命中不刷新这次冻伤时长。'])
+        notes.extend(['与同手同类附魔互相覆盖，保留后施加的效果。', '冻伤期间再次命中不刷新这次冻伤时长。'])
         rule = 'revenant-enchant'
     if int(id) in wylder_flame['effects']:
         assert list(effect['roots'].values()) == [wylder_flame['root']]
@@ -1551,7 +1833,9 @@ for id, effect in source['effects'].items():
         bleed_row = source['spells']['7500002']
         assert bleed_row['bloodAttackPower'] == 55 and bleed_row['effectEndurance'] == 1
         assert bleed_row['changeHpRate'] == 12.5 and bleed_row['changeHpPoint'] == 100
-        blocks = [dict(source=7500002, phase='技艺拉拽攻击命中时', linked=True,
+        blocks = [dict(source=7500001, phase='技艺发射命中时', linked=True,
+                       values=[['出血基础累积', '60']], scope=[], restrictions=[], duration=None, interval=None),
+                  dict(source=7500002, phase='技艺拉拽攻击命中时', linked=True,
                        values=[['出血基础累积', '55']], scope=[], restrictions=[], duration=None, interval=None),
                   dict(source=7500002, phase='出血发作时', linked=True,
                        values=[['出血伤害', '最大血量的 12.5% + 100']], scope=[], restrictions=[], duration=None, interval=None)]
@@ -1672,18 +1956,18 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         rule = 'duchess-evasion'
     if 7220300 in effect['roots'].values():
-        assert source['spells']['7220305']['physicsAttackRate'] == 1.15
-        assert source['spells']['7220305']['effectEndurance'] == 20
-        assert source['spells']['7220306']['changeMpRate'] == -10
+        assert source['spells']['7220305']['physicsAttackRate'] == 1.1
+        assert source['spells']['7220305']['effectEndurance'] == 30
+        assert source['spells']['7220306']['changeMpRate'] == -25
         assert source['spells']['7220302']['effectEndurance'] == 15
         assert source['spells']['7220302']['motionInterval'] == 2
         blocks = [dict(source=7220305, branches=[7220301, 7220302, 7220303, 7220304],
-                       phase='触发后', linked=True, values=[['攻击倍率', '+15%']],
-                       restrictions=[], scope=[], duration=20, interval=None),
-                  dict(source=7220306, phase='触发时', linked=True, values=[['FP 恢复', '最大值的 10%']],
+                       phase='触发后', linked=True, values=[['攻击倍率', '+10%']],
+                       restrictions=[], scope=[], duration=30, interval=None),
+                  dict(source=7220306, phase='触发时', linked=True, values=[['FP 恢复', '最大值的 25%']],
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.extend(['绝招的触发窗口持续 15 秒，每 2 秒重新准备一次受损触发；未消耗的机会在窗口结束时结算。',
-                      '多次触发的攻击倍率相乘、分别计时；两次合计 +32.25%。'])
+                      '多次触发的攻击倍率相乘、分别计时；两次合计 +21%。'])
         rule = 'role-repeat'
     if 7032700 in effect['roots'].values():
         assert [source['spells'][str(i)]['physicsAttackRate'] for i in (7032704, 7032706)] == [1.15, 1.05]
@@ -1731,20 +2015,16 @@ for id, effect in source['effects'].items():
     grown = [growth['roots'][str(root)] for root in effect['roots'].values() if str(root) in growth['roots']]
     if grown and grown[0].get('family') == 'special-locations':
         record = grown[0]
-        assert [ladder['stages'][0] for ladder in record['ladders']] == [7069001, 7069021]
-        blocks = []
-        for ladder, phase, restrictions in zip(record['ladders'],
-                ['封印监牢／入侵者／魔法师塔', '据点目标／拟态敌人'],
-                [['封印监牢最多 3 档；入侵者最多 2 档；解锁魔法师塔触发 1 档'],
-                 ['据点目标通常 1 档，部分目标 2 档，最多计 8 档；拟态敌人最多计 2 档（需击败变身后的目标）', '两类来源共用成长，最多 10 档']]):
-            first = ladder['stages'][0]
-            rate = source['spells'][str(first)]['physicsAttackRate']
-            assert all(abs(source['spells'][str(sp)]['physicsAttackRate'] - rate ** stage) < .001
-                       for stage,sp in enumerate(ladder['stages'], 1))
-            blocks.append(dict(source=first, branches=ladder['stages'][1:], phase=phase, linked=True,
-                               values=[['每档攻击倍率', '约 ' + signed((rate - 1) * 100) + '%']],
-                               restrictions=restrictions, scope=[], duration=None, interval=None))
-        notes.append('两组成长可同时生效，倍率相乘。')
+        assert len(record['ladders']) == 1
+        ladder = record['ladders'][0]
+        assert ladder['stages'] == list(range(7069001, 7069041))
+        assert all(abs(source['spells'][str(sp)]['physicsAttackRate'] - (1 + stage / 100)) < .00001
+                   for stage, sp in enumerate(ladder['stages'], 1))
+        labels = {8150:'封印监牢',8155:'入侵者',8135:'拟态敌人',8140:'魔法师塔',8180:'据点目标'}
+        values = [[labels[r['counter']], '+' + str(r['grantsPerCompletion']) + '%／次，最多计 ' + str(r['completionLimit']) + ' 次'] for r in record['sources']]
+        blocks = [dict(source=7069001, branches=ladder['stages'][1:], phase='完成特殊地点目标时', linked=True,
+            values=values, restrictions=['拟态敌人需击败变身后的目标；部分据点目标按两次计'], scope=[], duration=None, interval=None)]
+        notes.append('各来源合并累计，每档增加 1 个百分点，参数上限为攻击倍率 +40%。')
         rule = 'growth'
     elif grown:
         assert len(grown) == 1
@@ -1841,7 +2121,7 @@ for id in sorted(source['effects'], key=int):
         questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('critical-normal', 'critical-plus', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
     if rules[id] not in ('role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
@@ -1890,7 +2170,7 @@ for id in sorted(source['effects'], key=int):
     if rules[id] == 'successive-attack':
         questions.append('各攻击命中标记的实际投递与权重、完整攻击上下文和动作中断、实时调度／最终伤害、死亡／重载及多人交互')
     if rules[id] == 'scholar-tether':
-        questions.append('完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理')
+        questions.append('本版本 BehaviorParam_PC 已无通往持续伤害弹体的直接引用，实际触发路径待确认；完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理')
     if rules[id] == 'ironeye-ultimate':
         questions.append('子弹体攻击上下文与异常继承、同目标命中去重、完整蓄力动作中断／实时调度、异常修正与抵抗成长、其他中毒覆盖、最终 HP 写入及多人／重载交互')
     if rules[id] == 'revenant-ghostflame':
@@ -1942,7 +2222,7 @@ for id in sorted(source['effects'], key=int):
     if rules[id] == 'duchess-poise':
         questions.append('完整发射位置／碰撞到达与动作中断、敌人基础强韧及恢复资产、实际失衡反应与多人／死亡／重载交互')
     if rules[id] == 'wylder-bleed':
-        questions.append('发射阶段引用缺失的 Behavior 600000030，60 点叶效果 7500001 暂无实际引用；需核对额外运行时路径')
+        questions.append('完整技艺碰撞、命中去重与不同目标的出血抵抗；发射与拉拽路径均已在 Hotfix1 参数中确认')
         questions.append('完整攻击／异常修正输入、碰撞与目标限制、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互')
     if rules[id] == 'ironeye-poison':
         questions.append('完整攻击构造／异常修正输入、命中发作当帧的效果队列顺序、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互')
@@ -1993,7 +2273,7 @@ for id in sorted(source['effects'], key=int):
     ledger[id] = dict(name=catalog['effects'][id]['name']['zh_CN'], obtainable=id in obtainable, roots=effect['roots'], states=states,
                       detailSources=[sp for b in detail['blocks'] for sp in [b['source'], *b.get('branches', [])]],
                       values='decoded-fields' if numeric else ('decoded-mechanism' if rules[id] in ('discovery', 'undertaker-reset', 'treasure-map', 'revenant-family') else ('named-replacement' if detail['blocks'] else 'unresolved')),
-                      stacking='native-analysis' if rules[id] != 'unknown' else 'unresolved',
+                      stacking='native-analysis' if detail['stacking'] != '待确认' else 'unresolved',
                       stackingCategory=detail['stacking'],
                       evidence=refs, openQuestions=questions, gameplayVerified=False)
 coverage = dict(obtainable=len(obtainable), withDetails=sum(bool(result[e]['blocks']) for e in obtainable),

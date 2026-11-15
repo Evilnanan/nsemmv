@@ -1,16 +1,16 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
   "assetHashes": {
-    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
-    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
-    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
-    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "AtkParam_Pc": "1ec1893420053cbfb06e3efb269ade4ba9d6a617d1d3dbb370e837847be05676",
+    "BehaviorParam_PC": "f8fa3fd27cb98d45a3e24c69d71d8751df9202e6e379dc34fd77d4ef2e1240bb",
+    "Bullet": "ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44",
+    "weapon": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea",
     "common": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
     "tae": "05df3be3ccba558f65f2632d1e08b109c6708821efd304fdb454a553235e5949",
-    "behaviorGraph": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4"
+    "behaviorGraph": "8ea4b1c176f25d804890d5c08b90fbaf077581ae67ca73a7a9ef47655f8b6b32"
   },
   "root": 7036700,
   "leaf": 7036701,
@@ -20,12 +20,12 @@
   ],
   "state": {
     "state": "JointChainStart",
-    "stateItem": 20976,
+    "stateItem": 21029,
     "generator": "JointChainStart_CMSG",
-    "generatorItem": 22387,
-    "arrayItem": 24309,
+    "generatorItem": 22453,
+    "arrayItem": 24394,
     "clip": "a908_680000_hkx_AutoSet_01",
-    "clipItem": 26706,
+    "clipItem": 26824,
     "animation": "a908_680000"
   },
   "events": [

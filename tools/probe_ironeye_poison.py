@@ -20,7 +20,7 @@ for name in ('exe','extracted','assets','animations','behavior','output'):p.add_
 a=p.parse_args();inputs=Inputs(a.exe,a.extracted)
 assets=json.loads(a.assets.read_text());tae=json.loads(a.animations.read_text());graph=BehaviorGraph(a.behavior)
 assert assets['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 behavior_raw=a.extracted.with_suffix('.BehaviorParam_PC.param').read_bytes()
 attack_raw=a.extracted.with_suffix('.AtkParam_Pc.param').read_bytes()
 weapon_raw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes()
@@ -49,8 +49,8 @@ assert len(events)==4
 for e in events:
     raw=bytes.fromhex(e['hex']);assert struct.unpack_from('<i',raw,8)[0]==6120 and raw[13]==3
 paths=[]
-for state,blender,selector,expected in ((32495,41924,60811,['a902_525000','a902_525005']),
-                                       (32496,41926,60814,['a902_520000','a902_520005'])):
+for state,blender,selector,expected in ((graph.named('AirHurtDaggerAttack', 'hkbStateMachine::StateInfo'),graph.named('AirHurtDaggerAttack Blend', 'hkbBlenderGenerator'),graph.named('AirHurtDaggerAttack Selector', 'hkbManualSelectorGenerator'),['a902_525000','a902_525005']),
+                                       (graph.named('HurtDaggerAttack', 'hkbStateMachine::StateInfo'),graph.named('HurtDaggerAttack Blend', 'hkbBlenderGenerator'),graph.named('HurtDaggerAttack Selector', 'hkbManualSelectorGenerator'),['a902_520000','a902_520005'])):
     assert graph.reference(state,'generator')==blender
     children=graph.blender_children(blender);assert children[0]['generator']==selector
     binding=graph.selector_binding(selector);assert binding['name']=='HurtDaggerIndex'

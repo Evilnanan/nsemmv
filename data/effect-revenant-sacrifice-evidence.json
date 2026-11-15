@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
-  "scriptSha256": "786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "animationSha256": "806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a",
+  "scriptSha256": "96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29",
   "root": 7010900,
   "rows": {
     "7010900": {
@@ -100,11 +100,11 @@
   "functions": {
     "NearDeathStart_onActivate": {
       "sha256": "9d19336f6632098185af938d4b94ce76e40b42d1b02bf83108e20469e6796461",
-      "line": 11458
+      "line": 11548
     },
     "NearDeathRevival_onActivate": {
       "sha256": "ae21dbfefdfe2d04e85d842fddf6997f2559cd43033c928ca97dbfaf9d6ca99c",
-      "line": 11515
+      "line": 11605
     }
   },
   "bullet": {

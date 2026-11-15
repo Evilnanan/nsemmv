@@ -216,7 +216,7 @@ assert b['refType']==1 and b['refId']==30908011
 assert bullet['atkId_Bullet']==700000410 and bullet['spEffectId0']==leaf
 assert bullet['hitRadius']==30 and bullet['numShoot']==1 and bullet['isEndlessHit']==0
 assert bullet['HitBulletID']==bullet['intervalCreateBulletId']==-1 and math.isclose(bullet['life'],.1,abs_tol=1e-7)
-assert [attack[k] for k in ('selfTarget','friendlyTarget','opposeTarget','disableHitSpEffect','subCategory1')]==[0,0,1,0,123]
+assert [attack[k] for k in ('selfTarget','friendlyTarget','opposeTarget','disableHitSpEffect','subCategory1')]==[0,0,1,0,112]
 events=[dict(animation=an['ID'],**e) for an in track['animations'] if an['ID']==680000 for e in an['events'] if e['Type']==2 and struct.unpack_from('<i',bytes.fromhex(e['hex']),8)[0] in (7400,7401)]
 assert len(events)==2 and [e['index'] for e in events]==[4,61]
 assert all(math.isclose(e['StartTime'],2.5,abs_tol=1e-7) for e in events)

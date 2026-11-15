@@ -26,7 +26,7 @@ exe = a.exe.read_bytes()
 assert sha(exe) == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
 x = json.loads(a.discovery.read_text())
 effects = json.loads(a.effects.read_text())
-assert x['hashes']['regulation.bin'] == effects['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+assert x['hashes']['regulation.bin'] == effects['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
 pe = pefile.PE(data=exe, fast_load=True)
 BASE = pe.OPTIONAL_HEADER.ImageBase
 OBJ, STACK, STOP = 0x10000000, 0x20000000, 0x30000000
@@ -45,7 +45,7 @@ sp_raw, sp_rows = raw_table(a.effects.with_suffix('.SpEffectParam.param'))
 heroes = {id: hero_raw[offset:offset + 0xa8] for id, offset in hero_rows}
 spells = {id: sp_raw[offset:offset + 0x400] for id, offset in sp_rows}
 ordered = x['orderedTables']['ItemTableParam']
-assert len(ordered) == len(lot_rows) == 35755
+assert len(ordered) == len(lot_rows) == 36058
 groups = collections.defaultdict(list)
 for index, ((id, offset), decoded) in enumerate(zip(lot_rows, ordered)):
     assert id == decoded['id']
@@ -55,12 +55,11 @@ for index, ((id, offset), decoded) in enumerate(zip(lot_rows, ordered)):
                             ('unknown_7',24,'i'), ('weaponTypeDiscovery',32,'i')]:
         assert struct.unpack_from('<' + fmt, lot_raw, offset + pos)[0] == r[name]
     groups[id].append(index)
-for indices in groups.values():
-    assert indices == list(range(indices[0], indices[0] + len(indices)))
+noncontiguous = [id for id, indices in groups.items() if indices != list(range(indices[0], indices[0] + len(indices)))]
 for id, row in heroes.items():
     assert struct.unpack_from('<i', row, 0x98)[0] == x['tables']['HeroParam'][str(id)]['defaultWeaponTypeDiscovery']
 bias_roots = {int(id): int(r['weaponTypeDiscovery']) for id, r in effects['tables']['SpEffectParam'].items() if r['stateInfo'] == 2122}
-stubs = set()
+stubs = {'explicit group membership supplied from PARAM IDs; original row payloads retained; runtime group-index construction not executed'}
 
 def execute(rva, args, setup, random=0.5, active_flags=()):
     u = Uc(UC_ARCH_X86, UC_MODE_64)
@@ -148,7 +147,10 @@ def draw(group,hero,bias,random=0.5,active_flags=(),used=()):
     indices=groups[group]
     def setup(u):
         u.mem_write(TABLE,lot_raw)
-        u.mem_write(OBJ,struct.pack('<Qiiii',TABLE,indices[0],indices[-1]+1,group,len(indices)))
+        # Supply this group's actual row headers; game group-index construction is outside this probe.
+        for local, source in enumerate(indices):
+            u.mem_write(TABLE + 0x40 + local * 24, lot_raw[0x40 + source * 24:0x40 + (source + 1) * 24])
+        u.mem_write(OBJ,struct.pack('<Qiiii',TABLE,0,len(indices),group,len(indices)))
         u.mem_write(OBJ+0x500,struct.pack('<QQQQ',0,USED,USED+12*len(used),USED+0x1000))
         for i,row in enumerate(used):u.mem_write(USED+i*12,struct.pack('<iii',*row))
     u,cumulative=execute(0xe79680,[OBJ,hero,bias,OBJ+0x500],setup,random,active_flags)
@@ -206,6 +208,6 @@ snapshot=[dict(index=i,id=ordered[i]['id'],fields=ordered[i]['fields'])for i in 
 a.output.write_text(json.dumps(dict(schema=1,exeSha256=sha(exe),regulationSha256=x['hashes']['regulation.bin'],
     paramSha256={'ItemTableParam':sha(lot_raw),'HeroParam':sha(hero_raw),'SpEffectParam':sha(sp_raw)},
     definitionHashes={k:v for k,v in x['hashes'].items() if k.startswith('defs/')},
-    rowCount=len(ordered),groupCount=len(groups),biasedGroups=biased_groups,selection=selection,draws=draws,rows=snapshot,
+    rowCount=len(ordered),groupCount=len(groups),noncontiguousGroups=noncontiguous,biasedGroups=biased_groups,selection=selection,draws=draws,rows=snapshot,
     stubs=sorted(stubs),gameplayVerified=False),ensure_ascii=False,indent=2)+'\n')
 print(f'PASS: bias selection={len(selection)}, native weighted draws={len(draws)}, ordered rows={len(ordered)}')

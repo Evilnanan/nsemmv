@@ -24,7 +24,7 @@ Directory.SetCurrentDirectory(game);
 string Hash(string path) => Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path))).ToLowerInvariant();
 var regulation = Path.Combine(mod, "regulation.bin");
 var hashes = new SortedDictionary<string, string> { ["regulation.bin"] = Hash(regulation) };
-if (hashes["regulation.bin"] != "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06")
+if (hashes["regulation.bin"] is not ("3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06" or "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342"))
     throw new InvalidDataException("Unsupported regulation hash");
 var binder = SFUtil.DecryptNightreignRegulation(regulation);
 if (binder.Version != "10350000") throw new InvalidDataException("Unsupported regulation version");

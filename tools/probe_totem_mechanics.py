@@ -22,9 +22,9 @@ exe=a.exe.read_bytes()
 assert sha(exe)=='9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
 pe=pefile.PE(data=exe,fast_load=True)
 x=json.loads(a.effects.read_text());assets=json.loads(a.assets.read_text())
-assert x['hashes']['regulation.bin']==assets['hashes']['regulation.bin']=='3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+assert x['hashes']['regulation.bin']==assets['hashes']['regulation.bin']=='f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
 tae=json.loads(a.animations.read_text())
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 
 def table(path,size):
  raw=Path(path).read_bytes();return {struct.unpack_from('<i',raw,0x40+i*24)[0]:raw[off:off+size] for i in range(struct.unpack_from('<H',raw,10)[0]) for off in [struct.unpack_from('<Q',raw,0x48+i*24)[0]]}

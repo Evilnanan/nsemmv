@@ -1,62 +1,62 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "behaviorParamSha256": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
-  "attackParamSha256": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
-  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
-  "animationBundleSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
-  "behaviorSha256": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "behaviorParamSha256": "f8fa3fd27cb98d45a3e24c69d71d8751df9202e6e379dc34fd77d4ef2e1240bb",
+  "attackParamSha256": "1ec1893420053cbfb06e3efb269ade4ba9d6a617d1d3dbb370e837847be05676",
+  "weaponParamSha256": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea",
+  "animationBundleSha256": "806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a",
+  "behaviorSha256": "8ea4b1c176f25d804890d5c08b90fbaf077581ae67ca73a7a9ef47655f8b6b32",
   "paths": [
     {
       "state": "FookShotPull",
-      "stateItem": 32480,
+      "stateItem": 32682,
       "generator": "FookShotPull_CMSG",
-      "generatorItem": 41894,
-      "arrayItem": 45841,
+      "generatorItem": 42196,
+      "arrayItem": 46190,
       "clip": "a900_500005_hkx_AutoSet_00",
-      "clipItem": 52739,
+      "clipItem": 53137,
       "animation": "a900_500005"
     },
     {
       "state": "AirFookShotPull",
-      "stateItem": 32476,
+      "stateItem": 32678,
       "generator": "AirFookShotPull_CMSG",
-      "generatorItem": 41886,
-      "arrayItem": 45833,
+      "generatorItem": 42188,
+      "arrayItem": 46182,
       "clip": "a900_500005_hkx_AutoSet_01",
-      "clipItem": 52732,
+      "clipItem": 53130,
       "animation": "a900_500005"
     },
     {
       "state": "FookShotFire_Walk",
-      "stateItem": 21912,
+      "stateItem": 21978,
       "generator": "FookShotFire_Walk_CMSG",
-      "generatorItem": 23941,
-      "arrayItem": 26393,
+      "generatorItem": 24026,
+      "arrayItem": 26511,
       "clip": "a900_500000_hkx_AutoSet_01",
-      "clipItem": 31997,
+      "clipItem": 32199,
       "animation": "a900_500000"
     },
     {
       "state": "FookShotFire_Walk_Upper",
-      "stateItem": 21942,
+      "stateItem": 22008,
       "generator": "FookShotFire_Walk_Upper_CMSG",
-      "generatorItem": 24000,
-      "arrayItem": 26477,
+      "generatorItem": 24085,
+      "arrayItem": 26595,
       "clip": "a900_500000_hkx_AutoSet_02",
-      "clipItem": 32117,
+      "clipItem": 32319,
       "animation": "a900_500000"
     },
     {
       "state": "AirFookShotFire",
-      "stateItem": 32482,
+      "stateItem": 32684,
       "generator": "AirFookShotFire_CMSG",
-      "generatorItem": 41897,
-      "arrayItem": 45846,
+      "generatorItem": 42199,
+      "arrayItem": 46195,
       "clip": "a900_505000_hkx_AutoSet_00",
-      "clipItem": 52743,
+      "clipItem": 53141,
       "animation": "a900_505000"
     }
   ],
@@ -100,10 +100,11 @@
   ],
   "root": 7500000,
   "leaf": 7500002,
-  "unresolved": {
-    "missingBehavior": 600000030,
-    "unreferencedLeaf": 7500001
-  },
+  "leaves": [
+    7500001,
+    7500002
+  ],
+  "unresolved": {},
   "checks": {
     "dispatch": [
       {
@@ -133,10 +134,7 @@
             "elapsed": 0.0
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 500000,
@@ -151,10 +149,7 @@
             "elapsed": 0.30000001192092896
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 500000,
@@ -169,10 +164,7 @@
             "elapsed": 0.0
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 500000,
@@ -187,10 +179,7 @@
             "elapsed": 0.30000001192092896
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 500000,
@@ -205,10 +194,7 @@
             "elapsed": 0.0
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 500000,
@@ -223,10 +209,7 @@
             "elapsed": 0.30000001192092896
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 500005,
@@ -359,10 +342,7 @@
             "elapsed": 0.0
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 505000,
@@ -377,10 +357,7 @@
             "elapsed": 0.30000001192092896
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 505000,
@@ -395,10 +372,7 @@
             "elapsed": 0.0
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 505000,
@@ -413,10 +387,7 @@
             "elapsed": 0.30000001192092896
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 505000,
@@ -431,10 +402,7 @@
             "elapsed": 0.0
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 505000,
@@ -449,10 +417,7 @@
             "elapsed": 0.30000001192092896
           }
         ],
-        "missingRows": [
-          600000030,
-          600000030
-        ]
+        "missingRows": []
       },
       {
         "animation": 505005,
@@ -1125,6 +1090,32 @@
           }
         ]
       }
+    ],
+    "firing": [
+      {
+        "resistance": 59,
+        "accumulation": 60,
+        "rejected": false,
+        "damage": -1350
+      },
+      {
+        "resistance": 60,
+        "accumulation": 60,
+        "rejected": false,
+        "damage": -1350
+      },
+      {
+        "resistance": 61,
+        "accumulation": 60,
+        "rejected": true,
+        "damage": 0
+      },
+      {
+        "resistance": 120,
+        "accumulation": 60,
+        "rejected": true,
+        "damage": 0
+      }
     ]
   },
   "native": {
@@ -1159,12 +1150,12 @@
     "EA7FC0 actual equipped-weapon row lookup",
     "F61390 isolated allocator owner",
     "attack instances/collision and status-correction inputs are fixtures; no complete gameplay or network",
+    "both Hotfix1 behavior rows and their payloads are present; no full collision or scene simulation",
     "cycle effect 500 has no HP change and is recorded without simulating visual delivery",
     "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
     "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
     "owner vtable +148 false; allocator +68 free recorder",
-    "synthetic animation-owner virtuals and equipped weapon 1000",
-    "unresolved missing Behavior 600000030 is only recorded; no claim that its animation cannot trigger another runtime path"
+    "synthetic animation-owner virtuals and equipped weapon 1000"
   ],
   "gameplayVerified": false
 }

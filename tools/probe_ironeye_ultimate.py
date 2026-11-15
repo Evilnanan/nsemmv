@@ -29,7 +29,7 @@ weaponraw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes();weapons=I
 tae=next(t for b in animations['bundles'] for t in b['taes'] if t['ID']==2902)
 taeraw=Path(str(a.animations)+'.2902.tae').read_bytes();assert sha(taeraw)==tae['sha256']
 raw_script=a.script.read_bytes()
-assert sha(raw_script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert sha(raw_script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=raw_script.decode('utf-8-sig').replace('\r\n','\n')
 start=source.index('function LongBowSnipeStart_onUpdate()');function=source[start:source.index('\nfunction ',start+1)]
 graph=BehaviorGraph(a.behavior)

@@ -19,7 +19,7 @@ for name in ('exe','extracted','assets','animations','output'):p.add_argument(na
 a=p.parse_args();x=Inputs(a.exe,a.extracted)
 assets=json.loads(a.assets.read_text());animations=json.loads(a.animations.read_text())
 assert assets['hashes']['regulation.bin']==x.x['hashes']['regulation.bin']
-assert animations['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert animations['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 behaviorraw=a.extracted.with_suffix('.BehaviorParam_PC.param').read_bytes();behaviors=Inputs.table(behaviorraw,0x30)
 bulletraw=a.extracted.with_suffix('.Bullet.param').read_bytes();bullets=Inputs.table(bulletraw,0x100)
 attackraw=a.extracted.with_suffix('.AtkParam_Pc.param').read_bytes();attacks=Inputs.table(attackraw,0x1d0)

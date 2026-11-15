@@ -12,8 +12,8 @@ p.add_argument('all_events', type=Path, help='Private ExtractEffectEvents output
 a = p.parse_args()
 x = json.loads(a.extracted.read_text())
 events = json.loads(a.events.read_text())
-assert x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
-assert events['sha256'] == '91680d83cd2b7509c303c3c3bdfda98b03c3a5c42e1d985f2901a29547ee6ba6'
+assert x['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
+assert events['sha256'] == 'da5dfbd6296d73cfa492a2ef10894fe0df2d4b228269303f14721a2e3d62e033'
 spells = x['tables']['SpEffectParam']
 by_id = {e['ID']:e for e in events['events']}
 roots = {}
@@ -38,26 +38,27 @@ for index, ins in enumerate(by_id[0]['instructions']):
     caps = {struct.unpack_from('<i', data, 8)[0]
         for i, data in zip(event['instructions'], bound) if (i['Bank'], i['ID']) == (2003, 127)}
     if root == 7060001:
-        expected = {1400:(8145, 3, 7060000), 1402:(8155, 2, 7060000),
-                    1407:(8135, 2, 7060002), 1408:(8140, 1, 7060000), 1409:(8180, 8, 7060002)}[event_id]
-        counter, count, grant = expected
+        # Hotfix1 uses one linear ladder; each completion can grant several steps.
+        counter, count, per_completion = {1400:(8150,3,2), 1402:(8155,2,3),
+            1407:(8135,1,5), 1408:(8140,2,4), 1409:(8180,10,1)}[event_id]
+        grant = 7060000
         assert grants == [grant]
         actual_grants = [struct.unpack_from('<ii', data) for i,data in zip(event['instructions'], bound)
                          if (i['Bank'], i['ID']) == (2004, 8)]
-        assert actual_grants == [(20000, grant)] * count
+        assert actual_grants == [(20000, grant)] * (count * per_completion)
         waits = [struct.unpack_from('<I', data, 12)[0] for i,data in zip(event['instructions'], bound)
                  if (i['Bank'], i['ID']) == (3, 12) and struct.unpack_from('<I', data, 4)[0] == counter]
-        assert waits == (list(range(1, count + 1)) if event_id in (1400, 1402, 1409) else [1])
-        assert caps == ({count} if event_id in (1400, 1402, 1409) else set())
+        assert waits == list(range(1, count + 1)) and caps == {count}
         special_sources.append(dict(event=event_id, slot=slot, initializationIndex=index, arguments=args,
-                                    counter=counter, grant=grant, grantsPerEvent=count, thresholds=waits))
+            counter=counter, grant=grant, grantsPerEvent=count * per_completion,
+            grantsPerCompletion=per_completion, completionLimit=count, thresholds=waits))
         continue
     assert caps == ({7} if event_id == 1403 else {10})
     roots[str(root)] = dict(event=event_id, slot=slot, initializationIndex=index, arguments=args,
                            grants=grants, eventLimit=caps.pop())
 assert len(roots) == 5
 assert len(special_sources) == 5
-roots['7060001'] = dict(family='special-locations', grants=[7060000, 7060002], eventLimit=None, sources=special_sources)
+roots['7060001'] = dict(family='special-locations', grants=[7060000], eventLimit=None, sources=special_sources)
 assert spells['7037401']['replaceSpEffectId'] == 7037501
 roots['7037400'] = dict(grants=[7037501], eventLimit=None, animationSeed=7037401)
 for root, record in roots.items():
@@ -85,7 +86,7 @@ assert all_events['regulationSha256'] == x['hashes']['regulation.bin']
 files = {f['path']:f for f in all_events['files']}
 maps = {m['path']:m for m in all_events['maps']}
 common_func = files['event/common_func.emevd.dcx']
-assert common_func['sha256'] == '6417c15ce944837b96120012dcedfda6ea7a3def7d5ecdb9b534e3a8f0ba297d'
+assert common_func['sha256'] == '3b386a2f6190d1ec6ffab36c2113f292e8016d8c8b8ca638050bffc11d3c44e0'
 functions = {e['ID']:e for e in common_func['events']}
 producer_events = (90015051, 90015304, 90045002, 90005390)
 producers = []
@@ -112,14 +113,14 @@ for path, file in sorted(files.items()):
             increments = [list(struct.unpack('<iii', data)) for i,data in zip(body['instructions'], bound)
                           if (i['Bank'], i['ID']) == (2003, 31)]
             if target == 90015051:
-                assert args[2] == 8 and args[3] in (0, 1)
-                assert increments == [[8180, 4, 8]] * 2
+                assert tuple(args[2:4]) in ((8, 1), (10, 0))
+                assert increments == [[8180, 4, args[2]]] * 2
                 # SkipIfComparison's bound fourth argument selects the second increment.
                 assert (body['instructions'][3]['Bank'], body['instructions'][3]['ID']) == (1000, 10)
                 assert bytes(bound[3]) == bytes([1, 1, 0, 0]) + struct.pack('<ii', args[3], 1)
                 units = 1 + args[3]
             else:
-                assert increments == [{90015304:[8155,3,4], 90045002:[8145,4,7], 90005390:[8135,3,1]}[target]]
+                assert increments == [{90015304:[8155,3,4], 90045002:[8150,4,7], 90005390:[8135,3,1]}[target]]
                 units = 1
             if target == 90005390:
                 # The counter watches the transformed enemy, not the original

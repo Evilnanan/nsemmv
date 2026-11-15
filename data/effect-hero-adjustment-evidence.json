@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "heroStatusParamSha256": "b020e1af1b4cd567e1272b1210df004ee12c78f72f248d16dd6dfbec44f92d2d",
-  "heroParamSha256": "6ff2eaef12af031b8814f0aa5243a33a18debffe76cf26aeba6f09362b608013",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "heroStatusParamSha256": "06f7839bedd8f0ce6842c591f50ec5b56d1f44b9029ecb3f62a44a12d21954e7",
+  "heroParamSha256": "f2ea05062ec122992a3dda53ca241b036d5ed7df991911594d7098a890287bda",
   "families": [
     {
       "hero": 1,

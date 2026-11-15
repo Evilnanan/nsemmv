@@ -1,12 +1,28 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "heroParamSha256": "b020e1af1b4cd567e1272b1210df004ee12c78f72f248d16dd6dfbec44f92d2d",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "heroParamSha256": "06f7839bedd8f0ce6842c591f50ec5b56d1f44b9029ecb3f62a44a12d21954e7",
   "systemDefinitionHashes": {
+    "defs/AntiqueStandParam.xml": "224824524c642ca82b4a8f4a915cbded687cb51573d4de0d9f65d46455025c9a",
+    "defs/AtkParam.xml": "22078bf2f916c60e49cafec29f002a00e14abb618de541fbef6ad102ec21cf96",
+    "defs/AttachEffectParam.xml": "e6b0e664bee58cb2c7a180fdd7f81320f48430bb93b886afe0a77324248882ce",
+    "defs/AttachEffectTableParam.xml": "a7b34a2506d02fc9e01aa5f594ece4b60a8b044721ea22231e032f8b3539aa09",
+    "defs/BehaviorParam.xml": "682eb53e76fe824bbf4283cb1c6161c16eb8ec4457d9b8485ed821a7ab11a2f8",
+    "defs/Bullet.xml": "2243e5f8530666de8630d29bc118e87a1627ae0f589aa06d514bbf7bf6d2a638",
+    "defs/EquipParamAntique.xml": "268020945c1dcfd0c275b21f40bb655830d381831ae62394ea9364f58f1a78ff",
+    "defs/EquipParamGoods.xml": "c4bd63486daac1211a1763b787579ed5649981bf40cc9fa2f3bb66254e2d1c53",
     "defs/GameSystemCommonParam.xml": "7fa812374e020771e9074c08b3ef2256b8a9578c28dd02bd537048c7324e158c",
-    "defs/PlayerCommonParam.xml": "29d0cfd17d152cd8512aba859e5241ed6b883c1ae1159c1052fac16b5710428e"
+    "defs/HeroParam.xml": "fce7b5b1aeda96d197743712c489e1cdaa57e7e3ec1721221796fa0e2e1f5f4d",
+    "defs/HeroStatusParam.xml": "de776f0355fb0afb877018bfcad51ce68235cc8d2d59e2a2c457f31fe5611dac",
+    "defs/ItemLotParam.xml": "ce28466cab2a2021e2422762c6bbb1174758b98d69e94430de6a6050e3fe4323",
+    "defs/ItemTableParam.xml": "43882e73e33ca6a7131113bf5fea9f4383d64e5cf75eac15a560ebf8f07eb742",
+    "defs/Magic.xml": "bccd416a8b6aeab2576db366872a4713e8698eac397ee8fbf7fe8c526501c354",
+    "defs/PlayerCommonParam.xml": "29d0cfd17d152cd8512aba859e5241ed6b883c1ae1159c1052fac16b5710428e",
+    "defs/ShopLineupParam.xml": "e16dc3a7397c9d68dbdab889158e79c64bbc03a67feaa44dc2511db80333ad26",
+    "defs/SpEffectParam.xml": "a9985be2b9b464867aecab63c04f85114eea3032d38f5f0d2cb66f33926d0c15",
+    "defs/SwordArtsParam.xml": "d8a5acb45a36215ff0fc1eb6dfd597bac7dc7335192881a1c086fb8b7ed760eb"
   },
   "systemParamSha256": {
     "GameSystemCommonParam": "9f801f3a9804d84ea387aa5557c6dbf39f7a912c8ff12bf79ba1231f0ebd6300",
@@ -298,11 +314,11 @@
       ],
       "kind": 3,
       "rates": [
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716
       ]
     },
     {
@@ -311,11 +327,11 @@
       ],
       "kind": 4,
       "rates": [
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716
       ]
     },
     {
@@ -380,11 +396,11 @@
       ],
       "kind": 3,
       "rates": [
-        1.2996000051498413,
-        1.2996000051498413,
-        1.2996000051498413,
-        1.2996000051498413,
-        1.2996000051498413
+        1.2544000148773193,
+        1.2544000148773193,
+        1.2544000148773193,
+        1.2544000148773193,
+        1.2544000148773193
       ]
     },
     {
@@ -394,11 +410,11 @@
       ],
       "kind": 4,
       "rates": [
-        1.2996000051498413,
-        1.2996000051498413,
-        1.2996000051498413,
-        1.2996000051498413,
-        1.2996000051498413
+        1.2544000148773193,
+        1.2544000148773193,
+        1.2544000148773193,
+        1.2544000148773193,
+        1.2544000148773193
       ]
     },
     {
@@ -468,11 +484,11 @@
       ],
       "kind": 3,
       "rates": [
-        1.481544017791748,
-        1.481544017791748,
-        1.481544017791748,
-        1.481544017791748,
-        1.481544017791748
+        1.4049279689788818,
+        1.4049279689788818,
+        1.4049279689788818,
+        1.4049279689788818,
+        1.4049279689788818
       ]
     },
     {
@@ -483,11 +499,11 @@
       ],
       "kind": 4,
       "rates": [
-        1.481544017791748,
-        1.481544017791748,
-        1.481544017791748,
-        1.481544017791748,
-        1.481544017791748
+        1.4049279689788818,
+        1.4049279689788818,
+        1.4049279689788818,
+        1.4049279689788818,
+        1.4049279689788818
       ]
     },
     {
@@ -554,11 +570,11 @@
       ],
       "kind": 3,
       "rates": [
-        1.1399999856948853,
-        1.2141000032424927,
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853
+        1.1200000047683716,
+        1.1928000450134277,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716
       ]
     },
     {
@@ -568,11 +584,11 @@
       ],
       "kind": 4,
       "rates": [
-        1.1399999856948853,
-        1.2141000032424927,
-        1.1399999856948853,
-        1.1399999856948853,
-        1.1399999856948853
+        1.1200000047683716,
+        1.1928000450134277,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716
       ]
     },
     {
@@ -9772,6 +9788,186 @@
       "fullUpdate": false
     },
     {
+      "id": 6851010,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851010,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851010,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851010,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851010,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851010,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851011,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851011,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851011,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851011,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851011,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851011,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851012,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.0,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851012,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8498899340629578,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851012,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.84989994764328,
+      "enabled": true,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851012,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499000072479248,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851012,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 0.8499099612236023,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 6851012,
+      "upper": 84.98999786376953,
+      "lower": -1,
+      "ratio": 1.0,
+      "enabled": false,
+      "boundary": 0.84989994764328,
+      "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
       "id": 6851200,
       "upper": 84.98999786376953,
       "lower": -1,
@@ -11152,6 +11348,46 @@
       "fullUpdate": false
     },
     {
+      "id": 8810201,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810201,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810201,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810201,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
       "id": 8810250,
       "upper": 84.98999786376953,
       "lower": -1,
@@ -11209,6 +11445,46 @@
       "enabled": false,
       "boundary": 0.84989994764328,
       "nominal": 0.8499000072479248,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810251,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.0,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810251,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 0.9999899864196777,
+      "enabled": false,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810251,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
+      "fullUpdate": false
+    },
+    {
+      "id": 8810251,
+      "upper": -1,
+      "lower": 100,
+      "ratio": 1.0000100135803223,
+      "enabled": true,
+      "boundary": 1.0,
+      "nominal": 1.0,
       "fullUpdate": false
     },
     {
@@ -12135,7 +12411,97 @@
         7069010
       ],
       "incoming": 7069001,
-      "target": -1,
+      "target": 7069011,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069011
+      ],
+      "incoming": 7069001,
+      "target": 7069012,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069012
+      ],
+      "incoming": 7069001,
+      "target": 7069013,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069013
+      ],
+      "incoming": 7069001,
+      "target": 7069014,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069014
+      ],
+      "incoming": 7069001,
+      "target": 7069015,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069015
+      ],
+      "incoming": 7069001,
+      "target": 7069016,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069016
+      ],
+      "incoming": 7069001,
+      "target": 7069017,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069017
+      ],
+      "incoming": 7069001,
+      "target": 7069018,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069018
+      ],
+      "incoming": 7069001,
+      "target": 7069019,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069019
+      ],
+      "incoming": 7069001,
+      "target": 7069020,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069020
+      ],
+      "incoming": 7069001,
+      "target": 7069021,
       "changed": true,
       "priority": 11
     },
@@ -12143,98 +12509,181 @@
       "existing": [
         7069021
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069022,
       "changed": true,
-      "priority": 17
-    },
-    {
-      "existing": [],
-      "incoming": 7069021,
-      "target": 7069021,
-      "changed": false,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069022
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069023,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069023
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069024,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069024
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069025,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069025
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069026,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069026
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069027,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069027
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069028,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069028
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069029,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069029
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
       "target": 7069030,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
         7069030
       ],
-      "incoming": 7069021,
+      "incoming": 7069001,
+      "target": 7069031,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069031
+      ],
+      "incoming": 7069001,
+      "target": 7069032,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069032
+      ],
+      "incoming": 7069001,
+      "target": 7069033,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069033
+      ],
+      "incoming": 7069001,
+      "target": 7069034,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069034
+      ],
+      "incoming": 7069001,
+      "target": 7069035,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069035
+      ],
+      "incoming": 7069001,
+      "target": 7069036,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069036
+      ],
+      "incoming": 7069001,
+      "target": 7069037,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069037
+      ],
+      "incoming": 7069001,
+      "target": 7069038,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069038
+      ],
+      "incoming": 7069001,
+      "target": 7069039,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069039
+      ],
+      "incoming": 7069001,
+      "target": 7069040,
+      "changed": true,
+      "priority": 11
+    },
+    {
+      "existing": [
+        7069040
+      ],
+      "incoming": 7069001,
       "target": -1,
       "changed": true,
-      "priority": 17
+      "priority": 11
     },
     {
       "existing": [
@@ -13518,7 +13967,7 @@
         7280299
       ],
       "incoming": 7280201,
-      "target": 7280300,
+      "target": -1,
       "changed": true,
       "priority": 6
     },
@@ -13890,276 +14339,6 @@
     {
       "existing": [
         7500530
-      ],
-      "incoming": 7500501,
-      "target": 7500531,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500531
-      ],
-      "incoming": 7500501,
-      "target": 7500532,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500532
-      ],
-      "incoming": 7500501,
-      "target": 7500533,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500533
-      ],
-      "incoming": 7500501,
-      "target": 7500534,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500534
-      ],
-      "incoming": 7500501,
-      "target": 7500535,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500535
-      ],
-      "incoming": 7500501,
-      "target": 7500536,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500536
-      ],
-      "incoming": 7500501,
-      "target": 7500537,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500537
-      ],
-      "incoming": 7500501,
-      "target": 7500538,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500538
-      ],
-      "incoming": 7500501,
-      "target": 7500539,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500539
-      ],
-      "incoming": 7500501,
-      "target": 7500540,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500540
-      ],
-      "incoming": 7500501,
-      "target": 7500541,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500541
-      ],
-      "incoming": 7500501,
-      "target": 7500542,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500542
-      ],
-      "incoming": 7500501,
-      "target": 7500543,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500543
-      ],
-      "incoming": 7500501,
-      "target": 7500544,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500544
-      ],
-      "incoming": 7500501,
-      "target": 7500545,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500545
-      ],
-      "incoming": 7500501,
-      "target": 7500546,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500546
-      ],
-      "incoming": 7500501,
-      "target": 7500547,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500547
-      ],
-      "incoming": 7500501,
-      "target": 7500548,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500548
-      ],
-      "incoming": 7500501,
-      "target": 7500549,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500549
-      ],
-      "incoming": 7500501,
-      "target": 7500550,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500550
-      ],
-      "incoming": 7500501,
-      "target": 7500551,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500551
-      ],
-      "incoming": 7500501,
-      "target": 7500552,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500552
-      ],
-      "incoming": 7500501,
-      "target": 7500553,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500553
-      ],
-      "incoming": 7500501,
-      "target": 7500554,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500554
-      ],
-      "incoming": 7500501,
-      "target": 7500555,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500555
-      ],
-      "incoming": 7500501,
-      "target": 7500556,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500556
-      ],
-      "incoming": 7500501,
-      "target": 7500557,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500557
-      ],
-      "incoming": 7500501,
-      "target": 7500558,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500558
-      ],
-      "incoming": 7500501,
-      "target": 7500559,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500559
-      ],
-      "incoming": 7500501,
-      "target": 7500560,
-      "changed": true,
-      "priority": 1
-    },
-    {
-      "existing": [
-        7500560
       ],
       "incoming": 7500501,
       "target": -1,
@@ -15069,9 +15248,916 @@
         8988299
       ],
       "incoming": 8988200,
-      "target": -1,
+      "target": 8988300,
       "changed": true,
       "priority": 5
+    },
+    {
+      "existing": [
+        8988300
+      ],
+      "incoming": 8988300,
+      "target": 8988301,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [],
+      "incoming": 8988300,
+      "target": 8988300,
+      "changed": false,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988301
+      ],
+      "incoming": 8988300,
+      "target": 8988302,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988302
+      ],
+      "incoming": 8988300,
+      "target": 8988303,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988303
+      ],
+      "incoming": 8988300,
+      "target": 8988304,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988304
+      ],
+      "incoming": 8988300,
+      "target": 8988305,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988305
+      ],
+      "incoming": 8988300,
+      "target": 8988306,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988306
+      ],
+      "incoming": 8988300,
+      "target": 8988307,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988307
+      ],
+      "incoming": 8988300,
+      "target": 8988308,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988308
+      ],
+      "incoming": 8988300,
+      "target": 8988309,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988309
+      ],
+      "incoming": 8988300,
+      "target": 8988310,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988310
+      ],
+      "incoming": 8988300,
+      "target": 8988311,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988311
+      ],
+      "incoming": 8988300,
+      "target": 8988312,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988312
+      ],
+      "incoming": 8988300,
+      "target": 8988313,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988313
+      ],
+      "incoming": 8988300,
+      "target": 8988314,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988314
+      ],
+      "incoming": 8988300,
+      "target": 8988315,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988315
+      ],
+      "incoming": 8988300,
+      "target": 8988316,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988316
+      ],
+      "incoming": 8988300,
+      "target": 8988317,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988317
+      ],
+      "incoming": 8988300,
+      "target": 8988318,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988318
+      ],
+      "incoming": 8988300,
+      "target": 8988319,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988319
+      ],
+      "incoming": 8988300,
+      "target": 8988320,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988320
+      ],
+      "incoming": 8988300,
+      "target": 8988321,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988321
+      ],
+      "incoming": 8988300,
+      "target": 8988322,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988322
+      ],
+      "incoming": 8988300,
+      "target": 8988323,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988323
+      ],
+      "incoming": 8988300,
+      "target": 8988324,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988324
+      ],
+      "incoming": 8988300,
+      "target": 8988325,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988325
+      ],
+      "incoming": 8988300,
+      "target": 8988326,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988326
+      ],
+      "incoming": 8988300,
+      "target": 8988327,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988327
+      ],
+      "incoming": 8988300,
+      "target": 8988328,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988328
+      ],
+      "incoming": 8988300,
+      "target": 8988329,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988329
+      ],
+      "incoming": 8988300,
+      "target": 8988330,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988330
+      ],
+      "incoming": 8988300,
+      "target": 8988331,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988331
+      ],
+      "incoming": 8988300,
+      "target": 8988332,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988332
+      ],
+      "incoming": 8988300,
+      "target": 8988333,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988333
+      ],
+      "incoming": 8988300,
+      "target": 8988334,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988334
+      ],
+      "incoming": 8988300,
+      "target": 8988335,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988335
+      ],
+      "incoming": 8988300,
+      "target": 8988336,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988336
+      ],
+      "incoming": 8988300,
+      "target": 8988337,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988337
+      ],
+      "incoming": 8988300,
+      "target": 8988338,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988338
+      ],
+      "incoming": 8988300,
+      "target": 8988339,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988339
+      ],
+      "incoming": 8988300,
+      "target": 8988340,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988340
+      ],
+      "incoming": 8988300,
+      "target": 8988341,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988341
+      ],
+      "incoming": 8988300,
+      "target": 8988342,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988342
+      ],
+      "incoming": 8988300,
+      "target": 8988343,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988343
+      ],
+      "incoming": 8988300,
+      "target": 8988344,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988344
+      ],
+      "incoming": 8988300,
+      "target": 8988345,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988345
+      ],
+      "incoming": 8988300,
+      "target": 8988346,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988346
+      ],
+      "incoming": 8988300,
+      "target": 8988347,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988347
+      ],
+      "incoming": 8988300,
+      "target": 8988348,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988348
+      ],
+      "incoming": 8988300,
+      "target": 8988349,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988349
+      ],
+      "incoming": 8988300,
+      "target": 8988350,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988350
+      ],
+      "incoming": 8988300,
+      "target": 8988351,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988351
+      ],
+      "incoming": 8988300,
+      "target": 8988352,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988352
+      ],
+      "incoming": 8988300,
+      "target": 8988353,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988353
+      ],
+      "incoming": 8988300,
+      "target": 8988354,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988354
+      ],
+      "incoming": 8988300,
+      "target": 8988355,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988355
+      ],
+      "incoming": 8988300,
+      "target": 8988356,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988356
+      ],
+      "incoming": 8988300,
+      "target": 8988357,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988357
+      ],
+      "incoming": 8988300,
+      "target": 8988358,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988358
+      ],
+      "incoming": 8988300,
+      "target": 8988359,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988359
+      ],
+      "incoming": 8988300,
+      "target": 8988360,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988360
+      ],
+      "incoming": 8988300,
+      "target": 8988361,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988361
+      ],
+      "incoming": 8988300,
+      "target": 8988362,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988362
+      ],
+      "incoming": 8988300,
+      "target": 8988363,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988363
+      ],
+      "incoming": 8988300,
+      "target": 8988364,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988364
+      ],
+      "incoming": 8988300,
+      "target": 8988365,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988365
+      ],
+      "incoming": 8988300,
+      "target": 8988366,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988366
+      ],
+      "incoming": 8988300,
+      "target": 8988367,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988367
+      ],
+      "incoming": 8988300,
+      "target": 8988368,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988368
+      ],
+      "incoming": 8988300,
+      "target": 8988369,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988369
+      ],
+      "incoming": 8988300,
+      "target": 8988370,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988370
+      ],
+      "incoming": 8988300,
+      "target": 8988371,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988371
+      ],
+      "incoming": 8988300,
+      "target": 8988372,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988372
+      ],
+      "incoming": 8988300,
+      "target": 8988373,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988373
+      ],
+      "incoming": 8988300,
+      "target": 8988374,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988374
+      ],
+      "incoming": 8988300,
+      "target": 8988375,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988375
+      ],
+      "incoming": 8988300,
+      "target": 8988376,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988376
+      ],
+      "incoming": 8988300,
+      "target": 8988377,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988377
+      ],
+      "incoming": 8988300,
+      "target": 8988378,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988378
+      ],
+      "incoming": 8988300,
+      "target": 8988379,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988379
+      ],
+      "incoming": 8988300,
+      "target": 8988380,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988380
+      ],
+      "incoming": 8988300,
+      "target": 8988381,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988381
+      ],
+      "incoming": 8988300,
+      "target": 8988382,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988382
+      ],
+      "incoming": 8988300,
+      "target": 8988383,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988383
+      ],
+      "incoming": 8988300,
+      "target": 8988384,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988384
+      ],
+      "incoming": 8988300,
+      "target": 8988385,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988385
+      ],
+      "incoming": 8988300,
+      "target": 8988386,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988386
+      ],
+      "incoming": 8988300,
+      "target": 8988387,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988387
+      ],
+      "incoming": 8988300,
+      "target": 8988388,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988388
+      ],
+      "incoming": 8988300,
+      "target": 8988389,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988389
+      ],
+      "incoming": 8988300,
+      "target": 8988390,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988390
+      ],
+      "incoming": 8988300,
+      "target": 8988391,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988391
+      ],
+      "incoming": 8988300,
+      "target": 8988392,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988392
+      ],
+      "incoming": 8988300,
+      "target": 8988393,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988393
+      ],
+      "incoming": 8988300,
+      "target": 8988394,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988394
+      ],
+      "incoming": 8988300,
+      "target": 8988395,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988395
+      ],
+      "incoming": 8988300,
+      "target": 8988396,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988396
+      ],
+      "incoming": 8988300,
+      "target": 8988397,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988397
+      ],
+      "incoming": 8988300,
+      "target": 8988398,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988398
+      ],
+      "incoming": 8988300,
+      "target": 8988399,
+      "changed": true,
+      "priority": 17
+    },
+    {
+      "existing": [
+        8988399
+      ],
+      "incoming": 8988300,
+      "target": -1,
+      "changed": true,
+      "priority": 17
     },
     {
       "existing": [
@@ -16166,6 +17252,46 @@
     {
       "id": 7069001,
       "rates": [
+        1.0099999904632568,
+        1.0099999904632568,
+        1.0099999904632568,
+        1.0099999904632568,
+        1.0099999904632568
+      ]
+    },
+    {
+      "id": 7069002,
+      "rates": [
+        1.0199999809265137,
+        1.0199999809265137,
+        1.0199999809265137,
+        1.0199999809265137,
+        1.0199999809265137
+      ]
+    },
+    {
+      "id": 7069003,
+      "rates": [
+        1.0299999713897705,
+        1.0299999713897705,
+        1.0299999713897705,
+        1.0299999713897705,
+        1.0299999713897705
+      ]
+    },
+    {
+      "id": 7069004,
+      "rates": [
+        1.0399999618530273,
+        1.0399999618530273,
+        1.0399999618530273,
+        1.0399999618530273,
+        1.0399999618530273
+      ]
+    },
+    {
+      "id": 7069005,
+      "rates": [
         1.0499999523162842,
         1.0499999523162842,
         1.0499999523162842,
@@ -16174,206 +17300,353 @@
       ]
     },
     {
-      "id": 7069002,
-      "rates": [
-        1.1024999618530273,
-        1.1024999618530273,
-        1.1024999618530273,
-        1.1024999618530273,
-        1.1024999618530273
-      ]
-    },
-    {
-      "id": 7069003,
-      "rates": [
-        1.1576999425888062,
-        1.1576999425888062,
-        1.1576999425888062,
-        1.1576999425888062,
-        1.1576999425888062
-      ]
-    },
-    {
-      "id": 7069004,
-      "rates": [
-        1.215499997138977,
-        1.215499997138977,
-        1.215499997138977,
-        1.215499997138977,
-        1.215499997138977
-      ]
-    },
-    {
-      "id": 7069005,
-      "rates": [
-        1.2762999534606934,
-        1.2762999534606934,
-        1.2762999534606934,
-        1.2762999534606934,
-        1.2762999534606934
-      ]
-    },
-    {
       "id": 7069006,
       "rates": [
-        1.3401000499725342,
-        1.3401000499725342,
-        1.3401000499725342,
-        1.3401000499725342,
-        1.3401000499725342
+        1.059999942779541,
+        1.059999942779541,
+        1.059999942779541,
+        1.059999942779541,
+        1.059999942779541
       ]
     },
     {
       "id": 7069007,
       "rates": [
-        1.4071999788284302,
-        1.4071999788284302,
-        1.4071999788284302,
-        1.4071999788284302,
-        1.4071999788284302
+        1.0700000524520874,
+        1.0700000524520874,
+        1.0700000524520874,
+        1.0700000524520874,
+        1.0700000524520874
       ]
     },
     {
       "id": 7069008,
       "rates": [
-        1.4774999618530273,
-        1.4774999618530273,
-        1.4774999618530273,
-        1.4774999618530273,
-        1.4774999618530273
+        1.0800000429153442,
+        1.0800000429153442,
+        1.0800000429153442,
+        1.0800000429153442,
+        1.0800000429153442
       ]
     },
     {
       "id": 7069009,
       "rates": [
-        1.5513999462127686,
-        1.5513999462127686,
-        1.5513999462127686,
-        1.5513999462127686,
-        1.5513999462127686
+        1.090000033378601,
+        1.090000033378601,
+        1.090000033378601,
+        1.090000033378601,
+        1.090000033378601
       ]
     },
     {
       "id": 7069010,
       "rates": [
-        1.6289000511169434,
-        1.6289000511169434,
-        1.6289000511169434,
-        1.6289000511169434,
-        1.6289000511169434
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ]
+    },
+    {
+      "id": 7069011,
+      "rates": [
+        1.1100000143051147,
+        1.1100000143051147,
+        1.1100000143051147,
+        1.1100000143051147,
+        1.1100000143051147
+      ]
+    },
+    {
+      "id": 7069012,
+      "rates": [
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716,
+        1.1200000047683716
+      ]
+    },
+    {
+      "id": 7069013,
+      "rates": [
+        1.1299999952316284,
+        1.1299999952316284,
+        1.1299999952316284,
+        1.1299999952316284,
+        1.1299999952316284
+      ]
+    },
+    {
+      "id": 7069014,
+      "rates": [
+        1.1399999856948853,
+        1.1399999856948853,
+        1.1399999856948853,
+        1.1399999856948853,
+        1.1399999856948853
+      ]
+    },
+    {
+      "id": 7069015,
+      "rates": [
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142,
+        1.149999976158142
+      ]
+    },
+    {
+      "id": 7069016,
+      "rates": [
+        1.159999966621399,
+        1.159999966621399,
+        1.159999966621399,
+        1.159999966621399,
+        1.159999966621399
+      ]
+    },
+    {
+      "id": 7069017,
+      "rates": [
+        1.1699999570846558,
+        1.1699999570846558,
+        1.1699999570846558,
+        1.1699999570846558,
+        1.1699999570846558
+      ]
+    },
+    {
+      "id": 7069018,
+      "rates": [
+        1.1799999475479126,
+        1.1799999475479126,
+        1.1799999475479126,
+        1.1799999475479126,
+        1.1799999475479126
+      ]
+    },
+    {
+      "id": 7069019,
+      "rates": [
+        1.190000057220459,
+        1.190000057220459,
+        1.190000057220459,
+        1.190000057220459,
+        1.190000057220459
+      ]
+    },
+    {
+      "id": 7069020,
+      "rates": [
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158
       ]
     },
     {
       "id": 7069021,
       "rates": [
-        1.0149999856948853,
-        1.0149999856948853,
-        1.0149999856948853,
-        1.0149999856948853,
-        1.0149999856948853
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727,
+        1.2100000381469727
       ]
     },
     {
       "id": 7069022,
       "rates": [
-        1.0302250385284424,
-        1.0302250385284424,
-        1.0302250385284424,
-        1.0302250385284424,
-        1.0302250385284424
+        1.2200000286102295,
+        1.2200000286102295,
+        1.2200000286102295,
+        1.2200000286102295,
+        1.2200000286102295
       ]
     },
     {
       "id": 7069023,
       "rates": [
-        1.0456783771514893,
-        1.0456783771514893,
-        1.0456783771514893,
-        1.0456783771514893,
-        1.0456783771514893
+        1.2300000190734863,
+        1.2300000190734863,
+        1.2300000190734863,
+        1.2300000190734863,
+        1.2300000190734863
       ]
     },
     {
       "id": 7069024,
       "rates": [
-        1.0613635778427124,
-        1.0613635778427124,
-        1.0613635778427124,
-        1.0613635778427124,
-        1.0613635778427124
+        1.2400000095367432,
+        1.2400000095367432,
+        1.2400000095367432,
+        1.2400000095367432,
+        1.2400000095367432
       ]
     },
     {
       "id": 7069025,
       "rates": [
-        1.0772839784622192,
-        1.0772839784622192,
-        1.0772839784622192,
-        1.0772839784622192,
-        1.0772839784622192
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
       ]
     },
     {
       "id": 7069026,
       "rates": [
-        1.0934432744979858,
-        1.0934432744979858,
-        1.0934432744979858,
-        1.0934432744979858,
-        1.0934432744979858
+        1.2599999904632568,
+        1.2599999904632568,
+        1.2599999904632568,
+        1.2599999904632568,
+        1.2599999904632568
       ]
     },
     {
       "id": 7069027,
       "rates": [
-        1.1098449230194092,
-        1.1098449230194092,
-        1.1098449230194092,
-        1.1098449230194092,
-        1.1098449230194092
+        1.2699999809265137,
+        1.2699999809265137,
+        1.2699999809265137,
+        1.2699999809265137,
+        1.2699999809265137
       ]
     },
     {
       "id": 7069028,
       "rates": [
-        1.1264926195144653,
-        1.1264926195144653,
-        1.1264926195144653,
-        1.1264926195144653,
-        1.1264926195144653
+        1.2799999713897705,
+        1.2799999713897705,
+        1.2799999713897705,
+        1.2799999713897705,
+        1.2799999713897705
       ]
     },
     {
       "id": 7069029,
       "rates": [
-        1.1433900594711304,
-        1.1433900594711304,
-        1.1433900594711304,
-        1.1433900594711304,
-        1.1433900594711304
+        1.2899999618530273,
+        1.2899999618530273,
+        1.2899999618530273,
+        1.2899999618530273,
+        1.2899999618530273
       ]
     },
     {
       "id": 7069030,
       "rates": [
-        1.1605409383773804,
-        1.1605409383773804,
-        1.1605409383773804,
-        1.1605409383773804,
-        1.1605409383773804
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842
       ]
     },
     {
-      "ids": [
-        7069006,
-        7069030
-      ],
+      "id": 7069031,
       "rates": [
-        1.5552409887313843,
-        1.5552409887313843,
-        1.5552409887313843,
-        1.5552409887313843,
-        1.5552409887313843
+        1.309999942779541,
+        1.309999942779541,
+        1.309999942779541,
+        1.309999942779541,
+        1.309999942779541
+      ]
+    },
+    {
+      "id": 7069032,
+      "rates": [
+        1.3200000524520874,
+        1.3200000524520874,
+        1.3200000524520874,
+        1.3200000524520874,
+        1.3200000524520874
+      ]
+    },
+    {
+      "id": 7069033,
+      "rates": [
+        1.3300000429153442,
+        1.3300000429153442,
+        1.3300000429153442,
+        1.3300000429153442,
+        1.3300000429153442
+      ]
+    },
+    {
+      "id": 7069034,
+      "rates": [
+        1.340000033378601,
+        1.340000033378601,
+        1.340000033378601,
+        1.340000033378601,
+        1.340000033378601
+      ]
+    },
+    {
+      "id": 7069035,
+      "rates": [
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858
+      ]
+    },
+    {
+      "id": 7069036,
+      "rates": [
+        1.3600000143051147,
+        1.3600000143051147,
+        1.3600000143051147,
+        1.3600000143051147,
+        1.3600000143051147
+      ]
+    },
+    {
+      "id": 7069037,
+      "rates": [
+        1.3700000047683716,
+        1.3700000047683716,
+        1.3700000047683716,
+        1.3700000047683716,
+        1.3700000047683716
+      ]
+    },
+    {
+      "id": 7069038,
+      "rates": [
+        1.3799999952316284,
+        1.3799999952316284,
+        1.3799999952316284,
+        1.3799999952316284,
+        1.3799999952316284
+      ]
+    },
+    {
+      "id": 7069039,
+      "rates": [
+        1.3899999856948853,
+        1.3899999856948853,
+        1.3899999856948853,
+        1.3899999856948853,
+        1.3899999856948853
+      ]
+    },
+    {
+      "id": 7069040,
+      "rates": [
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142
       ]
     }
   ],

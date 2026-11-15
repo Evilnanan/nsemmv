@@ -13,7 +13,7 @@ for arg in ('exe','extracted','assets','animations','output'):p.add_argument(arg
 a=p.parse_args();inputs=Inputs(a.exe,a.extracted)
 assets=json.loads(a.assets.read_text());tae=json.loads(a.animations.read_text())
 assert assets['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 weapon_raw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes()
 weapons=inputs.table(weapon_raw,0x298)
 weapon_ids={}

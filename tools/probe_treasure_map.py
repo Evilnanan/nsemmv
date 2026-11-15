@@ -22,8 +22,8 @@ root = 7070001
 assert inputs.spells[str(root)]['spCategory'] == 10 and inputs.spells[str(root)]['stateInfo'] == 0
 files = {f['path']: f for f in events['files']}
 common = files['event/common.emevd.dcx']; functions = files['event/common_func.emevd.dcx']
-assert common['sha256'] == '91680d83cd2b7509c303c3c3bdfda98b03c3a5c42e1d985f2901a29547ee6ba6'
-assert functions['sha256'] == '6417c15ce944837b96120012dcedfda6ea7a3def7d5ecdb9b534e3a8f0ba297d'
+assert common['sha256'] == 'da5dfbd6296d73cfa492a2ef10894fe0df2d4b228269303f14721a2e3d62e033'
+assert functions['sha256'] == '3b386a2f6190d1ec6ffab36c2113f292e8016d8c8b8ca638050bffc11d3c44e0'
 event = next(e for e in functions['events'] if e['ID'] == 90015100)
 assert event['RestBehavior'] == 1
 assert [(i['Bank'], i['ID'], i['hex']) for i in event['instructions']] == [
@@ -46,7 +46,8 @@ for n, ins in enumerate(next(e for e in common['events'] if e['ID'] == 0)['instr
     assert appearance in range(8000, 8012) and spawn - display == 980
     assert spawn in range(9100, 9112)
     initializations.append(dict(index=n, slot=slot, appearance=appearance, spawn=spawn, effect=effect, display=display))
-assert [r['index'] for r in initializations] == list(range(320, 356))
+assert len(initializations) == 36
+assert [r['index'] for r in initializations] == list(range(initializations[0]['index'], initializations[0]['index'] + 36))
 assert [r['slot'] for r in initializations] == list(range(36))
 assert all(sum(r['appearance'] == flag for r in initializations) == 3 for flag in range(8000, 8012))
 

@@ -25,7 +25,7 @@ systems = json.loads(a.systems.read_text())
 tae = json.loads(a.animations.read_text())
 for source in (assets, systems):
     assert source['hashes']['regulation.bin'] == inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256'] == '1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256'] == '806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 behavior_raw = a.extracted.with_suffix('.BehaviorParam_PC.param').read_bytes()
 weapon_raw = a.assets.with_suffix('.EquipParamWeapon.param').read_bytes()
 player_raw = a.systems.with_suffix('.PlayerCommonParam.param').read_bytes()

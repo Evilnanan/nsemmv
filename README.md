@@ -12,7 +12,7 @@ Daybreak / MMV 的 Nightreign 遗物存档编辑器。纯静态网页，支持�
 - Auto Fix 保持正负词条配对，先找完整合法的同色同类型 Item ID；其次仅放宽 Curse 数量要求，缺失或多余的 Curse 仍须修正后才能写入。
 - 原始文件下载、未导出修改的离开提醒。导出文件需自行替换游戏存档；浏览器不能直接修改游戏目录。
 
-数据固定为 **Daybreak 2.1.9 Beta2-Release / regulation 10350000**。不解析 PS 存档，不宣称兼容其它 Mod 参数版本。
+数据固定为 **Daybreak 2.1.9 Beta2-Hotfix1 / regulation 10350000**。同步 Hotfix1 汉化，版本变更与验证见 [适配记录](docs/research/hotfix1.md)。不解析 PS 存档，不宣称兼容其它 Mod 参数版本。
 
 ## 开发
 

@@ -1,19 +1,32 @@
 {
   "schema_version": 1,
-  "name": "Daybreak 2.1.9 Beta2-Release",
+  "name": "Daybreak 2.1.9 Beta2-Hotfix1",
   "save_filename": "NR0000.dbb",
   "regulation_version": "10350000",
   "input_sha256": {
-    "regulation.bin": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+    "defs/AntiqueStandParam.xml": "224824524c642ca82b4a8f4a915cbded687cb51573d4de0d9f65d46455025c9a",
+    "defs/AtkParam.xml": "22078bf2f916c60e49cafec29f002a00e14abb618de541fbef6ad102ec21cf96",
     "defs/AttachEffectParam.xml": "e6b0e664bee58cb2c7a180fdd7f81320f48430bb93b886afe0a77324248882ce",
     "defs/AttachEffectTableParam.xml": "a7b34a2506d02fc9e01aa5f594ece4b60a8b044721ea22231e032f8b3539aa09",
+    "defs/BehaviorParam.xml": "682eb53e76fe824bbf4283cb1c6161c16eb8ec4457d9b8485ed821a7ab11a2f8",
+    "defs/Bullet.xml": "2243e5f8530666de8630d29bc118e87a1627ae0f589aa06d514bbf7bf6d2a638",
     "defs/EquipParamAntique.xml": "268020945c1dcfd0c275b21f40bb655830d381831ae62394ea9364f58f1a78ff",
-    "defs/AntiqueStandParam.xml": "224824524c642ca82b4a8f4a915cbded687cb51573d4de0d9f65d46455025c9a",
+    "defs/EquipParamGoods.xml": "c4bd63486daac1211a1763b787579ed5649981bf40cc9fa2f3bb66254e2d1c53",
+    "defs/GameSystemCommonParam.xml": "7fa812374e020771e9074c08b3ef2256b8a9578c28dd02bd537048c7324e158c",
+    "defs/HeroParam.xml": "fce7b5b1aeda96d197743712c489e1cdaa57e7e3ec1721221796fa0e2e1f5f4d",
+    "defs/HeroStatusParam.xml": "de776f0355fb0afb877018bfcad51ce68235cc8d2d59e2a2c457f31fe5611dac",
     "defs/ItemLotParam.xml": "ce28466cab2a2021e2422762c6bbb1174758b98d69e94430de6a6050e3fe4323",
     "defs/ItemTableParam.xml": "43882e73e33ca6a7131113bf5fea9f4383d64e5cf75eac15a560ebf8f07eb742",
+    "defs/Magic.xml": "bccd416a8b6aeab2576db366872a4713e8698eac397ee8fbf7fe8c526501c354",
+    "defs/PlayerCommonParam.xml": "29d0cfd17d152cd8512aba859e5241ed6b883c1ae1159c1052fac16b5710428e",
     "defs/ShopLineupParam.xml": "e16dc3a7397c9d68dbdab889158e79c64bbc03a67feaa44dc2511db80333ad26",
-    "msg/engus/item_dlc01.msgbnd.dcx": "541712561a676b9e224a1b3b6228f144ded0eead2eea2eba27d1ea918d83fc98",
-    "msg/zhocn/item_dlc01.msgbnd.dcx": "378c6b8ca06c0d4472487c8bf4a4b25847186c32164e4156bc31e36e5e00be1a"
+    "defs/SpEffectParam.xml": "a9985be2b9b464867aecab63c04f85114eea3032d38f5f0d2cb66f33926d0c15",
+    "defs/SwordArtsParam.xml": "d8a5acb45a36215ff0fc1eb6dfd597bac7dc7335192881a1c086fb8b7ed760eb",
+    "msg/engus/item_dlc01.msgbnd.dcx": "426699a842ab7d4ce833459d357ffbb3eaa59c6bc426d6d63c756e8f084b3972",
+    "msg/engus/menu_dlc01.msgbnd.dcx": "d301fc9bb5cfd3e3e6e70a2eb02c053ec9afb45e77123a53a5b98e1c52d5c671",
+    "msg/zhocn/item_dlc01.msgbnd.dcx": "cec6633d7021f91a8541f12f6782392d5e5d6bdc5982f8ca28d8f730e62d370c",
+    "msg/zhocn/menu_dlc01.msgbnd.dcx": "fd199a4a25fbb2b41c1b9959be960ba7737c66ce56ecbdd13f5dd7691ea79df8",
+    "regulation.bin": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342"
   },
   "obtainable_relics": {
     "100": [
@@ -530,6 +543,27 @@
     "10002": [
       "ItemLotParam_map:100102:1"
     ],
+    "10003": [
+      "ShopLineupParam:13422"
+    ],
+    "10004": [
+      "ShopLineupParam:13423"
+    ],
+    "10005": [
+      "ShopLineupParam:13424"
+    ],
+    "10006": [
+      "ShopLineupParam:13425"
+    ],
+    "10007": [
+      "ShopLineupParam:13426"
+    ],
+    "10008": [
+      "ShopLineupParam:13427"
+    ],
+    "10009": [
+      "ShopLineupParam:13428"
+    ],
     "11000": [
       "ItemLotParam_map:101030:1"
     ],
@@ -632,6 +666,9 @@
     "16013": [
       "ShopLineupParam:13415"
     ],
+    "16014": [
+      "ShopLineupParam:13420"
+    ],
     "17001": [
       "ItemLotParam_map:105010:1"
     ],
@@ -667,6 +704,9 @@
     ],
     "19013": [
       "ShopLineupParam:13418"
+    ],
+    "19014": [
+      "ShopLineupParam:13421"
     ],
     "19050": [
       "ItemLotParam_map:112000:1"
@@ -2456,6 +2496,438 @@
     "2005332": [
       "ItemTableParam:49160"
     ],
+    "2006000": [
+      "ItemTableParam:49171"
+    ],
+    "2006001": [
+      "ItemTableParam:49171"
+    ],
+    "2006002": [
+      "ItemTableParam:49171"
+    ],
+    "2006010": [
+      "ItemTableParam:49171"
+    ],
+    "2006011": [
+      "ItemTableParam:49171"
+    ],
+    "2006012": [
+      "ItemTableParam:49171"
+    ],
+    "2006020": [
+      "ItemTableParam:49171"
+    ],
+    "2006021": [
+      "ItemTableParam:49171"
+    ],
+    "2006022": [
+      "ItemTableParam:49171"
+    ],
+    "2006030": [
+      "ItemTableParam:49171"
+    ],
+    "2006031": [
+      "ItemTableParam:49171"
+    ],
+    "2006032": [
+      "ItemTableParam:49171"
+    ],
+    "2006100": [
+      "ItemTableParam:49172"
+    ],
+    "2006101": [
+      "ItemTableParam:49172"
+    ],
+    "2006102": [
+      "ItemTableParam:49172"
+    ],
+    "2006110": [
+      "ItemTableParam:49172"
+    ],
+    "2006111": [
+      "ItemTableParam:49172"
+    ],
+    "2006112": [
+      "ItemTableParam:49172"
+    ],
+    "2006120": [
+      "ItemTableParam:49172"
+    ],
+    "2006121": [
+      "ItemTableParam:49172"
+    ],
+    "2006122": [
+      "ItemTableParam:49172"
+    ],
+    "2006130": [
+      "ItemTableParam:49172"
+    ],
+    "2006131": [
+      "ItemTableParam:49172"
+    ],
+    "2006132": [
+      "ItemTableParam:49172"
+    ],
+    "2006200": [
+      "ItemTableParam:49173"
+    ],
+    "2006201": [
+      "ItemTableParam:49173"
+    ],
+    "2006202": [
+      "ItemTableParam:49173"
+    ],
+    "2006210": [
+      "ItemTableParam:49173"
+    ],
+    "2006211": [
+      "ItemTableParam:49173"
+    ],
+    "2006212": [
+      "ItemTableParam:49173"
+    ],
+    "2006220": [
+      "ItemTableParam:49173"
+    ],
+    "2006221": [
+      "ItemTableParam:49173"
+    ],
+    "2006222": [
+      "ItemTableParam:49173"
+    ],
+    "2006230": [
+      "ItemTableParam:49173"
+    ],
+    "2006231": [
+      "ItemTableParam:49173"
+    ],
+    "2006232": [
+      "ItemTableParam:49173"
+    ],
+    "2006300": [
+      "ItemTableParam:49170"
+    ],
+    "2006301": [
+      "ItemTableParam:49170"
+    ],
+    "2006302": [
+      "ItemTableParam:49170"
+    ],
+    "2006310": [
+      "ItemTableParam:49170"
+    ],
+    "2006311": [
+      "ItemTableParam:49170"
+    ],
+    "2006312": [
+      "ItemTableParam:49170"
+    ],
+    "2006320": [
+      "ItemTableParam:49170"
+    ],
+    "2006321": [
+      "ItemTableParam:49170"
+    ],
+    "2006322": [
+      "ItemTableParam:49170"
+    ],
+    "2006330": [
+      "ItemTableParam:49170"
+    ],
+    "2006331": [
+      "ItemTableParam:49170"
+    ],
+    "2006332": [
+      "ItemTableParam:49170"
+    ],
+    "2007000": [
+      "ItemTableParam:49181"
+    ],
+    "2007001": [
+      "ItemTableParam:49181"
+    ],
+    "2007002": [
+      "ItemTableParam:49181"
+    ],
+    "2007010": [
+      "ItemTableParam:49181"
+    ],
+    "2007011": [
+      "ItemTableParam:49181"
+    ],
+    "2007012": [
+      "ItemTableParam:49181"
+    ],
+    "2007020": [
+      "ItemTableParam:49181"
+    ],
+    "2007021": [
+      "ItemTableParam:49181"
+    ],
+    "2007022": [
+      "ItemTableParam:49181"
+    ],
+    "2007030": [
+      "ItemTableParam:49181"
+    ],
+    "2007031": [
+      "ItemTableParam:49181"
+    ],
+    "2007032": [
+      "ItemTableParam:49181"
+    ],
+    "2007100": [
+      "ItemTableParam:49182"
+    ],
+    "2007101": [
+      "ItemTableParam:49182"
+    ],
+    "2007102": [
+      "ItemTableParam:49182"
+    ],
+    "2007110": [
+      "ItemTableParam:49182"
+    ],
+    "2007111": [
+      "ItemTableParam:49182"
+    ],
+    "2007112": [
+      "ItemTableParam:49182"
+    ],
+    "2007120": [
+      "ItemTableParam:49182"
+    ],
+    "2007121": [
+      "ItemTableParam:49182"
+    ],
+    "2007122": [
+      "ItemTableParam:49182"
+    ],
+    "2007130": [
+      "ItemTableParam:49182"
+    ],
+    "2007131": [
+      "ItemTableParam:49182"
+    ],
+    "2007132": [
+      "ItemTableParam:49182"
+    ],
+    "2007200": [
+      "ItemTableParam:49183"
+    ],
+    "2007201": [
+      "ItemTableParam:49183"
+    ],
+    "2007202": [
+      "ItemTableParam:49183"
+    ],
+    "2007210": [
+      "ItemTableParam:49183"
+    ],
+    "2007211": [
+      "ItemTableParam:49183"
+    ],
+    "2007212": [
+      "ItemTableParam:49183"
+    ],
+    "2007220": [
+      "ItemTableParam:49183"
+    ],
+    "2007221": [
+      "ItemTableParam:49183"
+    ],
+    "2007222": [
+      "ItemTableParam:49183"
+    ],
+    "2007230": [
+      "ItemTableParam:49183"
+    ],
+    "2007231": [
+      "ItemTableParam:49183"
+    ],
+    "2007232": [
+      "ItemTableParam:49183"
+    ],
+    "2007300": [
+      "ItemTableParam:49180"
+    ],
+    "2007301": [
+      "ItemTableParam:49180"
+    ],
+    "2007302": [
+      "ItemTableParam:49180"
+    ],
+    "2007310": [
+      "ItemTableParam:49180"
+    ],
+    "2007311": [
+      "ItemTableParam:49180"
+    ],
+    "2007312": [
+      "ItemTableParam:49180"
+    ],
+    "2007320": [
+      "ItemTableParam:49180"
+    ],
+    "2007321": [
+      "ItemTableParam:49180"
+    ],
+    "2007322": [
+      "ItemTableParam:49180"
+    ],
+    "2007330": [
+      "ItemTableParam:49180"
+    ],
+    "2007331": [
+      "ItemTableParam:49180"
+    ],
+    "2007332": [
+      "ItemTableParam:49180"
+    ],
+    "2008000": [
+      "ItemTableParam:49191"
+    ],
+    "2008001": [
+      "ItemTableParam:49191"
+    ],
+    "2008002": [
+      "ItemTableParam:49191"
+    ],
+    "2008010": [
+      "ItemTableParam:49191"
+    ],
+    "2008011": [
+      "ItemTableParam:49191"
+    ],
+    "2008012": [
+      "ItemTableParam:49191"
+    ],
+    "2008020": [
+      "ItemTableParam:49191"
+    ],
+    "2008021": [
+      "ItemTableParam:49191"
+    ],
+    "2008022": [
+      "ItemTableParam:49191"
+    ],
+    "2008030": [
+      "ItemTableParam:49191"
+    ],
+    "2008031": [
+      "ItemTableParam:49191"
+    ],
+    "2008032": [
+      "ItemTableParam:49191"
+    ],
+    "2008100": [
+      "ItemTableParam:49192"
+    ],
+    "2008101": [
+      "ItemTableParam:49192"
+    ],
+    "2008102": [
+      "ItemTableParam:49192"
+    ],
+    "2008110": [
+      "ItemTableParam:49192"
+    ],
+    "2008111": [
+      "ItemTableParam:49192"
+    ],
+    "2008112": [
+      "ItemTableParam:49192"
+    ],
+    "2008120": [
+      "ItemTableParam:49192"
+    ],
+    "2008121": [
+      "ItemTableParam:49192"
+    ],
+    "2008122": [
+      "ItemTableParam:49192"
+    ],
+    "2008130": [
+      "ItemTableParam:49192"
+    ],
+    "2008131": [
+      "ItemTableParam:49192"
+    ],
+    "2008132": [
+      "ItemTableParam:49192"
+    ],
+    "2008200": [
+      "ItemTableParam:49193"
+    ],
+    "2008201": [
+      "ItemTableParam:49193"
+    ],
+    "2008202": [
+      "ItemTableParam:49193"
+    ],
+    "2008210": [
+      "ItemTableParam:49193"
+    ],
+    "2008211": [
+      "ItemTableParam:49193"
+    ],
+    "2008212": [
+      "ItemTableParam:49193"
+    ],
+    "2008220": [
+      "ItemTableParam:49193"
+    ],
+    "2008221": [
+      "ItemTableParam:49193"
+    ],
+    "2008222": [
+      "ItemTableParam:49193"
+    ],
+    "2008230": [
+      "ItemTableParam:49193"
+    ],
+    "2008231": [
+      "ItemTableParam:49193"
+    ],
+    "2008232": [
+      "ItemTableParam:49193"
+    ],
+    "2008300": [
+      "ItemTableParam:49190"
+    ],
+    "2008301": [
+      "ItemTableParam:49190"
+    ],
+    "2008302": [
+      "ItemTableParam:49190"
+    ],
+    "2008310": [
+      "ItemTableParam:49190"
+    ],
+    "2008311": [
+      "ItemTableParam:49190"
+    ],
+    "2008312": [
+      "ItemTableParam:49190"
+    ],
+    "2008320": [
+      "ItemTableParam:49190"
+    ],
+    "2008321": [
+      "ItemTableParam:49190"
+    ],
+    "2008322": [
+      "ItemTableParam:49190"
+    ],
+    "2008330": [
+      "ItemTableParam:49190"
+    ],
+    "2008331": [
+      "ItemTableParam:49190"
+    ],
+    "2008332": [
+      "ItemTableParam:49190"
+    ],
     "2010000": [
       "ItemTableParam:47201",
       "ItemTableParam:49321"
@@ -2938,35 +3410,35 @@
     ]
   },
   "row_counts": {
-    "AttachEffectParam": 2241,
-    "AttachEffectTableParam": 24423,
-    "EquipParamAntique": 1515,
+    "AttachEffectParam": 2266,
+    "AttachEffectTableParam": 25594,
+    "EquipParamAntique": 1667,
     "AntiqueStandParam": 74,
-    "ItemLotParam_map": 4333,
-    "ItemLotParam_enemy": 2840,
-    "ItemTableParam": 35755,
-    "ShopLineupParam": 12864
+    "ItemLotParam_map": 4349,
+    "ItemLotParam_enemy": 2860,
+    "ItemTableParam": 36058,
+    "ShopLineupParam": 15264
   },
   "resource_sha256": {
-    "Param/AntiqueStandParam.csv": "a803060830a09243cba6c653272845425daf1286437d0b02396c3c4342e4aacb",
-    "Param/AttachEffectParam.csv": "d4f74dfc9b07bf1ff2b12047d8c92f4abf546ea7321fcb390f2274e9c75f5ca1",
-    "Param/AttachEffectTableParam.csv": "4522dc4b7331a2cc41125a69f4a04401da2da373af87084490065fa264116d78",
-    "Param/EquipParamAntique.csv": "6de93b3f320780d9905cb66f0a543ff874ed2af0866303cf5cd9f6ba965c1711",
-    "Text/en_US/AntiqueName.fmg.xml": "803ef2d9037c325f215ee39d439103b4e32ddd09481c2f6980bcec43d0c9591b",
-    "Text/en_US/AntiqueName_dlc01.fmg.xml": "71a010f147c75998e66bd103de8836aa1603fabfc70977c082fac21631a30be8",
-    "Text/en_US/AttachEffectName.fmg.xml": "50b0e7e368de26f4244dc88f2ea4402246a435a5359f226883ebf7d7eb9e5962",
-    "Text/en_US/AttachEffectName_dlc01.fmg.xml": "945c45097f372375d576a530c6cdf0db071f404dd6bd18443303e2f16e14af9d",
-    "Text/en_US/GoodsName.fmg.xml": "5fd69c792d501f86984377f4c541febb40b619d352621354fb1fa8e08630cb09",
-    "Text/en_US/GoodsName_dlc01.fmg.xml": "defa39b86382828b5e8326ec4c6fe06964cbbae5a2a2767834a8a8a119d07900",
-    "Text/en_US/NpcName.fmg.xml": "eaa67da0ec3c7bc8da1fca19de9b3909a6ce2bdcc675879901779688ec691ae1",
-    "Text/en_US/NpcName_dlc01.fmg.xml": "583ba47f8196b48fcd58104629af60d2514f6befb73224e846b3cfaaaec5e625",
-    "Text/zh_CN/AntiqueName.fmg.xml": "6fb358db4d43464d0467df3f154d95cf8891a084799f043234929a4767632630",
-    "Text/zh_CN/AntiqueName_dlc01.fmg.xml": "3d12f630873a0230faf647bac715992be2748317f15a2e9c81af9ad515939770",
-    "Text/zh_CN/AttachEffectName.fmg.xml": "6917ec0db6d419407f25dc276109b1b482bcc2d6acf97207dba049e23151c40a",
-    "Text/zh_CN/AttachEffectName_dlc01.fmg.xml": "e41805da9211b78a6642d16c7cad4fde70ea3ce40eb93f507c0cd6fba481822a",
-    "Text/zh_CN/GoodsName.fmg.xml": "71f3a36fd620b6c59c5339eb013932cbfdb65733232456c6f873460c5bd00483",
-    "Text/zh_CN/GoodsName_dlc01.fmg.xml": "beb65ad9947f55534b2288ee827ba67122f75afe6c9ed022953b47c13bdf0b8c",
-    "Text/zh_CN/NpcName.fmg.xml": "db4bf9f1cc632a173cec9e8785ac90787ee63b3082bb19424cf54cf7828ae491",
-    "Text/zh_CN/NpcName_dlc01.fmg.xml": "6efaf68831db65826954ace0c1b759e0d10f2f9ae8f2f3ef7036be463e3b35c4"
+    "Param/AntiqueStandParam.csv": "f43d94a4aee34ee06b2eb2db2ac8038126d4c4839b59d879d0a488e6ffaf73ea",
+    "Param/AttachEffectParam.csv": "c9a83b013a8041d08415fcc30d046ba67df4d899c487380cac0b64dc2e6268cb",
+    "Param/AttachEffectTableParam.csv": "d1245e9764191ed6efd4be4e2f4a9317ea5b11e5e0a6996f7bbcd7f6f710818c",
+    "Param/EquipParamAntique.csv": "ceb299adf813fecfb4d18597129b813639b23d214f2c6ae6c68f4f75788ff5a2",
+    "Text/en_US/AntiqueName.fmg.xml": "69b5e16c924a218f483da958dbb073c0c3f6f446c2b2821abf4923f04ecfd4d0",
+    "Text/en_US/AntiqueName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/en_US/AttachEffectName.fmg.xml": "a3031e90d9b39de88047fe1c9024fc7ef4ab1aac9d1fffbce6c816362f2fe106",
+    "Text/en_US/AttachEffectName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/en_US/GoodsName.fmg.xml": "7c672cefc7507cf51c3ce3bab12dd71c9e639ae8834b8ee568c9c7997d57ec1b",
+    "Text/en_US/GoodsName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/en_US/NpcName.fmg.xml": "92c8597a9c70bbf88f96b204c1f9e5ec0f273d6104b4bd44083d03472b933056",
+    "Text/en_US/NpcName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/zh_CN/AntiqueName.fmg.xml": "38240c1f00639b49aa48f4982f8a26ab963020d133f3b25110b45f04240d50ef",
+    "Text/zh_CN/AntiqueName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/zh_CN/AttachEffectName.fmg.xml": "7f34657f1f213a4aa09baacd324f1f1571b1808c1a0dbafb918d84bc500300e9",
+    "Text/zh_CN/AttachEffectName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/zh_CN/GoodsName.fmg.xml": "a8b155464e9ab32234f6aaf88388f0cceca04904effbce9e87662faecdd9c546",
+    "Text/zh_CN/GoodsName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372",
+    "Text/zh_CN/NpcName.fmg.xml": "4580bdf70f4e324b154c74328cefe033539b71af031afecab0154d385a72c753",
+    "Text/zh_CN/NpcName_dlc01.fmg.xml": "e6174bf65d5340271291002a9b75a99a32aa29e1f84eb4804e2d365acc5fb372"
   }
 }

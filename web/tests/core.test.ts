@@ -160,6 +160,25 @@ describe("browser binary codec", () => {
   });
 });
 describe("shop relic policy", () => {
+  it("roundtrips and protects all nine new Hotfix1 shop relics", () => {
+    const records = [
+      [10003, true], [10004, true], [10005, false], [10006, true],
+      [10007, true], [10008, true], [10009, true], [16014, true], [19014, true],
+    ] as const;
+    const session = Session.open(fixture(), "hotfix1");
+    for (const [id, deep] of records) {
+      expect(catalog.relics[id]).toMatchObject({ deep, shop: true, salable: false, obtainable: true });
+      const roll = fixedRoll(id)!;
+      expect(checkRoll(id, roll)).toEqual([]);
+      const handle = session.apply(0, { type: "add", id, roll })!;
+      expect(() => session.apply(0, { type: "edit", handle, id, roll })).toThrow(/商店遗物不能修改/);
+      expect(() => session.apply(0, { type: "remove", handle })).toThrow(/商店遗物不能删除/);
+    }
+    const reopened = Session.open(session.export(), "reopened");
+    for (const [id] of records) {
+      expect(reopened.view(0).relics.find((relic) => relic.id === id)?.roll).toEqual(fixedRoll(id));
+    }
+  });
   it("blocks edits, conversions and deletion at the writer, while preserving collection and equipment", () => {
     const s = Session.open(fixture(), "test");
     const roll = fixedRoll(11015)!;

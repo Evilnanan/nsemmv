@@ -20,7 +20,7 @@ weaponraw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes();weapons=I
 assert json.loads(a.assets.read_text())['hashes']['regulation.bin']==x.x['hashes']['regulation.bin']
 animations=json.loads(a.animations.read_text());track=next(t for b in animations['bundles'] for t in b['taes'] if t['ID']==2900)
 taeraw=Path(str(a.animations)+'.2900.tae').read_bytes();graph=BehaviorGraph(a.behavior)
-raw_script=a.script.read_bytes();assert sha(raw_script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+raw_script=a.script.read_bytes();assert sha(raw_script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=raw_script.decode('utf-8-sig').replace('\r\n','\n')
 def function(name):
  start=source.index('function '+name+'(');return source[start:source.index('\nfunction ',start+1)]
@@ -153,7 +153,7 @@ for style,marker,leaf,state in ((100620,7020001,7020002,323),(100621,7020003,702
  assert r['invocationConditionsStateChange1']==state and r['cycleOccurrenceSpEffectId']==leaf and r['effectEndurance']==0
  assert f['effectEndurance']==20 and f['fireAttackPower']==20 and f['isUseAtkParamAtkPowerCorrect']==1
  assert f['wepParamChange']==(1 if style==100620 else 2) and f['spCategory']==(162 if style==100620 else 163)
-selector=graph.reference(32481,'generator');assert selector==41896
+selector=graph.reference(graph.named('FookShotAdditionalAttack', 'hkbStateMachine::StateInfo'),'generator');assert selector==graph.named('FookShotAdditionalAttack Selector', 'hkbManualSelectorGenerator')
 binding=graph.selector_binding(selector);assert binding['name']=='FookShotAdditionalAttack'
 clips=[]
 for branch in graph.children(selector):
@@ -219,7 +219,7 @@ for order in ((100620,100621),(100621,100620)):
 fields=('stateInfo','spCategory','wepParamChange','effectEndurance','fireAttackPower','isUseAtkParamAtkPowerCorrect','invocationConditionsStateChange1','cycleOccurrenceSpEffectId')
 output=dict(schema=1,exeSha256=sha(x.raw),regulationSha256=x.x['hashes']['regulation.bin'],paramSha256=sha(x.param),
  assetHashes={**{k:sha(v) for k,v in raws.items()},'weapon':sha(weaponraw),'tae':sha(taeraw),'hks':sha(raw_script),'behaviorGraph':graph.metadata['hkxSha256']},
- effects=[root],root=root,leaves=[7020002,7020004],graph=dict(state=32481,selector=selector,binding=binding,clips=clips),attackEvents=attack_events,enchantEvents=enchant_events,
+ effects=[root],root=root,leaves=[7020002,7020004],graph=dict(state=graph.named('FookShotAdditionalAttack', 'hkbStateMachine::StateInfo'),selector=selector,binding=binding,clips=clips),attackEvents=attack_events,enchantEvents=enchant_events,
  rows={str(id):{k:x.spells[str(id)][k] for k in fields} for id in(root,100620,100621,7020001,7020002,7020003,7020004)},checks=checks,
  stubs=sorted(stubs|{'Lua engine responses for window, equipment category, root presence and active hand; original functions execute',
  'Type 1 attack and Type 67 grant handlers use supplied selected events; HKS performs eligibility, not these unconditional events',

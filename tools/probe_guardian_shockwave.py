@@ -19,12 +19,12 @@ p=argparse.ArgumentParser(description=__doc__)
 for name in ('exe','extracted','animations','behavior','script','output'):p.add_argument(name,type=Path)
 a=p.parse_args();x=Inputs(a.exe,a.extracted);animations=json.loads(a.animations.read_text())
 graph=BehaviorGraph(a.behavior);script=a.script.read_bytes()
-assert sha(script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert sha(script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 text=script.decode('utf-8-sig').replace('\r\n','\n')
 assert 'if env(GetSpEffectID, 701530) == TRUE then\n            SetVariable("IndexGuard", 3)\n        end' in text
-assert animations['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert animations['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 paths=[]
-for selector,expected in ((18834,19450),(18836,19460),(18838,19470)):
+for selector,expected in ((graph.named('GuardDamageSmall Selector', 'hkbManualSelectorGenerator'),19450),(graph.named('GuardDamageMiddle Selector', 'hkbManualSelectorGenerator'),19460),(graph.named('GuardDamageLarge Selector', 'hkbManualSelectorGenerator'),19470)):
  assert graph.selector_binding(selector)['name']=='IndexGuard'
  children=graph.children(selector);assert len(children)==5
  child=children[3];clips=graph.children(child)

@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
   "assetHashes": {
-    "Magic": "22eb8e1965a0390a0f1278bb1bc05f6a8517ef494811f63e31333ba0a2a83bd2",
-    "SwordArtsParam": "4773b47a028bd1a9c9a30eed28951bfbda326fdacfd6efbffb9d383083153df2",
-    "EquipParamWeapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1"
+    "Magic": "17742eeafe4fade863f3a7ee5f7ff483bd4897f765802fe4a1954dfa8107b63e",
+    "SwordArtsParam": "4347f28d27576219f1b84270dab113258ad5d6a18e9cb3983b2ce9fef826e7ba",
+    "EquipParamWeapon": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea"
   },
   "families": [
     {

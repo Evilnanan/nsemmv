@@ -26,7 +26,7 @@ for id in range(7220300, 7220307):
     row = spells[str(id)]
     assert struct.unpack_from('<f', rows[id], 0xa4)[0] == row['changeMpRate']
 assert spells['7220305']['physicsAttackRate'] == spells['7220305']['magicAttackRate']
-assert spells['7220305']['effectEndurance'] == 20
+assert spells['7220305']['effectEndurance'] == 30
 
 scenarios = [
     ('no-equipment', [60, 120, 124], 17, 1, 0),
@@ -36,7 +36,7 @@ scenarios = [
     ('rearm-boundary', [120, 124], 3, 1, 1),
     ('dense-hits', list(range(60, 900)), 17, 1, 1),
     ('duplicate-equipment', [120, 124], 3, 1, 3),
-    ('independent-expiry', [60, 300], 23, 1, 1),
+    ('independent-expiry', [60, 300], 33, 1, 1),
 ]
 for name, hits, seconds, damage, copies in scenarios:
     c = Chain(inputs)
@@ -58,11 +58,11 @@ for name, hits, seconds, damage, copies in scenarios:
         amount, flask = c.fp(1000)
         assert flask == 0
         if amount:
-            assert amount == 100
+            assert amount == 250
             restores.append(dict(frame=frame, amount=amount))
         rates = c.attack()
         count = sum(n['id'] == 7220305 and not n['flags'] & 0x800c0003 for n in c.nodes())
-        assert all(math.isclose(v, 1.15 ** count, rel_tol=1e-6) for v in rates)
+        assert all(math.isclose(v, 1.10 ** count, rel_tol=1e-6) for v in rates)
         if not math.isclose(rates[0], previous_rate, rel_tol=1e-6):
             attack_changes.append(dict(frame=frame, count=count, rate=rates[0]))
             previous_rate = rates[0]
@@ -128,7 +128,7 @@ for copies in (1, 2, 3):
         for _ in range(copies): c.insert(7220306)
         c.qualify(); c.update(0)
         value = c.fp(maximum)
-        assert value == [math.trunc(maximum * copies * .1), 0]
+        assert value == [math.trunc(maximum * copies * .25), 0]
         c.qualify(); c.update(1 / 60)
         assert c.fp(maximum) == [0, 0]
         checks['fp'].append(dict(copies=copies, maximum=maximum, first=value, nextFrame=[0, 0]))

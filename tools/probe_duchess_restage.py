@@ -23,9 +23,9 @@ a=p.parse_args()
 inputs=Inputs(a.exe,a.extracted)
 assets,systems,tae=(json.loads(path.read_text()) for path in (a.assets,a.systems,a.animations))
 for x in (assets,systems):assert x['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 raw=a.script.read_bytes()
-assert sha(raw)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert sha(raw)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=raw.decode('utf-8-sig').replace('\r\n','\n')
 start=source.index('function ExecDejavu()');function=source[start:source.index('\nfunction ',start+1)]
 update_start=source.index('function Update()');update=source[update_start:source.index('\nfunction ',update_start+1)]
@@ -51,11 +51,11 @@ for id,bullet,leaf in ((600000150,30903000,703540),(600000185,30903005,7290001))
     assert row['refType']==1 and row['refId']==bullet and bullets[str(bullet)]['spEffectId0']==leaf
     paths.append(dict(behavior=id,bullet=bullet,leaf=leaf))
 graph=BehaviorGraph(a.behavior)
-bindings=[graph.selector_binding(i) for i in (16955,17189,17190)]
+bindings=[graph.selector_binding(i) for i in (graph.named('AddDejavuSelector', 'hkbManualSelectorGenerator'),graph.named('AddDejavu_OneHandSelector', 'hkbManualSelectorGenerator'),graph.named('AddDejavu_BothHandSelector', 'hkbManualSelectorGenerator'))]
 assert [b['name'] for b in bindings]==['IndexDejavuBlend','IsRelic_Dejavu','IsRelic_Dejavu']
-assert graph.children(16955)==[17189,17190,17191]
+assert graph.children(graph.named('AddDejavuSelector', 'hkbManualSelectorGenerator'))==[graph.named('AddDejavu_OneHandSelector', 'hkbManualSelectorGenerator'),graph.named('AddDejavu_BothHandSelector', 'hkbManualSelectorGenerator'),graph.named('AddDejavu_NoBlend_CMSG', 'CustomManualSelectorGenerator')]
 animations=[]
-for selector in (17189,17190):
+for selector in (graph.named('AddDejavu_OneHandSelector', 'hkbManualSelectorGenerator'),graph.named('AddDejavu_BothHandSelector', 'hkbManualSelectorGenerator')):
     row=[]
     for generator in graph.children(selector):
         children=graph.children(generator);assert len(children)==1

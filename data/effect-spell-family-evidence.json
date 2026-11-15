@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "magicParamSha256": "22eb8e1965a0390a0f1278bb1bc05f6a8517ef494811f63e31333ba0a2a83bd2",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "magicParamSha256": "17742eeafe4fade863f3a7ee5f7ff483bd4897f765802fe4a1954dfa8107b63e",
   "families": [
     {
       "root": 7043200,

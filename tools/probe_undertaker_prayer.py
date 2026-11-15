@@ -12,7 +12,7 @@ for arg in ('exe','extracted','animations','output'):p.add_argument(arg,type=Pat
 a=p.parse_args();i=Inputs(a.exe,a.extracted)
 raw=a.extracted.with_suffix('.Magic.param').read_bytes();rows=Inputs.table(raw,0xac)
 tae=json.loads(a.animations.read_text())
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 r=i.spells;assert r['7037000']['stateInfo']==r['7037001']['invocationConditionsStateChange1']==2065
 assert r['7037001']['effectEndurance']==60 and r['7037001']['spCategory']==20
 assert math.isclose(r['7037001']['physicsAttackRate'],1.19,rel_tol=1e-6)

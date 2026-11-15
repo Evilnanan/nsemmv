@@ -8,7 +8,7 @@ p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('extracted', type=Path)
 a = p.parse_args()
 x = json.loads(a.extracted.read_text())
-assert x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+assert x['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
 tables = x['tables']
 emitters = {}
 for emitter, expected_leaf in [(7050000, 7050001), (7090101, 7090102), (7090103, 7090102),

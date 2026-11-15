@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
   "playerCommonParamSha256": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
-  "scratchedPartsParamSha256": "0de400b8124f582c45b42929b5c6b69c2a98bbc29918c1daf28601534110ec89",
+  "scratchedPartsParamSha256": "d17f097c9833d363cb2d79bd0d92226a968fbcb17024a5ebc45bcfb61c69685f",
   "root": 7280000,
   "baseDuration": 17,
   "extendedDuration": 22,
@@ -2405,6 +2405,11 @@
         "removedAfter": 22.125
       },
       {
+        "id": 903700,
+        "durability": 3000,
+        "removedAfter": 22.125
+      },
+      {
         "id": 950000,
         "durability": 3000,
         "removedAfter": 22.125
@@ -2426,7 +2431,7 @@
       },
       {
         "id": 951500,
-        "durability": 3000,
+        "durability": 2000,
         "removedAfter": 22.125
       },
       {
@@ -2436,6 +2441,21 @@
       },
       {
         "id": 951800,
+        "durability": 3000,
+        "removedAfter": 22.125
+      },
+      {
+        "id": 952500,
+        "durability": 2500,
+        "removedAfter": 22.125
+      },
+      {
+        "id": 952501,
+        "durability": 3000,
+        "removedAfter": 22.125
+      },
+      {
+        "id": 952700,
         "durability": 3000,
         "removedAfter": 22.125
       },

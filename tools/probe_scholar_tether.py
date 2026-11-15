@@ -168,7 +168,8 @@ assert r['invocationConditionsStateChange2']==r['invocationConditionsStateChange
 assert r['cycleOccurrenceSpEffectId']==r['replaceSpEffectId']==-1
 for marker in (708100,708110):assert x.spells[str(marker)]['stateInfo']==2222 and x.spells[str(marker)]['spCategory']==205
 behavior=x.x['tables']['BehaviorParam_PC']['700000410'];bullet=x.x['tables']['Bullet']['30908110'];attack=x.x['tables']['AtkParam_Pc']['700000410']
-assert behavior['refType']==1 and behavior['refId']==30908110
+# Hotfix1 reuses this behavior ID for a melee hit; the former projectile is disconnected.
+assert behavior['refType']==0 and behavior['refId']==700000410
 assert bullet['atkId_Bullet']==700000410 and bullet['spEffectId0']==leaf and bullet['hitRadius']==30 and bullet['numShoot']==1
 assert [attack[k] for k in ('selfTarget','friendlyTarget','opposeTarget','disableHitSpEffect')]==[0,0,1,0]
 checks=dict(dispatch=[],projectile=[],damage=[],unlink=[],late=[],repeat=[]);stubs=set()
@@ -262,6 +263,6 @@ output=dict(schema=1,exeSha256=sha(x.raw),regulationSha256=x.x['hashes']['regula
  unlink='4507C0 → 44F180 / 452870 / 44B800 → 3C7FD0',rejoin='450680 → 44F230 / 44DF30 → 3C7FD0',
  update='50D060 / 5057D0 / 50ACD0',hp='506EC0'),
  stubs=sorted(stubs|{'network messages and linked recipient identity are supplied; original source map and recipient list insertion/erase are executed',
- 'collision arrivals, maximum HP and unprotected recipient are supplied; final current HP write, full battle and multiplayer transport are not simulated'}),gameplayVerified=False)
+ 'collision arrivals, maximum HP and unprotected recipient are supplied; final current HP write, full battle and multiplayer transport are not simulated'}),routeConfirmed=False,unresolved=['The current animation selects a melee behavior; no reference to Bullet 30908110 remains in BehaviorParam_PC. Direct projectile/leaf probes below do not establish automatic application.'],gameplayVerified=False)
 a.output.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
 print('PASS',sum(map(len,checks.values())),'native Scholar tether DOT scenarios')

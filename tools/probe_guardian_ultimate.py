@@ -20,8 +20,8 @@ for name in ('exe','extracted','assets','script','animations','behavior','output
 a=p.parse_args();inputs=Inputs(a.exe,a.extracted)
 assets=json.loads(a.assets.read_text());tae=json.loads(a.animations.read_text());graph=BehaviorGraph(a.behavior)
 assert assets['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
-script=a.script.read_bytes();assert sha(script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
+script=a.script.read_bytes();assert sha(script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=script.decode('utf-8-sig').replace('\r\n','\n')
 functions=[]
 for name in ('DragoonJumpLand_onUpdate','DragoonJumpLandLoop_onUpdate'):

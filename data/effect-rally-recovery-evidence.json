@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "attackParamSha256": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
-  "npcAttackParamSha256": "700575340ff58463201520169fa0193db8e963f93e9e686eafd5b4cdec8f87a1",
-  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attackParamSha256": "1ec1893420053cbfb06e3efb269ade4ba9d6a617d1d3dbb370e837847be05676",
+  "npcAttackParamSha256": "a6d52f38e3e6164ed13ea95ed5342d952177659c07427f03ae1c69bf4793c968",
+  "weaponParamSha256": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea",
   "effects": {
     "7005600": 7005600,
     "6005600": 7005601,
@@ -1773,6 +1773,13 @@
       "regainableHpRateScale": 1,
       "regainableSlotId": -1
     },
+    "2514700": {
+      "wepRegainHpScale": 100,
+      "atkRegainHp": 0,
+      "regainableTimeScale": 1,
+      "regainableHpRateScale": 1,
+      "regainableSlotId": 1
+    },
     "90130": {
       "wepRegainHpScale": 90,
       "atkRegainHp": 0,
@@ -1828,13 +1835,6 @@
       "regainableTimeScale": 1,
       "regainableHpRateScale": 1,
       "regainableSlotId": -1
-    },
-    "3212705": {
-      "wepRegainHpScale": 100,
-      "atkRegainHp": 0,
-      "regainableTimeScale": 1,
-      "regainableHpRateScale": 1,
-      "regainableSlotId": 1
     },
     "100906": {
       "wepRegainHpScale": 50,
@@ -6479,7 +6479,7 @@
         }
       },
       {
-        "attack": 3212705,
+        "attack": 2514700,
         "first": {
           "hp": 700,
           "pool": 300.0,

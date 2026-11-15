@@ -23,7 +23,7 @@ class Inputs:
         self.pe = pefile.PE(data=self.raw, fast_load=True)
         assert self.pe.OPTIONAL_HEADER.ImageBase == BASE
         self.x = json.loads(Path(extracted).read_text())
-        assert self.x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+        assert self.x['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
         self.param = Path(extracted).with_suffix('.SpEffectParam.param').read_bytes()
         self.rows = self.table(self.param, 0x400)
         self.spells = self.x['tables']['SpEffectParam']

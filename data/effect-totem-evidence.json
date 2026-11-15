@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
   "gameplayVerified": false,
   "assets": {
-    "chr/c0000.anibnd.dcx": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
-    "chr/c0000_a6x.anibnd.dcx": "68e8e74f2df2e9a124b62e95091eca19cd27686e6df3db938bbe22fe1e7b8abd"
+    "chr/c0000.anibnd.dcx": "806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a",
+    "chr/c0000_a6x.anibnd.dcx": "387466c17138d1c63025b4feb1e7515cb065817c852c29bf2075780e81d84bb8"
   },
   "asset": {
     "id": 302000,

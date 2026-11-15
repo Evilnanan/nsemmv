@@ -80,11 +80,13 @@ checks=[];stubs=set()
 cases=[[],[7040200],[7040200]*2,[7040200]*3,[7040200]*6,
        [7040201],[7040201]*2,[7040201]*6,[7040200,7040201],
        [7040201,7040200],[7040200]*2+[7040201],[7040201,7040200,7040201]]
+cases += [[7040202], [7040202]*2, [7040202]*6, [7040200,7040202], [7040201,7040202], [7040202,7040201], [7040201,7040201,7040202], [7040200,7040201,7040202]]
 for ids,critical,disabled in itertools.product(cases,(False,True),(False,True)):
  c,v,accepted,roots=bridge([[id] for id in ids])
  assert accepted.count(7040200)==ids.count(7040200)
  assert accepted.count(7040201)==min(1,ids.count(7040201))
- assert [row['id'] for row in v.nodes()]==roots==accepted
+ assert accepted.count(7040202)==ids.count(7040202)
+ assert [row['id'] for row in v.nodes()]==roots==[int(x.x['tables']['AttachEffectParam'][str(id)]['passiveSpEffectId_1']) for id in accepted]
  # 50F2A0 copies attack +10D into eligibility +24; 511010 tests this
  # when SpEffect +164 bit3 (throwAttackParamChange) is set.
  v.u.mem_write(OBJ+0x90d,bytes([critical]))
@@ -104,7 +106,7 @@ for ids,critical,disabled in itertools.product(cases,(False,True),(False,True)):
 output=dict(schema=1,regulationSha256=x.x['hashes']['regulation.bin'],exeSha256=sha(x.raw),
  paramSha256=sha(x.param),attachParamSha256=sha(raw),atkParamSha256=sha(atkraw),
  routines={'selection':'4FEA30','roots':'E6E3B0','insert':'50D060','attack':'502830','context':'50F2A0','eligibility':'511010'},
- families=[dict(effect=id,root=id,exclusive=x.x['tables']['AttachEffectParam'][str(id)]['exclusivityId'],rate=x.spells[str(id)]['physicsAttackRate']) for id in (7040200,7040201)],
+ families=[dict(effect=id,root=root,exclusive=x.x['tables']['AttachEffectParam'][str(id)]['exclusivityId'],rate=x.spells[str(root)]['physicsAttackRate']) for id in (7040200,7040201,7040202) for root in [int(x.x['tables']['AttachEffectParam'][str(id)]['passiveSpEffectId_1'])]],
  checks=checks,stubs=sorted(stubs|{'same inventory, allocation, parameter and mode fixtures as probe_equipped_exclusivity.py',
  'explicit attack +10D critical flag; no complete Throw selection, scene damage, multiplayer or gameplay',
  'selected roots bridge to a separate effect container; only one six-relic equipment group'}),gameplayVerified=False)

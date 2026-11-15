@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "nativeEvidenceSha256": "eb626036aac147d9aa06cdf9a865ad7f3dddd8efcf95ef1cb5b93014a6cb319a",
-  "triggerEvidenceSha256": "7478288ce09ba9b4dc9e6ae17ad9c95c45286356012c7181d2f591a0917626f8",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "nativeEvidenceSha256": "db8e89eaff8a5710b9566d4c380291d5b3e78e46f3df42657f27c15c3e69da8e",
+  "triggerEvidenceSha256": "004264f7910865125c7e9db77f87740e49b5c3e9138f4f18b755f3dd00060b65",
   "coverage": {
-    "obtainable": 637,
-    "withDetails": 634,
-    "withNumericFields": 560,
-    "withMechanicsOnly": 39,
-    "nativeStacking": 554,
-    "catalog": 2241,
-    "catalogWithDetails": 2079
+    "obtainable": 657,
+    "withDetails": 648,
+    "withNumericFields": 573,
+    "withMechanicsOnly": 40,
+    "nativeStacking": 559,
+    "catalog": 2266,
+    "catalogWithDetails": 2098
   },
   "effects": {
     "0": {
@@ -294,7 +294,8 @@
         2012
       ],
       "detailSources": [
-        7030902
+        7030902,
+        7030904
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -611,6 +612,16 @@
         7069008,
         7069009,
         7069010,
+        7069011,
+        7069012,
+        7069013,
+        7069014,
+        7069015,
+        7069016,
+        7069017,
+        7069018,
+        7069019,
+        7069020,
         7069021,
         7069022,
         7069023,
@@ -620,7 +631,17 @@
         7069027,
         7069028,
         7069029,
-        7069030
+        7069030,
+        7069031,
+        7069032,
+        7069033,
+        7069034,
+        7069035,
+        7069036,
+        7069037,
+        7069038,
+        7069039,
+        7069040
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -1671,7 +1692,7 @@
     },
     "320906": {
       "name": "提升投掷武器的攻击力",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 20381100
       },
@@ -1712,7 +1733,7 @@
       "gameplayVerified": false
     },
     "320908": {
-      "name": "提升冲刺攻击的攻击力",
+      "name": "强化冲刺攻击",
       "obtainable": false,
       "roots": {
         "passiveSpEffectId_1": 20381400
@@ -3634,7 +3655,8 @@
         2386
       ],
       "detailSources": [
-        7030912
+        7030912,
+        7030914
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -3661,7 +3683,8 @@
         2387
       ],
       "detailSources": [
-        7030922
+        7030922,
+        7030924
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -3675,6 +3698,48 @@
       "openQuestions": [
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
+      "gameplayVerified": false
+    },
+    "6030902": {
+      "name": "涂抹油脂类道具时，能额外提升近战攻击力",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7030930
+      },
+      "states": [
+        2388
+      ],
+      "detailSources": [],
+      "values": "unresolved",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+      ],
+      "gameplayVerified": false
+    },
+    "6030903": {
+      "name": "延长油脂类道具的持续时间",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7030940
+      },
+      "states": [
+        2389
+      ],
+      "detailSources": [],
+      "values": "unresolved",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -3872,7 +3937,7 @@
       "gameplayVerified": false
     },
     "6060300": {
-      "name": "每次打倒大教堂或锻造村的强敌可增加最大生命值与减伤率",
+      "name": "每次打倒大教堂或锻造村的强敌，能提升血量上限与减伤率",
       "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 7060300
@@ -3898,7 +3963,7 @@
       "gameplayVerified": false
     },
     "6060400": {
-      "name": "每次解开魔法师塔或神殿能提升专注值上限、卢恩获取量与观察力",
+      "name": "每次解开魔法师塔或祷告教堂的机关，能提升专注值上限、卢恩获取量与观察力",
       "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 7060101
@@ -3928,17 +3993,17 @@
       "gameplayVerified": false
     },
     "6060500": {
-      "name": "每次打倒大型营地或池沼的强敌可提升感应与异常状态抵抗力",
+      "name": "每次打倒小型要塞或遗迹的强敌，能提升精力上限与强韧度",
       "obtainable": true,
       "roots": {
-        "passiveSpEffectId_1": 7060500
+        "passiveSpEffectId_1": 7060600
       },
       "states": [
         0
       ],
       "detailSources": [
-        7060501,
-        7060510
+        7060601,
+        7060610
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -3954,17 +4019,17 @@
       "gameplayVerified": false
     },
     "6060600": {
-      "name": "每次打倒要塞或废墟的强敌可提升精力上限与强韧度",
+      "name": "每次打倒大型营地和湖池的强敌，能提升感应与异常状态抵抗力",
       "obtainable": true,
       "roots": {
-        "passiveSpEffectId_1": 7060600
+        "passiveSpEffectId_1": 7060500
       },
       "states": [
         0
       ],
       "detailSources": [
-        7060601,
-        7060610
+        7060501,
+        7060510
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -4238,6 +4303,7 @@
         2035
       ],
       "detailSources": [
+        7500001,
         7500002,
         7500002
       ],
@@ -4248,7 +4314,7 @@
         "wylder-bleed"
       ],
       "openQuestions": [
-        "发射阶段引用缺失的 Behavior 600000030，60 点叶效果 7500001 暂无实际引用；需核对额外运行时路径",
+        "完整技艺碰撞、命中去重与不同目标的出血抵抗；发射与拉拽路径均已在 Hotfix1 参数中确认",
         "完整攻击／异常修正输入、碰撞与目标限制、自然退条与抵抗成长、最终 HP 修正及多人／死亡／重载交互"
       ],
       "gameplayVerified": false
@@ -6689,6 +6755,31 @@
       ],
       "gameplayVerified": false
     },
+    "6633700": {
+      "name": "通过潜在能力，比较容易找到投掷武器",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7633700
+      },
+      "states": [
+        2122
+      ],
+      "detailSources": [
+        7633700
+      ],
+      "values": "decoded-mechanism",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "discovery",
+        "discovery-selection",
+        "discovery-draws"
+      ],
+      "openQuestions": [
+        "所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理"
+      ],
+      "gameplayVerified": false
+    },
     "6640000": {
       "name": "【追踪者】提升集中力，但降低生命力",
       "obtainable": true,
@@ -7790,6 +7881,84 @@
       ],
       "gameplayVerified": false
     },
+    "6851010": {
+      "name": "血量没有全满时，降低减伤率",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 6851010
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        6851010
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "defense",
+        "hpConditions"
+      ],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
+      "gameplayVerified": false
+    },
+    "6851011": {
+      "name": "血量没有全满时，降低减伤率",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 6851011
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        6851011
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "defense",
+        "hpConditions"
+      ],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
+      "gameplayVerified": false
+    },
+    "6851012": {
+      "name": "血量没有全满时，降低减伤率",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 6851012
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        6851012
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "defense",
+        "hpConditions"
+      ],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
+      "gameplayVerified": false
+    },
     "6851100": {
       "name": "使用圣杯瓶时，累积发狂量表",
       "obtainable": true,
@@ -7977,6 +8146,72 @@
       ],
       "detailSources": [
         6851703
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
+      "gameplayVerified": false
+    },
+    "6851701": {
+      "name": "濒死时，降低攻击力",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 6851710
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        6851713
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
+      "gameplayVerified": false
+    },
+    "6851702": {
+      "name": "濒死时，降低攻击力",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 6851720
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        6851723
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
+      "gameplayVerified": false
+    },
+    "6851703": {
+      "name": "濒死时，降低攻击力",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 6851730
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        6851733
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
@@ -9858,6 +10093,69 @@
       "gameplayVerified": false
     },
     "7006500": {
+      "name": "持续恢复专注值 +2",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7006506
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        7006506
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限"
+      ],
+      "gameplayVerified": false
+    },
+    "7006501": {
+      "name": "持续恢复专注值 +1",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7006505
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        7006505
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限"
+      ],
+      "gameplayVerified": false
+    },
+    "7006502": {
+      "name": "持续恢复专注值",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7006500
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        7006500
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限"
+      ],
+      "gameplayVerified": false
+    },
+    "7006503": {
       "name": "随机提升或降低攻击力与减伤率",
       "obtainable": true,
       "roots": {
@@ -9883,6 +10181,52 @@
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
+      "gameplayVerified": false
+    },
+    "7006504": {
+      "name": "提升投掷类道具的攻击力",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7040501,
+        "passiveSpEffectId_2": 7040301,
+        "passiveSpEffectId_3": 7040401
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        7040501,
+        7040301,
+        7040401
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限"
+      ],
+      "gameplayVerified": false
+    },
+    "7006505": {
+      "name": "提升投掷武器的攻击力",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 20381101
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        20381101
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限"
       ],
       "gameplayVerified": false
     },
@@ -10581,7 +10925,8 @@
         2012
       ],
       "detailSources": [
-        7030902
+        7030902,
+        7030904
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -11826,6 +12171,29 @@
       "openQuestions": [],
       "gameplayVerified": false
     },
+    "7035801": {
+      "name": "附加属性攻击力时，能提升属性攻击力",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7035801
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        7035801
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "attack"
+      ],
+      "openQuestions": [],
+      "gameplayVerified": false
+    },
     "7035900": {
       "name": "切换武器时，能提升物理攻击力",
       "obtainable": true,
@@ -11984,17 +12352,16 @@
       "states": [
         2061
       ],
-      "detailSources": [
-        7036401
-      ],
-      "values": "decoded-fields",
-      "stacking": "native-analysis",
-      "stackingCategory": "不可叠加",
+      "detailSources": [],
+      "values": "unresolved",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
       "evidence": [
         "scholar-tether"
       ],
       "openQuestions": [
-        "完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理"
+        "本版本 BehaviorParam_PC 已无通往持续伤害弹体的直接引用，实际触发路径待确认；完整碰撞和每次施放的目标去重、连结准入／距离判定、其他解除入口及多施法者网络交互、最终 HP 写入与死亡／重载清理",
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -12209,7 +12576,7 @@
       "name": "【铁之眼】技艺冷却时间增加；近战攻击力随时间增加，受到攻击后重置",
       "obtainable": true,
       "roots": {
-        "passiveSpEffectId_1": 7280300
+        "passiveSpEffectId_1": 7280320
       },
       "states": [
         0
@@ -12231,7 +12598,7 @@
       "name": "【铁之眼】技艺冷却时间增加；近战攻击力随时间增加，受到攻击后重置",
       "obtainable": true,
       "roots": {
-        "passiveSpEffectId_1": 7280300
+        "passiveSpEffectId_1": 7280320
       },
       "states": [
         0
@@ -12596,6 +12963,27 @@
       "openQuestions": [
         "完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入"
       ],
+      "gameplayVerified": false
+    },
+    "7040202": {
+      "name": "强化致命一击＋１",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7040201
+      },
+      "states": [
+        367
+      ],
+      "detailSources": [
+        7040201
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "critical-attack"
+      ],
+      "openQuestions": [],
       "gameplayVerified": false
     },
     "7040300": {
@@ -13111,6 +13499,16 @@
         7069008,
         7069009,
         7069010,
+        7069011,
+        7069012,
+        7069013,
+        7069014,
+        7069015,
+        7069016,
+        7069017,
+        7069018,
+        7069019,
+        7069020,
         7069021,
         7069022,
         7069023,
@@ -13120,7 +13518,17 @@
         7069027,
         7069028,
         7069029,
-        7069030
+        7069030,
+        7069031,
+        7069032,
+        7069033,
+        7069034,
+        7069035,
+        7069036,
+        7069037,
+        7069038,
+        7069039,
+        7069040
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -13136,7 +13544,7 @@
       "gameplayVerified": false
     },
     "7060100": {
-      "name": "每次解开魔法师塔或神殿能提升专注值上限、卢恩获取量与观察力",
+      "name": "每次解开魔法师塔或祷告教堂的机关，能提升专注值上限、卢恩获取量与观察力",
       "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 7060101
@@ -13185,6 +13593,16 @@
         7069008,
         7069009,
         7069010,
+        7069011,
+        7069012,
+        7069013,
+        7069014,
+        7069015,
+        7069016,
+        7069017,
+        7069018,
+        7069019,
+        7069020,
         7069021,
         7069022,
         7069023,
@@ -13194,7 +13612,17 @@
         7069027,
         7069028,
         7069029,
-        7069030
+        7069030,
+        7069031,
+        7069032,
+        7069033,
+        7069034,
+        7069035,
+        7069036,
+        7069037,
+        7069038,
+        7069039,
+        7069040
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -15419,7 +15847,7 @@
         2053
       ],
       "detailSources": [
-        7220201,
+        7220203,
         1809,
         1809
       ],
@@ -15444,7 +15872,7 @@
         2053
       ],
       "detailSources": [
-        7220201,
+        7220203,
         1809,
         1809
       ],
@@ -15537,6 +15965,27 @@
       ],
       "openQuestions": [
         "家人控制器状态 0／11 的完整生命周期与更新、已在场／死亡／召回时的实际行为、落点碰撞和资源生成、绝招动作中断及多人／重载时序"
+      ],
+      "gameplayVerified": false
+    },
+    "7220211": {
+      "name": "【复仇者】发动绝招时能召唤全部家人并肩作战",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 7220310
+      },
+      "states": [
+        2034
+      ],
+      "detailSources": [],
+      "values": "unresolved",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -18187,7 +18636,7 @@
       "gameplayVerified": false
     },
     "7371600": {
-      "name": "出击时，武器祷告改为“圣律剑刃”",
+      "name": "出击时，武器祷告改为“圣律剑刃”\n※仅限能使用的武器类别",
       "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 7371600
@@ -18210,7 +18659,7 @@
       "gameplayVerified": false
     },
     "7371700": {
-      "name": "出击时，武器祷告改为“黄金树立誓”",
+      "name": "出击时，武器祷告改为“黄金树立誓”\n※仅限能使用的武器类别",
       "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 7371700
@@ -21017,7 +21466,7 @@
     },
     "8220001": {
       "name": "提升防御强度",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 8220001
       },
@@ -24362,7 +24811,7 @@
     },
     "8652020": {
       "name": "防御成功时，提升强韧度",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 8652020
       },
@@ -25422,7 +25871,7 @@
     },
     "8800200": {
       "name": "连续闪避时，降低减伤率",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 8800200,
         "passiveSpEffectId_2": 8800201,
@@ -25518,7 +25967,7 @@
     },
     "8810000": {
       "name": "血量没有全满时，降低攻击力",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 8810000
       },
@@ -25594,6 +26043,32 @@
       ],
       "gameplayVerified": false
     },
+    "8810201": {
+      "name": "血量全满时，降低绝招量表累积",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 8810201
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        8810201
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "gauge",
+        "hpConditions"
+      ],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
+      "gameplayVerified": false
+    },
     "8810250": {
       "name": "血量没有全满时，降低绝招量表累积",
       "obtainable": false,
@@ -25605,6 +26080,32 @@
       ],
       "detailSources": [
         8810250
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "gauge",
+        "hpConditions"
+      ],
+      "openQuestions": [
+        "低血量状态切换与其他触发链的时序交互"
+      ],
+      "gameplayVerified": false
+    },
+    "8810251": {
+      "name": "血量全满时，降低绝招量表累积",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 8810251
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        8810251
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
@@ -25743,6 +26244,29 @@
       "openQuestions": [],
       "gameplayVerified": false
     },
+    "8813101": {
+      "name": "精力偏少时，降低攻击力",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 8813101
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        8813101
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "attack"
+      ],
+      "openQuestions": [],
+      "gameplayVerified": false
+    },
     "8813150": {
       "name": "精力偏少时，降低减伤率",
       "obtainable": false,
@@ -25764,6 +26288,51 @@
         "defense"
       ],
       "openQuestions": [],
+      "gameplayVerified": false
+    },
+    "8813151": {
+      "name": "精力偏少时，降低攻击力",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 8813151
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        8813151
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "equip-injection",
+        "instance-matching",
+        "attack"
+      ],
+      "openQuestions": [],
+      "gameplayVerified": false
+    },
+    "8813152": {
+      "name": "精力耗尽时，会降低精力恢复速度",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 8813152
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        8813153
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
       "gameplayVerified": false
     },
     "8821000": {
@@ -25820,7 +26389,7 @@
         2103
       ],
       "detailSources": [
-        8821201
+        8821202
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
@@ -25919,7 +26488,7 @@
     },
     "8831200": {
       "name": "濒死时，降低血量上限",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 8831200
       },
@@ -26003,6 +26572,27 @@
       ],
       "gameplayVerified": false
     },
+    "8850051": {
+      "name": "提升血量上限 +1",
+      "obtainable": true,
+      "roots": {
+        "passiveSpEffectId_1": 8850050
+      },
+      "states": [
+        0
+      ],
+      "detailSources": [
+        8850050
+      ],
+      "values": "decoded-fields",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限"
+      ],
+      "gameplayVerified": false
+    },
     "8850100": {
       "name": "提升专注值上限",
       "obtainable": false,
@@ -26047,7 +26637,7 @@
     },
     "8850200": {
       "name": "减少专注值消耗",
-      "obtainable": false,
+      "obtainable": true,
       "roots": {
         "passiveSpEffectId_1": 8850200
       },
@@ -27615,14 +28205,13 @@
       "name": "亵渎的庇佑",
       "obtainable": false,
       "roots": {
-        "passiveSpEffectId_1": 8980300
+        "passiveSpEffectId_1": 8980310
       },
       "states": [
         199
       ],
       "detailSources": [
-        8980302,
-        8980301
+        8988300
       ],
       "values": "decoded-fields",
       "stacking": "unresolved",
@@ -27632,6 +28221,22 @@
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
         "关联分支的实际触发顺序、重复通知与刷新行为"
+      ],
+      "gameplayVerified": false
+    },
+    "9031410": {
+      "name": "大蛇的庇佑",
+      "obtainable": false,
+      "roots": {},
+      "states": [],
+      "detailSources": [],
+      "values": "unresolved",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
       ],
       "gameplayVerified": false
     },
@@ -28063,7 +28668,7 @@
       "name": "绝望的庇佑",
       "obtainable": false,
       "roots": {
-        "passiveSpEffectId_1": 8981000
+        "passiveSpEffectId_1": 8981050
       },
       "states": [
         152
@@ -28465,6 +29070,27 @@
       },
       "states": [
         2090
+      ],
+      "detailSources": [],
+      "values": "unresolved",
+      "stacking": "unresolved",
+      "stackingCategory": "待确认",
+      "evidence": [],
+      "openQuestions": [
+        "跨遗物同版／异版的覆盖、叠加与上限",
+        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
+        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+      ],
+      "gameplayVerified": false
+    },
+    "9330901": {
+      "name": "指头的庇佑",
+      "obtainable": false,
+      "roots": {
+        "passiveSpEffectId_1": 8983300
+      },
+      "states": [
+        2091
       ],
       "detailSources": [],
       "values": "unresolved",
@@ -49724,71 +50350,71 @@
       "gameplayVerified": false
     }
   },
-  "linkEvidenceSha256": "9e29490ecd42f86866e3a1629425732b9bb3089b63193bd4b88f2e39ccee4e88",
-  "scriptEvidenceSha256": "8db8790c700b0b8b8de2a6802d32ec0e34716a3783bac1dcd9be992049ba1600",
-  "growthEvidenceSha256": "2bd1736037de07e96bf3220f051c49af225d6f2b4d629f118a6e141baeed2699",
-  "totemEvidenceSha256": "2ac6263590dbe2cab4346bc06600df977f6b3faf839b9c30021388327bc15ae8",
-  "lifecycleEvidenceSha256": "579d1badfc5d8d9b6efb5c6ae93561b2d558ef69bf6039866b5b11ec09bdadba",
-  "recoveryEvidenceSha256": "e1acc14fb3f7184061397e55aa84ad491f88995ffe1c12a3a0704db93a4625fb",
-  "executorRecoveryEvidenceSha256": "2ae2134fa269d85bdb9f5cd82237650cfa98ecac8d0923ae7732bc97b0051e27",
-  "weaponRecoveryEvidenceSha256": "b28dab55cf1296a4bf632752bd32b8e9ebb50e9f29811500fb18ac6b98dae256",
-  "recluseBleedEvidenceSha256": "990392dc9b9d07f184b8b7069b3162586015baeddfca9f9319164fdc3c9896c9",
-  "revenantSacrificeEvidenceSha256": "2511d192cfaa95b3eee0c379072550c509623bc2cd1162e0a5a72cc921ca5e57",
-  "gestureMadnessEvidenceSha256": "7e8862cec6198584aee96d1cae3fbd42f2de0504977da7268e556991f8610b32",
-  "guardianSkillEvidenceSha256": "2d016df81fdfb46377caba3ca201ffdac43fe03f8829bc8a64c758fdac425035",
-  "executorBladeEvidenceSha256": "716e0dc084f621958a2f65b76bb57a570aa4e43a1359e9a226bea1508e9ccddb",
-  "undertakerPrayerEvidenceSha256": "2ee7adca07ad96f28d439e3933a6201835c8b4e1d0bdcd7c6b145634dfa27f2e",
-  "guardianProtectionEvidenceSha256": "f682f0c2059fc440f0f4a8fdef4ea765695958916c513e8e566f4ec94bc49091",
-  "executorTenacityEvidenceSha256": "4b7dcf65577ed0568cb19d8a635e32befbb063230e9c0535bf0a60719e49e149",
-  "undertakerResetEvidenceSha256": "ac6f90a3d941d03662e8dbfe508586e9bdb94bd70028dc9c88c6250b476bb981",
-  "treasureMapEvidenceSha256": "806b839dc0763f410b62df700c9c4b287f69dae14e6ba5dd253d31a03608a556",
-  "passiveResourceEvidenceSha256": "4ef2d2dff072c025b9ab706a66f1d1a411081f0c918d91b5e5d3a9887c48d826",
-  "damageAilmentEvidenceSha256": "9cb0ebcb3b686378fffa197ee58bd2ad7829ad689af9102b6568e28f4bc66350",
-  "spellFamilyEvidenceSha256": "ef330b83e6b4410895f895e8fc3736101cf592dff2641b4589c1e74d1fd59150",
-  "periodicHpEvidenceSha256": "c9000112c6fe37ff03966d4e94bc0a86a2e937d10cc7ee99736d570967a7c0bc",
-  "perfumeEvidenceSha256": "1375afcdbfddf026c3d2d1182a4841f069cfcb9d8395d515899e61a546dafd0b",
-  "duchessUltimateEvidenceSha256": "7e6725f822ebddb767bbcf5693797edce1cf2e73e44853f1d86bd8da209590c5",
-  "guardianShockwaveEvidenceSha256": "d0d9c1e529a7a7e590327e827a9a9a6d27b784a1759689e1d0ef4e97038962e8",
-  "heroAdjustmentEvidenceSha256": "ad1953dee5f57cd47fbec1a9a3f24e4c7a30b660e6db86668d455d69ecabc4a6",
-  "successiveRecoveryEvidenceSha256": "9702067e94660e569cacfe18f852143558149ee3b6d5a031d11d435fad9221ed",
-  "successiveAttackEvidenceSha256": "369657f4fbc9bf8ca0204c48d191eeea639b4f9a95addbb53de533f8f50dfea4",
-  "scholarAilmentEvidenceSha256": "b39984cc2719bae434f0ab6f9cc2381095e5348abba678a5bd8bf999f461443f",
-  "wylderFlameEvidenceSha256": "2d5beb98265bfa9bc4da42dbd65e1b4e2931fff04c983a95c5116e28d7726f64",
-  "revenantEnchantEvidenceSha256": "e34890f9d44c5cb4f529215252c92d7ea931b13d711af60b0393f8846b7a9672",
-  "revenantFamilyEvidenceSha256": "1bea4d80c824033239efb8bcfd577470af2d9567da98ff3a060c2293d0358030",
-  "guardianHalberdEvidenceSha256": "2e418db4348e384797129c1508651c9e3bbdde74758d7baff09c6f8c3be6887d",
-  "wylderFollowupEvidenceSha256": "b31a489e45816d4c96d41e089b982d30609c9dc33f651b058716c8f63ea7e1bc",
-  "duchessDaggerEvidenceSha256": "cf5e0374acd830e8f71519161b844bd4a27b07417ab151b86996ba1156b1c2bb",
-  "criticalAttackEvidenceSha256": "93c02f7df10e4ee623a8754612e49c3bd359acbb4a233288c1ba6d8553085491",
-  "equippedExclusivityEvidenceSha256": "c4bf2b595dfa5eb8abe6336e18034ef57b3d564f63977090af9fff9db0cf0527",
-  "startingReplacementsEvidenceSha256": "0cdba060d9328349958a2726899305816a54fb8f31ccba5efed83c3a0559e701",
-  "guardAggroEvidenceSha256": "e412c1bcf2be396d4e8359f9336091dcc02ceffa4e50e72ede398a93910d55e8",
-  "itemSharingEvidenceSha256": "29fe54433e28c302ab5f8f8b4badbcb6ff1c7f2268e676a1401b91821a278845",
-  "scholarTetherEvidenceSha256": "27db505921ca4ff3a6bccae33ceb04f3056d290e8da92c436bddeffb49cd5108",
-  "ironeyeUltimateEvidenceSha256": "d6f431d0505ee7d18f41cec8542dc78ecf27ca2422890aaa62cd3ac840e8e174",
-  "revenantGhostflameEvidenceSha256": "5f813f0c5dceb9c0140327e4d9735cab48f047e4426a26e38db1f6680b735598",
-  "scholarFeintEvidenceSha256": "436056dbce2311bd1a06f2abf03242016139fa316e0bde73f4d8274330658d39",
-  "flaskSharingEvidenceSha256": "92ba404e7177ea3eb2194cf0ddc782aae6139e966d17101db7b41edf4e5adb40",
-  "rallyRecoveryEvidenceSha256": "20a75db6880bc18607aafbd6f87660ea5f7c4e6e8f6db9c05508186017e3b57e",
-  "attackNullifyEvidenceSha256": "39825716d8f12542da76a9daf9c0de62c4b5436389de0d06a29a1f0707c093f9",
-  "ailmentGrowthEvidenceSha256": "611ffb2289ddb30c9a3f02404f8b620dbac5e933e8ebf0a4a2e45f1f971972ca",
-  "frostStealthEvidenceSha256": "e4e3cea55b7191f81b53dc4053e4571ca252f85e0699976e6d24aa994fff9ddc",
-  "duchessStealthEvidenceSha256": "997082f1f08e6a82cae63ea108bc9db3700eadfdac60285992e33fbbf162745e",
-  "undertakerContactEvidenceSha256": "4cec4163d67f221628794b958d3c87ef149c9f83ae49bdd92886f95ae035a663",
-  "guardianUltimateEvidenceSha256": "621b81174ca10038cbddbdd6aecd418753df21993547bb81bb23d4331e7f44ec",
-  "raiderGrowthEvidenceSha256": "e142fa25282979e865163eec4f25ac93421c08ced47ac1b7e095ffc1382f2456",
-  "raiderSkillEvidenceSha256": "853f246691019d573f3ea20ef8fd0f7c234d2225221f6dfdb3eb78d182d5cb7f",
-  "duchessPoiseEvidenceSha256": "7583ef9521d733d09e15bf3d39eef1076010a4b3189b9b0ec5d622f0c7c5c242",
-  "wylderBleedEvidenceSha256": "4dc87d62c3b6f2cbdd4a0807a6859cfeea7986475caa80d921c2f2741368b4cd",
-  "ironeyePoisonEvidenceSha256": "d75e5ca2709a98406ed61156066a54a0e817df364dea592c9313788b3d0ea218",
-  "raiderDebuffEvidenceSha256": "71d3b7d886dff4d745705310f20ee5fd4f7853c214bef80b329f0f243cca460c",
-  "recluseAbsorptionEvidenceSha256": "f888a9f7106107f543a8f5a932cb890658b1c49f8604372d54a39d493e389ba1",
-  "duchessRestageEvidenceSha256": "7846295a08a6a91fe4933511da88f0c63ff5c47a4d3cc0dd96f958cbbb2c3dc8",
-  "ironeyeMarkEvidenceSha256": "b1a2a443471cd1890c73a9e0717001e44ef815fb760e0f97596cfe1ca4232026",
-  "recluseMarkEvidenceSha256": "6efd4caa805316bf09592c61d0551a8ad0335d5a44d90971b555cbca287d78e1",
-  "startingGoodsEvidenceSha256": "094c38d5ac7c4e96b80d8466f61cb8726dd10a60516c0ddc57bd511e6f21dcff",
-  "startingWeaponEvidenceSha256": "c0481ebb3620335dfd8d9a482a7b89216920a70bc8a063c3350ae24ae9c37181",
-  "guardianDurationEvidenceSha256": "74ea90777fe36c69f2e916df389add9ea22b0635608d9649ceb421286b4348d2",
-  "duchessEvasionEvidenceSha256": "350dd6bc86ff3b71ed9013e17363c698d3c4da57b8800ed51fe396cda74c8425",
-  "discoveryEvidenceSha256": "be359953e1c4735d2f0b63cfddcfe7469c89f6fc062909aef9565f191e8e8c53"
+  "linkEvidenceSha256": "0cd435d572f180c10a31299a50cef9a2f906f66e840427f44239d60c65f8ac2f",
+  "scriptEvidenceSha256": "43014b984c49f6a6d297154d1b40329a04121dee14fd779e873b2b6c4421d51e",
+  "growthEvidenceSha256": "89f16d2dd57b9ea2cf31802ac4ed70b7781baee61e8675648bee20e7747383fb",
+  "totemEvidenceSha256": "9537cbac040b1a4d1ea04621f1f37c386dee97899d338c14ef9c99ecabf25d08",
+  "lifecycleEvidenceSha256": "fd12104951b1507776a5ba12a8b0f2309873101f515173c097d5b3bdcc9851bc",
+  "recoveryEvidenceSha256": "9b25032095c56ef5a77da8a8116202eb651f75d097609d97ac7443e45836968d",
+  "executorRecoveryEvidenceSha256": "fc8fa666f99293ff0675e39269465fbfe5321370b4d84adf23ad1be3a0a5fbaf",
+  "weaponRecoveryEvidenceSha256": "e0dd70d12750c35d486b61842d18bb38d0786a3192aa78b7d100120d4b5f34eb",
+  "recluseBleedEvidenceSha256": "0cf20f8c66e0e7fbe88bb59bf233d5fdda389815f83b60f588bb6b366c2076eb",
+  "revenantSacrificeEvidenceSha256": "34f25eca56a0e1155f55fab2575bf674c9e81d64fc14c4d4505a24608681250b",
+  "gestureMadnessEvidenceSha256": "ad74a6955b43dc60ca27a3313192eaf46c61e589fc0464f25b3abb4b4412d6fa",
+  "guardianSkillEvidenceSha256": "463a07902687c4c492dd24c881a1c54a3a703f81768404623506ed1bfbb3da63",
+  "executorBladeEvidenceSha256": "92151e8ff3d498bb72aefaffe58f4c9680a38e6031e47785725a701c4fdeba3e",
+  "undertakerPrayerEvidenceSha256": "b12d766aaf98904c812dcea2e38cd3664736126df21d4f4da48c1731e37a4b8d",
+  "guardianProtectionEvidenceSha256": "4307309d412b3d60cebf430dcc7537237bde34e05a2a4db33ffa257c5f88fa6f",
+  "executorTenacityEvidenceSha256": "9ce63ccc8f510c90cd8f2ce2f812c85d846203e67e585323595cfdad216eca4c",
+  "undertakerResetEvidenceSha256": "7dc48f6fd3a277dffc598e3cfcebb1b5388b16a06245475d291ea7c5f187672b",
+  "treasureMapEvidenceSha256": "d0cba9d55b98af48672ba62f96772c17ec5ec6c86257548d9803f28638258234",
+  "passiveResourceEvidenceSha256": "2e512fa984b86308b8139a635c8eb90e20ac9b443b8a70130adbe8a65be3a9bc",
+  "damageAilmentEvidenceSha256": "a6b1151ea883cf7756c46289028b876b19dd9696bff6a4ba86dac56e69909878",
+  "spellFamilyEvidenceSha256": "e9da1228240724bfc76ccc9ec262359d3a4588604ac50066d9d58a215765aaa0",
+  "periodicHpEvidenceSha256": "cabe19679dfd28acf3d93ff9bb4731392326b3fc1d8c287b6e3b623338843a18",
+  "perfumeEvidenceSha256": "219eaa0954d080b8f64ca546ae87a791fa02b42bc88d396ae00faedb427e699b",
+  "duchessUltimateEvidenceSha256": "d2f155fc4b93a35c5d3a63dd975fed03046d67d30dbe4bc734f1e8d7ce3ddadf",
+  "guardianShockwaveEvidenceSha256": "65b1cdce326e2e20a1d619a2d363362ffcc26000b1311f16093a83a944054c45",
+  "heroAdjustmentEvidenceSha256": "ce4d6ff003ca5b87931f152b5ea4985316554b4ece2b0cd5cc4375c4368770eb",
+  "successiveRecoveryEvidenceSha256": "29085f2b8c0433abdf11acc5e50496564c17a0dfafea5c733d89031ada8f3fde",
+  "successiveAttackEvidenceSha256": "fc1e4f42594be0ea2b6d37cc519c50302d1a5bad14c2cbf85ee6589b71f10943",
+  "scholarAilmentEvidenceSha256": "e21a419807ab66eb81db36dc0c08a8e4d1a9f7bd96026f651f53d0e0ba865c07",
+  "wylderFlameEvidenceSha256": "342d4c254428d40d61a65a517594bd3493197d1cdaf94992cec62a2b1c3ddc04",
+  "revenantEnchantEvidenceSha256": "b35dca8fee481b599863276bd2f64faace9d8c7c0cfea49e3525bf0dff185fb8",
+  "revenantFamilyEvidenceSha256": "0d8e58f4d022db5ae22f323c288c90d5925079976fa98f30b4a54bc4b8ea58f1",
+  "guardianHalberdEvidenceSha256": "8462f93450b0729eff176f6e6a05149d5168d13ca163221554ef6343b8c1466c",
+  "wylderFollowupEvidenceSha256": "c9656a5048fccb3f93e5dd9ff73f06128e2aece116c79211093612271d47a6e6",
+  "duchessDaggerEvidenceSha256": "c24a77725dde219435f698eae19459487f4eb191c4cdcbe6c28f72ee28c3472e",
+  "criticalAttackEvidenceSha256": "d4dacb24ab1f0acc36080a6436d18fa399621815ba1a834a58bc0fee5fa5cfbb",
+  "equippedExclusivityEvidenceSha256": "2cc903d277f1d6efd13520ed8997ea2aa53f334cb93e8c6bbd1aeb84564544cf",
+  "startingReplacementsEvidenceSha256": "66156f38b1dfe12e47c9aada170c65b169339205ff5805605cb15477f8a8444f",
+  "guardAggroEvidenceSha256": "1ab6656ebb398f34b9f1c0bb83df1f11c3ba10815233b7f23a76e0945bd41c96",
+  "itemSharingEvidenceSha256": "e1ee0004eed2d27ef7698811e28e05519355eeeab92de63a8c10faf74a3739a5",
+  "scholarTetherEvidenceSha256": "9f42e53d4eafdab8c9bcc6831ac934106596b0ef078dba2bf75892474ac6bc10",
+  "ironeyeUltimateEvidenceSha256": "be400ec05685c121b7c63b74c4a36d53c0f231bc710c17c9da38bf7901b911a2",
+  "revenantGhostflameEvidenceSha256": "0a1fc6b8c971dbae649186f9c4744caa3c67f79977c31a6816e0ab226366926d",
+  "scholarFeintEvidenceSha256": "e7642ae2843fd49f6685ea882027249feb76e2e5b7e98d717a42734268028792",
+  "flaskSharingEvidenceSha256": "03d2e8995a5caf6199e4f28ba5432f6dc8b1fee854bc51c757016c82bd76a724",
+  "rallyRecoveryEvidenceSha256": "5375ec76c0981147384c66ddb7b5c3c192c2a6d97b88707ab30dd7fe8725b706",
+  "attackNullifyEvidenceSha256": "2ef6c255936d47107776f985223a638152228cd6a538231e3f4dc561056226a2",
+  "ailmentGrowthEvidenceSha256": "d42cc7d8390dcee5822fe5dfa37882141b81313ed07162a529f25f0ea50a543e",
+  "frostStealthEvidenceSha256": "b3dddf200bd0085788054b87a9fba4e13dcf8db6d574224318112ac9c6fc4707",
+  "duchessStealthEvidenceSha256": "1bacf7b86e05ea11a7eea71b4acf1a2f4e9eede181de9067079a3aec8e6430c3",
+  "undertakerContactEvidenceSha256": "41b3426c06a935731345a6273092c00e00b3c8dc05e8b4ac8fa98fd13e65d2b4",
+  "guardianUltimateEvidenceSha256": "0aa635b470e79e39e70d10ba7925ac8ae864d89aeb5c9e17cc848b0e15185e0a",
+  "raiderGrowthEvidenceSha256": "81c0127443e4a5cb520775d051341f99850ae4445f1566559ff31ea596a23cc4",
+  "raiderSkillEvidenceSha256": "71cd79cc058dd5f793da0705686dd0521a4a1640f2212a32371e9b992029505e",
+  "duchessPoiseEvidenceSha256": "a7c1f43d2a02efaa3dba7187a3e639f823279f164be855837590660ec1326463",
+  "wylderBleedEvidenceSha256": "18fb8556c95d90a6c04877c3ac17153a0d9537f4f0adf8ed48b785b1ed5113a5",
+  "ironeyePoisonEvidenceSha256": "e62011e0e1be967ce6ed95de32e73b47fd528b8b849232f7195e2aae79608d5e",
+  "raiderDebuffEvidenceSha256": "18a7ef88f060fe304b8c3b8fa6c48a9f3eedf7aff5831c543228fdee992eec8a",
+  "recluseAbsorptionEvidenceSha256": "dec836ae1639382d62b01038ee7ebdef37f6ff6ff05a84e822fd8687ec502e9a",
+  "duchessRestageEvidenceSha256": "d6f20156284990dc42232cc1a2d5d585b967bc739d17848f59aa3dc5d8f68bf5",
+  "ironeyeMarkEvidenceSha256": "d3849ccac93a8e0832861d0da8ded8d367ce45fa27755ddeed22540cc1dbfaeb",
+  "recluseMarkEvidenceSha256": "6c311f21900818bc9c0f394caec3c15e07473ece8c3c70d9698cae3b5efb2e91",
+  "startingGoodsEvidenceSha256": "54cfe942c56e0e8c5b5a5284c67b6e6162a3030f743b7fa0257ca31cff32fc83",
+  "startingWeaponEvidenceSha256": "c81ce5fd69318e2ade7d5dcb78f31c1645a203178fce3922ac072f7a2500574c",
+  "guardianDurationEvidenceSha256": "da53a28d4d4c7c06bd57befce02fab2e5b4dac073b8b590290a42781f61f7a7a",
+  "duchessEvasionEvidenceSha256": "54482706f52fa574cf580cfea8712f0d253458d41a05409e23574716254f1a22",
+  "discoveryEvidenceSha256": "d733e6af6c769e05ab5c560193a84350da70749f4c2122feb42c88982f6ce951"
 }

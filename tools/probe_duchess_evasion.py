@@ -23,7 +23,7 @@ p.add_argument('output', type=Path)
 a = p.parse_args()
 inputs = Inputs(a.exe, a.extracted)
 raw = a.script.read_bytes()
-assert sha(raw) == '786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert sha(raw) == '96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source = raw.decode('utf-8-sig').replace('\r\n', '\n')
 start = source.index('function ExecDejavu()')
 function = source[start:source.index('\nfunction ', start + 1)]
@@ -37,7 +37,7 @@ assert leaf['stateInfo'] == 2394 and leaf['spCategory'] == root['spCategory'] ==
 assert math.isclose(leaf['effectEndurance'], .4, rel_tol=1e-6)
 assert leaf['replaceSpEffectId'] == leaf['cycleOccurrenceSpEffectId'] == -1
 tae = json.loads(a.animations.read_text())
-assert tae['bundles'][0]['sha256'] == '1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256'] == '806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 events = [dict(tae=t['ID'], animation=an['ID'], **e)
           for b in tae['bundles'] for t in b['taes'] for an in t['animations'] for e in an['events']
           if e['Type'] == 0 and bytes.fromhex(e['hex']) == struct.pack('<ifiBBH', 8, 0, -1, 6, 0, 2394)]

@@ -161,8 +161,8 @@ assert attack_ids==[100836,102236,150050,150250,150450]
 attack_paths=[]
 for id in attack_ids:
  paths=[dict(id=int(k),**v) for k,v in tables['BehaviorParam_PC'].items() if v['refType']==0 and v['refId']==id]
- assert len(paths)==1
- attack_paths.append(dict(attack=id,payload=marker,behavior=paths[0]))
+ assert paths
+ for path in paths:attack_paths.append(dict(attack=id,payload=marker,behavior=path))
 for attack,copies,fps in itertools.product(attack_ids,(0,1,3),(30,60,120)):
  c=Dagger();c.equip(copies);c.tick(0)
  for _ in range(60):c.tick(0)

@@ -23,7 +23,7 @@ inputs = Inputs(a.exe, a.extracted)
 assets = json.loads(a.assets.read_text())
 tae = json.loads(a.animations.read_text())
 assert assets['hashes']['regulation.bin'] == inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256'] == '1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256'] == '806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 raw_tables = {name: path.read_bytes() for name, path in (
     ('Bullet', a.extracted.with_suffix('.Bullet.param')),
     ('BehaviorParam_PC', a.extracted.with_suffix('.BehaviorParam_PC.param')),

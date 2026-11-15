@@ -16,7 +16,7 @@ class BehaviorGraph:
         self.raw = snapshot.with_suffix('.hkx').read_bytes()
         assert self.metadata['schema'] == 1 and self.metadata['metadataOnly']
         assert sha(self.raw) == self.metadata['hkxSha256']
-        assert self.metadata['bundleSha256'] == '0eab914717c59464b19a0cbff4c67841a92b01aef495812ed2bfa8feba7f5fd5'
+        assert self.metadata['bundleSha256'] == 'bdf5a755bdffb24d9a8f2361f8a7632f44f72eb0d29c706d407ef772cc92c62b'
         assert self.metadata['mismatches'] == ['CustomManualSelectorGenerator']
         self.types = self.metadata['types']
         chunks = {}
@@ -79,6 +79,23 @@ class BehaviorGraph:
         if not any(f['Name'] == 'name' for f in typ['Fields']):
             return None
         return self.string(self.reference(index, 'name'))
+
+    def named(self, name, identity):
+        """Resolve a named node; serialized ITEM indices change between builds."""
+        if not hasattr(self, '_names'):
+            self._names = {}
+            for index, (typ, _, count) in enumerate(self.items):
+                if not typ or count != 1:
+                    continue
+                try:
+                    label = self.name(index)
+                except (AssertionError, StopIteration):
+                    continue
+                if label:
+                    self._names.setdefault((self.item(index)[0]['Identity'], label), []).append(index)
+        matches = self._names.get((identity, name), [])
+        assert len(matches) == 1, (identity, name, matches)
+        return matches[0]
 
     def state(self, name):
         matches = [i for i, (typ, _, count) in enumerate(self.items) if typ and count == 1

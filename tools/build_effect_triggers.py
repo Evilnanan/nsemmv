@@ -15,8 +15,8 @@ p.add_argument('animations', type=Path)
 a = p.parse_args()
 x = json.loads(a.extracted.read_text())
 t = json.loads(a.animations.read_text())
-assert x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
-assert t['bundles'][0]['sha256'] == '1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert x['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
+assert t['bundles'][0]['sha256'] == '806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 spells = x['tables']['SpEffectParam']
 # Only reviewed simple chains enter the public summary. Complex/bullet branches
 # remain in the research backlog until their own conditions have been traced.

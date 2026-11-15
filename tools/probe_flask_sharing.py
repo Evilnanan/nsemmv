@@ -15,7 +15,7 @@ for name in ('exe','extracted','animations','behavior','script','output'):p.add_
 a=p.parse_args();x=Inputs(a.exe,a.extracted)
 attacks=Inputs.table(a.extracted.with_suffix('.AtkParam_Pc.param').read_bytes(),0x1d0)
 animations=json.loads(a.animations.read_text());graph=BehaviorGraph(a.behavior)
-assert animations['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert animations['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 track=next(t for t in animations['bundles'][0]['taes'] if t['ID']==2000)
 class Actor(Ailment):
  def __init__(self,kind=0,maximum=500):
@@ -75,7 +75,7 @@ lua.lua_pcallk.argtypes=[ctypes.c_void_p,ctypes.c_int,ctypes.c_int,ctypes.c_int,
 lua.lua_tolstring.argtypes=[ctypes.c_void_p,ctypes.c_int,ctypes.POINTER(ctypes.c_size_t)];lua.lua_tolstring.restype=ctypes.c_char_p
 lua.lua_close.argtypes=[ctypes.c_void_p]
 
-script_raw=a.script.read_bytes();assert sha(script_raw)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+script_raw=a.script.read_bytes();assert sha(script_raw)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 script=script_raw.decode('utf-8-sig').replace('\r\n','\n')
 start=script.index('function ExecChangeFlask(');function=script[start:script.index('\nfunction ',start+1)]
 def execute(c):
@@ -163,7 +163,7 @@ checks={key:[] for key in ('branches','projectile','amounts','targets','sourceMo
 def record(group,c,**values):checks[group].append(values);stubs.update(c.stubs)
 f32=lambda v:struct.unpack('<f',struct.pack('<f',v))[0]
 paths=[];events=[]
-for state in (50173,83047):
+for state in (graph.named('ItemDrinking', 'hkbStateMachine::StateInfo'),graph.named('ItemDrinking_Upper', 'hkbStateMachine::StateInfo')):
  selector=graph.reference(state,'generator');assert graph.selector_binding(selector)['name']=='IsBaphometBuff'
  clips=[]
  for child in graph.children(selector):

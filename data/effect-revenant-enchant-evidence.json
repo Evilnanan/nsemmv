@@ -1,22 +1,26 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
   "assetHashes": {
-    "AtkParam_Pc": "d40f288d692e52a8fb482fcd3d48d80567a4ef1539e1221192a09498c879071e",
-    "BehaviorParam_PC": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
-    "Bullet": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
-    "weapon": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+    "AtkParam_Pc": "1ec1893420053cbfb06e3efb269ade4ba9d6a617d1d3dbb370e837847be05676",
+    "BehaviorParam_PC": "f8fa3fd27cb98d45a3e24c69d71d8751df9202e6e379dc34fd77d4ef2e1240bb",
+    "Bullet": "ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44",
+    "weapon": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea",
     "tae": "4ff5035e40af59c9f157125409d29ab24c7e74e4331313f53d0874efe792f174",
-    "behaviorGraph": "29e4444973d10adc99fa239fa478eae3ecd3c67f31b43288fdba003924994ad4"
+    "behaviorGraph": "8ea4b1c176f25d804890d5c08b90fbaf077581ae67ca73a7a9ef47655f8b6b32",
+    "script": "96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29"
   },
+  "styleFunction": "function SetStyleSpecialEffect()\n    if c_Style == HAND_LEFT_BOTH then\n        if env(GetSpEffectID, 100621) == FALSE then\n            act(AddSpEffect, 100621)\n        end\n    elseif env(GetSpEffectID, 100620) == FALSE then\n        act(AddSpEffect, 100620)\n    end\nend\n\nHandChangeTest_ToR1 = FALSE\nHandChangeTest_ToR2 = FALSE\nHandChangeTest_ToL1 = FALSE\nHandChangeTest_ToL2 = FALSE\n",
   "effects": [
     7220100,
     7220101
   ],
   "root": 7220200,
-  "enchant": 7220201,
+  "enchant": 7220203,
+  "alternateEnchant": 7220206,
+  "seed": 7220201,
   "frost": 1809,
   "events": [
     {
@@ -47,11 +51,11 @@
   "graphStates": [
     {
       "state": "NecromanceSummon1",
-      "stateItem": 32002,
+      "stateItem": 32204,
       "binding": {
-        "selector": 41134,
-        "bindingSet": 44722,
-        "binding": 50941,
+        "selector": 41433,
+        "bindingSet": 45061,
+        "binding": 51326,
         "member": "selectedGeneratorIndex",
         "variable": 453,
         "name": "IsEnableSummonAct",
@@ -65,11 +69,11 @@
     },
     {
       "state": "NecromanceSummon2",
-      "stateItem": 32003,
+      "stateItem": 32205,
       "binding": {
-        "selector": 41136,
-        "bindingSet": 44725,
-        "binding": 50944,
+        "selector": 41435,
+        "bindingSet": 45064,
+        "binding": 51329,
         "member": "selectedGeneratorIndex",
         "variable": 453,
         "name": "IsEnableSummonAct",
@@ -83,11 +87,11 @@
     },
     {
       "state": "NecromanceSummon3",
-      "stateItem": 32004,
+      "stateItem": 32206,
       "binding": {
-        "selector": 41138,
-        "bindingSet": 44728,
-        "binding": 50947,
+        "selector": 41437,
+        "bindingSet": 45067,
+        "binding": 51332,
         "member": "selectedGeneratorIndex",
         "variable": 453,
         "name": "IsEnableSummonAct",
@@ -101,11 +105,11 @@
     },
     {
       "state": "NecromanceSummon1_Upper",
-      "stateItem": 41350,
+      "stateItem": 41652,
       "binding": {
-        "selector": 45035,
-        "bindingSet": 51401,
-        "binding": 58981,
+        "selector": 45380,
+        "bindingSet": 51791,
+        "binding": 59414,
         "member": "selectedGeneratorIndex",
         "variable": 453,
         "name": "IsEnableSummonAct",
@@ -119,11 +123,11 @@
     },
     {
       "state": "NecromanceSummon2_Upper",
-      "stateItem": 41351,
+      "stateItem": 41653,
       "binding": {
-        "selector": 45037,
-        "bindingSet": 51404,
-        "binding": 58984,
+        "selector": 45382,
+        "bindingSet": 51794,
+        "binding": 59417,
         "member": "selectedGeneratorIndex",
         "variable": 453,
         "name": "IsEnableSummonAct",
@@ -137,11 +141,11 @@
     },
     {
       "state": "NecromanceSummon3_Upper",
-      "stateItem": 41352,
+      "stateItem": 41654,
       "binding": {
-        "selector": 45039,
-        "bindingSet": 51407,
-        "binding": 58987,
+        "selector": 45384,
+        "bindingSet": 51797,
+        "binding": 59420,
         "member": "selectedGeneratorIndex",
         "variable": 453,
         "name": "IsEnableSummonAct",
@@ -175,11 +179,87 @@
       "darkDamageCutRate": 1
     },
     "7220201": {
-      "stateInfo": 64,
+      "stateInfo": 0,
+      "spCategory": 20,
+      "playerHandValue": 3,
+      "effectEndurance": 0.05999999865889549,
+      "magicAttackPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "7220202": {
+      "stateInfo": 0,
+      "spCategory": 10000,
+      "playerHandValue": 3,
+      "effectEndurance": 0,
+      "magicAttackPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "7220203": {
+      "stateInfo": 152,
       "spCategory": 162,
       "playerHandValue": 1,
       "effectEndurance": 20,
-      "magicAttackPower": 60,
+      "magicAttackPower": 50,
+      "atkOccurrenceSpEffectId": 1809,
+      "arrowBehaviorOffset": 23,
+      "isUseAtkParamAtkPowerCorrect": 1,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "7220205": {
+      "stateInfo": 0,
+      "spCategory": 10006,
+      "playerHandValue": 3,
+      "effectEndurance": 0,
+      "magicAttackPower": 0,
+      "atkOccurrenceSpEffectId": -1,
+      "arrowBehaviorOffset": 0,
+      "isUseAtkParamAtkPowerCorrect": 0,
+      "isUseStatusAilmentAtkPowerCorrect": 0,
+      "freezeAttackPower": 0,
+      "changeHpRate": 0,
+      "changeHpPoint": 0,
+      "neutralDamageCutRate": 1,
+      "magicDamageCutRate": 1,
+      "fireDamageCutRate": 1,
+      "thunderDamageCutRate": 1,
+      "darkDamageCutRate": 1
+    },
+    "7220206": {
+      "stateInfo": 152,
+      "spCategory": 163,
+      "playerHandValue": 2,
+      "effectEndurance": 20,
+      "magicAttackPower": 50,
       "atkOccurrenceSpEffectId": 1809,
       "arrowBehaviorOffset": 23,
       "isUseAtkParamAtkPowerCorrect": 1,
@@ -406,6 +486,7 @@
     ],
     "emission": [
       {
+        "hand": 0,
         "success": false,
         "fps": 30,
         "attempts": [
@@ -414,6 +495,7 @@
         "nodes": []
       },
       {
+        "hand": 0,
         "success": false,
         "fps": 60,
         "attempts": [
@@ -422,6 +504,7 @@
         "nodes": []
       },
       {
+        "hand": 0,
         "success": false,
         "fps": 120,
         "attempts": [
@@ -430,6 +513,79 @@
         "nodes": []
       },
       {
+        "hand": 0,
+        "success": true,
+        "fps": 30,
+        "attempts": [
+          0
+        ],
+        "nodes": []
+      },
+      {
+        "hand": 0,
+        "success": true,
+        "fps": 60,
+        "attempts": [
+          0
+        ],
+        "nodes": []
+      },
+      {
+        "hand": 0,
+        "success": true,
+        "fps": 120,
+        "attempts": [
+          0
+        ],
+        "nodes": []
+      },
+      {
+        "hand": 1,
+        "success": false,
+        "fps": 30,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 1,
+        "success": false,
+        "fps": 60,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 1,
+        "success": false,
+        "fps": 120,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 1,
         "success": true,
         "fps": 30,
         "attempts": [
@@ -437,13 +593,19 @@
         ],
         "nodes": [
           {
-            "id": 7220201,
-            "lifetime": 19.000015,
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7220203,
+            "lifetime": 19.133347,
             "flags": 4
           }
         ]
       },
       {
+        "hand": 1,
         "success": true,
         "fps": 60,
         "attempts": [
@@ -451,13 +613,19 @@
         ],
         "nodes": [
           {
-            "id": 7220201,
-            "lifetime": 19.000015,
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7220203,
+            "lifetime": 19.100014,
             "flags": 4
           }
         ]
       },
       {
+        "hand": 1,
         "success": true,
         "fps": 120,
         "attempts": [
@@ -465,8 +633,118 @@
         ],
         "nodes": [
           {
-            "id": 7220201,
-            "lifetime": 19.000015,
+            "id": 100620,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7220203,
+            "lifetime": 19.083347,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 2,
+        "success": false,
+        "fps": 30,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 2,
+        "success": false,
+        "fps": 60,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 2,
+        "success": false,
+        "fps": 120,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 2,
+        "success": true,
+        "fps": 30,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7220206,
+            "lifetime": 19.166679,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 2,
+        "success": true,
+        "fps": 60,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7220206,
+            "lifetime": 19.11668,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "hand": 2,
+        "success": true,
+        "fps": 120,
+        "attempts": [
+          0
+        ],
+        "nodes": [
+          {
+            "id": 100621,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 7220206,
+            "lifetime": 19.091681,
             "flags": 4
           }
         ]
@@ -474,6 +752,7 @@
     ],
     "values": [
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 0,
@@ -486,6 +765,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 1,
@@ -498,6 +778,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 2,
@@ -510,6 +791,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 3,
@@ -522,6 +804,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 4,
@@ -534,6 +817,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 5,
@@ -546,6 +830,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 6,
@@ -558,6 +843,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 7,
@@ -570,6 +856,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 8,
@@ -582,6 +869,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 9,
@@ -594,6 +882,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 10,
@@ -606,6 +895,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 11,
@@ -618,6 +908,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 0,
         "attack": 10000,
         "kind": 12,
@@ -630,6 +921,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 0,
@@ -642,18 +934,20 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 1,
         "points": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 2,
@@ -666,6 +960,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 3,
@@ -678,6 +973,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 4,
@@ -690,6 +986,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 5,
@@ -702,6 +999,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 6,
@@ -714,6 +1012,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 7,
@@ -726,6 +1025,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 8,
@@ -738,6 +1038,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 9,
@@ -750,6 +1051,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 10,
@@ -762,30 +1064,33 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 11,
         "points": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
         ]
       },
       {
+        "hand": 1,
         "copies": 1,
         "attack": 10000,
         "kind": 12,
         "points": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 0,
@@ -798,18 +1103,20 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 1,
         "points": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 2,
@@ -822,6 +1129,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 3,
@@ -834,6 +1142,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 4,
@@ -846,6 +1155,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 5,
@@ -858,6 +1168,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 6,
@@ -870,6 +1181,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 7,
@@ -882,6 +1194,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 8,
@@ -894,6 +1207,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 9,
@@ -906,6 +1220,7 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 10,
@@ -918,24 +1233,533 @@
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 11,
         "points": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
         ]
       },
       {
+        "hand": 1,
         "copies": 3,
         "attack": 10000,
         "kind": 12,
         "points": [
           0.0,
-          60.0,
+          50.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 2,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 11,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 0,
+        "attack": 10000,
+        "kind": 12,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 2,
+        "points": [
+          0.0,
+          50.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 11,
+        "points": [
+          0.0,
+          50.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 1,
+        "attack": 10000,
+        "kind": 12,
+        "points": [
+          0.0,
+          50.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 0,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 1,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 2,
+        "points": [
+          0.0,
+          50.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 3,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 4,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 5,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 6,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 7,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 8,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 9,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 10,
+        "points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 11,
+        "points": [
+          0.0,
+          50.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "hand": 2,
+        "copies": 3,
+        "attack": 10000,
+        "kind": 12,
+        "points": [
+          0.0,
+          50.0,
           0.0,
           0.0,
           0.0
@@ -944,6 +1768,7 @@
     ],
     "timer": [
       {
+        "leaf": 7220203,
         "copies": 1,
         "reapply": false,
         "fps": 30,
@@ -952,6 +1777,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 1,
         "reapply": false,
         "fps": 60,
@@ -960,6 +1786,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 1,
         "reapply": false,
         "fps": 120,
@@ -968,6 +1795,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 1,
         "reapply": true,
         "fps": 30,
@@ -976,6 +1804,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 1,
         "reapply": true,
         "fps": 60,
@@ -984,6 +1813,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 1,
         "reapply": true,
         "fps": 120,
@@ -992,6 +1822,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 3,
         "reapply": false,
         "fps": 30,
@@ -1000,6 +1831,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 3,
         "reapply": false,
         "fps": 60,
@@ -1008,6 +1840,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 3,
         "reapply": false,
         "fps": 120,
@@ -1016,6 +1849,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 3,
         "reapply": true,
         "fps": 30,
@@ -1024,6 +1858,7 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
         "copies": 3,
         "reapply": true,
         "fps": 60,
@@ -1032,6 +1867,115 @@
         "newLifetime": 20
       },
       {
+        "leaf": 7220203,
+        "copies": 3,
+        "reapply": true,
+        "fps": 120,
+        "expiryFrame": 3002,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 1,
+        "reapply": false,
+        "fps": 30,
+        "expiryFrame": 602,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 1,
+        "reapply": false,
+        "fps": 60,
+        "expiryFrame": 1203,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 1,
+        "reapply": false,
+        "fps": 120,
+        "expiryFrame": 2403,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 1,
+        "reapply": true,
+        "fps": 30,
+        "expiryFrame": 751,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 1,
+        "reapply": true,
+        "fps": 60,
+        "expiryFrame": 1502,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 1,
+        "reapply": true,
+        "fps": 120,
+        "expiryFrame": 3002,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 3,
+        "reapply": false,
+        "fps": 30,
+        "expiryFrame": 602,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 3,
+        "reapply": false,
+        "fps": 60,
+        "expiryFrame": 1203,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 3,
+        "reapply": false,
+        "fps": 120,
+        "expiryFrame": 2403,
+        "remainingAfterReapply": null,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 3,
+        "reapply": true,
+        "fps": 30,
+        "expiryFrame": 751,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
+        "copies": 3,
+        "reapply": true,
+        "fps": 60,
+        "expiryFrame": 1502,
+        "remainingAfterReapply": 20.0,
+        "newLifetime": 20
+      },
+      {
+        "leaf": 7220206,
         "copies": 3,
         "reapply": true,
         "fps": 120,
@@ -1043,7 +1987,7 @@
     "overwrite": [
       {
         "order": [
-          7220201,
+          7220203,
           881
         ],
         "nodes": [
@@ -1071,18 +2015,18 @@
       {
         "order": [
           881,
-          7220201
+          7220203
         ],
         "nodes": [
           {
-            "id": 7220201,
+            "id": 7220203,
             "lifetime": 20.0,
             "flags": 4
           }
         ],
         "right": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
@@ -1097,19 +2041,19 @@
       },
       {
         "order": [
-          7220201,
-          7220201
+          7220203,
+          7220203
         ],
         "nodes": [
           {
-            "id": 7220201,
+            "id": 7220203,
             "lifetime": 20.0,
             "flags": 4
           }
         ],
         "right": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
@@ -1124,7 +2068,7 @@
       },
       {
         "order": [
-          7220201,
+          7220203,
           1627
         ],
         "nodes": [
@@ -1152,18 +2096,18 @@
       {
         "order": [
           1627,
-          7220201
+          7220203
         ],
         "nodes": [
           {
-            "id": 7220201,
+            "id": 7220203,
             "lifetime": 20.0,
             "flags": 4
           }
         ],
         "right": [
           0.0,
-          60.0,
+          50.0,
           0.0,
           0.0,
           0.0
@@ -1454,6 +2398,7 @@
     "347700 controlled scene emission outcome; source grant runs natively",
     "3975D0 Behavior request recorder; active/stop and conditional-state gates are native",
     "3CED90 isolated actor context",
+    "3CF020 equipped hand weapon ID supplied as 1000000",
     "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
     "518F30 supplied projectile source owner",
     "E6D630 actual AtkParam_Pc lookup for supplied attack context",
@@ -1462,9 +2407,12 @@
     "E87800 actual enchant Bullet lookup",
     "EA17E0 actual SpEffect PARAM lookup",
     "EA7FC0 actual equipped-weapon row lookup",
+    "EA7FC0 actual supplied weapon PARAM lookup",
+    "EA9A60 weapon wrapper cleanup",
     "F61390 isolated allocator owner",
+    "actor virtual +278 explicit style 0/2 for context-12 hand check",
     "allocator virtual +18 explicit valid tag; native empty vector collection",
-    "attack kind and 10000 attack row supplied; weapon/arrow hit-data construction and actual payload binding not executed",
+    "attack kind, 10000 attack row and eligible weapon 1000000 supplied; weapon/arrow hit-data construction and actual payload binding not executed",
     "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
     "explicit local hit-score context in mode 0",
     "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",

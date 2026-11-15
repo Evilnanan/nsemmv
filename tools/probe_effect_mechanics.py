@@ -26,7 +26,7 @@ raw = a.exe.read_bytes()
 exe_hash = hashlib.sha256(raw).hexdigest()
 assert exe_hash == '9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a'
 x = json.loads(a.extracted.read_text())
-assert x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+assert x['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
 systems = json.loads(a.systems.read_text())
 assert systems['hashes']['regulation.bin'] == x['hashes']['regulation.bin']
 system_rows, system_hashes = {}, {}
@@ -228,7 +228,7 @@ for ids in [[7611202], [7611202, 7611202], [7611202]*3, [7001502, 7611202], [708
 # Native source-kind dispatch: 3/4 are the sorcery/incantation branches.
 for r in attack:
     if r['ids'] == [7611202]*3 and r['kind'] in [3, 4]:
-        assert all(math.isclose(v, 1.14**3, rel_tol=1e-6) for v in r['rates']), attack
+        assert all(math.isclose(v, 1.12**3, rel_tol=1e-6) for v in r['rates']), attack
 defense = []
 for ids in [[], [7002602], [7002602]*3]:
     u = run(0x503800, ids, [OBJ, OBJ + 0x500, OBJ + 0x520, OBJ + 0x540, OBJ + 0x800])
@@ -579,19 +579,13 @@ for stage in range(1, 11):
     growth_values.append(dict(id=id, field='soulRate', value=value))
 
 location_values = []
-for first in (7069001, 7069021):
-    for stage in range(10):
-        id = first + stage
-        u = run(0x502830, [id], [OBJ, OBJ + 0x800, -1, -1], kind=3)
-        rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
-        expected = x['tables']['SpEffectParam'][str(id)]['physicsAttackRate']
-        assert all(math.isclose(v, expected, abs_tol=1e-6) for v in rates)
-        location_values.append(dict(id=id, rates=rates))
-u = run(0x502830, [7069006, 7069030], [OBJ, OBJ + 0x800, -1, -1], kind=3)
-rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
-expected = math.prod(x['tables']['SpEffectParam'][str(id)]['physicsAttackRate'] for id in (7069006,7069030))
-assert all(math.isclose(v, expected, abs_tol=1e-6) for v in rates)
-location_values.append(dict(ids=[7069006,7069030], rates=rates))
+for stage in range(40):
+    id = 7069001 + stage
+    u = run(0x502830, [id], [OBJ, OBJ + 0x800, -1, -1], kind=3)
+    rates = [struct.unpack('<f', u.mem_read(OBJ + 0x800 + off, 4))[0] for off in (0x90, 0xa4, 0xa8, 0xac, 0xb0)]
+    expected = x['tables']['SpEffectParam'][str(id)]['physicsAttackRate']
+    assert all(math.isclose(v, expected, abs_tol=1e-6) for v in rates)
+    location_values.append(dict(id=id, rates=rates))
 
 guard_counter = []
 system_scale = systems['tables']['GameSystemCommonParam']['0']['unknown_30C']

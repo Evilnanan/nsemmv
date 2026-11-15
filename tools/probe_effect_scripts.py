@@ -2,6 +2,7 @@
 
 This verifies script control flow, not the game VM, hit delivery or network play.
 """
+import re
 import argparse
 import ctypes
 import ctypes.util
@@ -15,7 +16,7 @@ p.add_argument('extracted', type=Path)
 p.add_argument('output', type=Path)
 a = p.parse_args()
 raw = a.script.read_bytes()
-assert hashlib.sha256(raw).hexdigest() == '786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+assert hashlib.sha256(raw).hexdigest() == '96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source = raw.decode('utf-8-sig').replace('\r\n', '\n')
 start = source.index('function WeaponChangeCommonFunction(')
 end = source.index('\nfunction ', start + 1)
@@ -23,10 +24,10 @@ function = source[start:end]
 hand_start = source.index('function ExecWeaponChange(')
 hand_end = source.index('\nfunction ', hand_start + 1)
 hand_function = source[hand_start:hand_end]
-assert 'RELIC_WEAPONCHANGE_ENCHANT = 0\n        kind = GetWeaponChangeType(HAND_RIGHT)' in hand_function
-assert 'RELIC_WEAPONCHANGE_ENCHANT = 1\n        kind = GetWeaponChangeType(HAND_LEFT)' in hand_function
+assert re.search(r'RELIC_WEAPONCHANGE_ENCHANT = 0\s+kind = GetWeaponChangeType\(HAND_RIGHT\)', hand_function)
+assert re.search(r'RELIC_WEAPONCHANGE_ENCHANT = 1\s+kind = GetWeaponChangeType\(HAND_LEFT\)', hand_function)
 x = json.loads(a.extracted.read_text())
-assert x['hashes']['regulation.bin'] == '3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06'
+assert x['hashes']['regulation.bin'] == 'f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342'
 spells = x['tables']['SpEffectParam']
 lua = ctypes.CDLL(ctypes.util.find_library('lua5.4'))
 lua.luaL_newstate.restype = ctypes.c_void_p

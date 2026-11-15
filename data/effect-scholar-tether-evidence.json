@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
   "commonParamSha256": "2e7b384f9590e6fa3f19b2f93e3826cebf8d399246fe987382086a445f7f096c",
   "taeSha256": "05df3be3ccba558f65f2632d1e08b109c6708821efd304fdb454a553235e5949",
-  "behaviorParamSha256": "c8121fc6f9c97a101833e0e1ed81c6ef43508d1274de152c4192d4e7bb42739a",
-  "bulletParamSha256": "a69f94572bc5f2cb60e730c90b1c2fc66ea1d322b573d1e01b0a1a5d512e7bad",
-  "weaponParamSha256": "50bea4ea100f4f772a0e516d3b7ead2ce7781f37f09b80dd1d67d0b7555286b1",
+  "behaviorParamSha256": "f8fa3fd27cb98d45a3e24c69d71d8751df9202e6e379dc34fd77d4ef2e1240bb",
+  "bulletParamSha256": "ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44",
+  "weaponParamSha256": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea",
   "root": 7036400,
   "leaf": 7036401,
   "markers": [
@@ -10692,6 +10692,10 @@
     "owner vtable +148 false; allocator +68 free recorder",
     "synthetic player virtuals and equipped weapon 1000",
     "tether map/list allocator interface with exact 48/24-byte requests; native insert/erase maintained"
+  ],
+  "routeConfirmed": false,
+  "unresolved": [
+    "The current animation selects a melee behavior; no reference to Bullet 30908110 remains in BehaviorParam_PC. Direct projectile/leaf probes below do not establish automatic application."
   ],
   "gameplayVerified": false
 }

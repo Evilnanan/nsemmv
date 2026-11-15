@@ -18,7 +18,7 @@ for name in ('exe','extracted','assets','animations','behavior','output'):p.add_
 a=p.parse_args();inputs=Inputs(a.exe,a.extracted)
 assets=json.loads(a.assets.read_text());tae=json.loads(a.animations.read_text());graph=BehaviorGraph(a.behavior)
 assert assets['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 behavior_raw=a.extracted.with_suffix('.BehaviorParam_PC.param').read_bytes()
 weapon_raw=a.assets.with_suffix('.EquipParamWeapon.param').read_bytes()
 bullet_raw=a.extracted.with_suffix('.Bullet.param').read_bytes()
@@ -40,7 +40,7 @@ assert bullet['HitBulletID']==bullet['intervalCreateBulletId']==-1 and bullet['s
 assert [attack[k] for k in ('selfTarget','friendlyTarget','opposeTarget','disableHitSpEffect')]==[0,0,1,0]
 assert r['effectTargetOpposeTarget']==1 and r['effectTargetFriendlyTarget']==0
 paths=[]
-for selector,expected in ((17189,['a903_539000','a903_539005']),(17190,['a903_539100','a903_539105'])):
+for selector,expected in ((graph.named('AddDejavu_OneHandSelector', 'hkbManualSelectorGenerator'),['a903_539000','a903_539005']),(graph.named('AddDejavu_BothHandSelector', 'hkbManualSelectorGenerator'),['a903_539100','a903_539105'])):
     assert graph.selector_binding(selector)['name']=='IsRelic_Dejavu'
     clips=[]
     for g in graph.children(selector):

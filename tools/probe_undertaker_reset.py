@@ -20,7 +20,7 @@ for name in ('exe','extracted','npc','animations','behavior','script','output'):
 a=p.parse_args();inputs=Inputs(a.exe,a.extracted)
 npc=json.loads(a.npc.read_text());tae=json.loads(a.animations.read_text());graph=BehaviorGraph(a.behavior)
 assert npc['hashes']['regulation.bin']==inputs.x['hashes']['regulation.bin'] and tae['allEvents']
-assert tae['bundles'][0]['sha256']=='1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f'
+assert tae['bundles'][0]['sha256']=='806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a'
 root=7500900;assert inputs.spells[str(root)]['stateInfo']==2059 and inputs.spells[str(root)]['spCategory']==20
 track=next(t for t in tae['bundles'][0]['taes'] if t['ID']==2909)
 raw=Path(str(a.animations)+'.2909.tae').read_bytes();assert sha(raw)==track['sha256']
@@ -28,19 +28,19 @@ hero_raw=a.npc.with_suffix('.HeroParam.param').read_bytes();hero=Inputs.table(he
 hero_row=npc['tables']['HeroParam']['10']
 assert struct.unpack_from('<f',hero,0x74)[0]==hero_row['characterAbilityCooldown']==14
 assert hero[0x78]==hero_row['characterAbilityUsageCount']==1
-script=a.script.read_bytes();assert sha(script)=='786f8a7bc89452d9531e2299b224c8945701c422437eca9aacbeb10a57a17f4d'
+script=a.script.read_bytes();assert sha(script)=='96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29'
 source=script.decode('utf-8-sig').replace('\r\n','\n');functions=[]
 for name in ('BlinkStakeStart_onUpdate','AirBlinkStakeStart_onUpdate'):
     start=source.index('function '+name+'()');f=source[start:source.index('\nfunction ',start+1)]
     assert 'env(IsBlinkStakeCollide) == TRUE' in f and 'ExecEventAllBody("W_BlinkStakeFinish")' in f
     functions.append(dict(name=name,sha256=sha(f.encode())))
-state=20979;assert graph.name(state)=='BlinkStakeFinish'
+state=graph.named('BlinkStakeFinish', 'hkbStateMachine::StateInfo');assert graph.name(state)=='BlinkStakeFinish'
 blend=graph.reference(state,'generator');children=graph.blender_children(blend)
-assert blend==22392 and [r['generator'] for r in children]==[32470,32471]
+assert blend==graph.named('BlinkStakeFinish Blend', 'hkbBlenderGenerator') and [r['generator'] for r in children]==[graph.named('BlinkStakeFinish Selector', 'hkbManualSelectorGenerator'),graph.named('BlinkStake_Blend', 'hkbBlenderGenerator')]
 paths=[]
-for child in graph.children(32470):
+for child in graph.children(graph.named('BlinkStakeFinish Selector', 'hkbManualSelectorGenerator')):
     clips=graph.children(child);assert len(clips)==1
-    clip=clips[0];paths.append(dict(state=state,blend=blend,selector=32470,child=child,clip=clip,animation=graph.string(graph.reference(clip,'animationName'))))
+    clip=clips[0];paths.append(dict(state=state,blend=blend,selector=graph.named('BlinkStakeFinish Selector', 'hkbManualSelectorGenerator'),child=child,clip=clip,animation=graph.string(graph.reference(clip,'animationName'))))
 assert [p['animation'] for p in paths]==['a909_690001','a909_690011']
 events=[dict(tae=track['ID'],animation=an['ID'],**e) for an in track['animations'] for e in an['events'] if e['Type']==1020]
 assert [(e['animation'],e['index']) for e in events]==[(690001,44),(690011,45)]

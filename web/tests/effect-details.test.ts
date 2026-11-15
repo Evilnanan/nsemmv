@@ -77,21 +77,24 @@ import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
   it("multiplies repeated normal critical bonuses but deduplicates the +1 version before combining", () => {
-    expect(criticalAttack.checks).toHaveLength(624);
+    expect(criticalAttack.checks).toHaveLength(1040);
     for (const row of criticalAttack.checks) {
       const normal = row.effects.filter((id) => id === 7040200).length;
       const plus = Number(row.effects.includes(7040201));
+      const shop = row.effects.filter((id) => id === 7040202).length;
+      expect(row.accepted.filter((id) => id === 7040202)).toHaveLength(shop);
       expect(row.accepted.filter((id) => id === 7040200)).toHaveLength(normal);
       expect(row.accepted.filter((id) => id === 7040201)).toHaveLength(plus);
       const active = row.critical && !row.disabled && ![3, 4, 5, 10].includes(row.kind);
-      const expected = active ? 1.18 ** normal * 1.23 ** plus : 1;
+      const expected = active ? 1.18 ** normal * 1.23 ** (plus + shop) : 1;
       for (const value of row.values) expect(value).toBeCloseTo(expected, 5);
     }
     expect(effectDetail(7040200)!.stacking).toBe("可叠加");
     expect(effectDetail(7040200)!.stackingDetail).toContain("两条合计 +39.24%");
     expect(effectDetail(7040201)!.stacking).toBe("不同等级可叠加");
     expect(effectDetail(7040201)!.stackingDetail).toContain("＋１版只生效一条");
-    for (const id of [7040200, 7040201]) {
+    expect(effectDetail(7040202)!.stacking).toBe("可叠加");
+    for (const id of [7040200, 7040201, 7040202]) {
       const detail = effectDetail(id)!;
       expect(detail.blocks[0].phase).toBe("致命一击时");
       expect(detail.notes.join()).toContain("合计 +45.14%");
@@ -293,8 +296,8 @@ describe("MMV effect details", () => {
   it("separates Revenant enchantment reapplication from replacement and frost duration", () => {
     for (const id of [7220100, 7220101]) {
       const detail = effectDetail(id)!;
-      expect(detail.blocks[0].values).toEqual([["魔力基础攻击力", "+60"], ["冻伤基础累积", "40"]]);
-      expect(detail.blocks[0].restrictions).toEqual(["右手武器"]);
+      expect(detail.blocks[0].values).toEqual([["魔力基础攻击力", "+50"], ["冻伤基础累积", "40"]]);
+      expect(detail.blocks[0].restrictions).toEqual(["可附魔武器；双持左手时附魔左手，否则附魔右手"]);
       expect(detail.blocks[0].duration).toBe(20);
       expect(detail.blocks[1].duration).toBeNull();
       expect(detail.blocks[2].duration).toBe(30);
@@ -670,13 +673,11 @@ describe("MMV effect details", () => {
   });
   it("separates Scholar tether eligibility time from wall time and repeated ultimate applications", () => {
     const detail = effectDetail(7036400)!;
-    expect(detail.stacking).toBe("不可叠加");
-    expect(detail.stackingDetail).toBe("重复装备不增加单次伤害");
-    expect(detail.blocks[0].values).toEqual([["HP 伤害", "15 点／次"]]);
-    expect(detail.blocks[0].duration).toBe(20);
-    expect(detail.blocks[0].interval).toBe(1);
-    expect(detail.blocks[0].restrictions).toEqual(["仅连结期间计时"]);
-    expect(detail.notes).toEqual(["未连结时暂停；连结后继续剩余时间。", "多次绝招施加的持续伤害各自计时，可叠加。"]);
+    expect(detail.stacking).toBe("待确认");
+    expect(detail.stackingDetail).toBe("");
+    expect(scholarTether.routeConfirmed).toBe(false);
+    expect(detail.blocks).toEqual([]);
+    expect(detail.notes).toEqual(["本版本的连结持续伤害触发路径尚未确认。"]);
     for (const row of scholarTether.checks.dispatch)
       expect(row.requests).toHaveLength(row.copies && row.active ? 1 : 0);
     for (const row of scholarTether.checks.unlink) {
@@ -1109,17 +1110,17 @@ describe("MMV effect details", () => {
       readFileSync(new URL("../../data/effect-duchess-poise-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
-  it("shows the referenced pull-attack bleed and treats its one-second lifetime as a lockout", () => {
+  it("shows the new firing-attack and existing pull-attack bleed and treats its one-second lifetime as a lockout", () => {
     const detail = effectDetail(6500000)!;
-    expect(detail.blocks.map(b => b.values)).toEqual([[["出血基础累积", "55"]], [["出血伤害", "最大血量的 12.5% + 100"]]]);
-    expect(detail.blocks.map(b => b.duration)).toEqual([null, null]);
-    expect(detail.blocks.map(b => b.interval)).toEqual([null, null]);
+    expect(detail.blocks.map(b => b.values)).toEqual([[["出血基础累积", "60"]], [["出血基础累积", "55"]], [["出血伤害", "最大血量的 12.5% + 100"]]]);
+    expect(detail.blocks.map(b => b.duration)).toEqual([null, null, null]);
+    expect(detail.blocks.map(b => b.interval)).toEqual([null, null, null]);
     expect(detail.stacking).toBe("不可叠加");
     expect(detail.notes).toEqual(["该出血发作后约 1 秒内不重复触发。"]);
     expect(wylderBleed.checks.onset.filter(r => r.immune).every(r => r.rejected && r.remaining === r.resistance)).toBe(true);
     expect(wylderBleed.checks.damage.find(r => r.maximum === 10000)).toEqual({maximum: 10000, damage: -1350});
-    expect(wylderBleed.unresolved).toEqual({missingBehavior: 600000030, unreferencedLeaf: 7500001});
-    expect(detail.blocks.flatMap(b => [b.source, ...(b.branches ?? [])])).not.toContain(7500001);
+    expect(wylderBleed.unresolved).toEqual({});
+    expect(detail.blocks.flatMap(b => [b.source, ...(b.branches ?? [])])).toContain(7500001);
     for (const row of wylderBleed.checks.lifetime)
       expect(row.damage).toEqual([{frame: 0, damage: -1350}]);
     for (const row of wylderBleed.checks.repeat) {
@@ -1711,13 +1712,13 @@ describe("MMV effect details", () => {
     const detail = effectDetail(7220200)!;
     expect(detail).toEqual(effectDetail(7220201));
     expect(detail.blocks.map((b) => b.values)).toEqual([
-      [["攻击倍率", "+15%"]], [["FP 恢复", "最大值的 10%"]],
+      [["攻击倍率", "+10%"]], [["FP 恢复", "最大值的 25%"]],
     ]);
-    expect(detail.blocks.map((b) => b.duration)).toEqual([20, null]);
+    expect(detail.blocks.map((b) => b.duration)).toEqual([30, null]);
     expect(detail.blocks.every((b) => b.interval === null)).toBe(true);
     expect(detail.stacking).toBe("不可叠加");
     expect(detail.notes.join()).toContain("未消耗的机会在窗口结束时结算");
-    expect(detail.notes.join()).toContain("+32.25%");
+    expect(detail.notes.join()).toContain("+21%");
     const cases = lifecycle.checks.revenant;
     expect(cases.find((c) => c.name === "no-equipment")!.restores).toEqual([]);
     const edge = cases.find((c) => c.name === "rearm-boundary")!;
@@ -1727,7 +1728,7 @@ describe("MMV effect details", () => {
     expect(cases.find((c) => c.name === "no-damage")!.restores).toHaveLength(1);
     expect(cases.find((c) => c.name === "zero-damage")!.restores).toEqual(cases.find((c) => c.name === "no-damage")!.restores);
     expect(cases.find((c) => c.name === "independent-expiry")!.attackChanges.map((c) => c.count)).toEqual([1, 2, 3, 2]);
-    expect(lifecycle.checks.fp.find((c) => c.copies === 1 && c.maximum === 137)!.first).toEqual([13, 0]);
+    expect(lifecycle.checks.fp.find((c) => c.copies === 1 && c.maximum === 137)!.first).toEqual([34, 0]);
     expect(lifecycle.checks.fp.every((c) => c.nextFrame.every((v) => v === 0))).toBe(true);
     expect(research.lifecycleEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-lifecycle-evidence.json", import.meta.url)),
@@ -1845,8 +1846,8 @@ describe("MMV effect details", () => {
       expect(JSON.stringify(detail)).not.toContain("%");
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
-    expect(research.coverage.withMechanicsOnly).toBe(39);
-    expect(research.coverage.withNumericFields).toBe(560);
+    expect(research.coverage.withMechanicsOnly).toBe(40);
+    expect(research.coverage.withNumericFields).toBe(573);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
@@ -1854,8 +1855,8 @@ describe("MMV effect details", () => {
     expect(discovery.gameplayVerified).toBe(false);
   });
   it("preserves repeated ItemTable IDs and native first-bias selection across all heroes", () => {
-    expect(discovery.rowCount).toBe(35755);
-    expect(discovery.groupCount).toBe(3627);
+    expect(discovery.rowCount).toBe(36058);
+    expect(discovery.groupCount).toBe(3667);
     expect(discovery.biasedGroups).toHaveLength(39);
     const rows = discovery.rows.filter((r) => r.id === 3000200);
     expect(rows.length).toBeGreaterThan(100);
@@ -1875,7 +1876,7 @@ describe("MMV effect details", () => {
     expect(new Set(generic.map((r) => r.totalWeight))).toEqual(new Set([21000]));
     expect(new Set(generic.map((r) => r.selectedIndex)).size).toBe(1);
     const gated = discovery.draws.filter((r) => r.group === 2000);
-    expect(gated.map((r) => r.totalWeight)).toEqual([0, 0, 0, 100]);
+    expect(gated.map((r) => r.totalWeight)).toEqual([0, 0, 0, 0]);
   });
   it("distinguishes the magic field from its recipient lease and follows native last-hit replacement", () => {
     const detail = effectDetail(7032800)!;
@@ -1897,18 +1898,18 @@ describe("MMV effect details", () => {
       expect(r.magicRate).toBeCloseTo(r.incoming === 7032803 ? 1.15 : 1.2);
     }
   });
-  it("binds special-location growth to two independent ladders and actual counter grants", () => {
+  it("binds special-location growth to the Hotfix1 linear ladder and actual counter grants", () => {
     const detail = effectDetail(7060000)!;
-    expect(detail.blocks.map((b) => b.source)).toEqual([7069001, 7069021]);
-    expect(detail.blocks.map((b) => b.values)).toEqual([
-      [["每档攻击倍率", "约 +5%"]],
-      [["每档攻击倍率", "约 +1.5%"]],
+    expect(detail.blocks.map((b) => b.source)).toEqual([7069001]);
+    expect(detail.blocks[0].branches).toHaveLength(39);
+    expect(detail.blocks[0].values).toEqual([
+      ["封印监牢", "+2%／次，最多计 3 次"], ["入侵者", "+3%／次，最多计 2 次"],
+      ["拟态敌人", "+5%／次，最多计 1 次"], ["魔法师塔", "+4%／次，最多计 2 次"],
+      ["据点目标", "+1%／次，最多计 10 次"],
     ]);
-    expect(detail.blocks[0].restrictions.join()).toContain("最多 3 档");
-    expect(detail.blocks[1].restrictions.join()).toContain("拟态敌人最多计 2 档（需击败变身后的目标）");
-    expect(detail.notes).toContain("两组成长可同时生效，倍率相乘。");
-    expect(growth.roots["7060001"].sources.map((r) => [r.counter, r.grantsPerEvent]))
-      .toEqual([[8145,3], [8155,2], [8135,2], [8140,1], [8180,8]]);
+    expect(detail.notes.join()).toContain("参数上限为攻击倍率 +40%");
+    expect(growth.roots["7060001"].sources.map((r) => [r.counter, r.grantsPerCompletion]))
+      .toEqual([[8150,2], [8155,3], [8135,5], [8140,4], [8180,1]]);
     expect(new Set(growth.producers.filter((r) => r.counter === 8180).map((r) => r.units)))
       .toEqual(new Set([1, 2]));
     expect(growth.transformations).toHaveLength(30);
@@ -1918,10 +1919,11 @@ describe("MMV effect details", () => {
       expect(r.original.EntityID).toBe(producer.arguments[2]);
       expect(r.target.EntityID).not.toBe(r.original.EntityID);
     }
-    const both = evidence.locationValues.find((r) => "ids" in r)!;
-    const first = evidence.locationValues.find((r) => r.id === 7069006)!;
-    const second = evidence.locationValues.find((r) => r.id === 7069030)!;
-    expect(both.rates[0]).toBeCloseTo(first.rates[0] * second.rates[0]);
+    expect(evidence.locationValues).toHaveLength(40);
+    for (const row of evidence.locationValues)
+      for (const rate of row.rates)
+        expect(rate).toBeCloseTo(1 + (row.id - 7069000) / 100, 6);
+
   });
   it("uses current HP only for the guard counter's physical bonus", () => {
     expect(effectDetail(7150000)!.blocks[0].values).toEqual([["追加物理伤害基值", "当前 HP 的 5%"]]);
@@ -2007,7 +2009,7 @@ describe("MMV effect details", () => {
   });
   it("uses MMV spell and weapon-condition values without confusing damage channels", () => {
     const spell = effectDetail(6611202)!;
-    expect(spell.blocks[0].values).toEqual([["攻击倍率", "+14%"]]);
+    expect(spell.blocks[0].values).toEqual([["攻击倍率", "+12%"]]);
     expect(spell.blocks[0].scope).toEqual(["魔法", "祷告"]);
     expect(effectDetail(7082400)!.blocks[0].values).toEqual([
       ["攻击倍率", "+20%"],
@@ -2045,7 +2047,7 @@ describe("MMV effect details", () => {
     expect(Object.keys(research.effects).sort()).toEqual(
       Object.keys(catalog.effects).sort(),
     );
-    expect(research.coverage.catalog).toBe(2241);
+    expect(research.coverage.catalog).toBe(2266);
     expect(research.regulationSha256).toBe(catalog.regulationSha256);
     expect(evidence.regulationSha256).toBe(catalog.regulationSha256);
     expect(research.nativeEvidenceSha256).toBe(
@@ -2057,7 +2059,7 @@ describe("MMV effect details", () => {
         )
         .digest("hex"),
     );
-    expect(research.coverage.obtainable).toBe(637);
+    expect(research.coverage.obtainable).toBe(657);
     expect(triggers.regulationSha256).toBe(catalog.regulationSha256);
     expect(research.triggerEvidenceSha256).toBe(
       createHash("sha256")
@@ -2236,7 +2238,7 @@ describe("MMV effect details", () => {
       evidence.growthAdvance.find((r) => r.existing.join() === "7037510")!
         .target,
     ).toBe(-1);
-    expect(effectDetail(6060500)!.blocks[1].values).toContainEqual([
+    expect(effectDetail(6060600)!.blocks[1].values).toContainEqual([
       "各类异常抵抗力",
       "+300",
     ]);
@@ -2272,7 +2274,7 @@ describe("MMV effect details", () => {
     );
     expect(tripleSpell).toHaveLength(2);
     for (const r of tripleSpell)
-      for (const rate of r.rates) expect(rate).toBeCloseTo(1.14 ** 3, 6);
+      for (const rate of r.rates) expect(rate).toBeCloseTo(1.12 ** 3, 6);
     expect(effectDetail(6632400)!.stacking).toBe("不可叠加");
     expect(effectDetail(6632400)!.stackingDetail).toContain("第一个");
     expect(

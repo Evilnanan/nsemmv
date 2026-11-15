@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
-  "regulationSha256": "3305ac374b4da1db440e2b6644bc2c3c0ae96b98df9627f1a0e7a2b06d265c06",
-  "paramSha256": "fe584082c41481af8910104c6abd8bc20e233ada3fddf7e2b9a66eea241cd688",
-  "magicParamSha256": "22eb8e1965a0390a0f1278bb1bc05f6a8517ef494811f63e31333ba0a2a83bd2",
-  "animationSha256": "1410035ad79edb410fa41420ec259fcb4a1037d748c9c4a3b6ae8d1366c76d0f",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "magicParamSha256": "17742eeafe4fade863f3a7ee5f7ff483bd4897f765802fe4a1954dfa8107b63e",
+  "animationSha256": "806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a",
   "root": 7037000,
   "leaf": 7037001,
   "families": [
@@ -27,7 +27,7 @@
         {
           "tae": 2431,
           "animation": 45110,
-          "index": 1,
+          "index": 2,
           "Type": 64,
           "StartTime": 0.5,
           "EndTime": 0.53333336,
@@ -54,7 +54,7 @@
         {
           "tae": 2431,
           "animation": 45110,
-          "index": 1,
+          "index": 2,
           "Type": 64,
           "StartTime": 0.5,
           "EndTime": 0.53333336,
@@ -180,7 +180,7 @@
         {
           "tae": 2431,
           "animation": 45110,
-          "index": 1,
+          "index": 2,
           "Type": 64,
           "StartTime": 0.5,
           "EndTime": 0.53333336,
@@ -756,7 +756,7 @@
         {
           "tae": 2431,
           "animation": 45110,
-          "index": 1,
+          "index": 2,
           "Type": 64,
           "StartTime": 0.5,
           "EndTime": 0.53333336,
@@ -1367,7 +1367,7 @@
       {
         "magic": 6050,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 0,
         "grants": [],
@@ -1383,7 +1383,7 @@
       {
         "magic": 6050,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 1,
         "grants": [
@@ -1391,48 +1391,6 @@
         ],
         "rates": [
           1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0
-        ],
-        "costRequests": [
-          [
-            0,
-            0,
-            -3,
-            0,
-            0
-          ]
-        ]
-      },
-      {
-        "magic": 6050,
-        "animation": 45110,
-        "eventIndex": 1,
-        "copies": 1,
-        "active": 0,
-        "grants": [],
-        "rates": [
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0
-        ],
-        "costRequests": []
-      },
-      {
-        "magic": 6050,
-        "animation": 45110,
-        "eventIndex": 1,
-        "copies": 1,
-        "active": 1,
-        "grants": [
-          7037001
-        ],
-        "rates": [
-          1.190000057220459,
           1.0,
           1.0,
           1.0,
@@ -1451,7 +1409,49 @@
       {
         "magic": 6050,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 0,
+        "grants": [],
+        "rates": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": []
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 2,
+        "copies": 1,
+        "active": 1,
+        "grants": [
+          7037001
+        ],
+        "rates": [
+          1.190000057220459,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "costRequests": [
+          [
+            0,
+            0,
+            -3,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "magic": 6050,
+        "animation": 45110,
+        "eventIndex": 2,
         "copies": 3,
         "active": 0,
         "grants": [],
@@ -1467,7 +1467,7 @@
       {
         "magic": 6050,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 1,
         "grants": [
@@ -1619,7 +1619,7 @@
       {
         "magic": 6060,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 0,
         "grants": [],
@@ -1635,7 +1635,7 @@
       {
         "magic": 6060,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 1,
         "grants": [
@@ -1661,7 +1661,7 @@
       {
         "magic": 6060,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 1,
         "active": 0,
         "grants": [],
@@ -1677,7 +1677,7 @@
       {
         "magic": 6060,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 1,
         "active": 1,
         "grants": [
@@ -1703,7 +1703,7 @@
       {
         "magic": 6060,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 0,
         "grants": [],
@@ -1719,7 +1719,7 @@
       {
         "magic": 6060,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 1,
         "grants": [
@@ -3131,7 +3131,7 @@
       {
         "magic": 6260,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 0,
         "grants": [],
@@ -3147,7 +3147,7 @@
       {
         "magic": 6260,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 1,
         "grants": [
@@ -3173,7 +3173,7 @@
       {
         "magic": 6260,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 1,
         "active": 0,
         "grants": [],
@@ -3189,7 +3189,7 @@
       {
         "magic": 6260,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 1,
         "active": 1,
         "grants": [
@@ -3215,7 +3215,7 @@
       {
         "magic": 6260,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 0,
         "grants": [],
@@ -3231,7 +3231,7 @@
       {
         "magic": 6260,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 1,
         "grants": [
@@ -8423,7 +8423,7 @@
       {
         "magic": 6840,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 0,
         "grants": [],
@@ -8439,7 +8439,7 @@
       {
         "magic": 6840,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 0,
         "active": 1,
         "grants": [
@@ -8465,7 +8465,7 @@
       {
         "magic": 6840,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 1,
         "active": 0,
         "grants": [],
@@ -8481,7 +8481,7 @@
       {
         "magic": 6840,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 1,
         "active": 1,
         "grants": [
@@ -8507,7 +8507,7 @@
       {
         "magic": 6840,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 0,
         "grants": [],
@@ -8523,7 +8523,7 @@
       {
         "magic": 6840,
         "animation": 45110,
-        "eventIndex": 1,
+        "eventIndex": 2,
         "copies": 3,
         "active": 1,
         "grants": [
