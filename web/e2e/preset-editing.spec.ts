@@ -241,6 +241,7 @@ test("retains compatible relics on vessel changes and keeps save reachable at na
 
 test("filters shop relics alongside search, favorites and usage without changing relics", async ({
   page,
+  isMobile,
 }, testInfo) => {
   const session = Session.open(fixture(), "test");
   const ordinary = session.view(0).relics[0];
@@ -262,22 +263,23 @@ test("filters shop relics alongside search, favorites and usage without changing
     handles: [ordinary.handle, 0, 0, 0, 0, 0],
   });
   await page.goto("/");
-  await page
-    .getByLabel("打开存档文件")
-    .setInputFiles({
-      name: "NR0000.dbb",
-      mimeType: "application/octet-stream",
-      buffer: Buffer.from(session.export()),
-    });
+  await page.getByLabel("打开存档文件").setInputFiles({
+    name: "NR0000.dbb",
+    mimeType: "application/octet-stream",
+    buffer: Buffer.from(session.export()),
+  });
   await page.getByRole("button", { name: "预设", exact: true }).click();
   await page.locator(".preset-card").click();
   await page.getByRole("button", { name: "预设遗物 1", exact: true }).click();
   const picker = page.getByRole("complementary", { name: "选择预设遗物" });
-  const filter = picker.getByLabel("筛选商店遗物");
-  await expect(filter).toHaveValue("all");
+  const filter = picker.getByRole("button", { name: /^商店遗物筛选：/ });
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：全部遗物");
+  await expect(filter).toHaveAttribute("aria-pressed", "false");
   await expect(picker.getByRole("status")).toHaveText("21 件");
   await picker.getByRole("button", { name: "下一页遗物" }).click();
-  await filter.selectOption("shop");
+  await filter.click();
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：仅商店遗物");
+  await expect(filter).toHaveAttribute("aria-pressed", "true");
   await expect(picker.getByRole("status")).toHaveText("1 件");
   await expect(
     picker.getByRole("button", { name: "上一页遗物" }),
@@ -285,16 +287,38 @@ test("filters shop relics alongside search, favorites and usage without changing
   await expect(picker.locator(".relic-option")).toContainText("商店遗物");
   await expect(picker.locator(".relic-option")).toHaveCount(1);
   await picker.getByRole("button", { name: "仅显示收藏遗物" }).click();
-  await filter.selectOption("non-shop");
+  if (isMobile) await filter.tap();
+  else {
+    await filter.focus();
+    await filter.press("Space");
+  }
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：排除商店遗物");
+  await expect(filter).toHaveAttribute(
+    "title",
+    "排除商店遗物 · 点击切换为全部遗物",
+  );
+  await page.screenshot({
+    path: testInfo.outputPath("shop-filter-excluded.png"),
+  });
   await expect(picker.getByRole("status")).toHaveText("1 件");
   await expect(picker.locator(".relic-option")).not.toContainText("商店遗物");
-  await filter.selectOption("shop");
+  if (isMobile) await filter.tap();
+  else await filter.press("Enter");
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：全部遗物");
+  await expect(filter).toHaveAttribute("aria-pressed", "false");
+  await expect(picker.getByRole("status")).toHaveText("2 件");
+  await filter.click();
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：仅商店遗物");
+  await expect(filter).toHaveAttribute("aria-pressed", "true");
   await picker.getByLabel("搜索预设遗物").fill("10004");
   await expect(picker.getByText("无匹配", { exact: true })).toBeVisible();
   await picker.getByRole("button", { name: "重置筛选" }).click();
-  await expect(filter).toHaveValue("all");
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：全部遗物");
+  await expect(filter).toHaveAttribute("aria-pressed", "false");
   await expect(picker.getByRole("status")).toHaveText("21 件");
-  await filter.selectOption("shop");
+  await filter.click();
+  await expect(filter).toHaveAccessibleName("商店遗物筛选：仅商店遗物");
+  await expect(filter).toHaveAttribute("aria-pressed", "true");
   await picker.getByLabel("筛选遗物使用情况").selectOption("current");
   await expect(picker.getByText("无匹配", { exact: true })).toBeVisible();
   await picker.getByLabel("筛选遗物使用情况").selectOption("unused");

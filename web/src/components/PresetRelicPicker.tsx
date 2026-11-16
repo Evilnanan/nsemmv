@@ -6,6 +6,7 @@ import {
   Gem,
   Search,
   Star,
+  Store,
   X,
 } from "lucide-react";
 import { catalog, colorNames } from "../core/catalog";
@@ -20,6 +21,11 @@ import { PresetEffects } from "./PresetEffects";
 import { RelicUsageSummary } from "./RelicUsage";
 
 const PAGE_SIZE = 18;
+const shopFilterLabels = {
+  all: "全部遗物",
+  shop: "仅商店遗物",
+  "non-shop": "排除商店遗物",
+};
 export function PresetRelicPicker({
   view,
   hero,
@@ -45,6 +51,8 @@ export function PresetRelicPicker({
     "all",
   );
   const [favorites, setFavorites] = useState(false);
+  const nextShopFilter =
+    shopFilter === "all" ? "shop" : shopFilter === "shop" ? "non-shop" : "all";
   const [page, setPage] = useState(0);
   const input = useRef<HTMLInputElement>(null);
   const back = useRef<HTMLButtonElement>(null);
@@ -135,17 +143,6 @@ export function PresetRelicPicker({
         </div>
         <div className="slot-filter-row">
           <select
-            aria-label="筛选商店遗物"
-            value={shopFilter}
-            onChange={(e) => setShopFilter(e.target.value as typeof shopFilter)}
-          >
-            <option value="all">全部遗物</option>
-            <option value="shop">仅商店遗物</option>
-            <option value="non-shop">排除商店遗物</option>
-          </select>
-        </div>
-        <div className="slot-filter-row">
-          <select
             className="usage-filter"
             aria-label="筛选遗物使用情况"
             value={usageFilter}
@@ -157,6 +154,21 @@ export function PresetRelicPicker({
             <option value="current">当前角色使用</option>
             <option value="other">其他角色使用</option>
           </select>
+          <button
+            type="button"
+            className={`tool shop-filter ${shopFilter !== "all" ? "active" : ""} ${shopFilter === "non-shop" ? "excluded" : ""}`}
+            aria-label={`商店遗物筛选：${shopFilterLabels[shopFilter]}`}
+            title={`${shopFilterLabels[shopFilter]} · 点击切换为${shopFilterLabels[nextShopFilter]}`}
+            aria-pressed={shopFilter !== "all"}
+            onClick={() => setShopFilter(nextShopFilter)}
+          >
+            <Store size={18} />
+            {shopFilter !== "all" && (
+              <span className="shop-filter-badge" aria-hidden="true">
+                {shopFilter === "shop" ? <Check size={11} /> : <X size={11} />}
+              </span>
+            )}
+          </button>
           <button
             type="button"
             className={`tool ${favorites ? "active" : ""}`}
