@@ -26,6 +26,7 @@ import {
   Pencil,
   Eye,
   Github,
+  BookOpen,
 } from "lucide-react";
 import {
   catalog,
@@ -52,6 +53,7 @@ import {
 } from "./core/rules";
 import { type SessionView, type Edit } from "./core/session";
 import { request, download } from "./client";
+import { EffectDictionary } from "./components/EffectDictionary";
 import { EffectInspect } from "./components/EffectInspect";
 import { RelicUsage, RelicUsageSummary } from "./components/RelicUsage";
 import { CharacterSelect } from "./components/CharacterSelect";
@@ -411,7 +413,7 @@ function App() {
   const [view, setView] = useState<SessionView | null>(null),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
-    [tab, setTab] = useState<"relics" | "presets">("relics"),
+    [tab, setTab] = useState<"relics" | "presets" | "dictionary">("relics"),
     [childDirty, setChildDirty] = useState(false),
     [documentId, setDocumentId] = useState(0);
   const [selected, setSelected] = useState<number>(),
@@ -481,6 +483,7 @@ function App() {
       setView(next);
       setDocumentId((id) => id + 1);
       setRename(null);
+      if (tab === "dictionary") setTab("relics");
       select(next.relics[0]?.handle, next);
       setPage(0);
       setQ("");
@@ -581,7 +584,9 @@ function App() {
             label="遗物"
             active={tab === "relics"}
             onClick={() => {
-              if (discard()) {
+              if (tab === "dictionary") {
+                setTab("relics");
+              } else if (discard()) {
                 select(selected);
                 setTab("relics");
               }
@@ -597,6 +602,12 @@ function App() {
                 setTab("presets");
               }
             }}
+          />
+          <Tool
+            icon={BookOpen}
+            label="词典"
+            active={tab === "dictionary"}
+            onClick={() => setTab("dictionary")}
           />
         </nav>
         <a
@@ -682,7 +693,9 @@ function App() {
             <Tool icon={X} label="关闭错误" onClick={() => setError("")} />
           </div>
         )}
-        {!view ? (
+        {tab === "dictionary" ? (
+          <EffectDictionary />
+        ) : !view ? (
           <main className="landing">
             <div className="orbit">
               <div className="ring r1" />
@@ -705,6 +718,13 @@ function App() {
             <div className="format-list">
               .dbb <span>·</span> .co2 <span>·</span> .sl2
             </div>
+            <button
+              className="dictionary-entry"
+              onClick={() => setTab("dictionary")}
+            >
+              <BookOpen size={17} />
+              词条词典
+            </button>
             <span className="privacy">
               <ShieldCheck size={13} />
               本地处理
