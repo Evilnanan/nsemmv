@@ -41,6 +41,9 @@ export function PresetRelicPicker({
 }) {
   const [search, setSearch] = useState("");
   const [usageFilter, setUsageFilter] = useState<UsageFilter>("all");
+  const [shopFilter, setShopFilter] = useState<"all" | "shop" | "non-shop">(
+    "all",
+  );
   const [favorites, setFavorites] = useState(false);
   const [page, setPage] = useState(0);
   const input = useRef<HTMLInputElement>(null);
@@ -53,6 +56,8 @@ export function PresetRelicPicker({
           fitsPresetSlot(r, colors, slot) &&
           (!handles.includes(r.handle) || handles[slot] === r.handle) &&
           (!favorites || r.favorite) &&
+          (shopFilter === "all" ||
+            !!catalog.relics[r.id]?.shop === (shopFilter === "shop")) &&
           matchesUsage(usages.get(r.handle) ?? null, hero, usageFilter) &&
           matchesRelicSearch(r, search),
       ),
@@ -62,6 +67,7 @@ export function PresetRelicPicker({
       slot,
       handles,
       favorites,
+      shopFilter,
       usages,
       hero,
       usageFilter,
@@ -72,10 +78,10 @@ export function PresetRelicPicker({
   const currentPage = Math.min(page, pages - 1);
   useEffect(() => {
     setPage(0);
-  }, [slot, search, usageFilter, favorites]);
+  }, [slot, search, usageFilter, shopFilter, favorites]);
   useEffect(() => {
     list.current?.scrollTo(0, 0);
-  }, [currentPage, slot, search, usageFilter, favorites]);
+  }, [currentPage, slot, search, usageFilter, shopFilter, favorites]);
   useEffect(() => {
     (window.matchMedia("(max-width: 1000px)").matches
       ? back.current
@@ -129,6 +135,17 @@ export function PresetRelicPicker({
         </div>
         <div className="slot-filter-row">
           <select
+            aria-label="筛选商店遗物"
+            value={shopFilter}
+            onChange={(e) => setShopFilter(e.target.value as typeof shopFilter)}
+          >
+            <option value="all">全部遗物</option>
+            <option value="shop">仅商店遗物</option>
+            <option value="non-shop">排除商店遗物</option>
+          </select>
+        </div>
+        <div className="slot-filter-row">
+          <select
             className="usage-filter"
             aria-label="筛选遗物使用情况"
             value={usageFilter}
@@ -163,6 +180,7 @@ export function PresetRelicPicker({
                 setSearch("");
                 setFavorites(false);
                 setUsageFilter("all");
+                setShopFilter("all");
                 input.current?.focus({ preventScroll: true });
               }}
             >

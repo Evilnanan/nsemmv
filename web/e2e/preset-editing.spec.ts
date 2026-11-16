@@ -238,3 +238,89 @@ test("retains compatible relics on vessel changes and keeps save reachable at na
     session.view(0).relics.map(({ owners, ...r }) => r),
   );
 });
+
+test("filters shop relics alongside search, favorites and usage without changing relics", async ({
+  page,
+}, testInfo) => {
+  const session = Session.open(fixture(), "test");
+  const ordinary = session.view(0).relics[0];
+  for (let i = 0; i < 19; i++)
+    session.apply(0, { type: "add", id: ordinary.id, roll: ordinary.roll });
+  const shop = session.apply(0, {
+    type: "add",
+    id: 1000,
+    roll: fixedRoll(1000)!,
+  })!;
+  session.apply(0, { type: "add", id: 10004, roll: fixedRoll(10004)! });
+  session.apply(0, { type: "favorite", handle: shop, value: true });
+  session.apply(0, { type: "favorite", handle: ordinary.handle, value: true });
+  session.apply(0, {
+    type: "preset",
+    hero: 7,
+    vessel: 19000,
+    name: "商店筛选",
+    handles: [ordinary.handle, 0, 0, 0, 0, 0],
+  });
+  await page.goto("/");
+  await page
+    .getByLabel("打开存档文件")
+    .setInputFiles({
+      name: "NR0000.dbb",
+      mimeType: "application/octet-stream",
+      buffer: Buffer.from(session.export()),
+    });
+  await page.getByRole("button", { name: "预设", exact: true }).click();
+  await page.locator(".preset-card").click();
+  await page.getByRole("button", { name: "预设遗物 1", exact: true }).click();
+  const picker = page.getByRole("complementary", { name: "选择预设遗物" });
+  const filter = picker.getByLabel("筛选商店遗物");
+  await expect(filter).toHaveValue("all");
+  await expect(picker.getByRole("status")).toHaveText("21 件");
+  await picker.getByRole("button", { name: "下一页遗物" }).click();
+  await filter.selectOption("shop");
+  await expect(picker.getByRole("status")).toHaveText("1 件");
+  await expect(
+    picker.getByRole("button", { name: "上一页遗物" }),
+  ).toBeDisabled();
+  await expect(picker.locator(".relic-option")).toContainText("商店遗物");
+  await expect(picker.locator(".relic-option")).toHaveCount(1);
+  await picker.getByRole("button", { name: "仅显示收藏遗物" }).click();
+  await filter.selectOption("non-shop");
+  await expect(picker.getByRole("status")).toHaveText("1 件");
+  await expect(picker.locator(".relic-option")).not.toContainText("商店遗物");
+  await filter.selectOption("shop");
+  await picker.getByLabel("搜索预设遗物").fill("10004");
+  await expect(picker.getByText("无匹配", { exact: true })).toBeVisible();
+  await picker.getByRole("button", { name: "重置筛选" }).click();
+  await expect(filter).toHaveValue("all");
+  await expect(picker.getByRole("status")).toHaveText("21 件");
+  await filter.selectOption("shop");
+  await picker.getByLabel("筛选遗物使用情况").selectOption("current");
+  await expect(picker.getByText("无匹配", { exact: true })).toBeVisible();
+  await picker.getByLabel("筛选遗物使用情况").selectOption("unused");
+  await picker.getByLabel("搜索预设遗物").fill("1000");
+  await expect(picker.locator(".relic-option")).toHaveCount(1);
+  await page.screenshot({ path: testInfo.outputPath("shop-filter.png") });
+  await expect(
+    picker.getByRole("button", { name: "清空当前遗物槽" }),
+  ).toBeInViewport();
+  expect(
+    await page
+      .locator(".preset-dialog")
+      .evaluate((el) => el.scrollWidth <= el.clientWidth),
+  ).toBe(true);
+  await picker
+    .getByRole("button", { name: `选择遗物 1000 · ${shop}`, exact: true })
+    .click();
+  await page.getByRole("button", { name: "保存预设", exact: true }).click();
+  const download = page.waitForEvent("download");
+  await page.getByRole("button", { name: "导出存档", exact: true }).click();
+  const result = Session.open(
+    new Uint8Array(await readFile((await (await download).path())!)),
+    "result",
+  ).view(0);
+  expect(result.loadouts!.presets[0].handles).toEqual([shop, 0, 0, 0, 0, 0]);
+  expect(result.relics.map(({ owners, ...r }) => r)).toEqual(
+    session.view(0).relics.map(({ owners, ...r }) => r),
+  );
+});
