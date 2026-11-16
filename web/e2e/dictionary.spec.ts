@@ -134,3 +134,66 @@ test("dictionary leaves save bytes and pending relic edits intact", async ({
   ).toBeDisabled();
   expect(dialogs).toEqual([]);
 });
+
+test("dictionary list and long details scroll within their panes", async ({
+  page,
+  isMobile,
+}) => {
+  await page.setViewportSize({ width: isMobile ? 393 : 1440, height: 700 });
+  await page.goto("/");
+  await page.getByRole("button", { name: "词典", exact: true }).click();
+  const list = page.locator(".dictionary-list");
+  const pagination = page.locator(".dictionary-pagination");
+  await expect(pagination).toBeInViewport();
+  expect(await list.evaluate((el) => el.scrollHeight > el.clientHeight)).toBe(
+    true,
+  );
+
+  async function scrollPane(pane: import("@playwright/test").Locator) {
+    if (!isMobile) {
+      await pane.hover();
+      await page.mouse.wheel(0, 10000);
+    } else {
+      const box = (await pane.boundingBox())!;
+      const client = await page.context().newCDPSession(page);
+      const x = box.x + box.width / 2;
+      const y = box.y + box.height - 30;
+      await client.send("Input.dispatchTouchEvent", {
+        type: "touchStart",
+        touchPoints: [{ x, y }],
+      });
+      for (let step = 1; step <= 6; step++) {
+        await client.send("Input.dispatchTouchEvent", {
+          type: "touchMove",
+          touchPoints: [{ x, y: y - (step * (box.height - 60)) / 6 }],
+        });
+      }
+      await client.send("Input.dispatchTouchEvent", {
+        type: "touchEnd",
+        touchPoints: [],
+      });
+      await client.detach();
+    }
+    await expect
+      .poll(() => pane.evaluate((el) => el.scrollTop))
+      .toBeGreaterThan(0);
+  }
+
+  await scrollPane(list);
+  await expect(pagination).toBeInViewport();
+  // Keyboard users must also be able to reach the last entry without moving the footer.
+  await list.locator("button").last().focus();
+  await expect(list.locator("button").last()).toBeInViewport();
+  await expect(pagination).toBeInViewport();
+  await page.getByRole("button", { name: "词典下一页" }).click();
+  await expect.poll(() => list.evaluate((el) => el.scrollTop)).toBe(0);
+
+  await page.getByLabel("搜索词典词条").fill("7010200");
+  await page.locator('[data-effect-id="7010200"]').click();
+  const detail = page.getByRole("region", { name: "词典详情" });
+  expect(await detail.evaluate((el) => el.scrollHeight > el.clientHeight)).toBe(
+    true,
+  );
+  await scrollPane(detail);
+  if (!isMobile) await expect(pagination).toBeInViewport();
+});
