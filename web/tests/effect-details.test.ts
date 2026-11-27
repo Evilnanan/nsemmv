@@ -37,6 +37,7 @@ import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
+import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
 import dyingCurses from "../../data/effect-dying-curses-evidence.json";
 import runeRate from "../../data/effect-rune-rate-evidence.json";
@@ -943,6 +944,88 @@ describe("MMV effect details", () => {
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
+  });
+
+  it("shows target-ailment bonuses as conditional multipliers without a buff duration", () => {
+    const names: Record<number, string> = { 2: "中毒", 5: "猩红腐败", 260: "冻伤" };
+    for (const family of targetAilment.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe(family.tier === 3 ? "可叠加" : "不同等级可叠加");
+      expect(detail.stackingDetail).toContain("同一词条不重复");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: family.root, phase: `目标处于${names[family.state]}时`,
+        values: [["攻击倍率", `+${Math.round((family.rate - 1) * 100)}%`]],
+        duration: null, interval: null, scope: [],
+      });
+      expect(detail.notes).toContain("多种异常同时存在时，对应词条可同时生效；异常解除后相应加成失效。");
+    }
+    expect(targetAilment.checks.selection.every(row => row.selected.length === row.copies && row.activeRootCount === 1)).toBe(true);
+    const status = new Map(targetAilment.statusRows.map(row => [row.id, row.state]));
+    for (const row of targetAilment.checks.repeat) {
+      const family = targetAilment.families.find(f => f.effect === row.effect)!;
+      const expected = row.copies && row.statuses.some(id => status.get(id) === family.state) ? family.rate : 1;
+      for (const value of row.values) expect(value).toBeCloseTo(expected, 5);
+    }
+    expect(targetAilment.gameplayVerified).toBe(false);
+    expect(research.targetAilmentAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-target-ailment-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("multiplies different ailment grades and keeps distinct equal-valued catalog versions separate", () => {
+    const status = new Map(targetAilment.statusRows.map(row => [row.id, row.state]));
+    const families = new Map(targetAilment.families.map(row => [row.root, row]));
+    for (const row of targetAilment.checks.mixed) {
+      const states = new Set(row.statuses.map(id => status.get(id)));
+      const expected = [...new Set(row.roots)].reduce((value, root) => {
+        const family = families.get(root)!;
+        return value * (states.has(family.state) ? family.rate : 1);
+      }, 1);
+      for (const value of row.values) expect(value).toBeCloseTo(expected, 5);
+    }
+    const threeGrades = targetAilment.checks.mixed.find(row => [...row.roots].sort().join() === "7260000,7260001,7260002" && row.statuses.join() === "8110000")!;
+    expect(threeGrades.values[0]).toBeCloseTo(1.5312, 5);
+    const special = targetAilment.checks.mixed.find(row => [...row.roots].sort().join() === "7260002,7260003" && row.statuses.join() === "8110000")!;
+    expect(special.values[0]).toBeCloseTo(1.44, 5);
+    expect(effectDetail(6260002)!.stackingDetail).toContain("可与普通、＋１、＋２版");
+  });
+
+  it("checks each recipient's active ailment instead of retaining a timed attacker buff", () => {
+    for (const row of targetAilment.checks.retarget) {
+      expect(row.clearTarget).toEqual([1, 1, 1, 1, 1]);
+      expect(row.attackerOnly).toEqual([1, 1, 1, 1, 1]);
+      expect(row.returned).toEqual(row.before);
+      expect(row.before[0]).toBeGreaterThan(1);
+    }
+    for (const row of targetAilment.checks.lifetime) {
+      expect(row.changes).toHaveLength(2);
+      expect(row.changes[0].values[0]).toBeGreaterThan(1);
+      expect(row.changes[1].values).toEqual([1, 1, 1, 1, 1]);
+      expect(row.changes[1].nodes).toEqual([]);
+      expect(Math.abs(row.changes[1].frame / row.fps - row.duration)).toBeLessThanOrEqual(4.01 / row.fps);
+    }
+    for (const row of targetAilment.checks.disabled) {
+      if (row.attacker || row.target) expect(row.values).toEqual([1, 1, 1, 1, 1]);
+    }
+  });
+
+  it("uses native runtime-packet conversion and the original hit-callsite block", () => {
+    expect(targetAilment.native.context).toBe("50F230");
+    expect(targetAilment.native.damage).toBe("43A5E1 → 5025E0");
+    expect(targetAilment.callsite).toMatchObject({ start: "43A5E1", end: "43A605" });
+    expect(targetAilment.checks.tags).toHaveLength(216);
+    expect(targetAilment.checks.baseline).toHaveLength(13);
+    expect(targetAilment.checks.baseline.every(row => row.values.every(value => value === 1))).toBe(true);
+    for (const row of targetAilment.checks.context) {
+      const family = targetAilment.families.find(f => f.effect === row.effect)!;
+      for (const value of row.values) expect(value).toBeCloseTo(family.rate, 5);
+    }
+    for (const row of targetAilment.checks.caller) {
+      if (!row.attacker || !row.target || row.statuses.length === 0) expect(row.values).toEqual(row.base);
+      row.base.forEach((value, index) => { if (!value) expect(row.values[index]).toBe(0); });
+    }
   });
 
   it("limits dodge damage curses to active marked animations and multiplies equipped versions", () => {

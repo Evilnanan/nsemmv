@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 588,
+    "nativeStacking": 597,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -4202,12 +4202,13 @@
         7260001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4224,12 +4225,13 @@
         7260002
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4246,12 +4248,13 @@
         7260003
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4268,12 +4271,13 @@
         7260301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4290,12 +4294,13 @@
         7260302
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4312,12 +4317,13 @@
         7260401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4334,12 +4340,13 @@
         7260402
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -4356,12 +4363,13 @@
         7260403
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -16214,12 +16222,13 @@
         7260000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -16236,12 +16245,13 @@
         7260300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -16258,12 +16268,13 @@
         7260400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "target-ailment-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块"
       ],
       "gameplayVerified": false
     },
@@ -50562,6 +50573,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
   "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",
   "dyingCursesEvidenceSha256": "ab544cd6e9d470b2b725e859150c43e8962c0a2135b527371f4ffb00b4643131",
   "lowHealthAilmentsEvidenceSha256": "31d9d671489794aef01932b4208823d5f101bdc6def6d2870bd60393d149b6e2",
