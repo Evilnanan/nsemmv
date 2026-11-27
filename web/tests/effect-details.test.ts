@@ -1,3 +1,4 @@
+import revenantAllies from "../../data/effect-revenant-allies-evidence.json";
 import lowHpTeamRecovery from "../../data/effect-low-hp-team-recovery-evidence.json";
 import teamKillHeal from "../../data/effect-team-kill-heal-evidence.json";
 import teamStamina from "../../data/effect-team-stamina-evidence.json";
@@ -1062,6 +1063,34 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("refreshes Revenant ally attack buffs without increasing their multiplier or buffing the caster", () => {
+    expect(revenantAllies.gameplayVerified).toBe(false);
+    expect(research.revenantAlliesEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-allies-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7031200)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("多名队友施加时只生效一份");
+    expect(detail.stackingDetail).toContain("再次获得刷新持续时间");
+    expect(detail.blocks[0]).toMatchObject({ duration: 30, interval: null, scope: [], values: [["攻击倍率", "+25%"]] });
+    expect(detail.blocks[0].restrictions).toEqual(["周围友方，不含自身 · 半径 30 米"]);
+    for (const row of revenantAllies.checks.recipients) {
+      const accepts = !row.sameActor && [1, 2, 4].includes(row.source);
+      expect(row.values).toEqual(Array(5).fill(accepts ? 1.25 : 1));
+      expect(row.nodes).toHaveLength(accepts ? 1 : 0);
+    }
+    for (const row of revenantAllies.checks.refresh) {
+      expect(row.changes.map((c) => c.values)).toEqual([Array(5).fill(1.25), Array(5).fill(1)]);
+      expect(Math.abs(row.changes[1].frame - Math.max(...row.arrivals) - 1800)).toBeLessThanOrEqual(3);
+    }
+    for (const row of revenantAllies.checks.trigger)
+      expect(row.shots.map((s) => s.frame)).toEqual(row.copies ? [Math.round(1.4 * row.fps)] : []);
+    for (const row of revenantAllies.checks.mixed) {
+      const expected = [1.25, 1.12, 1.22].reduce((v, rate, i) => v * (row.counts[i] ? rate : 1), 1);
+      for (const value of row.values) expect(value).toBeCloseTo(expected);
     }
   });
 
