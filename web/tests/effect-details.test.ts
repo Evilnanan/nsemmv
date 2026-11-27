@@ -1,3 +1,4 @@
+import nearbyAilmentAttack from "../../data/effect-nearby-ailment-attack-evidence.json";
 import knockbackProtection from "../../data/effect-knockback-protection-evidence.json";
 import throwingWeapon from "../../data/effect-throwing-weapon-evidence.json";
 import ironeyeMelee from "../../data/effect-ironeye-melee-growth-evidence.json";
@@ -1056,6 +1057,43 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("multiplies distinct nearby-ailment grades and refreshes their independent lifetimes", () => {
+    expect(nearbyAilmentAttack.gameplayVerified).toBe(false);
+    expect(research.nearbyAilmentAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-nearby-ailment-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const family of nearbyAilmentAttack.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("不同等级可叠加");
+      expect(detail.stackingDetail).toContain("+36.64%");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        values: [["攻击倍率", family.rate === 1.12 ? "+12%" : "+22%"]],
+        duration: 20, interval: null, scope: [], restrictions: [],
+      });
+      expect(detail.notes.join(" ")).toContain("再次触发刷新持续时间");
+      expect(detail.notes).toContain("催眠与发狂增攻可同时生效，倍率相乘。");
+      if (family.ailment === "madness") expect(detail.notes).toContain("受损、圣杯瓶及手势引发的自身发狂，在发狂后约 1 秒触发。");
+    }
+    for (const row of nearbyAilmentAttack.checks.mixed) {
+      const expected = row.counts.reduce((rate, count, i) => rate * (count ? nearbyAilmentAttack.families[i].rate : 1), 1);
+      for (const value of row.values) expect(value).toBeCloseTo(expected);
+      expect(row.leaves).toHaveLength(row.counts.filter(Boolean).length);
+    }
+    for (const row of nearbyAilmentAttack.checks.lifetime) {
+      expect(row.changes.map(v => !!v.leaves.length)).toEqual([false, true, false]);
+      expect(Math.abs(row.changes[2].frame - row.changes[1].frame - 20 * row.fps)).toBeLessThanOrEqual(4);
+    }
+    for (const row of nearbyAilmentAttack.checks.refresh) {
+      expect(row.grants).toHaveLength(row.hits.length * 2);
+      expect(Math.abs(row.changes[2].frame - row.grants.at(-1)!.frame - 1200)).toBeLessThanOrEqual(4);
+    }
+    for (const effect of [6820402, 6851101, 7035402, 7035412])
+      expect(nearbyAilmentAttack.checks.variants.find(v => v.effect === effect && v.delivery === "self")!.notificationFrames).toEqual([62]);
+    expect(nearbyAilmentAttack.checks.variants.find(v => v.effect === 21730001)!.notificationFrames).toEqual([1]);
+    expect(nearbyAilmentAttack.checks.variants.find(v => v.effect === 503314 && v.delivery === "self")!.notificationFrames).toEqual([92]);
   });
 
   it("refreshes knockback protection without stacking and tracks reaction types separately", () => {
