@@ -3,7 +3,9 @@
   "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
   "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
   "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
   "effects": {
+    "8850051": 8850050,
     "6610400": 7610400,
     "6610500": 7610500,
     "6610600": 7610600,
@@ -16,6 +18,13 @@
     "7001004": 7001004
   },
   "rows": {
+    "8850050": {
+      "maxHpRate": 1.1200000047683716,
+      "maxMpRate": 1,
+      "maxStaminaRate": 1,
+      "toughnessDamageCutRate": 1,
+      "changeHpEstusFlaskCorrectRate": 1
+    },
     "7610400": {
       "maxHpRate": 1.100000023841858,
       "maxMpRate": 1,
@@ -682,6 +691,202 @@
           7610600,
           7610600,
           7610600
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          8850050
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 113.12000274658203,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          8850050
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          8850050
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          8850050
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 126.69440460205078,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "base": 101,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 141.89772033691406,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "base": 101,
+        "disabled": true,
+        "values": {
+          "maxHpRate": 101.0,
+          "maxMpRate": 101.0,
+          "maxStaminaRate": 101.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": false,
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "ids": [
+          8850050,
+          8850050,
+          8850050
         ],
         "base": 1000,
         "disabled": true,
@@ -3227,9 +3432,2894 @@
           0
         ]
       }
+    ],
+    "selection": [
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1100.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1210.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1331.0001220703125,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610400,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400,
+          7610400
+        ],
+        "values": {
+          "maxHpRate": 1771.5611572265625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1150.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1322.5,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1520.875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610500,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500,
+          7610500
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 2313.060546875,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1120.0
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1254.4000244140625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1404.927978515625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 6610600,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600,
+          7610600
+        ],
+        "values": {
+          "maxHpRate": 1000.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1973.82275390625
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1120.0,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1254.4000244140625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1404.927978515625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      },
+      {
+        "effect": 8850051,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050,
+          8850050
+        ],
+        "values": {
+          "maxHpRate": 1973.82275390625,
+          "maxMpRate": 1000.0,
+          "maxStaminaRate": 1000.0
+        }
+      }
+    ],
+    "mixedResources": [
+      {
+        "ids": [
+          7610400,
+          8850050
+        ],
+        "base": 101,
+        "disabled": false,
+        "value": 124.43199920654297
+      },
+      {
+        "ids": [
+          7610400,
+          8850050
+        ],
+        "base": 101,
+        "disabled": true,
+        "value": 101.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": false,
+        "value": 1232.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": true,
+        "value": 1000.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050
+        ],
+        "base": 100000,
+        "disabled": false,
+        "value": 123200.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050
+        ],
+        "base": 100000,
+        "disabled": true,
+        "value": 100000.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400
+        ],
+        "base": 101,
+        "disabled": false,
+        "value": 124.43199920654297
+      },
+      {
+        "ids": [
+          8850050,
+          7610400
+        ],
+        "base": 101,
+        "disabled": true,
+        "value": 101.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": false,
+        "value": 1232.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": true,
+        "value": 1000.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400
+        ],
+        "base": 100000,
+        "disabled": false,
+        "value": 123200.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400
+        ],
+        "base": 100000,
+        "disabled": true,
+        "value": 100000.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050,
+          7610400,
+          8850050
+        ],
+        "base": 101,
+        "disabled": false,
+        "value": 153.30023193359375
+      },
+      {
+        "ids": [
+          7610400,
+          8850050,
+          7610400,
+          8850050
+        ],
+        "base": 101,
+        "disabled": true,
+        "value": 101.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050,
+          7610400,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": false,
+        "value": 1517.8240966796875
+      },
+      {
+        "ids": [
+          7610400,
+          8850050,
+          7610400,
+          8850050
+        ],
+        "base": 1000,
+        "disabled": true,
+        "value": 1000.0
+      },
+      {
+        "ids": [
+          7610400,
+          8850050,
+          7610400,
+          8850050
+        ],
+        "base": 100000,
+        "disabled": false,
+        "value": 151782.40625
+      },
+      {
+        "ids": [
+          7610400,
+          8850050,
+          7610400,
+          8850050
+        ],
+        "base": 100000,
+        "disabled": true,
+        "value": 100000.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400,
+          8850050,
+          7610400
+        ],
+        "base": 101,
+        "disabled": false,
+        "value": 153.30023193359375
+      },
+      {
+        "ids": [
+          8850050,
+          7610400,
+          8850050,
+          7610400
+        ],
+        "base": 101,
+        "disabled": true,
+        "value": 101.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400,
+          8850050,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": false,
+        "value": 1517.8240966796875
+      },
+      {
+        "ids": [
+          8850050,
+          7610400,
+          8850050,
+          7610400
+        ],
+        "base": 1000,
+        "disabled": true,
+        "value": 1000.0
+      },
+      {
+        "ids": [
+          8850050,
+          7610400,
+          8850050,
+          7610400
+        ],
+        "base": 100000,
+        "disabled": false,
+        "value": 151782.40625
+      },
+      {
+        "ids": [
+          8850050,
+          7610400,
+          8850050,
+          7610400
+        ],
+        "base": 100000,
+        "disabled": true,
+        "value": 100000.0
+      }
     ]
   },
   "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
     "maxHp": "6C9150 → 50C1B0 → 510310",
     "maxMp": "6C91F0 → 50C230 → 5103D0",
     "maxStamina": "6C9300 → 50C2A0 → 510480",
@@ -3239,7 +6329,9 @@
   "stubs": [
     "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
     "EA17E0 actual SpEffect PARAM lookup",
-    "base resources and recovery arrival are explicit; optional physical owner omitted for HP packet collection"
+    "base resources and recovery arrival are explicit; optional physical owner omitted for HP packet collection",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic inventory in positive slot0 for capacity roots; draw legality and full equipment rebuild not asserted"
   ],
   "gameplayVerified": false
 }

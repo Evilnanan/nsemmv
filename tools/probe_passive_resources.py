@@ -2,7 +2,8 @@
 
 Starting resource values and recovery arrivals are explicit inputs. Original
 effect insertion, qualification, getters and HP packet aggregation execute;
-there is no inventory equip flow, full drink animation or gameplay simulation.
+resource-capacity roots also pass native equipment selection; full drink
+animation, current resource synchronization and gameplay are not simulated.
 """
 import argparse
 import itertools
@@ -11,12 +12,12 @@ import math
 import struct
 from pathlib import Path
 from unicorn.x86_const import *
-from native_effect_runtime import OBJ, Chain, Inputs, sha
+from native_effect_runtime import BASE, OBJ, STOP, Chain, Inputs, sha
 
 p = argparse.ArgumentParser(description=__doc__)
 for name in ('exe', 'extracted', 'output'): p.add_argument(name, type=Path)
 a = p.parse_args(); inputs = Inputs(a.exe, a.extracted)
-effects = {6610400:7610400, 6610500:7610500, 6610600:7610600,
+effects = {8850051:8850050, 6610400:7610400, 6610500:7610500, 6610600:7610600,
            6611400:7611400, 6840100:6840100, **{id:id for id in range(7001000, 7001005)}}
 fields = {'maxHpRate':(0x10,0x6c9150), 'maxMpRate':(0x14,0x6c91f0), 'maxStaminaRate':(0x18,0x6c9300),
           'toughnessDamageCutRate':(0x1b4,0x502270), 'changeHpEstusFlaskCorrectRate':(0x304,None)}
@@ -57,8 +58,70 @@ class Passive(Chain):
         self.q(OBJ+0x10,OBJ+0x6000)
         return list(struct.unpack('<7i',self.u.mem_read(OBJ+0x820,28)))
 
-checks = dict(resources=[],poise=[],flask=[],flaskCap=[],ordinaryRecovery=[]); stubs=set()
-resource_roots = [7610400,7610500,7610600]
+attach_raw = a.extracted.with_suffix('.AttachEffectParam.param').read_bytes()
+assert sha(attach_raw) == 'ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827'
+attach_rows = Inputs.table(attach_raw, 0x44)
+assert {k for k,v in inputs.spells['8850050'].items() if v != inputs.spells['7610400'][k]} == {'maxHpRate'}
+assert math.isclose(inputs.spells['8850050']['maxHpRate'], 1.12, rel_tol=1e-6)
+MAN=OBJ+0x8000;OUT=OBJ+0x9000;BITS=OBJ+0x9100
+class Selection(Chain):
+ def __init__(self,slots,hero=1):
+  super().__init__(inputs);self.slots=slots;self.hero=hero;self.cache={};self.q(OBJ+0x7118,STOP+0x900)
+  self.q(MAN,OBJ+0x8100);self.q(MAN+8,OBJ+0x6000)
+  self.q(OBJ+0x8158,STOP+0x901);self.q(OBJ+0x8160,STOP+0x902);self.q(OBJ+0x6378,STOP+0x903)
+ def hook(self,u,address,size,user):
+  pc=address-BASE
+  def ret(v=0):
+   u.reg_write(UC_X86_REG_RAX,v&0xffffffffffffffff);sp=u.reg_read(UC_X86_REG_RSP);u.reg_write(UC_X86_REG_RIP,struct.unpack('<Q',u.mem_read(sp,8))[0]);u.reg_write(UC_X86_REG_RSP,sp+8)
+  if pc==0x214f3e0:ret(OBJ+0x7000)
+  elif address==STOP+0x900:
+   ptr=u.reg_read(UC_X86_REG_RDX);u.mem_write(ptr,struct.pack('<I',32));ret(ptr)
+  elif pc==0x2081b0:
+   assert u.reg_read(UC_X86_REG_R9)==144
+   ptr=u.reg_read(UC_X86_REG_RCX);self.q(ptr+8,BITS);self.q(ptr+0x10,144);self.q(ptr+0x18,160);self.q(ptr+0x20,144);u.mem_write(BITS,bytes(20));ret(ptr)
+  elif pc==0x1fe1c0:ret(0)
+  elif pc==0x325c40:
+   self.allocated+=0x100;ret(self.allocated)
+  elif address==STOP+0x901:
+   index=u.reg_read(UC_X86_REG_RDX);ret(index+1 if index<len(self.slots) else 0xffffffff)
+  elif address==STOP+0x902:ret(int(1<=u.reg_read(UC_X86_REG_RDX)<=len(self.slots)))
+  elif address==STOP+0x903:ret(self.hero)
+  elif pc==0x69e570:
+   ptr=u.reg_read(UC_X86_REG_RCX);handle=struct.unpack('<I',u.mem_read(u.reg_read(UC_X86_REG_RDX),4))[0]
+   effects=self.slots[handle-1];instance=OBJ+0xa000+(handle-1)*0x80
+   u.mem_write(instance+0x18,struct.pack('<6i',*(effects+[-1]*6)[:6]));u.mem_write(ptr,bytes(24));self.q(ptr+8,instance);u.mem_write(ptr+0x10,struct.pack('<I',0x80000000|2000100));ret(ptr)
+  elif pc==0x69e5a0:ret()
+  elif pc==0xe6e430:
+   ptr=u.reg_read(UC_X86_REG_RCX);id=u.reg_read(UC_X86_REG_RDX)&0xffffffff
+   if id in attach_rows and id not in self.cache:
+    self.cache[id]=OBJ+0x10000+len(self.cache)*0x100;u.mem_write(self.cache[id],attach_rows[id])
+   self.q(ptr,self.cache.get(id,0));u.mem_write(ptr+8,struct.pack('<I',id));ret(ptr)
+  else:super().hook(u,address,size,user)
+ def select(self):
+  self.invoke(0x4fea30,[MAN,OUT]);bits=int.from_bytes(self.u.mem_read(BITS,20),'little');return [i for i in range(144) if bits>>i&1]
+
+
+checks = dict(resources=[],poise=[],flask=[],flaskCap=[],ordinaryRecovery=[],selection=[],mixedResources=[]); stubs=set()
+for effect,copies,hero in itertools.product((6610400,6610500,6610600,8850051),(1,2,3,6),range(11)):
+    c=Selection([[effect]]*copies,hero);bits=c.select();selected=[]
+    for index in range(copies):
+        assert index*6 in bits
+        id=struct.unpack('<i',c.u.mem_read(OBJ+0xa000+index*0x80+0x18,4))[0];assert id==effect
+        c.invoke(0xe6e150,[OBJ+0x9200,id]);selected.append(c.invoke(0xe6e3b0,[OBJ+0x9200,0])&0xffffffff)
+    assert selected==[effects[effect]]*copies
+    v=Passive(inputs);v.prepare(selected)
+    assert [n['id'] for n in v.nodes()]==selected
+    values={field:v.scalar(fields[field][1],[1000,OBJ]) for field in ('maxHpRate','maxMpRate','maxStaminaRate')}
+    assert all(value==f32(1000*product(selected,field)) for field,value in values.items())
+    checks['selection'].append(dict(effect=effect,copies=copies,hero=hero,selected=selected,values=values));stubs.update(c.stubs);stubs.update(v.stubs)
+for ids,base,disabled in itertools.product(([7610400,8850050],[8850050,7610400],[7610400,8850050]*2,[8850050,7610400]*2),(101,1000,100000),(False,True)):
+    c=Passive(inputs);c.prepare(ids,disabled)
+    value=c.scalar(0x6c9150,[base,OBJ]);expected=f32(base*(1 if disabled else product(ids,'maxHpRate')))
+    assert value==expected,(ids,base,disabled,value,expected)
+    checks['mixedResources'].append(dict(ids=ids,base=base,disabled=disabled,value=value));stubs.update(c.stubs)
+print('PASS selection and mixed resource capacity',len(checks['selection']),len(checks['mixedResources']),flush=True)
+
+resource_roots = [7610400,7610500,7610600,8850050]
 for root, copies, base, disabled in itertools.product(resource_roots,range(4),(101,1000),(False,True)):
     ids=[root]*copies; c=Passive(inputs); c.prepare(ids,disabled); values={}
     for field in ('maxHpRate','maxMpRate','maxStaminaRate'):
@@ -103,10 +166,10 @@ for positive,negative in itertools.product(range(4),range(4)):
     checks['ordinaryRecovery'].append(dict(positive=positive,negative=negative,packet=packet));stubs.update(c.stubs)
 
 output=dict(schema=1,exeSha256=sha(inputs.raw),regulationSha256=inputs.x['hashes']['regulation.bin'],paramSha256=sha(inputs.param),
-            effects={str(k):v for k,v in effects.items()},rows=rows,leaves={str(id):{k:inputs.spells[str(id)][k] for k in
+            attachParamSha256=sha(attach_raw),effects={str(k):v for k,v in effects.items()},rows=rows,leaves={str(id):{k:inputs.spells[str(id)][k] for k in
                 ('changeHpEstusFlaskRate','changeHpEstusFlaskPoint')} for id in leaves},checks=checks,
-            native=dict(maxHp='6C9150 → 50C1B0 → 510310',maxMp='6C91F0 → 50C230 → 5103D0',
+            native=dict(selection='4FEA30 → E6E150 → E6E3B0',maxHp='6C9150 → 50C1B0 → 510310',maxMp='6C91F0 → 50C230 → 5103D0',
                         maxStamina='6C9300 → 50C2A0 → 510480',poise='502270 → 511350',flask='506EC0 → 50B860 → 510170 / 5101B0'),
-            stubs=sorted(stubs|{'base resources and recovery arrival are explicit; optional physical owner omitted for HP packet collection'}),gameplayVerified=False)
+            stubs=sorted(stubs|{'synthetic inventory in positive slot0 for capacity roots; draw legality and full equipment rebuild not asserted', 'base resources and recovery arrival are explicit; optional physical owner omitted for HP packet collection'}),gameplayVerified=False)
 a.output.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
 print('PASS',sum(map(len,checks.values())),'native passive resource cases')

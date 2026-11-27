@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 600,
+    "nativeStacking": 603,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -14623,18 +14623,17 @@
         2103
       ],
       "detailSources": [
+        7100100,
         7100101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
       "evidence": [
-        "recovery-timing"
+        "hit-stamina"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整碰撞和命中上下文构造、所有攻击标签及来源、原生效果目标投递、与自然回精／动作耗精的帧内顺序、装备重建／死亡／重载及多人交互；命中结果在下一更新步插入攻击者容器，精力调用块及最终截断写入已原生执行"
       ],
       "gameplayVerified": false
     },
@@ -14648,18 +14647,17 @@
         2103
       ],
       "detailSources": [
+        7100110,
         7100111
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
       "evidence": [
-        "recovery-timing"
+        "hit-stamina"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整碰撞和命中上下文构造、所有攻击标签及来源、原生效果目标投递、与自然回精／动作耗精的帧内顺序、装备重建／死亡／重载及多人交互；命中结果在下一更新步插入攻击者容器，精力调用块及最终截断写入已原生执行"
       ],
       "gameplayVerified": false
     },
@@ -26772,11 +26770,13 @@
         8850050
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "passive-resource"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终角色资源上限／取整、装备或移除时的当前资源同步、倒地／重载交互"
       ],
       "gameplayVerified": false
     },
@@ -50557,7 +50557,7 @@
   "executorTenacityEvidenceSha256": "9ce63ccc8f510c90cd8f2ce2f812c85d846203e67e585323595cfdad216eca4c",
   "undertakerResetEvidenceSha256": "7dc48f6fd3a277dffc598e3cfcebb1b5388b16a06245475d291ea7c5f187672b",
   "treasureMapEvidenceSha256": "d0cba9d55b98af48672ba62f96772c17ec5ec6c86257548d9803f28638258234",
-  "passiveResourceEvidenceSha256": "2e512fa984b86308b8139a635c8eb90e20ac9b443b8a70130adbe8a65be3a9bc",
+  "passiveResourceEvidenceSha256": "ef21e3f8d9ab183409d68ac60f8899cda37032ff335f6927651841d25e8458e8",
   "damageAilmentEvidenceSha256": "a6b1151ea883cf7756c46289028b876b19dd9696bff6a4ba86dac56e69909878",
   "spellFamilyEvidenceSha256": "e9da1228240724bfc76ccc9ec262359d3a4588604ac50066d9d58a215765aaa0",
   "handPoiseEvidenceSha256": "c25d95cc78c53189cd96b80ad6d3bdee7f5576de17577f90e7846547ab7e3ed2",
@@ -50566,6 +50566,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
   "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",

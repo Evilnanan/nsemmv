@@ -37,6 +37,7 @@ import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
+import hitStamina from "../../data/effect-hit-stamina-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -947,6 +948,54 @@ describe("MMV effect details", () => {
     ).digest("hex"));
   });
 
+  it("describes hit stamina as pulsed recovery with a possible tail, not a recovery duration", () => {
+    for (const family of hitStamina.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe("不同等级可叠加");
+      expect(detail.stackingDetail).toContain("合计每次恢复 5 点");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: family.root, branches: [family.leaf], phase: "攻击命中后",
+        values: [["精力恢复", `+${family.amount} 点／次`]],
+        duration: null, interval: null, scope: [],
+      });
+      expect(detail.notes).toContain("首次命中恢复一次；连续命中时约每 0.4 秒恢复一次。最后一次命中约 0.3 秒后效果结束，期间仍可能再恢复一次。");
+    }
+    expect(hitStamina.gameplayVerified).toBe(false);
+    expect(research.hitStaminaEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-hit-stamina-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("selects only one +1 stamina root and writes combined recovery up to the current cap", () => {
+    for (const row of hitStamina.checks.selection) {
+      expect(row.selected.filter(id => id === 7100110).length).toBe(row.ids.includes(7100110) ? 1 : 0);
+      expect(row.selected.filter(id => id === 7100100).length).toBe(row.ids.filter(id => id === 7100100).length);
+      expect(row.restored).toBe((row.ids.includes(7100100) ? 2 : 0) + (row.ids.includes(7100110) ? 3 : 0));
+    }
+    for (const row of hitStamina.checks.resource) {
+      const restored = row.roots.reduce((v, id) => v + (id === 7100100 ? 2 : 3), 0);
+      expect(row.result).toBe(row.disabled ? row.current : Math.min(row.maximum, row.current + restored));
+    }
+  });
+
+  it("keeps stamina recovery intervals and exposes the last pulse after attacks stop", () => {
+    for (const row of hitStamina.checks.timing) {
+      const amount = row.roots.reduce((v, id) => v + (id === 7100100 ? 2 : 3), 0);
+      expect(row.events.every(e => e.restored === amount)).toBe(true);
+      expect(row.events).toHaveLength(row.schedule === "single" ? 1 : row.schedule === "half" ? 4 : 6);
+    }
+    const at60 = hitStamina.checks.spacing.filter(r => r.fps === 60 && r.roots.join() === "7100100");
+    expect(at60.find(r => r.spacing === "frame")!.events.map(e => e.frame)).toEqual([1]);
+    const tail = at60.find(r => r.spacing === "fifth")!;
+    expect(tail.hits).toEqual([0, 12]);
+    expect(tail.events.map(e => e.frame)).toEqual([1, 25]);
+    expect(at60.find(r => r.spacing === "half")!.events.map(e => e.frame)).toEqual([1, 31]);
+    const boundary = hitStamina.checks.spacing.filter(r => r.spacing === "tenth" && r.roots.join() === "7100100");
+    expect(boundary.map(r => [r.fps, r.events.length])).toEqual([[30, 2], [60, 2], [120, 1]]);
+  });
+
   it("shows low-HP defense with the correct boundary and per-version stacking", () => {
     for (const family of lowHpDefense.families) {
       const detail = effectDetail(family.effect)!;
@@ -1617,7 +1666,7 @@ describe("MMV effect details", () => {
     ).digest("hex"));
   });
   it("applies multiplicative passive resource, poise and flask stacking without conflating recovery channels", () => {
-    for (const id of [6610400, 6610500, 6610600, 6611400, 6840100, 7001000, 7001001, 7001002, 7001003, 7001004])
+    for (const id of [8850051, 6610400, 6610500, 6610600, 6611400, 6840100, 7001000, 7001001, 7001002, 7001003, 7001004])
       expect(effectDetail(id)!.stacking).toBe("可叠加");
     expect(effectDetail(6610400)!.stackingDetail).toBe("上限倍率相乘");
     expect(effectDetail(7001000)!.stackingDetail).toBe("受到的强韧度损耗倍率相乘");
@@ -1632,6 +1681,28 @@ describe("MMV effect details", () => {
       readFileSync(new URL("../../data/effect-passive-resource-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
+  it("selects and multiplies the +12% HP version with repeated and ordinary capacity bonuses", () => {
+    const detail = effectDetail(8850051)!;
+    expect(detail.stackingDetail).toBe("上限倍率相乘");
+    expect(detail.blocks[0].values).toContainEqual(["血量上限", "+12%"]);
+    const twice = passiveResource.checks.resources.find(r => r.ids.length === 2 && r.ids[0] === 8850050 && r.base === 1000 && !r.disabled)!;
+    expect(twice.values.maxHpRate).toBeCloseTo(1254.4, 3);
+    const mixed = passiveResource.checks.mixedResources.filter(r => r.ids.length === 2 && r.base === 1000 && !r.disabled);
+    expect(mixed).toHaveLength(2);
+    for (const row of mixed) expect(row.value).toBe(1232);
+    for (const row of passiveResource.checks.mixedResources.filter(r => r.disabled)) expect(row.value).toBe(row.base);
+    expect(passiveResource.checks.selection).toHaveLength(176);
+    for (const row of passiveResource.checks.selection) {
+      expect(row.selected).toHaveLength(row.copies);
+      if (row.effect === 8850051) {
+        expect(row.selected.every(id => id === 8850050)).toBe(true);
+        expect(row.values.maxHpRate).toBeCloseTo(1000 * 1.12 ** row.copies, 2);
+        expect(row.values.maxMpRate).toBe(1000);
+        expect(row.values.maxStaminaRate).toBe(1000);
+      }
+    }
+  });
+
   it("keeps treasure markers local and does not infer fixed counts or complete map coverage", () => {
     const detail = effectDetail(7070000)!;
     expect(detail.blocks[0].values).toEqual([["显示范围", "自己的地图"]]);
