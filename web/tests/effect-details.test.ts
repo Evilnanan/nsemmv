@@ -44,6 +44,7 @@ import thrownConsumables from "../../data/effect-thrown-consumables-evidence.jso
 import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
 import executorUltimateAttack from "../../data/effect-executor-ultimate-attack-evidence.json";
 import undertakerCharged from "../../data/effect-undertaker-charged-evidence.json";
+import damageAttack from "../../data/effect-damage-attack-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -1049,6 +1050,33 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("explains damage-triggered attack grades, refresh and periodic rearming", () => {
+    expect(damageAttack.gameplayVerified).toBe(false);
+    expect(research.damageAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-damage-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const [id, value] of [[10001, "+15%"], [100000, "+15%"], [7032200, "+15%"], [7032201, "+22.5%"], [7032202, "+25%"]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不同等级可叠加");
+      expect(detail.stackingDetail).toContain("同等级及同名版本不重复增加倍率");
+      expect(detail.stackingDetail).toContain("刷新各自持续时间");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        phase: "受伤后", values: [["攻击倍率", value]],
+        duration: 10, interval: null, scope: [], restrictions: [],
+      });
+      expect(detail.notes.join(" ")).toContain("每份词条每 1 秒重置一次触发判定");
+      expect(detail.notes.join(" ")).toContain("连续受伤不一定每次都刷新");
+    }
+    for (const row of damageAttack.checks.trigger) {
+      expect(row.values[0] > 1).toBe(row.copies > 0 && row.damage > 0);
+    }
+    const mixed = damageAttack.checks.mixed.find(r => r.counts.every(n => n === 2))!;
+    expect(mixed.values[0]).toBeCloseTo(1.15 * 1.225 * 1.25, 6);
+    for (const row of damageAttack.checks.lifetime)
+      expect(Math.abs(row.expiredFrame - 10 * row.fps)).toBeLessThanOrEqual(3);
   });
 
   it("explains Undertaker charged sorcery and incantation protection without exposing an idle pulse interval", () => {

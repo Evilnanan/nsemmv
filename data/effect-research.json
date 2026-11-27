@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 612,
+    "nativeStacking": 617,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -69,13 +69,13 @@
         7032202
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "damage-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整受伤入口与最终 HP 写入、来源类型 5 的实际动作、DLL 改写、完整装备重建与周期相位、死亡／重载／多人同步、9762 的其他外部消费者；已执行原生自身发放、伤害到期、周期重置、同版／异版叠加与移除后的共享状态条件"
       ],
       "gameplayVerified": false
     },
@@ -813,13 +813,13 @@
         7032202
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "damage-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整受伤入口与最终 HP 写入、来源类型 5 的实际动作、DLL 改写、完整装备重建与周期相位、死亡／重载／多人同步、9762 的其他外部消费者；已执行原生自身发放、伤害到期、周期重置、同版／异版叠加与移除后的共享状态条件"
       ],
       "gameplayVerified": false
     },
@@ -11309,13 +11309,13 @@
         7032202
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "damage-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整受伤入口与最终 HP 写入、来源类型 5 的实际动作、DLL 改写、完整装备重建与周期相位、死亡／重载／多人同步、9762 的其他外部消费者；已执行原生自身发放、伤害到期、周期重置、同版／异版叠加与移除后的共享状态条件"
       ],
       "gameplayVerified": false
     },
@@ -11332,13 +11332,13 @@
         7032212
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "damage-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整受伤入口与最终 HP 写入、来源类型 5 的实际动作、DLL 改写、完整装备重建与周期相位、死亡／重载／多人同步、9762 的其他外部消费者；已执行原生自身发放、伤害到期、周期重置、同版／异版叠加与移除后的共享状态条件"
       ],
       "gameplayVerified": false
     },
@@ -11355,13 +11355,13 @@
         7032222
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "damage-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整受伤入口与最终 HP 写入、来源类型 5 的实际动作、DLL 改写、完整装备重建与周期相位、死亡／重载／多人同步、9762 的其他外部消费者；已执行原生自身发放、伤害到期、周期重置、同版／异版叠加与移除后的共享状态条件"
       ],
       "gameplayVerified": false
     },
@@ -50591,6 +50591,7 @@
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
+  "damageAttackEvidenceSha256": "5785b9c5227c51f03fc2643bcde329a861f2bbcd535c488504d4dd05c897e172",
   "undertakerChargedEvidenceSha256": "4ba3076f37742d9328602eea3ac90c45851266ab0a7a0549cde4eda17c5ce3a0",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
