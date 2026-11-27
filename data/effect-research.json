@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 634,
+    "nativeStacking": 635,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -13616,16 +13616,14 @@
         7050001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "team-stamina",
         "bullet-links"
       ],
       "openQuestions": [
-        "范围命中、多人来源叠加及再次发放时序",
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "上游弹体候选筛选及自身排除、实际范围碰撞／边界距离、精力逐帧积分与最终写入、DLL／完整装备重建／死亡／重载／多人；已验证原生装备选择、周期发射、显式命中投递、同 ID 去重和两名来源刷新、PC 精力恢复速度参数与致命增益组合。强制自身命中绕过 selfTarget=0，不能据此声称光环作用于自身"
       ],
       "gameplayVerified": false
     },
@@ -50621,6 +50619,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "teamStaminaEvidenceSha256": "7c42f145d9f58b8ee6dcdc9de79d8de34c93fc7294c61f8ad6b0086a0a2cf739",
   "madnessFpEvidenceSha256": "317d1e4c3bf412e3ba10d2009ce18c56e069fe09c60ec0d59c12221a3aefe95f",
   "nearbyPoisonAttackEvidenceSha256": "d896fe68e79be8f8f9dc22e0849e300f682db7316fc3ce21350179fe698f5313",
   "nearbyRotRecoveryEvidenceSha256": "341321cc62fcf04ba5bb55ae700f5b4b86cf20be1914d738578c9acdc5af6cd7",

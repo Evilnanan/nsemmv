@@ -1,3 +1,4 @@
+import teamStamina from "../../data/effect-team-stamina-evidence.json";
 import madnessFp from "../../data/effect-madness-fp-evidence.json";
 import nearbyPoisonAttack from "../../data/effect-nearby-poison-attack-evidence.json";
 import nearbyRotRecovery from "../../data/effect-nearby-rot-recovery-evidence.json";
@@ -1060,6 +1061,28 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("keeps the team stamina aura at one shared strength while allowing critical buffs", () => {
+    expect(teamStamina.gameplayVerified).toBe(false);
+    expect(research.teamStaminaEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-team-stamina-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7050000)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("多名队友提供时，均只生效一份");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "周围队友", values: [["精力恢复速度", "+4"]], duration: null, interval: null });
+    expect(detail.notes).toContain("可与致命一击后的精力恢复速度提升相加。");
+    for (const row of teamStamina.checks.timing) {
+      expect(row.transitions.map((r) => r.value)).toEqual([49, 45]);
+      expect(Math.abs(row.transitions[1].frame - Math.max(...row.arrivals) - row.fps)).toBeLessThanOrEqual(3);
+    }
+    for (const row of teamStamina.checks.mixed)
+      expect(row.value).toBe(45 + [4, 10, 17, 20].reduce((sum, v, i) => sum + (row.counts[i] ? v : 0), 0));
+    for (const row of teamStamina.checks.disabled) expect(row.value).toBe(45);
+    for (const row of teamStamina.checks.connected)
+      expect(row.changes.map((r) => r.value)).toEqual([49, 45]);
   });
 
   it("distinguishes madness FP versions and preserves recovery timing when refreshed", () => {
