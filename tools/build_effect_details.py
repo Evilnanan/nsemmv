@@ -387,6 +387,14 @@ if not args.extract_only:
     assert periodic_fp['exeSha256'] == evidence['exeSha256'] and not periodic_fp['gameplayVerified']
     assert periodic_fp['paramSha256'] == evidence['paramSha256']
     assert {k: len(v) for k, v in periodic_fp['checks'].items()} == dict(selection=48, snapshot=120, timing=27, mixed=15, arrivalBaseline=9, staggered=27)
+hand_poise_path = ROOT / 'data/effect-hand-poise-evidence.json'
+hand_poise = json.loads(hand_poise_path.read_text())
+if not args.extract_only:
+    assert hand_poise['schema'] == 1 and hand_poise['regulationSha256'] == catalog['regulationSha256']
+    assert hand_poise['exeSha256'] == evidence['exeSha256'] and not hand_poise['gameplayVerified']
+    assert hand_poise['paramSha256'] == evidence['paramSha256']
+    assert {k: len(v) for k, v in hand_poise['checks'].items()} == dict(selection=120, multipliers=3120, categorySweep=6)
+    assert {k: len(v) for k, v in hand_poise['categoryRows'].items()} == {'124': 1563, '125': 1162}
 perfume_path = ROOT / 'data/effect-perfume-evidence.json'
 perfume = json.loads(perfume_path.read_text())
 if not args.extract_only:
@@ -1135,6 +1143,7 @@ STACKING_RULES = {
     'frost-stealth': ('不可叠加', '重复装备不延长隐身', ['frost-stealth']),
     'duchess-stealth': ('不可叠加', '重复装备不增强或延长隐匿', ['duchess-stealth']),
     'periodic-hp-recovery': ('可叠加', '恢复量相加，各自计时', ['periodic-hp']),
+    'hand-poise': ('可叠加', '同等级和不同等级均可叠加，削韧倍率相乘', ['hand-poise']),
     'periodic-fp': ('可叠加', '同等级和不同等级均可叠加，恢复量相加，各自计时', ['periodic-fp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -1507,6 +1516,15 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('连续防御可再次触发。')
         rule = 'guardian-shockwave'
+    for family in hand_poise['families']:
+        if int(id) == family['effect']:
+            root = str(family['root'])
+            assert effect['roots'] == {'passiveSpEffectId_1': int(root)} and effect['runtimeExclusive'] == -1
+            assert source['spells'][root]['saAttackPowerRate'] == family['rate']
+            assert source['spells'][root]['magicSubCategoryChange1'] == family['category']
+            assert hand_poise['attachParamSha256'] == critical_attack['attachParamSha256']
+            assert hand_poise['attackParamSha256'] == critical_attack['atkParamSha256']
+            rule = 'hand-poise'
     for family in periodic_fp['families']:
         if int(id) == family['effect']:
             root = str(family['root'])
@@ -2173,6 +2191,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('达到发作阈值后的同帧多份累积、已发作／免疫状态与自然退条、抵抗成长、完整受损入口和排除位来源、死亡／重载及多人交互')
     if rules[id] in ('periodic-hp-recovery', 'periodic-hp-loss'):
         questions.append('最终当前 HP 写入与治疗修正、满血／濒死时恢复和消耗的顺序、受损触发及死亡／重载／多人交互')
+    if rules[id] == 'hand-poise':
+        questions.append('完整动作／攻击选择、运行时附加标签、实际碰撞与目标削韧／失衡、装备重建及多人交互；来源类型为显式输入')
     if rules[id] == 'periodic-fp':
         questions.append('最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互')
     if rules[id] == 'perfume':
@@ -2323,6 +2343,7 @@ research['treasureMapEvidenceSha256'] = hashlib.sha256(treasure_map_path.read_by
 research['passiveResourceEvidenceSha256'] = hashlib.sha256(passive_resource_path.read_bytes()).hexdigest()
 research['damageAilmentEvidenceSha256'] = hashlib.sha256(damage_ailment_path.read_bytes()).hexdigest()
 research['spellFamilyEvidenceSha256'] = hashlib.sha256(spell_family_path.read_bytes()).hexdigest()
+research['handPoiseEvidenceSha256'] = hashlib.sha256(hand_poise_path.read_bytes()).hexdigest()
 research['periodicFpEvidenceSha256'] = hashlib.sha256(periodic_fp_path.read_bytes()).hexdigest()
 research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_bytes()).hexdigest()
 research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()

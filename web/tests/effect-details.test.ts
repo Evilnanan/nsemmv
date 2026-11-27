@@ -31,6 +31,7 @@ import treasureMap from "../../data/effect-treasure-map-evidence.json";
 import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
+import handPoise from "../../data/effect-hand-poise-evidence.json";
 import periodicFp from "../../data/effect-periodic-fp-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
@@ -875,6 +876,30 @@ describe("MMV effect details", () => {
     expect(perfume.gameplayVerified).toBe(false);
     expect(research.perfumeEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-perfume-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("multiplies hand-specific poise bonuses including duplicate aliases and mixed levels", () => {
+    expect(handPoise.families).toHaveLength(8);
+    for (const family of handPoise.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("同等级和不同等级均可叠加，削韧倍率相乘");
+      expect(detail.blocks[0].source).toBe(family.root);
+      expect(detail.blocks[0].restrictions).toEqual([family.category === 124 ? "适用：双手共持" : "适用：双手各持"]);
+    }
+    for (const [effects, attack] of [[[7006000, 7006001], 90200], [[7006100, 7006101], 100800]] as const) {
+      const rows = handPoise.checks.multipliers.filter(row => JSON.stringify(row.effects) === JSON.stringify(effects) && !row.inactive && row.kind === 0);
+      expect(rows).toHaveLength(3);
+      for (const row of rows) expect(row.multiplier).toBeCloseTo(row.attack === attack ? 1.05 ** 2 : 1, 6);
+    }
+    const mixed = handPoise.checks.multipliers.filter(row => row.effects.length === 6 && new Set(row.effects).size === 6 && !row.inactive && row.kind === 0);
+    for (const row of mixed) expect(row.multiplier).toBeCloseTo(row.attack === 0 ? 1 : 1.05 * 1.15 * 1.175, 6);
+    expect(handPoise.checks.multipliers.filter(row => row.inactive || [3, 4, 10].includes(row.kind)).every(row => row.multiplier === 1)).toBe(true);
+    expect(handPoise.checks.categorySweep.every(row => row.tested === 2725 && row.applied === (row.root < 8310000 ? 1563 : 1162))).toBe(true);
+    expect(handPoise.gameplayVerified).toBe(false);
+    expect(research.handPoiseEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-hand-poise-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 
