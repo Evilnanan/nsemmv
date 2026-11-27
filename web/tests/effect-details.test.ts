@@ -41,6 +41,7 @@ import hitStamina from "../../data/effect-hit-stamina-evidence.json";
 import undertakerCombo from "../../data/effect-undertaker-combo-evidence.json";
 import spellDuration from "../../data/effect-spell-duration-evidence.json";
 import thrownConsumables from "../../data/effect-thrown-consumables-evidence.json";
+import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -997,6 +998,55 @@ describe("MMV effect details", () => {
     expect(at60.find(r => r.spacing === "half")!.events.map(e => e.frame)).toEqual([1, 31]);
     const boundary = hitStamina.checks.spacing.filter(r => r.spacing === "tenth" && r.roots.join() === "7100100");
     expect(boundary.map(r => [r.fps, r.events.length])).toEqual([[30, 2], [60, 2], [120, 1]]);
+  });
+
+  it("shows cumulative Scholar FP reductions instead of repeating the first-tier value", () => {
+    expect(scholarFpCost.gameplayVerified).toBe(false);
+    expect(research.scholarFpCostEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-scholar-fp-cost-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(6500800)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("重复装备不增强效果");
+    expect(detail.blocks.map(b => b.values)).toEqual([
+      [["法术／战技 FP 消耗", "-15%"]],
+      [["法术／战技 FP 消耗", "-27.75%"]],
+      [["法术／战技 FP 消耗", "-38.5875%"]],
+    ]);
+    expect(detail.blocks.map(b => b.duration)).toEqual([40, 40, 40]);
+    for (const row of scholarFpCost.checks.dispatch) {
+      const levels = row.copies ? Math.max(row.grade, 0) : 0;
+      expect(row.active).toHaveLength(levels);
+      for (const value of row.values) expect(value).toBeCloseTo(0.85 ** levels);
+    }
+    for (const row of scholarFpCost.checks.animation)
+      expect(row.modes).toEqual(row.enabled && row.local ? [row.animation === 581020 ? 1 : 0] : []);
+    for (const row of scholarFpCost.checks.selection)
+      expect(row.selected).toHaveLength([0, 9].includes(row.hero) ? row.copies : 0);
+  });
+
+  it("refreshes only tiers included by a Scholar recast and lets older higher tiers expire", () => {
+    const detail = effectDetail(6500800)!;
+    expect(detail.notes).toContain("低档位施放不会清除尚未结束的高档位效果。");
+    for (const row of scholarFpCost.checks.refresh) {
+      expect(row.after).toHaveLength(Math.max(row.first, row.second));
+      for (const leaf of row.after)
+        expect(leaf.lifetime).toBeCloseTo(leaf.id <= 7500800 + row.second ? 40 : 35, 2);
+      expect(row.afterOldExpiry.map(n => n.id).sort()).toEqual(
+        [7500801, 7500802, 7500803].slice(0, row.second),
+      );
+    }
+    for (const row of scholarFpCost.checks.lifetime)
+      expect(Math.abs(row.expiredFrame - 40 * row.fps)).toBeLessThanOrEqual(3);
+    for (const row of scholarFpCost.checks.disabled)
+      expect(row.values).toEqual([1, 1, 1, 1]);
+    for (const row of scholarFpCost.checks.extension)
+      for (const leaf of row.active) expect(leaf.lifetime).toBeCloseTo(39, 2);
+    const generalCosts: Record<number, number> = { 7610700: 0.92, 7610701: 0.87, 7610702: 0.84 };
+    for (const row of scholarFpCost.checks.mixed) {
+      const other = generalCosts[row.other];
+      for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
   });
 
   it("allows repeated and mixed thrown-consumable bonuses despite shared effect IDs", () => {
