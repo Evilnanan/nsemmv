@@ -37,6 +37,7 @@ import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
+import dyingCurses from "../../data/effect-dying-curses-evidence.json";
 import runeRate from "../../data/effect-rune-rate-evidence.json";
 import grease from "../../data/effect-grease-evidence.json";
 import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
@@ -941,6 +942,55 @@ describe("MMV effect details", () => {
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
+  });
+
+  it("triggers dying curses on ordinary and automatic revival, with multiplicative copies", () => {
+    for (const [id, leaf, label, percent] of [[6851700, 6851703, "血量上限", -25], [6851701, 6851713, "攻击倍率", -30]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("重复装备和多次起身均会叠加，倍率相乘；各层独立计时");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: leaf, phase: "从濒死中起身时", values: [[label, `${percent}%`]],
+        scope: [], restrictions: [], duration: 60, interval: null,
+      });
+    }
+    expect(dyingCurses.paths.map(path => path.animation)).toEqual([17650, 17651]);
+    expect(dyingCurses.paths.every(path => path.binding.name === "IsAutoRevival")).toBe(true);
+    for (const row of dyingCurses.checks.dispatch) {
+      expect(row.nativeDispatches).toBe(row.fps / 30);
+      expect(row.neutral).toEqual({ hp: 1000, attack: [1, 1, 1, 1, 1] });
+      expect(row.values.hp).toBeCloseTo(1000 * 0.75 ** row.copies, 5);
+      for (const rate of row.values.attack) expect(rate).toBeCloseTo(0.7 ** row.copies, 6);
+    }
+    expect(dyingCurses.checks.selection.filter(row => row.effect === 6851701).every(row => row.roots.every(root => root === 6851710))).toBe(true);
+    expect(dyingCurses.checks.disabled.every(row => row.values.hp === 1000 && row.values.attack.every(rate => rate === 1))).toBe(true);
+    for (const row of dyingCurses.checks.independent) {
+      expect(row.values.hp).toBeCloseTo(row.effect === 6851700 ? 1000 * .75 ** row.copies : 1000, 5);
+      for (const rate of row.values.attack) expect(rate).toBeCloseTo(row.effect === 6851701 ? .7 ** row.copies : 1, 6);
+    }
+    expect(dyingCurses.native.attack).toBe("502830");
+    expect(dyingCurses.gameplayVerified).toBe(false);
+    expect(research.dyingCursesEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-dying-curses-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("lets each revival curse stack expire independently instead of refreshing previous stacks", () => {
+    for (const row of dyingCurses.checks.lifetime) {
+      expect(row.transitions.map(change => change.copies)).toEqual([
+        [0, 0], [row.copies, row.copies], [row.copies * 2, row.copies * 2], [row.copies, row.copies], [0, 0],
+      ]);
+      for (const [index, change] of row.transitions.slice(1).entries()) {
+        expect(Math.abs(change.frame / row.fps - [0, 5, 60, 65][index])).toBeLessThanOrEqual(4.01 / row.fps);
+      }
+      expect(row.transitions.at(-1)!.values).toEqual({ hp: 1000, attack: [1, 1, 1, 1, 1] });
+    }
+    const auto = dyingCurses.checks.script.filter(row => row.ids.includes(8970061) && row.time === 1 && row.health === 1 && !row.falling && !row.ids.includes(102130));
+    expect(auto.length).toBeGreaterThan(0);
+    expect(auto.every(row => row.event === "W_NearDeathRevival" && row.auto === 1)).toBe(true);
+    expect(dyingCurses.checks.script.filter(row => row.falling).every(row => row.event === "W_NearDeathEnd" && row.auto === 0)).toBe(true);
   });
 
   it("uses the native HP threshold and additive buildup for low-health poison and rot", () => {

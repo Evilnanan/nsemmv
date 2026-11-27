@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 583,
+    "nativeStacking": 585,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -8232,15 +8232,19 @@
         0
       ],
       "detailSources": [
-        6851703
+        6851703,
+        6851700,
+        6851702,
+        6851701
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dying-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整濒死／复活资源流程与动画中断、角色基础上限／当前 HP 同步及取整、实际攻击伤害、更多层数和装备移除／死亡／重载／多人交互；隔离执行使用显式起身动画活动窗口"
       ],
       "gameplayVerified": false
     },
@@ -8254,15 +8258,19 @@
         0
       ],
       "detailSources": [
-        6851713
+        6851713,
+        6851710,
+        6851712,
+        6851701
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dying-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整濒死／复活资源流程与动画中断、角色基础上限／当前 HP 同步及取整、实际攻击伤害、更多层数和装备移除／死亡／重载／多人交互；隔离执行使用显式起身动画活动窗口"
       ],
       "gameplayVerified": false
     },
@@ -50518,6 +50526,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "dyingCursesEvidenceSha256": "ab544cd6e9d470b2b725e859150c43e8962c0a2135b527371f4ffb00b4643131",
   "lowHealthAilmentsEvidenceSha256": "31d9d671489794aef01932b4208823d5f101bdc6def6d2870bd60393d149b6e2",
   "flaskCursesEvidenceSha256": "46355dd210bbb159ed25058cebb8ca8aa925cd73e8242c653b7cc5c52562c0bb",
   "attackStaminaEvidenceSha256": "59d259ced82da05b084dec16ee4d63e8e944d4e696f7b702f1544f03dfbd821a",
