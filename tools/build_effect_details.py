@@ -702,9 +702,10 @@ if not args.extract_only:
     assert dying_curses['paramSha256'] == evidence['paramSha256']
     assert dying_curses['attachParamSha256'] == flask_curses['attachParamSha256']
     assert dying_curses['scriptSha256'] == flask_curses['scriptSha256'] and dying_curses['taeSha256'] == flask_curses['taeSha256']
-    assert len(dying_curses['paths']) == len(dying_curses['events']) == 2
+    assert len(dying_curses['paths']) == 2 and len(dying_curses['events']) == 4
+    assert dying_curses['markers'] == {'6851701': 2219, '8831201': 2356}
     assert dying_curses['native']['attack'] == '502830'
-    assert {k: len(v) for k, v in dying_curses['checks'].items()} == dict(selection=88, dispatch=18, lifetime=6, independent=8, disabled=2, script=240)
+    assert {k: len(v) for k, v in dying_curses['checks'].items()} == dict(selection=132, dispatch=18, lifetime=6, independent=12, disabled=2, script=240, markerRouting=16)
 dying_curse_families = {str(f['effect']): f for f in dying_curses['families']}
 starting_replacements_path = ROOT / 'data/effect-starting-replacements-evidence.json'
 starting_replacements = json.loads(starting_replacements_path.read_text())
@@ -1020,7 +1021,7 @@ if args.extract:
                 needed.update(v for v in (family['bridge'], family['leaf']) if v != -1)
             for family in dying_curses['families']:
                 if root == family['root']:
-                    needed.update((dying_curses['marker'], family['bridge'], family['leaf']))
+                    needed.update((family['marker'], family['bridge'], family['leaf']))
             if str(root) in flask_curse_families:
                 needed.update((flask_curses['marker'], flask_curses['leaf'], 49060, 1110))
             if root == scholar_shock['root']:
@@ -1783,13 +1784,13 @@ for id, effect in source['effects'].items():
         root, bridge, leaf = (family[k] for k in ('root', 'bridge', 'leaf'))
         assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
         row, child = source['spells'][str(root)], source['spells'][str(leaf)]
-        assert row['invocationConditionsStateChange1'] == dying_curses['condition']
+        assert row['invocationConditionsStateChange1'] == family['condition']
         assert row['cycleOccurrenceSpEffectId'] == leaf and row['replaceSpEffectId'] == bridge
-        assert source['spells'][str(dying_curses['marker'])]['stateInfo'] == dying_curses['condition']
-        assert child['spCategory'] == 10 and child['effectEndurance'] == family['duration'] == 60
+        assert source['spells'][str(family['marker'])]['stateInfo'] == family['condition']
+        assert child['spCategory'] == 10 and child['effectEndurance'] == family['duration']
         assert math.isclose(child[family['field']], family['rate'], rel_tol=1e-6)
         label = '血量上限' if family['field'] == 'maxHpRate' else '攻击倍率'
-        blocks = [dict(source=leaf, branches=[root, bridge, dying_curses['marker']], phase='从濒死中起身时', linked=True,
+        blocks = [dict(source=leaf, branches=[root, bridge, family['marker']], phase='从濒死中起身时', linked=True,
                        values=[[label, num((family['rate'] - 1) * 100) + '%']],
                        restrictions=[], scope=[], duration=child['effectEndurance'], interval=None)]
         info = None

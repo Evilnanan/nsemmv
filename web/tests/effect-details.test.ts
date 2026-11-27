@@ -1203,7 +1203,7 @@ describe("MMV effect details", () => {
   });
 
   it("triggers dying curses on ordinary and automatic revival, with multiplicative copies", () => {
-    for (const [id, leaf, label, percent] of [[6851700, 6851703, "血量上限", -25], [6851701, 6851713, "攻击倍率", -30]] as const) {
+    for (const [id, leaf, label, percent, duration] of [[6851700, 6851703, "血量上限", -25, 60], [6851701, 6851713, "攻击倍率", -30, 60], [8831200, 8831203, "血量上限", -15, 30]] as const) {
       const detail = effectDetail(id)!;
       expect(detail.info).toBeNull();
       expect(detail.stacking).toBe("可叠加");
@@ -1211,7 +1211,7 @@ describe("MMV effect details", () => {
       expect(detail.blocks).toHaveLength(1);
       expect(detail.blocks[0]).toMatchObject({
         source: leaf, phase: "从濒死中起身时", values: [[label, `${percent}%`]],
-        scope: [], restrictions: [], duration: 60, interval: null,
+        scope: [], restrictions: [], duration, interval: null,
       });
     }
     expect(dyingCurses.paths.map(path => path.animation)).toEqual([17650, 17651]);
@@ -1219,13 +1219,13 @@ describe("MMV effect details", () => {
     for (const row of dyingCurses.checks.dispatch) {
       expect(row.nativeDispatches).toBe(row.fps / 30);
       expect(row.neutral).toEqual({ hp: 1000, attack: [1, 1, 1, 1, 1] });
-      expect(row.values.hp).toBeCloseTo(1000 * 0.75 ** row.copies, 5);
+      expect(row.values.hp).toBeCloseTo(1000 * 0.75 ** row.copies * 0.85 ** row.copies, 3);
       for (const rate of row.values.attack) expect(rate).toBeCloseTo(0.7 ** row.copies, 6);
     }
     expect(dyingCurses.checks.selection.filter(row => row.effect === 6851701).every(row => row.roots.every(root => root === 6851710))).toBe(true);
     expect(dyingCurses.checks.disabled.every(row => row.values.hp === 1000 && row.values.attack.every(rate => rate === 1))).toBe(true);
     for (const row of dyingCurses.checks.independent) {
-      expect(row.values.hp).toBeCloseTo(row.effect === 6851700 ? 1000 * .75 ** row.copies : 1000, 5);
+      expect(row.values.hp).toBeCloseTo(row.effect === 6851700 ? 1000 * .75 ** row.copies : row.effect === 8831200 ? 1000 * .85 ** row.copies : 1000, 3);
       for (const rate of row.values.attack) expect(rate).toBeCloseTo(row.effect === 6851701 ? .7 ** row.copies : 1, 6);
     }
     expect(dyingCurses.native.attack).toBe("502830");
@@ -1235,13 +1235,35 @@ describe("MMV effect details", () => {
     ).digest("hex"));
   });
 
+  it("keeps the 30-second HP curse bound to its own revival marker", () => {
+    expect(dyingCurses.events).toHaveLength(4);
+    expect(dyingCurses.families.find(f => f.effect === 8831200)).toMatchObject({
+      marker: 8831201, condition: 2356, duration: 30, field: "maxHpRate",
+    });
+    expect(effectDetail(8831200)!.blocks[0].branches).toContain(8831201);
+    expect(effectDetail(8831200)!.blocks[0].branches).not.toContain(6851701);
+    for (const row of dyingCurses.checks.markerRouting) {
+      const old = row.markers.includes(6851701) ? row.copies : 0;
+      const fresh = row.markers.includes(8831201) ? row.copies : 0;
+      expect(row.counts).toEqual([old, old, fresh]);
+      expect(row.values.hp).toBeCloseTo(1000 * .75 ** old * .85 ** fresh, 3);
+      for (const rate of row.values.attack) expect(rate).toBeCloseTo(.7 ** old, 6);
+    }
+    for (const row of dyingCurses.checks.lifetime) {
+      const after35 = row.transitions[4];
+      expect(after35.copies).toEqual([row.copies * 2, row.copies * 2, 0]);
+      expect(after35.values.hp).toBeCloseTo(1000 * .75 ** (row.copies * 2), 3);
+    }
+  });
+
   it("lets each revival curse stack expire independently instead of refreshing previous stacks", () => {
     for (const row of dyingCurses.checks.lifetime) {
       expect(row.transitions.map(change => change.copies)).toEqual([
-        [0, 0], [row.copies, row.copies], [row.copies * 2, row.copies * 2], [row.copies, row.copies], [0, 0],
+        [0, 0, 0], [row.copies, row.copies, row.copies], [row.copies * 2, row.copies * 2, row.copies * 2],
+        [row.copies * 2, row.copies * 2, row.copies], [row.copies * 2, row.copies * 2, 0], [row.copies, row.copies, 0], [0, 0, 0],
       ]);
       for (const [index, change] of row.transitions.slice(1).entries()) {
-        expect(Math.abs(change.frame / row.fps - [0, 5, 60, 65][index])).toBeLessThanOrEqual(4.01 / row.fps);
+        expect(Math.abs(change.frame / row.fps - [0, 5, 30, 35, 60, 65][index])).toBeLessThanOrEqual(4.01 / row.fps);
       }
       expect(row.transitions.at(-1)!.values).toEqual({ hp: 1000, attack: [1, 1, 1, 1, 1] });
     }

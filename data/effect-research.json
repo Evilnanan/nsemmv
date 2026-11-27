@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 603,
+    "nativeStacking": 604,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -26681,15 +26681,19 @@
         0
       ],
       "detailSources": [
-        8831203
+        8831203,
+        8831200,
+        8831202,
+        8831201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dying-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整濒死／复活资源流程与动画中断、角色基础上限／当前 HP 同步及取整、实际攻击伤害、更多层数和装备移除／死亡／重载／多人交互；隔离执行使用显式起身动画活动窗口"
       ],
       "gameplayVerified": false
     },
@@ -50570,7 +50574,7 @@
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
   "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",
-  "dyingCursesEvidenceSha256": "ab544cd6e9d470b2b725e859150c43e8962c0a2135b527371f4ffb00b4643131",
+  "dyingCursesEvidenceSha256": "cbe4dc240c00e78ea0e81c94308b40c4370a2691cd8376037919728057483c27",
   "lowHealthAilmentsEvidenceSha256": "31d9d671489794aef01932b4208823d5f101bdc6def6d2870bd60393d149b6e2",
   "flaskCursesEvidenceSha256": "46355dd210bbb159ed25058cebb8ca8aa925cd73e8242c653b7cc5c52562c0bb",
   "attackStaminaEvidenceSha256": "59d259ced82da05b084dec16ee4d63e8e944d4e696f7b702f1544f03dfbd821a",
