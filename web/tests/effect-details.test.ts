@@ -1,3 +1,4 @@
+import randomEnchant from "../../data/effect-random-enchant-evidence.json";
 import ironeyeObservation from "../../data/effect-ironeye-observation-evidence.json";
 import teamRunes from "../../data/effect-team-runes-evidence.json";
 import revenantAllies from "../../data/effect-revenant-allies-evidence.json";
@@ -1066,6 +1067,35 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("connects random enchant hand eligibility, replacement and real attack consumers", () => {
+    expect(randomEnchant.gameplayVerified).toBe(false);
+    expect(research.randomEnchantEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-random-enchant-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7035700)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("刷新持续时间");
+    expect(detail.blocks[0].restrictions).toEqual(["切换的那只手 · 仅限可附魔武器"]);
+    expect(detail.notes.join(" ")).toContain("左右手可分别保留");
+    expect(detail.notes.join(" ")).toContain("与火油脂互相覆盖");
+    expect(detail.notes.join(" ")).toContain("双手共持左手武器");
+    expect(detail.notes.join(" ")).toContain("剩余时间仍继续流逝");
+    expect(research.effects["7035700"].stacking).toBe("native-analysis");
+    for (const row of randomEnchant.checks.seeds) {
+      const eligible = row.weapon === 1000500 && (row.seed % 4 === 0 || row.marker === 100620);
+      expect(row.active).toEqual(eligible ? [row.seed + 1] : []);
+      expect(row.points.flat().reduce((a, b) => a + b, 0)).toBe(eligible ? 20 : 0);
+    }
+    for (const row of randomEnchant.checks.overlap) {
+      const sameHand = row.first % 4 === row.second % 4;
+      expect(row.active).toEqual(sameHand ? [row.second + 1] : [row.first + 1, row.second + 1].sort((a, b) => a - b));
+    }
+    for (const row of randomEnchant.checks.tags)
+      expect(row.points.reduce((a, b) => a + b, 0)).toBeCloseTo(20 * row.pointCorrection / 100, 5);
+    for (const row of randomEnchant.checks.events)
+      expect(row.active).toEqual(row.copies ? [7035701] : []);
   });
 
   it("documents personal observation growth without claiming unresolved ally stacking", () => {
@@ -3500,7 +3530,8 @@ describe("MMV effect details", () => {
       expect(r.emitted).toEqual(r.ids!.length && r.eligibilityByte ? [7036301] : []);
   });
   it("retains effect-specific open questions instead of clearing them or leaking them into the next record", () => {
-    expect(research.effects["7035700"].openQuestions).toContain("与其他附魔的覆盖顺序、武器适用条件及完整动作时序");
+    expect(research.effects["7035700"].openQuestions.join(" ")).toContain("其他优先级的附魔");
+    expect(research.effects["7035700"].openQuestions.join(" ")).toContain("连续 Type66 维持");
     expect(research.effects["7032800"].openQuestions).toContain("范围命中、多人来源叠加及再次发放时序");
     expect(research.effects["7000000"].openQuestions).not.toContain("范围命中、多人来源叠加及再次发放时序");
   });
@@ -3739,7 +3770,7 @@ describe("MMV effect details", () => {
       "+20（随机一种）",
     ]);
     expect(detail.blocks[0].duration).toBe(10);
-    expect(detail.stacking).toBe("待确认");
+    expect(detail.stacking).toBe("不可叠加");
     expect(effectDetail(7031900)!.blocks[0].values).toEqual([
       ["获得卢恩", "+600"],
     ]);
