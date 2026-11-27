@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 585,
+    "nativeStacking": 588,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -7823,14 +7823,17 @@
         0
       ],
       "detailSources": [
-        6850700
+        6850700,
+        8800101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dodge-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整 Havok 动作调度与中断、后撤步／战技／特殊动作的实际准入和混合；最终受击伤害、极端层数、装备移除／死亡／重载／多人交互。已遍历行为图，但未将所有图中分支视为当前可达动作"
       ],
       "gameplayVerified": false
     },
@@ -7848,16 +7851,25 @@
         2220
       ],
       "detailSources": [
-        6850821
+        6850821,
+        6850800,
+        6850820,
+        8800201,
+        8800202,
+        8800203,
+        8800204,
+        8800205,
+        8800210,
+        8800230
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dodge-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整 Havok 动作调度与中断、后撤步／战技／特殊动作的实际准入和混合；最终受击伤害、极端层数、装备移除／死亡／重载／多人交互。已遍历行为图，但未将所有图中分支视为当前可达动作"
       ],
       "gameplayVerified": false
     },
@@ -25978,14 +25990,17 @@
         0
       ],
       "detailSources": [
-        8800100
+        8800100,
+        8800101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dodge-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整 Havok 动作调度与中断、后撤步／战技／特殊动作的实际准入和混合；最终受击伤害、极端层数、装备移除／死亡／重载／多人交互。已遍历行为图，但未将所有图中分支视为当前可达动作"
       ],
       "gameplayVerified": false
     },
@@ -25999,14 +26014,17 @@
         0
       ],
       "detailSources": [
-        8800150
+        8800150,
+        8800101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dodge-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整 Havok 动作调度与中断、后撤步／战技／特殊动作的实际准入和混合；最终受击伤害、极端层数、装备移除／死亡／重载／多人交互。已遍历行为图，但未将所有图中分支视为当前可达动作"
       ],
       "gameplayVerified": false
     },
@@ -26024,16 +26042,25 @@
         2220
       ],
       "detailSources": [
-        8831221
+        8831221,
+        8800200,
+        8831220,
+        8800201,
+        8800202,
+        8800203,
+        8800204,
+        8800205,
+        8800210,
+        8800230
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dodge-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整 Havok 动作调度与中断、后撤步／战技／特殊动作的实际准入和混合；最终受击伤害、极端层数、装备移除／死亡／重载／多人交互。已遍历行为图，但未将所有图中分支视为当前可达动作"
       ],
       "gameplayVerified": false
     },
@@ -26051,16 +26078,25 @@
         2220
       ],
       "detailSources": [
-        8800271
+        8800271,
+        8800250,
+        8800270,
+        8800201,
+        8800202,
+        8800203,
+        8800204,
+        8800205,
+        8800210,
+        8800230
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "dodge-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整 Havok 动作调度与中断、后撤步／战技／特殊动作的实际准入和混合；最终受击伤害、极端层数、装备移除／死亡／重载／多人交互。已遍历行为图，但未将所有图中分支视为当前可达动作"
       ],
       "gameplayVerified": false
     },
@@ -50526,6 +50562,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",
   "dyingCursesEvidenceSha256": "ab544cd6e9d470b2b725e859150c43e8962c0a2135b527371f4ffb00b4643131",
   "lowHealthAilmentsEvidenceSha256": "31d9d671489794aef01932b4208823d5f101bdc6def6d2870bd60393d149b6e2",
   "flaskCursesEvidenceSha256": "46355dd210bbb159ed25058cebb8ca8aa925cd73e8242c653b7cc5c52562c0bb",

@@ -37,6 +37,7 @@ import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
+import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
 import dyingCurses from "../../data/effect-dying-curses-evidence.json";
 import runeRate from "../../data/effect-rune-rate-evidence.json";
 import grease from "../../data/effect-grease-evidence.json";
@@ -942,6 +943,80 @@ describe("MMV effect details", () => {
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
+  });
+
+  it("limits dodge damage curses to active marked animations and multiplies equipped versions", () => {
+    for (const [id, percent] of [[6850700, 45], [8800100, 15], [8800150, 20]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("同类和不同版本的承伤倍率相乘");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: id, phase: "闪避动作期间", values: [["承伤倍率", `+${percent}%`]],
+        duration: null, interval: null,
+      });
+      expect(detail.notes).toContain("守护者举盾时的特殊闪步不触发。");
+    }
+    expect(dodgeCurses.checks.events).toHaveLength(182);
+    expect(dodgeCurses.checks.events.every(row => row.nativeSelected.join() === "8800101,8800210,8800202")).toBe(true);
+    const guard = dodgeCurses.checks.dispatch.filter(row => row.animation >= 27200 && row.animation <= 27203);
+    expect(guard).toHaveLength(8);
+    expect(guard.every(row => row.during.every(v => v === 1) && row.counter === 0)).toBe(true);
+    const rates = new Map(dodgeCurses.families.map(f => [f.root, f.rate]));
+    for (const row of dodgeCurses.checks.multipliers) {
+      const expected = row.roots.reduce((v, root) => v * rates.get(root)!, 1);
+      for (const value of row.active) expect(value).toBeCloseTo(expected, 5);
+      expect(row.after).toEqual([1, 1, 1, 1, 1]);
+    }
+    expect(dodgeCurses.checks.disabled.every(row => row.values.every(v => v === 1))).toBe(true);
+    expect(dodgeCurses.gameplayVerified).toBe(false);
+    expect(research.dodgeCursesEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-dodge-curses-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("uses a shared decaying dodge counter without accelerating it for duplicate curses", () => {
+    for (const [id, percent] of [[6850800, 35], [8800200, 23], [8800250, 30]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toContain("重复装备不加快计数");
+      expect(detail.blocks[0]).toMatchObject({
+        phase: "连续闪避触发后", values: [["承伤倍率", `+${percent}%`]], duration: 15, interval: null,
+      });
+      expect(detail.notes).toContain("闪避计数每次 +3、每秒 -1，最低为 0；达到 7 时触发并清空。不同版本共用计数。");
+      expect(detail.notes).toContain("守护者举盾时的特殊闪步不触发。");
+    }
+    for (const row of dodgeCurses.checks.counter) {
+      if ("changes" in row && row.changes) {
+        expect(row.changes.at(-1)!.grants).toBe(row.spacing === 4 ? 0 : row.copies);
+        const one = dodgeCurses.checks.counter.find(other => other.fps === row.fps && other.spacing === row.spacing && other.copies === 1);
+        if (one && "changes" in one && one.changes)
+          expect(row.changes.map(change => [change.frame, change.counter])).toEqual(one.changes.map(change => [change.frame, change.counter]));
+      } else {
+        expect(row.leaves).toEqual([2 * row.copies, 2 * row.copies, 2 * row.copies]);
+      }
+    }
+    const threshold = dodgeCurses.checks.independent.filter(row => "initialCounter" in row && "counter" in row);
+    expect(threshold).toHaveLength(5);
+    for (const row of threshold) {
+      expect(row.counter).toBe(row.initialCounter! < 7000000 ? row.initialCounter : 0);
+      expect(row.leaves).toEqual(row.initialCounter! < 7000000 ? [0, 0, 0] : [1, 0, 0]);
+    }
+  });
+
+  it("lets repeated dodge penalties expire independently instead of refreshing old layers", () => {
+    for (const row of dodgeCurses.checks.lifetime) {
+      const n = row.copies;
+      expect(row.changes.map(change => change.copies)).toEqual([[0, 0, 0], [n, n, n], [2*n, 2*n, 2*n], [n, n, n], [0, 0, 0]]);
+      for (const [i, second] of [0, 5, 15, 20].entries())
+        expect(Math.abs(row.changes[i + 1].frame / row.fps - second)).toBeLessThanOrEqual(4.01 / row.fps);
+    }
+    for (const row of dodgeCurses.checks.script) {
+      if (row.highGuard && !(row.hero === 7 && row.effects.includes(1800200)))
+        expect(row.variation).toBe(6);
+    }
   });
 
   it("triggers dying curses on ordinary and automatic revival, with multiplicative copies", () => {
