@@ -1,3 +1,4 @@
+import knockbackProtection from "../../data/effect-knockback-protection-evidence.json";
 import throwingWeapon from "../../data/effect-throwing-weapon-evidence.json";
 import ironeyeMelee from "../../data/effect-ironeye-melee-growth-evidence.json";
 import criticalAttack from "../../data/effect-critical-attack-evidence.json";
@@ -1055,6 +1056,33 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("refreshes knockback protection without stacking and tracks reaction types separately", () => {
+    expect(knockbackProtection.gameplayVerified).toBe(false);
+    expect(research.knockbackProtectionEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-knockback-protection-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7240000)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("再次触发刷新持续时间");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "被弹飞后", values: [["承伤倍率", "-20%"], ["强韧度损耗", "-20%"]], duration: 20, interval: null });
+    expect(detail.notes).toContain("触发判定每 1 秒恢复一次，受击不会重置该计时；不同受击类型可分别触发。");
+    expect(detail.notes).toContain("不受“延长魔法、祷告的有效时间”影响。");
+    for (const row of knockbackProtection.checks.caller) {
+      const expected = row.copies && !row.excluded.length && [4, 7, 9, 10, 11].includes(row.kind) ? 0.8 : 1;
+      for (const rate of row.values.rates) expect(rate).toBeCloseTo(expected);
+      expect(row.values.poise).toBeCloseTo(expected);
+    }
+    for (const row of knockbackProtection.checks.mixedTriggers)
+      expect(row.grantFrames).toHaveLength(row.first === row.second ? 1 : 2);
+    for (const row of knockbackProtection.checks.lifetime) {
+      expect(row.changes.map(v => v.active)).toEqual([false, true, false]);
+      expect(Math.abs(row.changes[2].frame - row.changes[1].frame - 20 * row.fps)).toBeLessThanOrEqual(4);
+    }
+    expect(knockbackProtection.checks.rearm.some(row => row.grantFrames[1] - row.grantFrames[0] < row.fps - 5)).toBe(true);
+    for (const row of knockbackProtection.checks.extension) expect(row.node.lifetime).toBeCloseTo(19);
   });
 
   it("deduplicates throwing-weapon bonuses and excludes throwing consumables", () => {

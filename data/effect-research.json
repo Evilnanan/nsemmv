@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 625,
+    "nativeStacking": 626,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -16235,12 +16235,13 @@
         7240013
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "knockback-protection"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整受击入口及排除标记／来源模式的构造、非中性动作组件分支、攻击碰撞／最终 HP／实际受击动画、DLL／装备重建／卸下／死亡／重载／多人；已组合原生类型修正与通知、守卫到期发放、承伤／强韧损耗、周期再准备及刷新，同类与不同类型分别验证"
       ],
       "gameplayVerified": false
     },
@@ -50616,6 +50617,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "knockbackProtectionEvidenceSha256": "c79fd08ef0740b2eaae7d73e51532fbc29f8fa2a3f0907d1a760c53f996f006e",
   "throwingWeaponEvidenceSha256": "1a009c9f9f27d51291bb825744cc20047548021ce16e43949e70fafc1dbdb599",
   "thrownConsumablesEvidenceSha256": "2cfec1cf0ed2687812f1b71e459c94b7cdda954c225587ebb737d7858f1302c0",
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",

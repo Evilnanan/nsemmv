@@ -1,0 +1,10485 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "effect": 7240000,
+  "roots": [
+    7240000,
+    7240003,
+    7240006
+  ],
+  "leaf": 7240013,
+  "guards": [
+    {
+      "id": 7240001,
+      "kind": 4
+    },
+    {
+      "id": 7240004,
+      "kind": 7
+    },
+    {
+      "id": 7240010,
+      "kind": 9
+    },
+    {
+      "id": 7240011,
+      "kind": 10
+    },
+    {
+      "id": 7240012,
+      "kind": 11
+    }
+  ],
+  "rate": 0.8,
+  "duration": 20,
+  "period": 1,
+  "conversionTable": [
+    0,
+    0,
+    8,
+    1,
+    2,
+    3,
+    7,
+    4,
+    6,
+    9,
+    5,
+    10,
+    11
+  ],
+  "checks": {
+    "selection": [
+      {
+        "copies": 1,
+        "hero": 0,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 1,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 2,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 4,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 5,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 6,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 7,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 8,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 9,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 10,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 0,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 1,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 2,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 4,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 5,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 6,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 7,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 8,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 9,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 10,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 0,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 1,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 2,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 4,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 5,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 6,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 7,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 8,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 9,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 10,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 0,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 1,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 2,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 4,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 5,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 6,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 7,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 8,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 9,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 10,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          7240000,
+          7240003,
+          7240006
+        ]
+      }
+    ],
+    "caller": [
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 0,
+        "notified": [
+          0
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 1,
+        "notified": [
+          1
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 2,
+        "notified": [
+          2
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 3,
+        "notified": [
+          3
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 4,
+        "notified": [
+          4
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 5,
+        "notified": [
+          5
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 6,
+        "notified": [
+          6
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 7,
+        "notified": [
+          7
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 8,
+        "notified": [
+          8
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 9,
+        "notified": [
+          9
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 10,
+        "notified": [
+          10
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 11,
+        "notified": [
+          11
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 12,
+        "notified": [
+          12
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 13,
+        "notified": [
+          13
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 14,
+        "notified": [
+          14
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [],
+        "kind": 15,
+        "notified": [
+          15
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 0,
+        "notified": [
+          0
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 1,
+        "notified": [
+          1
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 2,
+        "notified": [
+          2
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 3,
+        "notified": [
+          3
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 4,
+        "notified": [
+          4
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 5,
+        "notified": [
+          5
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 6,
+        "notified": [
+          6
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 7,
+        "notified": [
+          7
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 8,
+        "notified": [
+          8
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 9,
+        "notified": [
+          9
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 10,
+        "notified": [
+          10
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 11,
+        "notified": [
+          11
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 12,
+        "notified": [
+          12
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 13,
+        "notified": [
+          13
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 14,
+        "notified": [
+          14
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [],
+        "kind": 15,
+        "notified": [
+          15
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 0,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 0,
+        "notified": [
+          0
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 1,
+        "notified": [
+          1
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 2,
+        "notified": [
+          2
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 3,
+        "notified": [
+          3
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 4,
+        "notified": [
+          4
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 5,
+        "notified": [
+          5
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 6,
+        "notified": [
+          6
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 7,
+        "notified": [
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 8,
+        "notified": [
+          8
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 9,
+        "notified": [
+          9
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 10,
+        "notified": [
+          10
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 11,
+        "notified": [
+          11
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 12,
+        "notified": [
+          12
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 13,
+        "notified": [
+          13
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 14,
+        "notified": [
+          14
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [],
+        "kind": 15,
+        "notified": [
+          15
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 0,
+        "notified": [
+          0
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 1,
+        "notified": [
+          1
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 2,
+        "notified": [
+          2
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 3,
+        "notified": [
+          3
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 4,
+        "notified": [
+          4
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 5,
+        "notified": [
+          5
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 6,
+        "notified": [
+          6
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 7,
+        "notified": [
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 8,
+        "notified": [
+          8
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 9,
+        "notified": [
+          9
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 10,
+        "notified": [
+          10
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 11,
+        "notified": [
+          11
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 12,
+        "notified": [
+          12
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 13,
+        "notified": [
+          13
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 14,
+        "notified": [
+          14
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [],
+        "kind": 15,
+        "notified": [
+          15
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 1,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 0,
+        "notified": [
+          0
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 1,
+        "notified": [
+          1
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 2,
+        "notified": [
+          2
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 3,
+        "notified": [
+          3
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 4,
+        "notified": [
+          4
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 5,
+        "notified": [
+          5
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 6,
+        "notified": [
+          6
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 7,
+        "notified": [
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 8,
+        "notified": [
+          8
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 9,
+        "notified": [
+          9
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 10,
+        "notified": [
+          10
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 11,
+        "notified": [
+          11
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 12,
+        "notified": [
+          12
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 13,
+        "notified": [
+          13
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 14,
+        "notified": [
+          14
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [],
+        "kind": 15,
+        "notified": [
+          15
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          692
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          697
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 0,
+        "excluded": [
+          698
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 0,
+        "notified": [
+          0
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 1,
+        "notified": [
+          1
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 2,
+        "notified": [
+          2
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 3,
+        "notified": [
+          3
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 4,
+        "notified": [
+          4
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 5,
+        "notified": [
+          5
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 6,
+        "notified": [
+          6
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 7,
+        "notified": [
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 8,
+        "notified": [
+          8
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 9,
+        "notified": [
+          9
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 10,
+        "notified": [
+          10
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 11,
+        "notified": [
+          11
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 12,
+        "notified": [
+          12
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 13,
+        "notified": [
+          13
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 14,
+        "notified": [
+          14
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [],
+        "kind": 15,
+        "notified": [
+          15
+        ],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          692
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          697
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 0,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 1,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 2,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 3,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 4,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 5,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 6,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 7,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 8,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 9,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 10,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 11,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 12,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 13,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 14,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "copies": 3,
+        "mode": 3,
+        "excluded": [
+          698
+        ],
+        "kind": 15,
+        "notified": [],
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      }
+    ],
+    "overrides": [
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 0,
+        "replacement": 0,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 1,
+        "replacement": 4,
+        "notified": [
+          2
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 2,
+        "replacement": 5,
+        "notified": [
+          3
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 3,
+        "replacement": 6,
+        "notified": [
+          7
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 4,
+        "replacement": 0,
+        "notified": [
+          4
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 5,
+        "replacement": 0,
+        "notified": [
+          5
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 6,
+        "replacement": 0,
+        "notified": [
+          6
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 7,
+        "replacement": 7,
+        "notified": [
+          4
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 8,
+        "replacement": 3,
+        "notified": [
+          1
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 9,
+        "replacement": 0,
+        "notified": [
+          9
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 10,
+        "replacement": 0,
+        "notified": [
+          10
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 0,
+        "kind": 11,
+        "replacement": 0,
+        "notified": [
+          11
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 0,
+        "replacement": 0,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 1,
+        "replacement": 4,
+        "notified": [
+          1
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 2,
+        "replacement": 5,
+        "notified": [
+          2
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 3,
+        "replacement": 6,
+        "notified": [
+          3
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 4,
+        "replacement": 0,
+        "notified": [
+          4
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 5,
+        "replacement": 0,
+        "notified": [
+          5
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 6,
+        "replacement": 0,
+        "notified": [
+          6
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 7,
+        "replacement": 7,
+        "notified": [
+          7
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 8,
+        "replacement": 3,
+        "notified": [
+          8
+        ],
+        "leafActive": false,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 9,
+        "replacement": 0,
+        "notified": [
+          9
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 10,
+        "replacement": 0,
+        "notified": [
+          10
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 40,
+        "mode": 3,
+        "kind": 11,
+        "replacement": 0,
+        "notified": [
+          11
+        ],
+        "leafActive": true,
+        "otherActive": false,
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 0,
+        "replacement": 0,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 1,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 2,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 3,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 4,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 5,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 6,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 7,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 8,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 9,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 10,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 0,
+        "kind": 11,
+        "replacement": 1,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 0,
+        "replacement": 0,
+        "notified": [
+          0
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 1,
+        "replacement": 1,
+        "notified": [
+          1
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 2,
+        "replacement": 1,
+        "notified": [
+          2
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 3,
+        "replacement": 1,
+        "notified": [
+          3
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 4,
+        "replacement": 1,
+        "notified": [
+          4
+        ],
+        "leafActive": true,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 5,
+        "replacement": 1,
+        "notified": [
+          5
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 6,
+        "replacement": 1,
+        "notified": [
+          6
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 7,
+        "replacement": 1,
+        "notified": [
+          7
+        ],
+        "leafActive": true,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 8,
+        "replacement": 1,
+        "notified": [
+          8
+        ],
+        "leafActive": false,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 9,
+        "replacement": 1,
+        "notified": [
+          9
+        ],
+        "leafActive": true,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 10,
+        "replacement": 1,
+        "notified": [
+          10
+        ],
+        "leafActive": true,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 1650,
+        "mode": 3,
+        "kind": 11,
+        "replacement": 1,
+        "notified": [
+          11
+        ],
+        "leafActive": true,
+        "otherActive": true,
+        "values": {
+          "rates": [
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366,
+            0.4400000274181366
+          ],
+          "poise": 0.800000011920929
+        }
+      }
+    ],
+    "lifetime": [
+      {
+        "copies": 1,
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 0,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          },
+          {
+            "frame": 1,
+            "active": true,
+            "values": {
+              "rates": [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              "poise": 0.800000011920929
+            }
+          },
+          {
+            "frame": 602,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          },
+          {
+            "frame": 1,
+            "active": true,
+            "values": {
+              "rates": [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              "poise": 0.800000011920929
+            }
+          },
+          {
+            "frame": 1203,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 0,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          },
+          {
+            "frame": 1,
+            "active": true,
+            "values": {
+              "rates": [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              "poise": 0.800000011920929
+            }
+          },
+          {
+            "frame": 2403,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "changes": [
+          {
+            "frame": 0,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          },
+          {
+            "frame": 1,
+            "active": true,
+            "values": {
+              "rates": [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              "poise": 0.800000011920929
+            }
+          },
+          {
+            "frame": 602,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "changes": [
+          {
+            "frame": 0,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          },
+          {
+            "frame": 1,
+            "active": true,
+            "values": {
+              "rates": [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              "poise": 0.800000011920929
+            }
+          },
+          {
+            "frame": 1203,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "changes": [
+          {
+            "frame": 0,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          },
+          {
+            "frame": 1,
+            "active": true,
+            "values": {
+              "rates": [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              "poise": 0.800000011920929
+            }
+          },
+          {
+            "frame": 2403,
+            "active": false,
+            "values": {
+              "rates": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "poise": 1.0
+            }
+          }
+        ]
+      }
+    ],
+    "refresh": [
+      {
+        "kind": 4,
+        "hits": [
+          0
+        ],
+        "grantFrames": [
+          1
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1203,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 4,
+        "hits": [
+          0,
+          1
+        ],
+        "grantFrames": [
+          1
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1203,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 4,
+        "hits": [
+          0,
+          60
+        ],
+        "grantFrames": [
+          1,
+          61
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1264,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 4,
+        "hits": [
+          0,
+          300
+        ],
+        "grantFrames": [
+          1,
+          301
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1504,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 11,
+        "hits": [
+          0
+        ],
+        "grantFrames": [
+          1
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1203,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 11,
+        "hits": [
+          0,
+          1
+        ],
+        "grantFrames": [
+          1
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1203,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 11,
+        "hits": [
+          0,
+          60
+        ],
+        "grantFrames": [
+          1,
+          61
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1264,
+            false
+          ]
+        ]
+      },
+      {
+        "kind": 11,
+        "hits": [
+          0,
+          300
+        ],
+        "grantFrames": [
+          1,
+          301
+        ],
+        "changes": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1504,
+            false
+          ]
+        ]
+      }
+    ],
+    "rearm": [
+      {
+        "kind": 4,
+        "fps": 30,
+        "grantFrames": [
+          1,
+          27,
+          57,
+          87
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 4,
+        "fps": 60,
+        "grantFrames": [
+          1,
+          52,
+          112,
+          172
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 4,
+        "fps": 120,
+        "grantFrames": [
+          1,
+          100,
+          220,
+          340
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 7,
+        "fps": 30,
+        "grantFrames": [
+          1,
+          27,
+          57,
+          87
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 7,
+        "fps": 60,
+        "grantFrames": [
+          1,
+          52,
+          112,
+          172
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 7,
+        "fps": 120,
+        "grantFrames": [
+          1,
+          100,
+          220,
+          340
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 9,
+        "fps": 30,
+        "grantFrames": [
+          1,
+          28,
+          58,
+          88
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 9,
+        "fps": 60,
+        "grantFrames": [
+          1,
+          53,
+          113,
+          173
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 9,
+        "fps": 120,
+        "grantFrames": [
+          1,
+          101,
+          221,
+          341
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 10,
+        "fps": 30,
+        "grantFrames": [
+          1,
+          31,
+          61
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 10,
+        "fps": 60,
+        "grantFrames": [
+          1,
+          57,
+          117,
+          177
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 10,
+        "fps": 120,
+        "grantFrames": [
+          1,
+          109,
+          229,
+          349
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 11,
+        "fps": 30,
+        "grantFrames": [
+          1,
+          4,
+          34,
+          64
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 11,
+        "fps": 60,
+        "grantFrames": [
+          1,
+          61,
+          121
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "kind": 11,
+        "fps": 120,
+        "grantFrames": [
+          1,
+          117,
+          237,
+          357
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      }
+    ],
+    "mixedTriggers": [
+      {
+        "first": 4,
+        "second": 4,
+        "grantFrames": [
+          1
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 4,
+        "second": 7,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 4,
+        "second": 9,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 4,
+        "second": 10,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 4,
+        "second": 11,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 7,
+        "second": 4,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 7,
+        "second": 7,
+        "grantFrames": [
+          1
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 7,
+        "second": 9,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 7,
+        "second": 10,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 7,
+        "second": 11,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 9,
+        "second": 4,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 9,
+        "second": 7,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 9,
+        "second": 9,
+        "grantFrames": [
+          1
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 9,
+        "second": 10,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 9,
+        "second": 11,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 10,
+        "second": 4,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 10,
+        "second": 7,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 10,
+        "second": 9,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 10,
+        "second": 10,
+        "grantFrames": [
+          1
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 10,
+        "second": 11,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 11,
+        "second": 4,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 11,
+        "second": 7,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 11,
+        "second": 9,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 11,
+        "second": 10,
+        "grantFrames": [
+          1,
+          7
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "first": 11,
+        "second": 11,
+        "grantFrames": [
+          1
+        ],
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      }
+    ],
+    "disabled": [
+      {
+        "mask": 1,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "mask": 2,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "mask": 262144,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      },
+      {
+        "mask": 2147483648,
+        "values": {
+          "rates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "poise": 1.0
+        }
+      }
+    ],
+    "extension": [
+      {
+        "otherEffect": null,
+        "node": {
+          "id": 7240013,
+          "lifetime": 19.0,
+          "flags": 8
+        },
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 7006400,
+        "node": {
+          "id": 7240013,
+          "lifetime": 19.0,
+          "flags": 8
+        },
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      },
+      {
+        "otherEffect": 8330500,
+        "node": {
+          "id": 7240013,
+          "lifetime": 19.0,
+          "flags": 8
+        },
+        "values": {
+          "rates": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "poise": 0.800000011920929
+        }
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "caller": "43DA28..43DA77 → 42C120 → 6D1BE0 → 504E30",
+    "conversion": "48D8F0 / 48D920 / 507C40 → EA0CF0 / E6D510",
+    "update": "5057D0 → 50ACD0",
+    "grant": "3C7FD0 → 3C80A0 → 3DB410",
+    "incoming": "503800",
+    "poise": "502270"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "Explicit reaction byte, source mode and three exclusion bytes; component+40 has neutral resources and virtual+10 returns float0; component+48 absent.",
+    "F61390 isolated allocator owner",
+    "Native caller block starts after outer hit gates. Full collision, HP changes and animation reactions are not simulated.",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "limitations": [
+    "The preceding full-hit gates and origins of packet exclusions/source mode remain untraced.",
+    "Only neutral reaction components and two actual override rows are exercised; alternate component+48 branch is not covered.",
+    "No full equipment rebuild/unequip, scene collision, final HP, animation selection, DLL, multiplayer, death or reload."
+  ],
+  "gameplayVerified": false
+}
