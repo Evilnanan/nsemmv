@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 622,
+    "nativeStacking": 624,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -12737,15 +12737,25 @@
         0
       ],
       "detailSources": [
-        7280301
+        7280301,
+        7280302,
+        7280303,
+        7280304,
+        7280305,
+        7280306,
+        7280307,
+        7280308,
+        7280309,
+        7280310
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "ironeye-melee-growth"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整装备重建／卸下、实际动作与碰撞、来源类型 5 的动作语义、DLL／多人／死亡／重载；已执行根发放、十档增长、受伤重置、原始周期保留、攻击标签筛选及普通技艺恢复缓存，主动重置／补充次数路径未联测"
       ],
       "gameplayVerified": false
     },
@@ -12759,15 +12769,25 @@
         0
       ],
       "detailSources": [
-        7280301
+        7280301,
+        7280302,
+        7280303,
+        7280304,
+        7280305,
+        7280306,
+        7280307,
+        7280308,
+        7280309,
+        7280310
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "ironeye-melee-growth"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整装备重建／卸下、实际动作与碰撞、来源类型 5 的动作语义、DLL／多人／死亡／重载；已执行根发放、十档增长、受伤重置、原始周期保留、攻击标签筛选及普通技艺恢复缓存，主动重置／补充次数路径未联测"
       ],
       "gameplayVerified": false
     },
@@ -50598,6 +50618,7 @@
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
+  "ironeyeMeleeGrowthEvidenceSha256": "9e1a86aa4f16607447c8c627949a540ca12a2ef56a51a40e637407a10a6a5b72",
   "scholarSampleEvidenceSha256": "3e42d63a9298716fbff57951f275f9c97353a2f386fe65e4c337d628ee5435c5",
   "counterRecoveryEvidenceSha256": "94917b8bff0d46fb185351c90548bc415a4253349000c717bdd1c6f55886abf5",
   "damageRotEvidenceSha256": "f723d67c1bde979893c32f9a5154de2bd19d6baf04e1747a5d97af9db49aea50",

@@ -1,3 +1,4 @@
+import ironeyeMelee from "../../data/effect-ironeye-melee-growth-evidence.json";
 import criticalAttack from "../../data/effect-critical-attack-evidence.json";
 import { describe, expect, it } from "vitest";
 import { catalog } from "../src/core/catalog";
@@ -1053,6 +1054,37 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("shows Ironeye's capped growth and preserves the current skill recharge threshold", () => {
+    expect(ironeyeMelee.gameplayVerified).toBe(false);
+    expect(research.ironeyeMeleeGrowthEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-ironeye-melee-growth-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const id of ironeyeMelee.effects) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toContain("同名版本混用不增加倍率或增长速度");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        values: [["近战攻击倍率", "+3%～+34.39%"], ["技艺冷却时间", "+50%"]],
+        scope: [], restrictions: [], duration: null, interval: null,
+      });
+      expect(detail.notes.join(" ")).toContain("增长计时不因受伤重置");
+      expect(detail.notes.join(" ")).toContain("恢复中的技艺沿用本轮冷却时长");
+    }
+    for (const row of ironeyeMelee.checks.timer) {
+      expect(row.changes.map(e => e.level)).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1]);
+      expect(Math.abs(row.changes.at(-1)!.frame - 120 * row.fps)).toBeLessThanOrEqual(4);
+    }
+    for (const row of ironeyeMelee.checks.cooldown) {
+      expect(row.changed).toEqual(row.elapsed);
+      expect(row.ready[0]).toBe(1);
+      expect(row.ready[3] / row.initial[3]).toBeCloseTo(row.initiallyActive ? 1 / 1.5 : 1.5);
+    }
+    for (const row of ironeyeMelee.checks.filters)
+      for (const value of row.values)
+        expect(value).toBeCloseTo(row.tags.includes(130) ? 1.03 ** row.stage : 1);
   });
 
   it("awards Scholar runes only for newly recorded samples without duplicate equipment bonuses", () => {
