@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 608,
+    "nativeStacking": 610,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -12096,11 +12096,13 @@
         7501200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "executor-ultimate-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "兽形态 c0010 的动作／攻击行、玩家与兽形态之间的效果转移、完整攻击入口及最终伤害、DLL 改写与装备重建／死亡／重载／多人交互；分类 123 也用于其他角色的攻击，不据此扩大执行者适用范围"
       ],
       "gameplayVerified": false
     },
@@ -12117,11 +12119,13 @@
         7501200
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "executor-ultimate-attack"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "兽形态 c0010 的动作／攻击行、玩家与兽形态之间的效果转移、完整攻击入口及最终伤害、DLL 改写与装备重建／死亡／重载／多人交互；分类 123 也用于其他角色的攻击，不据此扩大执行者适用范围"
       ],
       "gameplayVerified": false
     },
@@ -50584,6 +50588,7 @@
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
   "thrownConsumablesEvidenceSha256": "2cfec1cf0ed2687812f1b71e459c94b7cdda954c225587ebb737d7858f1302c0",
+  "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",

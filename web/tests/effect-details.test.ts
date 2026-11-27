@@ -42,6 +42,7 @@ import undertakerCombo from "../../data/effect-undertaker-combo-evidence.json";
 import spellDuration from "../../data/effect-spell-duration-evidence.json";
 import thrownConsumables from "../../data/effect-thrown-consumables-evidence.json";
 import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
+import executorUltimateAttack from "../../data/effect-executor-ultimate-attack-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -1047,6 +1048,28 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("deduplicates both Executor ultimate attack versions without claiming all beast attacks are traced", () => {
+    expect(executorUltimateAttack.gameplayVerified).toBe(false);
+    expect(research.executorUltimateAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-executor-ultimate-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const id of [7034900, 7034901] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toContain("两种同名版本混用");
+      expect(detail.blocks[0].values).toEqual([["攻击倍率", "+20%"]]);
+      expect(research.effects[String(id) as "7034900" | "7034901"].openQuestions.join(" ")).toContain("效果转移");
+    }
+    for (const row of executorUltimateAttack.checks.mixed) {
+      expect(row.instances).toBe(row.first + row.second ? 1 : 0);
+      expect(row.values["81400"][0]).toBeCloseTo(row.first + row.second ? 1.2 : 1, 6);
+    }
+    for (const row of executorUltimateAttack.checks.disabled)
+      expect(row.values).toEqual([1, 1, 1, 1, 1]);
+    for (const row of executorUltimateAttack.checks.kinds.filter(r => [3, 4, 5, 10].includes(r.kind)))
+      expect(row.values).toEqual([1, 1, 1, 1, 1]);
   });
 
   it("allows repeated and mixed thrown-consumable bonuses despite shared effect IDs", () => {

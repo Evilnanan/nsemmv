@@ -683,6 +683,17 @@ if not args.extract_only:
     assert thrown['paramHashes']['Bullet'] == spell_duration['bulletParamSha256']
     assert {k: len(v) for k, v in thrown['checks'].items()} == dict(selection=308, filters=5355, mixed=192, kinds=1274, disabled=98, removal=19, goods=132)
 thrown_families = {str(f['effect']): f for f in thrown['families']}
+executor_attack_path = ROOT / 'data/effect-executor-ultimate-attack-evidence.json'
+executor_attack = json.loads(executor_attack_path.read_text())
+if not args.extract_only:
+    assert executor_attack['schema'] == 1 and executor_attack['regulationSha256'] == catalog['regulationSha256']
+    assert executor_attack['exeSha256'] == evidence['exeSha256'] and not executor_attack['gameplayVerified']
+    assert executor_attack['paramSha256'] == evidence['paramSha256']
+    assert executor_attack['paramHashes']['AttachEffectParam'] == hit_stamina['attachParamSha256']
+    assert executor_attack['paramHashes']['AtkParam_Pc'] == hit_stamina['atkParamSha256']
+    assert executor_attack['effects'] == [7034900, 7034901]
+    assert len(executor_attack['positiveAttacks']) == 59 and executor_attack['tagSets'] == 216
+    assert {k: len(v) for k, v in executor_attack['checks'].items()} == dict(selection=88, filters=1365, mixed=16, kinds=78, disabled=16, removal=8, lifetime=9)
 scholar_cost_path = ROOT / 'data/effect-scholar-fp-cost-evidence.json'
 scholar_cost = json.loads(scholar_cost_path.read_text())
 if not args.extract_only:
@@ -1327,6 +1338,7 @@ STACKING_RULES = {
     'spell-family': ('可叠加', '攻击倍率相乘', ['spell-family']),
     'perfume': ('可叠加', '攻击倍率相乘', ['perfume']),
     'thrown-consumables': ('可叠加', '同等级、不同等级及综合投掷强化均可叠加，攻击倍率相乘', ['thrown-consumables']),
+    'executor-ultimate-attack': ('不可叠加', '重复装备或两种同名版本混用均不增加增伤', ['executor-ultimate-attack']),
     'scholar-fp-cost': ('不可叠加', '重复装备不增强效果；再次施放刷新对应档位', ['scholar-fp-cost']),
     'duchess-ultimate': ('不可叠加', '重复装备不增加时长或增伤', ['duchess-ultimate']),
     'guardian-shockwave': ('不可叠加', '重复装备不增加冲击波数量', ['guardian-shockwave']),
@@ -1774,6 +1786,15 @@ for id, effect in source['effects'].items():
                  '与“减少专注值消耗”词条的减耗倍率相乘。']
         info = None
         rule = 'scholar-fp-cost'
+    if int(id) in executor_attack['effects']:
+        assert effect['roots'] == {'passiveSpEffectId_1': executor_attack['root']} and effect['runtimeExclusive'] == -1
+        row = source['spells'][str(executor_attack['root'])]
+        assert (row['stateInfo'], row['spCategory'], row['effectEndurance']) == (0, 20, -1)
+        assert row['magicSubCategoryChange1'] == executor_attack['tag'] == 123
+        assert math.isclose(row['physicsAttackRate'], executor_attack['rate'], rel_tol=1e-6)
+        # Only promote the proven multiplier/duplicate result. The c0010 action
+        # range and owner-to-beast effect transfer still require native tracing.
+        rule = 'executor-ultimate-attack'
     if id in thrown_families:
         family = thrown_families[id]
         assert list(effect['roots'].values()) == family['roots'] and effect['runtimeExclusive'] == -1
@@ -2761,6 +2782,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用')
     if rules[id] == 'thrown-consumables':
         questions.append('双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互')
+    if rules[id] == 'executor-ultimate-attack':
+        questions.append('兽形态 c0010 的动作／攻击行、玩家与兽形态之间的效果转移、完整攻击入口及最终伤害、DLL 改写与装备重建／死亡／重载／多人交互；分类 123 也用于其他角色的攻击，不据此扩大执行者适用范围')
     if rules[id] == 'scholar-fp-cost':
         questions.append('完整技艺目标扫描与档位解析、动画／HKS 调度和中断、最终 FP 扣除与取整、道具耗蓝消费者、DLL 改写及装备重建／死亡／重载／多人交互')
     if rules[id] == 'duchess-ultimate':
@@ -2919,6 +2942,7 @@ research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes())
 research['hitStaminaEvidenceSha256'] = hashlib.sha256(hit_stamina_path.read_bytes()).hexdigest()
 research['spellDurationEvidenceSha256'] = hashlib.sha256(spell_duration_path.read_bytes()).hexdigest()
 research['thrownConsumablesEvidenceSha256'] = hashlib.sha256(thrown_path.read_bytes()).hexdigest()
+research['executorUltimateAttackEvidenceSha256'] = hashlib.sha256(executor_attack_path.read_bytes()).hexdigest()
 research['scholarFpCostEvidenceSha256'] = hashlib.sha256(scholar_cost_path.read_bytes()).hexdigest()
 research['undertakerComboEvidenceSha256'] = hashlib.sha256(undertaker_combo_path.read_bytes()).hexdigest()
 research['lowHpDefenseEvidenceSha256'] = hashlib.sha256(low_hp_defense_path.read_bytes()).hexdigest()
