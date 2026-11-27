@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 635,
+    "nativeStacking": 636,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -14605,16 +14605,14 @@
         7090102
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "team-kill-heal",
         "bullet-links"
       ],
       "openQuestions": [
-        "范围命中、多人来源叠加及再次发放时序",
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整敌人死亡／奖励归属及保存奖励重放、实际碰撞筛选／自身排除／范围边界、最终 HP 写入与上限、DLL／装备重建／死亡／重载／多人；已验证两种击杀分支共用恢复 20 的负载、重复装备去重、连续通知分别发射及多来源恢复相加、碰撞筛选信息构造。强制自身命中不等于实际选中自己"
       ],
       "gameplayVerified": false
     },
@@ -50619,6 +50617,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "teamKillHealEvidenceSha256": "a9aa235a64ba027af6297aee1558d337d94dc71daf2608d0e141505d9716fc18",
   "teamStaminaEvidenceSha256": "7c42f145d9f58b8ee6dcdc9de79d8de34c93fc7294c61f8ad6b0086a0a2cf739",
   "madnessFpEvidenceSha256": "317d1e4c3bf412e3ba10d2009ce18c56e069fe09c60ec0d59c12221a3aefe95f",
   "nearbyPoisonAttackEvidenceSha256": "d896fe68e79be8f8f9dc22e0849e300f682db7316fc3ce21350179fe698f5313",

@@ -1,0 +1,5151 @@
+{
+  "schema": 1,
+  "effect": 7090100,
+  "root": 7090100,
+  "emitters": [
+    7090101,
+    7090103
+  ],
+  "leaf": 7090102,
+  "amount": 20,
+  "radius": 15,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "paramHashes": {
+    "AttachEffectParam": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+    "AtkParam_Pc": "1ec1893420053cbfb06e3efb269ade4ba9d6a617d1d3dbb370e837847be05676",
+    "BehaviorParam_PC": "f8fa3fd27cb98d45a3e24c69d71d8751df9202e6e379dc34fd77d4ef2e1240bb",
+    "Bullet": "ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44"
+  },
+  "checks": {
+    "selection": [
+      {
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          0,
+          3
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          7090100,
+          4294967295,
+          4294967295
+        ]
+      }
+    ],
+    "dispatch": [
+      {
+        "copies": 0,
+        "special": 0,
+        "fps": 30,
+        "children": [],
+        "shots": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "special": 0,
+        "fps": 60,
+        "children": [],
+        "shots": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "special": 0,
+        "fps": 120,
+        "children": [],
+        "shots": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "special": 1,
+        "fps": 30,
+        "children": [],
+        "shots": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "special": 1,
+        "fps": 60,
+        "children": [],
+        "shots": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "special": 1,
+        "fps": 120,
+        "children": [],
+        "shots": [],
+        "nodes": []
+      },
+      {
+        "copies": 1,
+        "special": 0,
+        "fps": 30,
+        "children": [
+          7090101
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "special": 0,
+        "fps": 60,
+        "children": [
+          7090101
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "special": 0,
+        "fps": 120,
+        "children": [
+          7090101
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "special": 1,
+        "fps": 30,
+        "children": [
+          7090103
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "special": 1,
+        "fps": 60,
+        "children": [
+          7090103
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "special": 1,
+        "fps": 120,
+        "children": [
+          7090103
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "special": 0,
+        "fps": 30,
+        "children": [
+          7090101
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "special": 0,
+        "fps": 60,
+        "children": [
+          7090101
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "special": 0,
+        "fps": 120,
+        "children": [
+          7090101
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "special": 1,
+        "fps": 30,
+        "children": [
+          7090103
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "special": 1,
+        "fps": 60,
+        "children": [
+          7090103
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "special": 1,
+        "fps": 120,
+        "children": [
+          7090103
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "nodes": [
+          {
+            "id": 7090100,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      }
+    ],
+    "recipients": [
+      {
+        "source": 0,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 0,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 1,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 1,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 2,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 2,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 3,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 3,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 4,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 4,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 5,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 5,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 6,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 6,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 7,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 7,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 8,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 8,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 9,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 1,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 9,
+        "recipient": 1,
+        "sameActor": false,
+        "hits": 3,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 1,
+        "recipient": 1,
+        "sameActor": true,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "source": 1,
+        "recipient": 1,
+        "sameActor": true,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timing": [
+      {
+        "fps": 30,
+        "arrivals": [
+          0
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          0
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          0
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          1
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          1
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          3
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 3,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          3
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 3,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          30
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "arrivals": [
+          0,
+          30
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          0
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          0
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          1
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          1
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          6
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 6,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          6
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 6,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          60
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "arrivals": [
+          0,
+          60
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          0
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          0
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          1
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          1
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          12
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 12,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          12
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 12,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          120
+        ],
+        "secondCaster": false,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 120,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "arrivals": [
+          0,
+          120
+        ],
+        "secondCaster": true,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 120,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          3
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 3,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          3
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 3,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          3
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 3,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          3
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 3,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          6
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 6,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          6
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 6,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          6
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 6,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          6
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 6,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          12
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 12,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          12
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 12,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          12
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 12,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          0
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          1
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          12
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 12,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ]
+      }
+    ],
+    "amounts": [
+      {
+        "maximum": 1,
+        "extra": null,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1,
+        "extra": null,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1,
+        "extra": 7611400,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1,
+        "extra": 7611400,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1,
+        "extra": 6840100,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1,
+        "extra": 6840100,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "extra": null,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "extra": null,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "extra": 7611400,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "extra": 7611400,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "extra": 6840100,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 99,
+        "extra": 6840100,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "extra": null,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "extra": null,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "extra": 7611400,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "extra": 7611400,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "extra": 6840100,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 1000,
+        "extra": 6840100,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 2345,
+        "extra": null,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 2345,
+        "extra": null,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 2345,
+        "extra": 7611400,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 2345,
+        "extra": 7611400,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 2345,
+        "extra": 6840100,
+        "hits": 1,
+        "values": [
+          20,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "maximum": 2345,
+        "extra": 6840100,
+        "hits": 3,
+        "values": [
+          60,
+          0,
+          60,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "projectile": [
+      {
+        "fps": 30,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "fps": 60,
+        "shots": [
+          0
+        ]
+      },
+      {
+        "fps": 120,
+        "shots": [
+          0
+        ]
+      }
+    ],
+    "disabled": [
+      {
+        "id": 7090100,
+        "mask": 1,
+        "flags": 5,
+        "children": []
+      },
+      {
+        "id": 7090100,
+        "mask": 2,
+        "flags": 6,
+        "children": []
+      },
+      {
+        "id": 7090100,
+        "mask": 262144,
+        "flags": 262148,
+        "children": []
+      },
+      {
+        "id": 7090100,
+        "mask": 2147483648,
+        "flags": 2147483652,
+        "children": []
+      },
+      {
+        "id": 7090102,
+        "mask": 1,
+        "flags": 5,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 7090102,
+        "mask": 2,
+        "flags": 6,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 7090102,
+        "mask": 262144,
+        "flags": 262148,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 7090102,
+        "mask": 2147483648,
+        "flags": 2147483652,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "mixed": [
+      {
+        "hits": 0,
+        "regen": 0,
+        "pulses": []
+      },
+      {
+        "hits": 0,
+        "regen": 1,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 0,
+        "regen": 3,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 1,
+        "regen": 0,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 1,
+        "regen": 1,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              22,
+              0,
+              22,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 1,
+        "regen": 3,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              26,
+              0,
+              26,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 3,
+        "regen": 0,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 3,
+        "regen": 1,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              62,
+              0,
+              62,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "values": [
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "hits": 3,
+        "regen": 3,
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              66,
+              0,
+              66,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              60,
+              0,
+              60,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 61,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 121,
+            "values": [
+              6,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "connected": [
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          0,
+          1,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          0,
+          1,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          0,
+          1,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 30,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          0,
+          1,
+          30
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 30,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 30,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          0,
+          1,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          0,
+          1,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          0,
+          1,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 60,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          0,
+          1,
+          60
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 60,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 60,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 1,
+        "kills": [
+          0,
+          0,
+          1,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 120,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 0,
+        "copies": 3,
+        "kills": [
+          0,
+          0,
+          1,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 120,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 1,
+        "kills": [
+          0,
+          0,
+          1,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 120,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "fps": 120,
+        "special": 1,
+        "copies": 3,
+        "kills": [
+          0,
+          0,
+          1,
+          120
+        ],
+        "shots": [
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 0,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 1,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          },
+          {
+            "frame": 120,
+            "behavior": 990901000,
+            "payload": "8403000002ff0000"
+          }
+        ],
+        "pulses": [
+          {
+            "frame": 0,
+            "values": [
+              40,
+              0,
+              40,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 1,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "frame": 120,
+            "values": [
+              20,
+              0,
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "upstream": [
+      {
+        "amount": -1,
+        "special": 0,
+        "rewards": [],
+        "children": [
+          7090101
+        ]
+      },
+      {
+        "amount": -1,
+        "special": 1,
+        "rewards": [],
+        "children": [
+          7090103
+        ]
+      },
+      {
+        "amount": 0,
+        "special": 0,
+        "rewards": [],
+        "children": [
+          7090101
+        ]
+      },
+      {
+        "amount": 0,
+        "special": 1,
+        "rewards": [],
+        "children": [
+          7090103
+        ]
+      },
+      {
+        "amount": 0.4,
+        "special": 0,
+        "rewards": [
+          1
+        ],
+        "children": [
+          7090101
+        ]
+      },
+      {
+        "amount": 0.4,
+        "special": 1,
+        "rewards": [
+          1
+        ],
+        "children": [
+          7090103
+        ]
+      },
+      {
+        "amount": 0.6,
+        "special": 0,
+        "rewards": [
+          1
+        ],
+        "children": [
+          7090101
+        ]
+      },
+      {
+        "amount": 0.6,
+        "special": 1,
+        "rewards": [
+          1
+        ],
+        "children": [
+          7090103
+        ]
+      },
+      {
+        "amount": 1,
+        "special": 0,
+        "rewards": [
+          1
+        ],
+        "children": [
+          7090101
+        ]
+      },
+      {
+        "amount": 1,
+        "special": 1,
+        "rewards": [
+          1
+        ],
+        "children": [
+          7090103
+        ]
+      },
+      {
+        "amount": 1000,
+        "special": 0,
+        "rewards": [
+          1000
+        ],
+        "children": [
+          7090101
+        ]
+      },
+      {
+        "amount": 1000,
+        "special": 1,
+        "rewards": [
+          1000
+        ],
+        "children": [
+          7090103
+        ]
+      }
+    ],
+    "filter": [
+      {
+        "attack": 2,
+        "selfTarget": 1,
+        "value": 98,
+        "sourceHandle": 268435457,
+        "ownerLookups": [
+          268435457
+        ]
+      },
+      {
+        "attack": 800000100,
+        "selfTarget": 0,
+        "value": 67108963,
+        "sourceHandle": 268435457,
+        "ownerLookups": [
+          268435457
+        ]
+      },
+      {
+        "attack": 900901000,
+        "selfTarget": 0,
+        "value": 67108961,
+        "sourceHandle": 268435457,
+        "ownerLookups": [
+          268435457
+        ]
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "kill": "668380 → 50A150 → 3C7FD0",
+    "emission": "50AA20 → 397570 → 3975D0",
+    "projectile": "343280 → 347700",
+    "hit": "43BE60 → 3C80A0 → 3DB410",
+    "relation": "52CC60 → 3D1B30",
+    "filter": "535A60..535BF9 → E6D630 / 536870",
+    "insert": "50D060",
+    "qualify": "5057D0",
+    "update": "50ACD0",
+    "hp": "506EC0"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "214F3E0 allocator identity for empty attacker effect-vector collection",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "347700 projectile recorder; no scene collision",
+    "3975D0 Behavior request recorder; original state-275 emission gate",
+    "3CED90/4D1B20 explicit neutral animation actor context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "535A60..535BF9 executes original filter construction with actual attack rows, an explicit owner handle and absent 63F840 owner lookup. The collision consumer is not executed.",
+    "668380 reward and notification sinks are recorded; 4D1AE0 is an explicit false predicate. Enemy death/reward ownership and saved-reward replay are not simulated.",
+    "Connected timeline delivers a successful impact on each actual emission; no spatial/network latency.",
+    "E6D630 actual AtkParam_Pc row lookup",
+    "E87800 actual ailment-notification Bullet lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "Impact arrivals are fixtures, not projectile candidate selection or scene collision.",
+    "Two explicit source actors of relation classes 1 and 2; recipient class 1.",
+    "allocator virtual +18 explicit valid tag; native empty vector collection",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit local hit-score context in mode 0",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "recipient virtual +200 false ordinary hit predicate"
+  ],
+  "limitations": [
+    "Forced same-actor impact bypasses upstream selfTarget=0; it cannot establish that this heal applies to the killer.",
+    "No full spatial candidate search/collision, distance-boundary tests, final current HP write/cap or network latency.",
+    "The kill branch flag is an explicit input, not a last-hit ownership flag. Both branches use the same current healing payload.",
+    "DLL rewrites, full equipment rebuild, death, reload and multiplayer are not simulated."
+  ],
+  "gameplayVerified": false
+}

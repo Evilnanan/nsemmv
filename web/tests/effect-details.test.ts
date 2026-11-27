@@ -1,3 +1,4 @@
+import teamKillHeal from "../../data/effect-team-kill-heal-evidence.json";
 import teamStamina from "../../data/effect-team-stamina-evidence.json";
 import madnessFp from "../../data/effect-madness-fp-evidence.json";
 import nearbyPoisonAttack from "../../data/effect-nearby-poison-attack-evidence.json";
@@ -1061,6 +1062,33 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("keeps each ally kill heal at 20 HP while preserving independent kill events", () => {
+    expect(teamKillHeal.gameplayVerified).toBe(false);
+    expect(research.teamKillHealEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-team-kill-heal-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7090100)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不增加单次恢复量");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "打倒敌人时", values: [["HP定值恢复", "20"]], duration: null, interval: null });
+    expect(detail.notes).toContain("连续击杀可分别触发；多名队友同时触发时，恢复量相加。");
+    for (const row of teamKillHeal.checks.dispatch) {
+      expect(row.children).toEqual(row.copies ? [row.special ? 7090103 : 7090101] : []);
+      expect(row.shots.map((s) => s.behavior)).toEqual(row.copies ? [990901000] : []);
+    }
+    for (const row of teamKillHeal.checks.amounts)
+      expect(row.values).toEqual([20 * row.hits, 0, 20 * row.hits, 0, 0, 0, 0]);
+    for (const row of teamKillHeal.checks.timing) {
+      expect(row.pulses.map((p) => p.frame)).toEqual([...new Set(row.arrivals)]);
+      expect(row.pulses.reduce((sum, p) => sum + p.values[0], 0)).toBe(20 * row.arrivals.length);
+    }
+    for (const row of teamKillHeal.checks.repeat)
+      expect(row.shots.map((s) => s.frame)).toEqual(row.kills);
+    for (const row of teamKillHeal.checks.connected)
+      expect(row.pulses.reduce((sum, p) => sum + p.values[0], 0)).toBe(20 * row.kills.length);
   });
 
   it("keeps the team stamina aura at one shared strength while allowing critical buffs", () => {
