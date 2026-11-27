@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 630,
+    "nativeStacking": 631,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -16376,12 +16376,13 @@
         7260901
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "nearby-rot-recovery"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "实际弹体碰撞及边界距离、场景阵营构造、其他腐败来源与动作中断、当前 HP 最终写入／上限、DLL／完整装备重建／卸下／死亡／重载／多人；已验证原生发作、条件清理与再发作、范围通知的显式接收、恢复量取整／组合及持续时间刷新"
       ],
       "gameplayVerified": false
     },
@@ -50621,6 +50622,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "nearbyRotRecoveryEvidenceSha256": "341321cc62fcf04ba5bb55ae700f5b4b86cf20be1914d738578c9acdc5af6cd7",
   "nearbyAilmentAttackEvidenceSha256": "9b05fddb28b8cda5661a61a151606e54bf1fb559768d18ddfebed29079d22fa0",
   "knockbackProtectionEvidenceSha256": "c79fd08ef0740b2eaae7d73e51532fbc29f8fa2a3f0907d1a760c53f996f006e",
   "throwingWeaponEvidenceSha256": "1a009c9f9f27d51291bb825744cc20047548021ce16e43949e70fafc1dbdb599",

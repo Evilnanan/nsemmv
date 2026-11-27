@@ -1,3 +1,4 @@
+import nearbyRotRecovery from "../../data/effect-nearby-rot-recovery-evidence.json";
 import nearbyAilmentAttack from "../../data/effect-nearby-ailment-attack-evidence.json";
 import knockbackProtection from "../../data/effect-knockback-protection-evidence.json";
 import throwingWeapon from "../../data/effect-throwing-weapon-evidence.json";
@@ -1056,6 +1057,37 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("refreshes nearby rot recovery without resetting its pulse clock", () => {
+    expect(nearbyRotRecovery.gameplayVerified).toBe(false);
+    expect(research.nearbyRotRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-nearby-rot-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7260900)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("可与“持续恢复血量”叠加");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "自身或附近敌人陷入腐败后", values: [["HP恢复", "最大值的 0.15%＋15"]], duration: 15, interval: 1.3 });
+    expect(detail.notes).toContain("首次约 1.3 秒后恢复，未刷新时共 11 次。");
+    expect(detail.notes.join(" ")).toContain("保持原有恢复节奏");
+    for (const row of nearbyRotRecovery.checks.amounts) {
+      const amount = row.copies ? Math.trunc(15 + row.maximum * 0.0015) : 0;
+      expect(row.values).toEqual([amount, 0, amount, 0, 0, 0, 0]);
+    }
+    for (const row of nearbyRotRecovery.checks.lifetime) {
+      expect(row.pulses).toHaveLength(11);
+      expect(Math.abs(row.pulses[0].frame - row.changes[1].frame - 1.3 * row.fps)).toBeLessThanOrEqual(3);
+    }
+    for (const row of nearbyRotRecovery.checks.refresh) {
+      expect(row.pulses[0].frame).toBe(81);
+      for (let i = 1; i < row.pulses.length; i++) expect(row.pulses[i].frame - row.pulses[i - 1].frame).toBe(78);
+      expect(Math.abs(row.changes[2].frame - row.hits.at(-1)! - 900)).toBeLessThanOrEqual(5);
+    }
+    for (const row of nearbyRotRecovery.checks.reinfection) {
+      expect(row.shots).toHaveLength(2);
+      expect(row.snapshots[1].nodes).toEqual([]);
     }
   });
 
