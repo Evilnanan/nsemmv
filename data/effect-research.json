@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 618,
+    "nativeStacking": 621,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -4155,15 +4155,17 @@
         2203
       ],
       "detailSources": [
-        7160001
+        7160001,
+        320
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "counter-recovery"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整碰撞及运行时突刺类型构造、外层命中准入、动画窗口调度与保留位消费、最终 HP 上限／写入和治疗修正、99008 实际来源、DLL／装备重建／死亡／重载／多人；已组合原生反击判定、本地攻击者标记发放和 HP 请求，同更新前多次触发合并"
       ],
       "gameplayVerified": false
     },
@@ -4177,15 +4179,17 @@
         2203
       ],
       "detailSources": [
-        7160002
+        7160002,
+        320
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "counter-recovery"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整碰撞及运行时突刺类型构造、外层命中准入、动画窗口调度与保留位消费、最终 HP 上限／写入和治疗修正、99008 实际来源、DLL／装备重建／死亡／重载／多人；已组合原生反击判定、本地攻击者标记发放和 HP 请求，同更新前多次触发合并"
       ],
       "gameplayVerified": false
     },
@@ -15925,15 +15929,17 @@
         2203
       ],
       "detailSources": [
-        7160000
+        7160000,
+        320
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "counter-recovery"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整碰撞及运行时突刺类型构造、外层命中准入、动画窗口调度与保留位消费、最终 HP 上限／写入和治疗修正、99008 实际来源、DLL／装备重建／死亡／重载／多人；已组合原生反击判定、本地攻击者标记发放和 HP 请求，同更新前多次触发合并"
       ],
       "gameplayVerified": false
     },
@@ -50593,6 +50599,7 @@
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
+  "counterRecoveryEvidenceSha256": "94917b8bff0d46fb185351c90548bc415a4253349000c717bdd1c6f55886abf5",
   "damageRotEvidenceSha256": "f723d67c1bde979893c32f9a5154de2bd19d6baf04e1747a5d97af9db49aea50",
   "damageAttackEvidenceSha256": "5785b9c5227c51f03fc2643bcde329a861f2bbcd535c488504d4dd05c897e172",
   "undertakerChargedEvidenceSha256": "4ba3076f37742d9328602eea3ac90c45851266ab0a7a0549cde4eda17c5ce3a0",

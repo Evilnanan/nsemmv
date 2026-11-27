@@ -45,6 +45,7 @@ import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
 import executorUltimateAttack from "../../data/effect-executor-ultimate-attack-evidence.json";
 import undertakerCharged from "../../data/effect-undertaker-charged-evidence.json";
 import damageAttack from "../../data/effect-damage-attack-evidence.json";
+import counterRecovery from "../../data/effect-counter-recovery-evidence.json";
 import damageRot from "../../data/effect-damage-rot-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
@@ -1050,6 +1051,34 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("explains counter recovery grades and merges simultaneous trigger markers", () => {
+    expect(counterRecovery.gameplayVerified).toBe(false);
+    expect(research.counterRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-counter-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const family of counterRecovery.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("不同等级可叠加");
+      expect(detail.stackingDetail).toContain("回复比例相加");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        phase: "突刺反击命中时", values: [["HP恢复", `最大值的 ${family.percent}%`]],
+        duration: null, interval: null, restrictions: [], scope: [],
+      });
+      expect(detail.notes).toEqual(["同一次效果更新前的多次反击合并回复一次。"]);
+    }
+    const allGrades = counterRecovery.checks.mixed.find(row => row.counts.every(n => n === 3))!;
+    expect(allGrades.hp).toEqual([0, 98, 0, 0, 0]);
+    for (const row of counterRecovery.checks.composed) {
+      if (!row.local || row.target === null || row.target === 31 && row.physicalType !== 2)
+        expect(row.hp.every(n => n === 0)).toBe(true);
+    }
+    for (const row of counterRecovery.checks.repeat) {
+      const amount = counterRecovery.families.find(f => f.effect === row.effect)!.percent * 10;
+      expect(row.hp.reduce((sum, n) => sum + n, 0)).toBe(row.hitFrames.length * amount);
     }
   });
 
