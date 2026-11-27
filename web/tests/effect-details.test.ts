@@ -1,3 +1,4 @@
+import madnessFp from "../../data/effect-madness-fp-evidence.json";
 import nearbyPoisonAttack from "../../data/effect-nearby-poison-attack-evidence.json";
 import nearbyRotRecovery from "../../data/effect-nearby-rot-recovery-evidence.json";
 import nearbyAilmentAttack from "../../data/effect-nearby-ailment-attack-evidence.json";
@@ -1059,6 +1060,37 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("distinguishes madness FP versions and preserves recovery timing when refreshed", () => {
+    expect(madnessFp.gameplayVerified).toBe(false);
+    expect(research.madnessFpEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-madness-fp-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const family of madnessFp.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toContain("同版不叠加");
+      expect(detail.stackingDetail).toContain("两个同名版本可同时生效，每次合计恢复 2 FP");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({ phase: "自身发狂后", values: [["FP恢复", "1"]], duration: 25, interval: 0.5, scope: [], restrictions: [] });
+      expect(detail.notes).toEqual(["首次立即恢复；再次触发刷新持续时间，保持原有恢复节奏。", "跳过发狂受创动作时不触发。"]);
+    }
+    expect(madnessFp.binding.animation).toBe("a000_005850");
+    expect(madnessFp.checks.script[0].events).toBe("W_DamageMad");
+    for (const row of madnessFp.checks.script.slice(1)) expect(row.events).toBe("");
+    for (const row of madnessFp.checks.amounts)
+      expect(row.values).toEqual([row.counts.filter(Boolean).length, 0]);
+    for (const row of madnessFp.checks.lifetime) {
+      expect(row.pulses).toHaveLength(51);
+      expect(row.pulses[0].frame).toBe(row.changes[1].frame);
+      expect(Math.abs(row.changes[2].frame - row.changes[1].frame - 25 * row.fps)).toBeLessThanOrEqual(4);
+    }
+    for (const row of madnessFp.checks.refresh) {
+      expect(Math.abs(row.changes[2].frame - row.starts.at(-1)! - 1500)).toBeLessThanOrEqual(4);
+      row.pulses.forEach((pulse, i) => { expect(pulse.frame).toBe(1 + 30 * i); expect(pulse.values).toEqual([2, 0]); });
+    }
+    for (const row of madnessFp.checks.disabled) expect(row.values).toEqual([0, 0]);
   });
 
   it("accepts both nearby poison and rot notifications without creating a second attack layer", () => {

@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 632,
+    "nativeStacking": 634,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -12229,15 +12229,14 @@
         7035502
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "madness-fp",
         "action-triggers"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整发狂到受创动作调度、全部跳过／中断分支及 HKS／Havok VM、最终 FP 写入／上限、DLL／装备完整清理重建／死亡／重载／多人；已验证原始发狂脚本的六组显式输入、行为图与 TAE 绑定、原生事件发放、同版去重与不同版本／持续回蓝组合、首次恢复及 25 秒周期／刷新、移除根后的条件停用"
       ],
       "gameplayVerified": false
     },
@@ -12254,15 +12253,14 @@
         7035512
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "madness-fp",
         "action-triggers"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整发狂到受创动作调度、全部跳过／中断分支及 HKS／Havok VM、最终 FP 写入／上限、DLL／装备完整清理重建／死亡／重载／多人；已验证原始发狂脚本的六组显式输入、行为图与 TAE 绑定、原生事件发放、同版去重与不同版本／持续回蓝组合、首次恢复及 25 秒周期／刷新、移除根后的条件停用"
       ],
       "gameplayVerified": false
     },
@@ -50623,6 +50621,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "madnessFpEvidenceSha256": "317d1e4c3bf412e3ba10d2009ce18c56e069fe09c60ec0d59c12221a3aefe95f",
   "nearbyPoisonAttackEvidenceSha256": "d896fe68e79be8f8f9dc22e0849e300f682db7316fc3ce21350179fe698f5313",
   "nearbyRotRecoveryEvidenceSha256": "341321cc62fcf04ba5bb55ae700f5b4b86cf20be1914d738578c9acdc5af6cd7",
   "nearbyAilmentAttackEvidenceSha256": "9b05fddb28b8cda5661a61a151606e54bf1fb559768d18ddfebed29079d22fa0",
