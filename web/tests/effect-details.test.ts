@@ -1,3 +1,4 @@
+import mixedMagicDefense from "../../data/effect-mixed-magic-defense-evidence.json";
 import mixedMagic from "../../data/effect-mixed-magic-evidence.json";
 import revenantSelf from "../../data/effect-revenant-self-evidence.json";
 import randomEnchant from "../../data/effect-random-enchant-evidence.json";
@@ -118,6 +119,40 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("combines pure-holy defense while retaining its non-refreshing bonus and aura overlap", () => {
+    expect(Object.values(mixedMagicDefense.checks).reduce((n, rows) => n + rows.length, 0)).toBe(70);
+    for (const row of mixedMagicDefense.checks.timing) {
+      for (const value of row.samples[1].defense) expect(value).toBeCloseTo(row.copies ? 0.72 : 0.9, 5);
+      for (const value of row.samples.at(-1)!.defense) expect(value).toBe(1);
+      for (const node of row.afterExpiry) expect(node.lifetime).toBe(30);
+    }
+    for (const row of mixedMagicDefense.checks.refresh) {
+      expect(row.last["1800300"] / row.fps).toBeCloseTo(35, 0);
+      expect(row.last["7034204"] / row.fps).toBeCloseTo(30, 0);
+      expect(row.bonusAdded).toEqual([7034204]);
+      expect(row.bonusKept).toEqual([7034204]);
+      for (const value of row.samples.at(-2)!.defense) expect(value).toBeCloseTo(0.9, 5);
+    }
+    for (const row of mixedMagicDefense.checks.overlap) {
+      const ids = row.nodes.map(n => n.id);
+      expect(ids.includes(1800300)).toBe(row.order === "before");
+      expect(ids.includes(row.extra)).toBe(row.order === "after");
+      expect(ids).toContain(7034204);
+    }
+    for (const id of [7034200, 7034201]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[2]).toMatchObject({ source: 7034204, branches: [1800300], phase: "纯圣混合魔法", duration: 30, restrictions: ["自身"], values: [["额外承伤倍率", "-20%"], ["合计承伤倍率", "-28%"]] });
+      expect(detail.notes.join()).toContain("不会刷新其时长");
+      expect(detail.notes.join()).toContain("黄金树立誓");
+      expect(detail.notes.join()).toContain("延长法术效果时间");
+      expect(research.effects[id.toString() as "7034200"].evidence).toContain("mixed-magic-defense");
+    }
+    expect(mixedMagicDefense.gameplayVerified).toBe(false);
+    expect(research.mixedMagicDefenseEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-mixed-magic-defense-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("deduplicates both cocktail relic versions and hides their refreshed maintenance lifetime", () => {
     expect(Object.values(mixedMagic.checks).reduce((n, rows) => n + rows.length, 0)).toBe(999);
     for (const row of mixedMagic.checks.filters) {
@@ -135,8 +170,8 @@ describe("MMV effect details", () => {
       const detail = effectDetail(id)!;
       expect(detail.stacking).toBe("不可叠加");
       expect(detail.stackingDetail).toContain("两个同名版本");
-      expect(detail.blocks.map(b => b.duration)).toEqual([null, null]);
-      expect(detail.blocks.map(b => b.phase)).toEqual(["混合魔法", "施法时"]);
+      expect(detail.blocks.slice(0, 2).map(b => b.duration)).toEqual([null, null]);
+      expect(detail.blocks.slice(0, 2).map(b => b.phase)).toEqual(["混合魔法", "施法时"]);
       expect(detail.blocks[0].scope).toEqual([]);
       expect(detail.notes.join()).toContain("按乘法计算");
       expect(detail.notes.join()).toContain("其他强化效果尚未解明");
@@ -3662,7 +3697,7 @@ describe("MMV effect details", () => {
   });
   it("retains conditional branches and does not sum kill notifications or promise unverified stacking", () => {
     const cocktail = effectDetail(7034200)!;
-    expect(cocktail.blocks.map((b) => [b.linked, b.duration])).toEqual([
+    expect(cocktail.blocks.slice(0, 2).map((b) => [b.linked, b.duration])).toEqual([
       [true, null],
       [true, null],
     ]);

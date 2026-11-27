@@ -11846,16 +11846,19 @@
       ],
       "detailSources": [
         7034201,
-        7034200
+        7034200,
+        7034204,
+        1800300
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "mixed-magic"
+        "mixed-magic",
+        "mixed-magic-defense"
       ],
       "openQuestions": [
-        "混合魔法各附加分支的完整触发、投射物与碰撞、实际资源扣除与取整、DLL、装备重建／死亡／重载／联机；已验证两同名版本选装、去重、周期维持、攻击标签、三个法术耗蓝通道、减耗组合及直接移除。内部三秒是刷新维护寿命，未作为玩家持续时间显示"
+        "其余混合魔法附加分支的完整触发、投射物与碰撞、实际资源扣除与取整、DLL、装备重建／死亡／重载／联机；已验证两同名版本选装、去重、周期维持、攻击标签、三个法术耗蓝通道、减耗组合及直接移除。内部三秒是刷新维护寿命，未作为玩家持续时间显示；纯圣的真实施法／动画发放、承伤组合、延长、覆盖、到期与重施已验证，TAE 额外防护存在时只标记活动、不刷新寿命"
       ],
       "gameplayVerified": false
     },
@@ -11870,16 +11873,19 @@
       ],
       "detailSources": [
         7034201,
-        7034200
+        7034200,
+        7034204,
+        1800300
       ],
       "values": "decoded-fields",
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "mixed-magic"
+        "mixed-magic",
+        "mixed-magic-defense"
       ],
       "openQuestions": [
-        "混合魔法各附加分支的完整触发、投射物与碰撞、实际资源扣除与取整、DLL、装备重建／死亡／重载／联机；已验证两同名版本选装、去重、周期维持、攻击标签、三个法术耗蓝通道、减耗组合及直接移除。内部三秒是刷新维护寿命，未作为玩家持续时间显示"
+        "其余混合魔法附加分支的完整触发、投射物与碰撞、实际资源扣除与取整、DLL、装备重建／死亡／重载／联机；已验证两同名版本选装、去重、周期维持、攻击标签、三个法术耗蓝通道、减耗组合及直接移除。内部三秒是刷新维护寿命，未作为玩家持续时间显示；纯圣的真实施法／动画发放、承伤组合、延长、覆盖、到期与重施已验证，TAE 额外防护存在时只标记活动、不刷新寿命"
       ],
       "gameplayVerified": false
     },
@@ -50616,6 +50622,7 @@
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
   "ironeyeObservationEvidenceSha256": "f969fe0c259179152ef932792153072893a351ea4fed75bb0662ee9d9375b2c2",
+  "mixedMagicDefenseEvidenceSha256": "08606b25f35d58df0a29ead5206fa64f3f11461ca7bd0cb4598ee3fea680b881",
   "mixedMagicEvidenceSha256": "0070e66bc61a17c7d4b109df48eb51fd4583a1bd8ac47f2c434366ef8cc0a9e4",
   "revenantSelfEvidenceSha256": "8d3972cba72a92a1a9bb6b17f6258f89a0f06b5229264fdbef4cbc45d3e7f007",
   "randomEnchantEvidenceSha256": "0560f213518a4aa1aee44d7f7f9406a23bda64aa6f65b0519bfdf3f9b1adff39",
