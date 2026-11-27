@@ -714,6 +714,19 @@ if not args.extract_only:
     assert undertaker_combo['atkParamSha256'] == hit_stamina['atkParamSha256']
     assert len(undertaker_combo['positiveAttacks']) == 493 and undertaker_combo['tagSets'] == 216
     assert {k: len(v) for k, v in undertaker_combo['checks'].items()} == dict(selection=44, attacks=1386, context=416, lifetime=18, refresh=6, extension=10, disabled=2)
+damage_rot_path = ROOT / 'data/effect-damage-rot-evidence.json'
+damage_rot = json.loads(damage_rot_path.read_text())
+if not args.extract_only:
+    assert damage_rot['schema'] == 1 and damage_rot['regulationSha256'] == catalog['regulationSha256']
+    assert damage_rot['exeSha256'] == evidence['exeSha256'] and not damage_rot['gameplayVerified']
+    assert damage_rot['paramSha256'] == evidence['paramSha256']
+    assert damage_rot['attachParamSha256'] == hit_stamina['attachParamSha256']
+    assert damage_rot['attackParamSha256'] == hit_stamina['atkParamSha256']
+    assert damage_rot['weaponParamSha256'] == '28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea'
+    assert damage_rot['scriptSha256'] == scholar_cost['scriptSha256']
+    assert damage_rot['effect'] == 7170100 and damage_rot['roots'] == [7170100, 7170105]
+    assert damage_rot['tagSets'] == 216 and damage_rot['weaponCount'] == 2663
+    assert {k: len(v) for k, v in damage_rot['checks'].items()} == dict(style=8, selection=44, trigger=96, contexts=312, tags=432, weapons=2, composed=78, correction=10, targets=6, onset=10, damage=8, periodic=6, lifetime=24, refresh=4, overwrite=6, switch=2, disabled=2, continuous=12)
 damage_attack_path = ROOT / 'data/effect-damage-attack-evidence.json'
 damage_attack = json.loads(damage_attack_path.read_text())
 if not args.extract_only:
@@ -1404,6 +1417,7 @@ STACKING_RULES = {
     'undertaker-combo': ('不可叠加', '重复装备不提高倍率；再次触发刷新持续时间', ['undertaker-combo']),
     'undertaker-charged': ('不可叠加', '重复装备或同名版本混用不增强效果；再次命中刷新持续时间', ['undertaker-charged']),
     'damage-attack': ('不同等级可叠加', '同等级及同名版本不重复增加倍率；不同等级倍率相乘，再次触发刷新各自持续时间', ['damage-attack']),
+    'damage-rot': ('不可叠加', '重复装备不增加累积量；再次触发刷新附魔持续时间', ['damage-rot']),
     'spell-duration-single': ('不同等级可叠加', '同一版本不重复；不同版本的延长比例相加', ['spell-duration']),
     'spell-duration-repeat': ('可叠加', '同一版本和不同版本均可叠加，延长比例相加', ['spell-duration']),
     'low-hp-defense': ('可叠加', '同等级和不同等级均可叠加，承伤倍率相乘', ['low-hp-defense']),
@@ -1815,6 +1829,26 @@ for id, effect in source['effects'].items():
                  '与“减少专注值消耗”词条的减耗倍率相乘。']
         info = None
         rule = 'scholar-fp-cost'
+    if int(id) == damage_rot['effect']:
+        assert effect['roots'] == {'passiveSpEffectId_1': 7170100, 'passiveSpEffectId_2': 7170105} and effect['runtimeExclusive'] == -1
+        for family in damage_rot['families']:
+            leaf_row, payload_row = (source['spells'][str(family[k])] for k in ('leaf', 'payload'))
+            assert leaf_row['atkOccurrenceSpEffectId'] == family['payload'] and leaf_row['effectEndurance'] == damage_rot['enchantDuration'] == 12
+            assert payload_row['diseaseAttackPower'] == damage_rot['buildup'] == 25
+            assert payload_row['effectEndurance'] == damage_rot['rotDuration'] == 40
+            assert math.isclose(payload_row['motionInterval'], damage_rot['rotInterval'], rel_tol=1e-6)
+            assert math.isclose(payload_row['changeHpRate'], damage_rot['rotHpPercent'], rel_tol=1e-6) and payload_row['changeHpPoint'] == damage_rot['rotHpPoints'] == 15
+        blocks = [dict(source=7170102, branches=[7170107], phase='受伤后·武器附魔', linked=True,
+                       values=[['腐败累积', '25 点／命中']], scope=[], restrictions=[], duration=12, interval=None),
+                  dict(source=7170103, branches=[7170108], phase='腐败发作后', linked=True,
+                       values=[['血量损失', '目标最大血量的 0.15%＋15 点／次']], scope=[], restrictions=[], duration=40, interval=1.3)]
+        notes = ['通常附于右手武器；双手共持左手武器时改为左手。',
+                 '仅限可附魔武器；累积量受攻击动作修正。',
+                 '与普通火油脂的同手附魔互相覆盖，后施加者生效。',
+                 '每 1 秒恢复触发判定，连续受伤不一定每次刷新。',
+                 '已发作的腐败不会因继续命中而刷新。']
+        info = None
+        rule = 'damage-rot'
     if int(id) in damage_attack['effects']:
         expected_roots = {f'passiveSpEffectId_{n}': root for n, root in enumerate(damage_attack['rootsByEffect'][id], 1) if root >= 0}
         assert effect['roots'] == expected_roots and effect['runtimeExclusive'] == -1
@@ -2766,9 +2800,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('damage-attack', 'undertaker-charged', 'scholar-fp-cost', 'spell-duration-single', 'spell-duration-repeat', 'undertaker-combo', 'hit-stamina', 'low-hp-defense', 'low-hp-defense-single', 'target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('damage-rot', 'damage-attack', 'undertaker-charged', 'scholar-fp-cost', 'spell-duration-single', 'spell-duration-repeat', 'undertaker-combo', 'hit-stamina', 'low-hp-defense', 'low-hp-defense-single', 'target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('damage-attack', 'undertaker-charged', 'scholar-fp-cost', 'spell-duration-single', 'spell-duration-repeat', 'undertaker-combo', 'hit-stamina', 'low-hp-defense', 'low-hp-defense-single', 'target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('damage-rot', 'damage-attack', 'undertaker-charged', 'scholar-fp-cost', 'spell-duration-single', 'spell-duration-repeat', 'undertaker-combo', 'hit-stamina', 'low-hp-defense', 'low-hp-defense-single', 'target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] in ('critical-normal', 'critical-plus'):
         questions.append('完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入')
@@ -2812,6 +2846,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整碰撞和命中上下文构造、所有攻击标签及来源、原生效果目标投递、与自然回精／动作耗精的帧内顺序、装备重建／死亡／重载及多人交互；命中结果在下一更新步插入攻击者容器，精力调用块及最终截断写入已原生执行')
     if rules[id] == 'undertaker-combo':
         questions.append('各攻击行对应的实际动作可达性、完整碰撞与命中上下文构造、原生目标投递与最终伤害、装备移除／死亡／重载及多人交互；493 个标记攻击行与所有标签组合代表已原生执行，命中结果直接插入攻击者容器')
+    if rules[id] == 'damage-rot':
+        questions.append('完整攻击上下文构造和动作异常修正提取、最终 HP 写入、特殊附魔优先级、敌人抗性／免疫／1120 成长与其他腐败来源、DLL 改写和完整装备重建／死亡／重载／多人；原生附魔选择的 ID 经显式上下文送入原生命中接收，已验证累积、发作、周期、刷新和普通火油脂覆盖')
     if rules[id] == 'damage-attack':
         questions.append('完整受伤入口与最终 HP 写入、来源类型 5 的实际动作、DLL 改写、完整装备重建与周期相位、死亡／重载／多人同步、9762 的其他外部消费者；已执行原生自身发放、伤害到期、周期重置、同版／异版叠加与移除后的共享状态条件')
     if rules[id] == 'undertaker-charged':
@@ -3009,6 +3045,7 @@ research['thrownConsumablesEvidenceSha256'] = hashlib.sha256(thrown_path.read_by
 research['executorUltimateAttackEvidenceSha256'] = hashlib.sha256(executor_attack_path.read_bytes()).hexdigest()
 research['scholarFpCostEvidenceSha256'] = hashlib.sha256(scholar_cost_path.read_bytes()).hexdigest()
 research['undertakerComboEvidenceSha256'] = hashlib.sha256(undertaker_combo_path.read_bytes()).hexdigest()
+research['damageRotEvidenceSha256'] = hashlib.sha256(damage_rot_path.read_bytes()).hexdigest()
 research['damageAttackEvidenceSha256'] = hashlib.sha256(damage_attack_path.read_bytes()).hexdigest()
 research['undertakerChargedEvidenceSha256'] = hashlib.sha256(undertaker_charged_path.read_bytes()).hexdigest()
 research['lowHpDefenseEvidenceSha256'] = hashlib.sha256(low_hp_defense_path.read_bytes()).hexdigest()

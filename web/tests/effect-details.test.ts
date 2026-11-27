@@ -45,6 +45,7 @@ import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
 import executorUltimateAttack from "../../data/effect-executor-ultimate-attack-evidence.json";
 import undertakerCharged from "../../data/effect-undertaker-charged-evidence.json";
 import damageAttack from "../../data/effect-damage-attack-evidence.json";
+import damageRot from "../../data/effect-damage-rot-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -1049,6 +1050,36 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("separates the damage-triggered rot enchantment from rot onset and periodic damage", () => {
+    expect(damageRot.gameplayVerified).toBe(false);
+    expect(research.damageRotEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-damage-rot-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7170100)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("刷新附魔持续时间");
+    expect(detail.blocks).toHaveLength(2);
+    expect(detail.blocks[0]).toMatchObject({
+      phase: "受伤后·武器附魔", values: [["腐败累积", "25 点／命中"]], duration: 12, interval: null,
+    });
+    expect(detail.blocks[1]).toMatchObject({
+      phase: "腐败发作后", values: [["血量损失", "目标最大血量的 0.15%＋15 点／次"]], duration: 40, interval: 1.3,
+    });
+    expect(detail.notes.join(" ")).toContain("双手共持左手武器");
+    expect(detail.notes.join(" ")).toContain("仅限可附魔武器");
+    expect(detail.notes.join(" ")).toContain("火油脂");
+    expect(detail.notes.join(" ")).toContain("已发作的腐败不会因继续命中而刷新");
+    for (const row of damageRot.checks.correction)
+      expect(row.remaining).toBe(500 - Math.trunc(25 * row.scale));
+    for (const row of damageRot.checks.onset)
+      expect(row.lifeAfter).toBe(row.lifeBefore);
+    for (const row of damageRot.checks.periodic) {
+      expect(row.packetFrames).toHaveLength(31);
+      expect(row.amount).toBe(-16);
+      expect(Math.abs(row.expiredFrame - row.fps * 40)).toBeLessThanOrEqual(4);
     }
   });
 

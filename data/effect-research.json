@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 617,
+    "nativeStacking": 618,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -15949,17 +15949,19 @@
         2060
       ],
       "detailSources": [
+        7170102,
+        7170107,
         7170103,
         7170108
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "damage-rot"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整攻击上下文构造和动作异常修正提取、最终 HP 写入、特殊附魔优先级、敌人抗性／免疫／1120 成长与其他腐败来源、DLL 改写和完整装备重建／死亡／重载／多人；原生附魔选择的 ID 经显式上下文送入原生命中接收，已验证累积、发作、周期、刷新和普通火油脂覆盖"
       ],
       "gameplayVerified": false
     },
@@ -50591,6 +50593,7 @@
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
+  "damageRotEvidenceSha256": "f723d67c1bde979893c32f9a5154de2bd19d6baf04e1747a5d97af9db49aea50",
   "damageAttackEvidenceSha256": "5785b9c5227c51f03fc2643bcde329a861f2bbcd535c488504d4dd05c897e172",
   "undertakerChargedEvidenceSha256": "4ba3076f37742d9328602eea3ac90c45851266ab0a7a0549cde4eda17c5ce3a0",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
