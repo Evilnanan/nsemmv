@@ -34,6 +34,7 @@ import spellFamily from "../../data/effect-spell-family-evidence.json";
 import handPoise from "../../data/effect-hand-poise-evidence.json";
 import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import guardPoise from "../../data/effect-guard-poise-evidence.json";
+import runeRate from "../../data/effect-rune-rate-evidence.json";
 import grease from "../../data/effect-grease-evidence.json";
 import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
 import periodicFp from "../../data/effect-periodic-fp-evidence.json";
@@ -936,6 +937,41 @@ describe("MMV effect details", () => {
     expect(scholarShockwave.gameplayVerified).toBe(false);
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("multiplies rune penalties while preserving fixed critical and sample rewards", () => {
+    expect(runeRate.families).toHaveLength(5);
+    for (const row of runeRate.checks.selection.filter(row => row.effects[0] === 6840000)) {
+      expect(row.position).toBe(3);
+      expect(row.slots.every(slots => slots[0] === 7000000 && slots[3] === 6840000)).toBe(true);
+      expect(row.roots).toEqual(row.effects);
+    }
+    for (const family of runeRate.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe(family.category === 0 ? "不可叠加" : "可叠加");
+      expect(detail.stackingDetail).toContain("卢恩倍率相乘");
+      expect(detail.notes.join()).toContain("致命一击与取得样本的固定卢恩不受此倍率影响");
+    }
+    const duplicatePenalty = runeRate.checks.multipliers.find(row => row.roots.length === 2 && row.roots.every(id => id === 6840000))!;
+    expect(duplicatePenalty.rate).toBeCloseTo(.81, 6);
+    expect(duplicatePenalty.nodes).toHaveLength(2);
+    const duplicateUnique = runeRate.checks.multipliers.find(row => row.roots.length === 2 && row.roots.every(id => id === 311100))!;
+    expect(duplicateUnique.rate).toBeCloseTo(1.15, 6);
+    expect(duplicateUnique.nodes).toHaveLength(1);
+    for (const row of runeRate.checks.awards) {
+      const expected = row.scale ? Math.trunc(Math.fround(Math.fround(row.base) * row.rate)) : row.base;
+      expect(row.values).toEqual([expected]);
+    }
+    for (const row of runeRate.checks.fixed) {
+      const expected = row.packets.reduce((sum, id) => sum + (id === 7031901 ? 600 : 1300), 0);
+      expect(row.values).toEqual(expected ? [expected] : []);
+    }
+    for (const id of [7031900, 7036500])
+      expect(effectDetail(id)!.notes).toContain("不受增加或减少卢恩的倍率影响。");
+    expect(runeRate.gameplayVerified).toBe(false);
+    expect(research.runeRateEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-rune-rate-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 

@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 577,
+    "nativeStacking": 578,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -958,12 +958,13 @@
         311100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "rune-rate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "敌人／道具／任务／脚本等各发放入口的倍率开关、队友共享倍率来源与投递、最终卢恩上限及死亡／拾回／重载／多人交互；本批验证玩家倍率与取整入口及两种固定奖励原生调用块"
       ],
       "gameplayVerified": false
     },
@@ -7641,12 +7642,13 @@
         6840000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "rune-rate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "敌人／道具／任务／脚本等各发放入口的倍率开关、队友共享倍率来源与投递、最终卢恩上限及死亡／拾回／重载／多人交互；本批验证玩家倍率与取整入口及两种固定奖励原生调用块"
       ],
       "gameplayVerified": false
     },
@@ -11240,7 +11242,8 @@
       "evidence": [
         "action-triggers",
         "triggerMatching",
-        "action-triggers"
+        "action-triggers",
+        "rune-rate"
       ],
       "openQuestions": [
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -12471,7 +12474,9 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "rune-rate"
+      ],
       "openQuestions": [
         "跨遗物同版／异版的覆盖、叠加与上限",
         "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
@@ -23657,12 +23662,13 @@
         8500000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "rune-rate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "敌人／道具／任务／脚本等各发放入口的倍率开关、队友共享倍率来源与投递、最终卢恩上限及死亡／拾回／重载／多人交互；本批验证玩家倍率与取整入口及两种固定奖励原生调用块"
       ],
       "gameplayVerified": false
     },
@@ -27379,12 +27385,13 @@
         8852000
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "rune-rate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "敌人／道具／任务／脚本等各发放入口的倍率开关、队友共享倍率来源与投递、最终卢恩上限及死亡／拾回／重载／多人交互；本批验证玩家倍率与取整入口及两种固定奖励原生调用块"
       ],
       "gameplayVerified": false
     },
@@ -27401,12 +27408,13 @@
         8852050
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "rune-rate"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "敌人／道具／任务／脚本等各发放入口的倍率开关、队友共享倍率来源与投递、最终卢恩上限及死亡／拾回／重载／多人交互；本批验证玩家倍率与取整入口及两种固定奖励原生调用块"
       ],
       "gameplayVerified": false
     },
@@ -50489,6 +50497,7 @@
   "guardPoiseEvidenceSha256": "a32ca8a1ca1dee00b841dbf55c782706dfe1f33aa7dfa22f9da1695f296636a8",
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
+  "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "periodicFpEvidenceSha256": "179df4092750c1ceddad6f035364d48d08ba03ab51d6dc3794698a0399de1b00",
   "periodicHpEvidenceSha256": "cabe19679dfd28acf3d93ff9bb4731392326b3fc1d8c287b6e3b623338843a18",
   "perfumeEvidenceSha256": "219eaa0954d080b8f64ca546ae87a791fa02b42bc88d396ae00faedb427e699b",
