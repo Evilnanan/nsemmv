@@ -36,6 +36,7 @@ import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
+import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
 import runeRate from "../../data/effect-rune-rate-evidence.json";
 import grease from "../../data/effect-grease-evidence.json";
 import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
@@ -940,6 +941,65 @@ describe("MMV effect details", () => {
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
+  });
+
+  it("uses the native HP threshold and additive buildup for low-health poison and rot", () => {
+    for (const [id, name, interval] of [[6851300, "中毒", 0.22], [6851400, "猩红腐败", 0.24]] as const) {
+      const detail = effectDetail(id)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toContain("累积量相加");
+      expect(detail.blocks[0]).toMatchObject({
+        source: id, phase: "血量 < 84.99% 时", values: [[`${name}累积`, "+2 点／次"]],
+        duration: null, interval,
+      });
+      expect(detail.notes.join()).toContain(`回血至门槛以上会停止累积，已发作的${name}不会因此解除`);
+    }
+    for (const row of lowHealthAilments.checks.threshold) {
+      expect(row.ratio).toBe(Math.fround(Math.fround(row.current) / Math.fround(row.maximum)));
+      expect(row.enabled).toBe(row.ratio <= row.bound);
+      expect(row.amount).toBe(row.enabled ? 2 * row.copies : 0);
+    }
+    const atNominal = lowHealthAilments.checks.threshold.filter(row => row.maximum === 10000 && row.current === 8499);
+    expect(atNominal.length).toBeGreaterThan(0);
+    expect(atNominal.every(row => !row.enabled && row.amount === 0)).toBe(true);
+    for (const row of lowHealthAilments.checks.timing) {
+      expect(row.packets.every(packet => packet.amount === 2 * row.copies)).toBe(true);
+      expect(row.total).toBe(row.packets.length * 2 * row.copies);
+    }
+    for (const row of lowHealthAilments.checks.transitions) {
+      for (const phase of row.phases) expect(phase.accumulation > 0).toBe(phase.current === 800);
+    }
+    expect(lowHealthAilments.gameplayVerified).toBe(false);
+    expect(research.lowHealthAilmentsEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-low-health-ailments-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("keeps low-health ailment buildup separate from its persistent onset damage", () => {
+    for (const [id, percent, flat] of [[6851300, 0.1, 10], [6851400, 0.15, 15]]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[1]).toMatchObject({
+        source: id + 1, duration: 40, interval: 1.3,
+        values: [["血量损失", `最大值的 ${percent}% + ${flat}／次`]],
+      });
+      expect(detail.stackingDetail).toContain("不增加发作后的掉血或延长持续时间");
+    }
+    for (const row of lowHealthAilments.checks.onset) {
+      for (const step of row.steps.slice(0, -1)) expect(step.hp[0]).toBe(0);
+      expect(row.steps.at(-1)!.hp[0]).toBeLessThan(0);
+    }
+    for (const row of lowHealthAilments.checks.lifetime) {
+      expect(Math.abs(row.expiredFrame / row.fps - 40)).toBeLessThanOrEqual(3.01 / row.fps);
+      expect(row.packets).toHaveLength(31);
+      expect(row.packets.every(packet => packet.hp === (row.effect === 6851300 ? -11 : -16))).toBe(true);
+    }
+    for (const row of lowHealthAilments.checks.repeat) {
+      expect(row.packets).toHaveLength(2);
+      expect(row.lifetimes[0]).toBeGreaterThan(row.lifetimes[1]);
+      expect(row.lifetimes[1]).toBeGreaterThan(row.lifetimes[2]);
+    }
+    expect(lowHealthAilments.checks.immunity.every(row => row.remaining === 2)).toBe(true);
   });
 
   it("gates flask damage curses on the drink animations and multiplies copies", () => {

@@ -1,0 +1,6975 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "families": [
+    {
+      "effect": 6851300,
+      "root": 6851300,
+      "leaf": 6851301,
+      "kind": 0,
+      "field": "poizonAttackPower",
+      "conditionHp": 84.98999786376953,
+      "interval": 0.2199999988079071,
+      "amount": 2,
+      "duration": 40,
+      "damageInterval": 1.2999999523162842,
+      "percent": 0.10000000149011612,
+      "flat": 10,
+      "cycle": 505
+    },
+    {
+      "effect": 6851400,
+      "root": 6851400,
+      "leaf": 6851401,
+      "kind": 1,
+      "field": "diseaseAttackPower",
+      "conditionHp": 84.98999786376953,
+      "interval": 0.23999999463558197,
+      "amount": 2,
+      "duration": 40,
+      "damageInterval": 1.2999999523162842,
+      "percent": 0.15000000596046448,
+      "flat": 15,
+      "cycle": 1120
+    }
+  ],
+  "checks": {
+    "selection": [
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 2,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300,
+          6851300
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 2,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400,
+          6851400
+        ]
+      }
+    ],
+    "threshold": [
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 84,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 0.8399999737739563,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 85,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 100,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 84,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 0.8399999737739563,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 85,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 100,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 84,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 0.8399999737739563,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 85,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 100,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 849,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 0.8489999771118164,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 850,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 1000,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 849,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 0.8489999771118164,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 850,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 1000,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 849,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 0.8489999771118164,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 850,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 1000,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 8498,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 0.8497999906539917,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 8499,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 10000,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 8498,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 0.8497999906539917,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 8499,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 10000,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 8498,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 0.8497999906539917,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 8499,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 10000,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 84989,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 0.8498899936676025,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 84990,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 100000,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 84989,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 0.8498899936676025,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851300,
+        "current": 84990,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 100000,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 0,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 84989,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 0.8498899936676025,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851300,
+        "current": 84990,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851300,
+        "current": 100000,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 84,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 0.8399999737739563,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 85,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 100,
+        "maximum": 100,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 84,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 0.8399999737739563,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 85,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 100,
+        "maximum": 100,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 84,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 0.8399999737739563,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 85,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 100,
+        "maximum": 100,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 849,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 0.8489999771118164,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 850,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 1000,
+        "maximum": 1000,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 849,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 0.8489999771118164,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 850,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 1000,
+        "maximum": 1000,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 849,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 0.8489999771118164,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 850,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 0.8500000238418579,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 1000,
+        "maximum": 1000,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 8498,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 0.8497999906539917,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 8499,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 10000,
+        "maximum": 10000,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 8498,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 0.8497999906539917,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 8499,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 10000,
+        "maximum": 10000,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 8498,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 0.8497999906539917,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 8499,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 10000,
+        "maximum": 10000,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 84989,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 0.8498899936676025,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 84990,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 100000,
+        "maximum": 100000,
+        "copies": 0,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 84989,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 0.8498899936676025,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 2
+      },
+      {
+        "effect": 6851400,
+        "current": 84990,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 100000,
+        "maximum": 100000,
+        "copies": 1,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 0,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 0.0,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 84989,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 0.8498899936676025,
+        "bound": 0.84989994764328,
+        "enabled": true,
+        "amount": 6
+      },
+      {
+        "effect": 6851400,
+        "current": 84990,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 0.8499000072479248,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      },
+      {
+        "effect": 6851400,
+        "current": 100000,
+        "maximum": 100000,
+        "copies": 3,
+        "ratio": 1.0,
+        "bound": 0.84989994764328,
+        "enabled": false,
+        "amount": 0
+      }
+    ],
+    "timing": [
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "copies": 1,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 2
+          },
+          {
+            "frame": 7,
+            "amount": 2
+          },
+          {
+            "frame": 14,
+            "amount": 2
+          },
+          {
+            "frame": 20,
+            "amount": 2
+          },
+          {
+            "frame": 27,
+            "amount": 2
+          },
+          {
+            "frame": 33,
+            "amount": 2
+          },
+          {
+            "frame": 40,
+            "amount": 2
+          },
+          {
+            "frame": 47,
+            "amount": 2
+          },
+          {
+            "frame": 53,
+            "amount": 2
+          },
+          {
+            "frame": 60,
+            "amount": 2
+          },
+          {
+            "frame": 66,
+            "amount": 2
+          },
+          {
+            "frame": 73,
+            "amount": 2
+          },
+          {
+            "frame": 80,
+            "amount": 2
+          },
+          {
+            "frame": 86,
+            "amount": 2
+          }
+        ],
+        "total": 28
+      },
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "copies": 2,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 4
+          },
+          {
+            "frame": 7,
+            "amount": 4
+          },
+          {
+            "frame": 14,
+            "amount": 4
+          },
+          {
+            "frame": 20,
+            "amount": 4
+          },
+          {
+            "frame": 27,
+            "amount": 4
+          },
+          {
+            "frame": 33,
+            "amount": 4
+          },
+          {
+            "frame": 40,
+            "amount": 4
+          },
+          {
+            "frame": 47,
+            "amount": 4
+          },
+          {
+            "frame": 53,
+            "amount": 4
+          },
+          {
+            "frame": 60,
+            "amount": 4
+          },
+          {
+            "frame": 66,
+            "amount": 4
+          },
+          {
+            "frame": 73,
+            "amount": 4
+          },
+          {
+            "frame": 80,
+            "amount": 4
+          },
+          {
+            "frame": 86,
+            "amount": 4
+          }
+        ],
+        "total": 56
+      },
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "copies": 3,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 6
+          },
+          {
+            "frame": 7,
+            "amount": 6
+          },
+          {
+            "frame": 14,
+            "amount": 6
+          },
+          {
+            "frame": 20,
+            "amount": 6
+          },
+          {
+            "frame": 27,
+            "amount": 6
+          },
+          {
+            "frame": 33,
+            "amount": 6
+          },
+          {
+            "frame": 40,
+            "amount": 6
+          },
+          {
+            "frame": 47,
+            "amount": 6
+          },
+          {
+            "frame": 53,
+            "amount": 6
+          },
+          {
+            "frame": 60,
+            "amount": 6
+          },
+          {
+            "frame": 66,
+            "amount": 6
+          },
+          {
+            "frame": 73,
+            "amount": 6
+          },
+          {
+            "frame": 80,
+            "amount": 6
+          },
+          {
+            "frame": 86,
+            "amount": 6
+          }
+        ],
+        "total": 84
+      },
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "copies": 6,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 12
+          },
+          {
+            "frame": 7,
+            "amount": 12
+          },
+          {
+            "frame": 14,
+            "amount": 12
+          },
+          {
+            "frame": 20,
+            "amount": 12
+          },
+          {
+            "frame": 27,
+            "amount": 12
+          },
+          {
+            "frame": 33,
+            "amount": 12
+          },
+          {
+            "frame": 40,
+            "amount": 12
+          },
+          {
+            "frame": 47,
+            "amount": 12
+          },
+          {
+            "frame": 53,
+            "amount": 12
+          },
+          {
+            "frame": 60,
+            "amount": 12
+          },
+          {
+            "frame": 66,
+            "amount": 12
+          },
+          {
+            "frame": 73,
+            "amount": 12
+          },
+          {
+            "frame": 80,
+            "amount": 12
+          },
+          {
+            "frame": 86,
+            "amount": 12
+          }
+        ],
+        "total": 168
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "copies": 1,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 2
+          },
+          {
+            "frame": 14,
+            "amount": 2
+          },
+          {
+            "frame": 27,
+            "amount": 2
+          },
+          {
+            "frame": 40,
+            "amount": 2
+          },
+          {
+            "frame": 53,
+            "amount": 2
+          },
+          {
+            "frame": 67,
+            "amount": 2
+          },
+          {
+            "frame": 80,
+            "amount": 2
+          },
+          {
+            "frame": 93,
+            "amount": 2
+          },
+          {
+            "frame": 106,
+            "amount": 2
+          },
+          {
+            "frame": 119,
+            "amount": 2
+          },
+          {
+            "frame": 133,
+            "amount": 2
+          },
+          {
+            "frame": 146,
+            "amount": 2
+          },
+          {
+            "frame": 159,
+            "amount": 2
+          },
+          {
+            "frame": 172,
+            "amount": 2
+          }
+        ],
+        "total": 28
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "copies": 2,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 4
+          },
+          {
+            "frame": 14,
+            "amount": 4
+          },
+          {
+            "frame": 27,
+            "amount": 4
+          },
+          {
+            "frame": 40,
+            "amount": 4
+          },
+          {
+            "frame": 53,
+            "amount": 4
+          },
+          {
+            "frame": 67,
+            "amount": 4
+          },
+          {
+            "frame": 80,
+            "amount": 4
+          },
+          {
+            "frame": 93,
+            "amount": 4
+          },
+          {
+            "frame": 106,
+            "amount": 4
+          },
+          {
+            "frame": 119,
+            "amount": 4
+          },
+          {
+            "frame": 133,
+            "amount": 4
+          },
+          {
+            "frame": 146,
+            "amount": 4
+          },
+          {
+            "frame": 159,
+            "amount": 4
+          },
+          {
+            "frame": 172,
+            "amount": 4
+          }
+        ],
+        "total": 56
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "copies": 3,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 6
+          },
+          {
+            "frame": 14,
+            "amount": 6
+          },
+          {
+            "frame": 27,
+            "amount": 6
+          },
+          {
+            "frame": 40,
+            "amount": 6
+          },
+          {
+            "frame": 53,
+            "amount": 6
+          },
+          {
+            "frame": 67,
+            "amount": 6
+          },
+          {
+            "frame": 80,
+            "amount": 6
+          },
+          {
+            "frame": 93,
+            "amount": 6
+          },
+          {
+            "frame": 106,
+            "amount": 6
+          },
+          {
+            "frame": 119,
+            "amount": 6
+          },
+          {
+            "frame": 133,
+            "amount": 6
+          },
+          {
+            "frame": 146,
+            "amount": 6
+          },
+          {
+            "frame": 159,
+            "amount": 6
+          },
+          {
+            "frame": 172,
+            "amount": 6
+          }
+        ],
+        "total": 84
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "copies": 6,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 12
+          },
+          {
+            "frame": 14,
+            "amount": 12
+          },
+          {
+            "frame": 27,
+            "amount": 12
+          },
+          {
+            "frame": 40,
+            "amount": 12
+          },
+          {
+            "frame": 53,
+            "amount": 12
+          },
+          {
+            "frame": 67,
+            "amount": 12
+          },
+          {
+            "frame": 80,
+            "amount": 12
+          },
+          {
+            "frame": 93,
+            "amount": 12
+          },
+          {
+            "frame": 106,
+            "amount": 12
+          },
+          {
+            "frame": 119,
+            "amount": 12
+          },
+          {
+            "frame": 133,
+            "amount": 12
+          },
+          {
+            "frame": 146,
+            "amount": 12
+          },
+          {
+            "frame": 159,
+            "amount": 12
+          },
+          {
+            "frame": 172,
+            "amount": 12
+          }
+        ],
+        "total": 168
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "copies": 1,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 2
+          },
+          {
+            "frame": 27,
+            "amount": 2
+          },
+          {
+            "frame": 53,
+            "amount": 2
+          },
+          {
+            "frame": 80,
+            "amount": 2
+          },
+          {
+            "frame": 106,
+            "amount": 2
+          },
+          {
+            "frame": 132,
+            "amount": 2
+          },
+          {
+            "frame": 159,
+            "amount": 2
+          },
+          {
+            "frame": 185,
+            "amount": 2
+          },
+          {
+            "frame": 212,
+            "amount": 2
+          },
+          {
+            "frame": 238,
+            "amount": 2
+          },
+          {
+            "frame": 264,
+            "amount": 2
+          },
+          {
+            "frame": 291,
+            "amount": 2
+          },
+          {
+            "frame": 317,
+            "amount": 2
+          },
+          {
+            "frame": 344,
+            "amount": 2
+          }
+        ],
+        "total": 28
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "copies": 2,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 4
+          },
+          {
+            "frame": 27,
+            "amount": 4
+          },
+          {
+            "frame": 53,
+            "amount": 4
+          },
+          {
+            "frame": 80,
+            "amount": 4
+          },
+          {
+            "frame": 106,
+            "amount": 4
+          },
+          {
+            "frame": 132,
+            "amount": 4
+          },
+          {
+            "frame": 159,
+            "amount": 4
+          },
+          {
+            "frame": 185,
+            "amount": 4
+          },
+          {
+            "frame": 212,
+            "amount": 4
+          },
+          {
+            "frame": 238,
+            "amount": 4
+          },
+          {
+            "frame": 264,
+            "amount": 4
+          },
+          {
+            "frame": 291,
+            "amount": 4
+          },
+          {
+            "frame": 317,
+            "amount": 4
+          },
+          {
+            "frame": 344,
+            "amount": 4
+          }
+        ],
+        "total": 56
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "copies": 3,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 6
+          },
+          {
+            "frame": 27,
+            "amount": 6
+          },
+          {
+            "frame": 53,
+            "amount": 6
+          },
+          {
+            "frame": 80,
+            "amount": 6
+          },
+          {
+            "frame": 106,
+            "amount": 6
+          },
+          {
+            "frame": 132,
+            "amount": 6
+          },
+          {
+            "frame": 159,
+            "amount": 6
+          },
+          {
+            "frame": 185,
+            "amount": 6
+          },
+          {
+            "frame": 212,
+            "amount": 6
+          },
+          {
+            "frame": 238,
+            "amount": 6
+          },
+          {
+            "frame": 264,
+            "amount": 6
+          },
+          {
+            "frame": 291,
+            "amount": 6
+          },
+          {
+            "frame": 317,
+            "amount": 6
+          },
+          {
+            "frame": 344,
+            "amount": 6
+          }
+        ],
+        "total": 84
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "copies": 6,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 12
+          },
+          {
+            "frame": 27,
+            "amount": 12
+          },
+          {
+            "frame": 53,
+            "amount": 12
+          },
+          {
+            "frame": 80,
+            "amount": 12
+          },
+          {
+            "frame": 106,
+            "amount": 12
+          },
+          {
+            "frame": 132,
+            "amount": 12
+          },
+          {
+            "frame": 159,
+            "amount": 12
+          },
+          {
+            "frame": 185,
+            "amount": 12
+          },
+          {
+            "frame": 212,
+            "amount": 12
+          },
+          {
+            "frame": 238,
+            "amount": 12
+          },
+          {
+            "frame": 264,
+            "amount": 12
+          },
+          {
+            "frame": 291,
+            "amount": 12
+          },
+          {
+            "frame": 317,
+            "amount": 12
+          },
+          {
+            "frame": 344,
+            "amount": 12
+          }
+        ],
+        "total": 168
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "copies": 1,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 2
+          },
+          {
+            "frame": 8,
+            "amount": 2
+          },
+          {
+            "frame": 15,
+            "amount": 2
+          },
+          {
+            "frame": 22,
+            "amount": 2
+          },
+          {
+            "frame": 29,
+            "amount": 2
+          },
+          {
+            "frame": 36,
+            "amount": 2
+          },
+          {
+            "frame": 44,
+            "amount": 2
+          },
+          {
+            "frame": 51,
+            "amount": 2
+          },
+          {
+            "frame": 58,
+            "amount": 2
+          },
+          {
+            "frame": 65,
+            "amount": 2
+          },
+          {
+            "frame": 72,
+            "amount": 2
+          },
+          {
+            "frame": 80,
+            "amount": 2
+          },
+          {
+            "frame": 87,
+            "amount": 2
+          }
+        ],
+        "total": 26
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "copies": 2,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 4
+          },
+          {
+            "frame": 8,
+            "amount": 4
+          },
+          {
+            "frame": 15,
+            "amount": 4
+          },
+          {
+            "frame": 22,
+            "amount": 4
+          },
+          {
+            "frame": 29,
+            "amount": 4
+          },
+          {
+            "frame": 36,
+            "amount": 4
+          },
+          {
+            "frame": 44,
+            "amount": 4
+          },
+          {
+            "frame": 51,
+            "amount": 4
+          },
+          {
+            "frame": 58,
+            "amount": 4
+          },
+          {
+            "frame": 65,
+            "amount": 4
+          },
+          {
+            "frame": 72,
+            "amount": 4
+          },
+          {
+            "frame": 80,
+            "amount": 4
+          },
+          {
+            "frame": 87,
+            "amount": 4
+          }
+        ],
+        "total": 52
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "copies": 3,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 6
+          },
+          {
+            "frame": 8,
+            "amount": 6
+          },
+          {
+            "frame": 15,
+            "amount": 6
+          },
+          {
+            "frame": 22,
+            "amount": 6
+          },
+          {
+            "frame": 29,
+            "amount": 6
+          },
+          {
+            "frame": 36,
+            "amount": 6
+          },
+          {
+            "frame": 44,
+            "amount": 6
+          },
+          {
+            "frame": 51,
+            "amount": 6
+          },
+          {
+            "frame": 58,
+            "amount": 6
+          },
+          {
+            "frame": 65,
+            "amount": 6
+          },
+          {
+            "frame": 72,
+            "amount": 6
+          },
+          {
+            "frame": 80,
+            "amount": 6
+          },
+          {
+            "frame": 87,
+            "amount": 6
+          }
+        ],
+        "total": 78
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "copies": 6,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 12
+          },
+          {
+            "frame": 8,
+            "amount": 12
+          },
+          {
+            "frame": 15,
+            "amount": 12
+          },
+          {
+            "frame": 22,
+            "amount": 12
+          },
+          {
+            "frame": 29,
+            "amount": 12
+          },
+          {
+            "frame": 36,
+            "amount": 12
+          },
+          {
+            "frame": 44,
+            "amount": 12
+          },
+          {
+            "frame": 51,
+            "amount": 12
+          },
+          {
+            "frame": 58,
+            "amount": 12
+          },
+          {
+            "frame": 65,
+            "amount": 12
+          },
+          {
+            "frame": 72,
+            "amount": 12
+          },
+          {
+            "frame": 80,
+            "amount": 12
+          },
+          {
+            "frame": 87,
+            "amount": 12
+          }
+        ],
+        "total": 156
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "copies": 1,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 2
+          },
+          {
+            "frame": 15,
+            "amount": 2
+          },
+          {
+            "frame": 29,
+            "amount": 2
+          },
+          {
+            "frame": 44,
+            "amount": 2
+          },
+          {
+            "frame": 58,
+            "amount": 2
+          },
+          {
+            "frame": 73,
+            "amount": 2
+          },
+          {
+            "frame": 87,
+            "amount": 2
+          },
+          {
+            "frame": 101,
+            "amount": 2
+          },
+          {
+            "frame": 116,
+            "amount": 2
+          },
+          {
+            "frame": 130,
+            "amount": 2
+          },
+          {
+            "frame": 145,
+            "amount": 2
+          },
+          {
+            "frame": 159,
+            "amount": 2
+          },
+          {
+            "frame": 173,
+            "amount": 2
+          }
+        ],
+        "total": 26
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "copies": 2,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 4
+          },
+          {
+            "frame": 15,
+            "amount": 4
+          },
+          {
+            "frame": 29,
+            "amount": 4
+          },
+          {
+            "frame": 44,
+            "amount": 4
+          },
+          {
+            "frame": 58,
+            "amount": 4
+          },
+          {
+            "frame": 73,
+            "amount": 4
+          },
+          {
+            "frame": 87,
+            "amount": 4
+          },
+          {
+            "frame": 101,
+            "amount": 4
+          },
+          {
+            "frame": 116,
+            "amount": 4
+          },
+          {
+            "frame": 130,
+            "amount": 4
+          },
+          {
+            "frame": 145,
+            "amount": 4
+          },
+          {
+            "frame": 159,
+            "amount": 4
+          },
+          {
+            "frame": 173,
+            "amount": 4
+          }
+        ],
+        "total": 52
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "copies": 3,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 6
+          },
+          {
+            "frame": 15,
+            "amount": 6
+          },
+          {
+            "frame": 29,
+            "amount": 6
+          },
+          {
+            "frame": 44,
+            "amount": 6
+          },
+          {
+            "frame": 58,
+            "amount": 6
+          },
+          {
+            "frame": 73,
+            "amount": 6
+          },
+          {
+            "frame": 87,
+            "amount": 6
+          },
+          {
+            "frame": 101,
+            "amount": 6
+          },
+          {
+            "frame": 116,
+            "amount": 6
+          },
+          {
+            "frame": 130,
+            "amount": 6
+          },
+          {
+            "frame": 145,
+            "amount": 6
+          },
+          {
+            "frame": 159,
+            "amount": 6
+          },
+          {
+            "frame": 173,
+            "amount": 6
+          }
+        ],
+        "total": 78
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "copies": 6,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 12
+          },
+          {
+            "frame": 15,
+            "amount": 12
+          },
+          {
+            "frame": 29,
+            "amount": 12
+          },
+          {
+            "frame": 44,
+            "amount": 12
+          },
+          {
+            "frame": 58,
+            "amount": 12
+          },
+          {
+            "frame": 73,
+            "amount": 12
+          },
+          {
+            "frame": 87,
+            "amount": 12
+          },
+          {
+            "frame": 101,
+            "amount": 12
+          },
+          {
+            "frame": 116,
+            "amount": 12
+          },
+          {
+            "frame": 130,
+            "amount": 12
+          },
+          {
+            "frame": 145,
+            "amount": 12
+          },
+          {
+            "frame": 159,
+            "amount": 12
+          },
+          {
+            "frame": 173,
+            "amount": 12
+          }
+        ],
+        "total": 156
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "copies": 1,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 2
+          },
+          {
+            "frame": 29,
+            "amount": 2
+          },
+          {
+            "frame": 58,
+            "amount": 2
+          },
+          {
+            "frame": 87,
+            "amount": 2
+          },
+          {
+            "frame": 116,
+            "amount": 2
+          },
+          {
+            "frame": 144,
+            "amount": 2
+          },
+          {
+            "frame": 173,
+            "amount": 2
+          },
+          {
+            "frame": 202,
+            "amount": 2
+          },
+          {
+            "frame": 231,
+            "amount": 2
+          },
+          {
+            "frame": 260,
+            "amount": 2
+          },
+          {
+            "frame": 288,
+            "amount": 2
+          },
+          {
+            "frame": 317,
+            "amount": 2
+          },
+          {
+            "frame": 346,
+            "amount": 2
+          }
+        ],
+        "total": 26
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "copies": 2,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 4
+          },
+          {
+            "frame": 29,
+            "amount": 4
+          },
+          {
+            "frame": 58,
+            "amount": 4
+          },
+          {
+            "frame": 87,
+            "amount": 4
+          },
+          {
+            "frame": 116,
+            "amount": 4
+          },
+          {
+            "frame": 144,
+            "amount": 4
+          },
+          {
+            "frame": 173,
+            "amount": 4
+          },
+          {
+            "frame": 202,
+            "amount": 4
+          },
+          {
+            "frame": 231,
+            "amount": 4
+          },
+          {
+            "frame": 260,
+            "amount": 4
+          },
+          {
+            "frame": 288,
+            "amount": 4
+          },
+          {
+            "frame": 317,
+            "amount": 4
+          },
+          {
+            "frame": 346,
+            "amount": 4
+          }
+        ],
+        "total": 52
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "copies": 3,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 6
+          },
+          {
+            "frame": 29,
+            "amount": 6
+          },
+          {
+            "frame": 58,
+            "amount": 6
+          },
+          {
+            "frame": 87,
+            "amount": 6
+          },
+          {
+            "frame": 116,
+            "amount": 6
+          },
+          {
+            "frame": 144,
+            "amount": 6
+          },
+          {
+            "frame": 173,
+            "amount": 6
+          },
+          {
+            "frame": 202,
+            "amount": 6
+          },
+          {
+            "frame": 231,
+            "amount": 6
+          },
+          {
+            "frame": 260,
+            "amount": 6
+          },
+          {
+            "frame": 288,
+            "amount": 6
+          },
+          {
+            "frame": 317,
+            "amount": 6
+          },
+          {
+            "frame": 346,
+            "amount": 6
+          }
+        ],
+        "total": 78
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "copies": 6,
+        "seconds": 3,
+        "packets": [
+          {
+            "frame": 0,
+            "amount": 12
+          },
+          {
+            "frame": 29,
+            "amount": 12
+          },
+          {
+            "frame": 58,
+            "amount": 12
+          },
+          {
+            "frame": 87,
+            "amount": 12
+          },
+          {
+            "frame": 116,
+            "amount": 12
+          },
+          {
+            "frame": 144,
+            "amount": 12
+          },
+          {
+            "frame": 173,
+            "amount": 12
+          },
+          {
+            "frame": 202,
+            "amount": 12
+          },
+          {
+            "frame": 231,
+            "amount": 12
+          },
+          {
+            "frame": 260,
+            "amount": 12
+          },
+          {
+            "frame": 288,
+            "amount": 12
+          },
+          {
+            "frame": 317,
+            "amount": 12
+          },
+          {
+            "frame": 346,
+            "amount": 12
+          }
+        ],
+        "total": 156
+      }
+    ],
+    "transitions": [
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "copies": 1,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 2
+              },
+              {
+                "frame": 7,
+                "amount": 2
+              },
+              {
+                "frame": 14,
+                "amount": 2
+              },
+              {
+                "frame": 20,
+                "amount": 2
+              },
+              {
+                "frame": 27,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 8,
+            "packets": [
+              {
+                "frame": 3,
+                "amount": 2
+              },
+              {
+                "frame": 10,
+                "amount": 2
+              },
+              {
+                "frame": 17,
+                "amount": 2
+              },
+              {
+                "frame": 23,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "copies": 3,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 6
+              },
+              {
+                "frame": 7,
+                "amount": 6
+              },
+              {
+                "frame": 14,
+                "amount": 6
+              },
+              {
+                "frame": 20,
+                "amount": 6
+              },
+              {
+                "frame": 27,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 24,
+            "packets": [
+              {
+                "frame": 3,
+                "amount": 6
+              },
+              {
+                "frame": 10,
+                "amount": 6
+              },
+              {
+                "frame": 17,
+                "amount": 6
+              },
+              {
+                "frame": 23,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "copies": 1,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 2
+              },
+              {
+                "frame": 14,
+                "amount": 2
+              },
+              {
+                "frame": 27,
+                "amount": 2
+              },
+              {
+                "frame": 40,
+                "amount": 2
+              },
+              {
+                "frame": 53,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 7,
+                "amount": 2
+              },
+              {
+                "frame": 20,
+                "amount": 2
+              },
+              {
+                "frame": 33,
+                "amount": 2
+              },
+              {
+                "frame": 46,
+                "amount": 2
+              },
+              {
+                "frame": 59,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "copies": 3,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 6
+              },
+              {
+                "frame": 14,
+                "amount": 6
+              },
+              {
+                "frame": 27,
+                "amount": 6
+              },
+              {
+                "frame": 40,
+                "amount": 6
+              },
+              {
+                "frame": 53,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 7,
+                "amount": 6
+              },
+              {
+                "frame": 20,
+                "amount": 6
+              },
+              {
+                "frame": 33,
+                "amount": 6
+              },
+              {
+                "frame": 46,
+                "amount": 6
+              },
+              {
+                "frame": 59,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "copies": 1,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 2
+              },
+              {
+                "frame": 27,
+                "amount": 2
+              },
+              {
+                "frame": 53,
+                "amount": 2
+              },
+              {
+                "frame": 80,
+                "amount": 2
+              },
+              {
+                "frame": 106,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 12,
+                "amount": 2
+              },
+              {
+                "frame": 39,
+                "amount": 2
+              },
+              {
+                "frame": 65,
+                "amount": 2
+              },
+              {
+                "frame": 92,
+                "amount": 2
+              },
+              {
+                "frame": 118,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "copies": 3,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 6
+              },
+              {
+                "frame": 27,
+                "amount": 6
+              },
+              {
+                "frame": 53,
+                "amount": 6
+              },
+              {
+                "frame": 80,
+                "amount": 6
+              },
+              {
+                "frame": 106,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 12,
+                "amount": 6
+              },
+              {
+                "frame": 39,
+                "amount": 6
+              },
+              {
+                "frame": 65,
+                "amount": 6
+              },
+              {
+                "frame": 92,
+                "amount": 6
+              },
+              {
+                "frame": 118,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "copies": 1,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 2
+              },
+              {
+                "frame": 8,
+                "amount": 2
+              },
+              {
+                "frame": 15,
+                "amount": 2
+              },
+              {
+                "frame": 22,
+                "amount": 2
+              },
+              {
+                "frame": 29,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 8,
+            "packets": [
+              {
+                "frame": 6,
+                "amount": 2
+              },
+              {
+                "frame": 14,
+                "amount": 2
+              },
+              {
+                "frame": 21,
+                "amount": 2
+              },
+              {
+                "frame": 28,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "copies": 3,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 6
+              },
+              {
+                "frame": 8,
+                "amount": 6
+              },
+              {
+                "frame": 15,
+                "amount": 6
+              },
+              {
+                "frame": 22,
+                "amount": 6
+              },
+              {
+                "frame": 29,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 24,
+            "packets": [
+              {
+                "frame": 6,
+                "amount": 6
+              },
+              {
+                "frame": 14,
+                "amount": 6
+              },
+              {
+                "frame": 21,
+                "amount": 6
+              },
+              {
+                "frame": 28,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "copies": 1,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 2
+              },
+              {
+                "frame": 15,
+                "amount": 2
+              },
+              {
+                "frame": 29,
+                "amount": 2
+              },
+              {
+                "frame": 44,
+                "amount": 2
+              },
+              {
+                "frame": 58,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 8,
+            "packets": [
+              {
+                "frame": 13,
+                "amount": 2
+              },
+              {
+                "frame": 27,
+                "amount": 2
+              },
+              {
+                "frame": 41,
+                "amount": 2
+              },
+              {
+                "frame": 56,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "copies": 3,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 6
+              },
+              {
+                "frame": 15,
+                "amount": 6
+              },
+              {
+                "frame": 29,
+                "amount": 6
+              },
+              {
+                "frame": 44,
+                "amount": 6
+              },
+              {
+                "frame": 58,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 24,
+            "packets": [
+              {
+                "frame": 13,
+                "amount": 6
+              },
+              {
+                "frame": 27,
+                "amount": 6
+              },
+              {
+                "frame": 41,
+                "amount": 6
+              },
+              {
+                "frame": 56,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "copies": 1,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 10,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 2
+              },
+              {
+                "frame": 29,
+                "amount": 2
+              },
+              {
+                "frame": 58,
+                "amount": 2
+              },
+              {
+                "frame": 87,
+                "amount": 2
+              },
+              {
+                "frame": 116,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 8,
+            "packets": [
+              {
+                "frame": 24,
+                "amount": 2
+              },
+              {
+                "frame": 53,
+                "amount": 2
+              },
+              {
+                "frame": 82,
+                "amount": 2
+              },
+              {
+                "frame": 111,
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "copies": 3,
+        "phases": [
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 30,
+            "packets": [
+              {
+                "frame": 0,
+                "amount": 6
+              },
+              {
+                "frame": 29,
+                "amount": 6
+              },
+              {
+                "frame": 58,
+                "amount": 6
+              },
+              {
+                "frame": 87,
+                "amount": 6
+              },
+              {
+                "frame": 116,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 900,
+            "accumulation": 0,
+            "packets": []
+          },
+          {
+            "current": 800,
+            "accumulation": 24,
+            "packets": [
+              {
+                "frame": 24,
+                "amount": 6
+              },
+              {
+                "frame": 53,
+                "amount": 6
+              },
+              {
+                "frame": 82,
+                "amount": 6
+              },
+              {
+                "frame": 111,
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "current": 1000,
+            "accumulation": 0,
+            "packets": []
+          }
+        ]
+      }
+    ],
+    "onset": [
+      {
+        "effect": 6851300,
+        "resistance": 1,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              -10,
+              0,
+              -10,
+              0,
+              -10,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 1,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              -11,
+              0,
+              -11,
+              0,
+              -11,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 2,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              -10,
+              0,
+              -10,
+              0,
+              -10,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 2,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              -11,
+              0,
+              -11,
+              0,
+              -11,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 3,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 3,
+            "hp": [
+              -10,
+              0,
+              -10,
+              0,
+              -10,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 3,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 3,
+            "hp": [
+              -11,
+              0,
+              -11,
+              0,
+              -11,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 4,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 4,
+            "hp": [
+              -10,
+              0,
+              -10,
+              0,
+              -10,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 4,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 4,
+            "hp": [
+              -11,
+              0,
+              -11,
+              0,
+              -11,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 5,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 3,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 3,
+            "remaining": 5,
+            "hp": [
+              -10,
+              0,
+              -10,
+              0,
+              -10,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "resistance": 5,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 3,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 3,
+            "remaining": 5,
+            "hp": [
+              -11,
+              0,
+              -11,
+              0,
+              -11,
+              1,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851301,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 505,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 1,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              -15,
+              0,
+              -15,
+              0,
+              -15,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 1,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              -16,
+              0,
+              -16,
+              0,
+              -16,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 2,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              -15,
+              0,
+              -15,
+              0,
+              -15,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 2,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              -16,
+              0,
+              -16,
+              0,
+              -16,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 3,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 3,
+            "hp": [
+              -15,
+              0,
+              -15,
+              0,
+              -15,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 3,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 3,
+            "hp": [
+              -16,
+              0,
+              -16,
+              0,
+              -16,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 4,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 4,
+            "hp": [
+              -15,
+              0,
+              -15,
+              0,
+              -15,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 4,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 2,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 4,
+            "hp": [
+              -16,
+              0,
+              -16,
+              0,
+              -16,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 5,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 3,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 3,
+            "remaining": 5,
+            "hp": [
+              -15,
+              0,
+              -15,
+              0,
+              -15,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "resistance": 5,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 3,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 3,
+            "remaining": 5,
+            "hp": [
+              -16,
+              0,
+              -16,
+              0,
+              -16,
+              2,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851401,
+                "lifetime": 40.0,
+                "flags": 4
+              },
+              {
+                "id": 1120,
+                "lifetime": 900.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "lifetime": [
+      {
+        "effect": 6851300,
+        "fps": 30,
+        "expiredFrame": 1203,
+        "packets": [
+          {
+            "frame": 0,
+            "hp": -11
+          },
+          {
+            "frame": 40,
+            "hp": -11
+          },
+          {
+            "frame": 79,
+            "hp": -11
+          },
+          {
+            "frame": 118,
+            "hp": -11
+          },
+          {
+            "frame": 157,
+            "hp": -11
+          },
+          {
+            "frame": 196,
+            "hp": -11
+          },
+          {
+            "frame": 235,
+            "hp": -11
+          },
+          {
+            "frame": 274,
+            "hp": -11
+          },
+          {
+            "frame": 313,
+            "hp": -11
+          },
+          {
+            "frame": 352,
+            "hp": -11
+          },
+          {
+            "frame": 391,
+            "hp": -11
+          },
+          {
+            "frame": 430,
+            "hp": -11
+          },
+          {
+            "frame": 469,
+            "hp": -11
+          },
+          {
+            "frame": 508,
+            "hp": -11
+          },
+          {
+            "frame": 547,
+            "hp": -11
+          },
+          {
+            "frame": 586,
+            "hp": -11
+          },
+          {
+            "frame": 625,
+            "hp": -11
+          },
+          {
+            "frame": 664,
+            "hp": -11
+          },
+          {
+            "frame": 703,
+            "hp": -11
+          },
+          {
+            "frame": 742,
+            "hp": -11
+          },
+          {
+            "frame": 781,
+            "hp": -11
+          },
+          {
+            "frame": 820,
+            "hp": -11
+          },
+          {
+            "frame": 859,
+            "hp": -11
+          },
+          {
+            "frame": 898,
+            "hp": -11
+          },
+          {
+            "frame": 937,
+            "hp": -11
+          },
+          {
+            "frame": 976,
+            "hp": -11
+          },
+          {
+            "frame": 1015,
+            "hp": -11
+          },
+          {
+            "frame": 1054,
+            "hp": -11
+          },
+          {
+            "frame": 1093,
+            "hp": -11
+          },
+          {
+            "frame": 1132,
+            "hp": -11
+          },
+          {
+            "frame": 1171,
+            "hp": -11
+          }
+        ],
+        "nodes": [
+          {
+            "id": 6851300,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 505,
+            "lifetime": 859.90979,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 60,
+        "expiredFrame": 2403,
+        "packets": [
+          {
+            "frame": 0,
+            "hp": -11
+          },
+          {
+            "frame": 80,
+            "hp": -11
+          },
+          {
+            "frame": 158,
+            "hp": -11
+          },
+          {
+            "frame": 236,
+            "hp": -11
+          },
+          {
+            "frame": 314,
+            "hp": -11
+          },
+          {
+            "frame": 392,
+            "hp": -11
+          },
+          {
+            "frame": 470,
+            "hp": -11
+          },
+          {
+            "frame": 548,
+            "hp": -11
+          },
+          {
+            "frame": 626,
+            "hp": -11
+          },
+          {
+            "frame": 704,
+            "hp": -11
+          },
+          {
+            "frame": 782,
+            "hp": -11
+          },
+          {
+            "frame": 860,
+            "hp": -11
+          },
+          {
+            "frame": 938,
+            "hp": -11
+          },
+          {
+            "frame": 1016,
+            "hp": -11
+          },
+          {
+            "frame": 1094,
+            "hp": -11
+          },
+          {
+            "frame": 1172,
+            "hp": -11
+          },
+          {
+            "frame": 1250,
+            "hp": -11
+          },
+          {
+            "frame": 1328,
+            "hp": -11
+          },
+          {
+            "frame": 1406,
+            "hp": -11
+          },
+          {
+            "frame": 1484,
+            "hp": -11
+          },
+          {
+            "frame": 1562,
+            "hp": -11
+          },
+          {
+            "frame": 1640,
+            "hp": -11
+          },
+          {
+            "frame": 1718,
+            "hp": -11
+          },
+          {
+            "frame": 1796,
+            "hp": -11
+          },
+          {
+            "frame": 1874,
+            "hp": -11
+          },
+          {
+            "frame": 1952,
+            "hp": -11
+          },
+          {
+            "frame": 2030,
+            "hp": -11
+          },
+          {
+            "frame": 2108,
+            "hp": -11
+          },
+          {
+            "frame": 2186,
+            "hp": -11
+          },
+          {
+            "frame": 2264,
+            "hp": -11
+          },
+          {
+            "frame": 2342,
+            "hp": -11
+          }
+        ],
+        "nodes": [
+          {
+            "id": 6851300,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 505,
+            "lifetime": 859.959778,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "effect": 6851300,
+        "fps": 120,
+        "expiredFrame": 4802,
+        "packets": [
+          {
+            "frame": 0,
+            "hp": -11
+          },
+          {
+            "frame": 158,
+            "hp": -11
+          },
+          {
+            "frame": 314,
+            "hp": -11
+          },
+          {
+            "frame": 470,
+            "hp": -11
+          },
+          {
+            "frame": 626,
+            "hp": -11
+          },
+          {
+            "frame": 782,
+            "hp": -11
+          },
+          {
+            "frame": 938,
+            "hp": -11
+          },
+          {
+            "frame": 1094,
+            "hp": -11
+          },
+          {
+            "frame": 1250,
+            "hp": -11
+          },
+          {
+            "frame": 1406,
+            "hp": -11
+          },
+          {
+            "frame": 1562,
+            "hp": -11
+          },
+          {
+            "frame": 1718,
+            "hp": -11
+          },
+          {
+            "frame": 1874,
+            "hp": -11
+          },
+          {
+            "frame": 2030,
+            "hp": -11
+          },
+          {
+            "frame": 2186,
+            "hp": -11
+          },
+          {
+            "frame": 2342,
+            "hp": -11
+          },
+          {
+            "frame": 2498,
+            "hp": -11
+          },
+          {
+            "frame": 2654,
+            "hp": -11
+          },
+          {
+            "frame": 2810,
+            "hp": -11
+          },
+          {
+            "frame": 2966,
+            "hp": -11
+          },
+          {
+            "frame": 3122,
+            "hp": -11
+          },
+          {
+            "frame": 3278,
+            "hp": -11
+          },
+          {
+            "frame": 3434,
+            "hp": -11
+          },
+          {
+            "frame": 3590,
+            "hp": -11
+          },
+          {
+            "frame": 3746,
+            "hp": -11
+          },
+          {
+            "frame": 3902,
+            "hp": -11
+          },
+          {
+            "frame": 4058,
+            "hp": -11
+          },
+          {
+            "frame": 4214,
+            "hp": -11
+          },
+          {
+            "frame": 4370,
+            "hp": -11
+          },
+          {
+            "frame": 4526,
+            "hp": -11
+          },
+          {
+            "frame": 4682,
+            "hp": -11
+          }
+        ],
+        "nodes": [
+          {
+            "id": 6851300,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 505,
+            "lifetime": 859.846558,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 30,
+        "expiredFrame": 1203,
+        "packets": [
+          {
+            "frame": 0,
+            "hp": -16
+          },
+          {
+            "frame": 40,
+            "hp": -16
+          },
+          {
+            "frame": 79,
+            "hp": -16
+          },
+          {
+            "frame": 118,
+            "hp": -16
+          },
+          {
+            "frame": 157,
+            "hp": -16
+          },
+          {
+            "frame": 196,
+            "hp": -16
+          },
+          {
+            "frame": 235,
+            "hp": -16
+          },
+          {
+            "frame": 274,
+            "hp": -16
+          },
+          {
+            "frame": 313,
+            "hp": -16
+          },
+          {
+            "frame": 352,
+            "hp": -16
+          },
+          {
+            "frame": 391,
+            "hp": -16
+          },
+          {
+            "frame": 430,
+            "hp": -16
+          },
+          {
+            "frame": 469,
+            "hp": -16
+          },
+          {
+            "frame": 508,
+            "hp": -16
+          },
+          {
+            "frame": 547,
+            "hp": -16
+          },
+          {
+            "frame": 586,
+            "hp": -16
+          },
+          {
+            "frame": 625,
+            "hp": -16
+          },
+          {
+            "frame": 664,
+            "hp": -16
+          },
+          {
+            "frame": 703,
+            "hp": -16
+          },
+          {
+            "frame": 742,
+            "hp": -16
+          },
+          {
+            "frame": 781,
+            "hp": -16
+          },
+          {
+            "frame": 820,
+            "hp": -16
+          },
+          {
+            "frame": 859,
+            "hp": -16
+          },
+          {
+            "frame": 898,
+            "hp": -16
+          },
+          {
+            "frame": 937,
+            "hp": -16
+          },
+          {
+            "frame": 976,
+            "hp": -16
+          },
+          {
+            "frame": 1015,
+            "hp": -16
+          },
+          {
+            "frame": 1054,
+            "hp": -16
+          },
+          {
+            "frame": 1093,
+            "hp": -16
+          },
+          {
+            "frame": 1132,
+            "hp": -16
+          },
+          {
+            "frame": 1171,
+            "hp": -16
+          }
+        ],
+        "nodes": [
+          {
+            "id": 6851400,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 1120,
+            "lifetime": 859.90979,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 60,
+        "expiredFrame": 2403,
+        "packets": [
+          {
+            "frame": 0,
+            "hp": -16
+          },
+          {
+            "frame": 80,
+            "hp": -16
+          },
+          {
+            "frame": 158,
+            "hp": -16
+          },
+          {
+            "frame": 236,
+            "hp": -16
+          },
+          {
+            "frame": 314,
+            "hp": -16
+          },
+          {
+            "frame": 392,
+            "hp": -16
+          },
+          {
+            "frame": 470,
+            "hp": -16
+          },
+          {
+            "frame": 548,
+            "hp": -16
+          },
+          {
+            "frame": 626,
+            "hp": -16
+          },
+          {
+            "frame": 704,
+            "hp": -16
+          },
+          {
+            "frame": 782,
+            "hp": -16
+          },
+          {
+            "frame": 860,
+            "hp": -16
+          },
+          {
+            "frame": 938,
+            "hp": -16
+          },
+          {
+            "frame": 1016,
+            "hp": -16
+          },
+          {
+            "frame": 1094,
+            "hp": -16
+          },
+          {
+            "frame": 1172,
+            "hp": -16
+          },
+          {
+            "frame": 1250,
+            "hp": -16
+          },
+          {
+            "frame": 1328,
+            "hp": -16
+          },
+          {
+            "frame": 1406,
+            "hp": -16
+          },
+          {
+            "frame": 1484,
+            "hp": -16
+          },
+          {
+            "frame": 1562,
+            "hp": -16
+          },
+          {
+            "frame": 1640,
+            "hp": -16
+          },
+          {
+            "frame": 1718,
+            "hp": -16
+          },
+          {
+            "frame": 1796,
+            "hp": -16
+          },
+          {
+            "frame": 1874,
+            "hp": -16
+          },
+          {
+            "frame": 1952,
+            "hp": -16
+          },
+          {
+            "frame": 2030,
+            "hp": -16
+          },
+          {
+            "frame": 2108,
+            "hp": -16
+          },
+          {
+            "frame": 2186,
+            "hp": -16
+          },
+          {
+            "frame": 2264,
+            "hp": -16
+          },
+          {
+            "frame": 2342,
+            "hp": -16
+          }
+        ],
+        "nodes": [
+          {
+            "id": 6851400,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 1120,
+            "lifetime": 859.959778,
+            "flags": 8
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "fps": 120,
+        "expiredFrame": 4802,
+        "packets": [
+          {
+            "frame": 0,
+            "hp": -16
+          },
+          {
+            "frame": 158,
+            "hp": -16
+          },
+          {
+            "frame": 314,
+            "hp": -16
+          },
+          {
+            "frame": 470,
+            "hp": -16
+          },
+          {
+            "frame": 626,
+            "hp": -16
+          },
+          {
+            "frame": 782,
+            "hp": -16
+          },
+          {
+            "frame": 938,
+            "hp": -16
+          },
+          {
+            "frame": 1094,
+            "hp": -16
+          },
+          {
+            "frame": 1250,
+            "hp": -16
+          },
+          {
+            "frame": 1406,
+            "hp": -16
+          },
+          {
+            "frame": 1562,
+            "hp": -16
+          },
+          {
+            "frame": 1718,
+            "hp": -16
+          },
+          {
+            "frame": 1874,
+            "hp": -16
+          },
+          {
+            "frame": 2030,
+            "hp": -16
+          },
+          {
+            "frame": 2186,
+            "hp": -16
+          },
+          {
+            "frame": 2342,
+            "hp": -16
+          },
+          {
+            "frame": 2498,
+            "hp": -16
+          },
+          {
+            "frame": 2654,
+            "hp": -16
+          },
+          {
+            "frame": 2810,
+            "hp": -16
+          },
+          {
+            "frame": 2966,
+            "hp": -16
+          },
+          {
+            "frame": 3122,
+            "hp": -16
+          },
+          {
+            "frame": 3278,
+            "hp": -16
+          },
+          {
+            "frame": 3434,
+            "hp": -16
+          },
+          {
+            "frame": 3590,
+            "hp": -16
+          },
+          {
+            "frame": 3746,
+            "hp": -16
+          },
+          {
+            "frame": 3902,
+            "hp": -16
+          },
+          {
+            "frame": 4058,
+            "hp": -16
+          },
+          {
+            "frame": 4214,
+            "hp": -16
+          },
+          {
+            "frame": 4370,
+            "hp": -16
+          },
+          {
+            "frame": 4526,
+            "hp": -16
+          },
+          {
+            "frame": 4682,
+            "hp": -16
+          }
+        ],
+        "nodes": [
+          {
+            "id": 6851400,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 1120,
+            "lifetime": 859.846558,
+            "flags": 8
+          }
+        ]
+      }
+    ],
+    "repeat": [
+      {
+        "effect": 6851300,
+        "copies": 1,
+        "packets": [
+          {
+            "frame": 1,
+            "hp": -11
+          },
+          {
+            "frame": 80,
+            "hp": -11
+          }
+        ],
+        "lifetimes": [
+          39.983334,
+          39.000015,
+          38.016697
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 3,
+        "packets": [
+          {
+            "frame": 1,
+            "hp": -11
+          },
+          {
+            "frame": 80,
+            "hp": -11
+          }
+        ],
+        "lifetimes": [
+          39.983334,
+          39.000015,
+          38.016697
+        ]
+      },
+      {
+        "effect": 6851300,
+        "copies": 6,
+        "packets": [
+          {
+            "frame": 1,
+            "hp": -11
+          },
+          {
+            "frame": 80,
+            "hp": -11
+          }
+        ],
+        "lifetimes": [
+          39.983334,
+          39.000015,
+          38.016697
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 1,
+        "packets": [
+          {
+            "frame": 1,
+            "hp": -16
+          },
+          {
+            "frame": 80,
+            "hp": -16
+          }
+        ],
+        "lifetimes": [
+          39.983334,
+          39.000015,
+          38.016697
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 3,
+        "packets": [
+          {
+            "frame": 1,
+            "hp": -16
+          },
+          {
+            "frame": 80,
+            "hp": -16
+          }
+        ],
+        "lifetimes": [
+          39.983334,
+          39.000015,
+          38.016697
+        ]
+      },
+      {
+        "effect": 6851400,
+        "copies": 6,
+        "packets": [
+          {
+            "frame": 1,
+            "hp": -16
+          },
+          {
+            "frame": 80,
+            "hp": -16
+          }
+        ],
+        "lifetimes": [
+          39.983334,
+          39.000015,
+          38.016697
+        ]
+      }
+    ],
+    "immunity": [
+      {
+        "effect": 6851300,
+        "immunity": 9642,
+        "remaining": 2,
+        "nodes": [
+          {
+            "id": 9642,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 6851300,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 6851300,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 6851300,
+            "lifetime": -1.0,
+            "flags": 4
+          }
+        ]
+      },
+      {
+        "effect": 6851400,
+        "immunity": 9642,
+        "remaining": 2,
+        "nodes": [
+          {
+            "id": 9642,
+            "lifetime": -1.0,
+            "flags": 4
+          },
+          {
+            "id": 6851400,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 6851400,
+            "lifetime": -1.0,
+            "flags": 8
+          },
+          {
+            "id": 6851400,
+            "lifetime": -1.0,
+            "flags": 8
+          }
+        ]
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "health": "3E0D94..3E0DB5 → 426DE0 → 5057D0",
+    "cycle": "50ACD0 → 3C7FD0",
+    "status": "42D110 / 42CD70",
+    "hp": "506EC0"
+  },
+  "stubs": [
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "3E0D94..3E0DB5 original health-ratio caller block; ordinary actor selected explicitly, alternate-owner selection not executed",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "health caller block stopped at its exact boundary without popping a synthetic return overwritten by callee home space",
+    "initial HP/max HP, resistance and ordinary actor identity are fixtures; complete actor selection/death and HP writes not executed",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "qualification and cycles run at explicit frame rates; natural resistance decay, growth, cures, external poison/rot conflicts, save/load and network not executed",
+    "synthetic inventory: curse slot3 paired with positive7000000; draw legality not asserted"
+  ],
+  "gameplayVerified": false
+}
