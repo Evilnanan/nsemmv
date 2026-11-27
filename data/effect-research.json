@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 640,
+    "nativeStacking": 641,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -15996,16 +15996,17 @@
       ],
       "detailSources": [
         7220000,
-        7220002,
-        7220001
+        7220001,
+        7220002
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "revenant-self"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "家人实际生成／退场与控制器状态迁移、复杂战斗场景、最终 HP 写入、DLL 改写、装备重建／死亡／重载／联机；已验证三家人槽位的原生资格、全部组合、条件失效与恢复、回血计时暂停／继续、重复装备及普通持续回血组合。直接移除根不等于完整卸装流程"
       ],
       "gameplayVerified": false
     },
@@ -50613,6 +50614,7 @@
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
   "ironeyeObservationEvidenceSha256": "f969fe0c259179152ef932792153072893a351ea4fed75bb0662ee9d9375b2c2",
+  "revenantSelfEvidenceSha256": "8d3972cba72a92a1a9bb6b17f6258f89a0f06b5229264fdbef4cbc45d3e7f007",
   "randomEnchantEvidenceSha256": "0560f213518a4aa1aee44d7f7f9406a23bda64aa6f65b0519bfdf3f9b1adff39",
   "teamRunesEvidenceSha256": "9bb009d5b5271b0a601040eb5ecc4fd176e5e1fd57192db731a6e12c849828be",
   "revenantAlliesEvidenceSha256": "344db794634e1498f2694e3ecbf0d556140d02cba5af17fdff0cc015948de87d",

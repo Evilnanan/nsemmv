@@ -1,3 +1,4 @@
+import revenantSelf from "../../data/effect-revenant-self-evidence.json";
 import randomEnchant from "../../data/effect-random-enchant-evidence.json";
 import ironeyeObservation from "../../data/effect-ironeye-observation-evidence.json";
 import teamRunes from "../../data/effect-team-runes-evidence.json";
@@ -1067,6 +1068,36 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("shows family-specific self buffs without exposing their upkeep leases", () => {
+    expect(revenantSelf.gameplayVerified).toBe(false);
+    expect(research.revenantSelfEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-self-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7220000)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("多名家人同时出战");
+    expect(detail.blocks.map((b) => [b.phase, b.values, b.duration, b.interval])).toEqual([
+      ["海伦出战时", [["HP恢复", "1"]], null, 1],
+      ["弗雷德利克出战时", [["攻击倍率", "+10%"]], null, null],
+      ["塞巴斯蒂安出战时", [["属性承伤倍率", "-20%"]], null, null],
+    ]);
+    expect(detail.blocks.every((b) => !b.scope.length)).toBe(true);
+    expect(detail.notes.join(" ")).toContain("回血计时暂停");
+    expect(detail.notes.join(" ")).toContain("持续恢复血量");
+    for (const row of revenantSelf.checks.combinations) {
+      expect(row.enabled).toEqual([0, 1, 2].filter((i) => row.mask & (1 << i)).map((i) => 7220000 + i));
+      for (const rate of row.attack) expect(rate).toBeCloseTo(row.mask & 2 ? 1.1 : 1, 6);
+      row.defense.forEach((rate, i) => expect(rate).toBeCloseTo(i && row.mask & 4 ? 0.8 : 1, 6));
+    }
+    for (const row of revenantSelf.checks.controller) {
+      expect(row.enabled).toEqual([10, 11, 20, 21].includes(row.state) ? [7220000 + row.slot] : []);
+    }
+    for (const row of revenantSelf.checks.mixed)
+      expect(row.total).toBe(2 * (Number(Boolean(row.copies)) + 2 * row.extra));
+    expect(research.effects["7220000"].stacking).toBe("native-analysis");
+    expect(research.effects["7220000"].openQuestions.join(" ")).toContain("状态迁移");
   });
 
   it("connects random enchant hand eligibility, replacement and real attack consumers", () => {
