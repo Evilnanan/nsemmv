@@ -1,3 +1,4 @@
+import teamRunes from "../../data/effect-team-runes-evidence.json";
 import revenantAllies from "../../data/effect-revenant-allies-evidence.json";
 import lowHpTeamRecovery from "../../data/effect-low-hp-team-recovery-evidence.json";
 import teamKillHeal from "../../data/effect-team-kill-heal-evidence.json";
@@ -1063,6 +1064,38 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("multiplies team rune bonuses and replaces old equipment effects on rebuild", () => {
+    expect(teamRunes.gameplayVerified).toBe(false);
+    expect(research.teamRunesEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-team-runes-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7110000)!;
+    expect(detail.stacking).toBe("可叠加");
+    expect(detail.stackingDetail).toContain("本人和队友的多份效果按乘法叠加");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "全队生效", values: [["获得卢恩", "+3.5%"]], duration: null, interval: null });
+    expect(detail.notes).toEqual(["致命一击与取得样本的固定卢恩不受此倍率影响。"]);
+    for (const row of teamRunes.checks.rebuild) {
+      const total = row.counts.reduce((a, b) => a + b, 0);
+      const own = row.mixed ? row.counts[row.recipient - 1] : 0;
+      expect(row.nodes.filter(n => n.id === 7110000)).toHaveLength(total);
+      expect(row.nodes.filter(n => n.id === 6840000)).toHaveLength(own);
+      expect(row.nodes.filter(n => n.id === 311100)).toHaveLength(own ? 1 : 0);
+      expect(row.rate).toBeCloseTo(1.035 ** total * (own ? 1.15 * 0.9 ** own : 1), 5);
+      for (const award of row.awards)
+        expect(award.values).toEqual([award.scale ? Math.trunc(Math.fround(Math.fround(award.base) * row.rate)) : award.base]);
+    }
+    for (const row of teamRunes.checks.shared)
+      expect(row.flags).toEqual([1, 2, 3].flatMap(owner => Array(6).fill(Number(owner !== row.recipient))));
+    for (const row of teamRunes.checks.disabled) expect(row.rate).toBe(1);
+    const fixedByPacket = new Map<string, number[]>();
+    for (const row of teamRunes.checks.fixed) {
+      const key = row.packets.join(",");
+      if (!fixedByPacket.has(key)) fixedByPacket.set(key, row.values);
+      expect(row.values).toEqual(fixedByPacket.get(key));
     }
   });
 
