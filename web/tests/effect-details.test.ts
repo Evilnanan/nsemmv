@@ -34,6 +34,7 @@ import spellFamily from "../../data/effect-spell-family-evidence.json";
 import handPoise from "../../data/effect-hand-poise-evidence.json";
 import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import guardPoise from "../../data/effect-guard-poise-evidence.json";
+import grease from "../../data/effect-grease-evidence.json";
 import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
 import periodicFp from "../../data/effect-periodic-fp-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
@@ -935,6 +936,50 @@ describe("MMV effect details", () => {
     expect(scholarShockwave.gameplayVerified).toBe(false);
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("connects grease bonuses and extension, including reapplication during the extended phase", () => {
+    expect(grease.families).toHaveLength(4);
+    expect(grease.events).toHaveLength(24);
+    expect(grease.pairs).toHaveLength(70);
+    expect(grease.goods).toHaveLength(11);
+    for (const pair of grease.pairs) expect(pair.extension).toBe(pair.duration);
+    for (const family of grease.families) {
+      for (const id of family.effects) {
+        const detail = effectDetail(id)!;
+        expect(detail.blocks).toHaveLength(1);
+        expect(detail.blocks[0]).toMatchObject({
+          source: family.leaf, branches: [family.tail], duration: 30, interval: null,
+          restrictions: family.tag === 130 ? ["近战攻击"] : [],
+        });
+        expect(detail.stacking).toBe(family.tag === 130 ? "不可叠加" : "不同等级可叠加");
+        expect(detail.notes.join()).toContain("延长至 60 秒");
+        expect(detail.notes.join()).toContain("继续涂抹不再增加层数");
+      }
+      for (const row of grease.checks.overlap.filter(row => row.root === family.root)) {
+        const exponent = "repeat" in row ? 2 : 1;
+        expect(row.values[0]).toBeCloseTo(family.rate ** exponent, 6);
+      }
+    }
+    const melee = effectDetail(6030902)!;
+    expect(melee.blocks[0].values).toEqual([["攻击倍率", "+20%"]]);
+    expect(melee.notes.join()).toContain("合计 +44%");
+    const extension = effectDetail(6030903)!;
+    expect(extension.stacking).toBe("不可叠加");
+    expect(extension.blocks[0].values).toEqual([["油脂持续时间", "×2"], ["油脂额外增攻", "30 → 60 秒"]]);
+    expect(extension.blocks[0].duration).toBeNull();
+    expect(extension.blocks[0].interval).toBeNull();
+    for (const row of grease.checks.filters)
+      for (const value of row.values)
+        expect(value).toBeCloseTo(row.tags.includes(130) ? 1.2 : 1, 6);
+    for (const row of grease.checks.dispatch) {
+      const family = grease.families.find(f => f.seed === row.seed)!;
+      expect(row.values[0]).toBeCloseTo(row.copies ? family.rate : 1, 6);
+    }
+    expect(grease.gameplayVerified).toBe(false);
+    expect(research.greaseEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-grease-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 
@@ -2025,7 +2070,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(41);
-    expect(research.coverage.withNumericFields).toBe(577);
+    expect(research.coverage.withNumericFields).toBe(579);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

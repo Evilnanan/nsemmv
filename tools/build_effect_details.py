@@ -595,6 +595,18 @@ if not args.extract_only:
     assert scholar_shock['bulletParamSha256'] == guardian_shock['bulletParamSha256']
     assert scholar_shock['behaviorParamSha256'] == duchess_ultimate['behaviorParamSha256']
     assert {k: len(v) for k, v in scholar_shock['checks'].items()} == dict(script=128, selection=77, emission=84, repeated=6, projectile=3, recipient=4, numeric=10, lifetime=3, refresh=6)
+grease_path = ROOT / 'data/effect-grease-evidence.json'
+grease = json.loads(grease_path.read_text())
+if not args.extract_only:
+    assert grease['schema'] == 1 and grease['regulationSha256'] == catalog['regulationSha256']
+    assert grease['exeSha256'] == evidence['exeSha256'] and not grease['gameplayVerified']
+    assert grease['paramSha256'] == evidence['paramSha256']
+    assert grease['scriptSha256'] == guard_aggro['assetHashes']['hks']
+    assert grease['attachParamSha256'] == scholar_shock['attachParamSha256']
+    assert grease['attackParamSha256'] == scholar_shock['attackParamSha256']
+    assert len(grease['pairs']) == 70 and len(grease['goods']) == 11 and len(grease['events']) == 24
+    assert {k: len(v) for k, v in grease['checks'].items()} == dict(selection=110, dispatch=72, filters=648, lifetime=72, refresh=24, overlap=16, goods=330, disabled=1)
+grease_families = {str(id): family for family in grease['families'] for id in family['effects']}
 starting_replacements_path = ROOT / 'data/effect-starting-replacements-evidence.json'
 starting_replacements = json.loads(starting_replacements_path.read_text())
 if not args.extract_only:
@@ -897,6 +909,12 @@ if args.extract:
             for family in guard_poise['families']:
                 if root == family['root']:
                     needed.update((family['seed'], family['leaf']))
+            if root in [f['root'] for f in grease['families']] or root == grease['extensionRoot']:
+                for family in grease['families']:
+                    needed.update(family[k] for k in ('root', 'seed', 'leaf', 'gate', 'tail'))
+                needed.add(grease['extensionRoot'])
+                for pair in grease['pairs']:
+                    needed.update(pair[k] for k in ('source', 'gate', 'leaf'))
             if root == scholar_shock['root']:
                 needed.update((scholar_shock['seed'], scholar_shock['leaf']))
             if root in item_sharing['roots']:
@@ -1187,6 +1205,9 @@ STACKING_RULES = {
     'guard-stamina': ('可叠加', '相同词条及不同版本均可叠加，耗精倍率相乘', ['guard-stamina']),
     'guard-stamina-single': ('不可叠加', '相同效果只生效一份；可与其他版本的耗精倍率相乘', ['guard-stamina']),
     'guard-poise': ('不同等级可叠加', '同等级不重复；不同等级的强韧度损耗倍率相乘，再次成功防御刷新时长', ['guard-poise']),
+    'grease-melee': ('不可叠加', '重复装备不增加倍率；再次涂抹刷新时长', ['grease']),
+    'grease-physical': ('不同等级可叠加', '不同等级的攻击倍率相乘；同等级重复装备无效，再次涂抹刷新时长', ['grease', 'triggerValues']),
+    'grease-extension': ('不可叠加', '重复装备不继续延长', ['grease']),
     'scholar-shockwave': ('不可叠加', '重复装备不增强削弱效果；再次命中刷新时长', ['scholar-shockwave']),
     'periodic-fp': ('可叠加', '同等级和不同等级均可叠加，恢复量相加，各自计时', ['periodic-fp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
@@ -1560,6 +1581,29 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('连续防御可再次触发。')
         rule = 'guardian-shockwave'
+    if id in grease_families:
+        family = grease_families[id]
+        assert effect['roots'] == {'passiveSpEffectId_1': family['root']} and effect['runtimeExclusive'] == -1
+        leaf, tail = (source['spells'][str(family[k])] for k in ('leaf', 'tail'))
+        assert leaf['effectEndurance'] == tail['effectEndurance'] == family['duration'] == 30
+        assert leaf['physicsAttackRate'] == tail['physicsAttackRate'] and math.isclose(leaf['physicsAttackRate'], family['rate'], rel_tol=1e-6)
+        melee = family['tag'] == 130
+        blocks = [dict(source=family['leaf'], branches=[family['tail']], phase='涂抹油脂后', linked=True,
+                       values=[['攻击倍率' if melee else '物理攻击倍率', '+' + num((family['rate'] - 1) * 100) + '%']],
+                       restrictions=['近战攻击'] if melee else [], scope=[], duration=30, interval=None)]
+        notes.append('搭配油脂延时词条，增攻延长至 60 秒。')
+        notes.append('后 30 秒内再次涂抹，新旧增攻倍率相乘，重叠期间合计 +' + num((family['rate'] ** 2 - 1) * 100) + '%；继续涂抹不再增加层数。')
+        rule = 'grease-melee' if melee else 'grease-physical'
+    if int(id) == grease['extensionEffect']:
+        assert effect['roots'] == {'passiveSpEffectId_1': grease['extensionRoot']} and effect['runtimeExclusive'] == -1
+        assert all(p['duration'] == p['extension'] for p in grease['pairs'])
+        blocks = [dict(source=grease['extensionRoot'], branches=[p['leaf'] for p in grease['pairs']],
+                       phase='涂抹油脂后', linked=True,
+                       values=[['油脂持续时间', '×2'], ['油脂额外增攻', '30 → 60 秒']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        notes.append('包含各等级油脂与坚盾油脂；再次涂抹刷新附魔时长。')
+        notes.append('额外增攻的后 30 秒内再次涂抹，可与新增攻倍率相乘；继续涂抹不再增加层数。')
+        rule = 'grease-extension'
     if int(id) in scholar_shock['effects']:
         root, leaf = scholar_shock['root'], scholar_shock['leaf']
         assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
@@ -2245,9 +2289,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] in ('critical-normal', 'critical-plus'):
         questions.append('完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入')
@@ -2287,6 +2331,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整受击输入、实际防御准入、精力写入／破防、装备重建与多人交互；强化／能力修正、双持及特殊武器分支尚未联测')
     if rules[id] == 'guard-poise':
         questions.append('完整动作调度与防御事件通知、实际强韧受损／失衡、装备移除与死亡／重载及联机；发放队列按隔离夹具下一更新步投递')
+    if rules[id] in ('grease-melee', 'grease-physical', 'grease-extension'):
+        questions.append('完整道具消耗／动作中断及坚盾油脂动作选择、武器附魔资格与实际武器参数写入、换武器／移除词条／死亡／重载／多人交互；原生隔离执行不等于实机验证')
     if rules[id] == 'scholar-shockwave':
         questions.append('自身技艺状态 708050 的取得与完整动作调度、冲击波实际半径插值／碰撞到达／攻击目标过滤与同目标去重、两条冲击波伤害交互及最终伤害缩放、不同来源施加／死亡／重载／多人交互')
     if rules[id] == 'periodic-fp':
@@ -2443,6 +2489,7 @@ research['handPoiseEvidenceSha256'] = hashlib.sha256(hand_poise_path.read_bytes(
 research['guardStaminaEvidenceSha256'] = hashlib.sha256(guard_stamina_path.read_bytes()).hexdigest()
 research['guardPoiseEvidenceSha256'] = hashlib.sha256(guard_poise_path.read_bytes()).hexdigest()
 research['scholarShockwaveEvidenceSha256'] = hashlib.sha256(scholar_shock_path.read_bytes()).hexdigest()
+research['greaseEvidenceSha256'] = hashlib.sha256(grease_path.read_bytes()).hexdigest()
 research['periodicFpEvidenceSha256'] = hashlib.sha256(periodic_fp_path.read_bytes()).hexdigest()
 research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_bytes()).hexdigest()
 research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()
