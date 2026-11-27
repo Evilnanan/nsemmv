@@ -81,3 +81,20 @@ python tools/build_effect_details.py
 python tools/probe_hand_poise.py <EXE> <extracted.json> data/effect-hand-poise-evidence.json
 python tools/build_effect_details.py
 ```
+
+## 提升防御强度：耗精倍率及同名差异（2026-11-27）
+
+341000、8220000、8220001、8220002 均以同号 SpEffect 为被动根，状态 158、无限寿命、运行时排他键 -1。`guardStaminaMult` 位于原始行 +0x388，分别为 0.8／0.9／0.85／0.8；341000 为类别 0，其余为类别 10。可获取条目为 8220001，页面展示“防御耗精倍率 -15%”，不将其解释为防御强度 +15%。
+
+[`探针`](../../tools/probe_guard_stamina.py) 与 [`证据`](../../data/effect-guard-stamina-evidence.json) 执行装备筛选 `4FEA30 → E6E150 → E6E3B0`、原生插入／资格／更新以及倍率聚合 `506CE0 / 506DC0`。最多六份均通过装备筛选，但类别 0 的同根仅保留一个节点；类别 10 每份独立，按乘法叠加。同词条两份 8220001 为 0.85² = 0.7225，耗精减免 27.75%；三个类别 10 版本混用为 0.9×0.85×0.8 = 0.612。逆序插入、与类别 0 混用以及停用节点均核对。带武器选择器的入口对这些 `wepParamChange=0` 行接受 0／1／2，选择器 3 不参与；不将未命名编号展示给玩家。
+
+沿真实调用 `6687F0 → 506DC0 → 6C5B10` 执行完整耗精计算器：先计算防御减免，再乘入该倍率，最后加上 Behavior 的固定耗精。固定部分不会被该倍率降低；即使可减免部分为零，固定部分也保留。探针使用四条真实武器行、三条真实 Behavior 与其 AtkParam 关联，覆盖防御资格开／关、零／100／257.5 的输入及 0～100% 减免边界。另一个消费者 `6C5740` 将此倍率用作除数，属于不同的中间量，未将其直接作为实际耗精或玩家防御强度说明。
+
+共 3297 组检查：装备筛选 63、倍率 210、耗精 3024。输入绑定 EXE、regulation、SpEffect、AttachEffect、EquipParamWeapon、BehaviorParam_PC 与 AtkParam_Pc 哈希。库存／身份、参数查表和防御资格为显式夹具；独立能力修正为零、无强化、指定姿态与槽位绕过双持及特殊武器分支。原生聚合和整个耗精算式未替换。未运行完整角色装备、真实受击输入、精力写入／破防与联机，`gameplayVerified=false`。
+
+本批仅更新四个目录词条；可获取范围增加一个有详情、有数值、有叠加结论的条目。复现：
+
+```sh
+python tools/probe_guard_stamina.py <EXE> <extracted.json> <assets.json> data/effect-guard-stamina-evidence.json
+python tools/build_effect_details.py
+```

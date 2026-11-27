@@ -32,6 +32,7 @@ import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
 import handPoise from "../../data/effect-hand-poise-evidence.json";
+import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import periodicFp from "../../data/effect-periodic-fp-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
@@ -876,6 +877,36 @@ describe("MMV effect details", () => {
     expect(perfume.gameplayVerified).toBe(false);
     expect(research.perfumeEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-perfume-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("applies guard stamina multipliers after mitigation while preserving fixed costs and singleton variants", () => {
+    expect(guardStamina.families).toHaveLength(4);
+    for (const family of guardStamina.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe(family.category === 0 ? "不可叠加" : "可叠加");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({ source: family.root, duration: null, interval: null,
+        values: [["防御耗精倍率", `-${Math.round((1 - family.rate) * 100)}%`]],
+      });
+      expect(detail.notes).toContain("额外固定耗精不参与此倍率减免。");
+    }
+    const duplicate = guardStamina.checks.multipliers.find(row => JSON.stringify(row.effects) === "[8220001,8220001]" && !row.inactive && row.selector === null)!;
+    expect(duplicate.nodes).toHaveLength(2);
+    expect(duplicate.multiplier).toBeCloseTo(0.7225, 6);
+    const singleton = guardStamina.checks.multipliers.find(row => JSON.stringify(row.effects) === "[341000,341000]" && !row.inactive && row.selector === null)!;
+    expect(singleton.nodes).toHaveLength(1);
+    expect(singleton.multiplier).toBeCloseTo(0.8, 6);
+    const mixed = guardStamina.checks.multipliers.find(row => JSON.stringify(row.effects) === "[8220000,8220001,8220002]" && !row.inactive && row.selector === null)!;
+    expect(mixed.multiplier).toBeCloseTo(0.9 * 0.85 * 0.8, 6);
+    expect(guardStamina.checks.multipliers.filter(row => row.inactive || row.selector === 3).every(row => row.multiplier === 1)).toBe(true);
+    for (const row of guardStamina.checks.costs) {
+      expect(row.result).toBeCloseTo(row.incoming * (1 - row.reduction / 100) * row.multiplier + row.fixed, 4);
+      if (row.incoming === 0 || row.reduction === 100) expect(row.result).toBe(row.fixed);
+    }
+    expect(guardStamina.gameplayVerified).toBe(false);
+    expect(research.guardStaminaEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guard-stamina-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 
@@ -1901,7 +1932,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(40);
-    expect(research.coverage.withNumericFields).toBe(573);
+    expect(research.coverage.withNumericFields).toBe(574);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
