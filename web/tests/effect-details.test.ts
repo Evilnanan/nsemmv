@@ -1,3 +1,4 @@
+import mixedMagic from "../../data/effect-mixed-magic-evidence.json";
 import revenantSelf from "../../data/effect-revenant-self-evidence.json";
 import randomEnchant from "../../data/effect-random-enchant-evidence.json";
 import ironeyeObservation from "../../data/effect-ironeye-observation-evidence.json";
@@ -117,6 +118,36 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("deduplicates both cocktail relic versions and hides their refreshed maintenance lifetime", () => {
+    expect(Object.values(mixedMagic.checks).reduce((n, rows) => n + rows.length, 0)).toBe(999);
+    for (const row of mixedMagic.checks.filters) {
+      const expected = row.copies > 0 && row.tags.includes(16) ? 1.35 : 1;
+      for (const rate of row.rates) expect(rate).toBeCloseTo(expected, 5);
+    }
+    for (const row of mixedMagic.checks.maintenance) {
+      expect(row.nodes.filter(n => n.id === 9200006)).toHaveLength(row.copies ? 1 : 0);
+      for (const rate of row.costs.slice(0, 3)) expect(rate).toBeCloseTo(row.copies ? 1.3 : 1, 5);
+      expect(row.costs[3]).toBe(1);
+    }
+    const combined = mixedMagic.checks.selection.find(r => r.hero === 7 && r.slots.length === 3)!;
+    expect(combined.roots).toEqual([9200006, 9200006, 9200006, 9200006]);
+    for (const id of [7034200, 7034201]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toContain("两个同名版本");
+      expect(detail.blocks.map(b => b.duration)).toEqual([null, null]);
+      expect(detail.blocks.map(b => b.phase)).toEqual(["混合魔法", "施法时"]);
+      expect(detail.blocks[0].scope).toEqual([]);
+      expect(detail.notes.join()).toContain("按乘法计算");
+      expect(detail.notes.join()).toContain("其他强化效果尚未解明");
+      expect(research.effects[id.toString() as "7034200"].evidence).toContain("mixed-magic");
+    }
+    expect(mixedMagic.gameplayVerified).toBe(false);
+    expect(research.mixedMagicEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-mixed-magic-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("multiplies repeated normal critical bonuses but deduplicates the +1 version before combining", () => {
     expect(criticalAttack.checks).toHaveLength(1040);
     for (const row of criticalAttack.checks) {
@@ -3632,11 +3663,11 @@ describe("MMV effect details", () => {
   it("retains conditional branches and does not sum kill notifications or promise unverified stacking", () => {
     const cocktail = effectDetail(7034200)!;
     expect(cocktail.blocks.map((b) => [b.linked, b.duration])).toEqual([
-      [true, 3],
-      [true, 3],
+      [true, null],
+      [true, null],
     ]);
     expect(cocktail.blocks[0].values).toContainEqual(["攻击倍率", "+35%"]);
-    expect(cocktail.blocks[1].values).toContainEqual(["魔法 FP 消耗", "+30%"]);
+    expect(cocktail.blocks[1].values).toContainEqual(["魔法、祷告 FP 消耗", "+30%"]);
     const kill = effectDetail(7090000)!;
     expect(kill.blocks.map((b) => b.phase)).toEqual(["打倒敌人时"]);
     expect(kill.blocks[0].values).toEqual([["绝招量表", "+1.65% 或 +5%"]]);
@@ -4033,6 +4064,6 @@ describe("MMV effect details", () => {
       ).toBeLessThan(0.04);
     expect(effectDetail(7260900)!.blocks[0].duration).toBe(15);
     expect(effectDetail(7260900)!.blocks[0].interval).toBe(1.3);
-    expect(effectDetail(7034200)!.blocks[0].duration).toBe(3);
+    expect(effectDetail(7034200)!.blocks[0].duration).toBeNull();
   });
 });
