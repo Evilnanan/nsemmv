@@ -672,6 +672,16 @@ if not args.extract_only:
     assert spell_duration['bulletParamSha256'] == 'ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44'
     assert {k: len(v) for k, v in spell_duration['checks'].items()} == dict(selection=220, countdown=180, mixed=45, lifetime=36, refresh=12, transition=5, healing=18, recipient=18)
 spell_duration_families = {str(f['effect']): f for f in spell_duration['families']}
+observation_path = ROOT / 'data/effect-ironeye-observation-evidence.json'
+observation = json.loads(observation_path.read_text())
+if not args.extract_only:
+    assert observation['schema'] == 1 and observation['status'] == 'partial'
+    assert observation['regulationSha256'] == catalog['regulationSha256']
+    assert observation['exeSha256'] == evidence['exeSha256'] and not observation['gameplayVerified']
+    assert observation['paramSha256'] == evidence['paramSha256']
+    assert observation['paramHashes']['AttachEffectParam'] == hit_stamina['attachParamSha256']
+    assert observation['effects'] == [7280100, 7280101] and observation['maxLevel'] == 99
+    assert {k: len(v) for k, v in observation['checks'].items()} == dict(selection=66, aliases=9, growth=42, burst=24, upstream=12, disabled=4, removal=4, profile=30, timing=3)
 team_runes_path = ROOT / 'data/effect-team-runes-evidence.json'
 team_runes = json.loads(team_runes_path.read_text())
 if not args.extract_only:
@@ -3059,6 +3069,17 @@ for id, effect in source['effects'].items():
             final = ladder['stages'][-1]
             assert any(r['existing'] == [final] and r['target'] == -1 for r in evidence['growthAdvance'])
         rule = 'growth'
+    if id in ('7280100', '7280101'):
+        assert effect['roots'] == {'passiveSpEffectId_1': 7280100}
+        assert source['spells']['7280100']['applyIdOnGetSoul'] == 7280101
+        assert source['spells']['7280101']['replaceSpEffectId'] == 7280201
+        assert math.isclose(source['spells']['7280201']['itemDropRate'], .01, abs_tol=1e-7)
+        blocks = [dict(source=7280201, phase='打倒敌人时', linked=True,
+                       values=[['自身观察力', '+1／次'], ['自身成长上限', '+99']],
+                       scope=[], restrictions=[], duration=None, interval=None)]
+        notes.append('重复装备（含两个同名版本）不会加快自身成长；同时打倒多个敌人可分别累计。')
+        # Personal duplication is proven; ally delivery/merging remains unresolved.
+        rule = 'unknown'
     if id in ('7090000', '6090000'):
         root = list(effect['roots'].values())[0]
         assert roots[0]['spCategory'] == 20 and roots[0]['stateInfo'] == 199 and effect['runtimeExclusive'] == -1
@@ -3206,6 +3227,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整道具准入、Havok 动作调度与受击／闪避中断时序、最终 HP／FP 写入、发狂免疫与自然退条、抵抗成长、装备移除／死亡／重载及多人交互；动画活动窗口及脚本公共取消条件为显式输入')
     if rules[id] == 'attack-stamina':
         questions.append('各动作／TAE 到耗精接口的完整调度和基础耗精来源、调用掩码与资源对象 +10C 的游戏语义、最终精力写入及零精力动作准入、装备移除／死亡／重载／多人交互；未以旧参数标签推断武器 +E0 的用途')
+    if id in ('7280100', '7280101'):
+        refs.append('ironeye-observation')
+        questions = ['队友成长的实际投递／合并及多名铁之眼的关系；完整场景击杀归属、迟到触发、装备初始化、死亡／出征切换／保存重载及 DLL；自身成长、两目录版本去重、上限、同帧多次奖励、资料效果复制及个人掉落入口已验证']
     if rules[id] == 'team-runes':
         questions.append('实际网络投递与角色／队伍状态切换、本地单人管理器与团队管理器的完整调度、各场景奖励入口的倍率开关、卢恩上限、DLL、死亡和重载；已验证原生来源比较、临时实例创建、共享筛选、装备重建／卸下及倍率和取整，队伍数据及更新后的装备句柄为显式输入')
     if rules[id] in ('rune-rate', 'rune-rate-single'):
@@ -3401,6 +3425,7 @@ research['greaseEvidenceSha256'] = hashlib.sha256(grease_path.read_bytes()).hexd
 research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes()).hexdigest()
 research['hitStaminaEvidenceSha256'] = hashlib.sha256(hit_stamina_path.read_bytes()).hexdigest()
 research['spellDurationEvidenceSha256'] = hashlib.sha256(spell_duration_path.read_bytes()).hexdigest()
+research['ironeyeObservationEvidenceSha256'] = hashlib.sha256(observation_path.read_bytes()).hexdigest()
 research['teamRunesEvidenceSha256'] = hashlib.sha256(team_runes_path.read_bytes()).hexdigest()
 research['revenantAlliesEvidenceSha256'] = hashlib.sha256(revenant_allies_path.read_bytes()).hexdigest()
 research['lowHpTeamRecoveryEvidenceSha256'] = hashlib.sha256(low_hp_team_path.read_bytes()).hexdigest()

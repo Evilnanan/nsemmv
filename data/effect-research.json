@@ -16439,11 +16439,11 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "ironeye-observation"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "队友成长的实际投递／合并及多名铁之眼的关系；完整场景击杀归属、迟到触发、装备初始化、死亡／出征切换／保存重载及 DLL；自身成长、两目录版本去重、上限、同帧多次奖励、资料效果复制及个人掉落入口已验证"
       ],
       "gameplayVerified": false
     },
@@ -16462,11 +16462,11 @@
       "values": "decoded-fields",
       "stacking": "unresolved",
       "stackingCategory": "待确认",
-      "evidence": [],
+      "evidence": [
+        "ironeye-observation"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "队友成长的实际投递／合并及多名铁之眼的关系；完整场景击杀归属、迟到触发、装备初始化、死亡／出征切换／保存重载及 DLL；自身成长、两目录版本去重、上限、同帧多次奖励、资料效果复制及个人掉落入口已验证"
       ],
       "gameplayVerified": false
     },
@@ -50614,6 +50614,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "ironeyeObservationEvidenceSha256": "f969fe0c259179152ef932792153072893a351ea4fed75bb0662ee9d9375b2c2",
   "teamRunesEvidenceSha256": "9bb009d5b5271b0a601040eb5ecc4fd176e5e1fd57192db731a6e12c849828be",
   "revenantAlliesEvidenceSha256": "344db794634e1498f2694e3ecbf0d556140d02cba5af17fdff0cc015948de87d",
   "lowHpTeamRecoveryEvidenceSha256": "2b0cee4396e41b8bc773878ccea410fa1b097c1321a2f4b26e1308b95477bdcc",

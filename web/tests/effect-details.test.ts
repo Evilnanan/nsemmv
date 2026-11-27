@@ -1,3 +1,4 @@
+import ironeyeObservation from "../../data/effect-ironeye-observation-evidence.json";
 import teamRunes from "../../data/effect-team-runes-evidence.json";
 import revenantAllies from "../../data/effect-revenant-allies-evidence.json";
 import lowHpTeamRecovery from "../../data/effect-low-hp-team-recovery-evidence.json";
@@ -1064,6 +1065,35 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("documents personal observation growth without claiming unresolved ally stacking", () => {
+    expect(ironeyeObservation.status).toBe("partial");
+    expect(ironeyeObservation.gameplayVerified).toBe(false);
+    expect(research.ironeyeObservationEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-ironeye-observation-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const id of [7280100, 7280101]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("待确认");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({ phase: "打倒敌人时", values: [["自身观察力", "+1／次"], ["自身成长上限", "+99"]], duration: null, interval: null });
+      expect(detail.notes).toEqual(["重复装备（含两个同名版本）不会加快自身成长；同时打倒多个敌人可分别累计。"]);
+    }
+    for (const row of ironeyeObservation.checks.growth) {
+      const level = row.copies ? Math.min(row.kills, 99) : 0;
+      expect(row.raw).toBeCloseTo(level / 100, 6);
+      expect(row.nodes.filter(n => n.id >= 7280201 && n.id < 7280300).map(n => n.id))
+        .toEqual(level ? [7280200 + level] : []);
+    }
+    for (const row of ironeyeObservation.checks.burst)
+      expect(row.raw).toBeCloseTo(row.burst / 100, 6);
+    for (const row of ironeyeObservation.checks.profile)
+      expect(row.rate).toBeCloseTo(row.base + row.tier / 100, 6);
+    for (const row of ironeyeObservation.checks.removal) {
+      expect(row.nodes.some(n => n.id === 7280100)).toBe(false);
+      expect(row.raw).toBeCloseTo(row.level / 100, 6);
     }
   });
 
