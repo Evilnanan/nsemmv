@@ -1,3 +1,4 @@
+import nearbyPoisonAttack from "../../data/effect-nearby-poison-attack-evidence.json";
 import nearbyRotRecovery from "../../data/effect-nearby-rot-recovery-evidence.json";
 import nearbyAilmentAttack from "../../data/effect-nearby-ailment-attack-evidence.json";
 import knockbackProtection from "../../data/effect-knockback-protection-evidence.json";
@@ -1058,6 +1059,37 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("accepts both nearby poison and rot notifications without creating a second attack layer", () => {
+    expect(nearbyPoisonAttack.gameplayVerified).toBe(false);
+    expect(research.nearbyPoisonAttackEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-nearby-poison-attack-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7260800)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("中毒与腐败共用同一份增益");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "自身或附近敌人陷入中毒、腐败后", values: [["攻击倍率", "+12%"]], duration: 20, interval: null, scope: [], restrictions: [] });
+    expect(detail.notes).toEqual(["再次触发刷新持续时间；队友中毒、腐败不触发。"]);
+    for (const row of nearbyPoisonAttack.checks.recipients) {
+      const eligible = row.same || row.sourceType >= 6;
+      expect(row.markerPresent).toBe(eligible);
+      expect(row.leaves).toEqual(row.copies && eligible ? [7260803] : []);
+      for (const value of row.values) expect(value).toBeCloseTo(row.copies && eligible ? 1.12 : 1);
+    }
+    for (const row of nearbyPoisonAttack.checks.dualMarker) {
+      expect(row.leaves).toEqual([7260803]);
+      for (const value of row.values) expect(value).toBeCloseTo(1.12);
+    }
+    for (const row of nearbyPoisonAttack.checks.refresh) {
+      expect(row.grants).toHaveLength(row.hits.length);
+      expect(Math.abs(row.changes[2].frame - row.grants.at(-1)!.frame - 1200)).toBeLessThanOrEqual(4);
+    }
+    for (const row of nearbyPoisonAttack.checks.reinfection)
+      expect(row.shots.map(v => v.frame)).toEqual([1, 45 * row.fps + 1]);
+    for (const row of nearbyPoisonAttack.checks.weaponAssembly)
+      expect(row.rotEffects.every(v => v.cycle === 1120)).toBe(true);
   });
 
   it("refreshes nearby rot recovery without resetting its pulse clock", () => {
