@@ -98,3 +98,20 @@ python tools/build_effect_details.py
 python tools/probe_guard_stamina.py <EXE> <extracted.json> <assets.json> data/effect-guard-stamina-evidence.json
 python tools/build_effect_details.py
 ```
+
+## 防御成功后提升强韧：实际发放、时长与分档叠加（2026-11-27）
+
+8652000／8652010／8652020 的被动根为同号 SpEffect，状态分别是 2077／2243／2244，类别 10、无限寿命、Attach 运行时排他键 -1。当前可获取版本为 8652020。HKS 的 `ExecGuardBuff` 在 `GetReceivedDamageType == DAMAGE_TYPE_GUARD` 时发放全部三档种子 8652001／8652011／8652021，同时还发放其他防御触发种子；21 处实际调用覆盖防御中攻击、盾牌战技及防御相关更新函数。这里只确认脚本调用及条件，不将函数名直接当作完整动作调度证明。
+
+[`探针`](../../tools/probe_guard_poise.py) 与 [`证据`](../../data/effect-guard-poise-evidence.json) 用 Lua 5.4 执行原函数，13 种脚本中出现的损伤类型符号仅成功防御发放效果。符号以独立字符串作为 API 夹具，不声称已解出引擎枚举数值。原生 `4FEA30 → E6E150 → E6E3B0` 读取选择的根；`50D060 → 5057D0 → 50ACD0` 执行插入、资格、更新与替换请求。替换请求由 `3C7FD0` 记录，下个更新步投递到隔离容器；资格函数每步一次，未重复执行以免改变内部类别筛选状态。
+
+种子仅在匹配根状态时生效，随后替换为类别 20 的 8652002／8652012／8652022。有效叶节点均为 10 秒，`toughnessDamageCutRate`（原始行 +0x1b4）为 0.88／0.82／0.76；原生 `502270` 计算对应的强韧度损耗倍率。最多六份相同根、同次防御重复三份通知均只保留每档一个有效叶节点；不同档位相乘，三档合计 0.548416，即强韧度损耗减少约 45.16%。再次成功防御刷新各档时间，不叠加同档倍率。独立种子错开发放的实验确认不同档位计时独立，该实验的单独投递不等同于 HKS 每次防御发放全部种子的真实行为。
+
+共 431 组检查：Lua 条件 13、装备选择 57、触发／重复／帧率组合 171、30／60／120 Hz 寿命 9、重新防御刷新 4、停用 171、异档错开 6。未装备或未匹配的叶节点不提供数值，停用时倍率归 1；生效持续时间按更新边界验证。内部种子约 0.1 秒不作为玩家增益时长展示。
+
+输入绑定 EXE、regulation、SpEffect、AttachEffect 和 HKS 哈希，并记录原函数及 21 处调用函数哈希。库存、损伤类型 API、分配器和发放队列是显式夹具；未执行完整动作调度、真实受击与最终失衡、装备移除／死亡／重载及联机，`gameplayVerified=false`。本批仅更新三条目录详情，其中一条可获取。复现：
+
+```sh
+python tools/probe_guard_poise.py <EXE> <extracted.json> <c0000.hks> data/effect-guard-poise-evidence.json
+python tools/build_effect_details.py
+```

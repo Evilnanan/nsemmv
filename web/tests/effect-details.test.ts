@@ -33,6 +33,7 @@ import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
 import handPoise from "../../data/effect-hand-poise-evidence.json";
 import guardStamina from "../../data/effect-guard-stamina-evidence.json";
+import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import periodicFp from "../../data/effect-periodic-fp-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
@@ -877,6 +878,41 @@ describe("MMV effect details", () => {
     expect(perfume.gameplayVerified).toBe(false);
     expect(research.perfumeEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-perfume-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("resolves guard-success poise duration, level stacking and refresh without exposing seed lifetime", () => {
+    expect(guardPoise.families).toHaveLength(3);
+    for (const family of guardPoise.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("不同等级可叠加");
+      expect(detail.stackingDetail).toBe("同等级不重复；不同等级的强韧度损耗倍率相乘，再次成功防御刷新时长");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({ source: family.leaf, phase: "成功防御后", duration: 10, interval: null,
+        values: [["强韧度损耗", `-${Math.round((1 - family.rate) * 100)}%`]],
+      });
+    }
+    expect(guardPoise.checks.script.filter(row => row.emitted.length).map(row => row.damageType)).toEqual(["DAMAGE_TYPE_GUARD"]);
+    for (const row of guardPoise.checks.trigger) {
+      const levels = row.repeats ? guardPoise.families.filter(f => row.effects.includes(f.effect)) : [];
+      expect(row.leaves.map(n => n.id).sort()).toEqual(levels.map(f => f.leaf).sort());
+      expect(row.multiplier).toBeCloseTo(levels.reduce((rate, f) => rate * f.rate, 1), 6);
+    }
+    expect(guardPoise.checks.disabled.every(row => row.multiplier === 1)).toBe(true);
+    for (const row of guardPoise.checks.lifetime) {
+      expect(Math.abs((row.lastFrame - row.firstFrame + 1) / row.fps - 10)).toBeLessThanOrEqual(3 / row.fps);
+      expect(row.finalMultiplier).toBe(1);
+    }
+    for (const row of guardPoise.checks.refresh) {
+      expect(row.refreshed.map(n => n.id).sort()).toEqual(row.before.map(n => n.id).sort());
+      expect(row.refreshed.every(n => n.lifetime > 9.8)).toBe(true);
+      expect(row.afterOriginalExpiry).toHaveLength(row.before.length);
+      expect(row.finalMultiplier).toBe(1);
+    }
+    for (const row of guardPoise.checks.mixed) expect(row.remaining.map(n => n.id)).toEqual([row.second + 2]);
+    expect(guardPoise.gameplayVerified).toBe(false);
+    expect(research.guardPoiseEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-guard-poise-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 
@@ -1932,7 +1968,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(40);
-    expect(research.coverage.withNumericFields).toBe(574);
+    expect(research.coverage.withNumericFields).toBe(575);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));
