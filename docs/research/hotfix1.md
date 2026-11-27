@@ -115,3 +115,22 @@ python tools/build_effect_details.py
 python tools/probe_guard_poise.py <EXE> <extracted.json> <c0000.hks> data/effect-guard-poise-evidence.json
 python tools/build_effect_details.py
 ```
+
+## 学者受击冲击波：两个词条版本及削弱效果（2026-11-27）
+
+7036600 与 7036601 两条 Attach 都使用被动根 7036600，均仅允许学者、运行时排他键 -1；根为类别 20、无限寿命。词条 ID 7036601 不能直接当作被动 SpEffect ID。HKS `ExecDamage` 先检查 102551、`IsDamageMotionOff`、`Unknown426` 等提前退出条件；存在自身技艺状态 708050 且收到损伤通知时发放基础冲击波种子 708052，另在存在遗物根时发放 7036601，然后返回。此处条件是通知而非已经扣除 HP，详情不写成损失血量才触发。
+
+[`探针`](../../tools/probe_scholar_shockwave.py) 与 [`证据`](../../data/effect-scholar-shockwave-evidence.json) 用 Lua 5.4 执行完整原函数的对应入口，布置 `Unknown1012` 结束不相关的后续分支。128 组组合覆盖通知、自身状态、遗物、三种提前阻断和两个函数参数。原生装备筛选 `4FEA30 → E6E150 → E6E3B0` 在 1～10 中仅角色 9 通过；0 对照输入也通过，未将其命名为实际角色。多个同词条、两个版本混用仍共用同一类别 20 根。
+
+原生自发放 `3C7FD0` 与状态 275 发射 `50AA20 → 397570 → 3975D0` 分别记录基础行为 600000400 与遗物行为 600000401。后者由真实 BehaviorParam_PC 引用 Bullet 30908001，使用 AtkParam_Pc 600000400，并携带削弱效果 7036602；`343280` 从实际 Bullet 行读取后每次产生一个弹体创建请求。同次通知重复与重复装备均不增加遗物发射次数，新的受击通知可再次发射。没有将弹体创建请求等同于已完成实际碰撞。
+
+7036602 为类别 20，持续 6 秒，物理及魔力／火／雷／圣承伤倍率均为 1.5；原生 `503800` 的五通道输出经零至六次插入验证，相同效果只保留一份。再次施加刷新至 6 秒，不增加倍率，停用时倍率回到 1。30／60／120 Hz 计时检查保留更新边界；页面仅展示“承伤倍率 +50%”“6 秒”“重复装备不增强削弱效果；再次命中刷新时长”，省略内部 0.1 秒种子寿命和 0.2 秒发射计时字段。
+
+目标筛选分开记录：`52CC60` 对削弱效果本身允许自身和敌对目标，但上游攻击行是 `selfTarget=0 / friendlyTarget=0 / opposeTarget=1`。因此不能把该效果的接收检查单独称为完整攻击目标过滤。实际攻击碰撞与效果投递未执行；探针显式将命中后的叶节点交给接收容器。2→4 米的弹体半径、插值和 500 魔力攻击参数未作为最终实机范围／伤害展示。
+
+共 321 组检查：脚本 128、装备筛选 77、发射 84、重复通知 6、弹体创建 3、效果接收关系 4、倍率／停用 10、时长 3、刷新 6。证据绑定 EXE、regulation、AttachEffect、SpEffect、BehaviorParam_PC、Bullet、AtkParam_Pc 与 HKS 哈希。仍未接通 708050 的完整取得路径，未执行完整技能／动作调度、实际半径插值／碰撞／去重、两条冲击波的最终伤害交互、不同来源施加及死亡／重载／联机，`gameplayVerified=false`。仅补齐两个词条的已核对数值和叠加，不将它们标为完全解明。
+
+```sh
+python tools/probe_scholar_shockwave.py <EXE> <extracted.json> <c0000.hks> data/effect-scholar-shockwave-evidence.json
+python tools/build_effect_details.py
+```

@@ -34,6 +34,7 @@ import spellFamily from "../../data/effect-spell-family-evidence.json";
 import handPoise from "../../data/effect-hand-poise-evidence.json";
 import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import guardPoise from "../../data/effect-guard-poise-evidence.json";
+import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
 import periodicFp from "../../data/effect-periodic-fp-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
@@ -878,6 +879,45 @@ describe("MMV effect details", () => {
     expect(perfume.gameplayVerified).toBe(false);
     expect(research.perfumeEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-perfume-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("links Scholar shockwave aliases to a refreshing damage debuff without conflating attack and effect targeting", () => {
+    expect(scholarShockwave.effects).toEqual([7036600, 7036601]);
+    for (const id of scholarShockwave.effects) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toBe("重复装备不增强削弱效果；再次命中刷新时长");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({ source: 7036602, phase: "冲击波命中时", duration: 6, interval: null,
+        values: [["承伤倍率", "+50%"]],
+      });
+    }
+    for (const row of scholarShockwave.checks.script) {
+      const emits = row.damaged && row.shield && row.blocked === "none";
+      expect(row.emitted).toEqual(emits ? [708052, ...(row.relic ? [7036601] : [])] : []);
+    }
+    for (const row of scholarShockwave.checks.selection)
+      expect(row.roots).toEqual([0, 9].includes(row.hero) ? row.effects.map(() => 7036600) : []);
+    for (const row of scholarShockwave.checks.emission)
+      expect(row.shots.filter(s => s.behavior === 600000401)).toHaveLength(row.damaged && row.shield && row.effects.length ? 1 : 0);
+    expect(scholarShockwave.checks.projectile.every(row => row.shots.length === 1)).toBe(true);
+    expect(scholarShockwave.checks.recipient.find(row => row.relation === "self")).toMatchObject({ effectAllows: true, attackTargetFlag: 0 });
+    expect(scholarShockwave.checks.recipient.find(row => row.relation === "opposing")).toMatchObject({ effectAllows: true, attackTargetFlag: 1 });
+    for (const row of scholarShockwave.checks.numeric)
+      expect(row.multipliers).toEqual(Array(5).fill(row.copies && !row.disabled ? 1.5 : 1));
+    for (const row of scholarShockwave.checks.lifetime) {
+      expect(Math.abs(row.lastFrame / row.fps - 6)).toBeLessThanOrEqual(3 / row.fps);
+      expect(row.finalMultipliers).toEqual([1, 1, 1, 1, 1]);
+    }
+    for (const row of scholarShockwave.checks.refresh) {
+      expect(row.refreshed).toHaveLength(1);
+      expect(row.refreshed[0].lifetime).toBe(6);
+      expect(row.finalMultipliers).toEqual([1, 1, 1, 1, 1]);
+    }
+    expect(scholarShockwave.gameplayVerified).toBe(false);
+    expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 
@@ -1968,7 +2008,7 @@ describe("MMV effect details", () => {
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
     expect(research.coverage.withMechanicsOnly).toBe(40);
-    expect(research.coverage.withNumericFields).toBe(575);
+    expect(research.coverage.withNumericFields).toBe(577);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),
     ).digest("hex"));

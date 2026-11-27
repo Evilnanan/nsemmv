@@ -577,6 +577,16 @@ if not args.extract_only:
     assert guard_poise['scriptSha256'] == guard_aggro['assetHashes']['hks']
     assert len(guard_poise['callers']) == 21 and len(guard_poise['families']) == 3
     assert {k: len(v) for k, v in guard_poise['checks'].items()} == dict(script=13, selection=57, trigger=171, lifetime=9, refresh=4, disabled=171, mixed=6)
+scholar_shock_path = ROOT / 'data/effect-scholar-shockwave-evidence.json'
+scholar_shock = json.loads(scholar_shock_path.read_text())
+if not args.extract_only:
+    assert scholar_shock['schema'] == 1 and scholar_shock['regulationSha256'] == catalog['regulationSha256']
+    assert scholar_shock['exeSha256'] == evidence['exeSha256'] and not scholar_shock['gameplayVerified']
+    assert scholar_shock['paramSha256'] == evidence['paramSha256']
+    assert scholar_shock['scriptSha256'] == guard_aggro['assetHashes']['hks']
+    assert scholar_shock['bulletParamSha256'] == guardian_shock['bulletParamSha256']
+    assert scholar_shock['behaviorParamSha256'] == duchess_ultimate['behaviorParamSha256']
+    assert {k: len(v) for k, v in scholar_shock['checks'].items()} == dict(script=128, selection=77, emission=84, repeated=6, projectile=3, recipient=4, numeric=10, lifetime=3, refresh=6)
 starting_replacements_path = ROOT / 'data/effect-starting-replacements-evidence.json'
 starting_replacements = json.loads(starting_replacements_path.read_text())
 if not args.extract_only:
@@ -879,6 +889,8 @@ if args.extract:
             for family in guard_poise['families']:
                 if root == family['root']:
                     needed.update((family['seed'], family['leaf']))
+            if root == scholar_shock['root']:
+                needed.update((scholar_shock['seed'], scholar_shock['leaf']))
             if root in item_sharing['roots']:
                 needed.update((7050102, 708503, 3970, 7050303))
             if root == ironeye_ultimate['root']:
@@ -1167,6 +1179,7 @@ STACKING_RULES = {
     'guard-stamina': ('可叠加', '相同词条及不同版本均可叠加，耗精倍率相乘', ['guard-stamina']),
     'guard-stamina-single': ('不可叠加', '相同效果只生效一份；可与其他版本的耗精倍率相乘', ['guard-stamina']),
     'guard-poise': ('不同等级可叠加', '同等级不重复；不同等级的强韧度损耗倍率相乘，再次成功防御刷新时长', ['guard-poise']),
+    'scholar-shockwave': ('不可叠加', '重复装备不增强削弱效果；再次命中刷新时长', ['scholar-shockwave']),
     'periodic-fp': ('可叠加', '同等级和不同等级均可叠加，恢复量相加，各自计时', ['periodic-fp']),
     'periodic-hp-loss': ('可叠加', '消耗量相加，各自计时', ['periodic-hp']),
     'undertaker-contact': ('不可叠加', '重复装备不增加单次恢复量', ['undertaker-contact']),
@@ -1539,6 +1552,20 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('连续防御可再次触发。')
         rule = 'guardian-shockwave'
+    if int(id) in scholar_shock['effects']:
+        root, leaf = scholar_shock['root'], scholar_shock['leaf']
+        assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
+        assert scholar_shock['attachParamSha256'] == critical_attack['attachParamSha256']
+        assert scholar_shock['attackParamSha256'] == critical_attack['atkParamSha256']
+        assert source['spells'][str(root)]['spCategory'] == 20
+        assert source['spells'][str(scholar_shock['seed'])]['behaviorId'] == scholar_shock['behavior']['id']
+        assert source['spells'][str(leaf)]['effectEndurance'] == scholar_shock['duration'] == 6
+        assert all(source['spells'][str(leaf)][key] == scholar_shock['rate'] == 1.5 for key in (
+            'neutralDamageCutRate', 'blowDamageCutRate', 'slashDamageCutRate', 'thrustDamageCutRate',
+            'magicDamageCutRate', 'fireDamageCutRate', 'thunderDamageCutRate', 'darkDamageCutRate'))
+        blocks = [dict(source=leaf, branches=[], phase='冲击波命中时', linked=True,
+                       values=[['承伤倍率', '+50%']], restrictions=[], scope=[], duration=6, interval=None)]
+        rule = 'scholar-shockwave'
     for family in guard_poise['families']:
         if int(id) == family['effect']:
             root = family['root']
@@ -2207,9 +2234,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] in ('critical-normal', 'critical-plus'):
         questions.append('完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入')
@@ -2249,6 +2276,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整受击输入、实际防御准入、精力写入／破防、装备重建与多人交互；强化／能力修正、双持及特殊武器分支尚未联测')
     if rules[id] == 'guard-poise':
         questions.append('完整动作调度与防御事件通知、实际强韧受损／失衡、装备移除与死亡／重载及联机；发放队列按隔离夹具下一更新步投递')
+    if rules[id] == 'scholar-shockwave':
+        questions.append('自身技艺状态 708050 的取得与完整动作调度、冲击波实际半径插值／碰撞到达／攻击目标过滤与同目标去重、两条冲击波伤害交互及最终伤害缩放、不同来源施加／死亡／重载／多人交互')
     if rules[id] == 'periodic-fp':
         questions.append('最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互')
     if rules[id] == 'perfume':
@@ -2402,6 +2431,7 @@ research['spellFamilyEvidenceSha256'] = hashlib.sha256(spell_family_path.read_by
 research['handPoiseEvidenceSha256'] = hashlib.sha256(hand_poise_path.read_bytes()).hexdigest()
 research['guardStaminaEvidenceSha256'] = hashlib.sha256(guard_stamina_path.read_bytes()).hexdigest()
 research['guardPoiseEvidenceSha256'] = hashlib.sha256(guard_poise_path.read_bytes()).hexdigest()
+research['scholarShockwaveEvidenceSha256'] = hashlib.sha256(scholar_shock_path.read_bytes()).hexdigest()
 research['periodicFpEvidenceSha256'] = hashlib.sha256(periodic_fp_path.read_bytes()).hexdigest()
 research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_bytes()).hexdigest()
 research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()

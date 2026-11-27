@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "004264f7910865125c7e9db77f87740e49b5c3e9138f4f18b755f3dd00060b65",
   "coverage": {
     "obtainable": 657,
-    "withDetails": 650,
-    "withNumericFields": 575,
+    "withDetails": 652,
+    "withNumericFields": 577,
     "withMechanicsOnly": 40,
-    "nativeStacking": 572,
+    "nativeStacking": 574,
     "catalog": 2266,
-    "catalogWithDetails": 2105
+    "catalogWithDetails": 2107
   },
   "effects": {
     "0": {
@@ -12421,14 +12421,17 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7036602
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "scholar-shockwave"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "自身技艺状态 708050 的取得与完整动作调度、冲击波实际半径插值／碰撞到达／攻击目标过滤与同目标去重、两条冲击波伤害交互及最终伤害缩放、不同来源施加／死亡／重载／多人交互"
       ],
       "gameplayVerified": false
     },
@@ -12441,14 +12444,17 @@
       "states": [
         0
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7036602
+      ],
+      "values": "decoded-fields",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "scholar-shockwave"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "自身技艺状态 708050 的取得与完整动作调度、冲击波实际半径插值／碰撞到达／攻击目标过滤与同目标去重、两条冲击波伤害交互及最终伤害缩放、不同来源施加／死亡／重载／多人交互"
       ],
       "gameplayVerified": false
     },
@@ -50410,6 +50416,7 @@
   "handPoiseEvidenceSha256": "c25d95cc78c53189cd96b80ad6d3bdee7f5576de17577f90e7846547ab7e3ed2",
   "guardStaminaEvidenceSha256": "1bfd7c2ff7d456a15ae19e118c24e6f2590fb6eb4753773939a32dcd09b789c5",
   "guardPoiseEvidenceSha256": "a32ca8a1ca1dee00b841dbf55c782706dfe1f33aa7dfa22f9da1695f296636a8",
+  "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "periodicFpEvidenceSha256": "179df4092750c1ceddad6f035364d48d08ba03ab51d6dc3794698a0399de1b00",
   "periodicHpEvidenceSha256": "cabe19679dfd28acf3d93ff9bb4731392326b3fc1d8c287b6e3b623338843a18",
   "perfumeEvidenceSha256": "219eaa0954d080b8f64ca546ae87a791fa02b42bc88d396ae00faedb427e699b",
