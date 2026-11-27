@@ -648,6 +648,16 @@ if not args.extract_only:
     assert low_health_ailments['attachParamSha256'] == flask_curses['attachParamSha256']
     assert {k: len(v) for k, v in low_health_ailments['checks'].items()} == dict(selection=88, threshold=96, timing=24, transitions=12, onset=20, lifetime=6, repeat=6, immunity=2)
 low_health_ailment_families = {str(f['effect']): f for f in low_health_ailments['families']}
+low_hp_defense_path = ROOT / 'data/effect-low-hp-defense-evidence.json'
+low_hp_defense = json.loads(low_hp_defense_path.read_text())
+if not args.extract_only:
+    assert low_hp_defense['schema'] == 1 and low_hp_defense['regulationSha256'] == catalog['regulationSha256']
+    assert low_hp_defense['exeSha256'] == evidence['exeSha256'] and not low_hp_defense['gameplayVerified']
+    assert low_hp_defense['paramSha256'] == evidence['paramSha256']
+    assert low_hp_defense['attachParamSha256'] == flask_curses['attachParamSha256']
+    assert low_hp_defense['callsite'] == dict(start='3E0D94', end='3E0DB5', sha256=hashlib.sha256(bytes.fromhex('488b87b8010000488b08e83d600400488b8b900100000f28c84c8bc7e81b4a1200')).hexdigest())
+    assert {k: len(v) for k, v in low_hp_defense['checks'].items()} == dict(selection=308, threshold=1225, mixed=204, transitions=70, disabled=42, context=504)
+low_hp_defense_families = {str(f['effect']): f for f in low_hp_defense['families']}
 target_ailment_path = ROOT / 'data/effect-target-ailment-attack-evidence.json'
 target_ailment = json.loads(target_ailment_path.read_text())
 if not args.extract_only:
@@ -1293,6 +1303,8 @@ STACKING_RULES = {
     'guard-stamina': ('可叠加', '相同词条及不同版本均可叠加，耗精倍率相乘', ['guard-stamina']),
     'guard-stamina-single': ('不可叠加', '相同效果只生效一份；可与其他版本的耗精倍率相乘', ['guard-stamina']),
     'guard-poise': ('不同等级可叠加', '同等级不重复；不同等级的强韧度损耗倍率相乘，再次成功防御刷新时长', ['guard-poise']),
+    'low-hp-defense': ('可叠加', '同等级和不同等级均可叠加，承伤倍率相乘', ['low-hp-defense']),
+    'low-hp-defense-single': ('不可叠加', '相同效果只生效一份；可与其他版本的承伤倍率相乘', ['low-hp-defense']),
     'target-ailment': ('不同等级可叠加', '同一词条不重复；不同等级或版本的倍率相乘', ['target-ailment-attack']),
     'target-ailment-special': ('可叠加', '同一词条不重复；可与普通、＋１、＋２版的倍率相乘', ['target-ailment-attack']),
     'dodge-curse-immediate': ('可叠加', '同类和不同版本的承伤倍率相乘', ['dodge-curses']),
@@ -1681,6 +1693,18 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('连续防御可再次触发。')
         rule = 'guardian-shockwave'
+    if id in low_hp_defense_families:
+        family = low_hp_defense_families[id]
+        root = family['root']
+        assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
+        row = source['spells'][str(root)]
+        assert (row['stateInfo'], row['spCategory'], row['effectEndurance'], row['conditionHp'], row['conditionHpRate']) == (49, family['category'], -1, 40, -1)
+        assert all(math.isclose(row[k], family['rate'], rel_tol=1e-6) for k in ('neutralDamageCutRate', 'slashDamageCutRate', 'blowDamageCutRate', 'thrustDamageCutRate', 'magicDamageCutRate', 'fireDamageCutRate', 'thunderDamageCutRate', 'darkDamageCutRate'))
+        blocks = [dict(source=root, phase='血量 < 40% 时', linked=False,
+                       values=[['承伤倍率', '-' + num((1 - family['rate']) * 100) + '%']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        info = None
+        rule = 'low-hp-defense-single' if family['category'] == 20 else 'low-hp-defense'
     if id in target_ailment_families:
         family = target_ailment_families[id]
         root = family['root']
@@ -2526,9 +2550,9 @@ for id in sorted(source['effects'], key=int):
         questions.append('原生效果列表顺序与预设／装备加载顺序的对应、完整出击／重载队列、角色可获得武器与实际施法资格、DLL 运行时改写及多人同步' if rules[id] == 'starting-replacement' else '多个出击替换词条的优先顺序、角色限制')
     if rules[id] == 'kill':
         questions.append('敌人分类标记的具体对象、共享奖励及重载路径')
-    elif rules[id] not in ('target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
+    elif rules[id] not in ('low-hp-defense', 'low-hp-defense-single', 'target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'guard-stamina', 'guard-stamina-single', 'critical-normal', 'critical-plus', 'critical-shop', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(s not in (0, 71, 2100, 2102, 2105, 2122, 2123, 2128) for s in states):
         questions.append('stateInfo 分派、触发资格、次数、目标及隐藏效果链')
-    if rules[id] not in ('target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
+    if rules[id] not in ('low-hp-defense', 'low-hp-defense-single', 'target-ailment', 'target-ailment-special', 'dodge-curse-immediate', 'dodge-curse-counter', 'dying-curse', 'low-health-ailment', 'flask-curse-damage', 'flask-curse-madness', 'rune-rate', 'rune-rate-single', 'grease-melee', 'grease-physical', 'grease-extension', 'scholar-shockwave', 'guard-poise', 'role-repeat', 'guardian-recovery', 'guardian-skill', 'guardian-protection', 'executor-blade', 'undertaker-prayer', 'executor-recovery', 'executor-tenacity', 'duchess-evasion', 'guardian-duration', 'recluse-mark', 'ironeye-mark', 'duchess-restage', 'recluse-absorption', 'raider-debuff', 'ironeye-poison', 'wylder-bleed', 'duchess-poise', 'duchess-ultimate', 'guardian-shockwave', 'successive-recovery', 'successive-attack', 'scholar-tether', 'scholar-ailment', 'wylder-flame', 'revenant-enchant', 'revenant-family', 'guardian-halberd', 'wylder-followup', 'duchess-dagger', 'item-sharing', 'guard-aggro', 'ironeye-ultimate', 'revenant-ghostflame', 'scholar-feint', 'duchess-stealth', 'frost-stealth', 'ailment-growth', 'attack-nullify', 'rally-recovery', 'rally-blessing', 'flask-sharing', 'gradual-flask', 'raider-skill', 'raider-growth', 'guardian-ultimate', 'undertaker-contact', 'undertaker-reset', 'starting-weapon', 'weapon-recovery', 'recluse-bleed', 'revenant-sacrifice', 'gesture-madness') and any(b['linked'] for b in detail['blocks']):
         questions.append('关联分支的实际触发顺序、重复通知与刷新行为')
     if rules[id] in ('critical-normal', 'critical-plus'):
         questions.append('完整 Throw 选择、场景伤害、装备同步与联机；致命上下文标志为显式输入')
@@ -2568,6 +2592,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整受击输入、实际防御准入、精力写入／破防、装备重建与多人交互；强化／能力修正、双持及特殊武器分支尚未联测')
     if rules[id] == 'guard-poise':
         questions.append('完整动作调度与防御事件通知、实际强韧受损／失衡、装备移除与死亡／重载及联机；发放队列按隔离夹具下一更新步投递')
+    if rules[id] in ('low-hp-defense', 'low-hp-defense-single'):
+        questions.append('完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入')
     if rules[id] in ('target-ailment', 'target-ailment-special'):
         questions.append('完整运行时攻击数据构造、碰撞与最终减伤／HP 写入、实际异常累积／免疫／发作及解除入口、装备重建／死亡／重载／多人交互；目标异常节点及来源类型为显式输入，PARAM 标签经原生转换后接入实际受击调用块')
     if rules[id] in ('dodge-curse-immediate', 'dodge-curse-counter'):
@@ -2699,7 +2725,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('所有奖励入口的实际奖池可达性、外层抽选概率及无匹配候选时的上层处理')
     if any(source['spells'].get(str(sp), {}).get(k, -1) > 0 for sp in effect['roots'].values() for k in ('conditionHp', 'conditionHpRate')):
         refs.append('hpConditions')
-        questions.append('低血量状态切换与其他触发链的时序交互')
+        if rules[id] not in ('low-hp-defense', 'low-hp-defense-single'):
+            questions.append('低血量状态切换与其他触发链的时序交互')
     if not detail['blocks']:
         questions.append('尚未解析到可展示数值／机制，继续查原生、事件或动作脚本')
     numeric = rules[id] not in ('undertaker-reset', 'treasure-map', 'revenant-family') and any(any(label not in ('出击时替换', '武器倾向') for label, _ in b['values']) for b in detail['blocks'])
@@ -2744,6 +2771,7 @@ research['guardPoiseEvidenceSha256'] = hashlib.sha256(guard_poise_path.read_byte
 research['scholarShockwaveEvidenceSha256'] = hashlib.sha256(scholar_shock_path.read_bytes()).hexdigest()
 research['greaseEvidenceSha256'] = hashlib.sha256(grease_path.read_bytes()).hexdigest()
 research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes()).hexdigest()
+research['lowHpDefenseEvidenceSha256'] = hashlib.sha256(low_hp_defense_path.read_bytes()).hexdigest()
 research['targetAilmentAttackEvidenceSha256'] = hashlib.sha256(target_ailment_path.read_bytes()).hexdigest()
 research['dodgeCursesEvidenceSha256'] = hashlib.sha256(dodge_curses_path.read_bytes()).hexdigest()
 research['dyingCursesEvidenceSha256'] = hashlib.sha256(dying_curses_path.read_bytes()).hexdigest()

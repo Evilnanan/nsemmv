@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 597,
+    "nativeStacking": 600,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -2460,15 +2460,14 @@
         340800
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -10836,15 +10835,14 @@
         7012300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -10861,15 +10859,14 @@
         7012301
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -10886,15 +10883,14 @@
         7012302
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -25145,15 +25141,14 @@
         8660100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -25170,15 +25165,14 @@
         8660101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -25195,15 +25189,14 @@
         8660102
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
       "evidence": [
+        "low-hp-defense",
         "hpConditions"
       ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "低血量状态切换与其他触发链的时序交互"
+        "完整受击入口与最终 HP 写入、单次攻击跨越血量阈值时的调度顺序、替代 HP 来源选择、装备重建／死亡／重载及多人交互；使用显式整数 HP 资源执行原生比例调用块，受击上下文为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -50573,6 +50566,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
   "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",
   "dyingCursesEvidenceSha256": "ab544cd6e9d470b2b725e859150c43e8962c0a2135b527371f4ffb00b4643131",

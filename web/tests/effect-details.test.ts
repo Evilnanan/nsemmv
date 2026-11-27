@@ -37,6 +37,7 @@ import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
+import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
 import dyingCurses from "../../data/effect-dying-curses-evidence.json";
@@ -944,6 +945,56 @@ describe("MMV effect details", () => {
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
+  });
+
+  it("shows low-HP defense with the correct boundary and per-version stacking", () => {
+    for (const family of lowHpDefense.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.info).toBeNull();
+      expect(detail.stacking).toBe(family.category === 20 ? "不可叠加" : "可叠加");
+      expect(detail.stackingDetail).toContain("承伤倍率相乘");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: family.root, phase: "血量 < 40% 时",
+        values: [["承伤倍率", `-${Math.round((1 - family.rate) * 100)}%`]],
+        duration: null, interval: null, scope: [], restrictions: [],
+      });
+    }
+    expect(lowHpDefense.gameplayVerified).toBe(false);
+    expect(research.lowHpDefenseEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-low-hp-defense-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("uses native integer HP ratios and requalifies when current or maximum HP changes", () => {
+    const families = new Map(lowHpDefense.families.map(f => [f.effect, f]));
+    for (const row of lowHpDefense.checks.threshold) {
+      const family = families.get(row.effect)!;
+      const copies = family.category === 20 ? Math.min(1, row.copies) : row.copies;
+      expect(row.nodeCount).toBe(copies);
+      expect(row.active).toBe(row.current * 5 < row.maximum * 2);
+      expect(row.ratio).toBe(Math.fround(Math.fround(row.current) / Math.fround(row.maximum)));
+      for (const value of row.values) expect(value).toBeCloseTo(row.active ? family.rate ** copies : 1, 6);
+    }
+    for (const row of lowHpDefense.checks.transitions) {
+      expect(row.timeline.map(t => t.active)).toEqual([false, false, true, true, false, true, false, true, false, true, false]);
+      for (const step of row.timeline.filter(t => !t.active)) expect(step.values).toEqual([1, 1, 1, 1, 1]);
+    }
+    for (const row of lowHpDefense.checks.disabled) expect(row.values).toEqual([1, 1, 1, 1, 1]);
+  });
+
+  it("multiplies repeated and mixed low-HP defense while deduplicating only the legacy root", () => {
+    const ordinary = lowHpDefense.checks.threshold.find(r => r.effect === 7012300 && r.copies === 2 && r.current === 399 && r.maximum === 1000)!;
+    expect(ordinary.values[0]).toBeCloseTo(0.7056, 6);
+    const grades = lowHpDefense.checks.mixed.find(r => r.current === 399 && r.roots.join() === "7012300,7012301,7012302")!;
+    expect(grades.values[0]).toBeCloseTo(0.51072, 6);
+    for (const row of lowHpDefense.checks.mixed) {
+      const kept = row.roots.filter((root, index) => root !== 340800 || index === row.roots.indexOf(root));
+      expect(row.nodeCount).toBe(kept.length);
+      const rate = kept.reduce((v, root) => v * lowHpDefense.families.find(f => f.root === root)!.rate, 1);
+      for (const value of row.values) expect(value).toBeCloseTo(row.active ? rate : 1, 6);
+    }
+    expect(lowHpDefense.checks.selection.every(row => row.selected.length === row.copies)).toBe(true);
   });
 
   it("shows target-ailment bonuses as conditional multipliers without a buff duration", () => {
@@ -2771,9 +2822,7 @@ describe("MMV effect details", () => {
     expect(effectDetail(6851200)!.blocks[0].restrictions).toContain(
       "血量 < 84.99%",
     );
-    expect(effectDetail(7012300)!.blocks[0].restrictions).toContain(
-      "血量 < 40%",
-    );
+    expect(effectDetail(7012300)!.blocks[0].phase).toBe("血量 < 40% 时");
     expect(effectDetail(6851000)!.blocks[0].restrictions).toContain("满血时");
     for (const id of [6851200, 7012300, 6851000]) {
       const cases = evidence.hpConditions.filter((r) => r.id === id);
