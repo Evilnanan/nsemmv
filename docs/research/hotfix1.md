@@ -134,3 +134,16 @@ python tools/build_effect_details.py
 python tools/probe_scholar_shockwave.py <EXE> <extracted.json> <c0000.hks> data/effect-scholar-shockwave-evidence.json
 python tools/build_effect_details.py
 ```
+
+## 复仇者召唤全部家人：补齐新版同效 ID（2026-11-27）
+
+7220210／7220211 的 Attach 行仅 `compatibilityId` 为 900／-1，其余字段完全一致；两者都使用 7220310 根，类别 20、状态 2034、无限寿命。此前三槽控制器证据已经验证当前根的条件动画分派、成功发射后的自身发放、三个独立控制槽位与重复请求，但详情映射仅包含 7220210。
+
+[`探针`](../../tools/probe_revenant_alias.py) 与 [`证据`](../../data/effect-revenant-alias-evidence.json) 新增 66 组原生检查：空配置、两个单独 ID、正反顺序混用、新 ID 重复三份，分别输入角色值 0～10。`4FEA30 → E6E150 → E6E3B0` 在实际复仇者值 6 与对照值 0 返回同一根，其余不返回；0 不命名为游戏角色。`50D060 → 5057D0 → 50ACD0 → 508E20` 确认重复和混用均只保留一份根，并提供同一状态 2034。
+
+新证据用内容哈希绑定原有 71 组家人控制器检查，明确沿实际参数和原生根／状态连接复用结论，不因名称相同就推断等效。新版详情补为“发动绝招时召唤三名家人”“重复装备不增加家人数量”，不展示内部种子寿命。可获取详情和机制说明各增加一条；不增加数值覆盖计数。库存与分配器为夹具，原有完整家人 AI／召回／死亡及联机边界保持未验证，`gameplayVerified=false`。
+
+```sh
+python tools/probe_revenant_alias.py <EXE> <extracted.json> data/effect-revenant-family-evidence.json data/effect-revenant-alias-evidence.json
+python tools/build_effect_details.py
+```

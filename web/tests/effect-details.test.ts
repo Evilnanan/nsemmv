@@ -48,6 +48,7 @@ import scholarAilment from "../../data/effect-scholar-ailment-evidence.json";
 import wylderFlame from "../../data/effect-wylder-flame-evidence.json";
 import revenantEnchant from "../../data/effect-revenant-enchant-evidence.json";
 import revenantFamily from "../../data/effect-revenant-family-evidence.json";
+import revenantAlias from "../../data/effect-revenant-alias-evidence.json";
 import guardianHalberd from "../../data/effect-guardian-halberd-evidence.json";
 import wylderFollowup from "../../data/effect-wylder-followup-evidence.json";
 import duchessDagger from "../../data/effect-duchess-dagger-evidence.json";
@@ -277,6 +278,22 @@ describe("MMV effect details", () => {
     expect(guardianHalberd.gameplayVerified).toBe(false);
     expect(research.guardianHalberdEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-guardian-halberd-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+  it("connects the new Revenant alias to the same verified family-controller state", () => {
+    expect(revenantAlias.effects).toEqual([7220210, 7220211]);
+    expect(revenantAlias.parameterDifferences).toEqual({ compatibilityId: [900, -1] });
+    expect(effectDetail(7220211)).toEqual(effectDetail(7220210));
+    for (const row of revenantAlias.checks) {
+      const enabled = !!row.effects.length && [0, 6].includes(row.hero);
+      expect(row.roots).toEqual(enabled ? row.effects.map(() => 7220310) : []);
+      expect(row.nodes).toHaveLength(Number(enabled));
+      expect(row.stateActive).toBe(enabled);
+    }
+    expect(revenantAlias.familyEvidenceSha256).toBe(research.revenantFamilyEvidenceSha256);
+    expect(revenantAlias.gameplayVerified).toBe(false);
+    expect(research.revenantAliasEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-revenant-alias-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
   it("resolves three independent family requests without turning trigger lifetime into summon duration", () => {
@@ -2007,7 +2024,7 @@ describe("MMV effect details", () => {
       expect(JSON.stringify(detail)).not.toContain("%");
     }
     expect(research.effects["6632300"].values).toBe("decoded-mechanism");
-    expect(research.coverage.withMechanicsOnly).toBe(40);
+    expect(research.coverage.withMechanicsOnly).toBe(41);
     expect(research.coverage.withNumericFields).toBe(577);
     expect(research.discoveryEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-discovery-evidence.json", import.meta.url)),

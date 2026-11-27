@@ -5,12 +5,12 @@
   "triggerEvidenceSha256": "004264f7910865125c7e9db77f87740e49b5c3e9138f4f18b755f3dd00060b65",
   "coverage": {
     "obtainable": 657,
-    "withDetails": 652,
+    "withDetails": 653,
     "withNumericFields": 577,
-    "withMechanicsOnly": 40,
-    "nativeStacking": 574,
+    "withMechanicsOnly": 41,
+    "nativeStacking": 575,
     "catalog": 2266,
-    "catalogWithDetails": 2107
+    "catalogWithDetails": 2108
   },
   "effects": {
     "0": {
@@ -15991,7 +15991,8 @@
       "stacking": "native-analysis",
       "stackingCategory": "不可叠加",
       "evidence": [
-        "revenant-family"
+        "revenant-family",
+        "revenant-alias"
       ],
       "openQuestions": [
         "家人控制器状态 0／11 的完整生命周期与更新、已在场／死亡／召回时的实际行为、落点碰撞和资源生成、绝招动作中断及多人／重载时序"
@@ -16007,15 +16008,18 @@
       "states": [
         2034
       ],
-      "detailSources": [],
-      "values": "unresolved",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "detailSources": [
+        7220310
+      ],
+      "values": "decoded-mechanism",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "revenant-family",
+        "revenant-alias"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "尚未解析到可展示数值／机制，继续查原生、事件或动作脚本"
+        "家人控制器状态 0／11 的完整生命周期与更新、已在场／死亡／召回时的实际行为、落点碰撞和资源生成、绝招动作中断及多人／重载时序"
       ],
       "gameplayVerified": false
     },
@@ -50429,6 +50433,7 @@
   "wylderFlameEvidenceSha256": "342d4c254428d40d61a65a517594bd3493197d1cdaf94992cec62a2b1c3ddc04",
   "revenantEnchantEvidenceSha256": "b35dca8fee481b599863276bd2f64faace9d8c7c0cfea49e3525bf0dff185fb8",
   "revenantFamilyEvidenceSha256": "0d8e58f4d022db5ae22f323c288c90d5925079976fa98f30b4a54bc4b8ea58f1",
+  "revenantAliasEvidenceSha256": "2cefca60ded6ebbca453a8c0d842004f4e15a35df6e7e0a49d6a3c6fa70e833a",
   "guardianHalberdEvidenceSha256": "8462f93450b0729eff176f6e6a05149d5168d13ca163221554ef6343b8c1466c",
   "wylderFollowupEvidenceSha256": "c9656a5048fccb3f93e5dd9ff73f06128e2aece116c79211093612271d47a6e6",
   "duchessDaggerEvidenceSha256": "c24a77725dde219435f698eae19459487f4eb191c4cdcbe6c28f72ee28c3472e",

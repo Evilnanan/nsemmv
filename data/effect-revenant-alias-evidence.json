@@ -1,0 +1,740 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "familyEvidenceSha256": "0d8e58f4d022db5ae22f323c288c90d5925079976fa98f30b4a54bc4b8ea58f1",
+  "effects": [
+    7220210,
+    7220211
+  ],
+  "root": 7220310,
+  "state": 2034,
+  "parameterDifferences": {
+    "compatibilityId": [
+      900,
+      -1
+    ]
+  },
+  "checks": [
+    {
+      "effects": [],
+      "hero": 0,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 1,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 2,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 3,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 4,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 5,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 6,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 7,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 8,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 9,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [],
+      "hero": 10,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 0,
+      "roots": [
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 1,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 2,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 3,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 4,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 5,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 6,
+      "roots": [
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 7,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 8,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 9,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210
+      ],
+      "hero": 10,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 0,
+      "roots": [
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 1,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 2,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 3,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 4,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 5,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 6,
+      "roots": [
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 7,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 8,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 9,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211
+      ],
+      "hero": 10,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 0,
+      "roots": [
+        7220310,
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 1,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 2,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 3,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 4,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 5,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 6,
+      "roots": [
+        7220310,
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 7,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 8,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 9,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220210,
+        7220211
+      ],
+      "hero": 10,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 0,
+      "roots": [
+        7220310,
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 1,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 2,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 3,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 4,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 5,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 6,
+      "roots": [
+        7220310,
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 7,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 8,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 9,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220210
+      ],
+      "hero": 10,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 0,
+      "roots": [
+        7220310,
+        7220310,
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 1,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 2,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 3,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 4,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 5,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 6,
+      "roots": [
+        7220310,
+        7220310,
+        7220310
+      ],
+      "nodes": [
+        {
+          "id": 7220310,
+          "lifetime": -1.0,
+          "flags": 4
+        }
+      ],
+      "stateActive": true
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 7,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 8,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 9,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    },
+    {
+      "effects": [
+        7220211,
+        7220211,
+        7220211
+      ],
+      "hero": 10,
+      "roots": [],
+      "nodes": [],
+      "stateActive": false
+    }
+  ],
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "lifecycle": "50D060 → 5057D0 → 50ACD0",
+    "state": "508E20"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "family controller/animation evidence reused by exact content hash; no gameplay, AI or multiplayer execution",
+    "inventory and allocation use Selection fixture; hero0 accepted control is not assigned a character name",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "selected roots enter isolated effect container; full equipment lifecycle not executed"
+  ],
+  "gameplayVerified": false
+}

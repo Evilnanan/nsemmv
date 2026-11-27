@@ -517,6 +517,14 @@ if not args.extract_only:
     assert revenant_family['paramSha256'] == evidence['paramSha256']
 if not args.extract_only:
     assert {k: len(v) for k, v in revenant_family['checks'].items()} == dict(dispatch=18, controller=26, emission=6, repeat=15, mapping=6)
+revenant_alias_path = ROOT / 'data/effect-revenant-alias-evidence.json'
+revenant_alias = json.loads(revenant_alias_path.read_text())
+if not args.extract_only:
+    assert revenant_alias['schema'] == 1 and revenant_alias['regulationSha256'] == catalog['regulationSha256']
+    assert revenant_alias['exeSha256'] == evidence['exeSha256'] and not revenant_alias['gameplayVerified']
+    assert revenant_alias['paramSha256'] == evidence['paramSha256'] and len(revenant_alias['checks']) == 66
+    assert revenant_alias['familyEvidenceSha256'] == hashlib.sha256(revenant_family_path.read_bytes()).hexdigest()
+    assert revenant_alias['root'] == revenant_family['root'] and set(revenant_family['effects']) < set(revenant_alias['effects'])
 guardian_halberd_path = ROOT / 'data/effect-guardian-halberd-evidence.json'
 guardian_halberd = json.loads(guardian_halberd_path.read_text())
 if not args.extract_only:
@@ -1769,8 +1777,9 @@ for id, effect in source['effects'].items():
         blocks = [dict(source=guardian_halberd['root'], phase='戟蓄力攻击时', linked=True,
                        values=[['旋风半径', num(radius) + ' 米']], restrictions=[], scope=[], duration=None, interval=None)]
         rule = 'guardian-halberd'
-    if int(id) in revenant_family['effects']:
+    if int(id) in revenant_alias['effects']:
         assert list(effect['roots'].values()) == [revenant_family['root']]
+        assert revenant_alias['attachParamSha256'] == critical_attack['attachParamSha256']
         assert len(revenant_family['families']) == 3
         blocks = [dict(source=revenant_family['root'], phase='发动绝招时', linked=True,
                        values=[['召唤家人', '三名']], restrictions=[], scope=[], duration=None, interval=None)]
@@ -2208,6 +2217,8 @@ for id in sorted(source['effects'], key=int):
     missing_roots = [sp for sp in effect['roots'].values() if str(sp) not in source['spells']]
     states = sorted({int(source['spells'][str(sp)]['stateInfo']) for sp in effect['roots'].values() if str(sp) in source['spells']})
     refs = STACKING_RULES[rules[id]][2].copy()
+    if int(id) in revenant_alias['effects']:
+        refs.append('revenant-alias')
     questions = []
     if any(r['root'] == int(id) for r in evidence['damageStatus']):
         refs.append('damage-status')
@@ -2444,6 +2455,7 @@ research['scholarAilmentEvidenceSha256'] = hashlib.sha256(scholar_ailment_path.r
 research['wylderFlameEvidenceSha256'] = hashlib.sha256(wylder_flame_path.read_bytes()).hexdigest()
 research['revenantEnchantEvidenceSha256'] = hashlib.sha256(revenant_enchant_path.read_bytes()).hexdigest()
 research['revenantFamilyEvidenceSha256'] = hashlib.sha256(revenant_family_path.read_bytes()).hexdigest()
+research['revenantAliasEvidenceSha256'] = hashlib.sha256(revenant_alias_path.read_bytes()).hexdigest()
 research['guardianHalberdEvidenceSha256'] = hashlib.sha256(guardian_halberd_path.read_bytes()).hexdigest()
 research['wylderFollowupEvidenceSha256'] = hashlib.sha256(wylder_followup_path.read_bytes()).hexdigest()
 research['duchessDaggerEvidenceSha256'] = hashlib.sha256(duchess_dagger_path.read_bytes()).hexdigest()
