@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 604,
+    "nativeStacking": 605,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -12675,16 +12675,17 @@
         2103
       ],
       "detailSources": [
+        7036900,
         7036901
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "undertaker-combo"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "各攻击行对应的实际动作可达性、完整碰撞与命中上下文构造、原生目标投递与最终伤害、装备移除／死亡／重载及多人交互；493 个标记攻击行与所有标签组合代表已原生执行，命中结果直接插入攻击者容器"
       ],
       "gameplayVerified": false
     },
@@ -50571,6 +50572,7 @@
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
+  "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
   "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",

@@ -38,6 +38,7 @@ import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
 import hitStamina from "../../data/effect-hit-stamina-evidence.json";
+import undertakerCombo from "../../data/effect-undertaker-combo-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -994,6 +995,57 @@ describe("MMV effect details", () => {
     expect(at60.find(r => r.spacing === "half")!.events.map(e => e.frame)).toEqual([1, 31]);
     const boundary = hitStamina.checks.spacing.filter(r => r.spacing === "tenth" && r.roots.join() === "7100100");
     expect(boundary.map(r => [r.fps, r.events.length])).toEqual([[30, 2], [60, 2], [120, 1]]);
+  });
+
+  it("resolves Undertaker finisher eligibility and refresh without adding attack stacks", () => {
+    const detail = effectDetail(7036900)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toBe("重复装备不提高倍率；再次触发刷新持续时间");
+    expect(detail.blocks).toEqual([{
+      source: 7036900, branches: [7036901], phase: "连击最后一击命中后", linked: true,
+      values: [["攻击倍率", "+16%"]], scope: [], restrictions: [], duration: 20, interval: null,
+    }]);
+    expect(detail.info).toBeNull();
+    expect(detail.notes).toContain("不受“延长魔法、祷告的有效时间”影响。");
+    expect(undertakerCombo.gameplayVerified).toBe(false);
+    expect(research.undertakerComboEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-undertaker-combo-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const row of undertakerCombo.checks.selection) {
+      const allowed = row.hero === 0 || row.hero === 10;
+      expect(row.selected).toEqual(allowed ? Array(row.copies).fill(7036900) : []);
+      expect(row.leaves).toEqual(allowed ? [7036901] : []);
+      row.rates.forEach(rate => expect(rate).toBeCloseTo(allowed ? 1.16 : 1));
+    }
+    const attacks = undertakerCombo.checks.attacks.filter(row => row.copies === 1);
+    expect(attacks.filter(row => row.tags.includes(104)).map(row => row.attack)).toEqual(undertakerCombo.positiveAttacks);
+    for (const row of undertakerCombo.checks.attacks) {
+      expect(row.leaves).toEqual(row.tags.includes(104) ? [7036901] : []);
+    }
+    for (const row of undertakerCombo.checks.context) {
+      const triggered = row.attack === 90050 && !row.disabled && ![3, 4, 10].includes(row.kind);
+      expect(row.leaves).toEqual(triggered ? [7036901] : []);
+    }
+  });
+
+  it("keeps the finisher bonus at 20 seconds and refreshes a single instance", () => {
+    for (const row of undertakerCombo.checks.lifetime) {
+      expect(Math.abs(row.expiredFrame - 20 * row.fps)).toBeLessThanOrEqual(3);
+      row.rates.forEach(rate => expect(rate).toBeCloseTo(1.16));
+    }
+    for (const row of undertakerCombo.checks.refresh) {
+      expect(row.events.map(event => event.frame)).toEqual([5 * row.fps, 10 * row.fps]);
+      for (const event of row.events) {
+        expect(event.before.filter(node => node.id === 7036901)).toHaveLength(1);
+        expect(event.after.filter(node => node.id === 7036901).map(node => node.lifetime)).toEqual([20]);
+        event.rates.forEach(rate => expect(rate).toBeCloseTo(1.16));
+      }
+      expect(row.final.some(node => node.id === 7036901)).toBe(false);
+    }
+    for (const row of undertakerCombo.checks.extension) {
+      expect(row.after.filter(node => node.id === 7036901).map(node => node.lifetime)).toEqual([19]);
+    }
+    for (const row of undertakerCombo.checks.disabled) expect(row.rates).toEqual([1, 1, 1, 1, 1]);
   });
 
   it("shows low-HP defense with the correct boundary and per-version stacking", () => {
