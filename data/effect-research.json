@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 610,
+    "nativeStacking": 612,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -12860,13 +12860,13 @@
         7037101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "undertaker-charged"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "其他分类 110 攻击的实际动作可达性、完整施法与碰撞／命中目标投递、异常伤害减免字段的消费者、抓取和强制受击反应、DLL 改写与装备重建／死亡／重载／多人交互；已执行辉石彗星、投火和辉石指爪的原生动画事件与施法引用选择，终端发射为记录器"
       ],
       "gameplayVerified": false
     },
@@ -12883,13 +12883,13 @@
         7037101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "undertaker-charged"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "其他分类 110 攻击的实际动作可达性、完整施法与碰撞／命中目标投递、异常伤害减免字段的消费者、抓取和强制受击反应、DLL 改写与装备重建／死亡／重载／多人交互；已执行辉石彗星、投火和辉石指爪的原生动画事件与施法引用选择，终端发射为记录器"
       ],
       "gameplayVerified": false
     },
@@ -50591,6 +50591,7 @@
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
+  "undertakerChargedEvidenceSha256": "4ba3076f37742d9328602eea3ac90c45851266ab0a7a0549cde4eda17c5ce3a0",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
   "dodgeCursesEvidenceSha256": "9dc6061f0d434ed12847a9e0528e8fe492c36eb2f435eebd18866a303a9eaa58",

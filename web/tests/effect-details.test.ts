@@ -43,6 +43,7 @@ import spellDuration from "../../data/effect-spell-duration-evidence.json";
 import thrownConsumables from "../../data/effect-thrown-consumables-evidence.json";
 import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
 import executorUltimateAttack from "../../data/effect-executor-ultimate-attack-evidence.json";
+import undertakerCharged from "../../data/effect-undertaker-charged-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -1048,6 +1049,33 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("explains Undertaker charged sorcery and incantation protection without exposing an idle pulse interval", () => {
+    expect(undertakerCharged.gameplayVerified).toBe(false);
+    expect(research.undertakerChargedEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-undertaker-charged-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const id of [7037500, 7037501]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("不可叠加");
+      expect(detail.stackingDetail).toContain("再次命中刷新持续时间");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        phase: "蓄力魔法／祷告命中后",
+        values: [["承伤倍率", "-35%"], ["强韧度损耗", "-100%"]],
+        duration: 10, interval: null, scope: [],
+      });
+      expect(detail.notes.join(" ")).toContain("不受“延长魔法、祷告的有效时间”影响");
+    }
+    for (const row of undertakerCharged.checks.animation) {
+      expect(row.grants).toEqual(row.active && row.slot ? [7037101] : []);
+      expect(row.values.poise).toBe(row.grants.length ? 0 : 1);
+    }
+    const spells = new Set(undertakerCharged.spellBindings.map(r => r.kind));
+    expect(spells).toEqual(new Set([3, 4]));
+    for (const row of undertakerCharged.checks.lifetime)
+      expect(Math.abs(row.expiredFrame - 10 * row.fps)).toBeLessThanOrEqual(3);
   });
 
   it("deduplicates both Executor ultimate attack versions without claiming all beast attacks are traced", () => {
