@@ -672,6 +672,17 @@ if not args.extract_only:
     assert spell_duration['bulletParamSha256'] == 'ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44'
     assert {k: len(v) for k, v in spell_duration['checks'].items()} == dict(selection=220, countdown=180, mixed=45, lifetime=36, refresh=12, transition=5, healing=18, recipient=18)
 spell_duration_families = {str(f['effect']): f for f in spell_duration['families']}
+throwing_weapon_path = ROOT / 'data/effect-throwing-weapon-evidence.json'
+throwing_weapon = json.loads(throwing_weapon_path.read_text())
+if not args.extract_only:
+    assert throwing_weapon['schema'] == 1 and throwing_weapon['regulationSha256'] == catalog['regulationSha256']
+    assert throwing_weapon['exeSha256'] == evidence['exeSha256'] and not throwing_weapon['gameplayVerified']
+    assert throwing_weapon['paramSha256'] == evidence['paramSha256']
+    assert throwing_weapon['paramHashes']['AttachEffectParam'] == hit_stamina['attachParamSha256']
+    assert len(throwing_weapon['positiveAttacks']) == 196 and throwing_weapon['tagSets'] == 216
+    assert len(throwing_weapon['goodsControls']) == 6
+    assert {k: len(v) for k, v in throwing_weapon['checks'].items()} == dict(selection=44, filters=1950, mixed=16, kinds=78, disabled=4, removal=3, dispatch=816)
+    assert len(throwing_weapon['animationHashes']) == 7
 thrown_path = ROOT / 'data/effect-thrown-consumables-evidence.json'
 thrown = json.loads(thrown_path.read_text())
 if not args.extract_only:
@@ -1407,6 +1418,7 @@ STACKING_RULES = {
     'damage-ailment': ('可叠加', '同种异常的累积量相加', ['damage-ailment']),
     'spell-family': ('可叠加', '攻击倍率相乘', ['spell-family']),
     'perfume': ('可叠加', '攻击倍率相乘', ['perfume']),
+    'throwing-weapon': ('不可叠加', '重复装备不增加攻击倍率', ['throwing-weapon']),
     'thrown-consumables': ('可叠加', '同等级、不同等级及综合投掷强化均可叠加，攻击倍率相乘', ['thrown-consumables']),
     'executor-ultimate-attack': ('不可叠加', '重复装备或两种同名版本混用均不增加增伤', ['executor-ultimate-attack']),
     'scholar-fp-cost': ('不可叠加', '重复装备不增强效果；再次施放刷新对应档位', ['scholar-fp-cost']),
@@ -1862,6 +1874,18 @@ for id, effect in source['effects'].items():
                  '与“减少专注值消耗”词条的减耗倍率相乘。']
         info = None
         rule = 'scholar-fp-cost'
+    if int(id) == throwing_weapon['effect']:
+        root = throwing_weapon['root']
+        assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
+        row = source['spells'][str(root)]
+        assert (row['stateInfo'], row['spCategory'], row['magicSubCategoryChange1']) == (0, 0, throwing_weapon['tag'])
+        assert all(math.isclose(row[k + 'AttackRate'], throwing_weapon['rate'], rel_tol=1e-6) for k in ('physics', 'magic', 'fire', 'thunder', 'dark'))
+        assert (throwing_weapon['tag'], throwing_weapon['rate']) == (250, 1.1)
+        blocks = [dict(source=root, phase='投掷武器攻击时', linked=False,
+                       values=[['攻击倍率', '+10%']], scope=[], restrictions=[], duration=None, interval=None)]
+        notes = ['不强化飞刀、火焰壶等投掷道具。']
+        info = None
+        rule = 'throwing-weapon'
     if int(id) in ironeye_melee['effects']:
         root, ladder = ironeye_melee['root'], ironeye_melee['ladder']
         assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
@@ -2963,6 +2987,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互')
     if rules[id] == 'perfume':
         questions.append('完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用')
+    if rules[id] == 'throwing-weapon':
+        questions.append('完整动作选择图、间接子弹链和黑夜爪特殊动作、碰撞与最终伤害、DLL／装备重建／死亡／重载／多人；已执行标签筛选、重复装备去重、组合倍率以及指定动画的角色专用分支和投射物请求，未将候选武器所有动作视为适用')
     if rules[id] == 'thrown-consumables':
         questions.append('双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互')
     if rules[id] == 'executor-ultimate-attack':
@@ -3124,6 +3150,7 @@ research['greaseEvidenceSha256'] = hashlib.sha256(grease_path.read_bytes()).hexd
 research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes()).hexdigest()
 research['hitStaminaEvidenceSha256'] = hashlib.sha256(hit_stamina_path.read_bytes()).hexdigest()
 research['spellDurationEvidenceSha256'] = hashlib.sha256(spell_duration_path.read_bytes()).hexdigest()
+research['throwingWeaponEvidenceSha256'] = hashlib.sha256(throwing_weapon_path.read_bytes()).hexdigest()
 research['thrownConsumablesEvidenceSha256'] = hashlib.sha256(thrown_path.read_bytes()).hexdigest()
 research['executorUltimateAttackEvidenceSha256'] = hashlib.sha256(executor_attack_path.read_bytes()).hexdigest()
 research['scholarFpCostEvidenceSha256'] = hashlib.sha256(scholar_cost_path.read_bytes()).hexdigest()

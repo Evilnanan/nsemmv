@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 624,
+    "nativeStacking": 625,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -1702,11 +1702,13 @@
         20381100
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
+      "evidence": [
+        "throwing-weapon"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整动作选择图、间接子弹链和黑夜爪特殊动作、碰撞与最终伤害、DLL／装备重建／死亡／重载／多人；已执行标签筛选、重复装备去重、组合倍率以及指定动画的角色专用分支和投射物请求，未将候选武器所有动作视为适用"
       ],
       "gameplayVerified": false
     },
@@ -50614,6 +50616,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "throwingWeaponEvidenceSha256": "1a009c9f9f27d51291bb825744cc20047548021ce16e43949e70fafc1dbdb599",
   "thrownConsumablesEvidenceSha256": "2cfec1cf0ed2687812f1b71e459c94b7cdda954c225587ebb737d7858f1302c0",
   "executorUltimateAttackEvidenceSha256": "1c40996d33998f43921adee7e9c27bf28a2d7aa7e116f27d12179d8191a88ad6",
   "scholarFpCostEvidenceSha256": "21c32c33c4f6ba569e48d5de390d49cf59123b6a9a6f0a8923438e6d12098c74",

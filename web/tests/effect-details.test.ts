@@ -1,3 +1,4 @@
+import throwingWeapon from "../../data/effect-throwing-weapon-evidence.json";
 import ironeyeMelee from "../../data/effect-ironeye-melee-growth-evidence.json";
 import criticalAttack from "../../data/effect-critical-attack-evidence.json";
 import { describe, expect, it } from "vitest";
@@ -1053,6 +1054,30 @@ describe("MMV effect details", () => {
     for (const row of scholarFpCost.checks.mixed) {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
+    }
+  });
+
+  it("deduplicates throwing-weapon bonuses and excludes throwing consumables", () => {
+    expect(throwingWeapon.gameplayVerified).toBe(false);
+    expect(research.throwingWeaponEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-throwing-weapon-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(320906)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("重复装备不增加攻击倍率");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "投掷武器攻击时", values: [["攻击倍率", "+10%"]], scope: [], restrictions: [], duration: null, interval: null });
+    expect(detail.notes).toEqual(["不强化飞刀、火焰壶等投掷道具。"]);
+    for (const row of throwingWeapon.checks.filters)
+      for (const value of row.values)
+        expect(value).toBeCloseTo(row.copies && row.tags.includes(250) ? 1.1 : 1);
+    for (const row of throwingWeapon.goodsControls)
+      expect(row.values).toEqual([1, 1, 1, 1, 1]);
+    for (const row of throwingWeapon.checks.dispatch) {
+      if (!row.enabled) expect(row.requests).toHaveLength(0);
+      for (const request of row.requests)
+        for (const value of request.values)
+          expect(value).toBeCloseTo(request.tags.includes(250) ? 1.1 : 1);
     }
   });
 
