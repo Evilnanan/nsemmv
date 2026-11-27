@@ -8,7 +8,7 @@
     "withDetails": 648,
     "withNumericFields": 573,
     "withMechanicsOnly": 40,
-    "nativeStacking": 559,
+    "nativeStacking": 562,
     "catalog": 2266,
     "catalogWithDetails": 2098
   },
@@ -10105,11 +10105,13 @@
         7006506
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "periodic-fp"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -10126,11 +10128,13 @@
         7006505
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "periodic-fp"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -10147,11 +10151,13 @@
         7006500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "periodic-fp"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互"
       ],
       "gameplayVerified": false
     },
@@ -50371,6 +50377,7 @@
   "passiveResourceEvidenceSha256": "2e512fa984b86308b8139a635c8eb90e20ac9b443b8a70130adbe8a65be3a9bc",
   "damageAilmentEvidenceSha256": "a6b1151ea883cf7756c46289028b876b19dd9696bff6a4ba86dac56e69909878",
   "spellFamilyEvidenceSha256": "e9da1228240724bfc76ccc9ec262359d3a4588604ac50066d9d58a215765aaa0",
+  "periodicFpEvidenceSha256": "179df4092750c1ceddad6f035364d48d08ba03ab51d6dc3794698a0399de1b00",
   "periodicHpEvidenceSha256": "cabe19679dfd28acf3d93ff9bb4731392326b3fc1d8c287b6e3b623338843a18",
   "perfumeEvidenceSha256": "219eaa0954d080b8f64ca546ae87a791fa02b42bc88d396ae00faedb427e699b",
   "duchessUltimateEvidenceSha256": "d2f155fc4b93a35c5d3a63dd975fed03046d67d30dbe4bc734f1e8d7ce3ddadf",

@@ -1,0 +1,5491 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "families": [
+    {
+      "effect": 7006502,
+      "root": 7006500,
+      "interval": 2.5,
+      "amount": 1
+    },
+    {
+      "effect": 7006501,
+      "root": 7006505,
+      "interval": 2,
+      "amount": 1
+    },
+    {
+      "effect": 7006500,
+      "root": 7006506,
+      "interval": 1,
+      "amount": 1
+    }
+  ],
+  "checks": {
+    "selection": [
+      {
+        "effects": [],
+        "hero": 1,
+        "roots": [],
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "effects": [],
+        "hero": 7,
+        "roots": [],
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "effects": [],
+        "hero": 10,
+        "roots": [],
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502
+        ],
+        "hero": 1,
+        "roots": [
+          7006500
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502
+        ],
+        "hero": 7,
+        "roots": [
+          7006500
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502
+        ],
+        "hero": 10,
+        "roots": [
+          7006500
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502
+        ],
+        "hero": 1,
+        "roots": [
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502
+        ],
+        "hero": 7,
+        "roots": [
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502
+        ],
+        "hero": 10,
+        "roots": [
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502,
+          7006502
+        ],
+        "hero": 1,
+        "roots": [
+          7006500,
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502,
+          7006502
+        ],
+        "hero": 7,
+        "roots": [
+          7006500,
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502,
+          7006502
+        ],
+        "hero": 10,
+        "roots": [
+          7006500,
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502,
+          7006502,
+          7006502,
+          7006502,
+          7006502
+        ],
+        "hero": 1,
+        "roots": [
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502,
+          7006502,
+          7006502,
+          7006502,
+          7006502
+        ],
+        "hero": 7,
+        "roots": [
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006502,
+          7006502,
+          7006502,
+          7006502,
+          7006502
+        ],
+        "hero": 10,
+        "roots": [
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501
+        ],
+        "hero": 1,
+        "roots": [
+          7006505
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501
+        ],
+        "hero": 7,
+        "roots": [
+          7006505
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501
+        ],
+        "hero": 10,
+        "roots": [
+          7006505
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501
+        ],
+        "hero": 1,
+        "roots": [
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501
+        ],
+        "hero": 7,
+        "roots": [
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501
+        ],
+        "hero": 10,
+        "roots": [
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501,
+          7006501
+        ],
+        "hero": 1,
+        "roots": [
+          7006505,
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501,
+          7006501
+        ],
+        "hero": 7,
+        "roots": [
+          7006505,
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501,
+          7006501
+        ],
+        "hero": 10,
+        "roots": [
+          7006505,
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501,
+          7006501,
+          7006501,
+          7006501,
+          7006501
+        ],
+        "hero": 1,
+        "roots": [
+          7006505,
+          7006505,
+          7006505,
+          7006505,
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501,
+          7006501,
+          7006501,
+          7006501,
+          7006501
+        ],
+        "hero": 7,
+        "roots": [
+          7006505,
+          7006505,
+          7006505,
+          7006505,
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006501,
+          7006501,
+          7006501,
+          7006501,
+          7006501,
+          7006501
+        ],
+        "hero": 10,
+        "roots": [
+          7006505,
+          7006505,
+          7006505,
+          7006505,
+          7006505,
+          7006505
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500
+        ],
+        "hero": 1,
+        "roots": [
+          7006506
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500
+        ],
+        "hero": 7,
+        "roots": [
+          7006506
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500
+        ],
+        "hero": 10,
+        "roots": [
+          7006506
+        ],
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500
+        ],
+        "hero": 1,
+        "roots": [
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500
+        ],
+        "hero": 7,
+        "roots": [
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500
+        ],
+        "hero": 10,
+        "roots": [
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500,
+          7006500
+        ],
+        "hero": 1,
+        "roots": [
+          7006506,
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500,
+          7006500
+        ],
+        "hero": 7,
+        "roots": [
+          7006506,
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500,
+          7006500
+        ],
+        "hero": 10,
+        "roots": [
+          7006506,
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500
+        ],
+        "hero": 1,
+        "roots": [
+          7006506,
+          7006506,
+          7006506,
+          7006506,
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500
+        ],
+        "hero": 7,
+        "roots": [
+          7006506,
+          7006506,
+          7006506,
+          7006506,
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500,
+          7006500
+        ],
+        "hero": 10,
+        "roots": [
+          7006506,
+          7006506,
+          7006506,
+          7006506,
+          7006506,
+          7006506
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006501,
+          7006500
+        ],
+        "hero": 1,
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006501,
+          7006500
+        ],
+        "hero": 7,
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006501,
+          7006500
+        ],
+        "hero": 10,
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006501,
+          7006502
+        ],
+        "hero": 1,
+        "roots": [
+          7006506,
+          7006505,
+          7006500
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006501,
+          7006502
+        ],
+        "hero": 7,
+        "roots": [
+          7006506,
+          7006505,
+          7006500
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006500,
+          7006501,
+          7006502
+        ],
+        "hero": 10,
+        "roots": [
+          7006506,
+          7006505,
+          7006500
+        ],
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006501,
+          7006500,
+          7006502,
+          7006501,
+          7006500
+        ],
+        "hero": 1,
+        "roots": [
+          7006500,
+          7006505,
+          7006506,
+          7006500,
+          7006505,
+          7006506
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006501,
+          7006500,
+          7006502,
+          7006501,
+          7006500
+        ],
+        "hero": 7,
+        "roots": [
+          7006500,
+          7006505,
+          7006506,
+          7006500,
+          7006505,
+          7006506
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "effects": [
+          7006502,
+          7006501,
+          7006500,
+          7006502,
+          7006501,
+          7006500
+        ],
+        "hero": 10,
+        "roots": [
+          7006500,
+          7006505,
+          7006506,
+          7006500,
+          7006505,
+          7006506
+        ],
+        "fpPacket": [
+          6,
+          0
+        ]
+      }
+    ],
+    "snapshot": [
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 0,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 6,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 0,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 6,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 0,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          1,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          2,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          3,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 1,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 1,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 99,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 99,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 1000,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 1000,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 2345,
+        "inactive": false,
+        "fpPacket": [
+          6,
+          0
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 6,
+        "maximum": 2345,
+        "inactive": true,
+        "fpPacket": [
+          0,
+          0
+        ]
+      }
+    ],
+    "timing": [
+      {
+        "root": 7006500,
+        "copies": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 77,
+            "fp": 2
+          },
+          {
+            "frame": 152,
+            "fp": 2
+          },
+          {
+            "frame": 227,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 152,
+            "fp": 2
+          },
+          {
+            "frame": 302,
+            "fp": 2
+          },
+          {
+            "frame": 452,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 301,
+            "fp": 2
+          },
+          {
+            "frame": 601,
+            "fp": 2
+          },
+          {
+            "frame": 901,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 77,
+            "fp": 3
+          },
+          {
+            "frame": 152,
+            "fp": 3
+          },
+          {
+            "frame": 227,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 152,
+            "fp": 3
+          },
+          {
+            "frame": 302,
+            "fp": 3
+          },
+          {
+            "frame": 452,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "copies": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 301,
+            "fp": 3
+          },
+          {
+            "frame": 601,
+            "fp": 3
+          },
+          {
+            "frame": 901,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 62,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 182,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 2
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          },
+          {
+            "frame": 722,
+            "fp": 2
+          },
+          {
+            "frame": 962,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 62,
+            "fp": 3
+          },
+          {
+            "frame": 122,
+            "fp": 3
+          },
+          {
+            "frame": 182,
+            "fp": 3
+          },
+          {
+            "frame": 242,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 122,
+            "fp": 3
+          },
+          {
+            "frame": 242,
+            "fp": 3
+          },
+          {
+            "frame": 362,
+            "fp": 3
+          },
+          {
+            "frame": 482,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "copies": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 242,
+            "fp": 3
+          },
+          {
+            "frame": 482,
+            "fp": 3
+          },
+          {
+            "frame": 722,
+            "fp": 3
+          },
+          {
+            "frame": 962,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 1,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 31,
+            "fp": 2
+          },
+          {
+            "frame": 61,
+            "fp": 2
+          },
+          {
+            "frame": 91,
+            "fp": 2
+          },
+          {
+            "frame": 121,
+            "fp": 2
+          },
+          {
+            "frame": 151,
+            "fp": 2
+          },
+          {
+            "frame": 181,
+            "fp": 2
+          },
+          {
+            "frame": 211,
+            "fp": 2
+          },
+          {
+            "frame": 241,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 62,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 182,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 302,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 2
+          },
+          {
+            "frame": 422,
+            "fp": 2
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 2,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 2
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          },
+          {
+            "frame": 602,
+            "fp": 2
+          },
+          {
+            "frame": 722,
+            "fp": 2
+          },
+          {
+            "frame": 842,
+            "fp": 2
+          },
+          {
+            "frame": 962,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 31,
+            "fp": 3
+          },
+          {
+            "frame": 61,
+            "fp": 3
+          },
+          {
+            "frame": 91,
+            "fp": 3
+          },
+          {
+            "frame": 121,
+            "fp": 3
+          },
+          {
+            "frame": 151,
+            "fp": 3
+          },
+          {
+            "frame": 181,
+            "fp": 3
+          },
+          {
+            "frame": 211,
+            "fp": 3
+          },
+          {
+            "frame": 241,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 62,
+            "fp": 3
+          },
+          {
+            "frame": 122,
+            "fp": 3
+          },
+          {
+            "frame": 182,
+            "fp": 3
+          },
+          {
+            "frame": 242,
+            "fp": 3
+          },
+          {
+            "frame": 302,
+            "fp": 3
+          },
+          {
+            "frame": 362,
+            "fp": 3
+          },
+          {
+            "frame": 422,
+            "fp": 3
+          },
+          {
+            "frame": 482,
+            "fp": 3
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "copies": 3,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 122,
+            "fp": 3
+          },
+          {
+            "frame": 242,
+            "fp": 3
+          },
+          {
+            "frame": 362,
+            "fp": 3
+          },
+          {
+            "frame": 482,
+            "fp": 3
+          },
+          {
+            "frame": 602,
+            "fp": 3
+          },
+          {
+            "frame": 722,
+            "fp": 3
+          },
+          {
+            "frame": 842,
+            "fp": 3
+          },
+          {
+            "frame": 962,
+            "fp": 3
+          }
+        ]
+      }
+    ],
+    "mixed": [
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          1,
+          0
+        ],
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          1,
+          0
+        ],
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          1,
+          0
+        ],
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          0,
+          1
+        ],
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          0,
+          1
+        ],
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          0,
+          1
+        ],
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          0,
+          1,
+          1
+        ],
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          0,
+          1,
+          1
+        ],
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 2
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          0,
+          1,
+          1
+        ],
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 2
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          1,
+          1
+        ],
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          1,
+          1
+        ],
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 302,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 2
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          1,
+          1,
+          1
+        ],
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 3
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 2
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 2
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          2,
+          2,
+          2
+        ],
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 6
+          },
+          {
+            "frame": 31,
+            "fp": 2
+          },
+          {
+            "frame": 61,
+            "fp": 2
+          },
+          {
+            "frame": 62,
+            "fp": 2
+          },
+          {
+            "frame": 77,
+            "fp": 2
+          },
+          {
+            "frame": 91,
+            "fp": 2
+          },
+          {
+            "frame": 121,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 151,
+            "fp": 2
+          },
+          {
+            "frame": 152,
+            "fp": 2
+          },
+          {
+            "frame": 181,
+            "fp": 2
+          },
+          {
+            "frame": 182,
+            "fp": 2
+          },
+          {
+            "frame": 211,
+            "fp": 2
+          },
+          {
+            "frame": 227,
+            "fp": 2
+          },
+          {
+            "frame": 241,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          2,
+          2,
+          2
+        ],
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 6
+          },
+          {
+            "frame": 62,
+            "fp": 2
+          },
+          {
+            "frame": 122,
+            "fp": 4
+          },
+          {
+            "frame": 152,
+            "fp": 2
+          },
+          {
+            "frame": 182,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 4
+          },
+          {
+            "frame": 302,
+            "fp": 4
+          },
+          {
+            "frame": 362,
+            "fp": 4
+          },
+          {
+            "frame": 422,
+            "fp": 2
+          },
+          {
+            "frame": 452,
+            "fp": 2
+          },
+          {
+            "frame": 482,
+            "fp": 4
+          }
+        ]
+      },
+      {
+        "roots": [
+          7006500,
+          7006505,
+          7006506
+        ],
+        "copies": [
+          2,
+          2,
+          2
+        ],
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 6
+          },
+          {
+            "frame": 122,
+            "fp": 2
+          },
+          {
+            "frame": 242,
+            "fp": 4
+          },
+          {
+            "frame": 301,
+            "fp": 2
+          },
+          {
+            "frame": 362,
+            "fp": 2
+          },
+          {
+            "frame": 482,
+            "fp": 4
+          },
+          {
+            "frame": 601,
+            "fp": 2
+          },
+          {
+            "frame": 602,
+            "fp": 2
+          },
+          {
+            "frame": 722,
+            "fp": 4
+          },
+          {
+            "frame": 842,
+            "fp": 2
+          },
+          {
+            "frame": 901,
+            "fp": 2
+          },
+          {
+            "frame": 962,
+            "fp": 4
+          }
+        ]
+      }
+    ],
+    "arrivalBaseline": [
+      {
+        "root": 7006500,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 76,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 226,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 451,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006500,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 300,
+            "fp": 1
+          },
+          {
+            "frame": 600,
+            "fp": 1
+          },
+          {
+            "frame": 900,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 361,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006505,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          },
+          {
+            "frame": 721,
+            "fp": 1
+          },
+          {
+            "frame": 961,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "fps": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 90,
+            "fp": 1
+          },
+          {
+            "frame": 120,
+            "fp": 1
+          },
+          {
+            "frame": 150,
+            "fp": 1
+          },
+          {
+            "frame": 180,
+            "fp": 1
+          },
+          {
+            "frame": 210,
+            "fp": 1
+          },
+          {
+            "frame": 240,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "fps": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 361,
+            "fp": 1
+          },
+          {
+            "frame": 421,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "root": 7006506,
+        "fps": 120,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 361,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 721,
+            "fp": 1
+          },
+          {
+            "frame": 841,
+            "fp": 1
+          },
+          {
+            "frame": 961,
+            "fp": 1
+          }
+        ]
+      }
+    ],
+    "staggered": [
+      {
+        "first": 7006500,
+        "second": 7006500,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 166,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006500,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 331,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006500,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 360,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 660,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          },
+          {
+            "frame": 960,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006505,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 76,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 136,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 196,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006505,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 271,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 391,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006505,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 2
+          },
+          {
+            "frame": 541,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 781,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006506,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 45,
+            "fp": 1
+          },
+          {
+            "frame": 75,
+            "fp": 1
+          },
+          {
+            "frame": 77,
+            "fp": 1
+          },
+          {
+            "frame": 105,
+            "fp": 1
+          },
+          {
+            "frame": 135,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 165,
+            "fp": 1
+          },
+          {
+            "frame": 195,
+            "fp": 1
+          },
+          {
+            "frame": 225,
+            "fp": 1
+          },
+          {
+            "frame": 227,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006506,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 152,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 271,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 331,
+            "fp": 1
+          },
+          {
+            "frame": 391,
+            "fp": 1
+          },
+          {
+            "frame": 451,
+            "fp": 1
+          },
+          {
+            "frame": 452,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006500,
+        "second": 7006506,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 2
+          },
+          {
+            "frame": 421,
+            "fp": 1
+          },
+          {
+            "frame": 541,
+            "fp": 1
+          },
+          {
+            "frame": 601,
+            "fp": 1
+          },
+          {
+            "frame": 661,
+            "fp": 1
+          },
+          {
+            "frame": 781,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006500,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 166,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006500,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 331,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006500,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 360,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 660,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 960,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006505,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 76,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 136,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 196,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006505,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 271,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 391,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006505,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 541,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 781,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006506,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 45,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 75,
+            "fp": 1
+          },
+          {
+            "frame": 105,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 135,
+            "fp": 1
+          },
+          {
+            "frame": 165,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 195,
+            "fp": 1
+          },
+          {
+            "frame": 225,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006506,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 271,
+            "fp": 1
+          },
+          {
+            "frame": 331,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 391,
+            "fp": 1
+          },
+          {
+            "frame": 451,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006505,
+        "second": 7006506,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 421,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 541,
+            "fp": 1
+          },
+          {
+            "frame": 661,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 781,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006500,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 2
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 166,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 2
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006500,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 331,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 481,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006500,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 360,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 660,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 960,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006505,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 76,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 136,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 196,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006505,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 271,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 391,
+            "fp": 1
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006505,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 541,
+            "fp": 1
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 781,
+            "fp": 1
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006506,
+        "fps": 30,
+        "offsetFrames": 15,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 15,
+            "fp": 1
+          },
+          {
+            "frame": 31,
+            "fp": 1
+          },
+          {
+            "frame": 45,
+            "fp": 1
+          },
+          {
+            "frame": 61,
+            "fp": 1
+          },
+          {
+            "frame": 75,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 105,
+            "fp": 1
+          },
+          {
+            "frame": 121,
+            "fp": 1
+          },
+          {
+            "frame": 135,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 165,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 195,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 225,
+            "fp": 1
+          },
+          {
+            "frame": 241,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006506,
+        "fps": 60,
+        "offsetFrames": 30,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 30,
+            "fp": 1
+          },
+          {
+            "frame": 62,
+            "fp": 1
+          },
+          {
+            "frame": 91,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 151,
+            "fp": 1
+          },
+          {
+            "frame": 182,
+            "fp": 1
+          },
+          {
+            "frame": 211,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 271,
+            "fp": 1
+          },
+          {
+            "frame": 302,
+            "fp": 1
+          },
+          {
+            "frame": 331,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 391,
+            "fp": 1
+          },
+          {
+            "frame": 422,
+            "fp": 1
+          },
+          {
+            "frame": 451,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          }
+        ]
+      },
+      {
+        "first": 7006506,
+        "second": 7006506,
+        "fps": 120,
+        "offsetFrames": 60,
+        "pulses": [
+          {
+            "frame": 0,
+            "fp": 1
+          },
+          {
+            "frame": 60,
+            "fp": 1
+          },
+          {
+            "frame": 122,
+            "fp": 1
+          },
+          {
+            "frame": 181,
+            "fp": 1
+          },
+          {
+            "frame": 242,
+            "fp": 1
+          },
+          {
+            "frame": 301,
+            "fp": 1
+          },
+          {
+            "frame": 362,
+            "fp": 1
+          },
+          {
+            "frame": 421,
+            "fp": 1
+          },
+          {
+            "frame": 482,
+            "fp": 1
+          },
+          {
+            "frame": 541,
+            "fp": 1
+          },
+          {
+            "frame": 602,
+            "fp": 1
+          },
+          {
+            "frame": 661,
+            "fp": 1
+          },
+          {
+            "frame": 722,
+            "fp": 1
+          },
+          {
+            "frame": 781,
+            "fp": 1
+          },
+          {
+            "frame": 842,
+            "fp": 1
+          },
+          {
+            "frame": 901,
+            "fp": 1
+          },
+          {
+            "frame": 962,
+            "fp": 1
+          }
+        ]
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "insert": "50D060",
+    "qualify": "5057D0",
+    "update": "50ACD0 → 511B80",
+    "fp": "507460"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "equipment inventory and allocation use Selection fixture from probe_equipped_exclusivity; native selector and passive-root access retained",
+    "no current FP setter, cap/overflow, casting costs, death/reload or multiplayer execution",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "selected roots passed into separate effect container; not a full equipment manager or actor rebuild"
+  ],
+  "gameplayVerified": false
+}

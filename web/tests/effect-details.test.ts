@@ -31,6 +31,7 @@ import treasureMap from "../../data/effect-treasure-map-evidence.json";
 import passiveResource from "../../data/effect-passive-resource-evidence.json";
 import damageAilment from "../../data/effect-damage-ailment-evidence.json";
 import spellFamily from "../../data/effect-spell-family-evidence.json";
+import periodicFp from "../../data/effect-periodic-fp-evidence.json";
 import periodicHp from "../../data/effect-periodic-hp-evidence.json";
 import perfume from "../../data/effect-perfume-evidence.json";
 import duchessUltimate from "../../data/effect-duchess-ultimate-evidence.json";
@@ -874,6 +875,34 @@ describe("MMV effect details", () => {
     expect(perfume.gameplayVerified).toBe(false);
     expect(research.perfumeEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-perfume-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("resolves the remapped periodic FP levels and independently stacks every timer", () => {
+    expect(periodicFp.families).toEqual([
+      { effect: 7006502, root: 7006500, interval: 2.5, amount: 1 },
+      { effect: 7006501, root: 7006505, interval: 2, amount: 1 },
+      { effect: 7006500, root: 7006506, interval: 1, amount: 1 },
+    ]);
+    for (const family of periodicFp.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("同等级和不同等级均可叠加，恢复量相加，各自计时");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({ source: family.root, interval: family.interval, duration: null, values: [["FP定值恢复", "1"]] });
+      expect(research.effects[family.effect.toString() as "7006500"].evidence).toContain("periodic-fp");
+    }
+    expect(periodicFp.checks.selection.every(row => row.fpPacket[0] === row.effects.length && row.fpPacket[1] === 0)).toBe(true);
+    for (const row of periodicFp.checks.mixed) {
+      const singles = row.roots.map(root => periodicFp.checks.timing.find(single => single.root === root && single.copies === 1 && single.fps === row.fps)!);
+      for (const pulse of row.pulses)
+        expect(pulse.fp).toBe(singles.reduce((sum, single, index) => sum + (single.pulses.find(p => p.frame === pulse.frame)?.fp ?? 0) * row.copies[index], 0));
+    }
+    const staggered = periodicFp.checks.staggered.find(row => row.first === 7006500 && row.second === 7006500 && row.fps === 60)!;
+    expect(staggered.pulses.slice(0, 2)).toEqual([{ frame: 0, fp: 1 }, { frame: 30, fp: 1 }]);
+    expect(periodicFp.gameplayVerified).toBe(false);
+    expect(research.periodicFpEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-periodic-fp-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 
