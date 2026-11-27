@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 579,
+    "nativeStacking": 581,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -7871,14 +7871,17 @@
         0
       ],
       "detailSources": [
-        6850900
+        6850900,
+        8801001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "flask-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整道具准入、Havok 动作调度与受击／闪避中断时序、最终 HP／FP 写入、发狂免疫与自然退条、抵抗成长、装备移除／死亡／重载及多人交互；动画活动窗口及脚本公共取消条件为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -8048,15 +8051,18 @@
         0
       ],
       "detailSources": [
+        6851100,
+        8801001,
         6851101
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "flask-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "关联分支的实际触发顺序、重复通知与刷新行为"
+        "完整道具准入、Havok 动作调度与受击／闪避中断时序、最终 HP／FP 写入、发狂免疫与自然退条、抵抗成长、装备移除／死亡／重载及多人交互；动画活动窗口及脚本公共取消条件为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -26058,14 +26064,17 @@
         0
       ],
       "detailSources": [
-        8801000
+        8801000,
+        8801001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "flask-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整道具准入、Havok 动作调度与受击／闪避中断时序、最终 HP／FP 写入、发狂免疫与自然退条、抵抗成长、装备移除／死亡／重载及多人交互；动画活动窗口及脚本公共取消条件为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -26079,14 +26088,17 @@
         0
       ],
       "detailSources": [
-        8801050
+        8801050,
+        8801001
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "flask-curses"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "完整道具准入、Havok 动作调度与受击／闪避中断时序、最终 HP／FP 写入、发狂免疫与自然退条、抵抗成长、装备移除／死亡／重载及多人交互；动画活动窗口及脚本公共取消条件为显式输入"
       ],
       "gameplayVerified": false
     },
@@ -50504,6 +50516,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "flaskCursesEvidenceSha256": "46355dd210bbb159ed25058cebb8ca8aa925cd73e8242c653b7cc5c52562c0bb",
   "attackStaminaEvidenceSha256": "59d259ced82da05b084dec16ee4d63e8e944d4e696f7b702f1544f03dfbd821a",
   "periodicFpEvidenceSha256": "179df4092750c1ceddad6f035364d48d08ba03ab51d6dc3794698a0399de1b00",
   "periodicHpEvidenceSha256": "cabe19679dfd28acf3d93ff9bb4731392326b3fc1d8c287b6e3b623338843a18",

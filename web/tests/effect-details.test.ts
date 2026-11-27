@@ -35,6 +35,7 @@ import handPoise from "../../data/effect-hand-poise-evidence.json";
 import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import guardPoise from "../../data/effect-guard-poise-evidence.json";
 import attackStamina from "../../data/effect-attack-stamina-evidence.json";
+import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import runeRate from "../../data/effect-rune-rate-evidence.json";
 import grease from "../../data/effect-grease-evidence.json";
 import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
@@ -939,6 +940,71 @@ describe("MMV effect details", () => {
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
     ).digest("hex"));
+  });
+
+  it("gates flask damage curses on the drink animations and multiplies copies", () => {
+    for (const [id, percent] of [[6850900, 45], [8801000, 33], [8801050, 46]]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("同类和不同版本的承伤倍率相乘");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: id, phase: "喝瓶动作期间", values: [["承伤倍率", `+${percent}%`]],
+        restrictions: [], duration: null, interval: null,
+      });
+      expect(detail.notes.join()).toContain("包含起手、收尾与空瓶动作");
+    }
+    expect(flaskCurses.events.map(event => event.animation)).toEqual([50110, 50111, 50112, 50113, 50114, 50115, 50116, 50117]);
+    for (const row of flaskCurses.checks.selection) {
+      expect(row.curseSlot).toBe(3);
+      expect(row.roots).toEqual(Array(row.copies).fill(row.effect));
+    }
+    const two = flaskCurses.checks.multipliers.find(row => row.roots.length === 2 && row.roots.every(id => id === 6850900))!;
+    for (const multiplier of two.active) expect(multiplier).toBeCloseTo(2.1025, 6);
+    for (const row of flaskCurses.checks.dispatch) {
+      expect(row.accumulation).toBe(40);
+      expect(row.nativeDispatches).toBe(30);
+      expect(row.after).toEqual([1, 1, 1, 1, 1]);
+    }
+    expect(flaskCurses.checks.disabled.every(row => row.accumulation === 0 && row.taken.every(value => value === 1))).toBe(true);
+    expect(flaskCurses.gameplayVerified).toBe(false);
+    expect(research.flaskCursesEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-flask-curses-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("separates flask madness accumulation from the threshold's HP and FP loss", () => {
+    const detail = effectDetail(6851100)!;
+    expect(detail.info).toBe("使用圣杯瓶时，累积发狂量表");
+    expect(detail.stacking).toBe("可叠加");
+    expect(detail.stackingDetail).toBe("重复装备时累积量相加");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({
+      source: 6851100, phase: "喝瓶动作期间", values: [["发狂累积", "+8 点／次"]],
+      duration: null, interval: 0.1,
+    });
+    expect(detail.notes.join()).toContain("量表满时才会发狂：损失最大血量的 15% + 100、最大专注值的 10% + 30");
+    for (const row of flaskCurses.checks.timeline) {
+      expect(row.accumulation).toBe(160 * row.copies);
+      expect(row.packets.reduce((sum, packet) => sum + packet.amount, 0)).toBe(row.accumulation);
+      expect(row.afterPackets).toEqual([]);
+      expect(row.nodes.some(node => node.id === 6851101)).toBe(false);
+    }
+    for (const row of flaskCurses.checks.leaf) {
+      expect(row.immediate).toBe(8 * row.copies);
+      expect(row.after).toBe(row.immediate);
+      expect(row.nodes).toEqual([]);
+    }
+    for (const row of flaskCurses.checks.onset) {
+      for (const step of row.steps.slice(0, -1)) {
+        expect(step.hp).toEqual([0, 0, 0, 0, 0, 0, 0]);
+        expect(step.fp).toEqual([0, 0]);
+      }
+      const last = row.steps.at(-1)!;
+      expect(last.hp[0]).toBe(-Math.trunc(row.maximum * 0.15 + 100));
+      expect(last.fp[0]).toBe(-Math.trunc(row.maximum * 0.1 + 30));
+      expect(row.expiredNodes).toEqual([]);
+    }
   });
 
   it("stacks attack stamina curses before the native weapon corrections and integer conversion", () => {

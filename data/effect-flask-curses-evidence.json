@@ -1,0 +1,8167 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "scriptSha256": "96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29",
+  "animationBundleSha256": "806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a",
+  "taeSha256": "10c5293c63b84092d528caecaf65835373e298490cf832e218d2e43844de8d79",
+  "behaviorBundleSha256": "bdf5a755bdffb24d9a8f2361f8a7632f44f72eb0d29c706d407ef772cc92c62b",
+  "behaviorSha256": "8ea4b1c176f25d804890d5c08b90fbaf077581ae67ca73a7a9ef47655f8b6b32",
+  "families": [
+    {
+      "effect": 6850900,
+      "root": 6850900,
+      "kind": "damage",
+      "rate": 1.4500000476837158
+    },
+    {
+      "effect": 8801000,
+      "root": 8801000,
+      "kind": "damage",
+      "rate": 1.3300000429153442
+    },
+    {
+      "effect": 8801050,
+      "root": 8801050,
+      "kind": "damage",
+      "rate": 1.4600000381469727
+    },
+    {
+      "effect": 6851100,
+      "root": 6851100,
+      "kind": "madness",
+      "rate": 1
+    }
+  ],
+  "marker": 8801001,
+  "condition": 2352,
+  "leaf": 6851101,
+  "amount": 8,
+  "interval": 0.10000000149011612,
+  "events": [
+    {
+      "animation": 50110,
+      "index": 8,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50111,
+      "index": 12,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50112,
+      "index": 16,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50113,
+      "index": 18,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50114,
+      "index": 26,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50115,
+      "index": 13,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50116,
+      "index": 17,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    },
+    {
+      "animation": 50117,
+      "index": 30,
+      "Type": 67,
+      "StartTime": 0,
+      "EndTime": 100,
+      "hex": "E94A8600000000000000000000000000"
+    }
+  ],
+  "paths": [
+    {
+      "state": "ItemDrinkStart",
+      "node": 50552,
+      "generator": 57377,
+      "binding": {
+        "selector": 57377,
+        "bindingSet": 64064,
+        "binding": 71890,
+        "member": "selectedGeneratorIndex",
+        "variable": 457,
+        "name": "IsBaphometBuff",
+        "stringSet": 14,
+        "names": 20
+      },
+      "animations": [
+        50110,
+        50115
+      ]
+    },
+    {
+      "state": "ItemDrinkStart_Upper",
+      "node": 83575,
+      "generator": 94234,
+      "binding": {
+        "selector": 94234,
+        "bindingSet": 97437,
+        "binding": 101184,
+        "member": "selectedGeneratorIndex",
+        "variable": 457,
+        "name": "IsBaphometBuff",
+        "stringSet": 14,
+        "names": 20
+      },
+      "animations": [
+        50110,
+        50115
+      ]
+    },
+    {
+      "state": "ItemDrinking",
+      "node": 50554,
+      "generator": 57381,
+      "binding": {
+        "selector": 57381,
+        "bindingSet": 64069,
+        "binding": 71894,
+        "member": "selectedGeneratorIndex",
+        "variable": 457,
+        "name": "IsBaphometBuff",
+        "stringSet": 14,
+        "names": 20
+      },
+      "animations": [
+        50111,
+        50116
+      ]
+    },
+    {
+      "state": "ItemDrinking_Upper",
+      "node": 83577,
+      "generator": 94238,
+      "binding": {
+        "selector": 94238,
+        "bindingSet": 97442,
+        "binding": 101187,
+        "member": "selectedGeneratorIndex",
+        "variable": 457,
+        "name": "IsBaphometBuff",
+        "stringSet": 14,
+        "names": 20
+      },
+      "animations": [
+        50111,
+        50116
+      ]
+    },
+    {
+      "state": "ItemDrinkEnd",
+      "node": 50555,
+      "generator": 57383,
+      "binding": {
+        "selector": 57383,
+        "bindingSet": 64072,
+        "binding": 71897,
+        "member": "selectedGeneratorIndex",
+        "variable": 457,
+        "name": "IsBaphometBuff",
+        "stringSet": 14,
+        "names": 20
+      },
+      "animations": [
+        50112,
+        50117
+      ]
+    },
+    {
+      "state": "ItemDrinkEnd_Upper",
+      "node": 83578,
+      "generator": 94240,
+      "binding": {
+        "selector": 94240,
+        "bindingSet": 97445,
+        "binding": 101190,
+        "member": "selectedGeneratorIndex",
+        "variable": 457,
+        "name": "IsBaphometBuff",
+        "stringSet": 14,
+        "names": 20
+      },
+      "animations": [
+        50112,
+        50117
+      ]
+    },
+    {
+      "state": "ItemDrinkEmpty",
+      "node": 50567,
+      "generator": 57407,
+      "binding": null,
+      "animations": [
+        50113
+      ]
+    },
+    {
+      "state": "ItemDrinkEmpty_Upper",
+      "node": 83590,
+      "generator": 94264,
+      "binding": null,
+      "animations": [
+        50113
+      ]
+    },
+    {
+      "state": "ItemDrinkNothing",
+      "node": 50553,
+      "generator": 57379,
+      "binding": null,
+      "animations": [
+        50114
+      ]
+    },
+    {
+      "state": "ItemDrinkNothing_Upper",
+      "node": 83576,
+      "generator": 94236,
+      "binding": null,
+      "animations": [
+        50114
+      ]
+    },
+    {
+      "state": "ItemDrinkStartMP",
+      "node": 50561,
+      "generator": 57395,
+      "binding": null,
+      "animations": [
+        50110
+      ]
+    },
+    {
+      "state": "ItemDrinkStartMP_Upper",
+      "node": 83584,
+      "generator": 94252,
+      "binding": null,
+      "animations": [
+        50110
+      ]
+    },
+    {
+      "state": "ItemDrinkingMP",
+      "node": 50562,
+      "generator": 57397,
+      "binding": null,
+      "animations": [
+        50111
+      ]
+    },
+    {
+      "state": "ItemDrinkingMP_Upper",
+      "node": 83585,
+      "generator": 94254,
+      "binding": null,
+      "animations": [
+        50111
+      ]
+    }
+  ],
+  "checks": {
+    "selection": [
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 1,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 2,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 3,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 6850900,
+        "copies": 6,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 1,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 2,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 3,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801000,
+        "copies": 6,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 1,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 2,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 3,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 8801050,
+        "copies": 6,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 1,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3
+        ],
+        "roots": [
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 2,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "roots": [
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 3,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 0,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 1,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 2,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 3,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 4,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 5,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 6,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 7,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 8,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 9,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      },
+      {
+        "effect": 6851100,
+        "copies": 6,
+        "hero": 10,
+        "curseSlot": 3,
+        "bits": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        "roots": [
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100,
+          6851100
+        ]
+      }
+    ],
+    "dispatch": [
+      {
+        "animation": 50110,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50111,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50112,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50113,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50114,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50115,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50116,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "animation": 50117,
+        "frames": 30,
+        "fps": 60,
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "accumulation": 40,
+        "nativeDispatches": 30,
+        "leafGrants": 5,
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nodes": [
+          {
+            "id": 6850900,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      }
+    ],
+    "multipliers": [
+      {
+        "roots": [],
+        "active": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          6850900
+        ],
+        "active": [
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158,
+          1.4500000476837158
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          6850900,
+          6850900
+        ],
+        "active": [
+          2.1025002002716064,
+          2.1025002002716064,
+          2.1025002002716064,
+          2.1025002002716064,
+          2.1025002002716064
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          6850900,
+          6850900,
+          6850900
+        ],
+        "active": [
+          3.0486254692077637,
+          3.0486254692077637,
+          3.0486254692077637,
+          3.0486254692077637,
+          3.0486254692077637
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900,
+          6850900
+        ],
+        "active": [
+          9.294116020202637,
+          9.294116020202637,
+          9.294116020202637,
+          9.294116020202637,
+          9.294116020202637
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801000
+        ],
+        "active": [
+          1.3300000429153442,
+          1.3300000429153442,
+          1.3300000429153442,
+          1.3300000429153442,
+          1.3300000429153442
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801000,
+          8801000
+        ],
+        "active": [
+          1.7689001560211182,
+          1.7689001560211182,
+          1.7689001560211182,
+          1.7689001560211182,
+          1.7689001560211182
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801000,
+          8801000,
+          8801000
+        ],
+        "active": [
+          2.35263729095459,
+          2.35263729095459,
+          2.35263729095459,
+          2.35263729095459,
+          2.35263729095459
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000,
+          8801000
+        ],
+        "active": [
+          5.534902095794678,
+          5.534902095794678,
+          5.534902095794678,
+          5.534902095794678,
+          5.534902095794678
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801050
+        ],
+        "active": [
+          1.4600000381469727,
+          1.4600000381469727,
+          1.4600000381469727,
+          1.4600000381469727,
+          1.4600000381469727
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801050,
+          8801050
+        ],
+        "active": [
+          2.1316001415252686,
+          2.1316001415252686,
+          2.1316001415252686,
+          2.1316001415252686,
+          2.1316001415252686
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801050,
+          8801050,
+          8801050
+        ],
+        "active": [
+          3.1121363639831543,
+          3.1121363639831543,
+          3.1121363639831543,
+          3.1121363639831543,
+          3.1121363639831543
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050,
+          8801050
+        ],
+        "active": [
+          9.685392379760742,
+          9.685392379760742,
+          9.685392379760742,
+          9.685392379760742,
+          9.685392379760742
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          6850900,
+          8801000,
+          8801050
+        ],
+        "active": [
+          2.815610408782959,
+          2.815610408782959,
+          2.815610408782959,
+          2.815610408782959,
+          2.815610408782959
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "roots": [
+          8801050,
+          8801000,
+          6850900
+        ],
+        "active": [
+          2.81561017036438,
+          2.81561017036438,
+          2.81561017036438,
+          2.81561017036438,
+          2.81561017036438
+        ],
+        "after": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "copies": 0,
+        "fps": 30,
+        "seconds": 2,
+        "packets": [],
+        "accumulation": 0,
+        "afterPackets": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "fps": 60,
+        "seconds": 2,
+        "packets": [],
+        "accumulation": 0,
+        "afterPackets": [],
+        "nodes": []
+      },
+      {
+        "copies": 0,
+        "fps": 120,
+        "seconds": 2,
+        "packets": [],
+        "accumulation": 0,
+        "afterPackets": [],
+        "nodes": []
+      },
+      {
+        "copies": 1,
+        "fps": 30,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 8
+          },
+          {
+            "frame": 4,
+            "amount": 8
+          },
+          {
+            "frame": 7,
+            "amount": 8
+          },
+          {
+            "frame": 10,
+            "amount": 8
+          },
+          {
+            "frame": 13,
+            "amount": 8
+          },
+          {
+            "frame": 16,
+            "amount": 8
+          },
+          {
+            "frame": 19,
+            "amount": 8
+          },
+          {
+            "frame": 22,
+            "amount": 8
+          },
+          {
+            "frame": 25,
+            "amount": 8
+          },
+          {
+            "frame": 28,
+            "amount": 8
+          },
+          {
+            "frame": 31,
+            "amount": 8
+          },
+          {
+            "frame": 34,
+            "amount": 8
+          },
+          {
+            "frame": 37,
+            "amount": 8
+          },
+          {
+            "frame": 40,
+            "amount": 8
+          },
+          {
+            "frame": 43,
+            "amount": 8
+          },
+          {
+            "frame": 46,
+            "amount": 8
+          },
+          {
+            "frame": 49,
+            "amount": 8
+          },
+          {
+            "frame": 52,
+            "amount": 8
+          },
+          {
+            "frame": 55,
+            "amount": 8
+          },
+          {
+            "frame": 58,
+            "amount": 8
+          }
+        ],
+        "accumulation": 160,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 8
+          },
+          {
+            "frame": 8,
+            "amount": 8
+          },
+          {
+            "frame": 14,
+            "amount": 8
+          },
+          {
+            "frame": 20,
+            "amount": 8
+          },
+          {
+            "frame": 26,
+            "amount": 8
+          },
+          {
+            "frame": 32,
+            "amount": 8
+          },
+          {
+            "frame": 38,
+            "amount": 8
+          },
+          {
+            "frame": 44,
+            "amount": 8
+          },
+          {
+            "frame": 50,
+            "amount": 8
+          },
+          {
+            "frame": 56,
+            "amount": 8
+          },
+          {
+            "frame": 62,
+            "amount": 8
+          },
+          {
+            "frame": 68,
+            "amount": 8
+          },
+          {
+            "frame": 74,
+            "amount": 8
+          },
+          {
+            "frame": 80,
+            "amount": 8
+          },
+          {
+            "frame": 86,
+            "amount": 8
+          },
+          {
+            "frame": 92,
+            "amount": 8
+          },
+          {
+            "frame": 98,
+            "amount": 8
+          },
+          {
+            "frame": 104,
+            "amount": 8
+          },
+          {
+            "frame": 110,
+            "amount": 8
+          },
+          {
+            "frame": 116,
+            "amount": 8
+          }
+        ],
+        "accumulation": 160,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 8
+          },
+          {
+            "frame": 14,
+            "amount": 8
+          },
+          {
+            "frame": 26,
+            "amount": 8
+          },
+          {
+            "frame": 38,
+            "amount": 8
+          },
+          {
+            "frame": 50,
+            "amount": 8
+          },
+          {
+            "frame": 62,
+            "amount": 8
+          },
+          {
+            "frame": 74,
+            "amount": 8
+          },
+          {
+            "frame": 86,
+            "amount": 8
+          },
+          {
+            "frame": 98,
+            "amount": 8
+          },
+          {
+            "frame": 110,
+            "amount": 8
+          },
+          {
+            "frame": 122,
+            "amount": 8
+          },
+          {
+            "frame": 134,
+            "amount": 8
+          },
+          {
+            "frame": 146,
+            "amount": 8
+          },
+          {
+            "frame": 158,
+            "amount": 8
+          },
+          {
+            "frame": 170,
+            "amount": 8
+          },
+          {
+            "frame": 182,
+            "amount": 8
+          },
+          {
+            "frame": 194,
+            "amount": 8
+          },
+          {
+            "frame": 206,
+            "amount": 8
+          },
+          {
+            "frame": 218,
+            "amount": 8
+          },
+          {
+            "frame": 230,
+            "amount": 8
+          }
+        ],
+        "accumulation": 160,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 2,
+        "fps": 30,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 16
+          },
+          {
+            "frame": 4,
+            "amount": 16
+          },
+          {
+            "frame": 7,
+            "amount": 16
+          },
+          {
+            "frame": 10,
+            "amount": 16
+          },
+          {
+            "frame": 13,
+            "amount": 16
+          },
+          {
+            "frame": 16,
+            "amount": 16
+          },
+          {
+            "frame": 19,
+            "amount": 16
+          },
+          {
+            "frame": 22,
+            "amount": 16
+          },
+          {
+            "frame": 25,
+            "amount": 16
+          },
+          {
+            "frame": 28,
+            "amount": 16
+          },
+          {
+            "frame": 31,
+            "amount": 16
+          },
+          {
+            "frame": 34,
+            "amount": 16
+          },
+          {
+            "frame": 37,
+            "amount": 16
+          },
+          {
+            "frame": 40,
+            "amount": 16
+          },
+          {
+            "frame": 43,
+            "amount": 16
+          },
+          {
+            "frame": 46,
+            "amount": 16
+          },
+          {
+            "frame": 49,
+            "amount": 16
+          },
+          {
+            "frame": 52,
+            "amount": 16
+          },
+          {
+            "frame": 55,
+            "amount": 16
+          },
+          {
+            "frame": 58,
+            "amount": 16
+          }
+        ],
+        "accumulation": 320,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 2,
+        "fps": 60,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 16
+          },
+          {
+            "frame": 8,
+            "amount": 16
+          },
+          {
+            "frame": 14,
+            "amount": 16
+          },
+          {
+            "frame": 20,
+            "amount": 16
+          },
+          {
+            "frame": 26,
+            "amount": 16
+          },
+          {
+            "frame": 32,
+            "amount": 16
+          },
+          {
+            "frame": 38,
+            "amount": 16
+          },
+          {
+            "frame": 44,
+            "amount": 16
+          },
+          {
+            "frame": 50,
+            "amount": 16
+          },
+          {
+            "frame": 56,
+            "amount": 16
+          },
+          {
+            "frame": 62,
+            "amount": 16
+          },
+          {
+            "frame": 68,
+            "amount": 16
+          },
+          {
+            "frame": 74,
+            "amount": 16
+          },
+          {
+            "frame": 80,
+            "amount": 16
+          },
+          {
+            "frame": 86,
+            "amount": 16
+          },
+          {
+            "frame": 92,
+            "amount": 16
+          },
+          {
+            "frame": 98,
+            "amount": 16
+          },
+          {
+            "frame": 104,
+            "amount": 16
+          },
+          {
+            "frame": 110,
+            "amount": 16
+          },
+          {
+            "frame": 116,
+            "amount": 16
+          }
+        ],
+        "accumulation": 320,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 2,
+        "fps": 120,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 16
+          },
+          {
+            "frame": 14,
+            "amount": 16
+          },
+          {
+            "frame": 26,
+            "amount": 16
+          },
+          {
+            "frame": 38,
+            "amount": 16
+          },
+          {
+            "frame": 50,
+            "amount": 16
+          },
+          {
+            "frame": 62,
+            "amount": 16
+          },
+          {
+            "frame": 74,
+            "amount": 16
+          },
+          {
+            "frame": 86,
+            "amount": 16
+          },
+          {
+            "frame": 98,
+            "amount": 16
+          },
+          {
+            "frame": 110,
+            "amount": 16
+          },
+          {
+            "frame": 122,
+            "amount": 16
+          },
+          {
+            "frame": 134,
+            "amount": 16
+          },
+          {
+            "frame": 146,
+            "amount": 16
+          },
+          {
+            "frame": 158,
+            "amount": 16
+          },
+          {
+            "frame": 170,
+            "amount": 16
+          },
+          {
+            "frame": 182,
+            "amount": 16
+          },
+          {
+            "frame": 194,
+            "amount": 16
+          },
+          {
+            "frame": 206,
+            "amount": 16
+          },
+          {
+            "frame": 218,
+            "amount": 16
+          },
+          {
+            "frame": 230,
+            "amount": 16
+          }
+        ],
+        "accumulation": 320,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 24
+          },
+          {
+            "frame": 4,
+            "amount": 24
+          },
+          {
+            "frame": 7,
+            "amount": 24
+          },
+          {
+            "frame": 10,
+            "amount": 24
+          },
+          {
+            "frame": 13,
+            "amount": 24
+          },
+          {
+            "frame": 16,
+            "amount": 24
+          },
+          {
+            "frame": 19,
+            "amount": 24
+          },
+          {
+            "frame": 22,
+            "amount": 24
+          },
+          {
+            "frame": 25,
+            "amount": 24
+          },
+          {
+            "frame": 28,
+            "amount": 24
+          },
+          {
+            "frame": 31,
+            "amount": 24
+          },
+          {
+            "frame": 34,
+            "amount": 24
+          },
+          {
+            "frame": 37,
+            "amount": 24
+          },
+          {
+            "frame": 40,
+            "amount": 24
+          },
+          {
+            "frame": 43,
+            "amount": 24
+          },
+          {
+            "frame": 46,
+            "amount": 24
+          },
+          {
+            "frame": 49,
+            "amount": 24
+          },
+          {
+            "frame": 52,
+            "amount": 24
+          },
+          {
+            "frame": 55,
+            "amount": 24
+          },
+          {
+            "frame": 58,
+            "amount": 24
+          }
+        ],
+        "accumulation": 480,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 24
+          },
+          {
+            "frame": 8,
+            "amount": 24
+          },
+          {
+            "frame": 14,
+            "amount": 24
+          },
+          {
+            "frame": 20,
+            "amount": 24
+          },
+          {
+            "frame": 26,
+            "amount": 24
+          },
+          {
+            "frame": 32,
+            "amount": 24
+          },
+          {
+            "frame": 38,
+            "amount": 24
+          },
+          {
+            "frame": 44,
+            "amount": 24
+          },
+          {
+            "frame": 50,
+            "amount": 24
+          },
+          {
+            "frame": 56,
+            "amount": 24
+          },
+          {
+            "frame": 62,
+            "amount": 24
+          },
+          {
+            "frame": 68,
+            "amount": 24
+          },
+          {
+            "frame": 74,
+            "amount": 24
+          },
+          {
+            "frame": 80,
+            "amount": 24
+          },
+          {
+            "frame": 86,
+            "amount": 24
+          },
+          {
+            "frame": 92,
+            "amount": 24
+          },
+          {
+            "frame": 98,
+            "amount": 24
+          },
+          {
+            "frame": 104,
+            "amount": 24
+          },
+          {
+            "frame": 110,
+            "amount": 24
+          },
+          {
+            "frame": 116,
+            "amount": 24
+          }
+        ],
+        "accumulation": 480,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 24
+          },
+          {
+            "frame": 14,
+            "amount": 24
+          },
+          {
+            "frame": 26,
+            "amount": 24
+          },
+          {
+            "frame": 38,
+            "amount": 24
+          },
+          {
+            "frame": 50,
+            "amount": 24
+          },
+          {
+            "frame": 62,
+            "amount": 24
+          },
+          {
+            "frame": 74,
+            "amount": 24
+          },
+          {
+            "frame": 86,
+            "amount": 24
+          },
+          {
+            "frame": 98,
+            "amount": 24
+          },
+          {
+            "frame": 110,
+            "amount": 24
+          },
+          {
+            "frame": 122,
+            "amount": 24
+          },
+          {
+            "frame": 134,
+            "amount": 24
+          },
+          {
+            "frame": 146,
+            "amount": 24
+          },
+          {
+            "frame": 158,
+            "amount": 24
+          },
+          {
+            "frame": 170,
+            "amount": 24
+          },
+          {
+            "frame": 182,
+            "amount": 24
+          },
+          {
+            "frame": 194,
+            "amount": 24
+          },
+          {
+            "frame": 206,
+            "amount": 24
+          },
+          {
+            "frame": 218,
+            "amount": 24
+          },
+          {
+            "frame": 230,
+            "amount": 24
+          }
+        ],
+        "accumulation": 480,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 6,
+        "fps": 30,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 48
+          },
+          {
+            "frame": 4,
+            "amount": 48
+          },
+          {
+            "frame": 7,
+            "amount": 48
+          },
+          {
+            "frame": 10,
+            "amount": 48
+          },
+          {
+            "frame": 13,
+            "amount": 48
+          },
+          {
+            "frame": 16,
+            "amount": 48
+          },
+          {
+            "frame": 19,
+            "amount": 48
+          },
+          {
+            "frame": 22,
+            "amount": 48
+          },
+          {
+            "frame": 25,
+            "amount": 48
+          },
+          {
+            "frame": 28,
+            "amount": 48
+          },
+          {
+            "frame": 31,
+            "amount": 48
+          },
+          {
+            "frame": 34,
+            "amount": 48
+          },
+          {
+            "frame": 37,
+            "amount": 48
+          },
+          {
+            "frame": 40,
+            "amount": 48
+          },
+          {
+            "frame": 43,
+            "amount": 48
+          },
+          {
+            "frame": 46,
+            "amount": 48
+          },
+          {
+            "frame": 49,
+            "amount": 48
+          },
+          {
+            "frame": 52,
+            "amount": 48
+          },
+          {
+            "frame": 55,
+            "amount": 48
+          },
+          {
+            "frame": 58,
+            "amount": 48
+          }
+        ],
+        "accumulation": 960,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 6,
+        "fps": 60,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 48
+          },
+          {
+            "frame": 8,
+            "amount": 48
+          },
+          {
+            "frame": 14,
+            "amount": 48
+          },
+          {
+            "frame": 20,
+            "amount": 48
+          },
+          {
+            "frame": 26,
+            "amount": 48
+          },
+          {
+            "frame": 32,
+            "amount": 48
+          },
+          {
+            "frame": 38,
+            "amount": 48
+          },
+          {
+            "frame": 44,
+            "amount": 48
+          },
+          {
+            "frame": 50,
+            "amount": 48
+          },
+          {
+            "frame": 56,
+            "amount": 48
+          },
+          {
+            "frame": 62,
+            "amount": 48
+          },
+          {
+            "frame": 68,
+            "amount": 48
+          },
+          {
+            "frame": 74,
+            "amount": 48
+          },
+          {
+            "frame": 80,
+            "amount": 48
+          },
+          {
+            "frame": 86,
+            "amount": 48
+          },
+          {
+            "frame": 92,
+            "amount": 48
+          },
+          {
+            "frame": 98,
+            "amount": 48
+          },
+          {
+            "frame": 104,
+            "amount": 48
+          },
+          {
+            "frame": 110,
+            "amount": 48
+          },
+          {
+            "frame": 116,
+            "amount": 48
+          }
+        ],
+        "accumulation": 960,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      },
+      {
+        "copies": 6,
+        "fps": 120,
+        "seconds": 2,
+        "packets": [
+          {
+            "frame": 1,
+            "amount": 48
+          },
+          {
+            "frame": 14,
+            "amount": 48
+          },
+          {
+            "frame": 26,
+            "amount": 48
+          },
+          {
+            "frame": 38,
+            "amount": 48
+          },
+          {
+            "frame": 50,
+            "amount": 48
+          },
+          {
+            "frame": 62,
+            "amount": 48
+          },
+          {
+            "frame": 74,
+            "amount": 48
+          },
+          {
+            "frame": 86,
+            "amount": 48
+          },
+          {
+            "frame": 98,
+            "amount": 48
+          },
+          {
+            "frame": 110,
+            "amount": 48
+          },
+          {
+            "frame": 122,
+            "amount": 48
+          },
+          {
+            "frame": 134,
+            "amount": 48
+          },
+          {
+            "frame": 146,
+            "amount": 48
+          },
+          {
+            "frame": 158,
+            "amount": 48
+          },
+          {
+            "frame": 170,
+            "amount": 48
+          },
+          {
+            "frame": 182,
+            "amount": 48
+          },
+          {
+            "frame": 194,
+            "amount": 48
+          },
+          {
+            "frame": 206,
+            "amount": 48
+          },
+          {
+            "frame": 218,
+            "amount": 48
+          },
+          {
+            "frame": 230,
+            "amount": 48
+          }
+        ],
+        "accumulation": 960,
+        "afterPackets": [],
+        "nodes": [
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          },
+          {
+            "id": 6851100,
+            "lifetime": -1.0,
+            "flags": 1
+          }
+        ]
+      }
+    ],
+    "leaf": [
+      {
+        "copies": 1,
+        "immediate": 8,
+        "after": 8,
+        "nodes": []
+      },
+      {
+        "copies": 2,
+        "immediate": 16,
+        "after": 16,
+        "nodes": []
+      },
+      {
+        "copies": 3,
+        "immediate": 24,
+        "after": 24,
+        "nodes": []
+      },
+      {
+        "copies": 6,
+        "immediate": 48,
+        "after": 48,
+        "nodes": []
+      }
+    ],
+    "disabled": [
+      {
+        "effect": 6850900,
+        "taken": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "accumulation": 0
+      },
+      {
+        "effect": 8801000,
+        "taken": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "accumulation": 0
+      },
+      {
+        "effect": 8801050,
+        "taken": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "accumulation": 0
+      },
+      {
+        "effect": 6851100,
+        "taken": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "accumulation": 0
+      }
+    ],
+    "onset": [
+      {
+        "threshold": 8,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 8,
+            "hp": [
+              -115,
+              0,
+              -115,
+              0,
+              -115,
+              0,
+              0
+            ],
+            "fp": [
+              -40,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 8,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 8,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 8,
+            "hp": [
+              -250,
+              0,
+              -250,
+              0,
+              -250,
+              0,
+              0
+            ],
+            "fp": [
+              -130,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 8,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 9,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 9,
+            "hp": [
+              -115,
+              0,
+              -115,
+              0,
+              -115,
+              0,
+              0
+            ],
+            "fp": [
+              -40,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 9,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 9,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 9,
+            "hp": [
+              -250,
+              0,
+              -250,
+              0,
+              -250,
+              0,
+              0
+            ],
+            "fp": [
+              -130,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 9,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 16,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 8,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 16,
+            "hp": [
+              -115,
+              0,
+              -115,
+              0,
+              -115,
+              0,
+              0
+            ],
+            "fp": [
+              -40,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 16,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 16,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 8,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 16,
+            "hp": [
+              -250,
+              0,
+              -250,
+              0,
+              -250,
+              0,
+              0
+            ],
+            "fp": [
+              -130,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 16,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 17,
+        "maximum": 101,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 9,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 3,
+            "remaining": 17,
+            "hp": [
+              -115,
+              0,
+              -115,
+              0,
+              -115,
+              0,
+              0
+            ],
+            "fp": [
+              -40,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 17,
+        "expiredNodes": []
+      },
+      {
+        "threshold": 17,
+        "maximum": 1000,
+        "steps": [
+          {
+            "grants": 1,
+            "remaining": 9,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 2,
+            "remaining": 1,
+            "hp": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fp": [
+              0,
+              0
+            ],
+            "nodes": []
+          },
+          {
+            "grants": 3,
+            "remaining": 17,
+            "hp": [
+              -250,
+              0,
+              -250,
+              0,
+              -250,
+              0,
+              0
+            ],
+            "fp": [
+              -130,
+              0
+            ],
+            "nodes": [
+              {
+                "id": 6851101,
+                "lifetime": 1.0,
+                "flags": 4
+              },
+              {
+                "id": 49060,
+                "lifetime": 0.0,
+                "flags": 2
+              }
+            ]
+          }
+        ],
+        "postProcRemaining": 17,
+        "expiredNodes": []
+      }
+    ],
+    "script": [
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEmpty"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEmpty"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinking"
+        ]
+      },
+      {
+        "state": "ItemDrinkStart",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinking",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEnd",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkEmpty",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkNothing",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkingMP"
+        ]
+      },
+      {
+        "state": "ItemDrinkStartMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": false,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": false,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": false,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": false,
+        "cancel": true,
+        "transitions": []
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": false,
+        "transitions": [
+          "ItemDrinkEnd"
+        ]
+      },
+      {
+        "state": "ItemDrinkingMP",
+        "end": true,
+        "eventFlag": true,
+        "empty": true,
+        "baphomet": true,
+        "cancel": true,
+        "transitions": []
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "animation": "27D0F10 → 27D0400 → 410CA0",
+    "lifecycle": "3C7FD0 → 50D060 → 5057D0 → 50ACD0",
+    "damage": "503800",
+    "madness": "state437 native self-grant"
+  },
+  "stubs": [
+    "0x4e78a0 network-message identity/transport only; no remote delivery",
+    "0x4e78c0 network-message identity/transport only; no remote delivery",
+    "0xdf24d0 network-message identity/transport only; no remote delivery",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "26909A0 security cookie preserves return value",
+    "3CED90 explicit animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "4D1B20 ordinary locally active actor",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "HKS upper-update functions run in Lua with explicit common-cancel/end/event/buff inputs; complete item admission and common functions not executed",
+    "animation activity/time supplied by caller; eight actual TAE events dispatched, no full Havok scheduler or damage/cancel arbitration",
+    "buildup resistance10000 avoids proc in timing tests; separate thresholds8/9/16/17 run real onset and HP/FP getters; immunity, natural decay, actual resource writes, death/reload and multiplayer not exercised",
+    "damage getter executed; final hit calculation/HP write not executed",
+    "disabled test applies inactive bits after qualification; equipment removal/rebuild not simulated",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner virtual +1a0 no resistance-growth params; +210 no damage exclusion",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic inventory: curse slot3 paired with positive7000000; draw legality not asserted"
+  ],
+  "gameplayVerified": false
+}
