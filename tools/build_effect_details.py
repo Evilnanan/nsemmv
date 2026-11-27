@@ -672,6 +672,17 @@ if not args.extract_only:
     assert spell_duration['bulletParamSha256'] == 'ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44'
     assert {k: len(v) for k, v in spell_duration['checks'].items()} == dict(selection=220, countdown=180, mixed=45, lifetime=36, refresh=12, transition=5, healing=18, recipient=18)
 spell_duration_families = {str(f['effect']): f for f in spell_duration['families']}
+thrown_path = ROOT / 'data/effect-thrown-consumables-evidence.json'
+thrown = json.loads(thrown_path.read_text())
+if not args.extract_only:
+    assert thrown['schema'] == 1 and thrown['regulationSha256'] == catalog['regulationSha256']
+    assert thrown['exeSha256'] == evidence['exeSha256'] and not thrown['gameplayVerified']
+    assert thrown['paramSha256'] == evidence['paramSha256']
+    assert thrown['paramHashes']['AttachEffectParam'] == hit_stamina['attachParamSha256']
+    assert thrown['paramHashes']['AtkParam_Pc'] == hit_stamina['atkParamSha256']
+    assert thrown['paramHashes']['Bullet'] == spell_duration['bulletParamSha256']
+    assert {k: len(v) for k, v in thrown['checks'].items()} == dict(selection=308, filters=5355, mixed=192, kinds=1274, disabled=98, removal=19, goods=132)
+thrown_families = {str(f['effect']): f for f in thrown['families']}
 undertaker_combo_path = ROOT / 'data/effect-undertaker-combo-evidence.json'
 undertaker_combo = json.loads(undertaker_combo_path.read_text())
 if not args.extract_only:
@@ -1305,6 +1316,7 @@ STACKING_RULES = {
     'damage-ailment': ('可叠加', '同种异常的累积量相加', ['damage-ailment']),
     'spell-family': ('可叠加', '攻击倍率相乘', ['spell-family']),
     'perfume': ('可叠加', '攻击倍率相乘', ['perfume']),
+    'thrown-consumables': ('可叠加', '同等级、不同等级及综合投掷强化均可叠加，攻击倍率相乘', ['thrown-consumables']),
     'duchess-ultimate': ('不可叠加', '重复装备不增加时长或增伤', ['duchess-ultimate']),
     'guardian-shockwave': ('不可叠加', '重复装备不增加冲击波数量', ['guardian-shockwave']),
     'hero-adjustment': ('不可叠加', '同一词条只生效一次；不同词条的增减相加', ['hero-adjustment']),
@@ -1732,6 +1744,20 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('连续防御可再次触发。')
         rule = 'guardian-shockwave'
+    if id in thrown_families:
+        family = thrown_families[id]
+        assert list(effect['roots'].values()) == family['roots'] and effect['runtimeExclusive'] == -1
+        for root in family['roots']:
+            row = source['spells'][str(root)]
+            meta = thrown['roots'][str(root)]
+            assert (row['stateInfo'], row['spCategory'], row['effectEndurance']) == (0, 10, -1)
+            assert row['magicSubCategoryChange1'] == meta['tag']
+            assert math.isclose(row['physicsAttackRate'], meta['rate'], rel_tol=1e-6)
+        if id == '7006504':
+            notes.append('与对应的单项「＋１」一起使用时，攻击倍率合计 +69%。')
+        if 7040500 in family['roots'] or 7040501 in family['roots']:
+            notes.append('也适用于蜷曲火焰。')
+        rule = 'thrown-consumables'
     if id in spell_duration_families:
         family = spell_duration_families[id]
         assert effect['roots'] == {'passiveSpEffectId_1': family['root']} and effect['runtimeExclusive'] == -1
@@ -2703,6 +2729,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('最终当前 FP 写入与上限／溢出、施法耗蓝交互、装备重建、死亡／重载及多人交互')
     if rules[id] == 'perfume':
         questions.append('完整调香瓶动作／弹体继承、战技和异常发作的独立路径、停用／重载及多人交互；攻击参数存在不代表当前局均可使用')
+    if rules[id] == 'thrown-consumables':
+        questions.append('双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互')
     if rules[id] == 'duchess-ultimate':
         questions.append('各攻击命中标记的实际投递与权重、绝招自身碰撞是否贡献累积、完整动作中断／重叠绝招、实时帧调度、死亡／重载及多人交互')
     if rules[id] == 'guardian-shockwave':
@@ -2858,6 +2886,7 @@ research['greaseEvidenceSha256'] = hashlib.sha256(grease_path.read_bytes()).hexd
 research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes()).hexdigest()
 research['hitStaminaEvidenceSha256'] = hashlib.sha256(hit_stamina_path.read_bytes()).hexdigest()
 research['spellDurationEvidenceSha256'] = hashlib.sha256(spell_duration_path.read_bytes()).hexdigest()
+research['thrownConsumablesEvidenceSha256'] = hashlib.sha256(thrown_path.read_bytes()).hexdigest()
 research['undertakerComboEvidenceSha256'] = hashlib.sha256(undertaker_combo_path.read_bytes()).hexdigest()
 research['lowHpDefenseEvidenceSha256'] = hashlib.sha256(low_hp_defense_path.read_bytes()).hexdigest()
 research['targetAilmentAttackEvidenceSha256'] = hashlib.sha256(target_ailment_path.read_bytes()).hexdigest()

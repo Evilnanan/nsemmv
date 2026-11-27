@@ -40,6 +40,7 @@ import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.js
 import hitStamina from "../../data/effect-hit-stamina-evidence.json";
 import undertakerCombo from "../../data/effect-undertaker-combo-evidence.json";
 import spellDuration from "../../data/effect-spell-duration-evidence.json";
+import thrownConsumables from "../../data/effect-thrown-consumables-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -996,6 +997,55 @@ describe("MMV effect details", () => {
     expect(at60.find(r => r.spacing === "half")!.events.map(e => e.frame)).toEqual([1, 31]);
     const boundary = hitStamina.checks.spacing.filter(r => r.spacing === "tenth" && r.roots.join() === "7100100");
     expect(boundary.map(r => [r.fps, r.events.length])).toEqual([[30, 2], [60, 2], [120, 1]]);
+  });
+
+  it("allows repeated and mixed thrown-consumable bonuses despite shared effect IDs", () => {
+    expect(thrownConsumables.gameplayVerified).toBe(false);
+    expect(research.thrownConsumablesEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-thrown-consumables-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const family of thrownConsumables.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toContain("综合投掷强化均可叠加");
+      expect(detail.stackingDetail).toContain("倍率相乘");
+    }
+    for (const row of thrownConsumables.checks.selection) {
+      const roots = thrownConsumables.families.find(f => f.effect === row.effect)!.roots;
+      expect(row.instances).toBe(roots.length * row.copies);
+      expect(row.selected).toEqual(Array.from({ length: row.copies }, () => roots).flat());
+    }
+    const pot = (n: number, u: number, c: number) => thrownConsumables.checks.mixed.find(
+      r => r.tag === 108 && r.normal === n && r.upgraded === u && r.combined === c,
+    )!.values[10030000][0];
+    expect(pot(0, 1, 1)).toBeCloseTo(1.69);
+    expect(pot(0, 0, 3)).toBeCloseTo(2.197);
+    expect(pot(1, 1, 1)).toBeCloseTo(1.9435);
+    expect(effectDetail(7006504)!.notes.join()).toContain("合计 +69%");
+  });
+
+  it("includes fire coils, preserves tag exclusions and removes only the selected instance", () => {
+    for (const id of [7006504, 7040500, 6040500])
+      expect(effectDetail(id)!.notes).toContain("也适用于蜷曲火焰。");
+    const coils = thrownConsumables.checks.goods.filter(r => r.goods === 2003180);
+    expect(coils).toHaveLength(33);
+    for (const row of coils) {
+      expect(row.values).toHaveLength(5);
+      for (const value of row.values) expect(value).toBeCloseTo(1.3);
+      expect(row.result.ref).toBe(row.hero === 9
+        ? [210318000, 210318020, 210318040][row.level - 1]
+        : 210318000);
+    }
+    for (const row of thrownConsumables.checks.kinds.filter(
+      r => [3, 4, 5, 10].includes(r.kind) || [1210100, 40000].includes(r.attack),
+    )) expect(row.values).toEqual([1, 1, 1, 1, 1]);
+    for (const row of thrownConsumables.checks.disabled)
+      expect(row.values).toEqual([1, 1, 1, 1, 1]);
+    const removed = thrownConsumables.checks.removal.filter(r => !r.remaining.length);
+    expect(removed).toHaveLength(3);
+    for (const row of removed)
+      for (const value of Object.values(row.values)) expect(value).toEqual([1, 1, 1, 1, 1]);
+    expect(thrownConsumables.overlap).toEqual([321330, 321340]);
   });
 
   it("distinguishes the five same-named spell-duration versions", () => {

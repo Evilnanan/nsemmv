@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 606,
+    "nativeStacking": 607,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -3931,11 +3931,11 @@
       "stacking": "native-analysis",
       "stackingCategory": "可叠加",
       "evidence": [
-        "equip-injection",
-        "instance-matching",
-        "attack"
+        "thrown-consumables"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
+      ],
       "gameplayVerified": false
     },
     "6040400": {
@@ -3954,11 +3954,11 @@
       "stacking": "native-analysis",
       "stackingCategory": "可叠加",
       "evidence": [
-        "equip-injection",
-        "instance-matching",
-        "attack"
+        "thrown-consumables"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
+      ],
       "gameplayVerified": false
     },
     "6040500": {
@@ -3977,11 +3977,11 @@
       "stacking": "native-analysis",
       "stackingCategory": "可叠加",
       "evidence": [
-        "equip-injection",
-        "instance-matching",
-        "attack"
+        "thrown-consumables"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
+      ],
       "gameplayVerified": false
     },
     "6043100": {
@@ -10339,11 +10339,13 @@
         7040401
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "thrown-consumables"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
       ],
       "gameplayVerified": false
     },
@@ -13145,11 +13147,11 @@
       "stacking": "native-analysis",
       "stackingCategory": "可叠加",
       "evidence": [
-        "equip-injection",
-        "instance-matching",
-        "attack"
+        "thrown-consumables"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
+      ],
       "gameplayVerified": false
     },
     "7040400": {
@@ -13168,11 +13170,11 @@
       "stacking": "native-analysis",
       "stackingCategory": "可叠加",
       "evidence": [
-        "equip-injection",
-        "instance-matching",
-        "attack"
+        "thrown-consumables"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
+      ],
       "gameplayVerified": false
     },
     "7040500": {
@@ -13191,11 +13193,11 @@
       "stacking": "native-analysis",
       "stackingCategory": "可叠加",
       "evidence": [
-        "equip-injection",
-        "instance-matching",
-        "attack"
+        "thrown-consumables"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "双分类攻击 321330／321340 的实际武器／动作可达性、弹体生成与碰撞、最终伤害写入及 DLL 改写、装备重建／死亡／重载／多人交互"
+      ],
       "gameplayVerified": false
     },
     "7043000": {
@@ -50578,6 +50580,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "thrownConsumablesEvidenceSha256": "2cfec1cf0ed2687812f1b71e459c94b7cdda954c225587ebb737d7858f1302c0",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",
