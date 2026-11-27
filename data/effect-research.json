@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 636,
+    "nativeStacking": 637,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -10824,17 +10824,15 @@
         7012201
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
+      "stacking": "native-analysis",
+      "stackingCategory": "不可叠加",
       "evidence": [
+        "low-hp-team-recovery",
         "bullet-links",
         "hpConditions"
       ],
       "openQuestions": [
-        "范围命中、多人来源叠加及再次发放时序",
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链",
-        "关联分支的实际触发顺序、重复通知与刷新行为",
+        "实际范围碰撞／边界距离、最终 HP 写入与上限以及恢复后血量自动跨阈值的完整循环、DLL／装备重建／死亡／重载／多人；已验证整数 HP 条件、退出与重新进入低血量、周期发射、同类去重和跨来源刷新、首个恢复时机／50 秒寿命／恢复节奏及持续回血组合。最后一次恢复受更新边界影响，不承诺固定总次数",
         "低血量状态切换与其他触发链的时序交互"
       ],
       "gameplayVerified": false
@@ -50617,6 +50615,7 @@
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
   "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
+  "lowHpTeamRecoveryEvidenceSha256": "2b0cee4396e41b8bc773878ccea410fa1b097c1321a2f4b26e1308b95477bdcc",
   "teamKillHealEvidenceSha256": "a9aa235a64ba027af6297aee1558d337d94dc71daf2608d0e141505d9716fc18",
   "teamStaminaEvidenceSha256": "7c42f145d9f58b8ee6dcdc9de79d8de34c93fc7294c61f8ad6b0086a0a2cf739",
   "madnessFpEvidenceSha256": "317d1e4c3bf412e3ba10d2009ce18c56e069fe09c60ec0d59c12221a3aefe95f",

@@ -1,3 +1,4 @@
+import lowHpTeamRecovery from "../../data/effect-low-hp-team-recovery-evidence.json";
 import teamKillHeal from "../../data/effect-team-kill-heal-evidence.json";
 import teamStamina from "../../data/effect-team-stamina-evidence.json";
 import madnessFp from "../../data/effect-madness-fp-evidence.json";
@@ -1062,6 +1063,36 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("refreshes low-HP team recovery without stacking or restarting its healing rhythm", () => {
+    expect(lowHpTeamRecovery.gameplayVerified).toBe(false);
+    expect(research.lowHpTeamRecoveryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-low-hp-team-recovery-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7012200)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("多名队友提供时只生效一份");
+    expect(detail.stackingDetail).toContain("可与“持续恢复血量”叠加");
+    expect(detail.blocks[0]).toMatchObject({ phase: "血量 < 40% 时触发", duration: 50, interval: 1 });
+    expect(detail.notes.join()).toContain("首次约 1 秒后恢复");
+    expect(detail.notes.join()).toContain("重新跌入低血量可再次触发");
+    expect(detail.notes.join()).toContain("约每 50.1 秒再次触发");
+    expect(detail.notes.join()).toContain("保持原有回血节奏");
+    for (const row of lowHpTeamRecovery.checks.threshold)
+      expect(row.shots).toHaveLength(row.copies && row.current / row.maximum < 0.4 ? 1 : 0);
+    for (const row of lowHpTeamRecovery.checks.amounts) {
+      const amount = Math.floor(1 + row.maximum * 0.005);
+      expect(row.values).toEqual([amount, 0, amount, 0, 0, 0, 0]);
+    }
+    for (const row of lowHpTeamRecovery.checks.refresh) {
+      expect(Math.abs(row.changes[1].frame - Math.max(...row.arrivals) - 3000)).toBeLessThanOrEqual(3);
+      expect(row.pulses.map((p) => p.frame)).toEqual(row.pulses.map((_, i) => 61 + 60 * i));
+    }
+    for (const row of lowHpTeamRecovery.checks.reenter)
+      expect(row.shots.map((s) => s.frame)).toEqual([1, 5 * row.fps + row.gap + 1]);
+    for (const row of lowHpTeamRecovery.checks.healing)
+      expect(Math.abs(row.pulses[0].frame - row.fps)).toBeLessThanOrEqual(1);
   });
 
   it("keeps each ally kill heal at 20 HP while preserving independent kill events", () => {
