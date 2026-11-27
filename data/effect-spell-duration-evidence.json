@@ -1,0 +1,8350 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "magicParamSha256": "17742eeafe4fade863f3a7ee5f7ff483bd4897f765802fe4a1954dfa8107b63e",
+  "bulletParamSha256": "ddce4888040a061cf982a237e8f6e3ddce5f2162a238865a072f75d27b5e9d44",
+  "families": [
+    {
+      "effect": 330600,
+      "root": 330600,
+      "rate": 1.2999999523162842,
+      "category": 0
+    },
+    {
+      "effect": 7006400,
+      "root": 7006400,
+      "rate": 1.5,
+      "category": 0
+    },
+    {
+      "effect": 8330500,
+      "root": 8330500,
+      "rate": 2,
+      "category": 10
+    },
+    {
+      "effect": 8851300,
+      "root": 8851300,
+      "rate": 1.4500000476837158,
+      "category": 10
+    },
+    {
+      "effect": 8851350,
+      "root": 8851350,
+      "rate": 1.600000023841858,
+      "category": 10
+    }
+  ],
+  "spellSources": [
+    {
+      "magic": 4460,
+      "leaf": 1446000,
+      "category": 2,
+      "name": "魔力武器"
+    },
+    {
+      "magic": 6050,
+      "leaf": 1605000,
+      "category": 2,
+      "name": "火焰啊，赐予我力量！"
+    },
+    {
+      "magic": 6450,
+      "leaf": 1645000,
+      "category": 2,
+      "name": "火防护"
+    },
+    {
+      "magic": 6971,
+      "leaf": 1697100,
+      "category": 2,
+      "name": "龙雷庇佑"
+    },
+    {
+      "magic": 6840,
+      "leaf": 1685000,
+      "category": 2,
+      "name": "野兽活力"
+    },
+    {
+      "magic": 6430,
+      "bullet": 10643000,
+      "leaf": 1643000,
+      "category": 1,
+      "name": "恩惠赐福"
+    },
+    {
+      "magic": 6431,
+      "bullet": 10643100,
+      "leaf": 1643100,
+      "category": 1,
+      "name": "黄金树恩惠"
+    },
+    {
+      "magic": 6600,
+      "bullet": 10660000,
+      "leaf": 1660000,
+      "category": 1,
+      "name": "黄金树立誓"
+    }
+  ],
+  "checks": {
+    "selection": [
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          330600,
+          330600,
+          330600,
+          330600,
+          330600,
+          330600
+        ],
+        "instances": 1,
+        "multiplier": 1.2999999523162842,
+        "remaining": 29.23077
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400,
+          7006400
+        ],
+        "instances": 1,
+        "multiplier": 1.5,
+        "remaining": 29.333334
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          8330500
+        ],
+        "instances": 1,
+        "multiplier": 2.0,
+        "remaining": 29.5
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          8330500,
+          8330500
+        ],
+        "instances": 2,
+        "multiplier": 3.0,
+        "remaining": 29.666666
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 3,
+        "multiplier": 4.0,
+        "remaining": 29.75
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500,
+          8330500
+        ],
+        "instances": 6,
+        "multiplier": 7.0,
+        "remaining": 29.857143
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          8851300
+        ],
+        "instances": 1,
+        "multiplier": 1.4500000476837158,
+        "remaining": 29.310345
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          8851300,
+          8851300
+        ],
+        "instances": 2,
+        "multiplier": 1.9000000953674316,
+        "remaining": 29.473684
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 3,
+        "multiplier": 2.3500001430511475,
+        "remaining": 29.574469
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300,
+          8851300
+        ],
+        "instances": 6,
+        "multiplier": 3.700000286102295,
+        "remaining": 29.729731
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 1,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 2,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 3,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 4,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 5,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 6,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 7,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 8,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "hero": 10,
+        "selected": [
+          8851350
+        ],
+        "instances": 1,
+        "multiplier": 1.600000023841858,
+        "remaining": 29.375
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 1,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 2,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 3,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 4,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 5,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 6,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 7,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 8,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "hero": 10,
+        "selected": [
+          8851350,
+          8851350
+        ],
+        "instances": 2,
+        "multiplier": 2.200000047683716,
+        "remaining": 29.545454
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 1,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 2,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 3,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 4,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 5,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 6,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 7,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 8,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "hero": 10,
+        "selected": [
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 3,
+        "multiplier": 2.8000001907348633,
+        "remaining": 29.642857
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 1,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 2,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 3,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 4,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 5,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 6,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 7,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 8,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "hero": 10,
+        "selected": [
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350,
+          8851350
+        ],
+        "instances": 6,
+        "multiplier": 4.599999904632568,
+        "remaining": 29.782608
+      }
+    ],
+    "countdown": [
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.23077,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 1,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.23077,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 2,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.23077,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 3,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.23077,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.230766,
+        "multiplier": 1.2999999523162842
+      },
+      {
+        "effect": 330600,
+        "copies": 6,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.333334,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 1,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.333334,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 2,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.333334,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 3,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.333334,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "multiplier": 1.5
+      },
+      {
+        "effect": 7006400,
+        "copies": 6,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.5,
+        "multiplier": 2.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 1,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.666666,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.666664,
+        "multiplier": 3.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 2,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.75,
+        "multiplier": 4.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 3,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.857143,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.85714,
+        "multiplier": 7.0
+      },
+      {
+        "effect": 8330500,
+        "copies": 6,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.310345,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.310349,
+        "multiplier": 1.4500000476837158
+      },
+      {
+        "effect": 8851300,
+        "copies": 1,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.473684,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.473686,
+        "multiplier": 1.9000000953674316
+      },
+      {
+        "effect": 8851300,
+        "copies": 2,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.574469,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.574471,
+        "multiplier": 2.3500001430511475
+      },
+      {
+        "effect": 8851300,
+        "copies": 3,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.729731,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.729729,
+        "multiplier": 3.700000286102295
+      },
+      {
+        "effect": 8851300,
+        "copies": 6,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.375,
+        "multiplier": 1.600000023841858
+      },
+      {
+        "effect": 8851350,
+        "copies": 1,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.545454,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.545456,
+        "multiplier": 2.200000047683716
+      },
+      {
+        "effect": 8851350,
+        "copies": 2,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.642857,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.64286,
+        "multiplier": 2.8000001907348633
+      },
+      {
+        "effect": 8851350,
+        "copies": 3,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1446000,
+        "before": 90.0,
+        "after": 89.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1605000,
+        "before": 30.0,
+        "after": 29.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1645000,
+        "before": 90.0,
+        "after": 89.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1697100,
+        "before": 70.0,
+        "after": 69.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1685000,
+        "before": 120.0,
+        "after": 119.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1643000,
+        "before": 90.0,
+        "after": 89.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1643100,
+        "before": 90.0,
+        "after": 89.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.782608,
+        "multiplier": 4.599999904632568
+      },
+      {
+        "effect": 8851350,
+        "copies": 6,
+        "leaf": 7036901,
+        "before": 20.0,
+        "after": 19.0,
+        "multiplier": 1
+      }
+    ],
+    "mixed": [
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1446000,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1605000,
+        "multiplier": 1.7999999523162842,
+        "before": 30.0,
+        "after": 29.444445
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1645000,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1697100,
+        "multiplier": 1.7999999523162842,
+        "before": 70.0,
+        "after": 69.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1685000,
+        "multiplier": 1.7999999523162842,
+        "before": 120.0,
+        "after": 119.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1643000,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1643100,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1660000,
+        "multiplier": 1.7999999523162842,
+        "before": 80.0,
+        "after": 79.444443
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 7036901,
+        "multiplier": 1,
+        "before": 20.0,
+        "after": 19.0
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1446000,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1605000,
+        "multiplier": 1.7999999523162842,
+        "before": 30.0,
+        "after": 29.444445
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1645000,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1697100,
+        "multiplier": 1.7999999523162842,
+        "before": 70.0,
+        "after": 69.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1685000,
+        "multiplier": 1.7999999523162842,
+        "before": 120.0,
+        "after": 119.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1643000,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1643100,
+        "multiplier": 1.7999999523162842,
+        "before": 90.0,
+        "after": 89.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 1660000,
+        "multiplier": 1.7999999523162842,
+        "before": 80.0,
+        "after": 79.444443
+      },
+      {
+        "roots": [
+          7006400,
+          330600
+        ],
+        "leaf": 7036901,
+        "multiplier": 1,
+        "before": 20.0,
+        "after": 19.0
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1446000,
+        "multiplier": 2.5500001907348633,
+        "before": 90.0,
+        "after": 89.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1605000,
+        "multiplier": 2.5500001907348633,
+        "before": 30.0,
+        "after": 29.607843
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1645000,
+        "multiplier": 2.5500001907348633,
+        "before": 90.0,
+        "after": 89.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1697100,
+        "multiplier": 2.5500001907348633,
+        "before": 70.0,
+        "after": 69.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1685000,
+        "multiplier": 2.5500001907348633,
+        "before": 120.0,
+        "after": 119.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1643000,
+        "multiplier": 2.5500001907348633,
+        "before": 90.0,
+        "after": 89.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1643100,
+        "multiplier": 2.5500001907348633,
+        "before": 90.0,
+        "after": 89.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 1660000,
+        "multiplier": 2.5500001907348633,
+        "before": 80.0,
+        "after": 79.607841
+      },
+      {
+        "roots": [
+          7006400,
+          8851300,
+          8851350
+        ],
+        "leaf": 7036901,
+        "multiplier": 1,
+        "before": 20.0,
+        "after": 19.0
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1446000,
+        "multiplier": 5.350000381469727,
+        "before": 90.0,
+        "after": 89.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1605000,
+        "multiplier": 5.350000381469727,
+        "before": 30.0,
+        "after": 29.813084
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1645000,
+        "multiplier": 5.350000381469727,
+        "before": 90.0,
+        "after": 89.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1697100,
+        "multiplier": 5.350000381469727,
+        "before": 70.0,
+        "after": 69.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1685000,
+        "multiplier": 5.350000381469727,
+        "before": 120.0,
+        "after": 119.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1643000,
+        "multiplier": 5.350000381469727,
+        "before": 90.0,
+        "after": 89.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1643100,
+        "multiplier": 5.350000381469727,
+        "before": 90.0,
+        "after": 89.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 1660000,
+        "multiplier": 5.350000381469727,
+        "before": 80.0,
+        "after": 79.813087
+      },
+      {
+        "roots": [
+          8330500,
+          8851300,
+          8330500,
+          8851300,
+          8330500,
+          8851300
+        ],
+        "leaf": 7036901,
+        "multiplier": 1,
+        "before": 20.0,
+        "after": 19.0
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1446000,
+        "multiplier": 3.8499999046325684,
+        "before": 90.0,
+        "after": 89.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1605000,
+        "multiplier": 3.8499999046325684,
+        "before": 30.0,
+        "after": 29.740259
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1645000,
+        "multiplier": 3.8499999046325684,
+        "before": 90.0,
+        "after": 89.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1697100,
+        "multiplier": 3.8499999046325684,
+        "before": 70.0,
+        "after": 69.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1685000,
+        "multiplier": 3.8499999046325684,
+        "before": 120.0,
+        "after": 119.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1643000,
+        "multiplier": 3.8499999046325684,
+        "before": 90.0,
+        "after": 89.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1643100,
+        "multiplier": 3.8499999046325684,
+        "before": 90.0,
+        "after": 89.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1660000,
+        "multiplier": 3.8499999046325684,
+        "before": 80.0,
+        "after": 79.740257
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 7036901,
+        "multiplier": 1,
+        "before": 20.0,
+        "after": 19.0
+      }
+    ],
+    "lifetime": [
+      {
+        "roots": [],
+        "leaf": 1605000,
+        "fps": 30,
+        "expectedSeconds": 30.0,
+        "expiredFrame": 903
+      },
+      {
+        "roots": [],
+        "leaf": 1605000,
+        "fps": 60,
+        "expectedSeconds": 30.0,
+        "expiredFrame": 1803
+      },
+      {
+        "roots": [],
+        "leaf": 1605000,
+        "fps": 120,
+        "expectedSeconds": 30.0,
+        "expiredFrame": 3603
+      },
+      {
+        "roots": [],
+        "leaf": 7036901,
+        "fps": 30,
+        "expectedSeconds": 20,
+        "expiredFrame": 602
+      },
+      {
+        "roots": [],
+        "leaf": 7036901,
+        "fps": 60,
+        "expectedSeconds": 20,
+        "expiredFrame": 1203
+      },
+      {
+        "roots": [],
+        "leaf": 7036901,
+        "fps": 120,
+        "expectedSeconds": 20,
+        "expiredFrame": 2403
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 30,
+        "expectedSeconds": 45.0,
+        "expiredFrame": 1352
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 60,
+        "expectedSeconds": 45.0,
+        "expiredFrame": 2703
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 120,
+        "expectedSeconds": 45.0,
+        "expiredFrame": 5402
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 30,
+        "expectedSeconds": 20,
+        "expiredFrame": 602
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 60,
+        "expectedSeconds": 20,
+        "expiredFrame": 1203
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 120,
+        "expectedSeconds": 20,
+        "expiredFrame": 2403
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 30,
+        "expectedSeconds": 45.0,
+        "expiredFrame": 1352
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 60,
+        "expectedSeconds": 45.0,
+        "expiredFrame": 2703
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 120,
+        "expectedSeconds": 45.0,
+        "expiredFrame": 5402
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 30,
+        "expectedSeconds": 20,
+        "expiredFrame": 602
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 60,
+        "expectedSeconds": 20,
+        "expiredFrame": 1203
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 120,
+        "expectedSeconds": 20,
+        "expiredFrame": 2403
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 1605000,
+        "fps": 30,
+        "expectedSeconds": 70.50000429153442,
+        "expiredFrame": 2117
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 1605000,
+        "fps": 60,
+        "expectedSeconds": 70.50000429153442,
+        "expiredFrame": 4233
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 1605000,
+        "fps": 120,
+        "expectedSeconds": 70.50000429153442,
+        "expiredFrame": 8463
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 7036901,
+        "fps": 30,
+        "expectedSeconds": 20,
+        "expiredFrame": 602
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 7036901,
+        "fps": 60,
+        "expectedSeconds": 20,
+        "expiredFrame": 1203
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 7036901,
+        "fps": 120,
+        "expectedSeconds": 20,
+        "expiredFrame": 2403
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 30,
+        "expectedSeconds": 53.999998569488525,
+        "expiredFrame": 1623
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 60,
+        "expectedSeconds": 53.999998569488525,
+        "expiredFrame": 3242
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1605000,
+        "fps": 120,
+        "expectedSeconds": 53.999998569488525,
+        "expiredFrame": 6483
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 30,
+        "expectedSeconds": 20,
+        "expiredFrame": 602
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 60,
+        "expectedSeconds": 20,
+        "expiredFrame": 1203
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 7036901,
+        "fps": 120,
+        "expectedSeconds": 20,
+        "expiredFrame": 2403
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1605000,
+        "fps": 30,
+        "expectedSeconds": 115.49999713897705,
+        "expiredFrame": 3468
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1605000,
+        "fps": 60,
+        "expectedSeconds": 115.49999713897705,
+        "expiredFrame": 6932
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1605000,
+        "fps": 120,
+        "expectedSeconds": 115.49999713897705,
+        "expiredFrame": 13861
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 7036901,
+        "fps": 30,
+        "expectedSeconds": 20,
+        "expiredFrame": 602
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 7036901,
+        "fps": 60,
+        "expectedSeconds": 20,
+        "expiredFrame": 1203
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 7036901,
+        "fps": 120,
+        "expectedSeconds": 20,
+        "expiredFrame": 2403
+      }
+    ],
+    "refresh": [
+      {
+        "roots": [],
+        "leaf": 1605000,
+        "before": 25.000076,
+        "after": 30.0,
+        "remaining": 29.0,
+        "insertResult": 0
+      },
+      {
+        "roots": [],
+        "leaf": 1685000,
+        "before": 114.998932,
+        "after": 120.0,
+        "remaining": 119.0,
+        "insertResult": 0
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 1605000,
+        "before": 26.666908,
+        "after": 30.0,
+        "remaining": 29.333334,
+        "insertResult": 1
+      },
+      {
+        "roots": [
+          7006400
+        ],
+        "leaf": 1685000,
+        "before": 116.66748,
+        "after": 120.0,
+        "remaining": 119.333336,
+        "insertResult": 1
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 1605000,
+        "before": 26.666908,
+        "after": 30.0,
+        "remaining": 29.333334,
+        "insertResult": 1
+      },
+      {
+        "roots": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "leaf": 1685000,
+        "before": 116.66748,
+        "after": 120.0,
+        "remaining": 119.333336,
+        "insertResult": 1
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 1605000,
+        "before": 27.872543,
+        "after": 30.0,
+        "remaining": 29.574469,
+        "insertResult": 3
+      },
+      {
+        "roots": [
+          8851300,
+          8851300,
+          8851300
+        ],
+        "leaf": 1685000,
+        "before": 117.871399,
+        "after": 120.0,
+        "remaining": 119.574471,
+        "insertResult": 3
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1605000,
+        "before": 27.221947,
+        "after": 30.0,
+        "remaining": 29.444445,
+        "insertResult": 2
+      },
+      {
+        "roots": [
+          330600,
+          7006400
+        ],
+        "leaf": 1685000,
+        "before": 117.221375,
+        "after": 120.0,
+        "remaining": 119.444443,
+        "insertResult": 2
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1605000,
+        "before": 28.701096,
+        "after": 30.0,
+        "remaining": 29.740259,
+        "insertResult": 5
+      },
+      {
+        "roots": [
+          330600,
+          7006400,
+          8330500,
+          8851300,
+          8851350
+        ],
+        "leaf": 1685000,
+        "before": 118.70224,
+        "after": 120.0,
+        "remaining": 119.740257,
+        "insertResult": 5
+      }
+    ],
+    "transition": [
+      {
+        "effect": 330600,
+        "before": 119.0,
+        "during": 118.230766,
+        "after": 117.230766
+      },
+      {
+        "effect": 7006400,
+        "before": 119.0,
+        "during": 118.333336,
+        "after": 117.333336
+      },
+      {
+        "effect": 8330500,
+        "before": 119.0,
+        "during": 118.5,
+        "after": 117.5
+      },
+      {
+        "effect": 8851300,
+        "before": 119.0,
+        "during": 118.310349,
+        "after": 117.310349
+      },
+      {
+        "effect": 8851350,
+        "before": 119.0,
+        "during": 118.375,
+        "after": 117.375
+      }
+    ],
+    "healing": [
+      {
+        "leaf": 1643000,
+        "copies": 0,
+        "fps": 30,
+        "amount": 8,
+        "pulseFrames": [
+          31,
+          61,
+          91,
+          121,
+          151,
+          181,
+          211,
+          241,
+          271,
+          301,
+          331,
+          361,
+          391,
+          421,
+          451,
+          481,
+          511,
+          541,
+          571,
+          601,
+          631,
+          661,
+          691,
+          721,
+          751,
+          781,
+          811,
+          841,
+          871,
+          901,
+          931,
+          961,
+          991,
+          1021,
+          1051,
+          1081,
+          1111,
+          1141,
+          1171,
+          1201,
+          1231,
+          1261,
+          1291,
+          1321,
+          1351,
+          1381,
+          1411,
+          1441,
+          1471,
+          1501,
+          1531,
+          1561,
+          1591,
+          1621,
+          1651,
+          1681,
+          1711,
+          1741,
+          1771,
+          1801,
+          1831,
+          1861,
+          1891,
+          1921,
+          1951,
+          1981,
+          2011,
+          2041,
+          2071,
+          2101,
+          2131,
+          2161,
+          2191,
+          2221,
+          2251,
+          2281,
+          2311,
+          2341,
+          2371,
+          2401,
+          2431,
+          2461,
+          2491,
+          2521,
+          2551,
+          2581,
+          2611,
+          2641,
+          2671,
+          2701
+        ],
+        "totalPacketHealing": 720,
+        "expiredFrame": 2703
+      },
+      {
+        "leaf": 1643000,
+        "copies": 0,
+        "fps": 60,
+        "amount": 8,
+        "pulseFrames": [
+          62,
+          122,
+          182,
+          242,
+          302,
+          362,
+          422,
+          482,
+          542,
+          602,
+          662,
+          722,
+          782,
+          842,
+          902,
+          962,
+          1022,
+          1082,
+          1142,
+          1202,
+          1262,
+          1322,
+          1382,
+          1442,
+          1502,
+          1562,
+          1622,
+          1682,
+          1742,
+          1802,
+          1862,
+          1922,
+          1982,
+          2042,
+          2102,
+          2162,
+          2222,
+          2282,
+          2342,
+          2402,
+          2462,
+          2522,
+          2582,
+          2642,
+          2702,
+          2762,
+          2822,
+          2882,
+          2942,
+          3002,
+          3062,
+          3122,
+          3182,
+          3242,
+          3302,
+          3362,
+          3422,
+          3482,
+          3542,
+          3602,
+          3662,
+          3722,
+          3782,
+          3842,
+          3902,
+          3962,
+          4022,
+          4082,
+          4142,
+          4202,
+          4262,
+          4322,
+          4382,
+          4442,
+          4502,
+          4562,
+          4622,
+          4682,
+          4742,
+          4802,
+          4862,
+          4922,
+          4982,
+          5042,
+          5102,
+          5162,
+          5222,
+          5282,
+          5342
+        ],
+        "totalPacketHealing": 712,
+        "expiredFrame": 5402
+      },
+      {
+        "leaf": 1643000,
+        "copies": 0,
+        "fps": 120,
+        "amount": 8,
+        "pulseFrames": [
+          122,
+          242,
+          362,
+          482,
+          602,
+          722,
+          842,
+          962,
+          1082,
+          1202,
+          1322,
+          1442,
+          1562,
+          1682,
+          1802,
+          1922,
+          2042,
+          2162,
+          2282,
+          2402,
+          2522,
+          2642,
+          2762,
+          2882,
+          3002,
+          3122,
+          3242,
+          3362,
+          3482,
+          3602,
+          3722,
+          3842,
+          3962,
+          4082,
+          4202,
+          4322,
+          4442,
+          4562,
+          4682,
+          4802,
+          4922,
+          5042,
+          5162,
+          5282,
+          5402,
+          5522,
+          5642,
+          5762,
+          5882,
+          6002,
+          6122,
+          6242,
+          6362,
+          6482,
+          6602,
+          6722,
+          6842,
+          6962,
+          7082,
+          7202,
+          7322,
+          7442,
+          7562,
+          7682,
+          7802,
+          7922,
+          8042,
+          8162,
+          8282,
+          8402,
+          8522,
+          8642,
+          8762,
+          8882,
+          9002,
+          9122,
+          9242,
+          9362,
+          9482,
+          9602,
+          9722,
+          9842,
+          9962,
+          10082,
+          10202,
+          10322,
+          10442,
+          10562,
+          10682
+        ],
+        "totalPacketHealing": 712,
+        "expiredFrame": 10802
+      },
+      {
+        "leaf": 1643000,
+        "copies": 1,
+        "fps": 30,
+        "amount": 8,
+        "pulseFrames": [
+          31,
+          61,
+          91,
+          121,
+          151,
+          181,
+          211,
+          241,
+          271,
+          301,
+          331,
+          361,
+          391,
+          421,
+          451,
+          481,
+          511,
+          541,
+          571,
+          601,
+          631,
+          661,
+          691,
+          721,
+          751,
+          781,
+          811,
+          841,
+          871,
+          901,
+          931,
+          961,
+          991,
+          1021,
+          1051,
+          1081,
+          1111,
+          1141,
+          1171,
+          1201,
+          1231,
+          1261,
+          1291,
+          1321,
+          1351,
+          1381,
+          1411,
+          1441,
+          1471,
+          1501,
+          1531,
+          1561,
+          1591,
+          1621,
+          1651,
+          1681,
+          1711,
+          1741,
+          1771,
+          1801,
+          1831,
+          1861,
+          1891,
+          1921,
+          1951,
+          1981,
+          2011,
+          2041,
+          2071,
+          2101,
+          2131,
+          2161,
+          2191,
+          2221,
+          2251,
+          2281,
+          2311,
+          2341,
+          2371,
+          2401,
+          2431,
+          2461,
+          2491,
+          2521,
+          2551,
+          2581,
+          2611,
+          2641,
+          2671,
+          2701,
+          2731,
+          2761,
+          2791,
+          2821,
+          2851,
+          2881,
+          2911,
+          2941,
+          2971,
+          3001,
+          3031,
+          3061,
+          3091,
+          3121,
+          3151,
+          3181,
+          3211,
+          3241,
+          3271,
+          3301,
+          3331,
+          3361,
+          3391,
+          3421,
+          3451,
+          3481,
+          3511,
+          3541,
+          3571,
+          3601,
+          3631,
+          3661,
+          3691,
+          3721,
+          3751,
+          3781,
+          3811,
+          3841,
+          3871,
+          3901,
+          3931,
+          3961,
+          3991,
+          4021,
+          4051
+        ],
+        "totalPacketHealing": 1080,
+        "expiredFrame": 4052
+      },
+      {
+        "leaf": 1643000,
+        "copies": 1,
+        "fps": 60,
+        "amount": 8,
+        "pulseFrames": [
+          62,
+          122,
+          182,
+          242,
+          302,
+          362,
+          422,
+          482,
+          542,
+          602,
+          662,
+          722,
+          782,
+          842,
+          902,
+          962,
+          1022,
+          1082,
+          1142,
+          1202,
+          1262,
+          1322,
+          1382,
+          1442,
+          1502,
+          1562,
+          1622,
+          1682,
+          1742,
+          1802,
+          1862,
+          1922,
+          1982,
+          2042,
+          2102,
+          2162,
+          2222,
+          2282,
+          2342,
+          2402,
+          2462,
+          2522,
+          2582,
+          2642,
+          2702,
+          2762,
+          2822,
+          2882,
+          2942,
+          3002,
+          3062,
+          3122,
+          3182,
+          3242,
+          3302,
+          3362,
+          3422,
+          3482,
+          3542,
+          3602,
+          3662,
+          3722,
+          3782,
+          3842,
+          3902,
+          3962,
+          4022,
+          4082,
+          4142,
+          4202,
+          4262,
+          4322,
+          4382,
+          4442,
+          4502,
+          4562,
+          4622,
+          4682,
+          4742,
+          4802,
+          4862,
+          4922,
+          4982,
+          5042,
+          5102,
+          5162,
+          5222,
+          5282,
+          5342,
+          5402,
+          5462,
+          5522,
+          5582,
+          5642,
+          5702,
+          5762,
+          5822,
+          5882,
+          5942,
+          6002,
+          6062,
+          6122,
+          6182,
+          6242,
+          6302,
+          6362,
+          6422,
+          6482,
+          6542,
+          6602,
+          6662,
+          6722,
+          6782,
+          6842,
+          6902,
+          6962,
+          7022,
+          7082,
+          7142,
+          7202,
+          7262,
+          7322,
+          7382,
+          7442,
+          7502,
+          7562,
+          7622,
+          7682,
+          7742,
+          7802,
+          7862,
+          7922,
+          7982,
+          8042,
+          8102
+        ],
+        "totalPacketHealing": 1080,
+        "expiredFrame": 8103
+      },
+      {
+        "leaf": 1643000,
+        "copies": 1,
+        "fps": 120,
+        "amount": 8,
+        "pulseFrames": [
+          122,
+          242,
+          362,
+          482,
+          602,
+          722,
+          842,
+          962,
+          1082,
+          1202,
+          1322,
+          1442,
+          1562,
+          1682,
+          1802,
+          1922,
+          2042,
+          2162,
+          2282,
+          2402,
+          2522,
+          2642,
+          2762,
+          2882,
+          3002,
+          3122,
+          3242,
+          3362,
+          3482,
+          3602,
+          3722,
+          3842,
+          3962,
+          4082,
+          4202,
+          4322,
+          4442,
+          4562,
+          4682,
+          4802,
+          4922,
+          5042,
+          5162,
+          5282,
+          5402,
+          5522,
+          5642,
+          5762,
+          5882,
+          6002,
+          6122,
+          6242,
+          6362,
+          6482,
+          6602,
+          6722,
+          6842,
+          6962,
+          7082,
+          7202,
+          7322,
+          7442,
+          7562,
+          7682,
+          7802,
+          7922,
+          8042,
+          8162,
+          8282,
+          8402,
+          8522,
+          8642,
+          8762,
+          8882,
+          9002,
+          9122,
+          9242,
+          9362,
+          9482,
+          9602,
+          9722,
+          9842,
+          9962,
+          10082,
+          10202,
+          10322,
+          10442,
+          10562,
+          10682,
+          10802,
+          10922,
+          11042,
+          11162,
+          11282,
+          11402,
+          11522,
+          11642,
+          11762,
+          11882,
+          12002,
+          12122,
+          12242,
+          12362,
+          12482,
+          12602,
+          12722,
+          12842,
+          12962,
+          13082,
+          13202,
+          13322,
+          13442,
+          13562,
+          13682,
+          13802,
+          13922,
+          14042,
+          14162,
+          14282,
+          14402,
+          14522,
+          14642,
+          14762,
+          14882,
+          15002,
+          15122,
+          15242,
+          15362,
+          15482,
+          15602,
+          15722,
+          15842,
+          15962,
+          16082,
+          16202
+        ],
+        "totalPacketHealing": 1080,
+        "expiredFrame": 16205
+      },
+      {
+        "leaf": 1643000,
+        "copies": 3,
+        "fps": 30,
+        "amount": 8,
+        "pulseFrames": [
+          31,
+          61,
+          91,
+          121,
+          151,
+          181,
+          211,
+          241,
+          271,
+          301,
+          331,
+          361,
+          391,
+          421,
+          451,
+          481,
+          511,
+          541,
+          571,
+          601,
+          631,
+          661,
+          691,
+          721,
+          751,
+          781,
+          811,
+          841,
+          871,
+          901,
+          931,
+          961,
+          991,
+          1021,
+          1051,
+          1081,
+          1111,
+          1141,
+          1171,
+          1201,
+          1231,
+          1261,
+          1291,
+          1321,
+          1351,
+          1381,
+          1411,
+          1441,
+          1471,
+          1501,
+          1531,
+          1561,
+          1591,
+          1621,
+          1651,
+          1681,
+          1711,
+          1741,
+          1771,
+          1801,
+          1831,
+          1861,
+          1891,
+          1921,
+          1951,
+          1981,
+          2011,
+          2041,
+          2071,
+          2101,
+          2131,
+          2161,
+          2191,
+          2221,
+          2251,
+          2281,
+          2311,
+          2341,
+          2371,
+          2401,
+          2431,
+          2461,
+          2491,
+          2521,
+          2551,
+          2581,
+          2611,
+          2641,
+          2671,
+          2701,
+          2731,
+          2761,
+          2791,
+          2821,
+          2851,
+          2881,
+          2911,
+          2941,
+          2971,
+          3001,
+          3031,
+          3061,
+          3091,
+          3121,
+          3151,
+          3181,
+          3211,
+          3241,
+          3271,
+          3301,
+          3331,
+          3361,
+          3391,
+          3421,
+          3451,
+          3481,
+          3511,
+          3541,
+          3571,
+          3601,
+          3631,
+          3661,
+          3691,
+          3721,
+          3751,
+          3781,
+          3811,
+          3841,
+          3871,
+          3901,
+          3931,
+          3961,
+          3991,
+          4021,
+          4051
+        ],
+        "totalPacketHealing": 1080,
+        "expiredFrame": 4052
+      },
+      {
+        "leaf": 1643000,
+        "copies": 3,
+        "fps": 60,
+        "amount": 8,
+        "pulseFrames": [
+          62,
+          122,
+          182,
+          242,
+          302,
+          362,
+          422,
+          482,
+          542,
+          602,
+          662,
+          722,
+          782,
+          842,
+          902,
+          962,
+          1022,
+          1082,
+          1142,
+          1202,
+          1262,
+          1322,
+          1382,
+          1442,
+          1502,
+          1562,
+          1622,
+          1682,
+          1742,
+          1802,
+          1862,
+          1922,
+          1982,
+          2042,
+          2102,
+          2162,
+          2222,
+          2282,
+          2342,
+          2402,
+          2462,
+          2522,
+          2582,
+          2642,
+          2702,
+          2762,
+          2822,
+          2882,
+          2942,
+          3002,
+          3062,
+          3122,
+          3182,
+          3242,
+          3302,
+          3362,
+          3422,
+          3482,
+          3542,
+          3602,
+          3662,
+          3722,
+          3782,
+          3842,
+          3902,
+          3962,
+          4022,
+          4082,
+          4142,
+          4202,
+          4262,
+          4322,
+          4382,
+          4442,
+          4502,
+          4562,
+          4622,
+          4682,
+          4742,
+          4802,
+          4862,
+          4922,
+          4982,
+          5042,
+          5102,
+          5162,
+          5222,
+          5282,
+          5342,
+          5402,
+          5462,
+          5522,
+          5582,
+          5642,
+          5702,
+          5762,
+          5822,
+          5882,
+          5942,
+          6002,
+          6062,
+          6122,
+          6182,
+          6242,
+          6302,
+          6362,
+          6422,
+          6482,
+          6542,
+          6602,
+          6662,
+          6722,
+          6782,
+          6842,
+          6902,
+          6962,
+          7022,
+          7082,
+          7142,
+          7202,
+          7262,
+          7322,
+          7382,
+          7442,
+          7502,
+          7562,
+          7622,
+          7682,
+          7742,
+          7802,
+          7862,
+          7922,
+          7982,
+          8042,
+          8102
+        ],
+        "totalPacketHealing": 1080,
+        "expiredFrame": 8103
+      },
+      {
+        "leaf": 1643000,
+        "copies": 3,
+        "fps": 120,
+        "amount": 8,
+        "pulseFrames": [
+          122,
+          242,
+          362,
+          482,
+          602,
+          722,
+          842,
+          962,
+          1082,
+          1202,
+          1322,
+          1442,
+          1562,
+          1682,
+          1802,
+          1922,
+          2042,
+          2162,
+          2282,
+          2402,
+          2522,
+          2642,
+          2762,
+          2882,
+          3002,
+          3122,
+          3242,
+          3362,
+          3482,
+          3602,
+          3722,
+          3842,
+          3962,
+          4082,
+          4202,
+          4322,
+          4442,
+          4562,
+          4682,
+          4802,
+          4922,
+          5042,
+          5162,
+          5282,
+          5402,
+          5522,
+          5642,
+          5762,
+          5882,
+          6002,
+          6122,
+          6242,
+          6362,
+          6482,
+          6602,
+          6722,
+          6842,
+          6962,
+          7082,
+          7202,
+          7322,
+          7442,
+          7562,
+          7682,
+          7802,
+          7922,
+          8042,
+          8162,
+          8282,
+          8402,
+          8522,
+          8642,
+          8762,
+          8882,
+          9002,
+          9122,
+          9242,
+          9362,
+          9482,
+          9602,
+          9722,
+          9842,
+          9962,
+          10082,
+          10202,
+          10322,
+          10442,
+          10562,
+          10682,
+          10802,
+          10922,
+          11042,
+          11162,
+          11282,
+          11402,
+          11522,
+          11642,
+          11762,
+          11882,
+          12002,
+          12122,
+          12242,
+          12362,
+          12482,
+          12602,
+          12722,
+          12842,
+          12962,
+          13082,
+          13202,
+          13322,
+          13442,
+          13562,
+          13682,
+          13802,
+          13922,
+          14042,
+          14162,
+          14282,
+          14402,
+          14522,
+          14642,
+          14762,
+          14882,
+          15002,
+          15122,
+          15242,
+          15362,
+          15482,
+          15602,
+          15722,
+          15842,
+          15962,
+          16082,
+          16202
+        ],
+        "totalPacketHealing": 1080,
+        "expiredFrame": 16205
+      },
+      {
+        "leaf": 1685000,
+        "copies": 0,
+        "fps": 30,
+        "amount": 5,
+        "pulseFrames": [
+          31,
+          61,
+          91,
+          121,
+          151,
+          181,
+          211,
+          241,
+          271,
+          301,
+          331,
+          361,
+          391,
+          421,
+          451,
+          481,
+          511,
+          541,
+          571,
+          601,
+          631,
+          661,
+          691,
+          721,
+          751,
+          781,
+          811,
+          841,
+          871,
+          901,
+          931,
+          961,
+          991,
+          1021,
+          1051,
+          1081,
+          1111,
+          1141,
+          1171,
+          1201,
+          1231,
+          1261,
+          1291,
+          1321,
+          1351,
+          1381,
+          1411,
+          1441,
+          1471,
+          1501,
+          1531,
+          1561,
+          1591,
+          1621,
+          1651,
+          1681,
+          1711,
+          1741,
+          1771,
+          1801,
+          1831,
+          1861,
+          1891,
+          1921,
+          1951,
+          1981,
+          2011,
+          2041,
+          2071,
+          2101,
+          2131,
+          2161,
+          2191,
+          2221,
+          2251,
+          2281,
+          2311,
+          2341,
+          2371,
+          2401,
+          2431,
+          2461,
+          2491,
+          2521,
+          2551,
+          2581,
+          2611,
+          2641,
+          2671,
+          2701,
+          2731,
+          2761,
+          2791,
+          2821,
+          2851,
+          2881,
+          2911,
+          2941,
+          2971,
+          3001,
+          3031,
+          3061,
+          3091,
+          3121,
+          3151,
+          3181,
+          3211,
+          3241,
+          3271,
+          3301,
+          3331,
+          3361,
+          3391,
+          3421,
+          3451,
+          3481,
+          3511,
+          3541,
+          3571,
+          3601
+        ],
+        "totalPacketHealing": 600,
+        "expiredFrame": 3603
+      },
+      {
+        "leaf": 1685000,
+        "copies": 0,
+        "fps": 60,
+        "amount": 5,
+        "pulseFrames": [
+          62,
+          122,
+          182,
+          242,
+          302,
+          362,
+          422,
+          482,
+          542,
+          602,
+          662,
+          722,
+          782,
+          842,
+          902,
+          962,
+          1022,
+          1082,
+          1142,
+          1202,
+          1262,
+          1322,
+          1382,
+          1442,
+          1502,
+          1562,
+          1622,
+          1682,
+          1742,
+          1802,
+          1862,
+          1922,
+          1982,
+          2042,
+          2102,
+          2162,
+          2222,
+          2282,
+          2342,
+          2402,
+          2462,
+          2522,
+          2582,
+          2642,
+          2702,
+          2762,
+          2822,
+          2882,
+          2942,
+          3002,
+          3062,
+          3122,
+          3182,
+          3242,
+          3302,
+          3362,
+          3422,
+          3482,
+          3542,
+          3602,
+          3662,
+          3722,
+          3782,
+          3842,
+          3902,
+          3962,
+          4022,
+          4082,
+          4142,
+          4202,
+          4262,
+          4322,
+          4382,
+          4442,
+          4502,
+          4562,
+          4622,
+          4682,
+          4742,
+          4802,
+          4862,
+          4922,
+          4982,
+          5042,
+          5102,
+          5162,
+          5222,
+          5282,
+          5342,
+          5402,
+          5462,
+          5522,
+          5582,
+          5642,
+          5702,
+          5762,
+          5822,
+          5882,
+          5942,
+          6002,
+          6062,
+          6122,
+          6182,
+          6242,
+          6302,
+          6362,
+          6422,
+          6482,
+          6542,
+          6602,
+          6662,
+          6722,
+          6782,
+          6842,
+          6902,
+          6962,
+          7022,
+          7082,
+          7142
+        ],
+        "totalPacketHealing": 595,
+        "expiredFrame": 7202
+      },
+      {
+        "leaf": 1685000,
+        "copies": 0,
+        "fps": 120,
+        "amount": 5,
+        "pulseFrames": [
+          122,
+          242,
+          362,
+          482,
+          602,
+          722,
+          842,
+          962,
+          1082,
+          1202,
+          1322,
+          1442,
+          1562,
+          1682,
+          1802,
+          1922,
+          2042,
+          2162,
+          2282,
+          2402,
+          2522,
+          2642,
+          2762,
+          2882,
+          3002,
+          3122,
+          3242,
+          3362,
+          3482,
+          3602,
+          3722,
+          3842,
+          3962,
+          4082,
+          4202,
+          4322,
+          4442,
+          4562,
+          4682,
+          4802,
+          4922,
+          5042,
+          5162,
+          5282,
+          5402,
+          5522,
+          5642,
+          5762,
+          5882,
+          6002,
+          6122,
+          6242,
+          6362,
+          6482,
+          6602,
+          6722,
+          6842,
+          6962,
+          7082,
+          7202,
+          7322,
+          7442,
+          7562,
+          7682,
+          7802,
+          7922,
+          8042,
+          8162,
+          8282,
+          8402,
+          8522,
+          8642,
+          8762,
+          8882,
+          9002,
+          9122,
+          9242,
+          9362,
+          9482,
+          9602,
+          9722,
+          9842,
+          9962,
+          10082,
+          10202,
+          10322,
+          10442,
+          10562,
+          10682,
+          10802,
+          10922,
+          11042,
+          11162,
+          11282,
+          11402,
+          11522,
+          11642,
+          11762,
+          11882,
+          12002,
+          12122,
+          12242,
+          12362,
+          12482,
+          12602,
+          12722,
+          12842,
+          12962,
+          13082,
+          13202,
+          13322,
+          13442,
+          13562,
+          13682,
+          13802,
+          13922,
+          14042,
+          14162,
+          14282,
+          14402
+        ],
+        "totalPacketHealing": 600,
+        "expiredFrame": 14403
+      },
+      {
+        "leaf": 1685000,
+        "copies": 1,
+        "fps": 30,
+        "amount": 5,
+        "pulseFrames": [
+          31,
+          61,
+          91,
+          121,
+          151,
+          181,
+          211,
+          241,
+          271,
+          301,
+          331,
+          361,
+          391,
+          421,
+          451,
+          481,
+          511,
+          541,
+          571,
+          601,
+          631,
+          661,
+          691,
+          721,
+          751,
+          781,
+          811,
+          841,
+          871,
+          901,
+          931,
+          961,
+          991,
+          1021,
+          1051,
+          1081,
+          1111,
+          1141,
+          1171,
+          1201,
+          1231,
+          1261,
+          1291,
+          1321,
+          1351,
+          1381,
+          1411,
+          1441,
+          1471,
+          1501,
+          1531,
+          1561,
+          1591,
+          1621,
+          1651,
+          1681,
+          1711,
+          1741,
+          1771,
+          1801,
+          1831,
+          1861,
+          1891,
+          1921,
+          1951,
+          1981,
+          2011,
+          2041,
+          2071,
+          2101,
+          2131,
+          2161,
+          2191,
+          2221,
+          2251,
+          2281,
+          2311,
+          2341,
+          2371,
+          2401,
+          2431,
+          2461,
+          2491,
+          2521,
+          2551,
+          2581,
+          2611,
+          2641,
+          2671,
+          2701,
+          2731,
+          2761,
+          2791,
+          2821,
+          2851,
+          2881,
+          2911,
+          2941,
+          2971,
+          3001,
+          3031,
+          3061,
+          3091,
+          3121,
+          3151,
+          3181,
+          3211,
+          3241,
+          3271,
+          3301,
+          3331,
+          3361,
+          3391,
+          3421,
+          3451,
+          3481,
+          3511,
+          3541,
+          3571,
+          3601,
+          3631,
+          3661,
+          3691,
+          3721,
+          3751,
+          3781,
+          3811,
+          3841,
+          3871,
+          3901,
+          3931,
+          3961,
+          3991,
+          4021,
+          4051,
+          4081,
+          4111,
+          4141,
+          4171,
+          4201,
+          4231,
+          4261,
+          4291,
+          4321,
+          4351,
+          4381,
+          4411,
+          4441,
+          4471,
+          4501,
+          4531,
+          4561,
+          4591,
+          4621,
+          4651,
+          4681,
+          4711,
+          4741,
+          4771,
+          4801,
+          4831,
+          4861,
+          4891,
+          4921,
+          4951,
+          4981,
+          5011,
+          5041,
+          5071,
+          5101,
+          5131,
+          5161,
+          5191,
+          5221,
+          5251,
+          5281,
+          5311,
+          5341,
+          5371,
+          5401
+        ],
+        "totalPacketHealing": 900,
+        "expiredFrame": 5402
+      },
+      {
+        "leaf": 1685000,
+        "copies": 1,
+        "fps": 60,
+        "amount": 5,
+        "pulseFrames": [
+          62,
+          122,
+          182,
+          242,
+          302,
+          362,
+          422,
+          482,
+          542,
+          602,
+          662,
+          722,
+          782,
+          842,
+          902,
+          962,
+          1022,
+          1082,
+          1142,
+          1202,
+          1262,
+          1322,
+          1382,
+          1442,
+          1502,
+          1562,
+          1622,
+          1682,
+          1742,
+          1802,
+          1862,
+          1922,
+          1982,
+          2042,
+          2102,
+          2162,
+          2222,
+          2282,
+          2342,
+          2402,
+          2462,
+          2522,
+          2582,
+          2642,
+          2702,
+          2762,
+          2822,
+          2882,
+          2942,
+          3002,
+          3062,
+          3122,
+          3182,
+          3242,
+          3302,
+          3362,
+          3422,
+          3482,
+          3542,
+          3602,
+          3662,
+          3722,
+          3782,
+          3842,
+          3902,
+          3962,
+          4022,
+          4082,
+          4142,
+          4202,
+          4262,
+          4322,
+          4382,
+          4442,
+          4502,
+          4562,
+          4622,
+          4682,
+          4742,
+          4802,
+          4862,
+          4922,
+          4982,
+          5042,
+          5102,
+          5162,
+          5222,
+          5282,
+          5342,
+          5402,
+          5462,
+          5522,
+          5582,
+          5642,
+          5702,
+          5762,
+          5822,
+          5882,
+          5942,
+          6002,
+          6062,
+          6122,
+          6182,
+          6242,
+          6302,
+          6362,
+          6422,
+          6482,
+          6542,
+          6602,
+          6662,
+          6722,
+          6782,
+          6842,
+          6902,
+          6962,
+          7022,
+          7082,
+          7142,
+          7202,
+          7262,
+          7322,
+          7382,
+          7442,
+          7502,
+          7562,
+          7622,
+          7682,
+          7742,
+          7802,
+          7862,
+          7922,
+          7982,
+          8042,
+          8102,
+          8162,
+          8222,
+          8282,
+          8342,
+          8402,
+          8462,
+          8522,
+          8582,
+          8642,
+          8702,
+          8762,
+          8822,
+          8882,
+          8942,
+          9002,
+          9062,
+          9122,
+          9182,
+          9242,
+          9302,
+          9362,
+          9422,
+          9482,
+          9542,
+          9602,
+          9662,
+          9722,
+          9782,
+          9842,
+          9902,
+          9962,
+          10022,
+          10082,
+          10142,
+          10202,
+          10262,
+          10322,
+          10382,
+          10442,
+          10502,
+          10562,
+          10622,
+          10682,
+          10742,
+          10802
+        ],
+        "totalPacketHealing": 900,
+        "expiredFrame": 10804
+      },
+      {
+        "leaf": 1685000,
+        "copies": 1,
+        "fps": 120,
+        "amount": 5,
+        "pulseFrames": [
+          122,
+          242,
+          362,
+          482,
+          602,
+          722,
+          842,
+          962,
+          1082,
+          1202,
+          1322,
+          1442,
+          1562,
+          1682,
+          1802,
+          1922,
+          2042,
+          2162,
+          2282,
+          2402,
+          2522,
+          2642,
+          2762,
+          2882,
+          3002,
+          3122,
+          3242,
+          3362,
+          3482,
+          3602,
+          3722,
+          3842,
+          3962,
+          4082,
+          4202,
+          4322,
+          4442,
+          4562,
+          4682,
+          4802,
+          4922,
+          5042,
+          5162,
+          5282,
+          5402,
+          5522,
+          5642,
+          5762,
+          5882,
+          6002,
+          6122,
+          6242,
+          6362,
+          6482,
+          6602,
+          6722,
+          6842,
+          6962,
+          7082,
+          7202,
+          7322,
+          7442,
+          7562,
+          7682,
+          7802,
+          7922,
+          8042,
+          8162,
+          8282,
+          8402,
+          8522,
+          8642,
+          8762,
+          8882,
+          9002,
+          9122,
+          9242,
+          9362,
+          9482,
+          9602,
+          9722,
+          9842,
+          9962,
+          10082,
+          10202,
+          10322,
+          10442,
+          10562,
+          10682,
+          10802,
+          10922,
+          11042,
+          11162,
+          11282,
+          11402,
+          11522,
+          11642,
+          11762,
+          11882,
+          12002,
+          12122,
+          12242,
+          12362,
+          12482,
+          12602,
+          12722,
+          12842,
+          12962,
+          13082,
+          13202,
+          13322,
+          13442,
+          13562,
+          13682,
+          13802,
+          13922,
+          14042,
+          14162,
+          14282,
+          14402,
+          14522,
+          14642,
+          14762,
+          14882,
+          15002,
+          15122,
+          15242,
+          15362,
+          15482,
+          15602,
+          15722,
+          15842,
+          15962,
+          16082,
+          16202,
+          16322,
+          16442,
+          16562,
+          16682,
+          16802,
+          16922,
+          17042,
+          17162,
+          17282,
+          17402,
+          17522,
+          17642,
+          17762,
+          17882,
+          18002,
+          18122,
+          18242,
+          18362,
+          18482,
+          18602,
+          18722,
+          18842,
+          18962,
+          19082,
+          19202,
+          19322,
+          19442,
+          19562,
+          19682,
+          19802,
+          19922,
+          20042,
+          20162,
+          20282,
+          20402,
+          20522,
+          20642,
+          20762,
+          20882,
+          21002,
+          21122,
+          21242,
+          21362,
+          21482,
+          21602
+        ],
+        "totalPacketHealing": 900,
+        "expiredFrame": 21606
+      },
+      {
+        "leaf": 1685000,
+        "copies": 3,
+        "fps": 30,
+        "amount": 5,
+        "pulseFrames": [
+          31,
+          61,
+          91,
+          121,
+          151,
+          181,
+          211,
+          241,
+          271,
+          301,
+          331,
+          361,
+          391,
+          421,
+          451,
+          481,
+          511,
+          541,
+          571,
+          601,
+          631,
+          661,
+          691,
+          721,
+          751,
+          781,
+          811,
+          841,
+          871,
+          901,
+          931,
+          961,
+          991,
+          1021,
+          1051,
+          1081,
+          1111,
+          1141,
+          1171,
+          1201,
+          1231,
+          1261,
+          1291,
+          1321,
+          1351,
+          1381,
+          1411,
+          1441,
+          1471,
+          1501,
+          1531,
+          1561,
+          1591,
+          1621,
+          1651,
+          1681,
+          1711,
+          1741,
+          1771,
+          1801,
+          1831,
+          1861,
+          1891,
+          1921,
+          1951,
+          1981,
+          2011,
+          2041,
+          2071,
+          2101,
+          2131,
+          2161,
+          2191,
+          2221,
+          2251,
+          2281,
+          2311,
+          2341,
+          2371,
+          2401,
+          2431,
+          2461,
+          2491,
+          2521,
+          2551,
+          2581,
+          2611,
+          2641,
+          2671,
+          2701,
+          2731,
+          2761,
+          2791,
+          2821,
+          2851,
+          2881,
+          2911,
+          2941,
+          2971,
+          3001,
+          3031,
+          3061,
+          3091,
+          3121,
+          3151,
+          3181,
+          3211,
+          3241,
+          3271,
+          3301,
+          3331,
+          3361,
+          3391,
+          3421,
+          3451,
+          3481,
+          3511,
+          3541,
+          3571,
+          3601,
+          3631,
+          3661,
+          3691,
+          3721,
+          3751,
+          3781,
+          3811,
+          3841,
+          3871,
+          3901,
+          3931,
+          3961,
+          3991,
+          4021,
+          4051,
+          4081,
+          4111,
+          4141,
+          4171,
+          4201,
+          4231,
+          4261,
+          4291,
+          4321,
+          4351,
+          4381,
+          4411,
+          4441,
+          4471,
+          4501,
+          4531,
+          4561,
+          4591,
+          4621,
+          4651,
+          4681,
+          4711,
+          4741,
+          4771,
+          4801,
+          4831,
+          4861,
+          4891,
+          4921,
+          4951,
+          4981,
+          5011,
+          5041,
+          5071,
+          5101,
+          5131,
+          5161,
+          5191,
+          5221,
+          5251,
+          5281,
+          5311,
+          5341,
+          5371,
+          5401
+        ],
+        "totalPacketHealing": 900,
+        "expiredFrame": 5402
+      },
+      {
+        "leaf": 1685000,
+        "copies": 3,
+        "fps": 60,
+        "amount": 5,
+        "pulseFrames": [
+          62,
+          122,
+          182,
+          242,
+          302,
+          362,
+          422,
+          482,
+          542,
+          602,
+          662,
+          722,
+          782,
+          842,
+          902,
+          962,
+          1022,
+          1082,
+          1142,
+          1202,
+          1262,
+          1322,
+          1382,
+          1442,
+          1502,
+          1562,
+          1622,
+          1682,
+          1742,
+          1802,
+          1862,
+          1922,
+          1982,
+          2042,
+          2102,
+          2162,
+          2222,
+          2282,
+          2342,
+          2402,
+          2462,
+          2522,
+          2582,
+          2642,
+          2702,
+          2762,
+          2822,
+          2882,
+          2942,
+          3002,
+          3062,
+          3122,
+          3182,
+          3242,
+          3302,
+          3362,
+          3422,
+          3482,
+          3542,
+          3602,
+          3662,
+          3722,
+          3782,
+          3842,
+          3902,
+          3962,
+          4022,
+          4082,
+          4142,
+          4202,
+          4262,
+          4322,
+          4382,
+          4442,
+          4502,
+          4562,
+          4622,
+          4682,
+          4742,
+          4802,
+          4862,
+          4922,
+          4982,
+          5042,
+          5102,
+          5162,
+          5222,
+          5282,
+          5342,
+          5402,
+          5462,
+          5522,
+          5582,
+          5642,
+          5702,
+          5762,
+          5822,
+          5882,
+          5942,
+          6002,
+          6062,
+          6122,
+          6182,
+          6242,
+          6302,
+          6362,
+          6422,
+          6482,
+          6542,
+          6602,
+          6662,
+          6722,
+          6782,
+          6842,
+          6902,
+          6962,
+          7022,
+          7082,
+          7142,
+          7202,
+          7262,
+          7322,
+          7382,
+          7442,
+          7502,
+          7562,
+          7622,
+          7682,
+          7742,
+          7802,
+          7862,
+          7922,
+          7982,
+          8042,
+          8102,
+          8162,
+          8222,
+          8282,
+          8342,
+          8402,
+          8462,
+          8522,
+          8582,
+          8642,
+          8702,
+          8762,
+          8822,
+          8882,
+          8942,
+          9002,
+          9062,
+          9122,
+          9182,
+          9242,
+          9302,
+          9362,
+          9422,
+          9482,
+          9542,
+          9602,
+          9662,
+          9722,
+          9782,
+          9842,
+          9902,
+          9962,
+          10022,
+          10082,
+          10142,
+          10202,
+          10262,
+          10322,
+          10382,
+          10442,
+          10502,
+          10562,
+          10622,
+          10682,
+          10742,
+          10802
+        ],
+        "totalPacketHealing": 900,
+        "expiredFrame": 10804
+      },
+      {
+        "leaf": 1685000,
+        "copies": 3,
+        "fps": 120,
+        "amount": 5,
+        "pulseFrames": [
+          122,
+          242,
+          362,
+          482,
+          602,
+          722,
+          842,
+          962,
+          1082,
+          1202,
+          1322,
+          1442,
+          1562,
+          1682,
+          1802,
+          1922,
+          2042,
+          2162,
+          2282,
+          2402,
+          2522,
+          2642,
+          2762,
+          2882,
+          3002,
+          3122,
+          3242,
+          3362,
+          3482,
+          3602,
+          3722,
+          3842,
+          3962,
+          4082,
+          4202,
+          4322,
+          4442,
+          4562,
+          4682,
+          4802,
+          4922,
+          5042,
+          5162,
+          5282,
+          5402,
+          5522,
+          5642,
+          5762,
+          5882,
+          6002,
+          6122,
+          6242,
+          6362,
+          6482,
+          6602,
+          6722,
+          6842,
+          6962,
+          7082,
+          7202,
+          7322,
+          7442,
+          7562,
+          7682,
+          7802,
+          7922,
+          8042,
+          8162,
+          8282,
+          8402,
+          8522,
+          8642,
+          8762,
+          8882,
+          9002,
+          9122,
+          9242,
+          9362,
+          9482,
+          9602,
+          9722,
+          9842,
+          9962,
+          10082,
+          10202,
+          10322,
+          10442,
+          10562,
+          10682,
+          10802,
+          10922,
+          11042,
+          11162,
+          11282,
+          11402,
+          11522,
+          11642,
+          11762,
+          11882,
+          12002,
+          12122,
+          12242,
+          12362,
+          12482,
+          12602,
+          12722,
+          12842,
+          12962,
+          13082,
+          13202,
+          13322,
+          13442,
+          13562,
+          13682,
+          13802,
+          13922,
+          14042,
+          14162,
+          14282,
+          14402,
+          14522,
+          14642,
+          14762,
+          14882,
+          15002,
+          15122,
+          15242,
+          15362,
+          15482,
+          15602,
+          15722,
+          15842,
+          15962,
+          16082,
+          16202,
+          16322,
+          16442,
+          16562,
+          16682,
+          16802,
+          16922,
+          17042,
+          17162,
+          17282,
+          17402,
+          17522,
+          17642,
+          17762,
+          17882,
+          18002,
+          18122,
+          18242,
+          18362,
+          18482,
+          18602,
+          18722,
+          18842,
+          18962,
+          19082,
+          19202,
+          19322,
+          19442,
+          19562,
+          19682,
+          19802,
+          19922,
+          20042,
+          20162,
+          20282,
+          20402,
+          20522,
+          20642,
+          20762,
+          20882,
+          21002,
+          21122,
+          21242,
+          21362,
+          21482,
+          21602
+        ],
+        "totalPacketHealing": 900,
+        "expiredFrame": 21606
+      }
+    ],
+    "recipient": [
+      {
+        "sourceCopies": 0,
+        "recipientCopies": 0,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.0,
+        "sourceBefore": 80,
+        "sourceAfter": 79.0
+      },
+      {
+        "sourceCopies": 0,
+        "recipientCopies": 0,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.0,
+        "sourceBefore": 80,
+        "sourceAfter": 79.0
+      },
+      {
+        "sourceCopies": 0,
+        "recipientCopies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.0
+      },
+      {
+        "sourceCopies": 0,
+        "recipientCopies": 1,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.0
+      },
+      {
+        "sourceCopies": 0,
+        "recipientCopies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.0
+      },
+      {
+        "sourceCopies": 0,
+        "recipientCopies": 3,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.0
+      },
+      {
+        "sourceCopies": 1,
+        "recipientCopies": 0,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.0,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 1,
+        "recipientCopies": 0,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.0,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 1,
+        "recipientCopies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 1,
+        "recipientCopies": 1,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 1,
+        "recipientCopies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 1,
+        "recipientCopies": 3,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 3,
+        "recipientCopies": 0,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.0,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 3,
+        "recipientCopies": 0,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.0,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 3,
+        "recipientCopies": 1,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 3,
+        "recipientCopies": 1,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 3,
+        "recipientCopies": 3,
+        "leaf": 1660000,
+        "before": 80.0,
+        "after": 79.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      },
+      {
+        "sourceCopies": 3,
+        "recipientCopies": 3,
+        "leaf": 1643001,
+        "before": 90.0,
+        "after": 89.333336,
+        "sourceBefore": 80,
+        "sourceAfter": 79.33333587646484
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "grant": "3C7FD0 → 3C80A0 → 3DB410 → 50A4C0 → 50D060",
+    "target": "50C6C0 → 52CC60",
+    "lifecycle": "5057D0 → 50ACD0 → 511B80",
+    "remove": "505280",
+    "healing": "506EC0"
+  },
+  "stubs": [
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "30/60/120 Hz isolated timelines; removal targets one native instance index, not a full equipment rebuild",
+    "3C7FD0 caller supplies its ordinary context; at 3C80A0 entry R8 is set to a separate source actor for recipient cases",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "F61390 isolated allocator owner",
+    "HP recovery packets run original consumer; final current-HP write, caps and recipient healing modifiers outside scope",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "pinned Magic/Bullet references identify example payloads; complete casting, projectile creation/collision and network transport not executed",
+    "separate source effect list populated by native insertion, qualification and update; source and recipient do not share effect nodes",
+    "source and recipient identity/team codes 1/2 are explicit; original targeting predicates execute",
+    "synthetic positive-slot inventory; draw availability not inferred for catalog-only rows"
+  ],
+  "gameplayVerified": false
+}

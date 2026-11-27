@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 605,
+    "nativeStacking": 606,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -2169,12 +2169,13 @@
         330600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "spell-duration"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整施法／弹体生成与碰撞、全部可延长效果的动作可达性、最终 HP 写入与其他治疗倍率、实际联机传输和装备重建／死亡／重载；双方身份及阵营代码为显式输入，原生目标判定、发放与接受者倒计时已执行"
       ],
       "gameplayVerified": false
     },
@@ -10213,12 +10214,13 @@
         7006400
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "不同等级可叠加",
+      "evidence": [
+        "spell-duration"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整施法／弹体生成与碰撞、全部可延长效果的动作可达性、最终 HP 写入与其他治疗倍率、实际联机传输和装备重建／死亡／重载；双方身份及阵营代码为显式输入，原生目标判定、发放与接受者倒计时已执行"
       ],
       "gameplayVerified": false
     },
@@ -22800,12 +22802,13 @@
         8330500
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-duration"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整施法／弹体生成与碰撞、全部可延长效果的动作可达性、最终 HP 写入与其他治疗倍率、实际联机传输和装备重建／死亡／重载；双方身份及阵营代码为显式输入，原生目标判定、发放与接受者倒计时已执行"
       ],
       "gameplayVerified": false
     },
@@ -27328,12 +27331,13 @@
         8851300
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-duration"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整施法／弹体生成与碰撞、全部可延长效果的动作可达性、最终 HP 写入与其他治疗倍率、实际联机传输和装备重建／死亡／重载；双方身份及阵营代码为显式输入，原生目标判定、发放与接受者倒计时已执行"
       ],
       "gameplayVerified": false
     },
@@ -27350,12 +27354,13 @@
         8851350
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "spell-duration"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限",
-        "stateInfo 分派、触发资格、次数、目标及隐藏效果链"
+        "完整施法／弹体生成与碰撞、全部可延长效果的动作可达性、最终 HP 写入与其他治疗倍率、实际联机传输和装备重建／死亡／重载；双方身份及阵营代码为显式输入，原生目标判定、发放与接受者倒计时已执行"
       ],
       "gameplayVerified": false
     },
@@ -50572,6 +50577,7 @@
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
   "hitStaminaEvidenceSha256": "f2ffa9b2aad8988e1813ce7514dae76e23dd58c7a3935364f0402991a5d82839",
+  "spellDurationEvidenceSha256": "0eea16eafbc637286486d6c6f90a9fe75cf8ea679c008697dfad0d66f03fcdcf",
   "undertakerComboEvidenceSha256": "279499af665e9c40536b37bbdafa1497d5a03992140b2b01d49d8ac3377935dd",
   "lowHpDefenseEvidenceSha256": "4181b66f7dcb202e95a039a2f59b2ef973f25824ac835536d1ae31b8ab0b9170",
   "targetAilmentAttackEvidenceSha256": "903cd40052c78b22dca891403ac43a7c0cb86e945c6cef842422215b036cca9a",

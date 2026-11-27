@@ -39,6 +39,7 @@ import flaskCurses from "../../data/effect-flask-curses-evidence.json";
 import lowHealthAilments from "../../data/effect-low-health-ailments-evidence.json";
 import hitStamina from "../../data/effect-hit-stamina-evidence.json";
 import undertakerCombo from "../../data/effect-undertaker-combo-evidence.json";
+import spellDuration from "../../data/effect-spell-duration-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
 import targetAilment from "../../data/effect-target-ailment-attack-evidence.json";
 import dodgeCurses from "../../data/effect-dodge-curses-evidence.json";
@@ -995,6 +996,81 @@ describe("MMV effect details", () => {
     expect(at60.find(r => r.spacing === "half")!.events.map(e => e.frame)).toEqual([1, 31]);
     const boundary = hitStamina.checks.spacing.filter(r => r.spacing === "tenth" && r.roots.join() === "7100100");
     expect(boundary.map(r => [r.fps, r.events.length])).toEqual([[30, 2], [60, 2], [120, 1]]);
+  });
+
+  it("distinguishes the five same-named spell-duration versions", () => {
+    expect(spellDuration.gameplayVerified).toBe(false);
+    expect(research.spellDurationEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-spell-duration-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    for (const family of spellDuration.families) {
+      const detail = effectDetail(family.effect)!;
+      expect(detail.info).toBeNull();
+      expect(detail.blocks).toEqual([{
+        source: family.root, phase: "自身的可延长效果", linked: false,
+        values: [["有效时间", `+${Math.round((family.rate - 1) * 100)}%`]],
+        restrictions: [], scope: [], duration: null, interval: null,
+      }]);
+      expect(detail.stacking).toBe(family.category === 0 ? "不同等级可叠加" : "可叠加");
+      expect(detail.stackingDetail).toContain("延长比例相加");
+      expect(detail.notes.join()).toContain("按队友的延长词条计算");
+      expect(detail.notes.join()).toContain("持续回血的间隔和单次恢复量不变");
+    }
+    expect(effectDetail(7006400)!.notes.join()).toContain("30 → 45 秒");
+    for (const row of spellDuration.checks.selection) {
+      const family = spellDuration.families.find(f => f.effect === row.effect)!;
+      expect(row.selected).toHaveLength(row.copies);
+      expect(row.instances).toBe(family.category === 0 ? 1 : row.copies);
+      expect(row.multiplier).toBeCloseTo(1 + (family.rate - 1) * row.instances);
+    }
+  });
+
+  it("adds duration increases, leaves ineligible effects unchanged, and applies changes mid-buff", () => {
+    for (const row of spellDuration.checks.mixed) {
+      const seen = new Set<number>();
+      let expected = 1;
+      for (const id of row.roots) {
+        const family = spellDuration.families.find(f => f.root === id)!;
+        if (family.category === 10 || !seen.has(id)) expected += family.rate - 1;
+        seen.add(id);
+      }
+      if (row.leaf === 7036901) expected = 1;
+      expect(row.multiplier).toBeCloseTo(expected);
+      expect(row.after).toBeCloseTo(row.before - 1 / expected, 4);
+    }
+    for (const row of spellDuration.checks.lifetime) {
+      expect(Math.abs(row.expiredFrame / row.fps - row.expectedSeconds)).toBeLessThanOrEqual(0.12 + 3 / row.fps);
+    }
+    for (const row of spellDuration.checks.refresh) {
+      expect(row.after).toBe(row.leaf === 1605000 ? 30 : 120);
+      expect(row.after).toBeGreaterThan(row.before);
+    }
+    for (const row of spellDuration.checks.transition) {
+      const family = spellDuration.families.find(f => f.effect === row.effect)!;
+      expect(row.during).toBeCloseTo(row.before - 1 / family.rate, 4);
+      expect(row.after).toBeCloseTo(row.during - 1, 4);
+    }
+  });
+
+  it("extends healing time without increasing pulse strength or frequency", () => {
+    for (const row of spellDuration.checks.healing) {
+      const base = spellDuration.checks.healing.find(r => r.leaf === row.leaf && r.fps === row.fps && r.copies === 0)!;
+      expect(row.amount).toBe(row.leaf === 1643000 ? 8 : 5);
+      expect(row.pulseFrames.slice(0, base.pulseFrames.length)).toEqual(base.pulseFrames);
+      expect(row.totalPacketHealing).toBe(row.amount * row.pulseFrames.length);
+      if (row.copies > 0) expect(row.totalPacketHealing).toBeGreaterThan(base.totalPacketHealing);
+      if (row.copies === 3) {
+        const single = spellDuration.checks.healing.find(r => r.leaf === row.leaf && r.fps === row.fps && r.copies === 1)!;
+        expect(row.pulseFrames).toEqual(single.pulseFrames);
+      }
+    }
+  });
+
+  it("uses each recipient's duration effects independently of the spell's source", () => {
+    for (const row of spellDuration.checks.recipient) {
+      expect(row.after).toBeCloseTo(row.before - 1 / (row.recipientCopies ? 1.5 : 1), 4);
+      expect(row.sourceAfter).toBeCloseTo(row.sourceBefore - 1 / (row.sourceCopies ? 1.5 : 1), 4);
+    }
   });
 
   it("resolves Undertaker finisher eligibility and refresh without adding attack stacks", () => {
