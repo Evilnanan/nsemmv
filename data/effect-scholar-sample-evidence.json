@@ -1,0 +1,1867 @@
+{
+  "schema": 1,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "attachParamSha256": "ae8128ed510a532d0fa7cb56fa9c86e4a44c9d815dd4ee01c05821d5f50a9827",
+  "effect": 7036500,
+  "root": 7036500,
+  "leaf": 7036501,
+  "runesPerSample": 1300,
+  "checks": {
+    "selection": [
+      {
+        "copies": 1,
+        "hero": 0,
+        "selected": [
+          0
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 1,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 2,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 3,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 4,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 5,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 6,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 7,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 8,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 9,
+        "selected": [
+          0
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "hero": 10,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 0,
+        "selected": [
+          0,
+          1
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 1,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 2,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 3,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 4,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 5,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 6,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 7,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 8,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 9,
+        "selected": [
+          0,
+          1
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 2,
+        "hero": 10,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 0,
+        "selected": [
+          0,
+          1,
+          2
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 1,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 2,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 3,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 4,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 5,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 6,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 7,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 8,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 9,
+        "selected": [
+          0,
+          1,
+          2
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "hero": 10,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 0,
+        "selected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 1,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 2,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 3,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 4,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 5,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 6,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 7,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 8,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 9,
+        "selected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 6,
+        "hero": 10,
+        "selected": [],
+        "decoded": [
+          7036500,
+          4294967295,
+          4294967295
+        ],
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "deduplication": [
+      {
+        "copies": 0,
+        "keys": [
+          100
+        ],
+        "newSamples": 1,
+        "recordCount": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "keys": [
+          100
+        ],
+        "newSamples": 0,
+        "recordCount": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "keys": [
+          200,
+          300,
+          100
+        ],
+        "newSamples": 2,
+        "recordCount": 3,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "recordCount": 3,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "keys": [
+          65535,
+          0,
+          65536
+        ],
+        "newSamples": 2,
+        "recordCount": 5,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "keys": [
+          100,
+          400,
+          500,
+          600
+        ],
+        "newSamples": 3,
+        "recordCount": 8,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "keys": [
+          100
+        ],
+        "newSamples": 1,
+        "recordCount": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "keys": [
+          100
+        ],
+        "newSamples": 0,
+        "recordCount": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "keys": [
+          200,
+          300,
+          100
+        ],
+        "newSamples": 2,
+        "recordCount": 3,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "recordCount": 3,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "keys": [
+          65535,
+          0,
+          65536
+        ],
+        "newSamples": 2,
+        "recordCount": 5,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "keys": [
+          100,
+          400,
+          500,
+          600
+        ],
+        "newSamples": 3,
+        "recordCount": 8,
+        "awards": [
+          [
+            3900
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "keys": [
+          100
+        ],
+        "newSamples": 1,
+        "recordCount": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "keys": [
+          100
+        ],
+        "newSamples": 0,
+        "recordCount": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "keys": [
+          200,
+          300,
+          100
+        ],
+        "newSamples": 2,
+        "recordCount": 3,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "recordCount": 3,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "keys": [
+          65535,
+          0,
+          65536
+        ],
+        "newSamples": 2,
+        "recordCount": 5,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "keys": [
+          100,
+          400,
+          500,
+          600
+        ],
+        "newSamples": 3,
+        "recordCount": 8,
+        "awards": [
+          [
+            3900
+          ],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "eligibility": [
+      {
+        "copies": 0,
+        "targetKind": 0,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 0,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 1,
+        "targetFlags": 0,
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 1,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 6,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 6,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 77,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "targetKind": 77,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 0,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 0,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 1,
+        "targetFlags": 0,
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 1,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 6,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 6,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 77,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "targetKind": 77,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 0,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 0,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 1,
+        "targetFlags": 0,
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 1,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 6,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 6,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 77,
+        "targetFlags": 0,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "targetKind": 77,
+        "targetFlags": 128,
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "copies": 0,
+        "modifier": null,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": null,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": null,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": 6840000,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": 6840000,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": 6840000,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": 311100,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": 311100,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 0,
+        "modifier": 311100,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": null,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": null,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": null,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": 6840000,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": 6840000,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": 6840000,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": 311100,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": 311100,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 1,
+        "modifier": 311100,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": null,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": null,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": null,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": 6840000,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": 6840000,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": 6840000,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": 311100,
+        "keys": [
+          100,
+          200,
+          100
+        ],
+        "newSamples": 2,
+        "awards": [
+          [
+            2600
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": 311100,
+        "keys": [
+          100,
+          300
+        ],
+        "newSamples": 1,
+        "awards": [
+          [
+            1300
+          ],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "copies": 3,
+        "modifier": 311100,
+        "keys": [
+          300,
+          200
+        ],
+        "newSamples": 0,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "disabled": [
+      {
+        "mask": 1,
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "mask": 2,
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "mask": 262144,
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "mask": 2147483648,
+        "newSamples": 1,
+        "awards": [
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ]
+  },
+  "native": {
+    "selection": "4FEA30 → E6E150 → E6E3B0",
+    "target": "3EDDF6..3EDF18 → 52C990/52CB00 → 3D1B30",
+    "identity": "3CED70",
+    "deduplication": "3EDEAD..3EDF18 → 3EB550 → 3F1D10/3F10B0",
+    "grant": "3EE0CA..3EE10B → 505C80 → 3C7FD0 → 3C80A0 → 3DB410",
+    "fixedAward": "6713D6..6713F8 → 505AF0 → 668300"
+  },
+  "stubs": [
+    "2098C0 terminal rune-resource write recorder; final caps and persistence not executed.",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "Actor virtual+118 is false; faction/identity comparisons execute on explicit actor fields.",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "Explicit resolved target, actor+1B0 identity, initial empty sample tree and caller registers; full scan collection not executed.",
+    "F61390 isolated allocator owner",
+    "Tree allocator virtual+50 supplies aligned32-byte nodes; native search, insert and balancing execute.",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder"
+  ],
+  "limitations": [
+    "No complete skill target scan, range, animation scheduling, target identity lifecycle or reset of the sample record.",
+    "Actor+1B0 low16bits form the deduplication key; no unsupported identification as enemy species or unique enemy instance.",
+    "No complete game session, DLL runtime patches, multiplayer, death, reload or equipment rebuild.",
+    "Sample count is a byte in the native caller; only small valid counts exercised, not all extreme or capacity cases."
+  ],
+  "gameplayVerified": false
+}

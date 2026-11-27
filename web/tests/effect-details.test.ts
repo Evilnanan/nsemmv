@@ -45,6 +45,7 @@ import scholarFpCost from "../../data/effect-scholar-fp-cost-evidence.json";
 import executorUltimateAttack from "../../data/effect-executor-ultimate-attack-evidence.json";
 import undertakerCharged from "../../data/effect-undertaker-charged-evidence.json";
 import damageAttack from "../../data/effect-damage-attack-evidence.json";
+import scholarSample from "../../data/effect-scholar-sample-evidence.json";
 import counterRecovery from "../../data/effect-counter-recovery-evidence.json";
 import damageRot from "../../data/effect-damage-rot-evidence.json";
 import lowHpDefense from "../../data/effect-low-hp-defense-evidence.json";
@@ -1052,6 +1053,25 @@ describe("MMV effect details", () => {
       const other = generalCosts[row.other];
       for (const value of row.values) expect(value).toBeCloseTo(0.85 ** row.grade * other ** row.count);
     }
+  });
+
+  it("awards Scholar runes only for newly recorded samples without duplicate equipment bonuses", () => {
+    expect(scholarSample.gameplayVerified).toBe(false);
+    expect(research.scholarSampleEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-scholar-sample-evidence.json", import.meta.url)),
+    ).digest("hex"));
+    const detail = effectDetail(7036500)!;
+    expect(detail.stacking).toBe("不可叠加");
+    expect(detail.stackingDetail).toContain("不增加每个样本获得的卢恩");
+    expect(detail.blocks).toHaveLength(1);
+    expect(detail.blocks[0]).toMatchObject({ phase: "获得样本时", values: [["获得卢恩", "+1300"]], duration: null, interval: null });
+    expect(detail.notes).toEqual(["仅新增样本计奖；一次新增多个样本分别计奖。", "不受增加或减少卢恩的倍率影响。"]);
+    expect(detail.notes.join(" ")).toContain("不受增加或减少卢恩的倍率影响");
+    for (const row of [...scholarSample.checks.deduplication, ...scholarSample.checks.awards])
+      expect(row.awards.flat().reduce((sum, n) => sum + n, 0)).toBe(row.copies ? row.newSamples * 1300 : 0);
+    for (const row of scholarSample.checks.eligibility)
+      if (row.targetKind !== 1 || row.targetFlags !== 0) expect(row.newSamples).toBe(0);
+    expect(scholarSample.checks.deduplication.some(row => row.newSamples === 0 && row.recordCount > 0)).toBe(true);
   });
 
   it("explains counter recovery grades and merges simultaneous trigger markers", () => {
