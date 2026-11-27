@@ -34,6 +34,7 @@ import spellFamily from "../../data/effect-spell-family-evidence.json";
 import handPoise from "../../data/effect-hand-poise-evidence.json";
 import guardStamina from "../../data/effect-guard-stamina-evidence.json";
 import guardPoise from "../../data/effect-guard-poise-evidence.json";
+import attackStamina from "../../data/effect-attack-stamina-evidence.json";
 import runeRate from "../../data/effect-rune-rate-evidence.json";
 import grease from "../../data/effect-grease-evidence.json";
 import scholarShockwave from "../../data/effect-scholar-shockwave-evidence.json";
@@ -937,6 +938,39 @@ describe("MMV effect details", () => {
     expect(scholarShockwave.gameplayVerified).toBe(false);
     expect(research.scholarShockwaveEvidenceSha256).toBe(createHash("sha256").update(
       readFileSync(new URL("../../data/effect-scholar-shockwave-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
+  it("stacks attack stamina curses before the native weapon corrections and integer conversion", () => {
+    for (const [id, percent] of [[6850600, 13], [6850601, 7], [6850602, 10]]) {
+      const detail = effectDetail(id)!;
+      expect(detail.stacking).toBe("可叠加");
+      expect(detail.stackingDetail).toBe("同类和不同版本的攻击耗精倍率相乘");
+      expect(detail.blocks).toHaveLength(1);
+      expect(detail.blocks[0]).toMatchObject({
+        source: id, phase: "攻击时", values: [["攻击耗精倍率", `+${percent}%`]],
+        duration: null, interval: null,
+      });
+    }
+    for (const row of attackStamina.checks.selection) {
+      expect(row.curseSlot).toBe(3);
+      expect(row.roots).toEqual(Array(row.copies).fill(row.effect));
+    }
+    const two = attackStamina.checks.multipliers.find(row => row.roots.length === 2 && row.roots.every(id => id === 6850600))!;
+    expect(two.rate).toBeCloseTo(1.2769, 6);
+    expect(two.nodes).toHaveLength(2);
+    expect(attackStamina.weaponRepresentatives).toHaveLength(10);
+    for (const row of attackStamina.checks.costs) {
+      const weapon = attackStamina.weaponRepresentatives.find(w => w.id === row.weapon)!;
+      expect(row.weaponRate).toBe((row.weaponMask & 3) ? weapon.rate : 1);
+      expect(row.conditionRate).toBe(row.resourceValue < weapon.threshold ? 1.5 : 1);
+      const expected = Math.trunc(Math.fround(Math.fround(Math.fround(Math.fround(row.base) * row.rate) * row.weaponRate) * row.conditionRate));
+      expect(row.result).toBe(expected);
+    }
+    expect(attackStamina.checks.disabled.every(row => row.rate === 1 && row.result === 101)).toBe(true);
+    expect(attackStamina.gameplayVerified).toBe(false);
+    expect(research.attackStaminaEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-attack-stamina-evidence.json", import.meta.url)),
     ).digest("hex"));
   });
 

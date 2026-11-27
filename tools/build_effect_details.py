@@ -616,6 +616,17 @@ if not args.extract_only:
     assert rune_rate['attachParamSha256'] == grease['attachParamSha256']
     assert {k: len(v) for k, v in rune_rate['checks'].items()} == dict(selection=220, multipliers=474, awards=4848, disabled=5, fixed=28, identity=4)
 rune_rate_families = {str(f['effect']): f for f in rune_rate['families']}
+attack_stamina_path = ROOT / 'data/effect-attack-stamina-evidence.json'
+attack_stamina = json.loads(attack_stamina_path.read_text())
+if not args.extract_only:
+    assert attack_stamina['schema'] == 1 and attack_stamina['regulationSha256'] == catalog['regulationSha256']
+    assert attack_stamina['exeSha256'] == evidence['exeSha256'] and not attack_stamina['gameplayVerified']
+    assert attack_stamina['paramSha256'] == evidence['paramSha256']
+    assert attack_stamina['attachParamSha256'] == rune_rate['attachParamSha256']
+    assert attack_stamina['weaponParamSha256'] == guard_stamina['weaponParamSha256']
+    assert len(attack_stamina['weaponRepresentatives']) == 10 and attack_stamina['lowStatusRate'] == 1.5
+    assert {k: len(v) for k, v in attack_stamina['checks'].items()} == dict(selection=132, multipliers=15, costs=7200, disabled=3, flags=16)
+attack_stamina_families = {str(f['effect']): f for f in attack_stamina['families']}
 starting_replacements_path = ROOT / 'data/effect-starting-replacements-evidence.json'
 starting_replacements = json.loads(starting_replacements_path.read_text())
 if not args.extract_only:
@@ -1214,6 +1225,7 @@ STACKING_RULES = {
     'guard-stamina': ('可叠加', '相同词条及不同版本均可叠加，耗精倍率相乘', ['guard-stamina']),
     'guard-stamina-single': ('不可叠加', '相同效果只生效一份；可与其他版本的耗精倍率相乘', ['guard-stamina']),
     'guard-poise': ('不同等级可叠加', '同等级不重复；不同等级的强韧度损耗倍率相乘，再次成功防御刷新时长', ['guard-poise']),
+    'attack-stamina': ('可叠加', '同类和不同版本的攻击耗精倍率相乘', ['attack-stamina']),
     'rune-rate': ('可叠加', '同类和不同版本的卢恩倍率相乘', ['rune-rate']),
     'rune-rate-single': ('不可叠加', '相同效果只生效一份；可与其他卢恩倍率相乘', ['rune-rate']),
     'grease-melee': ('不可叠加', '重复装备不增加倍率；再次涂抹刷新时长', ['grease']),
@@ -1592,6 +1604,17 @@ for id, effect in source['effects'].items():
                        restrictions=[], scope=[], duration=None, interval=None)]
         notes.append('连续防御可再次触发。')
         rule = 'guardian-shockwave'
+    if id in attack_stamina_families:
+        family = attack_stamina_families[id]
+        root = family['root']
+        assert effect['roots'] == {'passiveSpEffectId_1': root} and effect['runtimeExclusive'] == -1
+        row = source['spells'][str(root)]
+        assert row['stateInfo'] == 0 and row['spCategory'] == 10
+        assert math.isclose(row['consumeStaminaRate'], family['rate'], rel_tol=1e-6)
+        blocks = [dict(source=root, phase='攻击时', linked=False,
+                       values=[['攻击耗精倍率', '+' + num((family['rate'] - 1) * 100) + '%']],
+                       restrictions=[], scope=[], duration=None, interval=None)]
+        rule = 'attack-stamina'
     if id in rune_rate_families:
         family = rune_rate_families[id]
         root = family['root']
@@ -2356,6 +2379,8 @@ for id in sorted(source['effects'], key=int):
         questions.append('完整受击输入、实际防御准入、精力写入／破防、装备重建与多人交互；强化／能力修正、双持及特殊武器分支尚未联测')
     if rules[id] == 'guard-poise':
         questions.append('完整动作调度与防御事件通知、实际强韧受损／失衡、装备移除与死亡／重载及联机；发放队列按隔离夹具下一更新步投递')
+    if rules[id] == 'attack-stamina':
+        questions.append('各动作／TAE 到耗精接口的完整调度和基础耗精来源、调用掩码与资源对象 +10C 的游戏语义、最终精力写入及零精力动作准入、装备移除／死亡／重载／多人交互；未以旧参数标签推断武器 +E0 的用途')
     if rules[id] in ('rune-rate', 'rune-rate-single'):
         questions.append('敌人／道具／任务／脚本等各发放入口的倍率开关、队友共享倍率来源与投递、最终卢恩上限及死亡／拾回／重载／多人交互；本批验证玩家倍率与取整入口及两种固定奖励原生调用块')
     if id in ('7031900', '7036500'):
@@ -2520,6 +2545,7 @@ research['guardPoiseEvidenceSha256'] = hashlib.sha256(guard_poise_path.read_byte
 research['scholarShockwaveEvidenceSha256'] = hashlib.sha256(scholar_shock_path.read_bytes()).hexdigest()
 research['greaseEvidenceSha256'] = hashlib.sha256(grease_path.read_bytes()).hexdigest()
 research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes()).hexdigest()
+research['attackStaminaEvidenceSha256'] = hashlib.sha256(attack_stamina_path.read_bytes()).hexdigest()
 research['periodicFpEvidenceSha256'] = hashlib.sha256(periodic_fp_path.read_bytes()).hexdigest()
 research['periodicHpEvidenceSha256'] = hashlib.sha256(periodic_hp_path.read_bytes()).hexdigest()
 research['perfumeEvidenceSha256'] = hashlib.sha256(perfume_path.read_bytes()).hexdigest()

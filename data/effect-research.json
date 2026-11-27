@@ -8,7 +8,7 @@
     "withDetails": 655,
     "withNumericFields": 579,
     "withMechanicsOnly": 41,
-    "nativeStacking": 578,
+    "nativeStacking": 579,
     "catalog": 2266,
     "catalogWithDetails": 2110
   },
@@ -7757,11 +7757,13 @@
         6850600
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "attack-stamina"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "各动作／TAE 到耗精接口的完整调度和基础耗精来源、调用掩码与资源对象 +10C 的游戏语义、最终精力写入及零精力动作准入、装备移除／死亡／重载／多人交互；未以旧参数标签推断武器 +E0 的用途"
       ],
       "gameplayVerified": false
     },
@@ -7778,11 +7780,13 @@
         6850601
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "attack-stamina"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "各动作／TAE 到耗精接口的完整调度和基础耗精来源、调用掩码与资源对象 +10C 的游戏语义、最终精力写入及零精力动作准入、装备移除／死亡／重载／多人交互；未以旧参数标签推断武器 +E0 的用途"
       ],
       "gameplayVerified": false
     },
@@ -7799,11 +7803,13 @@
         6850602
       ],
       "values": "decoded-fields",
-      "stacking": "unresolved",
-      "stackingCategory": "待确认",
-      "evidence": [],
+      "stacking": "native-analysis",
+      "stackingCategory": "可叠加",
+      "evidence": [
+        "attack-stamina"
+      ],
       "openQuestions": [
-        "跨遗物同版／异版的覆盖、叠加与上限"
+        "各动作／TAE 到耗精接口的完整调度和基础耗精来源、调用掩码与资源对象 +10C 的游戏语义、最终精力写入及零精力动作准入、装备移除／死亡／重载／多人交互；未以旧参数标签推断武器 +E0 的用途"
       ],
       "gameplayVerified": false
     },
@@ -50498,6 +50504,7 @@
   "scholarShockwaveEvidenceSha256": "94f4851dee2e1aaa147be8b3a658c7ec528d08b9d14870ce2e1b016bef1d92e3",
   "greaseEvidenceSha256": "79125f69ebd3186f54c7f03c1019d19f4d1ddfdb0a5a261800ecb7ae89ea8891",
   "runeRateEvidenceSha256": "8955b98ff5d7729429e64289ae15325699144ba54c93057a8f51dc321cb28477",
+  "attackStaminaEvidenceSha256": "59d259ced82da05b084dec16ee4d63e8e944d4e696f7b702f1544f03dfbd821a",
   "periodicFpEvidenceSha256": "179df4092750c1ceddad6f035364d48d08ba03ab51d6dc3794698a0399de1b00",
   "periodicHpEvidenceSha256": "cabe19679dfd28acf3d93ff9bb4731392326b3fc1d8c287b6e3b623338843a18",
   "perfumeEvidenceSha256": "219eaa0954d080b8f64ca546ae87a791fa02b42bc88d396ae00faedb427e699b",
