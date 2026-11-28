@@ -1,0 +1,4314 @@
+{
+  "schema": 1,
+  "effects": [
+    7034200,
+    7034201
+  ],
+  "root": 9200006,
+  "magic": 8015,
+  "baseline": 1801500,
+  "bonus": 7034207,
+  "marker": 1801501,
+  "exeSha256": "9545e8732919bb6a63904cb73223641b3c4f9a67869be5722612acca413e8b3a",
+  "regulationSha256": "f7c39ad0cad7653530df4c119b96c9b09abc0d38dccf32dd649275a160bf0342",
+  "paramSha256": "07ec636c5565d4551efeb53e6f08bc633b2aa4f2129f13c61b0638d69b1bc176",
+  "paramHashes": {
+    "Magic": "17742eeafe4fade863f3a7ee5f7ff483bd4897f765802fe4a1954dfa8107b63e",
+    "BehaviorParam_PC": "f8fa3fd27cb98d45a3e24c69d71d8751df9202e6e379dc34fd77d4ef2e1240bb"
+  },
+  "weaponSha256": "28adf74850c88ca0b4bb01f355c4f1f8e1b662a56d77894ae74d591b72c1a0ea",
+  "scriptSha256": "96339bb15f57559cd42a940d616fcc2a18a10f50845cfc22b46b356ab66c3b29",
+  "coreEvidenceSha256": "0070e66bc61a17c7d4b109df48eb51fd4583a1bd8ac47f2c434366ef8cc0a9e4",
+  "animationBundleSha256": "806e6b218d747277ab45e14f45ca80b9ecf8c13ada22f89db2d3ef23caa62b2a",
+  "taeSha256": "97b6188636c7640d0accf4f33a59571c786ab30ce35837777f0ea216e45bbe3f",
+  "behaviorBundleSha256": "bdf5a755bdffb24d9a8f2361f8a7632f44f72eb0d29c706d407ef772cc92c62b",
+  "behaviorSha256": "8ea4b1c176f25d804890d5c08b90fbaf077581ae67ca73a7a9ef47655f8b6b32",
+  "events": [
+    {
+      "index": 2,
+      "Type": 66,
+      "StartTime": 0.93333334,
+      "EndTime": 1,
+      "hex": "1D7D1B00000000000000000000000000"
+    },
+    {
+      "index": 56,
+      "Type": 67,
+      "StartTime": 0.9333333,
+      "EndTime": 0.99999994,
+      "hex": "5F556B00000000000000000000000000"
+    }
+  ],
+  "bindings": [
+    {
+      "selector": "MagicFireRight_CMSG",
+      "item": 50264,
+      "clip": 64005,
+      "animation": "a534_045010"
+    },
+    {
+      "selector": "MagicFireRight_CMSG_Upper",
+      "item": 94198,
+      "clip": 101173,
+      "animation": "a534_045010"
+    },
+    {
+      "generator": 17008,
+      "child": 17248,
+      "clip": 17747,
+      "animation": "a534_049980"
+    },
+    {
+      "generator": 17008,
+      "child": 17249,
+      "clip": 17748,
+      "animation": "a534_049981"
+    }
+  ],
+  "checks": {
+    "timing": [
+      {
+        "copies": 0,
+        "fps": 30,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 28,
+          "1801500": 28
+        },
+        "last": {
+          "1801501": 29,
+          "1801500": 480
+        },
+        "firstBlend": 28,
+        "lastBlend": 481,
+        "elapsed": 15.1,
+        "scriptGrants": [
+          28,
+          29,
+          30
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 30,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 150,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.966613,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.966576,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 330,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.966577,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 450,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.96658,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 750,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 30,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 28,
+          "1801500": 29
+        },
+        "last": {
+          "1801501": 29,
+          "1801500": 480
+        },
+        "firstBlend": 28,
+        "lastBlend": 480,
+        "elapsed": 15.066666666666666,
+        "scriptGrants": [
+          28,
+          29
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 30,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 150,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.966613,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.966576,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 330,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.966577,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 450,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.96658,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 750,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "1801500": 961
+        },
+        "firstBlend": 56,
+        "lastBlend": 962,
+        "elapsed": 15.1,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.983395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.983413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.9834,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.98339,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 60,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "1801500": 57
+        },
+        "last": {
+          "1801501": 59,
+          "1801500": 961
+        },
+        "firstBlend": 56,
+        "lastBlend": 961,
+        "elapsed": 15.083333333333334,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.983395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.983413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.9834,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.98339,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 120,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 112,
+          "1801500": 112
+        },
+        "last": {
+          "1801501": 119,
+          "1801500": 1921
+        },
+        "firstBlend": 112,
+        "lastBlend": 1922,
+        "elapsed": 15.083333333333334,
+        "scriptGrants": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 120,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.991728,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.991804,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1320,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.991819,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.991809,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2400,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 120,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 112,
+          "1801500": 113
+        },
+        "last": {
+          "1801501": 119,
+          "1801500": 1921
+        },
+        "firstBlend": 112,
+        "lastBlend": 1921,
+        "elapsed": 15.075,
+        "scriptGrants": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 120,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.991728,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.991804,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1320,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.991819,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.991809,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2400,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 30,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 28,
+          "7034207": 28,
+          "1801500": 28
+        },
+        "last": {
+          "1801501": 29,
+          "7034207": 328,
+          "1801500": 765
+        },
+        "firstBlend": 28,
+        "lastBlend": 766,
+        "elapsed": 24.6,
+        "scriptGrants": [
+          28,
+          29,
+          30
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 30,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.899999,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 150,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.899976,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.89998,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 330,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.46666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 450,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.466606,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.466576,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 750,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.46658,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 30,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 28,
+          "7034207": 28,
+          "1801500": 29
+        },
+        "last": {
+          "1801501": 29,
+          "7034207": 328,
+          "1801500": 765
+        },
+        "firstBlend": 28,
+        "lastBlend": 765,
+        "elapsed": 24.566666666666666,
+        "scriptGrants": [
+          28,
+          29
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 30,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.899999,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 150,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.899976,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.89998,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 330,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.46666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 450,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.466606,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.466576,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 750,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.46658,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 656,
+          "1801500": 1558
+        },
+        "firstBlend": 56,
+        "lastBlend": 1559,
+        "elapsed": 25.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.933395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.933413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.93339,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 57
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 656,
+          "1801500": 1558
+        },
+        "firstBlend": 56,
+        "lastBlend": 1558,
+        "elapsed": 25.033333333333335,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.933395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.933413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.93339,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 112,
+          "7034207": 112,
+          "1801500": 112
+        },
+        "last": {
+          "1801501": 119,
+          "7034207": 1313,
+          "1801500": 3115
+        },
+        "firstBlend": 112,
+        "lastBlend": 3116,
+        "elapsed": 25.033333333333335,
+        "scriptGrants": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 120,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.925001,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.925062,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.925066,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1320,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.941729,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2400,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.941805,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.941809,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 120,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 112,
+          "7034207": 112,
+          "1801500": 113
+        },
+        "last": {
+          "1801501": 119,
+          "7034207": 1313,
+          "1801500": 3115
+        },
+        "firstBlend": 112,
+        "lastBlend": 3115,
+        "elapsed": 25.025,
+        "scriptGrants": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 120,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.925001,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.925062,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.925066,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1320,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.941729,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2400,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.941805,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.941809,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 28,
+          "7034207": 28,
+          "1801500": 28
+        },
+        "last": {
+          "1801501": 29,
+          "7034207": 328,
+          "1801500": 765
+        },
+        "firstBlend": 28,
+        "lastBlend": 766,
+        "elapsed": 24.6,
+        "scriptGrants": [
+          28,
+          29,
+          30
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 30,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.899999,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 150,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.899976,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.89998,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 330,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.46666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 450,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.466606,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.466576,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 750,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.46658,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 30,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 28,
+          "7034207": 28,
+          "1801500": 29
+        },
+        "last": {
+          "1801501": 29,
+          "7034207": 328,
+          "1801500": 765
+        },
+        "firstBlend": 28,
+        "lastBlend": 765,
+        "elapsed": 24.566666666666666,
+        "scriptGrants": [
+          28,
+          29
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 30,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.899999,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 150,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.899976,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.89998,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 330,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.46666,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 450,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.466606,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.466576,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 750,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.46658,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 656,
+          "1801500": 1558
+        },
+        "firstBlend": 56,
+        "lastBlend": 1559,
+        "elapsed": 25.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.933395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.933413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.93339,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 57
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 656,
+          "1801500": 1558
+        },
+        "firstBlend": 56,
+        "lastBlend": 1558,
+        "elapsed": 25.033333333333335,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.933395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.933413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.93339,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "order": "before",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 112,
+          "7034207": 112,
+          "1801500": 112
+        },
+        "last": {
+          "1801501": 119,
+          "7034207": 1313,
+          "1801500": 3115
+        },
+        "firstBlend": 112,
+        "lastBlend": 3116,
+        "elapsed": 25.033333333333335,
+        "scriptGrants": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 120,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.925001,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.925062,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.925066,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1320,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.941729,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2400,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.941805,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.941809,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 120,
+        "order": "after",
+        "extensions": [],
+        "recast": null,
+        "first": {
+          "1801501": 112,
+          "7034207": 112,
+          "1801500": 113
+        },
+        "last": {
+          "1801501": 119,
+          "7034207": 1313,
+          "1801500": 3115
+        },
+        "firstBlend": 112,
+        "lastBlend": 3115,
+        "elapsed": 25.025,
+        "scriptGrants": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 120,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.925001,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.925062,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.925066,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1320,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.941668,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.941729,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2400,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.941805,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.941809,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [
+          7006400
+        ],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 956,
+          "1801500": 2307
+        },
+        "firstBlend": 56,
+        "lastBlend": 2308,
+        "elapsed": 37.53333333333333,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.944444,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.988889,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 7.277741,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 3.944365,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 3.277704,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.611044,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 12.288853,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 8.955475,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.622097,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 2.288756,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [
+          7006400,
+          7006400,
+          7006400
+        ],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 956,
+          "1801500": 2307
+        },
+        "firstBlend": 56,
+        "lastBlend": 2308,
+        "elapsed": 37.53333333333333,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.944444,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.988889,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 7.277741,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 3.944365,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 3.277704,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.611044,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.955555,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 12.288853,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 8.955475,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.622097,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 2.288756,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [
+          8330500
+        ],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 1257,
+          "1801500": 3058
+        },
+        "firstBlend": 56,
+        "lastBlend": 3059,
+        "elapsed": 50.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.958334,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.991667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 7.958364,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.458403,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 4.95841,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 2.958411,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.4584,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.966667,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 12.966698,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.466736,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 7.966774,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.466809,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [
+          8330500,
+          8330500,
+          8330500
+        ],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 2457,
+          "1801500": 6058
+        },
+        "firstBlend": 56,
+        "lastBlend": 6059,
+        "elapsed": 100.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.979167,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.995833,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 8.979182,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 7.729201,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 7.479205,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 6.47922,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.229239,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 3.979259,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 2.729278,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 1.479282,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 12.733368,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 6000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.233519,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [
+          7006400,
+          8330500
+        ],
+        "recast": null,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 59,
+          "7034207": 1556,
+          "1801500": 3807
+        },
+        "firstBlend": 56,
+        "lastBlend": 3808,
+        "elapsed": 62.53333333333333,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.966664,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.993333,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 8.366551,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.973331,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 6.366528,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.973331,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.966528,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.973331,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 4.366529,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.973331,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 2.366531,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.973331,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.366533,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.973331,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 13.373219,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 11.373077,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 3000,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.372842,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": 5,
+        "first": {
+          "1801501": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 359,
+          "1801500": 1261
+        },
+        "firstBlend": 56,
+        "lastBlend": 1262,
+        "elapsed": 20.1,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          356,
+          357,
+          358,
+          359,
+          360
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.983395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.983395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 9.98341,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.983413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 0.98339,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 0,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": 11,
+        "first": {
+          "1801501": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 719,
+          "1801500": 1621
+        },
+        "firstBlend": 56,
+        "lastBlend": 1622,
+        "elapsed": 26.1,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          716,
+          717,
+          718,
+          719,
+          720
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 10.983395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 5.983413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 4.9834,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 11.983379,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 6.983427,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              },
+              {
+                "id": 1801500,
+                "lifetime": 1.983389,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 0,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 10.0,
+                "flags": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": 5,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 359,
+          "7034207": 656,
+          "1801500": 1558
+        },
+        "firstBlend": 56,
+        "lastBlend": 1559,
+        "elapsed": 25.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          356,
+          357,
+          358,
+          359,
+          360
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.933395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.933413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.93339,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 0,
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "copies": 1,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": 11,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 719,
+          "7034207": 1316,
+          "1801500": 2218
+        },
+        "firstBlend": 56,
+        "lastBlend": 2219,
+        "elapsed": 36.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          716,
+          717,
+          718,
+          719,
+          720
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              },
+              {
+                "id": 7034207,
+                "lifetime": 6.916683,
+                "flags": 8
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              },
+              {
+                "id": 7034207,
+                "lifetime": 1.916646,
+                "flags": 8
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 11.93338,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 6.933426,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 1.933389,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": 5,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 359,
+          "7034207": 656,
+          "1801500": 1558
+        },
+        "firstBlend": 56,
+        "lastBlend": 1559,
+        "elapsed": 25.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          356,
+          357,
+          358,
+          359,
+          360
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 10.933395,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 5.933413,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 0.93339,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 0,
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "copies": 3,
+        "fps": 60,
+        "order": "before",
+        "extensions": [],
+        "recast": 11,
+        "first": {
+          "1801501": 56,
+          "7034207": 56,
+          "1801500": 56
+        },
+        "last": {
+          "1801501": 719,
+          "7034207": 1316,
+          "1801500": 2218
+        },
+        "firstBlend": 56,
+        "lastBlend": 2219,
+        "elapsed": 36.05,
+        "scriptGrants": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          716,
+          717,
+          718,
+          719,
+          720
+        ],
+        "samples": [
+          {
+            "frame": 0,
+            "blend": 0,
+            "nodes": []
+          },
+          {
+            "frame": 60,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 9.916668,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.983334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 300,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 5.916669,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 600,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 7034207,
+                "lifetime": 0.916647,
+                "flags": 8
+              },
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 660,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 900,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              },
+              {
+                "id": 7034207,
+                "lifetime": 6.916683,
+                "flags": 8
+              }
+            ]
+          },
+          {
+            "frame": 1200,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 14.933334,
+                "flags": 4
+              },
+              {
+                "id": 7034207,
+                "lifetime": 1.916646,
+                "flags": 8
+              }
+            ]
+          },
+          {
+            "frame": 1500,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 11.93338,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 1800,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 6.933426,
+                "flags": 4
+              }
+            ]
+          },
+          {
+            "frame": 2100,
+            "blend": 1,
+            "nodes": [
+              {
+                "id": 1801500,
+                "lifetime": 1.933389,
+                "flags": 4
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "script": [
+      {
+        "case": "grant",
+        "rightMagic": 0,
+        "marker": 0,
+        "output": ""
+      },
+      {
+        "case": "grant",
+        "rightMagic": 0,
+        "marker": 1,
+        "output": ""
+      },
+      {
+        "case": "grant",
+        "rightMagic": 1,
+        "marker": 0,
+        "output": ""
+      },
+      {
+        "case": "grant",
+        "rightMagic": 1,
+        "marker": 1,
+        "output": "AddSpEffect:1801500"
+      },
+      {
+        "case": "cleanup",
+        "hero": 0,
+        "blend": 0,
+        "buff": 0,
+        "output": 0
+      },
+      {
+        "case": "cleanup",
+        "hero": 0,
+        "blend": 0,
+        "buff": 1,
+        "output": 0
+      },
+      {
+        "case": "cleanup",
+        "hero": 0,
+        "blend": 1,
+        "buff": 0,
+        "output": 1
+      },
+      {
+        "case": "cleanup",
+        "hero": 0,
+        "blend": 1,
+        "buff": 1,
+        "output": 1
+      },
+      {
+        "case": "cleanup",
+        "hero": 1,
+        "blend": 0,
+        "buff": 0,
+        "output": 0
+      },
+      {
+        "case": "cleanup",
+        "hero": 1,
+        "blend": 0,
+        "buff": 1,
+        "output": 0
+      },
+      {
+        "case": "cleanup",
+        "hero": 1,
+        "blend": 1,
+        "buff": 0,
+        "output": 0
+      },
+      {
+        "case": "cleanup",
+        "hero": 1,
+        "blend": 1,
+        "buff": 1,
+        "output": 1
+      }
+    ],
+    "attack": [
+      {
+        "behavior": 600000310,
+        "kind": 64,
+        "slot": 0,
+        "hand": 0,
+        "elapsed": 0.0
+      }
+    ]
+  },
+  "stubs": [
+    "0x3d4c10 isolated actor context / hand identity",
+    "0x4d1b20 isolated actor context / hand identity",
+    "0xea76f0 isolated actor context / hand identity",
+    "0xea9a60 isolated actor context / hand identity",
+    "214E8D0 isolated 0x88-byte allocation; native constructor and insertion",
+    "2167950/21674E0/2167A40 monotonic notification timestamp fixture",
+    "3CED90 isolated animation-owner context",
+    "3D3390 false special owner predicate; 51B920/6AF640 notification sinks; EA0CA0 absent notification mapping",
+    "415EA0 attack animation-reference sink after request",
+    "4341D0 attack-instance request recorder; collision and attack construction are not simulated",
+    "Both before/after script-update orderings are exercised. Blend variable is observed; Havok, complete collision, DLL, network, death/reload/unequip are not executed.",
+    "E6FCB0 actual Behavior row lookup",
+    "EA17E0 actual SpEffect PARAM lookup",
+    "EA7FC0 actual equipped-weapon row lookup",
+    "F61390 isolated allocator owner",
+    "Selected animation windows, Lua AddSpEffect transfer to the native actor, symbolic Lua API identifiers, and a successful MagicCommonFunction early return are explicit fixtures.",
+    "empty actor/HP/ailment objects; neutral death-protection flags and supplied starting resistance",
+    "explicit player identity, actor virtual +590 type 0 and +118/+120/+130/+150 false",
+    "native self-grant mode 7 and local actor; network singleton present with no peer",
+    "owner vtable +148 false; allocator +68 free recorder",
+    "synthetic animation-owner virtuals and equipped weapon 1000"
+  ],
+  "gameplayVerified": false
+}

@@ -1,3 +1,4 @@
+import mixedMagicParry from "../../data/effect-mixed-magic-parry-evidence.json";
 import mixedMagicDefense from "../../data/effect-mixed-magic-defense-evidence.json";
 import mixedMagic from "../../data/effect-mixed-magic-evidence.json";
 import revenantSelf from "../../data/effect-revenant-self-evidence.json";
@@ -119,6 +120,35 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("tracks thunder-holy parry duration through real Lua and native timers", () => {
+    expect(Object.values(mixedMagicParry.checks).reduce((n, rows) => n + rows.length, 0)).toBe(42);
+    for (const row of mixedMagicParry.checks.timing) {
+      const extensions: number[] = row.extensions;
+      const scale = 1 + (extensions.includes(7006400) ? 0.5 : 0)
+        + extensions.filter(id => id === 8330500).length;
+      const expected = row.recast === null
+        ? (row.copies ? 25 : 15) * scale
+        : row.copies ? (row.recast < 10 ? 25 : row.recast + 25) : row.recast + 15;
+      expect(Math.abs(row.elapsed - expected)).toBeLessThan(0.7);
+      expect(row.scriptGrants.length).toBeGreaterThan(0);
+    }
+    expect(mixedMagicParry.checks.attack).toEqual([
+      { behavior: 600000310, kind: 64, slot: 0, hand: 0, elapsed: 0 },
+    ]);
+    for (const id of [7034200, 7034201]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks[3]).toMatchObject({ source: 7034207, branches: [1801500], phase: "雷圣混合魔法", duration: null, values: [["自动弹反时间", "约25秒（原15秒）"]] });
+      expect(detail.notes.join()).toContain("额外延长计时为10秒");
+      expect(detail.notes.join()).toContain("重复装备不会进一步延长");
+      expect(detail.notes.join()).toContain("延长法术效果时间");
+      expect(research.effects[id.toString() as "7034200"].evidence).toContain("mixed-magic-parry");
+    }
+    expect(mixedMagicParry.gameplayVerified).toBe(false);
+    expect(research.mixedMagicParryEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-mixed-magic-parry-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("combines pure-holy defense while retaining its non-refreshing bonus and aura overlap", () => {
     expect(Object.values(mixedMagicDefense.checks).reduce((n, rows) => n + rows.length, 0)).toBe(70);
     for (const row of mixedMagicDefense.checks.timing) {
