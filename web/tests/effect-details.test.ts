@@ -1,3 +1,4 @@
+import mixedMagicFields from "../../data/effect-mixed-magic-fields-evidence.json";
 import mixedMagicParry from "../../data/effect-mixed-magic-parry-evidence.json";
 import mixedMagicDefense from "../../data/effect-mixed-magic-defense-evidence.json";
 import mixedMagic from "../../data/effect-mixed-magic-evidence.json";
@@ -120,6 +121,25 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
 describe("MMV effect details", () => {
+  it("describes the three field effects with their own targets, refresh rules and durations", () => {
+    for (const id of [7034200, 7034201]) {
+      const detail = effectDetail(id)!;
+      expect(detail.blocks.slice(4)).toMatchObject([
+        { source: 7034205, duration: 3, interval: 0.5, restrictions: ["自身、队友"], values: [["HP恢复", "10＋最大 HP 的 1%"]] },
+        { source: 7034206, duration: 8, interval: null, restrictions: ["自身、队友"], values: [["攻击精力消耗", "-35%"]] },
+        { source: 7034208, duration: 20, interval: null, restrictions: ["命中的敌人"], values: [["属性承伤倍率", "+20%"]] },
+      ]);
+      expect(detail.notes.join()).toContain("刷新时保留原有回血节奏");
+      expect(research.effects[id.toString() as "7034200"].evidence).toContain("mixed-magic-fields");
+    }
+    const healing = mixedMagicFields.checks.timing.filter(row => row.id === 7034205 && row.fps === 60);
+    expect(healing.find(row => row.hits.length === 3)?.pulses).toEqual(healing.find(row => row.hits.length === 1)?.pulses);
+    expect(healing.find(row => row.hits.some(time => time === 0.2))?.pulses).toEqual(healing.find(row => row.hits.length === 1)?.pulses);
+    expect(research.mixedMagicFieldsEvidenceSha256).toBe(createHash("sha256").update(
+      readFileSync(new URL("../../data/effect-mixed-magic-fields-evidence.json", import.meta.url)),
+    ).digest("hex"));
+  });
+
   it("tracks thunder-holy parry duration through real Lua and native timers", () => {
     expect(Object.values(mixedMagicParry.checks).reduce((n, rows) => n + rows.length, 0)).toBe(42);
     for (const row of mixedMagicParry.checks.timing) {
@@ -204,7 +224,7 @@ describe("MMV effect details", () => {
       expect(detail.blocks.slice(0, 2).map(b => b.phase)).toEqual(["混合魔法", "施法时"]);
       expect(detail.blocks[0].scope).toEqual([]);
       expect(detail.notes.join()).toContain("按乘法计算");
-      expect(detail.notes.join()).toContain("其他强化效果尚未解明");
+      expect(detail.notes.join()).toContain("雷步的追加落雷仍待核对");
       expect(research.effects[id.toString() as "7034200"].evidence).toContain("mixed-magic");
     }
     expect(mixedMagic.gameplayVerified).toBe(false);

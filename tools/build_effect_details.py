@@ -713,6 +713,16 @@ if not args.extract_only:
     assert mixed_parry['coreEvidenceSha256'] == hashlib.sha256(mixed_magic_path.read_bytes()).hexdigest()
     assert (mixed_parry['magic'], mixed_parry['baseline'], mixed_parry['bonus']) == (8015, 1801500, 7034207)
     assert {k: len(v) for k, v in mixed_parry['checks'].items()} == dict(timing=29, script=12, attack=1)
+mixed_fields_path = ROOT / 'data/effect-mixed-magic-fields-evidence.json'
+mixed_fields = json.loads(mixed_fields_path.read_text())
+if not args.extract_only:
+    assert mixed_fields['schema'] == 1 and mixed_fields['regulationSha256'] == catalog['regulationSha256']
+    assert mixed_fields['exeSha256'] == evidence['exeSha256'] and not mixed_fields['gameplayVerified']
+    assert mixed_fields['paramSha256'] == evidence['paramSha256']
+    assert mixed_fields['paramHashes']['Magic'] == mixed_magic['paramHashes']['Magic']
+    assert mixed_fields['coreEvidenceSha256'] == hashlib.sha256(mixed_magic_path.read_bytes()).hexdigest()
+    assert [row[5] for row in mixed_fields['fieldPaths']] == [7034205, 7034206, 7034208]
+    assert {k: len(v) for k, v in mixed_fields['checks'].items()} == dict(heal=18, stamina=96, extension=15, launch=18, recipient=36, timing=45, filter=3, connected=18)
 revenant_self_path = ROOT / 'data/effect-revenant-self-evidence.json'
 revenant_self = json.loads(revenant_self_path.read_text())
 if not args.extract_only:
@@ -1273,6 +1283,7 @@ if args.extract:
             needed.update(TOTEM_LEAVES.get(root, []))
             if root == mixed_defense['root']:
                 needed.update((mixed_defense['baseline'], mixed_defense['bonus'], mixed_parry['baseline'], mixed_parry['bonus']))
+                needed.update(row[5] for row in mixed_fields['fieldPaths'])
             if root == recovery['root']:
                 needed.add(recovery['leaf'])
             if root == guardian_skill['root']:
@@ -1573,7 +1584,7 @@ def block(id, phase, linked, known_states=frozenset()):
 
 STACKING_RULES = {
     'unknown': ('待确认', '', []),
-    'mixed-magic': ('不可叠加', '重复装备（含两个同名版本）不叠加增伤和耗蓝增幅', ['mixed-magic', 'mixed-magic-defense', 'mixed-magic-parry']),
+    'mixed-magic': ('不可叠加', '重复装备（含两个同名版本）不叠加增伤和耗蓝增幅', ['mixed-magic', 'mixed-magic-defense', 'mixed-magic-parry', 'mixed-magic-fields']),
     'revenant-self': ('不可叠加', '重复装备不增强效果；多名家人同时出战时，可同时获得各自增益', ['revenant-self']),
     'random-enchant': ('不可叠加', '重复装备不增强附魔；同一只手再次触发会替换原随机附魔并刷新持续时间', ['random-enchant']),
     'critical-normal': ('可叠加', '普通版重复装备时倍率相乘；两条合计 +39.24%', ['critical-attack']),
@@ -3186,10 +3197,25 @@ for id, effect in source['effects'].items():
         blocks.append(dict(source=7034207, branches=[1801500], phase='雷圣混合魔法', linked=True,
                            values=[['自动弹反时间', '约25秒（原15秒）']],
                            scope=[], restrictions=['自身'], duration=None, interval=None))
+        fields = source['spells']
+        heal, stamina, cold = (fields[str(id)] for id in (7034205, 7034206, 7034208))
+        assert (heal['changeHpPoint'], heal['changeHpRate'], heal['effectEndurance'], heal['motionInterval']) == (-10, -1, 3, .5)
+        assert (stamina['consumeStaminaRate'], stamina['effectEndurance']) == (.65, 8)
+        assert cold['effectEndurance'] == 20 and all(cold[k + 'DamageCutRate'] == 1.2 for k in ('magic', 'fire', 'thunder', 'dark'))
+        blocks.extend([
+            dict(source=7034205, phase='火圣混合魔法', linked=True,
+                 values=[['HP恢复', '10＋最大 HP 的 1%']], scope=[], restrictions=['自身、队友'], duration=3, interval=.5),
+            dict(source=7034206, phase='魔圣混合魔法', linked=True,
+                 values=[['攻击精力消耗', '-35%']], scope=[], restrictions=['自身、队友'], duration=8, interval=None),
+            dict(source=7034208, phase='魔雷圣寒风命中时', linked=True,
+                 values=[['属性承伤倍率', '+20%']], scope=[], restrictions=['命中的敌人'], duration=20, interval=None),
+        ])
         notes.append('雷圣的额外延长计时为10秒；期间重施不会刷新，计时结束后可重新获得。重复装备不会进一步延长。')
+        notes.append('火圣、魔圣和寒风的附加效果各自不叠加，重复命中会刷新持续时间。火圣首次命中立即回血，刷新时保留原有回血节奏。')
+        notes.append('魔圣减耗与其他攻击精力消耗倍率相乘，并可受延长法术效果时间影响。')
         notes.append('纯圣两部分防护、雷圣自动弹反及其额外延长计时均可受延长法术效果时间影响。')
         notes.append('与减少法术专注值消耗的效果按乘法计算。')
-        notes.append('混合魔法的其他强化效果尚未解明。')
+        notes.append('雷步的追加落雷仍待核对。')
         rule = 'mixed-magic'
     if id == '6840200':
         assert roots[0]['ultimateArtGaugeRate'] == roots[0]['ultimateArtGaugeChargeRate'] == 0.85
@@ -3330,7 +3356,7 @@ for id in sorted(source['effects'], key=int):
         refs.append('ironeye-observation')
         questions = ['队友成长的实际投递／合并及多名铁之眼的关系；完整场景击杀归属、迟到触发、装备初始化、死亡／出征切换／保存重载及 DLL；自身成长、两目录版本去重、上限、同帧多次奖励、资料效果复制及个人掉落入口已验证']
     if rules[id] == 'mixed-magic':
-        questions.append('其余混合魔法附加分支的完整触发、投射物与碰撞、实际资源扣除与取整、DLL、装备重建／死亡／重载／联机；已验证两同名版本选装、去重、周期维持、攻击标签、三个法术耗蓝通道、减耗组合及直接移除。内部三秒是刷新维护寿命，未作为玩家持续时间显示；纯圣的真实施法／动画发放、承伤组合、延长、覆盖、到期与重施已验证，TAE 额外防护存在时只标记活动、不刷新寿命；雷圣的真实脚本、动画标记、计时、重施及延长组合已验证，尚未完整执行 Havok 或弹反碰撞／方向／距离条件')
+        questions.append('其余混合魔法附加分支的完整触发、投射物与碰撞、实际资源扣除与取整、DLL、装备重建／死亡／重载／联机；已验证两同名版本选装、去重、周期维持、攻击标签、三个法术耗蓝通道、减耗组合及直接移除。内部三秒是刷新维护寿命，未作为玩家持续时间显示；纯圣的真实施法／动画发放、承伤组合、延长、覆盖、到期与重施已验证，TAE 额外防护存在时只标记活动、不刷新寿命；雷圣的真实脚本、动画标记、计时、重施及延长组合已验证，尚未完整执行 Havok 或弹反碰撞／方向／距离条件；火圣／魔圣／寒风的原生事件、请求转换、命中后资格、数值、重叠与刷新已验证，实际投射物空间范围与连续接触仍待核对')
     if rules[id] == 'revenant-self':
         questions.append('家人实际生成／退场与控制器状态迁移、复杂战斗场景、最终 HP 写入、DLL 改写、装备重建／死亡／重载／联机；已验证三家人槽位的原生资格、全部组合、条件失效与恢复、回血计时暂停／继续、重复装备及普通持续回血组合。直接移除根不等于完整卸装流程')
     if rules[id] == 'team-runes':
@@ -3529,6 +3555,7 @@ research['runeRateEvidenceSha256'] = hashlib.sha256(rune_rate_path.read_bytes())
 research['hitStaminaEvidenceSha256'] = hashlib.sha256(hit_stamina_path.read_bytes()).hexdigest()
 research['spellDurationEvidenceSha256'] = hashlib.sha256(spell_duration_path.read_bytes()).hexdigest()
 research['ironeyeObservationEvidenceSha256'] = hashlib.sha256(observation_path.read_bytes()).hexdigest()
+research['mixedMagicFieldsEvidenceSha256'] = hashlib.sha256(mixed_fields_path.read_bytes()).hexdigest()
 research['mixedMagicParryEvidenceSha256'] = hashlib.sha256(mixed_parry_path.read_bytes()).hexdigest()
 research['mixedMagicDefenseEvidenceSha256'] = hashlib.sha256(mixed_defense_path.read_bytes()).hexdigest()
 research['mixedMagicEvidenceSha256'] = hashlib.sha256(mixed_magic_path.read_bytes()).hexdigest()
